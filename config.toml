@@ -1,0 +1,14 @@
+[embedding]
+provider = "openai"
+model = "text-embedding-3-small"
+
+[chunking]
+size = 1024
+overlap = 50
+
+[qdrant]
+host = "localhost"
+port = 6333
+
+[storage]
+state_file = "state/indexed_files.json"

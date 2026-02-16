@@ -1,0 +1,14 @@
+[project]
+name = "test-app"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "llama-index>=0.14.14",
+    "llama-index-vector-stores-qdrant>=0.9.1",
+    "python-dotenv>=1.2.1",
+    "qdrant-client>=1.16.2",
+    "streamlit>=1.54.0",
+    "watchdog>=6.0.0",
+]
