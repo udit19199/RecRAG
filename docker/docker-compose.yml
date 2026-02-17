@@ -1,0 +1,73 @@
+services:
+  ollama:
+    image: ollama/ollama:latest
+    volumes:
+      - ollama_data:/root/.ollama
+    ports:
+      - "11434:11434"
+    container_name: recrag-ollama
+    healthcheck:
+      test: ["CMD-SHELL", "ollama list > /dev/null 2>&1"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  ollama-init:
+    image: curlimages/curl:latest
+    depends_on:
+      ollama:
+        condition: service_healthy
+    env_file:
+      - ../.env
+    volumes:
+      - ollama_data:/root/.ollama
+    container_name: recrag-ollama-init
+    command: >
+      sh -c "
+        echo 'Pulling embedding model: '$$EMBEDDING_MODEL'...' &&
+        curl -s -X POST http://ollama:11434/api/pull -d '{\"name\": \"'$$EMBEDDING_MODEL'\"}' &&
+        echo 'Embedding model pulled successfully' &&
+        if [ \"$$LLM_PROVIDER\" = 'ollama' ]; then
+          echo 'Pulling LLM model: '$$LLM_MODEL'...' &&
+          curl -s -X POST http://ollama:11434/api/pull -d '{\"name\": \"'$$LLM_MODEL'\"}' &&
+          echo 'LLM model pulled successfully'
+        fi &&
+        echo 'All models pulled successfully'
+      "
+
+  ingestion:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    depends_on:
+      ollama-init:
+        condition: service_completed_successfully
+    volumes:
+      - ../data:/app/data
+      - ../storage:/app/storage
+      - ../config.toml:/app/config.toml
+    env_file:
+      - ../.env
+    command: uv run python backend/watch.py
+    container_name: recrag-ingestion
+
+  retrieval:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    depends_on:
+      ollama-init:
+        condition: service_completed_successfully
+    volumes:
+      - ../data:/app/data
+      - ../storage:/app/storage
+      - ../config.toml:/app/config.toml
+    env_file:
+      - ../.env
+    ports:
+      - "8501:8501"
+    command: uv run streamlit run backend/app.py --server.port=8501 --server.address=0.0.0.0
+    container_name: recrag-retrieval
+
+volumes:
+  ollama_data:

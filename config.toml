@@ -1,14 +1,26 @@
 [embedding]
-provider = "openai"
-model = "text-embedding-3-small"
+provider = "${EMBEDDING_PROVIDER:-openai}"
+model = "${EMBEDDING_MODEL:-text-embedding-3-small}"
+base_url = "${EMBEDDING_BASE_URL:-}"
 
-[chunking]
-size = 1024
-overlap = 50
+[llm]
+provider = "${LLM_PROVIDER:-openai}"
+model = "${LLM_MODEL:-gpt-4o-mini}"
+base_url = "${LLM_BASE_URL:-}"
 
-[qdrant]
-host = "localhost"
-port = 6333
+[ingestion]
+directory = "data/pdfs"
+chunk_size = 1024
+chunk_overlap = 50
+
+[retrieval]
+top_k = 4
+context_template = """Context information:
+{context}
+
+Question: {question}
+
+Answer:"""
 
 [storage]
-state_file = "state/indexed_files.json"
+directory = "storage"

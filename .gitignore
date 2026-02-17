@@ -1,11 +1,48 @@
-# Python-generated files
+# Python
 __pycache__/
-*.py[oc]
+*.py[cod]
+*$py.class
+*.so
 build/
 dist/
 wheels/
-*.egg-info
+*.egg-info/
+*.egg
 
 # Virtual environments
-.venv
+.venv/
+venv/
+ENV/
+
+# Environment
 .env
+.env.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+storage/
+data/pdfs/
+
+# FAISS indexes
+*.index
+
+# Docker
+docker/ollama_data/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# uv
+.ruff_cache/
+.mypy_cache/
