@@ -1,5 +1,6 @@
 import fcntl
 import json
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Optional
 
@@ -8,6 +9,21 @@ import numpy as np
 from llama_index.core import SimpleDirectoryReader
 from llama_index.core.node_parser import SentenceSplitter
 from llama_index.core.schema import Document as LlamaDocument
+
+
+@dataclass
+class Chunk:
+    """Represents a text chunk with preserved source metadata.
+
+    Attributes:
+        text: The chunk text content.
+        source: The source file name (e.g., "document.pdf").
+        metadata: Full metadata from the source document.
+    """
+
+    text: str
+    source: str
+    metadata: dict[str, Any]
 
 
 class DocumentLoader:
@@ -29,7 +45,12 @@ class DocumentLoader:
 
 
 class TextSplitter:
-    """Text splitter for chunking documents."""
+    """Text splitter for chunking documents while preserving metadata.
+
+    Uses llama-index's SentenceSplitter internally, which preserves
+    document metadata in each resulting node. This allows O(1) source
+    lookup instead of O(n×m) substring matching.
+    """
 
     def __init__(
         self,
@@ -43,15 +64,50 @@ class TextSplitter:
             chunk_overlap=chunk_overlap,
         )
 
-    def split_documents(self, documents: list) -> list[str]:
+    def split_documents(self, documents: list[LlamaDocument]) -> list[Chunk]:
+        """Split documents into chunks with preserved metadata.
+
+        This method uses llama-index's get_nodes_from_documents() which
+        creates TextNode objects that retain metadata from their source
+        documents. This provides O(1) source lookup per chunk.
+
+        Args:
+            documents: List of LlamaIndex Document objects to split.
+
+        Returns:
+            List of Chunk objects with text, source, and metadata.
+
+        Example:
+            >>> splitter = TextSplitter(chunk_size=512)
+            >>> chunks = splitter.split_documents(documents)
+            >>> chunks[0].source  # "document.pdf" - O(1) lookup
+        """
+        nodes = self.splitter.get_nodes_from_documents(documents)
         chunks = []
-        for doc in documents:
-            text = doc.text if hasattr(doc, "text") else str(doc)
-            doc_chunks = self.splitter.split_text(text)
-            chunks.extend(doc_chunks)
+
+        for node in nodes:
+            metadata = dict(node.metadata) if node.metadata else {}
+            source = metadata.get("file_name", "unknown")
+
+            chunks.append(
+                Chunk(
+                    text=node.get_content(),
+                    source=source,
+                    metadata=metadata,
+                )
+            )
+
         return chunks
 
     def split_text(self, text: str) -> list[str]:
+        """Split raw text into chunks without metadata.
+
+        Args:
+            text: Raw text string to split.
+
+        Returns:
+            List of chunk text strings.
+        """
         return self.splitter.split_text(text)
 
 

@@ -2,6 +2,7 @@ import argparse
 import json
 import logging
 import sys
+import threading
 import time
 from datetime import datetime
 from pathlib import Path
@@ -22,13 +23,41 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
+DEBOUNCE_SECONDS = 5.0
+
+
 class IngestionWatcher(FileSystemEventHandler):
-    def __init__(self, watch_dir: Path, status_file: Path, config_path: Path):
+    """File watcher with debouncing to batch multiple file events.
+
+    Instead of triggering ingestion on every file event, this watcher
+    collects events and waits for a quiet period (debounce_seconds)
+    before running ingestion. This prevents redundant processing when
+    multiple files are copied to the watch directory simultaneously.
+
+    Attributes:
+        watch_dir: Directory to watch for file changes.
+        status_file: Path to the status JSON file.
+        config_path: Path to the configuration file.
+        debounce_seconds: Seconds to wait after last event before processing.
+    """
+
+    def __init__(
+        self,
+        watch_dir: Path,
+        status_file: Path,
+        config_path: Path,
+        debounce_seconds: float = DEBOUNCE_SECONDS,
+    ):
         self.watch_dir = watch_dir
         self.status_file = status_file
         self.config_path = config_path
+        self.debounce_seconds = debounce_seconds
+
         self.lock = Lock()
         self.is_processing = False
+
+        self.pending_files: set[str] = set()
+        self.debounce_timer: Optional[threading.Timer] = None
 
     def write_status(
         self,
@@ -38,6 +67,7 @@ class IngestionWatcher(FileSystemEventHandler):
         files_processed: int = 0,
         error_message: Optional[str] = None,
     ):
+        """Write status to JSON file for UI consumption."""
         status_data: dict = {
             "status": status,
             "started_at": started_at,
@@ -49,6 +79,7 @@ class IngestionWatcher(FileSystemEventHandler):
             json.dump(status_data, f, indent=2)
 
     def get_status(self) -> dict:
+        """Read status from JSON file."""
         if not self.status_file.exists():
             return {"status": "idle"}
         try:
@@ -57,12 +88,57 @@ class IngestionWatcher(FileSystemEventHandler):
         except (json.JSONDecodeError, FileNotFoundError):
             return {"status": "idle"}
 
+    def _schedule_ingestion(self, file_path: str):
+        """Schedule ingestion with debouncing.
+
+        When a file event occurs, this method:
+        1. Adds the file to the pending set
+        2. Cancels any existing timer
+        3. Starts a new timer for debounce_seconds
+
+        Only after no new events occur for debounce_seconds will
+        the actual ingestion be triggered.
+
+        Args:
+            file_path: Path to the file that triggered the event.
+        """
+        with self.lock:
+            self.pending_files.add(file_path)
+            pending_count = len(self.pending_files)
+
+            if self.debounce_timer is not None:
+                self.debounce_timer.cancel()
+                self.debounce_timer = None
+
+            self.debounce_timer = threading.Timer(
+                self.debounce_seconds, self._trigger_ingestion
+            )
+            self.debounce_timer.start()
+
+        logger.info(
+            f"File event: {Path(file_path).name}. "
+            f"Waiting {self.debounce_seconds}s for more files "
+            f"({pending_count} pending)"
+        )
+
+    def _trigger_ingestion(self):
+        """Trigger ingestion after debounce period completes."""
+        with self.lock:
+            if not self.pending_files:
+                return
+            files_count = len(self.pending_files)
+            self.pending_files.clear()
+            self.debounce_timer = None
+
+        logger.info(f"Debounce complete. Processing {files_count} file(s)")
+        self.run_ingestion_safe()
+
     def run_ingestion_safe(self):
+        """Run ingestion with proper locking and status tracking."""
         with self.lock:
             if self.is_processing:
                 logger.info("Already processing, skipping trigger")
                 return
-
             self.is_processing = True
 
         try:
@@ -97,26 +173,27 @@ class IngestionWatcher(FileSystemEventHandler):
             )
 
         finally:
-            self.is_processing = False
+            with self.lock:
+                self.is_processing = False
 
     def on_created(self, event):
+        """Handle file creation events with debouncing."""
         if event.is_directory:
             return
         if event.src_path.endswith(".pdf"):
-            logger.info(f"New file detected: {event.src_path}")
-            time.sleep(1)
-            self.run_ingestion_safe()
+            self._schedule_ingestion(event.src_path)
 
     def on_modified(self, event):
+        """Handle file modification events with debouncing."""
         if event.is_directory:
             return
         if event.src_path.endswith(".pdf"):
-            logger.info(f"File modified: {event.src_path}")
-            time.sleep(1)
-            self.run_ingestion_safe()
+            self._schedule_ingestion(event.src_path)
 
     def start(self):
+        """Start watching the directory for file changes."""
         logger.info(f"Starting ingestion watcher on {self.watch_dir}")
+        logger.info(f"Debounce period: {self.debounce_seconds} seconds")
         self.watch_dir.mkdir(parents=True, exist_ok=True)
 
         observer = Observer()
@@ -130,6 +207,8 @@ class IngestionWatcher(FileSystemEventHandler):
                 time.sleep(1)
         except KeyboardInterrupt:
             logger.info("Shutting down watcher...")
+            if self.debounce_timer is not None:
+                self.debounce_timer.cancel()
             observer.stop()
         observer.join()
 

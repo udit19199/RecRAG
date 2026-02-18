@@ -4,7 +4,7 @@ from typing import Any, Optional
 
 from adapters import BaseEmbedder, BaseLLM, create_embedder, create_llm
 from config import get_config_value, load_config, resolve_path
-from core import VectorStore, TextSplitter, DocumentLoader
+from core import Chunk, VectorStore, TextSplitter, DocumentLoader
 
 
 logging.basicConfig(
@@ -121,30 +121,18 @@ class IngestionPipeline:
         logger.info(f"Loaded {len(documents)} documents")
 
         logger.info("Splitting documents into chunks...")
-        chunks = self.splitter.split_documents(documents)
+        chunks: list[Chunk] = self.splitter.split_documents(documents)
         logger.info(f"Created {len(chunks)} chunks")
 
-        doc_source_map = {}
-        for doc in documents:
-            source = doc.metadata.get("file_name", "unknown")
-            doc_text = doc.text if hasattr(doc, "text") else str(doc)
-            doc_source_map[doc_text] = source
-
-        chunk_metadatas = []
-        for chunk in chunks:
-            source = "unknown"
-            for doc_text, doc_source in doc_source_map.items():
-                if chunk in doc_text or doc_text in chunk:
-                    source = doc_source
-                    break
-            chunk_metadatas.append({"source": source})
+        chunk_texts = [chunk.text for chunk in chunks]
+        chunk_metadatas = [{"source": chunk.source} for chunk in chunks]
 
         logger.info("Generating embeddings...")
-        embeddings = self.embedder.embed_batch(chunks)
+        embeddings = self.embedder.embed_batch(chunk_texts)
         logger.info(f"Generated {len(embeddings)} embeddings")
 
         logger.info("Adding to vector store...")
-        self.vector_store.add(embeddings, chunks, chunk_metadatas)
+        self.vector_store.add(embeddings, chunk_texts, chunk_metadatas)
 
         return {
             "documents": len(documents),

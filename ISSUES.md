@@ -59,47 +59,7 @@ The `_remove_by_sources()` method attempts to rebuild the FAISS index by looking
 
 ## 🟠 High Priority
 
-### 4. O(n×m) Chunk-to-Source Mapping
-
-**File:** `pipelines.py:133-140`
-
-```python
-for chunk in chunks:
-    source = "unknown"
-    for doc_text, doc_source in doc_source_map.items():
-        if chunk in doc_text or doc_text in chunk:
-            source = doc_source
-            break
-```
-
-This nested loop with substring matching is O(chunks × documents). For 1000 chunks and 100 documents, that's 100,000 substring operations. Additionally:
-- Substring matching can match wrong documents (common phrases)
-- Performance degrades significantly with large document sets
-
-**Recommended Actions:**
-- Use llama-index's built-in node-to-document tracking
-- Store document reference in chunk metadata during splitting
-- Use a proper chunk→source mapping data structure
-
----
-
-### 5. No Debouncing in File Watcher
-
-**File:** `watch.py:102-116`
-
-Both `on_created` and `on_modified` trigger ingestion with only 1 second sleep. Rapid file changes (e.g., copying multiple files) will:
-- Trigger multiple concurrent ingestion attempts
-- Waste API calls and resources
-- Potentially cause race conditions
-
-**Recommended Actions:**
-- Implement configurable debounce delay (e.g., 5 seconds)
-- Batch multiple file events into single ingestion run
-- Track pending files and process them together
-
----
-
-### 6. Placeholder Project Metadata
+### 4. Placeholder Project Metadata
 
 **File:** `pyproject.toml:1-4`
 
@@ -118,7 +78,7 @@ Project still has placeholder values from initial setup.
 
 ---
 
-### 7. No Dev Dependencies
+### 5. No Dev Dependencies
 
 **File:** `pyproject.toml`
 
@@ -140,7 +100,7 @@ dev = [
 
 ---
 
-### 8. Hardcoded Timeouts
+### 6. Hardcoded Timeouts
 
 **Files:** `embedding.py:87`, `llm.py:93,114`
 
@@ -155,7 +115,7 @@ dev = [
 
 ---
 
-### 9. Streamlit Polling Anti-Pattern
+### 7. Streamlit Polling Anti-Pattern
 
 **File:** `app.py:105-119`
 
@@ -175,7 +135,7 @@ This blocks the UI thread. Should use `st.rerun()` or WebSockets.
 
 ## 🟡 Medium Priority
 
-### 10. No File Upload Validation
+### 8. No File Upload Validation
 
 **File:** `app.py:80-96`
 
@@ -191,7 +151,7 @@ Current implementation has no validation:
 
 ---
 
-### 11. Context Window Overflow
+### 9. Context Window Overflow
 
 **File:** `pipelines.py:218-219`
 
@@ -211,7 +171,7 @@ No check if concatenated context exceeds LLM's context window. Could cause:
 
 ---
 
-### 12. Missing Type Annotations
+### 10. Missing Type Annotations
 
 **File:** `core.py:46`
 
@@ -228,7 +188,7 @@ Should be `list[LlamaDocument]` or `list[Document]`.
 
 ---
 
-### 13. FAISS IndexFlatL2 Doesn't Scale
+### 11. FAISS IndexFlatL2 Doesn't Scale
 
 `IndexFlatL2` is brute-force search. At scale (>100k vectors), this becomes very slow.
 
@@ -239,7 +199,7 @@ Should be `list[LlamaDocument]` or `list[Document]`.
 
 ---
 
-### 14. No Embedding Caching
+### 12. No Embedding Caching
 
 Re-embedding the same query/document has no caching. Could use simple LRU cache or persistent cache.
 
@@ -250,7 +210,7 @@ Re-embedding the same query/document has no caching. Could use simple LRU cache 
 
 ---
 
-### 15. Full JSON Write on Every Add
+### 13. Full JSON Write on Every Add
 
 **File:** `core.py` (VectorStore)
 
@@ -263,7 +223,7 @@ Every `add()` writes the entire metadata JSON to disk. For bulk ingestion, shoul
 
 ---
 
-### 16. No Connection Pooling
+### 14. No Connection Pooling
 
 **Files:** `embedding.py`, `llm.py`
 
@@ -276,7 +236,7 @@ Creating new `requests` calls without connection pooling wastes resources.
 
 ---
 
-### 17. No Abstract Config Class
+### 15. No Abstract Config Class
 
 Config is passed as raw `dict[str, Any]` everywhere. Should have typed `Config` dataclass/pydantic model for:
 - IDE autocomplete
@@ -290,7 +250,7 @@ Config is passed as raw `dict[str, Any]` everywhere. Should have typed `Config` 
 
 ---
 
-### 18. No Graceful Degradation
+### 16. No Graceful Degradation
 
 If Ollama/OpenAI is down, the entire system fails. No circuit breaker, no fallback.
 
@@ -301,7 +261,7 @@ If Ollama/OpenAI is down, the entire system fails. No circuit breaker, no fallba
 
 ---
 
-### 19. Status File Protocol is Fragile
+### 17. Status File Protocol is Fragile
 
 `ingestion_status.json` can be corrupted if process dies mid-write. Should use atomic writes (write to temp, then rename).
 
@@ -352,8 +312,9 @@ If Ollama/OpenAI is down, the entire system fails. No circuit breaker, no fallba
 
 ## ✅ Resolved Issues
 
-The following issues were fixed in the initial code review:
+The following issues were fixed during code review and optimization:
 
+### Initial Code Review
 - [x] Duplicate Metadata on Re-ingestion (file locking + source-based removal)
 - [x] Ollama Batch Embedding Sequential (parallel with ThreadPoolExecutor)
 - [x] Race Condition in VectorStore (file locking added)
@@ -362,3 +323,7 @@ The following issues were fixed in the initial code review:
 - [x] Redundant Embedder Initialization (extracted helper functions)
 - [x] Dead Code in pipelines.py (redundant list comprehension removed)
 - [x] Tight Coupling in Pipelines (refactored with helper functions)
+
+### Performance Optimization
+- [x] O(n×m) Chunk-to-Source Mapping (refactored to O(n) using Chunk dataclass)
+- [x] No Debouncing in File Watcher (5-second debounce timer implemented)
