@@ -11,7 +11,7 @@ from typing import Optional
 from watchdog.events import FileSystemEventHandler
 from watchdog.observers import Observer
 
-sys.path.insert(0, str(Path(__file__).parent))
+sys.path.insert(0, str(Path(__file__).parent / "src"))
 
 from config import load_config, resolve_path
 from pipelines import run_ingestion

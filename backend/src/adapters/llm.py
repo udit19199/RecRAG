@@ -18,8 +18,8 @@ class OpenAILLM(BaseLLM):
         **kwargs: Any,
     ):
         super().__init__(model, **kwargs)
-        api_key = kwargs.get("api_key") or os.environ.get("OPENAI_API_KEY")
-        base_url = kwargs.get("base_url")
+        api_key = kwargs.pop("api_key", None) or os.environ.get("OPENAI_API_KEY")
+        base_url = kwargs.pop("base_url", None)
 
         self.client = OpenAI(api_key=api_key, base_url=base_url)
         self.temperature = temperature

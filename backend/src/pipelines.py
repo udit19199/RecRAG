@@ -21,6 +21,69 @@ Question: {question}
 Answer:"""
 
 
+def create_embedder_from_config(config: dict[str, Any]) -> BaseEmbedder:
+    """Create an embedder instance from configuration.
+
+    Args:
+        config: Configuration dictionary containing 'embedding' section.
+
+    Returns:
+        BaseEmbedder instance.
+    """
+    embedder_config = config.get("embedding", {})
+    provider = embedder_config.get("provider", "openai")
+    model = embedder_config.get("model", "text-embedding-3-small")
+
+    extra_kwargs = {
+        k: v for k, v in embedder_config.items() if k not in ("provider", "model")
+    }
+
+    return create_embedder(provider, model=model, **extra_kwargs)
+
+
+def create_llm_from_config(config: dict[str, Any]) -> BaseLLM:
+    """Create an LLM instance from configuration.
+
+    Args:
+        config: Configuration dictionary containing 'llm' section.
+
+    Returns:
+        BaseLLM instance.
+    """
+    llm_config = config.get("llm", {})
+    provider = llm_config.get("provider", "openai")
+    model = llm_config.get("model", "gpt-4o-mini")
+
+    extra_kwargs = {
+        k: v for k, v in llm_config.items() if k not in ("provider", "model")
+    }
+
+    return create_llm(provider, model=model, **extra_kwargs)
+
+
+def get_vector_store_paths(
+    config: dict[str, Any], config_path: Path, embedder_model: str
+) -> tuple[Path, Path]:
+    """Get index and metadata paths for the vector store.
+
+    Args:
+        config: Configuration dictionary.
+        config_path: Path to configuration file.
+        embedder_model: Embedder model name for path generation.
+
+    Returns:
+        Tuple of (index_path, metadata_path).
+    """
+    storage_dir = resolve_path(
+        config.get("storage", {}).get("directory", "storage"), config_path
+    )
+    embedder_id = embedder_model.replace("/", "_").replace("-", "_")
+    return (
+        storage_dir / f"faiss_{embedder_id}.index",
+        storage_dir / f"faiss_{embedder_id}.json",
+    )
+
+
 class IngestionPipeline:
     """Pipeline for ingesting documents and creating embeddings."""
 
@@ -28,35 +91,15 @@ class IngestionPipeline:
         self.config = config
         self.config_path = config_path
 
-        embedder_config = config.get("embedding", {})
-        embedder_provider = embedder_config.get("provider", "openai")
-        embedder_model = embedder_config.get("model", "text-embedding-3-small")
-
-        self.embedder: BaseEmbedder = create_embedder(
-            embedder_provider,
-            model=embedder_model,
-            **{
-                k: v
-                for k, v in embedder_config.items()
-                if k not in ("provider", "model")
-            },
-        )
+        self.embedder = create_embedder_from_config(config)
 
         chunk_size = get_config_value(config, "ingestion.chunk_size", 1024)
         chunk_overlap = get_config_value(config, "ingestion.chunk_overlap", 50)
+        self.splitter = TextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
 
-        self.splitter = TextSplitter(
-            chunk_size=chunk_size,
-            chunk_overlap=chunk_overlap,
+        index_path, metadata_path = get_vector_store_paths(
+            config, config_path, self.embedder.model
         )
-
-        storage_dir = resolve_path(
-            config.get("storage", {}).get("directory", "storage"), config_path
-        )
-        embedder_id = embedder_model.replace("/", "_").replace("-", "_")
-        index_path = storage_dir / f"faiss_{embedder_id}.index"
-        metadata_path = storage_dir / f"faiss_{embedder_id}.json"
-
         self.vector_store = VectorStore(
             dimension=self.embedder.dimension,
             index_path=index_path,
@@ -81,16 +124,27 @@ class IngestionPipeline:
         chunks = self.splitter.split_documents(documents)
         logger.info(f"Created {len(chunks)} chunks")
 
+        doc_source_map = {}
+        for doc in documents:
+            source = doc.metadata.get("file_name", "unknown")
+            doc_text = doc.text if hasattr(doc, "text") else str(doc)
+            doc_source_map[doc_text] = source
+
+        chunk_metadatas = []
+        for chunk in chunks:
+            source = "unknown"
+            for doc_text, doc_source in doc_source_map.items():
+                if chunk in doc_text or doc_text in chunk:
+                    source = doc_source
+                    break
+            chunk_metadatas.append({"source": source})
+
         logger.info("Generating embeddings...")
-        texts = [chunk for chunk in chunks]
-        embeddings = self.embedder.embed_batch(texts)
+        embeddings = self.embedder.embed_batch(chunks)
         logger.info(f"Generated {len(embeddings)} embeddings")
 
         logger.info("Adding to vector store...")
-        metadatas = [
-            {"source": doc.metadata.get("file_name", "unknown")} for doc in documents
-        ]
-        self.vector_store.add(embeddings, texts, metadatas)
+        self.vector_store.add(embeddings, chunks, chunk_metadatas)
 
         return {
             "documents": len(documents),
@@ -125,37 +179,12 @@ class RetrievalPipeline:
         self.config = config
         self.config_path = config_path
 
-        embedder_config = config.get("embedding", {})
-        embedder_provider = embedder_config.get("provider", "openai")
-        embedder_model = embedder_config.get("model", "text-embedding-3-small")
+        self.embedder = create_embedder_from_config(config)
+        self.llm = create_llm_from_config(config)
 
-        self.embedder: BaseEmbedder = create_embedder(
-            embedder_provider,
-            model=embedder_model,
-            **{
-                k: v
-                for k, v in embedder_config.items()
-                if k not in ("provider", "model")
-            },
+        index_path, metadata_path = get_vector_store_paths(
+            config, config_path, self.embedder.model
         )
-
-        llm_config = config.get("llm", {})
-        llm_provider = llm_config.get("provider", "openai")
-        llm_model = llm_config.get("model", "gpt-4o-mini")
-
-        self.llm: BaseLLM = create_llm(
-            llm_provider,
-            model=llm_model,
-            **{k: v for k, v in llm_config.items() if k not in ("provider", "model")},
-        )
-
-        storage_dir = resolve_path(
-            config.get("storage", {}).get("directory", "storage"), config_path
-        )
-        embedder_id = embedder_model.replace("/", "_").replace("-", "_")
-        index_path = storage_dir / f"faiss_{embedder_id}.index"
-        metadata_path = storage_dir / f"faiss_{embedder_id}.json"
-
         self.vector_store = VectorStore(
             dimension=self.embedder.dimension,
             index_path=index_path,

@@ -1,3 +1,4 @@
+import fcntl
 import json
 from pathlib import Path
 from typing import Any, Optional
@@ -81,6 +82,20 @@ class VectorStore:
                 return json.load(f)
         return []
 
+    def _acquire_lock(self) -> None:
+        """Acquire file lock for thread/process-safe operations."""
+        if self.metadata_path:
+            self.metadata_path.parent.mkdir(parents=True, exist_ok=True)
+            self._lock_file = open(self.metadata_path.with_suffix(".lock"), "w")
+            fcntl.flock(self._lock_file.fileno(), fcntl.LOCK_EX)
+
+    def _release_lock(self) -> None:
+        """Release file lock."""
+        if hasattr(self, "_lock_file"):
+            fcntl.flock(self._lock_file.fileno(), fcntl.LOCK_UN)
+            self._lock_file.close()
+            del self._lock_file
+
     def save(self) -> None:
         if self.index_path:
             self.index_path.parent.mkdir(parents=True, exist_ok=True)
@@ -91,28 +106,66 @@ class VectorStore:
             with open(self.metadata_path, "w") as f:
                 json.dump(self.metadata, f, indent=2)
 
+    def _remove_by_sources(self, sources: set[str]) -> int:
+        """Remove metadata entries for given sources. Returns count removed."""
+        if not sources:
+            return 0
+
+        indices_to_remove = [
+            i for i, m in enumerate(self.metadata) if m.get("source") in sources
+        ]
+
+        if not indices_to_remove:
+            return 0
+
+        for idx in reversed(indices_to_remove):
+            del self.metadata[idx]
+
+        self.index = faiss.IndexFlatL2(self.dimension)
+        remaining_embeddings = []
+        for m in self.metadata:
+            if "embedding" in m:
+                remaining_embeddings.append(m["embedding"])
+
+        if remaining_embeddings:
+            vectors = np.array(remaining_embeddings, dtype=np.float32)
+            self.index.add(vectors)  # type: ignore[call-arg]
+
+        return len(indices_to_remove)
+
     def add(
         self,
         embeddings: list[list[float]],
         documents: list[str],
         metadatas: Optional[list[dict[str, Any]]] = None,
     ) -> None:
-        vectors = np.array(embeddings, dtype=np.float32)
-        self.index.add(vectors)
+        self._acquire_lock()
+        try:
+            if metadatas is None:
+                metadatas = [{} for _ in documents]
 
-        if metadatas is None:
-            metadatas = [{} for _ in documents]
+            sources_to_update: set[str] = {
+                str(m.get("source")) for m in metadatas if m.get("source")
+            }
+            if sources_to_update:
+                self._remove_by_sources(sources_to_update)
 
-        for i, (doc, meta) in enumerate(zip(documents, metadatas)):
-            self.metadata.append(
-                {
-                    "text": doc,
-                    "index": len(self.metadata) + i,
-                    **meta,
-                }
-            )
+            start_index = self.index.ntotal
+            vectors = np.array(embeddings, dtype=np.float32)
+            self.index.add(vectors)  # type: ignore[call-arg]
 
-        self.save()
+            for i, (doc, meta) in enumerate(zip(documents, metadatas)):
+                self.metadata.append(
+                    {
+                        "text": doc,
+                        "index": start_index + i,
+                        **meta,
+                    }
+                )
+
+            self.save()
+        finally:
+            self._release_lock()
 
     def search(
         self,
@@ -120,7 +173,7 @@ class VectorStore:
         k: int = 4,
     ) -> tuple[list[list[float]], list[dict[str, Any]]]:
         query = np.array([query_embedding], dtype=np.float32)
-        distances, indices = self.index.search(query, k)
+        distances, indices = self.index.search(query, k)  # type: ignore[call-arg]
 
         results = []
         for dist, idx in zip(distances[0], indices[0]):

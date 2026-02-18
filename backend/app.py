@@ -5,7 +5,7 @@ from pathlib import Path
 
 import streamlit as st
 
-sys.path.insert(0, str(Path(__file__).parent))
+sys.path.insert(0, str(Path(__file__).parent / "src"))
 
 from config import resolve_path
 from pipelines import get_retrieval_pipeline

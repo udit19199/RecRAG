@@ -1,4 +1,5 @@
 import os
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import Any, Optional
 
 import requests
@@ -19,8 +20,8 @@ class OpenAIEmbedder(BaseEmbedder):
 
     def __init__(self, model: str = "text-embedding-3-small", **kwargs: Any):
         super().__init__(model, **kwargs)
-        api_key = kwargs.get("api_key") or os.environ.get("OPENAI_API_KEY")
-        base_url = kwargs.get("base_url")
+        api_key = kwargs.pop("api_key", None) or os.environ.get("OPENAI_API_KEY")
+        base_url = kwargs.pop("base_url", None)
 
         self.client = OpenAI(api_key=api_key, base_url=base_url)
         self._dimensions: Optional[int] = kwargs.get("dimensions")
@@ -67,11 +68,13 @@ class OllamaEmbedder(BaseEmbedder):
         self,
         model: str = "nomic-embed-text",
         base_url: str = "http://localhost:11434",
+        max_workers: int = 8,
         **kwargs: Any,
     ):
         super().__init__(model, **kwargs)
         self.base_url = base_url.rstrip("/")
         self._dimension = kwargs.get("dimension", 768)
+        self._max_workers = max_workers
 
     @property
     def dimension(self) -> int:
@@ -87,8 +90,20 @@ class OllamaEmbedder(BaseEmbedder):
         return response.json()["embedding"]
 
     def embed_batch(self, texts: list[str]) -> list[list[float]]:
-        embeddings = []
-        for text in texts:
-            embedding = self.embed(text)
-            embeddings.append(embedding)
-        return embeddings
+        results: list[Optional[list[float]]] = [None] * len(texts)
+
+        def embed_with_index(args: tuple[int, str]) -> tuple[int, list[float]]:
+            idx, text = args
+            return idx, self.embed(text)
+
+        with ThreadPoolExecutor(max_workers=self._max_workers) as executor:
+            futures = {
+                executor.submit(embed_with_index, (i, text)): i
+                for i, text in enumerate(texts)
+            }
+
+            for future in as_completed(futures):
+                idx, embedding = future.result()
+                results[idx] = embedding
+
+        return [r for r in results if r is not None]
