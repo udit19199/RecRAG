@@ -26,20 +26,11 @@ logger = logging.getLogger(__name__)
 DEBOUNCE_SECONDS = 5.0
 
 
+SUPPORTED_EXTENSIONS = {".pdf"}
+
+
 class IngestionWatcher(FileSystemEventHandler):
-    """File watcher with debouncing to batch multiple file events.
-
-    Instead of triggering ingestion on every file event, this watcher
-    collects events and waits for a quiet period (debounce_seconds)
-    before running ingestion. This prevents redundant processing when
-    multiple files are copied to the watch directory simultaneously.
-
-    Attributes:
-        watch_dir: Directory to watch for file changes.
-        status_file: Path to the status JSON file.
-        config_path: Path to the configuration file.
-        debounce_seconds: Seconds to wait after last event before processing.
-    """
+    """File watcher with debouncing to batch multiple file events."""
 
     def __init__(
         self,
@@ -47,11 +38,13 @@ class IngestionWatcher(FileSystemEventHandler):
         status_file: Path,
         config_path: Path,
         debounce_seconds: float = DEBOUNCE_SECONDS,
+        supported_extensions: set[str] | None = None,
     ):
         self.watch_dir = watch_dir
         self.status_file = status_file
         self.config_path = config_path
         self.debounce_seconds = debounce_seconds
+        self.supported_extensions = supported_extensions or SUPPORTED_EXTENSIONS.copy()
 
         self.lock = Lock()
         self.is_processing = False
@@ -77,16 +70,6 @@ class IngestionWatcher(FileSystemEventHandler):
         }
         with open(self.status_file, "w") as f:
             json.dump(status_data, f, indent=2)
-
-    def get_status(self) -> dict:
-        """Read status from JSON file."""
-        if not self.status_file.exists():
-            return {"status": "idle"}
-        try:
-            with open(self.status_file, "r") as f:
-                return json.load(f)
-        except (json.JSONDecodeError, FileNotFoundError):
-            return {"status": "idle"}
 
     def _schedule_ingestion(self, file_path: str):
         """Schedule ingestion with debouncing.
@@ -131,9 +114,9 @@ class IngestionWatcher(FileSystemEventHandler):
             self.debounce_timer = None
 
         logger.info(f"Debounce complete. Processing {files_count} file(s)")
-        self.run_ingestion_safe()
+        self._run_ingestion_with_lock()
 
-    def run_ingestion_safe(self):
+    def _run_ingestion_with_lock(self):
         """Run ingestion with proper locking and status tracking."""
         with self.lock:
             if self.is_processing:
@@ -143,24 +126,28 @@ class IngestionWatcher(FileSystemEventHandler):
 
         try:
             started_at = datetime.now().isoformat()
-            self.write_status(
-                "processing",
-                started_at=started_at,
-            )
-            logger.info(f"Starting ingestion at {started_at}")
+            self.write_status("processing", started_at=started_at)
+            logger.info(f"Starting incremental ingestion at {started_at}")
 
-            results = run_ingestion(self.config_path, force=False)
+            results = run_ingestion(self.config_path, incremental=True)
 
             completed_at = datetime.now().isoformat()
+            docs_processed = results.get("documents", 0)
+            status = "complete"
+
+            if docs_processed == 0:
+                logger.info(f"No new or changed files at {completed_at}")
+            else:
+                logger.info(f"Ingestion complete at {completed_at}")
+
             self.write_status(
-                "complete",
+                status,
                 started_at=started_at,
                 completed_at=completed_at,
-                files_processed=results.get("documents", 0),
+                files_processed=docs_processed,
             )
-            logger.info(f"Ingestion complete at {completed_at}")
             logger.info(
-                f"Documents: {results['documents']}, Chunks: {results['chunks']}"
+                f"Documents: {docs_processed}, Chunks: {results.get('chunks', 0)}"
             )
 
         except Exception as e:
@@ -180,14 +167,16 @@ class IngestionWatcher(FileSystemEventHandler):
         """Handle file creation events with debouncing."""
         if event.is_directory:
             return
-        if event.src_path.endswith(".pdf"):
+        ext = Path(event.src_path).suffix.lower()
+        if ext in self.supported_extensions:
             self._schedule_ingestion(event.src_path)
 
     def on_modified(self, event):
         """Handle file modification events with debouncing."""
         if event.is_directory:
             return
-        if event.src_path.endswith(".pdf"):
+        ext = Path(event.src_path).suffix.lower()
+        if ext in self.supported_extensions:
             self._schedule_ingestion(event.src_path)
 
     def start(self):
