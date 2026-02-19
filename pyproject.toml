@@ -1,7 +1,7 @@
 [project]
-name = "test-app"
+name = "recrag"
 version = "0.1.0"
-description = "Add your description here"
+description = "Retrieval-Augmented Generation pipeline with FAISS vector storage"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
@@ -13,4 +13,12 @@ dependencies = [
     "toml>=0.10.2",
     "openai>=1.0.0",
     "watchdog>=5.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-mock>=3.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0",
 ]
