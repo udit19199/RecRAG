@@ -5,6 +5,9 @@ import requests
 from openai import OpenAI
 
 from adapters.base import BaseLLM
+from adapters.utils import create_session_with_pooling
+
+DEFAULT_TEMPERATURE = 0.7
 
 
 class OpenAILLM(BaseLLM):
@@ -13,7 +16,7 @@ class OpenAILLM(BaseLLM):
     def __init__(
         self,
         model: str = "gpt-4o-mini",
-        temperature: float = 0.7,
+        temperature: float = DEFAULT_TEMPERATURE,
         max_tokens: Optional[int] = None,
         **kwargs: Any,
     ):
@@ -29,38 +32,37 @@ class OpenAILLM(BaseLLM):
     def supports_streaming(self) -> bool:
         return True
 
-    def generate(self, prompt: str, **kwargs: Any) -> str:
-        temperature = kwargs.get("temperature", self.temperature)
-        max_tokens = kwargs.get("max_tokens", self.max_tokens)
+    def _get_completion_params(
+        self, messages: list[dict[str, str]], **kwargs: Any
+    ) -> dict[str, Any]:
+        """Build parameters for chat completion."""
+        return {
+            "model": self.model,
+            "messages": messages,
+            "temperature": kwargs.get("temperature", self.temperature),
+            "max_tokens": kwargs.get("max_tokens", self.max_tokens),
+        }
 
-        response = self.client.chat.completions.create(
-            model=self.model,
-            messages=[{"role": "user", "content": prompt}],
-            temperature=temperature,
-            max_tokens=max_tokens,
+    def generate(self, prompt: str, **kwargs: Any) -> str:
+        params = self._get_completion_params(
+            [{"role": "user", "content": prompt}], **kwargs
         )
+        response = self.client.chat.completions.create(**params)
         return response.choices[0].message.content or ""
 
     def chat(self, messages: list[dict[str, str]], **kwargs: Any) -> str:
-        temperature = kwargs.get("temperature", self.temperature)
-        max_tokens = kwargs.get("max_tokens", self.max_tokens)
-
-        response = self.client.chat.completions.create(
-            model=self.model,
-            messages=messages,
-            temperature=temperature,
-            max_tokens=max_tokens,
-        )
+        params = self._get_completion_params(messages, **kwargs)
+        response = self.client.chat.completions.create(**params)
         return response.choices[0].message.content or ""
 
 
 class OllamaLLM(BaseLLM):
-    """Ollama local LLM provider."""
+    """Ollama local LLM provider with connection pooling."""
 
     def __init__(
         self,
         model: str = "llama3",
-        temperature: float = 0.7,
+        temperature: float = DEFAULT_TEMPERATURE,
         max_tokens: Optional[int] = None,
         base_url: str = "http://localhost:11434",
         **kwargs: Any,
@@ -69,25 +71,29 @@ class OllamaLLM(BaseLLM):
         self.base_url = base_url.rstrip("/")
         self.temperature = temperature
         self.max_tokens = max_tokens
+        self.session = create_session_with_pooling()
 
     @property
     def supports_streaming(self) -> bool:
         return False
 
-    def generate(self, prompt: str, **kwargs: Any) -> str:
-        temperature = kwargs.get("temperature", self.temperature)
-        max_tokens = kwargs.get("max_tokens", self.max_tokens)
-
+    def _build_payload(self, **kwargs: Any) -> dict[str, Any]:
+        """Build request payload for Ollama API."""
         payload = {
             "model": self.model,
-            "prompt": prompt,
-            "temperature": temperature,
+            "temperature": kwargs.get("temperature", self.temperature),
             "stream": False,
         }
+        max_tokens = kwargs.get("max_tokens", self.max_tokens)
         if max_tokens:
             payload["options"] = {"num_predict": max_tokens}
+        return payload
 
-        response = requests.post(
+    def generate(self, prompt: str, **kwargs: Any) -> str:
+        payload = self._build_payload(**kwargs)
+        payload["prompt"] = prompt
+
+        response = self.session.post(
             f"{self.base_url}/api/generate",
             json=payload,
             timeout=120,
@@ -96,19 +102,10 @@ class OllamaLLM(BaseLLM):
         return response.json()["response"]
 
     def chat(self, messages: list[dict[str, str]], **kwargs: Any) -> str:
-        temperature = kwargs.get("temperature", self.temperature)
-        max_tokens = kwargs.get("max_tokens", self.max_tokens)
+        payload = self._build_payload(**kwargs)
+        payload["messages"] = messages
 
-        payload = {
-            "model": self.model,
-            "messages": messages,
-            "temperature": temperature,
-            "stream": False,
-        }
-        if max_tokens:
-            payload["options"] = {"num_predict": max_tokens}
-
-        response = requests.post(
+        response = self.session.post(
             f"{self.base_url}/api/chat",
             json=payload,
             timeout=120,
