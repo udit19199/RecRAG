@@ -6,65 +6,47 @@ Guidelines for agentic coding agents working in this repository.
 
 RecRAG is a Retrieval-Augmented Generation pipeline with separate ingestion and retrieval containers.
 
-**Tech Stack:** Python 3.12+, llama-index, FAISS, Streamlit, uv, Docker, OpenAI/Ollama
-
-**Architecture:**
-```
-Ollama Container → ollama-init (pulls models) → ingestion + retrieval containers
-                                                    ↓
-                                            Shared volumes (data/, storage/)
-```
+**Tech Stack:** Python 3.12+, llama-index, FAISS, Streamlit, uv, Docker, OpenAI/Ollama/NVIDIA NIM
 
 ---
 
 ## Build / Lint / Test Commands
 
-### Installation
 ```bash
-uv sync                          # Install dependencies
-```
+# Installation
+uv sync
 
-### Docker
-```bash
-docker-compose -f docker/docker-compose.yml build          # Build images
-docker-compose -f docker/docker-compose.yml up -d          # Start all services
-docker-compose -f docker/docker-compose.yml logs -f ingestion  # View logs
-docker-compose -f docker/docker-compose.yml down           # Stop containers
-```
-
-### Local Development
-```bash
-uv run python backend/watch.py                    # File watcher
-uv run streamlit run backend/app.py               # Streamlit UI
-uv run python backend/ingest.py --force           # One-time ingestion
-```
-
-### Testing
-```bash
+# Testing
 uv run pytest                                     # Run all tests
 uv run pytest tests/test_ingest.py                # Run single file
 uv run pytest tests/test_ingest.py::test_name     # Run single test
 uv run pytest -k "pattern"                        # Run tests matching pattern
-```
 
-### Linting & Formatting
-```bash
+# Linting & Formatting
 uv run ruff check .                               # Lint
 uv run ruff format .                              # Format
 uv run ruff check --fix .                         # Auto-fix
-```
 
-### Type Checking
-```bash
+# Type Checking
 uv run mypy backend/
+
+# Local Development
+uv run python backend/watch.py                    # File watcher
+uv run streamlit run backend/app.py               # Streamlit UI
+uv run python backend/ingest.py --force           # One-time ingestion
+
+# Docker
+docker-compose -f docker/docker-compose.yml build          # Build images
+docker-compose -f docker/docker-compose.yml up -d          # Start all services
+docker-compose -f docker/docker-compose.yml down           # Stop containers
 ```
 
 ---
 
 ## Code Style Guidelines
 
-### Import Order (separate groups with blank line)
-1. Standard library  2. Third-party  3. Local application
+### Import Order
+Group imports with blank lines between: 1) Standard library 2) Third-party 3) Local application
 
 ```python
 import json
@@ -110,19 +92,7 @@ storage_dir = resolve_path(config["storage"]["directory"], config_path)
 - Provide meaningful error messages
 
 ### Docstrings
-- Write docstrings for all public functions and classes
-
-```python
-def embed(self, text: str) -> list[float]:
-    """Generate embedding for a single text.
-    
-    Args:
-        text: The text to embed.
-    
-    Returns:
-        List of floats representing the embedding.
-    """
-```
+Write docstrings for all public functions and classes with Args and Returns sections.
 
 ---
 
@@ -138,7 +108,7 @@ def embed(self, text: str) -> list[float]:
 - `get_config_value()`: Gets nested config via dot notation
 
 ### Ollama API
-- **Always set `"stream": False`** in request payloads to get single JSON response
+- **Always set `"stream": False`** in request payloads
 - Embeddings: `/api/embeddings` endpoint
 - Generation: `/api/generate` endpoint
 
@@ -171,70 +141,52 @@ RecRAG/
 
 ---
 
-## Environment Variables
+## Configuration
 
-Required in `.env`:
-- `EMBEDDING_PROVIDER` / `LLM_PROVIDER`: "openai" or "ollama"
-- `EMBEDDING_MODEL` / `LLM_MODEL`: Model name
-- `EMBEDDING_BASE_URL` / `LLM_BASE_URL`: For Ollama, use `http://ollama:11434`
-- `OPENAI_API_KEY`: Required if using OpenAI
+### File Organization
+- **`config.toml`**: All configuration settings (provider, model, URLs, chunk sizes, etc.)
+- **`.env`**: API keys only (sensitive information)
+
+### Environment Variables (`.env`)
+Only sensitive values:
+- `OPENAI_API_KEY`: Required for OpenAI provider
+- `NVIDIA_API_KEY`: Required for NVIDIA NIM provider (starts with "nvapi-")
+
+### Config Settings (`config.toml`)
+All non-sensitive configuration including providers, models, and URLs:
+```toml
+[embedding]
+provider = "openai"  # or "ollama", "nim"
+model = "text-embedding-3-small"
+base_url = ""  # e.g., "http://ollama:11434" for Docker
+
+[llm]
+provider = "openai"
+model = "gpt-4o-mini"
+base_url = ""  # e.g., "http://ollama:11434" for Docker
+```
 
 ---
 
 ## Commit Messages
 
-Use conventional commits format:
+Use conventional commits format: `<type>(<scope>): <subject>`
 
-```
-<type>(<scope>): <subject>
+**Types:** `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`, `perf`, `ci`
 
-[optional body]
+**Scopes:** `adapters`, `config`, `pipelines`, `docker`, `docs`
 
-[optional footer]
-```
-
-### Types
-| Type | Description |
-|------|-------------|
-| `feat` | New feature |
-| `fix` | Bug fix |
-| `docs` | Documentation changes |
-| `style` | Code style (formatting, whitespace) |
-| `refactor` | Code refactoring |
-| `test` | Adding/updating tests |
-| `chore` | Maintenance tasks |
-| `perf` | Performance improvements |
-| `ci` | CI/CD changes |
-
-### Scopes
-Use module or component name: `adapters`, `config`, `pipelines`, `docker`, `docs`
-
-### Examples
+**Examples:**
 ```
 feat(adapters): add HuggingFace embedding provider
-
 fix(llm): set stream=False in Ollama API requests
-
-docs(readme): update Docker commands for new architecture
-
-refactor(config): simplify path resolution logic
-
-test(pipelines): add unit tests for ingestion pipeline
+docs(readme): update Docker commands
+refactor(config): simplify path resolution
+test(pipelines): add unit tests for ingestion
 ```
 
-### Rules
-- Subject line: max 72 characters, lowercase, no period at end
-- Use imperative mood ("add" not "added" or "adds")
+**Rules:**
+- Subject line: max 72 chars, lowercase, no period
+- Use imperative mood ("add" not "added")
 - Body: explain what and why (not how)
-- Reference issues in footer: `Closes #123`
-
----
-
-## Common Issues
-
-| Issue | Solution |
-|-------|----------|
-| Memory error with LLM | Increase Docker memory or use smaller model |
-| 404 on `/api/generate` | Check model name matches exactly (e.g., `granite3.1-moe:1b`) |
-| JSON parsing error | Ensure `"stream": False` in Ollama requests |
-| Env vars not substituted | Ensure `.env` exists and containers restarted |
+- Reference issues: `Closes #123`

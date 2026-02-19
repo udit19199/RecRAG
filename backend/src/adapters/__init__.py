@@ -78,8 +78,11 @@ def list_llm_providers() -> list[str]:
 
 from adapters.embedding import OpenAIEmbedder, OllamaEmbedder
 from adapters.llm import OpenAILLM, OllamaLLM
+from adapters.nim import NIMEmbedder, NIMLLM
 
 register_embedder("openai", OpenAIEmbedder)
 register_embedder("ollama", OllamaEmbedder)
+register_embedder("nim", NIMEmbedder)
 register_llm("openai", OpenAILLM)
 register_llm("ollama", OllamaLLM)
+register_llm("nim", NIMLLM)

@@ -1,7 +1,6 @@
 import os
 from typing import Any, Optional
 
-import requests
 from openai import OpenAI
 
 from adapters.base import BaseLLM

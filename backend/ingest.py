@@ -4,6 +4,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent / "src"))
 
+from config import find_config_path
 from pipelines import run_ingestion
 
 
@@ -25,14 +26,8 @@ def main():
 
     args = parser.parse_args()
 
-    if args.config:
-        config_path = args.config
-    else:
-        config_path = Path(__file__).parent.parent / "config.toml"
-        if not config_path.exists():
-            config_path = Path("config.toml")
-
     try:
+        config_path = find_config_path(args.config)
         results = run_ingestion(config_path, force=args.force)
         print("\n=== Ingestion Complete ===")
         print(f"Documents processed: {results['documents']}")

@@ -72,7 +72,6 @@ backend/
 │   ├── config.py          # Configuration loading with env var substitution
 │   ├── core.py            # Document processing & FAISS vector store
 │   ├── pipelines.py       # IngestionPipeline & RetrievalPipeline
-│   ├── registry.py        # Pipeline registry for multi-pipeline support
 │   ├── stores/            # Vector store factory (currently FAISS only)
 │   ├── loaders/           # Document loader factory (currently PDF only)
 │   └── adapters/          # LLM & embedding provider abstraction
@@ -311,14 +310,9 @@ User asks question
 - **Context Template**: Hardcoded format (no template engine)
 - **No Token Counting**: Risk of exceeding LLM context window
 
-### 5.4 Registry (registry.py)
+### 5.4 Registry (removed)
 
-**`PipelineRegistry`**
-- Singleton registry for pipeline definitions
-- Supports multi-pipeline configurations (infrastructure in place, not fully utilized)
-- Currently used for tracking, not for dynamic pipeline switching
-
----
+--- 
 
 ## 6. Data, State & Configuration
 
@@ -616,14 +610,12 @@ if errors:
 ### 9.4 Inconsistencies & Ambiguities
 
 **Unresolved Questions:**
-1. **Pipeline Registry**: Infrastructure exists but unused—should it be removed or integrated?
-2. **Factory Modules**: `stores/__init__.py` and `loaders/__init__.py` only support single provider—should they be expanded or removed?
-3. **Streaming**: Interface supports streaming (`supports_streaming` property) but never used—intentional or oversight?
+1. **Factory Modules**: `stores/__init__.py` and `loaders/__init__.py` only support single provider—should they be expanded or removed?
+2. **Streaming**: Interface supports streaming (`supports_streaming` property) but never used—intentional or oversight?
 
 **Code Smells:**
 1. **Large Pipeline Class**: `IngestionPipeline` has multiple responsibilities (discovery, hashing, batching, embedding)
-2. **Global Registry**: Provider registry is module-level global state
-3. **Magic Strings**: File extensions (`.pdf`), config keys scattered throughout code
+2. **Magic Strings**: File extensions (`.pdf`), config keys scattered throughout code
 
 ---
 

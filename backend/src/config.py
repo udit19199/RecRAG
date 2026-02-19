@@ -25,6 +25,21 @@ def resolve_path(path: str | Path, config_path: Path) -> Path:
     return (config_path.parent / path).resolve()
 
 
+def find_config_path(explicit_path: Path | None = None) -> Path:
+    """Centralized config path resolution."""
+    if explicit_path:
+        return explicit_path
+    # Try common locations
+    candidates = [
+        Path("config.toml"),
+        Path(__file__).parent.parent.parent / "config.toml",
+    ]
+    for path in candidates:
+        if path.exists():
+            return path
+    raise FileNotFoundError("config.toml not found")
+
+
 def load_config(config_path: Path = Path("config.toml")) -> dict[str, Any]:
     """Load configuration from TOML file with environment variable substitution.
 

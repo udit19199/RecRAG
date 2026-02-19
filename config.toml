@@ -1,12 +1,36 @@
+# RecRAG Configuration
+# All non-sensitive configuration values
+
 [embedding]
-provider = "${EMBEDDING_PROVIDER:-openai}"
-model = "${EMBEDDING_MODEL:-text-embedding-3-small}"
-base_url = "${EMBEDDING_BASE_URL:-}"
+provider = "openai"
+model = "text-embedding-3-small"
+base_url = ""
+# truncate = "NONE"  # Optional: NONE (default), START, END
+
+# NVIDIA NIM example:
+# provider = "nim"
+# model = "nvidia/nv-embedqa-e5-v5"
+# base_url = "https://integrate.api.nvidia.com/v1"
+
+# Ollama example:
+# provider = "ollama"
+# model = "nomic-embed-text"
+# base_url = "http://localhost:11434"
 
 [llm]
-provider = "${LLM_PROVIDER:-openai}"
-model = "${LLM_MODEL:-gpt-4o-mini}"
-base_url = "${LLM_BASE_URL:-}"
+provider = "openai"
+model = "gpt-4o-mini"
+base_url = ""
+
+# NVIDIA NIM example:
+# provider = "nim"
+# model = "meta/llama-3.1-8b-instruct"
+# base_url = "https://integrate.api.nvidia.com/v1"
+
+# Ollama example:
+# provider = "ollama"
+# model = "llama3"
+# base_url = "http://localhost:11434"
 
 [ingestion]
 directory = "data/pdfs"
@@ -15,6 +39,7 @@ chunk_overlap = 50
 
 [retrieval]
 top_k = 4
+max_context_tokens = 4096
 context_template = """Context information:
 {context}
 

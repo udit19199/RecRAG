@@ -7,7 +7,7 @@ import pytest
 sys.path.insert(0, str(Path(__file__).parent.parent / "backend" / "src"))
 
 from adapters.base import BaseEmbedder, BaseLLM
-from core import VectorStore
+from stores import VectorStore
 
 
 class MockEmbedder(BaseEmbedder):

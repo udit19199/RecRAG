@@ -111,7 +111,7 @@ class OllamaEmbedder(BaseEmbedder):
             response.raise_for_status()
             data = response.json()
             return data.get("embeddings", [])
-        except requests.exceptions.RequestException as e:
+        except requests.exceptions.RequestException:
             # Fall back to parallel individual requests if batch fails
             return self._embed_batch_parallel(texts)
 

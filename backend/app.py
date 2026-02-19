@@ -1,4 +1,5 @@
 import json
+import re
 import sys
 import time
 from pathlib import Path
@@ -7,21 +8,18 @@ import streamlit as st
 
 sys.path.insert(0, str(Path(__file__).parent / "src"))
 
-from config import resolve_path
+from config import resolve_path, find_config_path
 from pipelines import get_retrieval_pipeline
+
+MAX_FILE_SIZE_MB = 50
+MAX_FILE_SIZE_BYTES = MAX_FILE_SIZE_MB * 1024 * 1024
+PDF_MAGIC_BYTES = b"%PDF-"
 
 st.set_page_config(page_title="RecRAG", page_icon="📚")
 
 st.title("📚 RecRAG - RAG Pipeline")
 
-DEFAULT_CONFIG_PATH = Path("config.toml")
-
-
-def get_config_path() -> Path:
-    config_path = Path(__file__).parent.parent / "config.toml"
-    if config_path.exists():
-        return config_path
-    return DEFAULT_CONFIG_PATH
+CONFIG_PATH = find_config_path()
 
 
 def get_status_file(config_path: Path) -> Path:
@@ -54,7 +52,24 @@ def get_upload_dir(config_path: Path) -> Path:
     )
 
 
-CONFIG_PATH = get_config_path()
+def sanitize_filename(filename: str) -> str:
+    safe_name = Path(filename).name
+    safe_name = re.sub(r"[^\w\-_.]", "_", safe_name)
+    return safe_name
+
+
+def validate_file(uploaded_file) -> tuple[bool, str]:
+    if uploaded_file.size > MAX_FILE_SIZE_BYTES:
+        return False, f"File exceeds maximum size of {MAX_FILE_SIZE_MB}MB"
+
+    content = uploaded_file.getvalue()
+    if not content.startswith(PDF_MAGIC_BYTES):
+        return False, "Invalid PDF file (missing PDF header)"
+
+    return True, ""
+
+
+CONFIG_PATH = find_config_path()
 
 tab_ingest, tab_query = st.tabs(["Ingest Documents", "Query"])
 
@@ -87,36 +102,47 @@ with tab_ingest:
         upload_dir = get_upload_dir(CONFIG_PATH)
         upload_dir.mkdir(parents=True, exist_ok=True)
 
+        saved_count = 0
         for uploaded_file in uploaded_files:
-            file_path = upload_dir / uploaded_file.name
+            is_valid, error_msg = validate_file(uploaded_file)
+            if not is_valid:
+                st.error(f"❌ {uploaded_file.name}: {error_msg}")
+                continue
+
+            safe_name = sanitize_filename(uploaded_file.name)
+            file_path = upload_dir / safe_name
 
             with open(file_path, "wb") as f:
                 f.write(uploaded_file.getbuffer())
 
-            st.success(f"✅ Saved {uploaded_file.name}")
+            st.success(f"✅ Saved {safe_name}")
+            saved_count += 1
 
-        st.info(
-            "Files uploaded. The ingestion container will automatically process them."
-        )
-
-        placeholder = st.empty()
-        placeholder.info("🔄 Waiting for ingestion to complete...")
-
-        for _ in range(60):
-            time.sleep(2)
-            status = get_ingestion_status(CONFIG_PATH)
-            if status.get("status") == "complete":
-                placeholder.success(
-                    f"✅ Ingestion complete! Processed {status.get('files_processed', 0)} files."
-                )
-                break
-            elif status.get("status") == "error":
-                placeholder.error(
-                    f"❌ Error: {status.get('error_message', 'Unknown error')}"
-                )
-                break
+        if saved_count == 0:
+            st.warning("No valid files were uploaded")
         else:
-            placeholder.warning("⏱️ Still processing... (this may take a while)")
+            st.info(
+                "Files uploaded. The ingestion container will automatically process them."
+            )
+
+            placeholder = st.empty()
+            placeholder.info("🔄 Waiting for ingestion to complete...")
+
+            for _ in range(60):
+                time.sleep(2)
+                status = get_ingestion_status(CONFIG_PATH)
+                if status.get("status") == "complete":
+                    placeholder.success(
+                        f"✅ Ingestion complete! Processed {status.get('files_processed', 0)} files."
+                    )
+                    break
+                elif status.get("status") == "error":
+                    placeholder.error(
+                        f"❌ Error: {status.get('error_message', 'Unknown error')}"
+                    )
+                    break
+            else:
+                placeholder.warning("⏱️ Still processing... (this may take a while)")
 
 with tab_query:
     st.header("Query Documents")

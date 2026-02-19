@@ -1,110 +1,22 @@
-import hashlib
 import json
 import logging
 from pathlib import Path
-from typing import Any, Callable, Optional
+from typing import Any
 
-from adapters import BaseEmbedder, BaseLLM, create_embedder, create_llm
-from config import get_config_value, load_config, resolve_path
-from core import (
-    BaseDocumentLoader,
-    BaseTextSplitter,
-    BaseVectorStore,
-    Chunk,
-    DocumentLoader,
-    TextSplitter,
-    VectorStore,
+from adapters import BaseEmbedder
+from config import get_config_value, resolve_path
+from loaders import BaseDocumentLoader, DocumentLoader
+from models import Chunk
+from splitters import BaseTextSplitter, TextSplitter
+from stores import BaseVectorStore, VectorStore
+from .base import (
+    DEFAULT_BATCH_SIZE,
+    create_embedder_from_config,
+    get_vector_store_paths,
 )
+from .utils import _compute_file_hash
 
-logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-)
 logger = logging.getLogger(__name__)
-
-DEFAULT_CONTEXT_TEMPLATE = """Context information:
-{context}
-
-Question: {question}
-
-Answer:"""
-
-DEFAULT_BATCH_SIZE = 100
-DEFAULT_CHUNK_SIZE = 1024
-DEFAULT_CHUNK_OVERLAP = 50
-DEFAULT_TOP_K = 4
-
-
-def _compute_file_hash(file_path: Path) -> str:
-    """Compute MD5 hash of a file for change detection."""
-    hasher = hashlib.md5()
-    with open(file_path, "rb") as f:
-        for chunk in iter(lambda: f.read(8192), b""):
-            hasher.update(chunk)
-    return hasher.hexdigest()
-
-
-def _create_adapter_from_config(
-    config: dict[str, Any],
-    section: str,
-    create_fn: Callable[..., Any],
-    defaults: dict[str, str],
-) -> Any:
-    """Create an adapter (embedder or LLM) from configuration.
-
-    Args:
-        config: Configuration dictionary.
-        section: Config section name ('embedding' or 'llm').
-        create_fn: Factory function (create_embedder or create_llm).
-        defaults: Default values for provider and model.
-
-    Returns:
-        Adapter instance.
-    """
-    section_config = config.get(section, {})
-    provider = section_config.get("provider", defaults["provider"])
-    model = section_config.get("model", defaults["model"])
-
-    extra_kwargs = {
-        k: v for k, v in section_config.items() if k not in ("provider", "model")
-    }
-
-    return create_fn(provider, model=model, **extra_kwargs)
-
-
-def create_embedder_from_config(config: dict[str, Any]) -> BaseEmbedder:
-    """Create an embedder instance from configuration."""
-    defaults = {"provider": "openai", "model": "text-embedding-3-small"}
-    return _create_adapter_from_config(config, "embedding", create_embedder, defaults)
-
-
-def create_llm_from_config(config: dict[str, Any]) -> BaseLLM:
-    """Create an LLM instance from configuration."""
-    defaults = {"provider": "openai", "model": "gpt-4o-mini"}
-    return _create_adapter_from_config(config, "llm", create_llm, defaults)
-
-
-def get_vector_store_paths(
-    config: dict[str, Any], config_path: Path, embedder_model: str
-) -> tuple[Path, Path]:
-    """Get index and metadata paths for the vector store.
-
-    Args:
-        config: Configuration dictionary.
-        config_path: Path to configuration file.
-        embedder_model: Embedder model name for path generation.
-
-    Returns:
-        Tuple of (index_path, metadata_path).
-    """
-    storage_dir = resolve_path(
-        config.get("storage", {}).get("directory", "storage"), config_path
-    )
-    embedder_id = embedder_model.replace("/", "_").replace("-", "_")
-    return (
-        storage_dir / f"faiss_{embedder_id}.index",
-        storage_dir / f"faiss_{embedder_id}.json",
-    )
-
 
 class IngestionPipeline:
     """Pipeline for ingesting documents and creating embeddings.
@@ -240,10 +152,11 @@ class IngestionPipeline:
             return 0
 
         chunk_texts = [c.text for c in chunks]
-        chunk_metadatas = [{"source": c.source} for c in chunks]
+        # Phase 5: Rename metadatas -> metadata_list
+        metadata_list = [{"source": c.source} for c in chunks]
 
         embeddings = self.embedder.embed_batch(chunk_texts)
-        self.vector_store.add(embeddings, chunk_texts, chunk_metadatas)
+        self.vector_store.add(embeddings, chunk_texts, metadata_list)
 
         return len(embeddings)
 
@@ -263,11 +176,14 @@ class IngestionPipeline:
         logger.info(f"Processed batch {batch_num}: {len(chunks)} chunks")
         return len(chunks), embeddings_count
 
-    def run_incremental(
+    def process_new_and_changed_documents(
         self,
         files: list[Path] | None = None,
     ) -> dict[str, Any]:
-        """Run incremental ingestion - only process new or changed files."""
+        """Run incremental ingestion - only process new or changed files.
+
+        This method is memory-efficient as it processes files in batches.
+        """
         storage_dir = self._get_storage_dir()
         if storage_dir:
             self._processed_files = self._load_processed_files(storage_dir)
@@ -357,8 +273,11 @@ class IngestionPipeline:
             self.vector_store.delete_all()
             self._processed_files = {}
 
-    def run_streaming(self, force: bool = False) -> dict[str, Any]:
-        """Run ingestion with streaming/batched processing for lower memory usage."""
+    def process_documents_streaming(self, force: bool = False) -> dict[str, Any]:
+        """Run ingestion with streaming/batched processing for lower memory usage.
+
+        This method processes files in configured batch sizes.
+        """
         self._prepare_for_ingestion(force)
 
         ingestion_dir = resolve_path(
@@ -385,10 +304,10 @@ class IngestionPipeline:
             "total_vectors": self.vector_store.count,
         }
 
-    def run(self, force: bool = False) -> dict[str, Any]:
-        """Run full ingestion - loads all documents at once.
+    def process_all_documents(self, force: bool = False) -> dict[str, Any]:
+        """Run full ingestion - loads all documents at once into memory.
 
-        For large corpora, use run_streaming() instead.
+        For large corpora, use process_documents_streaming() instead.
         """
         self._prepare_for_ingestion(force)
 
@@ -411,6 +330,15 @@ class IngestionPipeline:
             "total_vectors": self.vector_store.count,
         }
 
+    # Backward compatibility
+    def run(self, force: bool = False) -> dict[str, Any]:
+        return self.process_all_documents(force=force)
+
+    def run_streaming(self, force: bool = False) -> dict[str, Any]:
+        return self.process_documents_streaming(force=force)
+
+    def run_incremental(self, files: list[Path] | None = None) -> dict[str, Any]:
+        return self.process_new_and_changed_documents(files=files)
 
 def run_ingestion(
     config_path: Path = Path("config.toml"),
@@ -429,117 +357,11 @@ def run_ingestion(
     Returns:
         Dictionary with ingestion results.
     """
+    from config import load_config
     config = load_config(config_path)
     pipeline = IngestionPipeline.from_config(config, config_path)
 
     if incremental:
-        return pipeline.run_incremental(files=files)
+        return pipeline.process_new_and_changed_documents(files=files)
     else:
-        return pipeline.run(force=force)
-
-
-class RetrievalPipeline:
-    """Pipeline for retrieving and generating responses.
-
-    Supports dependency injection for flexible composition.
-    """
-
-    def __init__(
-        self,
-        embedder: BaseEmbedder,
-        llm: BaseLLM,
-        vector_store: BaseVectorStore,
-        top_k: int = DEFAULT_TOP_K,
-        context_template: str = DEFAULT_CONTEXT_TEMPLATE,
-        config: dict[str, Any] | None = None,
-        config_path: Path | None = None,
-    ):
-        self.embedder = embedder
-        self.llm = llm
-        self.vector_store = vector_store
-        self.top_k = top_k
-        self.context_template = context_template
-        self.config = config or {}
-        self.config_path = config_path
-
-    @classmethod
-    def from_config(
-        cls, config: dict[str, Any], config_path: Path
-    ) -> "RetrievalPipeline":
-        """Create pipeline from configuration dictionary."""
-        embedder = create_embedder_from_config(config)
-        llm = create_llm_from_config(config)
-
-        index_path, metadata_path = get_vector_store_paths(
-            config, config_path, embedder.model
-        )
-        vector_store = VectorStore(
-            dimension=embedder.dimension,
-            index_path=index_path,
-            metadata_path=metadata_path,
-        )
-
-        top_k = get_config_value(config, "retrieval.top_k", DEFAULT_TOP_K)
-        context_template = config.get("retrieval", {}).get(
-            "context_template", DEFAULT_CONTEXT_TEMPLATE
-        )
-
-        return cls(
-            embedder=embedder,
-            llm=llm,
-            vector_store=vector_store,
-            top_k=top_k,
-            context_template=context_template,
-            config=config,
-            config_path=config_path,
-        )
-
-    def retrieve(self, query: str, top_k: Optional[int] = None) -> list[dict[str, Any]]:
-        """Retrieve relevant documents for a query."""
-        k = top_k or self.top_k
-        logger.info(f"Embedding query: {query[:50]}...")
-
-        query_embedding = self.embedder.embed(query)
-        _, results = self.vector_store.search(query_embedding, k=k)
-
-        logger.info(f"Found {len(results)} results")
-        return results
-
-    def generate(
-        self,
-        query: str,
-        context: Optional[list[dict[str, Any]]] = None,
-    ) -> str:
-        """Generate a response using retrieved context."""
-        context = context or self.retrieve(query)
-        context_text = "\n\n".join(doc.get("text", "") for doc in context)
-
-        prompt = self.context_template.format(
-            context=context_text,
-            question=query,
-        )
-
-        logger.info("Generating response...")
-        return self.llm.generate(prompt)
-
-    def query(self, query: str) -> dict[str, Any]:
-        """Execute a full RAG query: retrieve and generate."""
-        context = self.retrieve(query)
-        response = self.generate(query, context)
-
-        return {"response": response, "context": context}
-
-
-def get_retrieval_pipeline(
-    config_path: Path = Path("config.toml"),
-) -> RetrievalPipeline:
-    """Create a retrieval pipeline from config.
-
-    Args:
-        config_path: Path to configuration file.
-
-    Returns:
-        RetrievalPipeline instance.
-    """
-    config = load_config(config_path)
-    return RetrievalPipeline.from_config(config, config_path)
+        return pipeline.process_all_documents(force=force)

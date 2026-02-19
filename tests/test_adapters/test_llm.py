@@ -54,7 +54,7 @@ class TestOpenAILLM:
 
 class TestOllamaLLM:
     def test_generate_returns_response(self) -> None:
-        with patch("adapters.llm.requests.post") as mock_post:
+        with patch("requests.Session.post") as mock_post:
             mock_response = MagicMock()
             mock_response.json.return_value = {"response": "Generated response"}
             mock_response.raise_for_status = MagicMock()
@@ -70,7 +70,7 @@ class TestOllamaLLM:
             assert call_args[1]["json"]["prompt"] == "test prompt"
 
     def test_generate_sets_stream_false(self) -> None:
-        with patch("adapters.llm.requests.post") as mock_post:
+        with patch("requests.Session.post") as mock_post:
             mock_response = MagicMock()
             mock_response.json.return_value = {"response": "response"}
             mock_response.raise_for_status = MagicMock()
@@ -83,7 +83,7 @@ class TestOllamaLLM:
             assert call_args[1]["json"]["stream"] is False
 
     def test_chat_returns_response(self) -> None:
-        with patch("adapters.llm.requests.post") as mock_post:
+        with patch("requests.Session.post") as mock_post:
             mock_response = MagicMock()
             mock_response.json.return_value = {"message": {"content": "Chat response"}}
             mock_response.raise_for_status = MagicMock()
@@ -100,7 +100,7 @@ class TestOllamaLLM:
             assert call_args[1]["json"]["stream"] is False
 
     def test_chat_sets_stream_false(self) -> None:
-        with patch("adapters.llm.requests.post") as mock_post:
+        with patch("requests.Session.post") as mock_post:
             mock_response = MagicMock()
             mock_response.json.return_value = {"message": {"content": "response"}}
             mock_response.raise_for_status = MagicMock()
@@ -117,7 +117,7 @@ class TestOllamaLLM:
         assert llm.supports_streaming is False
 
     def test_generate_with_max_tokens(self) -> None:
-        with patch("adapters.llm.requests.post") as mock_post:
+        with patch("requests.Session.post") as mock_post:
             mock_response = MagicMock()
             mock_response.json.return_value = {"response": "response"}
             mock_response.raise_for_status = MagicMock()

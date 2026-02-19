@@ -1,331 +1,149 @@
 # RecRAG - Outstanding Issues
 
-This document tracks outstanding code quality, performance, and architecture issues identified during code review.
+Issues identified during code review, grouped by severity and category.
 
 ---
 
-## 🔴 Critical
+## High Priority
 
-### 1. Tests Added ✅
+### 1. Hardcoded Timeouts
 
-Test suite now exists with comprehensive coverage:
-- `tests/test_core.py` - Core component tests
-- `tests/test_adapters/test_embedding.py` - Embedding adapter tests
-- `tests/test_adapters/test_llm.py` - LLM adapter tests
+**Files**: `adapters/embedding.py:78,109`, `adapters/llm.py:99,111`
 
-**Status:** Resolved in recent refactoring.
+- 30s for embeddings
+- 120s for LLM
 
----
+Not configurable. No retry logic.
 
-### 2. Data Loss in Parallel Embedding - Fixed ✅
-
-**File:** `adapters/embedding.py:142-171`
-
-The `_embed_batch_parallel()` method now properly handles failures:
-- Tracks errors with index information
-- Raises descriptive `RuntimeError` with failed indices
-- No silent dropping of failed embeddings
-
-**Status:** Fixed in recent refactoring.
-
----
-
-### 3. Dead Code in `_remove_by_sources()` - Fixed ✅
-
-**File:** `core.py:236-259`
-
-The `_remove_by_sources()` method was cleaned up:
-- Removed misleading dead code that suggested FAISS index rebuilding
-- Method now honestly only removes metadata entries
-- Documented that full FAISS index consistency requires re-indexing
-
-**Status:** Fixed in recent refactoring.
-
----
-
-### 4. Critical Indentation Bug in watch.py - Fixed ✅
-
-**File:** `watch.py:130-181`
-
-The `run_ingestion_safe` function was incorrectly defined outside the class due to indentation error. This has been:
-- Fixed indentation to make it a proper method (`_run_ingestion_with_lock`)
-- Renamed for clarity
-- Verified to work correctly
-
-**Status:** Fixed in recent refactoring.
-
----
-
-## 🟠 High Priority
-
-### 4. Placeholder Project Metadata - Fixed ✅
-
-**File:** `pyproject.toml`
-
-Project metadata has been updated with proper values.
-
-**Status:** Fixed in recent refactoring.
-
----
-
-### 5. Dev Dependencies Added ✅
-
-**File:** `pyproject.toml`
-
-Dev dependencies are now properly configured:
+**Solution**: Add to `config.toml`:
 ```toml
-[project.optional-dependencies]
-dev = [
-    "pytest>=8.0",
-    "pytest-mock>=3.0",
-    "ruff>=0.1.0",
-    "mypy>=1.0",
-]
+[adapters]
+timeout_embedding = 30
+timeout_llm = 120
+max_retries = 3
 ```
 
-Install with: `uv sync --extra dev`
-
-**Status:** Fixed in recent refactoring.
-
 ---
 
-### 6. Hardcoded Timeouts
+### 2. Streamlit Blocking Poll
 
-**Files:** `embedding.py:87`, `llm.py:93,114`
-
-- 30s for embeddings, 120s for LLM
-- Not configurable via config
-- No retry logic with exponential backoff
-
-**Recommended Actions:**
-- Add timeout settings to `config.toml`
-- Implement retry logic with configurable max retries
-- Add circuit breaker pattern for external API calls
-
----
-
-### 7. Streamlit Polling Anti-Pattern
-
-**File:** `app.py:105-119`
+**File**: `backend/app.py:131-145`
 
 ```python
 for _ in range(60):
-    time.sleep(2)  # Blocking for 2 minutes!
+    time.sleep(2)  # Blocks UI thread for 2 minutes!
 ```
 
-This blocks the UI thread. Should use `st.rerun()` or WebSockets.
+**Impact**: UI frozen, poor user experience.
 
-**Recommended Actions:**
-- Use `st.rerun()` with `st.session_state` for status updates
-- Consider Server-Sent Events (SSE) or WebSockets for real-time updates
-- Add a manual refresh button as fallback
+**Solution**: Use `st.rerun()` with `st.session_state` for non-blocking updates.
 
 ---
 
-## 🟡 Medium Priority
+### 3. Non-Atomic Status File Writes
 
-### 8. No File Upload Validation
-
-**File:** `app.py:80-96`
-
-Current implementation has no validation:
-- No file size limits (memory exhaustion risk)
-- No PDF header validation (could be malicious/non-PDF)
-- No filename sanitization (potential path traversal)
-
-**Recommended Actions:**
-- Add configurable max file size (e.g., 50MB)
-- Validate PDF magic bytes (`%PDF-`)
-- Sanitize filenames to remove path separators
-
----
-
-### 9. Context Window Overflow
-
-**File:** `pipelines.py:218-219`
+**File**: `backend/watch.py:71-72`
 
 ```python
-context_text = "\n\n".join([doc.get("text", "") for doc in context])
+with open(self.status_file, "w") as f:
+    json.dump(status_data, f)
 ```
 
-No check if concatenated context exceeds LLM's context window. Could cause:
-- API errors from OpenAI/Ollama
-- Truncated responses
-- Wasted tokens
+Process crash mid-write corrupts the file.
 
-**Recommended Actions:**
-- Estimate token count before sending
-- Truncate or summarize context if too long
-- Make context window size configurable
+**Solution**: Write to temp file, then atomic rename.
 
 ---
 
-### 10. Missing Type Annotations
+## Medium Priority
 
-**File:** `core.py:46`
+### 4. No Embedding Cache
 
-```python
-def split_documents(self, documents: list) -> list[str]:  # list of what?
-```
+Same query re-embedded every time. No caching at any level.
 
-Should be `list[LlamaDocument]` or `list[Document]`.
+**Impact**: Wasted API calls, slower responses.
 
-**Recommended Actions:**
-- Add complete type annotations to all public methods
-- Run mypy in CI pipeline
-- Add py.typed marker for package distribution
+**Solution**: Add LRU cache with configurable size (default 1000 entries).
 
 ---
 
-### 11. FAISS IndexFlatL2 Doesn't Scale
+### 5. Full JSON Write on Every Add
 
-`IndexFlatL2` is brute-force search. At scale (>100k vectors), this becomes very slow.
+**File**: `backend/src/stores/faiss.py:102`
 
-**Recommended Actions:**
-- Implement `IndexIVFFlat` or `IndexHNSW` for production workloads
-- Add configuration option to select index type
-- Implement index parameter tuning based on dataset size
+Every `add()` writes entire metadata JSON to disk. For bulk ingestion of 10k documents, that's 10k full file writes.
 
----
-
-### 12. No Embedding Caching
-
-Re-embedding the same query/document has no caching. Could use simple LRU cache or persistent cache.
-
-**Recommended Actions:**
-- Add in-memory LRU cache with configurable size
-- Consider persistent cache (e.g., Redis, SQLite) for production
-- Add cache hit/miss metrics for monitoring
+**Solution**: Batch writes with explicit `flush()` or auto-flush at batch limit.
 
 ---
 
-### 13. Full JSON Write on Every Add
+### 6. IndexFlatL2 Doesn't Scale
 
-**File:** `core.py` (VectorStore)
+**File**: `backend/src/stores/faiss.py:29`
 
-Every `add()` writes the entire metadata JSON to disk. For bulk ingestion, should batch writes.
+`IndexFlatL2` is brute-force O(n) search. At 100k+ vectors, search becomes noticeably slow.
 
-**Recommended Actions:**
-- Add `flush()` method for explicit persistence
-- Implement batched writes with configurable batch size
-- Consider append-only log format for better performance
+**Solution**: Use `IndexIVFFlat` for approximate search at scale.
 
 ---
 
-### 14. Connection Pooling Added ✅
+## Low Priority
 
-**Files:** `adapters/embedding.py`, `adapters/llm.py`, `adapters/utils.py`
+### 7. No Typed Config Class
 
-Connection pooling has been implemented:
-- New `adapters/utils.py` with `create_session_with_pooling()` helper
-- Both OllamaEmbedder and OllamaLLM use pooled sessions
-- Reduces connection overhead for batch operations
+Config passed as `dict[str, Any]` everywhere. No IDE autocomplete, no validation.
 
-**Status:** Fixed in recent refactoring.
+**Solution**: Pydantic model with validation.
 
 ---
 
-### 15. No Abstract Config Class
+### 8. No Circuit Breaker
 
-Config is passed as raw `dict[str, Any]` everywhere. Should have typed `Config` dataclass/pydantic model for:
-- IDE autocomplete
-- Validation at startup
-- Clear documentation
-
-**Recommended Actions:**
-- Create `Config` dataclass with nested sections
-- Use pydantic for validation
-- Add config schema documentation
+If OpenAI/Ollama is down, entire system fails. No fallback, no graceful degradation.
 
 ---
 
-### 16. No Graceful Degradation
+### 9. No Document Deletion API
 
-If Ollama/OpenAI is down, the entire system fails. No circuit breaker, no fallback.
-
-**Recommended Actions:**
-- Implement circuit breaker pattern
-- Add fallback providers
-- Return meaningful error messages to users
+Can add documents but cannot remove them from the UI.
 
 ---
 
-### 17. Status File Protocol is Fragile
+### 10. Logging Only to Stdout
 
-`ingestion_status.json` can be corrupted if process dies mid-write. Should use atomic writes (write to temp, then rename).
-
-**Recommended Actions:**
-- Implement atomic writes using temp file + rename
-- Add status file validation on startup
-- Consider using SQLite for status tracking
+No file logging, no structured logging, no log levels in config.
 
 ---
 
-## 📋 Missing Features
+## Security Considerations
 
-| Feature | Impact | Notes |
-|---------|--------|-------|
-| Unit tests | Critical | No test coverage exists |
-| Integration tests | Critical | No E2E validation |
-| Type checking (mypy) | High | Referenced but not configured |
-| Logging to file | Medium | Only stdout |
-| Metrics/Monitoring | Medium | No observability |
-| Rate limiting | Medium | Could hit API limits |
-| Document deletion | Medium | Can only add, never remove |
-| Incremental ingestion | Medium | Always re-ingests all |
-| API versioning | Low | No version on status file |
+| Risk | Location | Status |
+|------|----------|--------|
+| File upload DoS | `app.py` | ✅ Fixed (size limits) |
+| Path traversal | `app.py` | ✅ Fixed (filename sanitization) |
+| Malformed PDFs | `app.py` | ✅ Fixed (magic byte check) |
+| Prompt injection | `retrieval.py` | Open (complex to mitigate) |
+| API key exposure | `.env` | Use secrets manager in production |
 
 ---
 
-## ⚡ Performance Considerations
+## Test Coverage Gaps
 
-1. **Large Document Sets**: Current implementation loads all documents into memory. Consider streaming/chunked processing for very large datasets.
-
-2. **Concurrent Requests**: No request queueing or throttling. High load could overwhelm the system.
-
-3. **Index Rebuilding**: `_remove_by_sources()` rebuilds the entire FAISS index. Consider more efficient approaches for incremental updates.
-
----
-
-## 🔒 Security Considerations
-
-1. **Input Validation**: No validation on uploaded PDFs (size, format, content). Malformed files could cause memory issues or crashes.
-
-2. **Path Traversal**: File paths should be validated to prevent directory traversal attacks when saving uploads.
-
-3. **Rate Limiting**: No protection against DoS attacks on the Streamlit endpoint.
-
-4. **File Upload**: No virus scanning or content validation for uploaded files.
+| Component | Status | Notes |
+|-----------|--------|-------|
+| Core (VectorStore, Splitter, Loader) | Tested | 11 tests |
+| Adapters (OpenAI, Ollama) | Tested | 17 tests with mocks |
+| Pipelines | Missing | No tests |
+| Watch daemon | Missing | No tests |
+| Config edge cases | Missing | No tests |
+| Integration (E2E) | Missing | No tests |
 
 ---
 
-## ✅ Resolved Issues
+## Performance Notes
 
-The following issues were fixed during code review and optimization:
+1. **Large corpora**: Current implementation loads all documents into memory during full ingestion. Use `process_documents_streaming()` for lower memory usage.
 
-### Initial Code Review
-- [x] Duplicate Metadata on Re-ingestion (file locking + source-based removal)
-- [x] Ollama Batch Embedding Sequential (parallel with ThreadPoolExecutor)
-- [x] Race Condition in VectorStore (file locking added)
-- [x] API Key Exposure Risk (using kwargs.pop)
-- [x] Inconsistent Import Paths (standardized sys.path.insert)
-- [x] Redundant Embedder Initialization (extracted helper functions)
-- [x] Dead Code in pipelines.py (redundant list comprehension removed)
-- [x] Tight Coupling in Pipelines (refactored with helper functions)
+2. **Concurrent requests**: No request queueing. High load could overwhelm the system.
 
-### Performance Optimization
-- [x] O(n×m) Chunk-to-Source Mapping (refactored to O(n) using Chunk dataclass)
-- [x] No Debouncing in File Watcher (5-second debounce timer implemented)
-
-### Major Refactoring (Latest)
-- [x] Critical bug: Fixed `run_ingestion_safe` indentation in watch.py
-- [x] Added comprehensive test suite (28 tests across core and adapters)
-- [x] Fixed OllamaEmbedder error handling (no more silent failures)
-- [x] Added connection pooling for Ollama adapters
-- [x] Extracted shared utilities (`adapters/utils.py`)
-- [x] Consolidated factory functions in pipelines.py
-- [x] Extracted batch processing logic to reduce duplication
-- [x] Added named constants throughout (DEFAULT_BATCH_SIZE, etc.)
-- [x] Simplified adapter implementations with helper methods
-- [x] Removed dead code from `_remove_by_sources()`
-- [x] Cleaned up ISSUES.md, PLAN.md, README.md documentation
+3. **Index rebuilds**: ✅ Fixed - Source removal now rebuilds FAISS index to remove orphaned vectors.

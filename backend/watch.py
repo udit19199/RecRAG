@@ -14,7 +14,7 @@ from watchdog.observers import Observer
 
 sys.path.insert(0, str(Path(__file__).parent / "src"))
 
-from config import load_config, resolve_path
+from config import load_config, resolve_path, find_config_path
 from pipelines import run_ingestion
 
 logging.basicConfig(
@@ -215,13 +215,7 @@ def main():
 
     args = parser.parse_args()
 
-    if args.config:
-        config_path = args.config
-    else:
-        config_path = Path(__file__).parent.parent / "config.toml"
-        if not config_path.exists():
-            config_path = Path("config.toml")
-
+    config_path = find_config_path(args.config)
     config = load_config(config_path)
 
     watch_dir = resolve_path(
