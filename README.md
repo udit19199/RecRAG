@@ -321,6 +321,8 @@ RecRAG/
 ├── AGENTS.md                 # AI agent guidelines
 ├── CONTRIBUTING.md           # Contribution guidelines
 ├── README.md                 # This file
+├── ISSUES.md                 # Known issues and technical debt
+├── PLAN.md                   # Refactoring roadmap
 ├── pyproject.toml            # Project dependencies
 ├── uv.lock                   # Dependency lock file
 ├── config.toml               # Application configuration
@@ -331,13 +333,26 @@ RecRAG/
 │   │   ├── config.py         # Configuration loading & path resolution
 │   │   ├── core.py           # Document processing & vector store
 │   │   ├── pipelines.py      # Ingestion & retrieval pipelines
+│   │   ├── registry.py       # Pipeline registry
+│   │   ├── stores/           # Vector store factory
+│   │   │   └── __init__.py
+│   │   ├── loaders/          # Document loader factory
+│   │   │   └── __init__.py
 │   │   └── adapters/         # LLM & embedding providers
+│   │       ├── __init__.py   # Factory functions & provider registry
 │   │       ├── base.py       # Abstract base classes
 │   │       ├── embedding.py  # OpenAI + Ollama embedders
-│   │       └── llm.py        # OpenAI + Ollama LLMs
+│   │       ├── llm.py        # OpenAI + Ollama LLMs
+│   │       └── utils.py      # Shared adapter utilities
 │   ├── app.py                # Streamlit UI
 │   ├── ingest.py             # CLI ingestion tool
 │   └── watch.py              # File watcher daemon
+├── tests/                    # Test suite
+│   ├── conftest.py           # Test fixtures
+│   ├── test_core.py          # Core component tests
+│   └── test_adapters/        # Adapter tests
+│       ├── test_embedding.py
+│       └── test_llm.py
 ├── docker/
 │   ├── Dockerfile            # Multi-purpose Dockerfile
 │   └── docker-compose.yml    # Container orchestration
@@ -347,8 +362,56 @@ RecRAG/
 └── storage/                  # FAISS index & status files (not in git)
 ```
 
+## Testing
+
+The project includes a comprehensive test suite:
+
+```bash
+# Run all tests
+uv run pytest
+
+# Run specific test file
+uv run pytest tests/test_core.py
+
+# Run with coverage
+uv run pytest --cov=backend/src
+
+# Run only fast tests (exclude integration tests)
+uv run pytest -m "not integration"
+```
+
+### Test Structure
+
+- `tests/test_core.py` - Tests for `Chunk`, `DocumentLoader`, `TextSplitter`, `VectorStore`
+- `tests/test_adapters/test_embedding.py` - Tests for `OpenAIEmbedder` and `OllamaEmbedder`
+- `tests/test_adapters/test_llm.py` - Tests for `OpenAILLM` and `OllamaLLM`
+- `tests/conftest.py` - Shared fixtures and mocks
+
+## Development
+
+### Linting and Formatting
+
+```bash
+# Check code style
+uv run ruff check .
+
+# Auto-fix issues
+uv run ruff check --fix .
+
+# Format code
+uv run ruff format .
+```
+
+### Type Checking
+
+```bash
+uv run mypy backend/
+```
+
 ## Documentation
 
 - [Architecture](docs/ARCHITECTURE.md) - Detailed system design
 - [Contributing](CONTRIBUTING.md) - Contribution guidelines
 - [AGENTS.md](AGENTS.md) - Guidelines for AI coding agents
+- [ISSUES.md](ISSUES.md) - Known issues and technical debt
+- [PLAN.md](PLAN.md) - Refactoring roadmap and future plans
