@@ -16,6 +16,9 @@ dependencies = [
     "openai>=1.0.0",
     "watchdog>=5.0.0",
     "tiktoken>=0.5.0",
+    "ragas>=0.1.0",
+    "langchain-openai>=0.1.0",
+    "datasets>=2.15.0",
 ]
 
 [project.optional-dependencies]
@@ -25,3 +28,18 @@ dev = [
     "ruff>=0.1.0",
     "mypy>=1.0",
 ]
+
+[tool.setuptools.packages.find]
+where = ["backend/src"]
+
+[tool.setuptools]
+package-dir = {"" = "backend/src"}
+
+[tool.pytest.ini_options]
+pythonpath = ["backend/src"]
+testpaths = ["tests"]
+
+[tool.pyright]
+include = ["backend/src", "tests"]
+extraPaths = ["backend/src"]
+typeCheckingMode = "basic"

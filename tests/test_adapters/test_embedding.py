@@ -1,11 +1,7 @@
-import sys
-from pathlib import Path
 from unittest.mock import MagicMock, patch
 
 import pytest
 import requests
-
-sys.path.insert(0, str(Path(__file__).parent.parent.parent / "backend" / "src"))
 
 from adapters.embedding import OpenAIEmbedder, OllamaEmbedder
 
