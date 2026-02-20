@@ -76,9 +76,9 @@ def list_llm_providers() -> list[str]:
     return list(_LLM_REGISTRY.keys())
 
 
-from adapters.embedding import OpenAIEmbedder, OllamaEmbedder
-from adapters.llm import OpenAILLM, OllamaLLM
-from adapters.nim import NIMEmbedder, NIMLLM
+from adapters.embedding import OpenAIEmbedder, OllamaEmbedder  # noqa: E402
+from adapters.llm import OpenAILLM, OllamaLLM  # noqa: E402
+from adapters.nim import NIMEmbedder, NIMLLM  # noqa: E402
 
 register_embedder("openai", OpenAIEmbedder)
 register_embedder("ollama", OllamaEmbedder)

@@ -1,6 +1,12 @@
+from typing import TYPE_CHECKING
+
 from llama_index.core.node_parser import SentenceSplitter
 from llama_index.core.schema import Document as LlamaDocument
 from .base import BaseTextSplitter
+
+if TYPE_CHECKING:
+    from models.chunk import Chunk
+
 
 class SentenceTextSplitter(BaseTextSplitter):
     """Text splitter for chunking documents while preserving metadata.
@@ -46,6 +52,3 @@ class SentenceTextSplitter(BaseTextSplitter):
     def split_text(self, text: str) -> list[str]:
         """Split raw text into chunks without metadata."""
         return self.splitter.split_text(text)
-
-# Backward compatibility alias
-TextSplitter = SentenceTextSplitter

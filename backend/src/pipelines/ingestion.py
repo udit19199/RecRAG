@@ -4,7 +4,7 @@ from pathlib import Path
 from typing import Any
 
 from adapters import BaseEmbedder
-from config import get_config_value, resolve_path
+from config import get_config_value, get_ingestion_dir, get_storage_dir
 from loaders import BaseDocumentLoader, DocumentLoader
 from models import Chunk
 from splitters import BaseTextSplitter, TextSplitter
@@ -17,6 +17,7 @@ from .base import (
 from .utils import _compute_file_hash
 
 logger = logging.getLogger(__name__)
+
 
 class IngestionPipeline:
     """Pipeline for ingesting documents and creating embeddings.
@@ -65,9 +66,7 @@ class IngestionPipeline:
             metadata_path=metadata_path,
         )
 
-        ingestion_dir = resolve_path(
-            config.get("ingestion", {}).get("directory", "data/pdfs"), config_path
-        )
+        ingestion_dir = get_ingestion_dir(config, config_path)
         loader = DocumentLoader(str(ingestion_dir))
 
         batch_size = get_config_value(
@@ -226,10 +225,7 @@ class IngestionPipeline:
         """Get storage directory from config."""
         if not self.config_path:
             return None
-        return resolve_path(
-            self.config.get("storage", {}).get("directory", "storage"),
-            self.config_path,
-        )
+        return get_storage_dir(self.config, self.config_path)
 
     def _get_files_to_process(
         self, files: list[Path] | None
@@ -238,10 +234,7 @@ class IngestionPipeline:
         if files is not None:
             return [(f, str(f) not in self._processed_files) for f in files]
 
-        ingestion_dir = resolve_path(
-            self.config.get("ingestion", {}).get("directory", "data/pdfs"),
-            self.config_path or Path("."),
-        )
+        ingestion_dir = get_ingestion_dir(self.config, self.config_path or Path("."))
         return self._get_changed_files(ingestion_dir, self._processed_files)
 
     def _process_files_in_batches(self, files: list[Path]) -> tuple[int, int]:
@@ -280,10 +273,7 @@ class IngestionPipeline:
         """
         self._prepare_for_ingestion(force)
 
-        ingestion_dir = resolve_path(
-            self.config.get("ingestion", {}).get("directory", "data/pdfs"),
-            self.config_path or Path("."),
-        )
+        ingestion_dir = get_ingestion_dir(self.config, self.config_path or Path("."))
         all_files = self._discover_files(ingestion_dir)
 
         if not all_files:
@@ -340,6 +330,7 @@ class IngestionPipeline:
     def run_incremental(self, files: list[Path] | None = None) -> dict[str, Any]:
         return self.process_new_and_changed_documents(files=files)
 
+
 def run_ingestion(
     config_path: Path = Path("config.toml"),
     force: bool = False,
@@ -358,6 +349,7 @@ def run_ingestion(
         Dictionary with ingestion results.
     """
     from config import load_config
+
     config = load_config(config_path)
     pipeline = IngestionPipeline.from_config(config, config_path)
 

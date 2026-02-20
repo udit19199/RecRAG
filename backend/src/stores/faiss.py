@@ -148,7 +148,3 @@ class FAISSVectorStore(BaseVectorStore):
     @property
     def count(self) -> int:
         return self._index.ntotal
-
-
-# Backward compatibility alias
-VectorStore = FAISSVectorStore

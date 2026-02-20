@@ -102,3 +102,31 @@ def get_config_value(config: dict, key_path: str, default: Any = None) -> Any:
             return default
 
     return value
+
+
+def get_storage_dir(config: dict, config_path: Path) -> Path:
+    """Get the storage directory path from configuration.
+
+    Args:
+        config: Configuration dictionary.
+        config_path: Path to the configuration file.
+
+    Returns:
+        Resolved absolute path to storage directory.
+    """
+    storage_dir = config.get("storage", {}).get("directory", "storage")
+    return resolve_path(storage_dir, config_path)
+
+
+def get_ingestion_dir(config: dict, config_path: Path) -> Path:
+    """Get the ingestion directory path from configuration.
+
+    Args:
+        config: Configuration dictionary.
+        config_path: Path to the configuration file.
+
+    Returns:
+        Resolved absolute path to ingestion directory.
+    """
+    ingestion_dir = config.get("ingestion", {}).get("directory", "data/pdfs")
+    return resolve_path(ingestion_dir, config_path)

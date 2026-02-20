@@ -27,17 +27,17 @@ class OpenAIEmbedder(BaseEmbedder):
         base_url = kwargs.pop("base_url", None)
 
         self.client = OpenAI(api_key=api_key, base_url=base_url)
-        self._dimensions: Optional[int] = kwargs.get("dimensions")
+        self._dimension: Optional[int] = kwargs.get("dimensions")
 
     @property
     def dimension(self) -> int:
-        return self._dimensions or EMBEDDING_DIMENSIONS.get(self.model, 1536)
+        return self._dimension or EMBEDDING_DIMENSIONS.get(self.model, 1536)
 
     def _create_embedding_params(self, input_data: str | list[str]) -> dict[str, Any]:
         """Build parameters for embedding API call."""
         params = {"model": self.model, "input": input_data}
-        if self._dimensions is not None:
-            params["dimensions"] = self._dimensions
+        if self._dimension is not None:
+            params["dimensions"] = self._dimension
         return params
 
     def embed(self, text: str) -> list[float]:

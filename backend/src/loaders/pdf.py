@@ -3,6 +3,7 @@ from llama_index.core import SimpleDirectoryReader
 from llama_index.core.schema import Document as LlamaDocument
 from .base import BaseDocumentLoader
 
+
 class PDFLoader(BaseDocumentLoader):
     """Document loader for PDF files using llama-index."""
 
@@ -19,6 +20,3 @@ class PDFLoader(BaseDocumentLoader):
     def load_file(self, file_path: Path | str) -> list[LlamaDocument]:
         reader = SimpleDirectoryReader(input_files=[str(file_path)])
         return reader.load_data()
-
-# Backward compatibility alias
-DocumentLoader = PDFLoader

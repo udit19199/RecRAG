@@ -12,9 +12,12 @@ from typing import Optional
 from watchdog.events import FileSystemEventHandler
 from watchdog.observers import Observer
 
-sys.path.insert(0, str(Path(__file__).parent / "src"))
-
-from config import load_config, resolve_path, find_config_path
+from config import (
+    find_config_path,
+    get_ingestion_dir,
+    get_storage_dir,
+    load_config,
+)
 from pipelines import run_ingestion
 
 logging.basicConfig(
@@ -218,12 +221,8 @@ def main():
     config_path = find_config_path(args.config)
     config = load_config(config_path)
 
-    watch_dir = resolve_path(
-        config.get("ingestion", {}).get("directory", "data/pdfs"), config_path
-    )
-    storage_dir = resolve_path(
-        config.get("storage", {}).get("directory", "storage"), config_path
-    )
+    watch_dir = get_ingestion_dir(config, config_path)
+    storage_dir = get_storage_dir(config, config_path)
     status_file = storage_dir / "ingestion_status.json"
 
     status_file.parent.mkdir(parents=True, exist_ok=True)
