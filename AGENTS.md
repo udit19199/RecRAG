@@ -36,9 +36,9 @@ uv run streamlit run backend/app.py               # Streamlit UI
 uv run python backend/ingest.py --force           # One-time ingestion
 
 # Docker
-docker-compose -f docker/docker-compose.yml build          # Build images
-docker-compose -f docker/docker-compose.yml up -d          # Start all services
-docker-compose -f docker/docker-compose.yml down           # Stop containers
+docker-compose build                               # Build images
+docker-compose up -d                               # Start all services
+docker-compose down                                # Stop containers
 ```
 
 ---
@@ -130,9 +130,8 @@ RecRAG/
 │   ├── app.py                # Streamlit UI
 │   ├── ingest.py             # CLI tool
 │   └── watch.py              # File watcher daemon
-├── docker/
-│   ├── Dockerfile
-│   └── docker-compose.yml
+├── Dockerfile                # Docker image definition
+├── docker-compose.yml        # Multi-container orchestration
 ├── config.toml               # Application config
 ├── .env                      # Environment variables (not in git)
 ├── data/pdfs/                # PDF uploads (not in git)

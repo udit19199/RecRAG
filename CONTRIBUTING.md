@@ -35,7 +35,7 @@ uv run streamlit run backend/app.py
 
 ### Running with Docker
 ```bash
-docker-compose -f docker/docker-compose.yml up -d
+docker-compose up -d
 ```
 
 ### Running Tests

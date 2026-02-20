@@ -70,21 +70,28 @@ The system separates concerns into discrete pipelines (ingestion and retrieval) 
 backend/
 ├── src/
 │   ├── config.py          # Configuration loading with env var substitution
-│   ├── core.py            # Document processing & FAISS vector store
-│   ├── pipelines.py       # IngestionPipeline & RetrievalPipeline
-│   ├── stores/            # Vector store factory (currently FAISS only)
-│   ├── loaders/           # Document loader factory (currently PDF only)
+│   ├── models/            # Data models (Chunk dataclass)
+│   ├── pipelines/         # IngestionPipeline & RetrievalPipeline
+│   │   ├── base.py        # Factory functions and constants
+│   │   ├── ingestion.py   # Document ingestion pipeline
+│   │   ├── retrieval.py   # Query retrieval pipeline
+│   │   └── utils.py       # File hashing utility
+│   ├── stores/            # Vector store (FAISS implementation)
+│   ├── loaders/           # Document loader (PDF implementation)
+│   ├── splitters/         # Text splitter (Sentence-based)
 │   └── adapters/          # LLM & embedding provider abstraction
 │       ├── base.py        # Abstract interfaces
-│       ├── embedding.py   # OpenAI & Ollama embedders
-│       ├── llm.py         # OpenAI & Ollama LLMs
+│       ├── embedding.py   # OpenAI, Ollama embedders
+│       ├── llm.py         # OpenAI, Ollama LLMs
+│       ├── nim.py         # NVIDIA NIM adapters
 │       └── utils.py       # Shared utilities (connection pooling)
 ├── app.py                 # Streamlit UI entry point
 ├── ingest.py              # CLI ingestion tool
 └── watch.py               # File watcher daemon with debouncing
 
 tests/                     # 28 tests covering core and adapters
-docker/                    # Container definitions
+Dockerfile                 # Multi-purpose Dockerfile
+docker-compose.yml         # Container orchestration
 data/pdfs/                 # PDF upload directory (shared volume)
 storage/                   # FAISS index & status files (shared volume)
 ```
@@ -94,18 +101,20 @@ storage/                   # FAISS index & status files (shared volume)
 **`config.py`**
 - Loads TOML configuration with `${VAR:-default}` environment variable substitution
 - Resolves relative paths against config file location
+- Helper functions: `get_storage_dir()`, `get_ingestion_dir()` for consistent path resolution
 - Pure configuration—no business logic
 
-**`core.py`**
-- Abstract interfaces: `BaseDocumentLoader`, `BaseTextSplitter`, `BaseVectorStore`
-- Concrete implementations using llama-index and FAISS
-- `Chunk` dataclass for type-safe passage representation
-- Thread-safe FAISS operations with file locking
+**`models/`**
+- `Chunk` dataclass for type-safe passage representation (text, source, metadata)
 
-**`pipelines.py`**
+**`pipelines/`**
 - High-level workflows coordinating multiple components
 - Dependency injection pattern enables testing and customization
 - Three ingestion modes: full batch, streaming (batched), incremental (hash-based)
+
+**`stores/`, `loaders/`, `splitters/`**
+- Abstract base classes in `base.py` with concrete implementations
+- Backward-compatible aliases in `__init__.py` (e.g., `VectorStore = FAISSVectorStore`)
 
 **`adapters/`**
 - Provider-agnostic interfaces (`BaseEmbedder`, `BaseLLM`)
@@ -617,6 +626,12 @@ if errors:
 1. **Large Pipeline Class**: `IngestionPipeline` has multiple responsibilities (discovery, hashing, batching, embedding)
 2. **Magic Strings**: File extensions (`.pdf`), config keys scattered throughout code
 
+**Resolved (2026-02-20):**
+- ~~`core.py` facade~~: Removed deprecated re-export module
+- ~~Path resolution duplication~~: Added `get_storage_dir()`, `get_ingestion_dir()` helpers
+- ~~`sys.path.insert()` hacks~~: Replaced with proper package installation via `pyproject.toml`
+- ~~Private attribute inconsistency~~: Standardized to `_dimension` across embedders
+
 ---
 
 ## Appendix: Configuration Reference
@@ -664,4 +679,4 @@ Optional:
 
 ---
 
-*Document derived from code analysis of RecRAG repository. Last updated: 2026-02-19*
+*Document derived from code analysis of RecRAG repository. Last updated: 2026-02-20*

@@ -38,8 +38,8 @@ A modular Retrieval-Augmented Generation system with separate ingestion and retr
 
 3. **Build and start**
    ```bash
-   docker-compose -f docker/docker-compose.yml build
-   docker-compose -f docker/docker-compose.yml up -d
+   docker-compose build
+   docker-compose up -d
    ```
 
 4. **Access the UI**: http://localhost:8501
@@ -60,8 +60,8 @@ LLM_BASE_URL=http://ollama:11434
 EOF
 
 # Build and start all services
-docker-compose -f docker/docker-compose.yml build
-docker-compose -f docker/docker-compose.yml up -d
+docker-compose build
+docker-compose up -d
 
 # Open http://localhost:8501
 ```
@@ -81,8 +81,8 @@ LLM_MODEL=gpt-4o-mini
 EOF
 
 # Build and start (no Ollama needed)
-docker-compose -f docker/docker-compose.yml build
-docker-compose -f docker/docker-compose.yml up -d ingestion retrieval
+docker-compose build
+docker-compose up -d ingestion retrieval
 
 # Open http://localhost:8501
 ```
@@ -156,26 +156,26 @@ uv run streamlit run backend/app.py
 
 ```bash
 # Build all containers
-docker-compose -f docker/docker-compose.yml build
+docker-compose build
 
 # Start all services (recommended)
-docker-compose -f docker/docker-compose.yml up -d
+docker-compose up -d
 
 # Start specific services
-docker-compose -f docker/docker-compose.yml up -d ollama          # Ollama only
-docker-compose -f docker/docker-compose.yml up -d ingestion       # Ingestion only
-docker-compose -f docker/docker-compose.yml up -d retrieval       # Retrieval only
+docker-compose up -d ollama          # Ollama only
+docker-compose up -d ingestion       # Ingestion only
+docker-compose up -d retrieval       # Retrieval only
 
 # View logs
-docker-compose -f docker/docker-compose.yml logs -f ollama
-docker-compose -f docker/docker-compose.yml logs -f ingestion
-docker-compose -f docker/docker-compose.yml logs -f retrieval
+docker-compose logs -f ollama
+docker-compose logs -f ingestion
+docker-compose logs -f retrieval
 
 # Stop containers
-docker-compose -f docker/docker-compose.yml down
+docker-compose down
 
 # Remove all data (including models)
-docker-compose -f docker/docker-compose.yml down -v
+docker-compose down -v
 ```
 
 ## Configuration
@@ -273,7 +273,7 @@ Environment variables not being substituted.
 
 **Solution:**
 1. Ensure `.env` file exists in project root
-2. Restart containers: `docker-compose -f docker/docker-compose.yml down && docker-compose -f docker/docker-compose.yml up -d`
+2. Restart containers: `docker-compose down && docker-compose up -d`
 
 ### "404 Not Found for url: .../api/generate"
 
@@ -290,16 +290,16 @@ Ollama streaming response issue.
 
 **Solution:** Rebuild containers:
 ```bash
-docker-compose -f docker/docker-compose.yml down
-docker-compose -f docker/docker-compose.yml build --no-cache
-docker-compose -f docker/docker-compose.yml up -d
+docker-compose down
+docker-compose build --no-cache
+docker-compose up -d
 ```
 
 ### No documents found for querying
 
 - Upload PDFs in the "Ingest Documents" tab
 - Wait for status to show "complete"
-- Check logs: `docker-compose -f docker/docker-compose.yml logs ingestion`
+- Check logs: `docker-compose logs ingestion`
 
 ### Permission errors
 
@@ -310,8 +310,8 @@ chmod 777 storage/ data/
 ### Container won't start
 
 ```bash
-docker-compose -f docker/docker-compose.yml build
-docker-compose -f docker/docker-compose.yml logs
+docker-compose build
+docker-compose logs
 ```
 
 ## Project Structure
@@ -353,9 +353,8 @@ RecRAG/
 │   └── test_adapters/        # Adapter tests
 │       ├── test_embedding.py
 │       └── test_llm.py
-├── docker/
-│   ├── Dockerfile            # Multi-purpose Dockerfile
-│   └── docker-compose.yml    # Container orchestration
+├── Dockerfile                # Multi-purpose Dockerfile
+├── docker-compose.yml        # Container orchestration
 ├── docs/
 │   └── ARCHITECTURE.md       # Detailed architecture
 ├── data/pdfs/                # PDF upload directory (not in git)
