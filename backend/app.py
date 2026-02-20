@@ -1,15 +1,18 @@
 import json
 import re
-import sys
 import time
 from pathlib import Path
 
 import streamlit as st
 
-sys.path.insert(0, str(Path(__file__).parent / "src"))
-
-from config import resolve_path, find_config_path
+from config import (
+    find_config_path,
+    get_ingestion_dir,
+    get_storage_dir,
+    load_config,
+)
 from pipelines import get_retrieval_pipeline
+from evaluation.ragas_eval import get_evaluator
 
 MAX_FILE_SIZE_MB = 50
 MAX_FILE_SIZE_BYTES = MAX_FILE_SIZE_MB * 1024 * 1024
@@ -20,20 +23,15 @@ st.set_page_config(page_title="RecRAG", page_icon="📚")
 st.title("📚 RecRAG - RAG Pipeline")
 
 CONFIG_PATH = find_config_path()
+CONFIG = load_config(CONFIG_PATH)
 
 
-def get_status_file(config_path: Path) -> Path:
-    from config import load_config
-
-    config = load_config(config_path)
-    storage_dir = resolve_path(
-        config.get("storage", {}).get("directory", "storage"), config_path
-    )
-    return storage_dir / "ingestion_status.json"
+def get_status_file() -> Path:
+    return get_storage_dir(CONFIG, CONFIG_PATH) / "ingestion_status.json"
 
 
-def get_ingestion_status(config_path: Path) -> dict:
-    status_file = get_status_file(config_path)
+def get_ingestion_status() -> dict:
+    status_file = get_status_file()
     if not status_file.exists():
         return {"status": "idle"}
     try:
@@ -43,13 +41,8 @@ def get_ingestion_status(config_path: Path) -> dict:
         return {"status": "idle"}
 
 
-def get_upload_dir(config_path: Path) -> Path:
-    from config import load_config
-
-    config = load_config(config_path)
-    return resolve_path(
-        config.get("ingestion", {}).get("directory", "data/pdfs"), config_path
-    )
+def get_upload_dir() -> Path:
+    return get_ingestion_dir(CONFIG, CONFIG_PATH)
 
 
 def sanitize_filename(filename: str) -> str:
@@ -69,14 +62,12 @@ def validate_file(uploaded_file) -> tuple[bool, str]:
     return True, ""
 
 
-CONFIG_PATH = find_config_path()
-
 tab_ingest, tab_query = st.tabs(["Ingest Documents", "Query"])
 
 with tab_ingest:
     st.header("Ingest Documents")
 
-    current_status = get_ingestion_status(CONFIG_PATH)
+    current_status = get_ingestion_status()
 
     if current_status.get("status") == "processing":
         st.info(
@@ -99,7 +90,7 @@ with tab_ingest:
     )
 
     if uploaded_files:
-        upload_dir = get_upload_dir(CONFIG_PATH)
+        upload_dir = get_upload_dir()
         upload_dir.mkdir(parents=True, exist_ok=True)
 
         saved_count = 0
@@ -130,7 +121,7 @@ with tab_ingest:
 
             for _ in range(60):
                 time.sleep(2)
-                status = get_ingestion_status(CONFIG_PATH)
+                status = get_ingestion_status()
                 if status.get("status") == "complete":
                     placeholder.success(
                         f"✅ Ingestion complete! Processed {status.get('files_processed', 0)} files."
@@ -160,6 +151,11 @@ with tab_query:
             "⚠️ Pipeline not loaded. Check configuration and ensure ingestion has completed."
         )
     else:
+        with st.sidebar:
+            st.header("Evaluation Settings")
+            enable_eval = st.checkbox("Enable RAGAS Evaluation", value=False)
+            ground_truth = st.text_area("Ground Truth (optional for eval):", height=100)
+
         query = st.text_input("Ask a question about your documents:")
 
         if query:
@@ -169,6 +165,25 @@ with tab_query:
 
                     st.subheader("Answer:")
                     st.write(result["response"])
+
+                    if enable_eval:
+                        with st.spinner("Evaluating with RAGAS..."):
+                            try:
+                                evaluator = get_evaluator()
+                                context_texts = [doc.get("text", "") for doc in result["context"]]
+                                scores = evaluator.evaluate_query(
+                                    query, context_texts, result["response"], ground_truth if ground_truth else None
+                                )
+
+                                if scores:
+                                    st.subheader("RAGAS Metrics")
+                                    cols = st.columns(len(scores))
+                                    for i, (metric, score) in enumerate(scores.items()):
+                                        cols[i % len(cols)].metric(metric.replace("_", " ").title(), f"{score:.4f}")
+                                else:
+                                    st.warning("Evaluation returned no results.")
+                            except Exception as eval_err:
+                                st.error(f"Evaluation Error: {eval_err}")
 
                     with st.expander("View retrieved context"):
                         for i, doc in enumerate(result["context"]):

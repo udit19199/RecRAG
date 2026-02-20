@@ -1,0 +1,6 @@
+[
+  {
+    "question": "What is the main topic of the document?",
+    "ground_truth": "The document provides an overview of the RAG implementation."
+  }
+]
