@@ -27,7 +27,7 @@ max_retries = 3
 
 ### 2. Streamlit Blocking Poll
 
-**File**: `backend/app.py:131-145`
+**File**: `backend/app.py:122-136`
 
 ```python
 for _ in range(60):
@@ -42,11 +42,11 @@ for _ in range(60):
 
 ### 3. Non-Atomic Status File Writes
 
-**File**: `backend/watch.py:71-72`
+**File**: `backend/watch.py:74-75`
 
 ```python
 with open(self.status_file, "w") as f:
-    json.dump(status_data, f)
+    json.dump(status_data, f, indent=2)
 ```
 
 Process crash mid-write corrupts the file.
@@ -69,7 +69,7 @@ Same query re-embedded every time. No caching at any level.
 
 ### 5. Full JSON Write on Every Add
 
-**File**: `backend/src/stores/faiss.py:102`
+**File**: `backend/src/stores/faiss.py:58`
 
 Every `add()` writes entire metadata JSON to disk. For bulk ingestion of 10k documents, that's 10k full file writes.
 

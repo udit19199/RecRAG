@@ -36,7 +36,7 @@ data/pdfs/
 *.index
 
 # Docker
-docker/ollama_data/
+ollama_data/
 
 # Testing
 .pytest_cache/
@@ -46,3 +46,6 @@ htmlcov/
 # uv
 .ruff_cache/
 .mypy_cache/
+
+# Gemini CLI
+.gemini/

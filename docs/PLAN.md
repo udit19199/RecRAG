@@ -155,3 +155,10 @@ Current polling blocks UI thread for up to 2 minutes.
 - [x] BaseVectorStore import in retrieval pipeline
 - [x] File upload validation (size, magic bytes, sanitization)
 - [x] Token counting with context truncation
+- [x] **Codebase refactoring (2026-02-20)**:
+  - Removed `core.py` deprecated facade
+  - Added `get_storage_dir()`, `get_ingestion_dir()` helpers to `config.py`
+  - Removed all `sys.path.insert()` hacks; proper package install via `pyproject.toml`
+  - Consolidated backward compatibility aliases to `__init__.py` files
+  - Fixed private attribute naming inconsistency (`_dimensions` → `_dimension`)
+  - Simplified `app.py` config handling

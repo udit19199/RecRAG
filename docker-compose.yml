@@ -28,7 +28,7 @@ services:
       ollama:
         condition: service_healthy
     env_file:
-      - ../.env
+      - .env
     volumes:
       - ollama_data:/root/.ollama
     container_name: recrag-ollama-init
@@ -47,17 +47,17 @@ services:
 
   ingestion:
     build:
-      context: ..
-      dockerfile: docker/Dockerfile
+      context: .
+      dockerfile: Dockerfile
     depends_on:
       ollama-init:
         condition: service_completed_successfully
     volumes:
-      - ../data:/app/data
-      - ../storage:/app/storage
-      - ../config.toml:/app/config.toml
+      - ./data:/app/data
+      - ./storage:/app/storage
+      - ./config.toml:/app/config.toml
     env_file:
-      - ../.env
+      - .env
     deploy:
       resources:
         limits:
@@ -68,17 +68,17 @@ services:
 
   retrieval:
     build:
-      context: ..
-      dockerfile: docker/Dockerfile
+      context: .
+      dockerfile: Dockerfile
     depends_on:
       ollama-init:
         condition: service_completed_successfully
     volumes:
-      - ../data:/app/data
-      - ../storage:/app/storage
-      - ../config.toml:/app/config.toml
+      - ./data:/app/data
+      - ./storage:/app/storage
+      - ./config.toml:/app/config.toml
     env_file:
-      - ../.env
+      - .env
     ports:
       - "8501:8501"
     deploy:
@@ -88,6 +88,29 @@ services:
           cpus: '2'
     command: uv run streamlit run backend/app.py --server.port=8501 --server.address=0.0.0.0
     container_name: recrag-retrieval
+
+  evaluation:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      retrieval:
+        condition: service_started
+    volumes:
+      - ./data:/app/data
+      - ./storage:/app/storage
+      - ./config.toml:/app/config.toml
+    env_file:
+      - .env
+    deploy:
+      resources:
+        limits:
+          memory: 4G
+          cpus: '2'
+    command: uv run python backend/evaluate.py
+    container_name: recrag-evaluation
+    profiles:
+      - eval
 
 volumes:
   ollama_data:
