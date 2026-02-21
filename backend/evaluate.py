@@ -50,7 +50,7 @@ def run_batch_evaluation(
 
         questions.append(question)
         answers.append(result["response"])
-        contexts.append([doc.get("text", "") for doc in result["context"]])
+        contexts.append([doc.text for doc in result["context"]])
         if ground_truth:
             ground_truths.append(ground_truth)
 

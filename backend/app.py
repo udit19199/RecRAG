@@ -170,7 +170,7 @@ with tab_query:
                         with st.spinner("Evaluating with RAGAS..."):
                             try:
                                 evaluator = get_evaluator()
-                                context_texts = [doc.get("text", "") for doc in result["context"]]
+                                context_texts = [doc.text for doc in result["context"]]
                                 scores = evaluator.evaluate_query(
                                     query, context_texts, result["response"], ground_truth if ground_truth else None
                                 )
@@ -188,9 +188,9 @@ with tab_query:
                     with st.expander("View retrieved context"):
                         for i, doc in enumerate(result["context"]):
                             st.write(
-                                f"**Source {i + 1}** (distance: {doc.get('distance', 'N/A'):.4f})"
+                                f"**Source {i + 1}** (distance: {doc.distance:.4f})"
                             )
-                            st.write(doc.get("text", "")[:500] + "...")
+                            st.write(doc.text[:500] + "...")
                             st.divider()
 
                 except Exception as e:

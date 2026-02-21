@@ -57,8 +57,8 @@ class TestVectorStore:
         distances, results = temp_vector_store.search(query_embedding, k=2)
 
         assert len(results) == 2
-        assert results[0]["text"] == "Document A"
-        assert "distance" in results[0]
+        assert results[0].text == "Document A"
+        assert hasattr(results[0], "distance")
 
     def test_delete_all(self, temp_vector_store: VectorStore) -> None:
         embeddings = [[0.1] * 128, [0.2] * 128]
@@ -129,7 +129,7 @@ class TestVectorStore:
         # But search still works via FAISS
         distances, results = temp_vector_store.search(embedding, k=1)
         assert len(results) == 1
-        assert results[0]["text"] == document
+        assert results[0].text == document
 
 
 class TestDocumentLoader:

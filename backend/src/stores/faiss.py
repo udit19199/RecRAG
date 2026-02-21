@@ -5,6 +5,7 @@ from typing import Any, Optional
 
 import faiss
 import numpy as np
+from models.chunk import RetrievalResult
 from .base import BaseVectorStore
 
 
@@ -127,18 +128,24 @@ class FAISSVectorStore(BaseVectorStore):
         self,
         query_embedding: list[float],
         k: int = 4,
-    ) -> tuple[list[list[float]], list[dict[str, Any]]]:
+    ) -> tuple[list[float], list[RetrievalResult]]:
         query = np.array([query_embedding], dtype=np.float32)
         distances, indices = self._index.search(query, k)
 
         results = []
         for dist, idx in zip(distances[0], indices[0]):
             if 0 <= idx < len(self._metadata):
-                result = dict(self._metadata[idx])
-                result["distance"] = float(dist)
-                results.append(result)
+                meta = self._metadata[idx]
+                results.append(
+                    RetrievalResult(
+                        text=meta.get("text", ""),
+                        source=meta.get("source", "unknown"),
+                        distance=float(dist),
+                        metadata={k: v for k, v in meta.items() if k not in ["text", "source"]},
+                    )
+                )
 
-        return distances.tolist(), results
+        return distances[0].tolist(), results
 
     def delete_all(self) -> None:
         self._index = faiss.IndexFlatL2(self.dimension)

@@ -5,6 +5,7 @@ from typing import Any, Optional
 import tiktoken
 from adapters import BaseEmbedder, BaseLLM
 from config import get_config_value, load_config
+from models.chunk import RetrievalResult
 from stores import BaseVectorStore, VectorStore
 from .base import (
     DEFAULT_CONTEXT_TEMPLATE,
@@ -96,7 +97,7 @@ class RetrievalPipeline:
             config_path=config_path,
         )
 
-    def retrieve(self, query: str, top_k: Optional[int] = None) -> list[dict[str, Any]]:
+    def retrieve(self, query: str, top_k: Optional[int] = None) -> list[RetrievalResult]:
         """Retrieve relevant documents for a query."""
         k = top_k or self.top_k
         logger.info(f"Embedding query: {query[:50]}...")
@@ -110,7 +111,7 @@ class RetrievalPipeline:
     def generate(
         self,
         query: str,
-        context: Optional[list[dict[str, Any]]] = None,
+        context: Optional[list[RetrievalResult]] = None,
     ) -> str:
         """Generate a response using retrieved context."""
         context = context or self.retrieve(query)
@@ -126,7 +127,7 @@ class RetrievalPipeline:
         truncated = False
 
         for doc in context:
-            doc_text = doc.get("text", "")
+            doc_text = doc.text
             doc_tokens = count_tokens(doc_text, model)
 
             if current_tokens + doc_tokens <= available_tokens:

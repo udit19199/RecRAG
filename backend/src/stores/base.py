@@ -1,6 +1,9 @@
 from abc import ABC, abstractmethod
 from typing import Any, Optional
 
+from models.chunk import RetrievalResult
+
+
 class BaseVectorStore(ABC):
     """Abstract base class for vector stores."""
 
@@ -22,7 +25,7 @@ class BaseVectorStore(ABC):
         self,
         query_embedding: list[float],
         k: int = 4,
-    ) -> tuple[list[list[float]], list[dict[str, Any]]]:
+    ) -> tuple[list[float], list[RetrievalResult]]:
         """Search for similar documents."""
         pass
 

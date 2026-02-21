@@ -1,11 +1,11 @@
 """Data models for RecRAG."""
 
-from dataclasses import dataclass
-from typing import Any
+from typing import Any, Optional
+
+from pydantic import BaseModel, Field
 
 
-@dataclass
-class Chunk:
+class Chunk(BaseModel):
     """Represents a text chunk with preserved source metadata.
 
     Attributes:
@@ -16,4 +16,20 @@ class Chunk:
 
     text: str
     source: str
-    metadata: dict[str, Any]
+    metadata: dict[str, Any] = Field(default_factory=dict)
+
+
+class RetrievalResult(BaseModel):
+    """Represents a retrieved document with its score/distance.
+
+    Attributes:
+        text: The retrieved text content.
+        source: The source file name.
+        distance: The similarity score/distance from the query.
+        metadata: Any additional metadata from the original chunk.
+    """
+
+    text: str
+    source: str
+    distance: float
+    metadata: dict[str, Any] = Field(default_factory=dict)
