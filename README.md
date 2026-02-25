@@ -12,6 +12,8 @@ A modular Retrieval-Augmented Generation system with separate ingestion and retr
 - **Flexible Configuration**: Environment variables with sensible defaults
 - **Containerized**: Docker support for consistent deployment
 - **Web UI**: Streamlit interface for document upload and querying
+- **Next.js Frontend**: Modern React frontend (recommended)
+- **REST APIs**: FastAPI services for ingestion and retrieval
 
 ## Installation
 
@@ -42,7 +44,9 @@ A modular Retrieval-Augmented Generation system with separate ingestion and retr
    docker-compose up -d
    ```
 
-4. **Access the UI**: http://localhost:8501
+4. **Access the UIs**:
+   - Next.js (recommended): http://localhost:3000
+   - Streamlit (legacy): http://localhost:8501
 
 ## Usage
 
@@ -106,34 +110,39 @@ uv run streamlit run backend/app.py
 ## Architecture
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                  Ollama Container                           │
-│  - Ollama server on port 11434                              │
-│  - Models stored in Docker volume                           │
-└─────────────────────────────────────────────────────────────┘
-                              │
-                    Healthcheck (healthy)
-                              │
-┌─────────────────────────────────────────────────────────────┐
-│              Ollama-Init Container (one-time)               │
-│  - Waits for Ollama to be healthy                           │
-│  - Pulls embedding model (nomic-embed-text)                 │
-│  - Pulls LLM model (granite3.1-moe:1b)                      │
-│  - Exits after models are ready                             │
-└─────────────────────────────────────────────────────────────┘
-                              │
-                    Models ready
-                              │
-          ┌────────────────────┴────────────────────┐
-          │                                         │
-          ▼                                         ▼
-┌─────────────────────────┐         ┌─────────────────────────┐
-│  Ingestion Container    │         │  Retrieval Container    │
-│  - watch.py daemon      │         │  - Streamlit UI         │
-│  - Watches data/pdfs/   │◄───────►│  - Query interface      │
-│  - Generates embeddings │ Shared  │  - FAISS search + LLM   │
-│  - Updates status file  │ Volumes │                         │
-└─────────────────────────┘         └─────────────────────────┘
+┌─────────────────────────────────────────────────────────────────┐
+│                     Next.js (Port 3000)                          │
+│   ┌─────────────┐                       ┌─────────────┐         │
+│   │   Ingest    │                       │   Query     │         │
+│   │   Page      │                       │   Page      │         │
+│   └──────┬──────┘                       └──────┬──────┘       │
+└──────────┼──────────────────────────────────────┼───────────────┘
+           │                                      │
+           ▼                                      ▼
+┌─────────────────────┐               ┌─────────────────────┐
+│  Ingestion API      │               │  Retrieval API      │
+│  (Port 8001)       │               │  (Port 8000)        │
+└─────────┬───────────┘               └──────────┬──────────┘
+          │                                      │
+          ▼                                      ▼
+┌─────────────────────┐               ┌─────────────────────┐
+│  ingestion (docker) │               │  retrieval (docker) │
+│  (runs watch.py)   │               │  (runs watch.py)   │
+└─────────┬───────────┘               └──────────┬──────────┘
+          │                                      │
+          └──────────────┬───────────────────────┘
+                         ▼
+                ┌─────────────────┐
+                │  Shared Volume  │
+                │  - storage/     │
+                │  - data/pdfs/  │
+                └─────────────────┘
+                         │
+                         ▼
+                ┌─────────────────┐
+                │  Ollama/        │
+                │  OpenAI API    │
+                └─────────────────┘
 ```
 
 ### Container Paths
@@ -148,9 +157,11 @@ uv run streamlit run backend/app.py
 
 | Service | Address |
 |---------|---------|
-| Ollama | `http://ollama:11434` |
-| Ingestion → Ollama | `http://ollama:11434` |
-| Retrieval → Ollama | `http://ollama:11434` |
+| Next.js Frontend | http://localhost:3000 |
+| Ingestion API | http://localhost:8001 |
+| Retrieval API | http://localhost:8000 |
+| Ollama | http://ollama:11434 |
+| Streamlit (legacy) | http://localhost:8501 |
 
 ## Docker Commands
 

@@ -21,6 +21,8 @@ services:
       interval: 5s
       timeout: 5s
       retries: 10
+    networks:
+      - recrag-network
 
   ollama-init:
     image: curlimages/curl:latest
@@ -44,6 +46,8 @@ services:
         fi &&
         echo 'All models pulled successfully'
       "
+    networks:
+      - recrag-network
 
   ingestion:
     build:
@@ -65,6 +69,46 @@ services:
           cpus: '2'
     command: uv run python backend/watch.py
     container_name: recrag-ingestion
+    networks:
+      - recrag-network
+
+  # FastAPI service for ingestion (upload PDFs, check status)
+  api-ingestion:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    volumes:
+      - ./data:/app/data
+      - ./storage:/app/storage
+      - ./config.toml:/app/config.toml
+    env_file:
+      - .env
+    ports:
+      - "8001:8001"
+    command: uv run uvicorn api.ingestion.main:app --host 0.0.0.0 --port 8001
+    container_name: recrag-api-ingestion
+    networks:
+      - recrag-network
+
+  # FastAPI service for retrieval (query with RAG)
+  api-retrieval:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    volumes:
+      - ./storage:/app/storage
+      - ./config.toml:/app/config.toml
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    depends_on:
+      ollama-init:
+        condition: service_completed_successfully
+    command: uv run uvicorn api.retrieval.main:app --host 0.0.0.0 --port 8000
+    container_name: recrag-api-retrieval
+    networks:
+      - recrag-network
 
   retrieval:
     build:
@@ -88,6 +132,25 @@ services:
           cpus: '2'
     command: uv run streamlit run backend/app.py --server.port=8501 --server.address=0.0.0.0
     container_name: recrag-retrieval
+    networks:
+      - recrag-network
+
+  # Next.js frontend
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    environment:
+      - NEXT_PUBLIC_RETRIEVAL_API_URL=http://api-retrieval:8000
+      - NEXT_PUBLIC_INGESTION_API_URL=http://api-ingestion:8001
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api-retrieval
+      - api-ingestion
+    container_name: recrag-frontend
+    networks:
+      - recrag-network
 
   evaluation:
     build:
@@ -111,6 +174,12 @@ services:
     container_name: recrag-evaluation
     profiles:
       - eval
+    networks:
+      - recrag-network
+
+networks:
+  recrag-network:
+    driver: bridge
 
 volumes:
   ollama_data:

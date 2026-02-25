@@ -1,25 +1,51 @@
 # RecRAG Architecture
 
 A code-driven architecture document for the RecRAG RAG pipeline system.
+Ongoing issues, technical debt, and future work are tracked in `docs/ISSUES.md`.
 
 ---
 
 ## 1. Overview
 
-### What the System Does
+## What the System Does
 
-RecRAG is a document ingestion and question-answering system built on the Retrieval-Augmented Generation (RAG) pattern. It processes PDF documents, generates embeddings, stores them in a vector index, and answers user questions using retrieved context.
+RecRAG is a **RAG pipeline recommendation system**, which analyzes user context and constraints and **recommends suitable RAG pipeline configurations**.
 
-**Primary Use Cases:**
-- **Document Upload & Ingestion**: Users upload PDFs via a web UI. Files are automatically processed into searchable embeddings.
-- **Question Answering**: Users ask questions about uploaded documents. The system retrieves relevant passages and generates answers using an LLM.
-- **Batch Processing**: CLI tool for one-time ingestion of document collections.
+The system focuses on **decision support**, not execution: it helps users choose defensible, industry-appropriate RAG pipelines that can later be deployed.
 
-**Non-Goals:**
-- Real-time collaborative editing
-- Multi-modal content (images, audio, video) - currently PDF/text only
-- Production-grade authentication or multi-tenancy
-- Automated evaluation or pipeline recommendation (planned but not implemented)
+---
+
+## Primary Use Cases
+
+- **Pipeline Recommendation (Core Use Case)**  
+  Recommend one or more RAG pipeline configurations based on:
+  - Industry (Manufacturing / BFSI)
+  - Expected document types (PDFs, manuals, policies)
+  - Latency, cost, and compliance constraints  
+  - Recommendations are explainable and do not require user data.
+  - Provide rationale, trade-offs, and known limitations for each recommended pipeline.
+
+- **Deployment Readiness Output**  
+  Emit structured pipeline configurations (e.g., JSON/YAML) that can be consumed by downstream systems or teams to instantiate a running RAG pipeline.
+
+---
+
+## Non-Goals
+
+- Running or hosting user RAG pipelines
+- Document ingestion or question answering at recommendation time
+- User-data-driven tuning or automated pipeline optimization
+- Multi-tenant SaaS features (auth, billing, collaboration)
+- End-user application UX
+
+---
+
+## Design Philosophy
+
+- **Recommendation over execution**: advise, don’t run
+- **Explainability over optimality**: defensible choices
+- **Domain-aware defaults**: conservative pipelines for regulated industries
+- **Zero user data dependency**: operates entirely on priors and constraints
 
 ---
 
@@ -27,40 +53,78 @@ RecRAG is a document ingestion and question-answering system built on the Retrie
 
 ### Overall Architectural Style
 
-**Pipeline-based modular monolith with dual-container deployment.**
+**Microservices with shared storage.**
 
-The system separates concerns into discrete pipelines (ingestion and retrieval) that share state through the filesystem. This is not a microservices architecture—both pipelines run in the same codebase and share libraries, but they can be deployed in separate containers.
+The system has evolved from a dual-container pattern to a microservices architecture with independent API services accessible via a Next.js frontend.
 
 ```
-┌────────────────────────────────────────────────────────────────────┐
-│                      Ingestion Pipeline                             │
-│  watch.py ──► IngestionPipeline ──► FAISS Index + Metadata         │
-│         (file watcher)   (load/split/embed/store)                   │
-└────────────────────────────────────────────────────────────────────┘
-                               │
-                    Shared Volumes (data/, storage/)
-                               │
-┌────────────────────────────────────────────────────────────────────┐
-│                     Retrieval Pipeline                              │
-│  app.py ──► RetrievalPipeline ──► Query Response                    │
-│   (Streamlit)   (embed/search/generate)                             │
-└────────────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────┐
+│                         Next.js Frontend (Port 3000)                     │
+│  ┌─────────────────┐                       ┌─────────────────────────┐   │
+│  │   / (Query)     │                       │   /ingest (Upload)      │   │
+│  └────────┬────────┘                       └────────────┬────────────┘   │
+└───────────┼─────────────────────────────────────────────┼────────────────┘
+            │                                             │
+            ▼                                             ▼
+┌──────────────────────┐                    ┌───────────────────────────┐
+│  Retrieval API       │                    │  Ingestion API            │
+│  (Port 8000)         │                    │  (Port 8001)              │
+│  - POST /query       │                    │  - POST /upload           │
+│  - GET  /health      │                    │  - GET  /status           │
+└──────────┬───────────┘                    └─────────────┬─────────────┘
+           │                                              │
+           ▼                                              ▼
+┌──────────────────────┐                   ┌───────────────────────────────┐
+│  Retrieval Pipeline  │                   │  Ingestion Pipeline           │
+│  (watch.py)          │                   │  (watch.py)                   │
+└──────────┬───────────┘                   └─────────────┬─────────────────┘
+           │                                             │
+           └─────────────────────┬───────────────────────┘
+                                 │
+                                 ▼
+                    ┌──────────────────────┐
+                    │   Shared Volumes     │
+                    │  - data/pdfs/        │
+                    │  - storage/          │
+                    └──────────────────────┘
+                                 │
+                                 ▼
+                    ┌────────────────────────┐
+                    │   Ollama (Port 11434)  │
+                    │   or OpenAI API        │
+                    └────────────────────────┘
 ```
 
 ### Why This Approach
 
-**Dual-Container Pattern:**
-- **Separation of concerns**: Ingestion (background, batch) is fundamentally different from retrieval (interactive, real-time)
-- **Resource isolation**: Ingestion can be memory-intensive; separating it prevents UI latency
-- **Independent scaling**: Could scale ingestion workers separately from UI instances
-- **Simple communication**: File-based status protocol avoids need for message queue or shared database
+**Microservices with Shared Storage:**
 
-**Tradeoff**: Shared filesystem couples the containers to the same host/volume. This is simpler than a message queue for the current use case but limits horizontal scaling across hosts.
+- **Independent APIs**: Ingestion and Retrieval APIs run as separate services, enabling independent scaling
+- **Frontend-Backend Separation**: Next.js frontend communicates with APIs via HTTP, allowing frontend and backend to evolve independently
+- **Shared Volume Pattern**: Both services access the same `data/` and `storage/` directories for simplicity
+- **CORS Enabled**: APIs allow cross-origin requests from the frontend
+
+**Service Ports:**
+
+
+| Service              | Port | Purpose                |
+| -------------------- | ---- | ---------------------- |
+| `frontend`           | 3000 | Next.js UI             |
+| `api-retrieval`      | 8000 | Query endpoint         |
+| `api-ingestion`      | 8001 | Upload/status endpoint |
+| `retrieval` (legacy) | 8501 | Streamlit UI           |
+
+
+**Legacy Support:**
+
+- The Streamlit UI (port 8501) remains available for comparison/migration
+- Next.js is the recommended frontend for new deployments
 
 **Key Alternatives Not Used:**
+
 - **Message Queue (Redis/RabbitMQ)**: Would enable better horizontal scaling but adds operational complexity
-- **Single-Process Architecture**: Would simplify deployment but ingestion would block queries
-- **Microservices**: Overkill for current scope; shared codebase is simpler to develop and test
+- **Separate Databases**: Would decouple services further but increases infrastructure requirements
+- **GraphQL**: Overkill for current scope; REST APIs are sufficient
 
 ---
 
@@ -85,12 +149,38 @@ backend/
 │       ├── llm.py         # OpenAI, Ollama LLMs
 │       ├── nim.py         # NVIDIA NIM adapters
 │       └── utils.py       # Shared utilities (connection pooling)
+├── api/                   # FastAPI services
+│   ├── ingestion/         # Ingestion API (upload + status)
+│   │   └── main.py
+│   └── retrieval/         # Retrieval API (query)
+│       └── main.py
 ├── app.py                 # Streamlit UI entry point
 ├── ingest.py              # CLI ingestion tool
 └── watch.py               # File watcher daemon with debouncing
 
-tests/                     # 28 tests covering core and adapters
+frontend/                  # Next.js application
+├── app/                  # App router pages
+│   ├── page.tsx          # Query page
+│   ├── ingest/           # Ingest page
+│   │   └── page.tsx
+│   └── layout.tsx        # Root layout with navbar
+├── src/
+│   ├── components/       # React components
+│   │   ├── Navbar.tsx
+│   │   ├── QueryForm.tsx
+│   │   ├── QueryResults.tsx
+│   │   ├── FileUploader.tsx
+│   │   └── IngestionStatusDisplay.tsx
+│   └── lib/
+│       └── api.ts        # API client
+├── Dockerfile
+├── package.json
+├── next.config.ts
+└── tsconfig.json
+
+tests/                     # Test suite
 Dockerfile                 # Multi-purpose Dockerfile
+Dockerfile.api             # FastAPI services Dockerfile
 docker-compose.yml         # Container orchestration
 data/pdfs/                 # PDF upload directory (shared volume)
 storage/                   # FAISS index & status files (shared volume)
@@ -98,25 +188,30 @@ storage/                   # FAISS index & status files (shared volume)
 
 ### Module Responsibilities
 
-**`config.py`**
+`**config.py**`
+
 - Loads TOML configuration with `${VAR:-default}` environment variable substitution
 - Resolves relative paths against config file location
 - Helper functions: `get_storage_dir()`, `get_ingestion_dir()` for consistent path resolution
 - Pure configuration—no business logic
 
-**`models/`**
+`**models/**`
+
 - `Chunk` dataclass for type-safe passage representation (text, source, metadata)
 
-**`pipelines/`**
+`**pipelines/**`
+
 - High-level workflows coordinating multiple components
 - Dependency injection pattern enables testing and customization
 - Three ingestion modes: full batch, streaming (batched), incremental (hash-based)
 
-**`stores/`, `loaders/`, `splitters/`**
+`**stores/`, `loaders/`, `splitters/**`
+
 - Abstract base classes in `base.py` with concrete implementations
 - Backward-compatible aliases in `__init__.py` (e.g., `VectorStore = FAISSVectorStore`)
 
-**`adapters/`**
+`**adapters/**`
+
 - Provider-agnostic interfaces (`BaseEmbedder`, `BaseLLM`)
 - Registry pattern for extensible provider support
 - Connection pooling for HTTP-based providers (Ollama)
@@ -257,21 +352,24 @@ User asks question
 
 ### 5.1 Document Processing (core.py)
 
-**`DocumentLoader`**
+`**DocumentLoader**`
+
 - **Purpose**: Load PDF documents from filesystem
 - **Implementation**: Thin wrapper around `llama_index.SimpleDirectoryReader`
 - **Input**: Directory path or single file path
 - **Output**: `List[LlamaDocument]`
 - **Coupling**: Tightly coupled to llama-index for PDF parsing
 
-**`TextSplitter`**
+`**TextSplitter`**
+
 - **Purpose**: Chunk documents while preserving source metadata
 - **Implementation**: Wraps `llama_index.SentenceSplitter`
 - **Input**: `List[LlamaDocument]`
 - **Output**: `List[Chunk]` where `Chunk = (text, source, metadata)`
 - **Key Feature**: O(1) source lookup via metadata preservation (avoiding O(n×m) substring matching)
 
-**`VectorStore`**
+`**VectorStore`**
+
 - **Purpose**: Store and search embeddings with metadata
 - **Implementation**: FAISS `IndexFlatL2` with JSON metadata sidecar
 - **Storage Format**:
@@ -282,29 +380,34 @@ User asks question
 
 ### 5.2 Adapters (adapters/)
 
-**`BaseEmbedder` / `BaseLLM`**
+`**BaseEmbedder` / `BaseLLM`**
+
 - Abstract interfaces decoupling business logic from provider specifics
 - Enable testing with mocks and swapping providers without code changes
 
-**`OpenAIEmbedder`**
+`**OpenAIEmbedder**`
+
 - Uses `openai.OpenAI` client
 - Batch embedding via `client.embeddings.create(input=texts)`
 - Dimension mapping hardcoded: `text-embedding-3-small` → 1536, etc.
 
-**`OllamaEmbedder`**
+`**OllamaEmbedder**`
+
 - Primary: `/api/embed` endpoint for batch embedding
 - Fallback: Parallel individual requests via `ThreadPoolExecutor` (8 workers) if batch fails
 - Connection pooling via `requests.Session`
 - Error handling: Tracks failed indices, raises `RuntimeError` with details
 
-**`OpenAILLM`** / **`OllamaLLM`**
+`**OpenAILLM**` / `**OllamaLLM**`
+
 - OpenAI: Chat completions API, supports streaming (not currently used)
 - Ollama: `/api/generate` or `/api/chat`, **always sets `stream: false`**
 - Ollama maps `max_tokens` → `num_predict` option
 
 ### 5.3 Pipelines (pipelines.py)
 
-**`IngestionPipeline`**
+`**IngestionPipeline**`
+
 - **Responsibilities**: Coordinate document loading → splitting → embedding → storage
 - **Modes**:
   - `run()`: Load all documents at once (high memory)
@@ -313,7 +416,8 @@ User asks question
 - **State Tracking**: `processed_files.json` maps file paths to MD5 hashes
 - **Batch Processing**: `_process_file_batch()`, `_embed_and_store()` helpers reduce duplication
 
-**`RetrievalPipeline`**
+`**RetrievalPipeline`**
+
 - **Responsibilities**: Embed query → retrieve context → generate response
 - **Components**: Embedder, LLM, VectorStore, context template
 - **Context Template**: Hardcoded format (no template engine)
@@ -321,13 +425,14 @@ User asks question
 
 ### 5.4 Registry (removed)
 
---- 
+---
 
 ## 6. Data, State & Configuration
 
 ### 6.1 Persistence Model
 
 **Persistent State (Disk):**
+
 - `data/pdfs/*.pdf`: Source documents (user uploads)
 - `storage/faiss_{model}.index`: FAISS vector index (binary)
 - `storage/faiss_{model}.json`: Metadata sidecar (JSON array)
@@ -335,28 +440,33 @@ User asks question
 - `storage/ingestion_status.json`: Status communication between containers
 
 **Computed State (Memory):**
+
 - FAISS index loaded into RAM during operations
 - Embeddings stored only in FAISS (not duplicated in metadata)
 - Metadata loaded as Python list of dicts
 
 **Ephemeral State:**
+
 - `st.session_state` in Streamlit (pipeline instance caching)
 - Thread-local state in file watcher (debounce timers, pending files)
 
 ### 6.2 Index Lifecycle
 
 **Creation:**
+
 1. `VectorStore.__init__()` creates `IndexFlatL2(dimension)` if no index file exists
 2. First `add()` call populates index
 3. `save()` persists to disk (called automatically after each `add()`)
 
 **Updates:**
+
 1. Incremental ingestion checks MD5 hashes in `processed_files.json`
 2. Changed files trigger `_remove_by_sources()` (removes metadata only)
 3. New embeddings appended to FAISS index
 4. **Limitation**: FAISS index not rebuilt; old vectors remain (metadata inconsistency)
 
 **Invalidation:**
+
 - `delete_all()`: Resets to empty index
 - `--force` flag: Clears index before re-ingestion
 - File deletion: Not currently handled (vectors remain orphaned in FAISS)
@@ -364,6 +474,7 @@ User asks question
 ### 6.3 Configuration System
 
 **TOML + Environment Variable Substitution:**
+
 ```toml
 [embedding]
 provider = "${EMBEDDING_PROVIDER:-openai}"
@@ -371,16 +482,19 @@ model = "${EMBEDDING_MODEL:-text-embedding-3-small}"
 ```
 
 **Resolution Order:**
+
 1. Environment variable value if set
 2. Default value after `:-` if variable unset
 3. Empty string if no default provided
 
 **Configuration Loading:**
+
 - `load_config(path)` parses TOML
 - `_substitute_env_vars()` recursively substitutes `${VAR:-default}` syntax
 - `resolve_path()` makes paths relative to config file location
 
 **Secrets Management:**
+
 - `OPENAI_API_KEY` in `.env` file (git-ignored)
 - No encryption at rest for API keys
 - Keys passed via environment variables to containers
@@ -388,18 +502,21 @@ model = "${EMBEDDING_MODEL:-text-embedding-3-small}"
 ### 6.4 uv Usage
 
 **Dependency Management:**
+
 - `pyproject.toml`: Declares dependencies and dev extras
 - `uv.lock`: Locked dependency tree for reproducible builds
 - `uv sync`: Install production dependencies
 - `uv sync --extra dev`: Install with pytest, ruff, mypy
 
 **Running Commands:**
+
 - `uv run python backend/watch.py`: Run in virtual environment
 - `uv run pytest`: Execute test suite
 - `uv run ruff check .`: Linting
 - `uv run mypy backend/`: Type checking
 
 **Why uv:**
+
 - Faster than pip (Rust-based resolver)
 - Lock file ensures consistent deployments
 - Native Python version management
@@ -413,16 +530,19 @@ model = "${EMBEDDING_MODEL:-text-embedding-3-small}"
 **Decision**: Use FAISS `IndexFlatL2` (brute-force exact search)
 
 **Why:**
+
 - Simple to implement and understand
 - Exact results (no approximation error)
 - No training required
 
 **Tradeoffs:**
+
 - O(n) search complexity—linear slowdown as index grows
 - At 100k+ vectors, search becomes noticeably slow
 - Memory usage grows linearly with vector count
 
 **Alternative Not Used:** `IndexIVFFlat` or `IndexHNSW` for sublinear search
+
 - Would require training step and hyperparameter tuning
 - Adds complexity for current use case
 
@@ -431,11 +551,13 @@ model = "${EMBEDDING_MODEL:-text-embedding-3-small}"
 **Decision**: Store embeddings ONLY in FAISS index, not in metadata JSON
 
 **Why:**
+
 - Reduces memory usage by ~50%
 - Faster metadata serialization (no large embedding arrays in JSON)
 - Metadata JSON stays human-readable
 
 **Tradeoffs:**
+
 - Cannot rebuild FAISS index from metadata alone
 - Source removal leaves orphaned vectors in FAISS
 - Must re-embed all documents for full consistency
@@ -445,11 +567,13 @@ model = "${EMBEDDING_MODEL:-text-embedding-3-small}"
 **Decision**: Use `ingestion_status.json` for container communication
 
 **Why:**
+
 - No additional infrastructure required (no Redis, RabbitMQ)
 - Simple to implement and debug
 - Works with Docker volumes
 
 **Tradeoffs:**
+
 - Polling-based (not event-driven)
 - Potential race conditions (mitigated by atomic writes)
 - Not scalable across multiple hosts
@@ -459,11 +583,13 @@ model = "${EMBEDDING_MODEL:-text-embedding-3-small}"
 **Decision**: No async/await patterns
 
 **Why:**
+
 - Simpler code (no `asyncio` complexity)
 - Easier to debug
 - Streamlit is synchronous
 
 **Tradeoffs:**
+
 - Cannot handle concurrent requests efficiently
 - Blocking I/O for network calls
 - No streaming responses to UI
@@ -480,11 +606,13 @@ def register_embedder(provider: str, cls: Type[BaseEmbedder]):
 ```
 
 **Why:**
+
 - New providers can be added without modifying existing code
 - Clean separation of provider-specific logic
 - Runtime provider listing available
 
 **Tradeoffs:**
+
 - Global state (registry is module-level)
 - Less explicit than explicit factory functions
 - Registration order matters (must import to register)
@@ -496,17 +624,20 @@ def register_embedder(provider: str, cls: Type[BaseEmbedder]):
 ### 8.1 Error Handling
 
 **Current Approach:**
+
 - Specific exceptions raised: `FileNotFoundError`, `ValueError`, `RuntimeError`
 - Exceptions bubble up to entry points
 - Status file captures error messages for UI display
 - Logging via standard library `logging` (stdout only)
 
 **Gaps:**
+
 - No retry logic with exponential backoff for transient failures
 - No circuit breaker for external API failures
 - No graceful degradation (all-or-nothing failure)
 
 **Error Handling in OllamaEmbedder:**
+
 ```python
 # Good: Tracks failed indices
 errors: list[tuple[int, Exception]] = []
@@ -518,6 +649,7 @@ if errors:
 ### 8.2 Performance Bottlenecks
 
 **Critical Bottlenecks:**
+
 1. **FAISS Search**: O(n) complexity with `IndexFlatL2`. At 100k vectors, search becomes slow.
 2. **No Embedding Cache**: Same queries re-embedded every time
 3. **Full Metadata Write**: Every `add()` writes entire metadata JSON to disk
@@ -525,22 +657,26 @@ if errors:
 5. **No Batch Writes**: Individual file writes for each document batch
 
 **File Locking Overhead:**
+
 - Every `VectorStore.add()` acquires exclusive lock
 - Mitigates corruption but serializes concurrent writes
 
 ### 8.3 Secret Handling
 
 **Current State:**
+
 - API keys in `.env` file (git-ignored)
 - Passed to containers via environment variables
 - Keys extracted via `kwargs.pop("api_key", None) or os.environ.get("OPENAI_API_KEY")`
 
 **Risks:**
+
 - Keys visible in process environment (`ps e`)
 - No encryption at rest
 - Could be logged if not careful (currently handled via `kwargs.pop`)
 
 **LLM-Specific Risks:**
+
 - No prompt injection protection
 - No output filtering
 - Context window overflow not checked (could expose unintended data)
@@ -548,89 +684,40 @@ if errors:
 ### 8.4 Security Gaps
 
 **File Upload (app.py:80-96):**
+
 - No file size limits (memory exhaustion risk)
 - No PDF magic byte validation (`%PDF-`)
 - No filename sanitization (path traversal risk via `../`)
 
 **Input Validation:**
+
 - No query sanitization before sending to LLM
 - No rate limiting on Streamlit endpoints
 
 ---
 
-## 9. Testing, Technical Debt & Future Work
+## 9. Testing & Quality Overview
 
-### 9.1 Test Coverage
+This section describes how testing and quality fit into the architecture. **Current gaps, technical debt, and future work are tracked in `docs/ISSUES.md`.**
 
-**Current State (28 tests):**
-- `test_core.py`: 11 tests covering Chunk, DocumentLoader, TextSplitter, VectorStore
-- `test_adapters/test_embedding.py`: 6 tests for OpenAI and Ollama embedders
-- `test_adapters/test_llm.py`: 11 tests for OpenAI and Ollama LLMs
+### 9.1 Test Layout
 
-**Coverage Gaps:**
-- No integration tests (end-to-end flow)
-- No tests for `watch.py` file watcher
-- No tests for `pipelines.py` (only unit tests for components)
-- No tests for `config.py` edge cases
-- No tests for error recovery paths
+- Tests live under the `tests/` directory alongside the backend codebase.
+- Unit tests focus on core components (`core`, `adapters`, `pipelines`, `stores`, `loaders`, `splitters`).
+- Integration and end-to-end tests are expected to exercise ingestion and retrieval flows across services.
 
-**Test Quality:**
-- Good use of fixtures in `conftest.py`
-- Mocking external APIs properly
-- Missing: Property-based tests, load tests
+### 9.2 How to Run Tests & Checks
 
-### 9.2 Known Architectural Issues
+- Use `uv` to run tests and checks in a consistent environment:
+  - `uv run pytest` – run the full test suite
+  - `uv run ruff check .` – lint the codebase
+  - `uv run mypy backend/` – type-check the backend
 
-**Critical:**
-1. **FAISS/Metadata Inconsistency**: Source removal updates metadata but not FAISS index
-2. **No Document Deletion**: Can add documents, cannot remove them cleanly
-3. **Context Window Risk**: No token counting before LLM calls
+### 9.3 Where to Find Current Issues
 
-**High Priority:**
-4. **UI Blocking**: Streamlit thread blocked during status polling
-5. **No Async**: Cannot handle concurrent requests
-6. **Scalability Ceiling**: `IndexFlatL2` won't scale beyond ~100k vectors
+For **test coverage gaps**, **known architectural issues**, and **planned improvements**, see the dedicated issues document:
 
-**Medium Priority:**
-7. **No Caching**: Repeated queries/documents re-embedded
-8. **No Metrics**: No visibility into performance or quality
-9. **No Validation**: Configuration values not validated at startup
-
-### 9.3 Practical Improvements (Codebase-Aligned)
-
-**Immediate (Low Effort):**
-1. Add file size validation in `app.py` (check `uploaded_file.size`)
-2. Add PDF magic byte validation (`%PDF-` header check)
-3. Implement simple in-memory LRU cache for embeddings
-4. Add token estimation before LLM calls (tiktoken for OpenAI)
-
-**Short Term (Medium Effort):**
-5. Replace `IndexFlatL2` with `IndexIVFFlat` for better scalability
-6. Add async support using `asyncio` and `aiohttp` for Ollama
-7. Implement proper document deletion with FAISS ID mapping
-8. Add metrics collection (latency, token counts, cache hit rates)
-
-**Long Term (High Effort):**
-9. Implement evaluation framework (answer relevance, retrieval accuracy)
-10. Add hybrid search (vector + keyword BM25)
-11. Support multi-modal content (images via vision models)
-12. Implement recommendation engine for pipeline configuration
-
-### 9.4 Inconsistencies & Ambiguities
-
-**Unresolved Questions:**
-1. **Factory Modules**: `stores/__init__.py` and `loaders/__init__.py` only support single provider—should they be expanded or removed?
-2. **Streaming**: Interface supports streaming (`supports_streaming` property) but never used—intentional or oversight?
-
-**Code Smells:**
-1. **Large Pipeline Class**: `IngestionPipeline` has multiple responsibilities (discovery, hashing, batching, embedding)
-2. **Magic Strings**: File extensions (`.pdf`), config keys scattered throughout code
-
-**Resolved (2026-02-20):**
-- ~~`core.py` facade~~: Removed deprecated re-export module
-- ~~Path resolution duplication~~: Added `get_storage_dir()`, `get_ingestion_dir()` helpers
-- ~~`sys.path.insert()` hacks~~: Replaced with proper package installation via `pyproject.toml`
-- ~~Private attribute inconsistency~~: Standardized to `_dimension` across embedders
+- `docs/ISSUES.md` – canonical source for open issues, technical debt, and future work
 
 ---
 
@@ -670,11 +757,13 @@ directory = "storage"                           # FAISS index location
 ### Environment Variables
 
 Required:
+
 - `OPENAI_API_KEY` (if using OpenAI)
 - `EMBEDDING_PROVIDER`, `EMBEDDING_MODEL`
 - `LLM_PROVIDER`, `LLM_MODEL`
 
 Optional:
+
 - `EMBEDDING_BASE_URL`, `LLM_BASE_URL` (for Ollama)
 
 ---

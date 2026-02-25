@@ -1,0 +1,30 @@
+# RecRAG API Dockerfile
+#
+# Builds a container for the FastAPI services (Ingestion API and Retrieval API)
+# This is a multi-purpose Dockerfile that can run either API service.
+
+FROM python:3.12-slim
+
+# Set working directory
+WORKDIR /app
+
+# Install uv for fast dependency management
+RUN pip install --no-cache-dir uv
+
+# Copy project files
+COPY pyproject.toml uv.lock ./
+COPY config.toml ./
+COPY backend/src ./backend/src
+COPY backend/api ./backend/api
+
+# Install dependencies
+RUN uv sync --frozen --no-dev
+
+# Set Python path
+ENV PYTHONPATH=/app/backend/src
+
+# Expose default ports
+EXPOSE 8000 8001
+
+# Default command (can be overridden)
+CMD ["uv", "run", "uvicorn", "api.retrieval.main:app", "--host", "0.0.0.0", "--port", "8000"]
