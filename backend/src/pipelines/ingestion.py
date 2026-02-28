@@ -12,7 +12,8 @@ from stores import BaseVectorStore, VectorStore
 from .base import (
     DEFAULT_BATCH_SIZE,
     create_embedder_from_config,
-    get_vector_store_paths,
+    get_collection_name,
+    get_milvus_uri,
 )
 from .utils import _compute_file_hash
 
@@ -57,13 +58,13 @@ class IngestionPipeline:
         chunk_overlap = get_config_value(config, "ingestion.chunk_overlap", 50)
         splitter = TextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
 
-        index_path, metadata_path = get_vector_store_paths(
-            config, config_path, embedder.model
-        )
+        collection_name = get_collection_name(config, embedder.model)
+        uri = get_milvus_uri(config, config_path)
         vector_store = VectorStore(
             dimension=embedder.dimension,
-            index_path=index_path,
-            metadata_path=metadata_path,
+            collection_name=collection_name,
+            uri=uri,
+            metric_type=config.get("storage", {}).get("metric_type", "L2"),
         )
 
         ingestion_dir = get_ingestion_dir(config, config_path)
