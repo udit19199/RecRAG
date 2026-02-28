@@ -1,6 +1,6 @@
 from .base import BaseVectorStore
-from .faiss import FAISSVectorStore
+from .milvus import MilvusVectorStore
 
-VectorStore = FAISSVectorStore
+VectorStore = MilvusVectorStore
 
-__all__ = ["BaseVectorStore", "FAISSVectorStore", "VectorStore"]
+__all__ = ["BaseVectorStore", "MilvusVectorStore", "VectorStore"]
