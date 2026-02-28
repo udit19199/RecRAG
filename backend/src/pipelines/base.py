@@ -2,7 +2,7 @@ from pathlib import Path
 from typing import Any, Callable
 
 from adapters import BaseEmbedder, BaseLLM, create_embedder, create_llm
-from config import get_storage_dir
+from config import get_storage_dir, resolve_path
 
 DEFAULT_CONTEXT_TEMPLATE = """Context information:
 {context}
@@ -47,13 +47,33 @@ def create_llm_from_config(config: dict[str, Any]) -> BaseLLM:
     return _create_adapter_from_config(config, "llm", create_llm, defaults)
 
 
-def get_vector_store_paths(
-    config: dict[str, Any], config_path: Path, embedder_model: str
-) -> tuple[Path, Path]:
-    """Get index and metadata paths for the vector store."""
-    storage_dir = get_storage_dir(config, config_path)
+def get_collection_name(config: dict[str, Any], embedder_model: str) -> str:
+    """Return a Milvus collection name derived from the embedder model.
+
+    The name is prefixed by ``storage.collection_prefix`` (default ``recrag_``)
+    and the model slug (slashes and hyphens replaced with underscores).
+    """
+    prefix = config.get("storage", {}).get("collection_prefix", "recrag_")
     embedding_id = embedder_model.replace("/", "_").replace("-", "_")
-    return (
-        storage_dir / f"faiss_{embedding_id}.index",
-        storage_dir / f"faiss_{embedding_id}.json",
-    )
+    return f"{prefix}{embedding_id}"
+
+
+def get_milvus_uri(config: dict[str, Any], config_path: Path) -> str:
+    """Return the Milvus connection URI from configuration.
+
+    - ``deployment = "lite"`` → local file path (Milvus Lite).
+    - ``deployment = "server"`` → ``http://<host>:<port>`` (Standalone / Distributed).
+    """
+    storage = config.get("storage", {})
+    deployment = storage.get("deployment", "lite")
+
+    if deployment == "lite":
+        db_path = storage.get("lite", {}).get("db_path", "storage/milvus_lite.db")
+        resolved = resolve_path(db_path, config_path)
+        resolved.parent.mkdir(parents=True, exist_ok=True)
+        return str(resolved)
+
+    server = storage.get("server", {})
+    host = server.get("host", "localhost")
+    port = server.get("port", 19530)
+    return f"http://{host}:{port}"

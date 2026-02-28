@@ -17,7 +17,6 @@ __all__ = [
     "get_retrieval_pipeline",
     "create_embedder_from_config",
     "create_llm_from_config",
-    "get_vector_store_paths",
     "DEFAULT_CONTEXT_TEMPLATE",
     "DEFAULT_BATCH_SIZE",
     "DEFAULT_CHUNK_SIZE",
