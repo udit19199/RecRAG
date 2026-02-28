@@ -2,7 +2,7 @@ from pathlib import Path
 from typing import Any, Callable
 
 from adapters import BaseEmbedder, BaseLLM, create_embedder, create_llm
-from config import get_storage_dir, resolve_path
+from config import resolve_path
 
 DEFAULT_CONTEXT_TEMPLATE = """Context information:
 {context}
