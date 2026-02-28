@@ -4,7 +4,7 @@ from typing import Any
 import pytest
 
 from adapters.base import BaseEmbedder, BaseLLM
-from stores import VectorStore
+from tests.mocks import InMemoryVectorStore
 
 
 class MockEmbedder(BaseEmbedder):
@@ -61,15 +61,14 @@ def temp_storage_dir(tmp_path: Path) -> Path:
 
 @pytest.fixture
 def temp_vector_store(
-    temp_storage_dir: Path, mock_embedder: MockEmbedder
-) -> VectorStore:
-    index_path = temp_storage_dir / "test.index"
-    metadata_path = temp_storage_dir / "test.json"
-    return VectorStore(
-        dimension=mock_embedder.dimension,
-        index_path=index_path,
-        metadata_path=metadata_path,
-    )
+    mock_embedder: MockEmbedder,
+) -> InMemoryVectorStore:
+    """Return a fresh in-memory vector store for fast unit tests.
+
+    Uses ``InMemoryVectorStore`` so tests have no dependency on a running
+    Milvus instance while still exercising the full ``BaseVectorStore`` API.
+    """
+    return InMemoryVectorStore(dimension=mock_embedder.dimension)
 
 
 @pytest.fixture

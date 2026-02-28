@@ -4,7 +4,7 @@ import pytest
 
 from loaders import DocumentLoader
 from splitters import TextSplitter
-from stores import VectorStore
+from tests.mocks import InMemoryVectorStore
 
 
 class TestTextSplitter:
@@ -22,7 +22,7 @@ class TestTextSplitter:
 
 
 class TestVectorStore:
-    def test_add_single_document(self, temp_vector_store: VectorStore) -> None:
+    def test_add_single_document(self, temp_vector_store: InMemoryVectorStore) -> None:
         embedding = [0.1] * 128
         document = "Test document content"
         metadata = {"source": "test.pdf"}
@@ -30,13 +30,11 @@ class TestVectorStore:
         temp_vector_store.add([embedding], [document], [metadata])
 
         assert temp_vector_store.count == 1
-        assert len(temp_vector_store._metadata) == 1
-        assert temp_vector_store._metadata[0]["text"] == document
-        assert temp_vector_store._metadata[0]["source"] == "test.pdf"
-        # Embeddings are stored in FAISS only, not in metadata (to save memory)
-        assert "embedding" not in temp_vector_store._metadata[0]
+        _, results = temp_vector_store.search(embedding, k=1)
+        assert results[0].text == document
+        assert results[0].source == "test.pdf"
 
-    def test_add_multiple_documents(self, temp_vector_store: VectorStore) -> None:
+    def test_add_multiple_documents(self, temp_vector_store: InMemoryVectorStore) -> None:
         embeddings = [[0.1] * 128, [0.2] * 128, [0.3] * 128]
         documents = ["Doc 1", "Doc 2", "Doc 3"]
         metadata_list = [{"source": "a.pdf"}, {"source": "b.pdf"}, {"source": "c.pdf"}]
@@ -44,9 +42,8 @@ class TestVectorStore:
         temp_vector_store.add(embeddings, documents, metadata_list)
 
         assert temp_vector_store.count == 3
-        assert len(temp_vector_store._metadata) == 3
 
-    def test_search_returns_results(self, temp_vector_store: VectorStore) -> None:
+    def test_search_returns_results(self, temp_vector_store: InMemoryVectorStore) -> None:
         embeddings = [[0.1] * 128, [0.5] * 128]
         documents = ["Document A", "Document B"]
         metadata_list = [{"source": "a.pdf"}, {"source": "b.pdf"}]
@@ -60,7 +57,7 @@ class TestVectorStore:
         assert results[0].text == "Document A"
         assert hasattr(results[0], "distance")
 
-    def test_delete_all(self, temp_vector_store: VectorStore) -> None:
+    def test_delete_all(self, temp_vector_store: InMemoryVectorStore) -> None:
         embeddings = [[0.1] * 128, [0.2] * 128]
         documents = ["Doc 1", "Doc 2"]
 
@@ -68,12 +65,14 @@ class TestVectorStore:
         temp_vector_store.delete_all()
 
         assert temp_vector_store.count == 0
-        assert temp_vector_store._metadata == []
+        _, results = temp_vector_store.search([0.1] * 128, k=4)
+        assert results == []
 
-    def test_remove_by_sources_removes_metadata(
-        self, temp_vector_store: VectorStore
+    def test_source_deduplication_on_readd(
+        self, temp_vector_store: InMemoryVectorStore
     ) -> None:
-        embeddings = [[0.1] * 128, [0.2] * 128, [0.3] * 128]
+        """Re-adding documents with an existing source replaces the old ones."""
+        embeddings = [[0.1] * 128, [0.9] * 128, [0.15] * 128]
         documents = ["Doc 1", "Doc 2", "Doc 3"]
         metadata_list = [
             {"source": "a.pdf"},
@@ -83,53 +82,52 @@ class TestVectorStore:
 
         temp_vector_store.add(embeddings, documents, metadata_list)
         assert temp_vector_store.count == 3
-        assert len(temp_vector_store._metadata) == 3
 
-        temp_vector_store.add([[0.4] * 128], ["Doc 4"], [{"source": "a.pdf"}])
+        # Re-add under "a.pdf" — both previous a.pdf entries should be removed.
+        temp_vector_store.add([[0.2] * 128], ["Doc 4"], [{"source": "a.pdf"}])
 
-        assert len(temp_vector_store._metadata) == 2
-        sources = {m["source"] for m in temp_vector_store._metadata}
-        assert sources == {"a.pdf", "b.pdf"}
         assert temp_vector_store.count == 2
 
-    def test_metadata_consistency_after_source_update(
-        self, temp_vector_store: VectorStore
-    ) -> None:
-        """Test that metadata is correctly updated when re-adding same source.
+        _, r_b = temp_vector_store.search([0.9] * 128, k=1)
+        assert r_b[0].source == "b.pdf"
+        assert r_b[0].text == "Doc 2"
 
-        Note: FAISS index is not rebuilt (would require full re-indexing).
-        Metadata tracks the latest documents per source correctly.
-        """
-        embeddings = [[0.1] * 128, [0.2] * 128]
+        _, r_a = temp_vector_store.search([0.2] * 128, k=1)
+        assert r_a[0].source == "a.pdf"
+        assert r_a[0].text == "Doc 4"
+
+    def test_metadata_consistency_after_source_update(
+        self, temp_vector_store: InMemoryVectorStore
+    ) -> None:
+        """When a source is updated its old content is no longer returned."""
+        embeddings = [[0.1] * 128, [0.9] * 128]
         documents = ["Doc 1", "Doc 2"]
         metadata_list = [{"source": "a.pdf"}, {"source": "b.pdf"}]
 
         temp_vector_store.add(embeddings, documents, metadata_list)
 
-        # Re-add with same source - metadata should be updated
         temp_vector_store.add([[0.3] * 128], ["Doc 3"], [{"source": "a.pdf"}])
 
-        # Metadata should show the latest state
-        assert len(temp_vector_store._metadata) == 2
-        texts = {m["text"] for m in temp_vector_store._metadata}
-        assert texts == {"Doc 2", "Doc 3"}
+        assert temp_vector_store.count == 2
 
-    def test_embeddings_not_stored_in_metadata(
-        self, temp_vector_store: VectorStore
+        _, results = temp_vector_store.search([0.3] * 128, k=1)
+        assert results[0].text == "Doc 3"
+        assert results[0].source == "a.pdf"
+
+    def test_search_returns_correct_metadata(
+        self, temp_vector_store: InMemoryVectorStore
     ) -> None:
-        """Test that embeddings are stored in FAISS only, not metadata (memory optimization)."""
+        """Extra metadata keys are preserved and returned in search results."""
         embedding = [0.5] * 128
         document = "Test document"
-        metadata = {"source": "test.pdf"}
+        metadata = {"source": "test.pdf", "page": 3}
 
         temp_vector_store.add([embedding], [document], [metadata])
 
-        # Embeddings stored in FAISS only to save ~50% memory
-        assert "embedding" not in temp_vector_store._metadata[0]
-        # But search still works via FAISS
         distances, results = temp_vector_store.search(embedding, k=1)
         assert len(results) == 1
         assert results[0].text == document
+        assert results[0].metadata.get("page") == 3
 
 
 class TestDocumentLoader:
