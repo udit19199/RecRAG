@@ -1,14 +1,13 @@
 [project]
 name = "recrag"
 version = "0.1.0"
-description = "Retrieval-Augmented Generation pipeline with FAISS vector storage"
+description = "Retrieval-Augmented Generation pipeline with Milvus vector storage"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "llama-index>=0.14.14",
     "llama-index-embeddings-nvidia>=0.1.0",
     "llama-index-llms-nvidia>=0.1.0",
-    "faiss-cpu>=1.7.0",
     "python-dotenv>=1.2.1",
     "streamlit>=1.54.0",
     "requests>=2.31.0",
@@ -23,6 +22,7 @@ dependencies = [
     "uvicorn[standard]>=0.30.0",
     "python-multipart>=0.0.9",
     "pydantic>=2.9.0",
+    "pymilvus>=2.6.9",
 ]
 
 [project.optional-dependencies]
@@ -40,7 +40,7 @@ where = ["backend/src"]
 package-dir = {"" = "backend/src"}
 
 [tool.pytest.ini_options]
-pythonpath = ["backend/src"]
+pythonpath = ["backend/src", "."]
 testpaths = ["tests"]
 
 [tool.pyright]

@@ -48,4 +48,20 @@ Question: {question}
 Answer:"""
 
 [storage]
+# "lite"   – Milvus Lite: embedded local file, no Docker service required (default).
+# "server" – Milvus Standalone / Distributed: requires the milvus service
+#             in docker-compose (run with --profile server).
+deployment = "lite"
+collection_prefix = "recrag_"
+metric_type = "L2"
+# directory is used only for tracking ingestion status (processed_files.json)
 directory = "storage"
+
+[storage.lite]
+# Path to the Milvus Lite embedded database file (relative to config.toml)
+db_path = "storage/milvus_lite.db"
+
+[storage.server]
+# Set MILVUS_HOST env var to override (useful in Docker where service is 'milvus')
+host = "${MILVUS_HOST:-localhost}"
+port = 19530
