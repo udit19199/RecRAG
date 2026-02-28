@@ -12,7 +12,8 @@ from .base import (
     DEFAULT_TOP_K,
     create_embedder_from_config,
     create_llm_from_config,
-    get_vector_store_paths,
+    get_collection_name,
+    get_milvus_uri,
 )
 
 logger = logging.getLogger(__name__)
@@ -69,13 +70,13 @@ class RetrievalPipeline:
         embedder = create_embedder_from_config(config)
         llm = create_llm_from_config(config)
 
-        index_path, metadata_path = get_vector_store_paths(
-            config, config_path, embedder.model
-        )
+        collection_name = get_collection_name(config, embedder.model)
+        uri = get_milvus_uri(config, config_path)
         vector_store = VectorStore(
             dimension=embedder.dimension,
-            index_path=index_path,
-            metadata_path=metadata_path,
+            collection_name=collection_name,
+            uri=uri,
+            metric_type=config.get("storage", {}).get("metric_type", "L2"),
         )
 
         top_k = get_config_value(config, "retrieval.top_k", DEFAULT_TOP_K)
