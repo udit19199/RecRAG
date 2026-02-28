@@ -6,7 +6,6 @@ from .base import (
     DEFAULT_TOP_K,
     create_embedder_from_config,
     create_llm_from_config,
-    get_vector_store_paths,
 )
 from .ingestion import IngestionPipeline, run_ingestion
 from .retrieval import RetrievalPipeline, get_retrieval_pipeline
