@@ -1,17 +1,3 @@
-"""Retrieval API - FastAPI service for querying documents with RAG.
-
-This API provides endpoints for:
-- Querying the RAG pipeline with natural language
-- Health checking
-
-The API uses the shared storage volume to access the FAISS index
-and communicates with the LLM service for generating responses.
-
-Routes:
-    - POST /query: Query the RAG pipeline
-    - GET /health: Health check endpoint
-"""
-
 import sys
 from pathlib import Path
 from typing import Any
@@ -33,29 +19,21 @@ from pipelines import get_retrieval_pipeline
 
 
 class QueryRequest(BaseModel):
-    """Request model for query endpoint."""
-
     query: str
 
 
 class ContextItem(BaseModel):
-    """A single retrieved context item."""
-
     text: str
     source: str
     distance: float
 
 
 class QueryResponse(BaseModel):
-    """Response model for query endpoint."""
-
     response: str
     context: list[ContextItem]
 
 
 class HealthResponse(BaseModel):
-    """Response model for health endpoint."""
-
     status: str
     service: str
     pipeline_loaded: bool
@@ -67,7 +45,6 @@ app = FastAPI(
     version="1.0.0",
 )
 
-# Configure CORS for frontend access
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -80,14 +57,6 @@ _pipeline: Any = None
 
 
 def get_pipeline() -> Any:
-    """Get or initialize the retrieval pipeline.
-
-    Returns:
-        The RetrievalPipeline instance.
-
-    Raises:
-        HTTPException: If pipeline initialization fails.
-    """
     global _pipeline
     if _pipeline is None:
         try:
@@ -103,67 +72,28 @@ def get_pipeline() -> Any:
 
 @app.post("/query", response_model=QueryResponse)
 async def query(request: QueryRequest) -> QueryResponse:
-    """Query the RAG pipeline with a question.
-
-    The query is:
-    1. Embedded using the configured embedding model
-    2. Searched against the FAISS vector store
-    3. Passed to the LLM with retrieved context to generate an answer
-
-    Args:
-        request: QueryRequest containing the question.
-
-    Returns:
-        QueryResponse with the LLM's answer and retrieved context.
-
-    Raises:
-        HTTPException: If query fails or pipeline not ready.
-    """
     if not request.query.strip():
-        raise HTTPException(
-            status_code=400,
-            detail="Query cannot be empty",
-        )
+        raise HTTPException(status_code=400, detail="Query cannot be empty")
 
     try:
         pipeline = get_pipeline()
         result = pipeline.query(request.query)
 
-        # Convert context items to response format
         context = [
-            ContextItem(
-                text=doc.text,
-                source=doc.source,
-                distance=doc.distance,
-            )
+            ContextItem(text=doc.text, source=doc.source, distance=doc.distance)
             for doc in result["context"]
         ]
 
-        return QueryResponse(
-            response=result["response"],
-            context=context,
-        )
+        return QueryResponse(response=result["response"], context=context)
     except Exception as e:
-        raise HTTPException(
-            status_code=500,
-            detail=f"Query failed: {str(e)}",
-        )
+        raise HTTPException(status_code=500, detail=f"Query failed: {e}")
 
 
 @app.get("/health", response_model=HealthResponse)
 async def health() -> HealthResponse:
-    """Health check endpoint.
-
-    Returns the health status of the service and whether
-    the pipeline has been initialized.
-
-    Returns:
-        HealthResponse with service status.
-    """
     pipeline_loaded = _pipeline is not None
     if not pipeline_loaded:
         try:
-            # Try to load pipeline to verify it's ready
             get_pipeline()
             pipeline_loaded = True
         except Exception:

@@ -37,11 +37,6 @@ def count_tokens(text: str, model: str = "gpt-4") -> int:
 
 
 class RetrievalPipeline:
-    """Pipeline for retrieving and generating responses.
-
-    Supports dependency injection for flexible composition.
-    """
-
     def __init__(
         self,
         embedder: BaseEmbedder,
@@ -99,14 +94,9 @@ class RetrievalPipeline:
         )
 
     def retrieve(self, query: str, top_k: Optional[int] = None) -> list[RetrievalResult]:
-        """Retrieve relevant documents for a query."""
         k = top_k or self.top_k
-        logger.info(f"Embedding query: {query[:50]}...")
-
         query_embedding = self.embedder.embed(query)
         _, results = self.vector_store.search(query_embedding, k=k)
-
-        logger.info(f"Found {len(results)} results")
         return results
 
     def generate(
@@ -114,7 +104,6 @@ class RetrievalPipeline:
         query: str,
         context: Optional[list[RetrievalResult]] = None,
     ) -> str:
-        """Generate a response using retrieved context."""
         context = context or self.retrieve(query)
 
         model = getattr(self.llm, "model", "gpt-4")
@@ -150,11 +139,9 @@ class RetrievalPipeline:
             question=query,
         )
 
-        logger.info("Generating response...")
         return self.llm.generate(prompt)
 
     def query(self, query: str) -> dict[str, Any]:
-        """Execute a full RAG query: retrieve and generate."""
         context = self.retrieve(query)
         response = self.generate(query, context)
 
@@ -164,13 +151,5 @@ class RetrievalPipeline:
 def get_retrieval_pipeline(
     config_path: Path = Path("config.toml"),
 ) -> RetrievalPipeline:
-    """Create a retrieval pipeline from config.
-
-    Args:
-        config_path: Path to configuration file.
-
-    Returns:
-        RetrievalPipeline instance.
-    """
     config = load_config(config_path)
     return RetrievalPipeline.from_config(config, config_path)

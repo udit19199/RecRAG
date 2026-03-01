@@ -13,21 +13,15 @@ logger = logging.getLogger(__name__)
 class MilvusVectorStore(BaseVectorStore):
     """Milvus-backed vector store.
 
-    Supports both Milvus Lite (local embedded file) and Milvus Standalone /
-    Distributed (remote server) via a single URI parameter:
-
-    - Lite:   uri="./storage/milvus_lite.db"
-    - Server: uri="http://milvus:19530"
-
-    All metadata (text, source, extra fields) is stored as Milvus payload
-    fields — no external JSON files required.
+    Connects to a Milvus server (standalone or distributed). Embedded
+    Milvus Lite support has been removed; use a Milvus server instead.
     """
 
     def __init__(
         self,
         dimension: int,
         collection_name: str = "recrag_default",
-        uri: str = "./storage/milvus_lite.db",
+        uri: str = "http://localhost:19530",
         metric_type: str = "L2",
         index_params: Optional[dict[str, Any]] = None,
     ) -> None:
@@ -47,7 +41,6 @@ class MilvusVectorStore(BaseVectorStore):
     # ------------------------------------------------------------------
 
     def _ensure_collection(self) -> None:
-        """Create collection with schema + index if it does not already exist."""
         if self._client.has_collection(self._collection_name):
             return
 
@@ -92,15 +85,6 @@ class MilvusVectorStore(BaseVectorStore):
         documents: list[str],
         metadata_list: Optional[list[dict[str, Any]]] = None,
     ) -> None:
-        """Upsert documents: remove existing vectors for the same sources,
-        then insert the new ones.
-
-        Args:
-            embeddings: Dense vectors of shape (n, dimension).
-            documents: Corresponding text content for each vector.
-            metadata_list: Optional per-document metadata dicts.
-                Each dict may contain a ``source`` key and arbitrary extras.
-        """
         if metadata_list is None:
             metadata_list = [{} for _ in documents]
 
@@ -129,16 +113,6 @@ class MilvusVectorStore(BaseVectorStore):
         query_embedding: list[float],
         k: int = 4,
     ) -> tuple[list[float], list[RetrievalResult]]:
-        """Return the top-k most similar documents.
-
-        Args:
-            query_embedding: Query vector of length ``dimension``.
-            k: Number of results to return.
-
-        Returns:
-            Tuple of (distances, results) where distances are L2 distances
-            (lower = more similar) and results contain text + metadata.
-        """
         hits = self._client.search(
             collection_name=self._collection_name,
             data=[query_embedding],
@@ -170,14 +144,7 @@ class MilvusVectorStore(BaseVectorStore):
         self._ensure_collection()
 
     def delete_by_filter(self, filter_expr: str) -> int:
-        """Delete all entities matching a Milvus filter expression.
-
-        Args:
-            filter_expr: Milvus boolean expression, e.g. ``source in ["a.pdf"]``.
-
-        Returns:
-            Number of entities deleted (0 if unavailable from response).
-        """
+        """Delete entities matching a Milvus boolean filter expression."""
         result = self._client.delete(
             collection_name=self._collection_name,
             filter=filter_expr,

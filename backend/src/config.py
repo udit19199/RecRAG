@@ -7,18 +7,7 @@ import toml
 
 
 def resolve_path(path: str | Path, config_path: Path) -> Path:
-    """Resolve a path relative to the config file's parent directory.
-
-    If the path is absolute, return it as-is.
-    If the path is relative, resolve it relative to the config file's parent.
-
-    Args:
-        path: The path to resolve (absolute or relative).
-        config_path: Path to the configuration file.
-
-    Returns:
-        Resolved absolute path.
-    """
+    """Resolve path relative to config file; return absolute paths unchanged."""
     path = Path(path)
     if path.is_absolute():
         return path
@@ -41,22 +30,12 @@ def find_config_path(explicit_path: Path | None = None) -> Path:
 
 
 def load_config(config_path: Path = Path("config.toml")) -> dict[str, Any]:
-    """Load configuration from TOML file with environment variable substitution.
-
-    Supports ${ENV_VAR} and ${ENV_VAR:-default} syntax.
-
-    Args:
-        config_path: Path to the TOML configuration file.
-
-    Returns:
-        Dictionary with configuration values.
-    """
+    """Load TOML config with ${VAR:-default} environment variable substitution."""
     config = toml.load(config_path)
     return _substitute_env_vars(config)
 
 
 def _substitute_env_vars(value: Any) -> Any:
-    """Recursively substitute environment variables in config values."""
     if isinstance(value, str):
         return _substitute_string(value)
     elif isinstance(value, dict):
@@ -67,10 +46,6 @@ def _substitute_env_vars(value: Any) -> Any:
 
 
 def _substitute_string(value: str) -> str:
-    """Substitute environment variables in a string.
-
-    Supports ${VAR} and ${VAR:-default} syntax.
-    """
     pattern = r"\$\{([^}:]+)(?::-([^}]*))?\}"
 
     def replacer(match):
@@ -82,16 +57,7 @@ def _substitute_string(value: str) -> str:
 
 
 def get_config_value(config: dict, key_path: str, default: Any = None) -> Any:
-    """Get a nested config value using dot notation.
-
-    Args:
-        config: Configuration dictionary.
-        key_path: Dot-separated path (e.g., "embedding.openai.model").
-        default: Default value if key not found.
-
-    Returns:
-        The config value or default.
-    """
+    """Get a nested config value using dot notation (e.g. "embedding.model")."""
     keys = key_path.split(".")
     value = config
 
@@ -105,15 +71,6 @@ def get_config_value(config: dict, key_path: str, default: Any = None) -> Any:
 
 
 def get_storage_dir(config: dict, config_path: Path) -> Path:
-    """Get the storage directory path from configuration.
-
-    Args:
-        config: Configuration dictionary.
-        config_path: Path to the configuration file.
-
-    Returns:
-        Resolved absolute path to storage directory.
-    """
     storage_dir = config.get("storage", {}).get("directory", "storage")
     return resolve_path(storage_dir, config_path)
 

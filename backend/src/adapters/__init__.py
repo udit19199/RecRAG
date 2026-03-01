@@ -7,38 +7,15 @@ _LLM_REGISTRY: dict[str, Type[BaseLLM]] = {}
 
 
 def register_embedder(provider: str, cls: Type[BaseEmbedder]) -> None:
-    """Register an embedder provider.
-
-    Args:
-        provider: Provider name (e.g., "openai", "ollama")
-        cls: Embedder class to register
-    """
     _EMBEDDER_REGISTRY[provider] = cls
 
 
 def register_llm(provider: str, cls: Type[BaseLLM]) -> None:
-    """Register an LLM provider.
-
-    Args:
-        provider: Provider name (e.g., "openai", "ollama")
-        cls: LLM class to register
-    """
     _LLM_REGISTRY[provider] = cls
 
 
 def create_embedder(provider: str, **kwargs: Any) -> BaseEmbedder:
-    """Create an embedder instance based on provider.
-
-    Args:
-        provider: Provider name
-        **kwargs: Additional provider-specific parameters
-
-    Returns:
-        BaseEmbedder instance
-
-    Raises:
-        ValueError: If provider is not registered
-    """
+    """Raises ValueError for unknown providers."""
     if provider not in _EMBEDDER_REGISTRY:
         available = list(_EMBEDDER_REGISTRY.keys())
         raise ValueError(
@@ -48,18 +25,7 @@ def create_embedder(provider: str, **kwargs: Any) -> BaseEmbedder:
 
 
 def create_llm(provider: str, **kwargs: Any) -> BaseLLM:
-    """Create an LLM instance based on provider.
-
-    Args:
-        provider: Provider name
-        **kwargs: Additional provider-specific parameters
-
-    Returns:
-        BaseLLM instance
-
-    Raises:
-        ValueError: If provider is not registered
-    """
+    """Raises ValueError for unknown providers."""
     if provider not in _LLM_REGISTRY:
         available = list(_LLM_REGISTRY.keys())
         raise ValueError(f"Unknown LLM provider: {provider}. Available: {available}")
@@ -67,12 +33,10 @@ def create_llm(provider: str, **kwargs: Any) -> BaseLLM:
 
 
 def list_embedder_providers() -> list[str]:
-    """List all registered embedder providers."""
     return list(_EMBEDDER_REGISTRY.keys())
 
 
 def list_llm_providers() -> list[str]:
-    """List all registered LLM providers."""
     return list(_LLM_REGISTRY.keys())
 
 

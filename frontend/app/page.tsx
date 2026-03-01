@@ -1,22 +1,43 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
+import FileUploader from '@/components/FileUploader';
+import IngestionStatusDisplay from '@/components/IngestionStatusDisplay';
 import QueryForm from '@/components/QueryForm';
 import QueryResults from '@/components/QueryResults';
 import {
   queryRAG,
   checkRetrievalHealth,
+  uploadPDF,
+  getIngestionStatus,
+  waitForIngestionComplete,
   type QueryResponse,
+  type IngestionStatus,
 } from '@/lib/api';
 
-export default function QueryPage() {
+export default function HomePage() {
   const [result, setResult] = useState<QueryResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isReady, setIsReady] = useState(false);
   const [healthError, setHealthError] = useState<string | null>(null);
 
-  // Check API health on mount
+  const [ingestionStatus, setIngestionStatus] = useState<IngestionStatus | null>(null);
+  const [statusError, setStatusError] = useState<string | null>(null);
+  const [isUploading, setIsUploading] = useState(false);
+  const [uploadSuccess, setUploadSuccess] = useState<string | null>(null);
+  const [uploadError, setUploadError] = useState<string | null>(null);
+
+  const fetchIngestionStatus = useCallback(async () => {
+    try {
+      const newStatus = await getIngestionStatus();
+      setIngestionStatus(newStatus);
+      setStatusError(null);
+    } catch (err) {
+      setStatusError(err instanceof Error ? err.message : 'Failed to fetch status');
+    }
+  }, []);
+
   useEffect(() => {
     const checkHealth = async () => {
       try {
@@ -31,7 +52,18 @@ export default function QueryPage() {
     };
 
     checkHealth();
-  }, []);
+    fetchIngestionStatus();
+  }, [fetchIngestionStatus]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (ingestionStatus?.status === 'processing') {
+        fetchIngestionStatus();
+      }
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [ingestionStatus?.status, fetchIngestionStatus]);
 
   const handleQuery = async (query: string) => {
     setIsLoading(true);
@@ -48,21 +80,42 @@ export default function QueryPage() {
     }
   };
 
+  const handleUpload = async (files: File[]) => {
+    setIsUploading(true);
+    setUploadError(null);
+    setUploadSuccess(null);
+
+    try {
+      for (const file of files) {
+        await uploadPDF(file);
+      }
+
+      setUploadSuccess(
+        `Successfully uploaded ${files.length} file${files.length > 1 ? 's' : ''}. Processing has started.`
+      );
+
+      const finalStatus = await waitForIngestionComplete();
+      setIngestionStatus(finalStatus);
+    } catch (err) {
+      setUploadError(err instanceof Error ? err.message : 'Upload failed');
+    } finally {
+      setIsUploading(false);
+    }
+  };
+
   return (
     <div className="mx-auto max-w-4xl px-6 py-8">
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-zinc-900 dark:text-zinc-50">
-          Query Documents
+          RecRAG
         </h1>
         <p className="mt-2 text-zinc-600 dark:text-zinc-400">
-          Ask questions about your uploaded documents and get AI-powered answers
-          with source citations.
+          Upload documents and ask questions in a unified chat interface.
         </p>
       </div>
 
-      {/* Health status */}
       {!isReady && !isLoading && (
-        <div className="flex items-center gap-3 py-4">
+        <div className="mb-6 flex items-center gap-3 rounded-lg border border-yellow-200 bg-yellow-50 p-4 dark:border-yellow-900 dark:bg-yellow-950/50">
           <svg
             className="h-5 w-5 text-yellow-500"
             viewBox="0 0 20 20"
@@ -74,13 +127,66 @@ export default function QueryPage() {
               clipRule="evenodd"
             />
           </svg>
-          <p className="text-yellow-600 dark:text-yellow-400">
+          <p className="text-sm text-yellow-700 dark:text-yellow-300">
             {healthError || 'Loading...'}
           </p>
         </div>
       )}
 
-      {/* Query form */}
+      <div className="mb-8 rounded-lg border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900">
+        <h2 className="mb-4 text-lg font-semibold text-zinc-900 dark:text-zinc-50">
+          Upload Documents
+        </h2>
+        
+        <div className="mb-4">
+          <IngestionStatusDisplay
+            status={ingestionStatus}
+            error={statusError}
+            isLoading={false}
+          />
+        </div>
+
+        {uploadSuccess && (
+          <div className="mb-4 flex items-center gap-3 rounded-lg border border-green-200 bg-green-50 p-3 dark:border-green-900 dark:bg-green-950/50">
+            <svg
+              className="h-5 w-5 text-green-500"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fillRule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                clipRule="evenodd"
+              />
+            </svg>
+            <p className="text-sm text-green-700 dark:text-green-300">{uploadSuccess}</p>
+          </div>
+        )}
+
+        {uploadError && (
+          <div className="mb-4 flex items-center gap-3 rounded-lg border border-red-200 bg-red-50 p-3 dark:border-red-900 dark:bg-red-950/50">
+            <svg
+              className="h-5 w-5 text-red-500"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fillRule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                clipRule="evenodd"
+              />
+            </svg>
+            <p className="text-sm text-red-700 dark:text-red-300">{uploadError}</p>
+          </div>
+        )}
+
+        <FileUploader
+          onUpload={handleUpload}
+          isUploading={isUploading}
+          disabled={ingestionStatus?.status === 'processing'}
+        />
+      </div>
+
       <div className="mb-8 rounded-lg border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900">
         <QueryForm
           onSubmit={handleQuery}
@@ -89,7 +195,6 @@ export default function QueryPage() {
         />
       </div>
 
-      {/* Results */}
       <QueryResults result={result} error={error} isLoading={isLoading} />
     </div>
   );

@@ -23,7 +23,6 @@ def _create_adapter_from_config(
     create_fn: Callable[..., Any],
     defaults: dict[str, str],
 ) -> Any:
-    """Create an adapter (embedder or LLM) from configuration."""
     section_config = config.get(section, {})
     provider = section_config.get("provider", defaults["provider"])
     model = section_config.get("model", defaults["model"])
@@ -36,13 +35,11 @@ def _create_adapter_from_config(
 
 
 def create_embedder_from_config(config: dict[str, Any]) -> BaseEmbedder:
-    """Create an embedder instance from configuration."""
     defaults = {"provider": "openai", "model": "text-embedding-3-small"}
     return _create_adapter_from_config(config, "embedding", create_embedder, defaults)
 
 
 def create_llm_from_config(config: dict[str, Any]) -> BaseLLM:
-    """Create an LLM instance from configuration."""
     defaults = {"provider": "openai", "model": "gpt-4o-mini"}
     return _create_adapter_from_config(config, "llm", create_llm, defaults)
 
@@ -59,21 +56,10 @@ def get_collection_name(config: dict[str, Any], embedder_model: str) -> str:
 
 
 def get_milvus_uri(config: dict[str, Any], config_path: Path) -> str:
-    """Return the Milvus connection URI from configuration.
+    """Return the Milvus connection URI.
 
-    - ``deployment = "lite"`` → local file path (Milvus Lite).
-    - ``deployment = "server"`` → ``http://<host>:<port>`` (Standalone / Distributed).
+    Milvus Lite (embedded) support has been removed — always use a
+    standalone Milvus server. The server address is hardcoded to the
+    local default for simplicity and to match deployment assumptions.
     """
-    storage = config.get("storage", {})
-    deployment = storage.get("deployment", "lite")
-
-    if deployment == "lite":
-        db_path = storage.get("lite", {}).get("db_path", "storage/milvus_lite.db")
-        resolved = resolve_path(db_path, config_path)
-        resolved.parent.mkdir(parents=True, exist_ok=True)
-        return str(resolved)
-
-    server = storage.get("server", {})
-    host = server.get("host", "localhost")
-    port = server.get("port", 19530)
-    return f"http://{host}:{port}"
+    return "http://localhost:19530"

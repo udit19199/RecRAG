@@ -29,7 +29,6 @@ class SentenceTextSplitter(BaseTextSplitter):
         )
 
     def split_documents(self, documents: list[LlamaDocument]) -> list["Chunk"]:
-        """Split documents into chunks with preserved metadata."""
         from models.chunk import Chunk
 
         nodes = self.splitter.get_nodes_from_documents(documents)
@@ -50,5 +49,4 @@ class SentenceTextSplitter(BaseTextSplitter):
         return chunks
 
     def split_text(self, text: str) -> list[str]:
-        """Split raw text into chunks without metadata."""
         return self.splitter.split_text(text)

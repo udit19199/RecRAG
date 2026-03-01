@@ -91,21 +91,79 @@ docker-compose up -d ingestion retrieval
 # Open http://localhost:8501
 ```
 
-### Local Development
+### Local Development (No Docker)
+
+Running the full application locally requires five services. Each runs in its own terminal.
+
+#### Prerequisites
+
+- [Python 3.12+](https://python.org) and [uv](https://docs.astral.sh/uv/getting-started/installation/)
+- [Node.js 22+](https://nodejs.org) and [pnpm](https://pnpm.io/installation)
+- [Ollama](https://ollama.com) (if using local embedding or LLM models)
+
+#### One-time setup
 
 ```bash
-# Install dependencies
+# 1. Install Python dependencies
 uv sync
+uv pip install -e .
 
-# Terminal 1: Start Ollama (if using local models)
-ollama serve
+# 2. Copy and configure environment file
+cp .env.example .env
+# Edit .env — set your API keys (OPENAI_API_KEY, OLLAMA_API_KEY, etc.)
 
-# Terminal 2: Start file watcher
-uv run python backend/watch.py
+# 3. Pull the embedding model into Ollama (if using Ollama for embeddings)
+ollama pull nomic-embed-text
 
-# Terminal 3: Start Streamlit UI
-uv run streamlit run backend/app.py
+# 4. Install frontend dependencies
+cd frontend && pnpm install && cd ..
 ```
+
+#### Start all services
+
+Open five terminal tabs from the project root (`RecRAG/`):
+
+**Terminal 1 — Ollama** (skip if not using Ollama):
+```bash
+ollama serve
+```
+
+**Terminal 2 — Ingest documents** (one-time, or keep running for auto-reingest):
+```bash
+# One-time ingestion of everything in data/pdfs/
+uv run --env-file .env python backend/ingest.py --force
+
+# OR watch mode: automatically re-ingests when PDFs are added or changed
+uv run --env-file .env python backend/watch.py
+```
+
+**Terminal 3 — Retrieval API** (answers queries):
+```bash
+uv run --env-file .env uvicorn api.retrieval.main:app --host 0.0.0.0 --port 8000
+```
+
+**Terminal 4 — Ingestion API** (handles PDF uploads from the UI):
+```bash
+uv run --env-file .env uvicorn api.ingestion.main:app --host 0.0.0.0 --port 8001
+```
+
+**Terminal 5 — Next.js frontend**:
+```bash
+cd frontend && pnpm dev
+```
+
+#### Service URLs
+
+| Service | URL | Purpose |
+|---------|-----|---------|
+| Next.js | http://localhost:3000 | Web UI |
+| Retrieval API | http://localhost:8000 | Query documents via RAG |
+| Ingestion API | http://localhost:8001 | Upload PDFs, check status |
+| Ollama | http://localhost:11434 | Local embeddings / LLM |
+
+#### Why `--env-file .env`?
+
+The `.env` file sets `PYTHONPATH=backend`, which makes the `api` package (in `backend/api/`) importable by uvicorn. Without it, `ModuleNotFoundError: No module named 'api'` is raised. All backend commands must include this flag.
 
 ## Architecture
 

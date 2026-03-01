@@ -1,5 +1,3 @@
-"""NVIDIA NIM adapters using native LlamaIndex integrations."""
-
 import os
 from typing import Any, Optional
 
@@ -13,8 +11,7 @@ from adapters.base import BaseEmbedder, BaseLLM
 class NIMEmbedder(BaseEmbedder):
     """NVIDIA NIM embedding provider.
 
-    Uses llama-index-embeddings-nvidia for cloud-hosted NIM models.
-    Auto-detects dimension by making a test API call on initialization.
+    Auto-detects embedding dimension via a test call on initialization.
     """
 
     def __init__(
@@ -43,7 +40,6 @@ class NIMEmbedder(BaseEmbedder):
         self._dimension = self._detect_dimension()
 
     def _detect_dimension(self) -> int:
-        """Detect embedding dimension by making a test API call."""
         test_embedding = self._client.get_query_embedding("test")
         return len(test_embedding)
 
@@ -61,10 +57,7 @@ class NIMEmbedder(BaseEmbedder):
 
 
 class NIMLLM(BaseLLM):
-    """NVIDIA NIM LLM provider.
-
-    Uses llama-index-llms-nvidia for cloud-hosted NIM models.
-    """
+    """NVIDIA NIM LLM provider via llama-index-llms-nvidia."""
 
     def __init__(
         self,
@@ -95,7 +88,7 @@ class NIMLLM(BaseLLM):
 
     @property
     def supports_streaming(self) -> bool:
-        return False  # Not implemented per requirements
+        return False
 
     def generate(self, prompt: str, **kwargs: Any) -> str:
         temperature = kwargs.get("temperature", self._temperature)

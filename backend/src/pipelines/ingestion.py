@@ -85,7 +85,6 @@ class IngestionPipeline:
         )
 
     def _load_processed_files(self, storage_dir: Path) -> dict[str, str]:
-        """Load processed file tracking from storage."""
         tracking_file = storage_dir / "processed_files.json"
         if tracking_file.exists():
             try:
@@ -96,15 +95,13 @@ class IngestionPipeline:
         return {}
 
     def _save_processed_files(self, storage_dir: Path) -> None:
-        """Save processed file tracking to storage."""
         tracking_file = storage_dir / "processed_files.json"
         tracking_file.parent.mkdir(parents=True, exist_ok=True)
         with open(tracking_file, "w") as f:
             json.dump(self._processed_files, f, indent=2)
 
     def _discover_files(self, directory: Path) -> list[Path]:
-        """Discover all supported files in directory."""
-        supported_extensions = {".pdf"}  # Can be extended
+        supported_extensions = {".pdf"}
         files = []
         if directory.exists():
             for ext in supported_extensions:
@@ -114,11 +111,7 @@ class IngestionPipeline:
     def _get_changed_files(
         self, directory: Path, processed_files: dict[str, str]
     ) -> list[tuple[Path, bool]]:
-        """Get list of files that are new or changed.
-
-        Returns:
-            List of (file_path, is_new) tuples
-        """
+        """Returns (file_path, is_new) tuples for new and modified files."""
         current_files = self._discover_files(directory)
         results = []
 
@@ -136,7 +129,6 @@ class IngestionPipeline:
         return results
 
     def _load_files_batch(self, file_paths: list[Path]) -> list[Any]:
-        """Load documents from a batch of files."""
         documents = []
         for file_path in file_paths:
             try:
@@ -152,7 +144,6 @@ class IngestionPipeline:
             return 0
 
         chunk_texts = [c.text for c in chunks]
-        # Phase 5: Rename metadatas -> metadata_list
         metadata_list = [{"source": c.source} for c in chunks]
 
         embeddings = self.embedder.embed_batch(chunk_texts)
@@ -161,11 +152,6 @@ class IngestionPipeline:
         return len(embeddings)
 
     def _process_file_batch(self, batch: list[Path], batch_num: int) -> tuple[int, int]:
-        """Process a batch of files: load, split, embed, store.
-
-        Returns:
-            Tuple of (chunks_count, embeddings_count).
-        """
         documents = self._load_files_batch(batch)
         if not documents:
             return 0, 0
@@ -223,7 +209,6 @@ class IngestionPipeline:
         }
 
     def _get_storage_dir(self) -> Path | None:
-        """Get storage directory from config."""
         if not self.config_path:
             return None
         return get_storage_dir(self.config, self.config_path)
@@ -231,7 +216,6 @@ class IngestionPipeline:
     def _get_files_to_process(
         self, files: list[Path] | None
     ) -> list[tuple[Path, bool]]:
-        """Determine which files need processing."""
         if files is not None:
             return [(f, str(f) not in self._processed_files) for f in files]
 
@@ -239,11 +223,6 @@ class IngestionPipeline:
         return self._get_changed_files(ingestion_dir, self._processed_files)
 
     def _process_files_in_batches(self, files: list[Path]) -> tuple[int, int]:
-        """Process files in batches and update tracking.
-
-        Returns:
-            Tuple of (total_chunks, total_embeddings).
-        """
         total_chunks = 0
         total_embeddings = 0
 
@@ -268,10 +247,6 @@ class IngestionPipeline:
             self._processed_files = {}
 
     def process_documents_streaming(self, force: bool = False) -> dict[str, Any]:
-        """Run ingestion with streaming/batched processing for lower memory usage.
-
-        This method processes files in configured batch sizes.
-        """
         self._prepare_for_ingestion(force)
 
         ingestion_dir = get_ingestion_dir(self.config, self.config_path or Path("."))
@@ -296,23 +271,13 @@ class IngestionPipeline:
         }
 
     def process_all_documents(self, force: bool = False) -> dict[str, Any]:
-        """Run full ingestion - loads all documents at once into memory.
-
-        For large corpora, use process_documents_streaming() instead.
-        """
+        """Loads all at once; for large corpora use process_documents_streaming."""
         self._prepare_for_ingestion(force)
 
         logger.info("Loading documents...")
         documents = self.loader.load()
-        logger.info(f"Loaded {len(documents)} documents")
-
-        logger.info("Splitting documents into chunks...")
         chunks = self.splitter.split_documents(documents)
-        logger.info(f"Created {len(chunks)} chunks")
-
-        logger.info("Generating embeddings...")
         embeddings_count = self._embed_and_store(chunks)
-        logger.info(f"Generated {embeddings_count} embeddings")
 
         return {
             "documents": len(documents),
@@ -321,15 +286,10 @@ class IngestionPipeline:
             "total_vectors": self.vector_store.count,
         }
 
-    # Backward compatibility
-    def run(self, force: bool = False) -> dict[str, Any]:
-        return self.process_all_documents(force=force)
-
-    def run_streaming(self, force: bool = False) -> dict[str, Any]:
-        return self.process_documents_streaming(force=force)
-
-    def run_incremental(self, files: list[Path] | None = None) -> dict[str, Any]:
-        return self.process_new_and_changed_documents(files=files)
+    # (Removed backward-compatibility wrapper methods `run`, `run_streaming`,
+    # and `run_incremental`. Call the explicit methods instead:
+    # `process_all_documents`, `process_documents_streaming`,
+    # and `process_new_and_changed_documents`.)
 
 
 def run_ingestion(
@@ -338,17 +298,6 @@ def run_ingestion(
     incremental: bool = False,
     files: list[Path] | None = None,
 ) -> dict[str, Any]:
-    """Run the ingestion pipeline.
-
-    Args:
-        config_path: Path to configuration file.
-        force: If True, re-index all documents.
-        incremental: If True, only process new/changed files.
-        files: Optional list of specific files to process.
-
-    Returns:
-        Dictionary with ingestion results.
-    """
     from config import load_config
 
     config = load_config(config_path)

@@ -34,7 +34,6 @@ class OpenAIEmbedder(BaseEmbedder):
         return self._dimension or EMBEDDING_DIMENSIONS.get(self.model, 1536)
 
     def _create_embedding_params(self, input_data: str | list[str]) -> dict[str, Any]:
-        """Build parameters for embedding API call."""
         params = {"model": self.model, "input": input_data}
         if self._dimension is not None:
             params["dimensions"] = self._dimension
@@ -81,7 +80,6 @@ class OllamaEmbedder(BaseEmbedder):
         return response.json()["embedding"]
 
     def embed_batch(self, texts: list[str]) -> list[list[float]]:
-        """Batch embedding using /api/embed endpoint with chunking for large batches."""
         if not texts:
             return []
 
@@ -97,12 +95,10 @@ class OllamaEmbedder(BaseEmbedder):
         return results
 
     def _embed_batch_single(self, texts: list[str]) -> list[list[float]]:
-        """Send a single batch request to Ollama's /api/embed endpoint."""
         if not texts:
             return []
 
         try:
-            # Use the batch endpoint /api/embed (plural)
             response = self.session.post(
                 f"{self.base_url}/api/embed",
                 json={"model": self.model, "input": texts},
@@ -116,7 +112,7 @@ class OllamaEmbedder(BaseEmbedder):
             return self._embed_batch_parallel(texts)
 
     def _embed_batch_parallel(self, texts: list[str]) -> list[list[float]]:
-        """Fallback: parallel embedding using ThreadPoolExecutor."""
+        """Fallback when the batch /api/embed endpoint fails."""
         results: list[Optional[list[float]]] = [None] * len(texts)
         errors: list[tuple[int, Exception]] = []
 

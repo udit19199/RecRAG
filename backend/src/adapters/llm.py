@@ -34,7 +34,6 @@ class OpenAILLM(BaseLLM):
     def _get_completion_params(
         self, messages: list[dict[str, str]], **kwargs: Any
     ) -> dict[str, Any]:
-        """Build parameters for chat completion."""
         return {
             "model": self.model,
             "messages": messages,
@@ -56,7 +55,7 @@ class OpenAILLM(BaseLLM):
 
 
 class OllamaLLM(BaseLLM):
-    """Ollama local LLM provider with connection pooling."""
+    """Ollama LLM provider with connection pooling."""
 
     def __init__(
         self,
@@ -64,6 +63,7 @@ class OllamaLLM(BaseLLM):
         temperature: float = DEFAULT_TEMPERATURE,
         max_tokens: Optional[int] = None,
         base_url: str = "http://localhost:11434",
+        api_key: Optional[str] = None,
         **kwargs: Any,
     ):
         super().__init__(model, **kwargs)
@@ -71,13 +71,15 @@ class OllamaLLM(BaseLLM):
         self.temperature = temperature
         self.max_tokens = max_tokens
         self.session = create_session_with_pooling()
+        self._headers = {}
+        if api_key:
+            self._headers["Authorization"] = f"Bearer {api_key}"
 
     @property
     def supports_streaming(self) -> bool:
         return False
 
     def _build_payload(self, **kwargs: Any) -> dict[str, Any]:
-        """Build request payload for Ollama API."""
         payload = {
             "model": self.model,
             "temperature": kwargs.get("temperature", self.temperature),
@@ -95,6 +97,7 @@ class OllamaLLM(BaseLLM):
         response = self.session.post(
             f"{self.base_url}/api/generate",
             json=payload,
+            headers=self._headers,
             timeout=120,
         )
         response.raise_for_status()
@@ -107,6 +110,7 @@ class OllamaLLM(BaseLLM):
         response = self.session.post(
             f"{self.base_url}/api/chat",
             json=payload,
+            headers=self._headers,
             timeout=120,
         )
         response.raise_for_status()

@@ -2,35 +2,15 @@
 # All non-sensitive configuration values
 
 [embedding]
-provider = "openai"
-model = "text-embedding-3-small"
-base_url = ""
-# truncate = "NONE"  # Optional: NONE (default), START, END
-
-# NVIDIA NIM example:
-# provider = "nim"
-# model = "nvidia/nv-embedqa-e5-v5"
-# base_url = "https://integrate.api.nvidia.com/v1"
-
-# Ollama example:
-# provider = "ollama"
-# model = "nomic-embed-text"
-# base_url = "http://localhost:11434"
+provider = "ollama"
+model = "nomic-embed-text"
+base_url = "http://localhost:11434"
 
 [llm]
-provider = "openai"
-model = "gpt-4o-mini"
-base_url = ""
-
-# NVIDIA NIM example:
-# provider = "nim"
-# model = "meta/llama-3.1-8b-instruct"
-# base_url = "https://integrate.api.nvidia.com/v1"
-
-# Ollama example:
-# provider = "ollama"
-# model = "llama3"
-# base_url = "http://localhost:11434"
+provider = "ollama"
+model = "glm-5"
+base_url = "https://ollama.com"
+api_key = "${OLLAMA_API_KEY}"
 
 [ingestion]
 directory = "data/pdfs"
@@ -51,16 +31,11 @@ Answer:"""
 # "lite"   – Milvus Lite: embedded local file, no Docker service required (default).
 # "server" – Milvus Standalone / Distributed: requires the milvus service
 #             in docker-compose (run with --profile server).
-deployment = "lite"
+deployment = "server"
 collection_prefix = "recrag_"
 metric_type = "L2"
 # directory is used only for tracking ingestion status (processed_files.json)
 directory = "storage"
-
-[storage.lite]
-# Path to the Milvus Lite embedded database file (relative to config.toml)
-db_path = "storage/milvus_lite.db"
-
 [storage.server]
 # Set MILVUS_HOST env var to override (useful in Docker where service is 'milvus')
 host = "${MILVUS_HOST:-localhost}"

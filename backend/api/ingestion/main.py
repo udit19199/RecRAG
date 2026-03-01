@@ -1,18 +1,3 @@
-"""Ingestion API - FastAPI service for document uploads and status.
-
-This API provides endpoints for:
-- Uploading PDF files to be ingested
-- Checking ingestion status
-
-The API writes files to the shared volume where the ingestion watcher
-(pipeline) picks them up for processing.
-
-Routes:
-    - POST /upload: Upload a PDF file
-    - GET /status: Get current ingestion status
-    - GET /health: Health check endpoint
-"""
-
 import json
 from pathlib import Path
 from typing import Any
@@ -38,8 +23,6 @@ if not APP_DIR.exists():
 
 
 class StatusResponse(BaseModel):
-    """Response model for status endpoint."""
-
     status: str
     started_at: str | None = None
     completed_at: str | None = None
@@ -48,8 +31,6 @@ class StatusResponse(BaseModel):
 
 
 class UploadResponse(BaseModel):
-    """Response model for upload endpoint."""
-
     success: bool
     filename: str
     message: str
@@ -61,7 +42,6 @@ app = FastAPI(
     version="1.0.0",
 )
 
-# Configure CORS for frontend access
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -70,50 +50,15 @@ app.add_middleware(
 )
 
 
-def get_status_file() -> Path:
-    """Get the path to the ingestion status file."""
-    return STORAGE_DIR / "ingestion_status.json"
-
-
-def read_status() -> dict[str, Any]:
-    """Read the current ingestion status from file."""
-    status_file = get_status_file()
-    if not status_file.exists():
-        return {"status": "idle"}
-    try:
-        with open(status_file) as f:
-            return json.load(f)
-    except (json.JSONDecodeError, FileNotFoundError):
-        return {"status": "idle"}
+from src.utils.status import read_status
 
 
 @app.post("/upload", response_model=UploadResponse)
 async def upload_pdf(file: UploadFile) -> UploadResponse:
-    """Upload a PDF file for ingestion.
-
-    The file is saved to the shared volume where the ingestion
-    watcher will pick it up and process it.
-
-    Args:
-        file: The PDF file to upload.
-
-    Returns:
-        UploadResponse with success status and filename.
-
-    Raises:
-        HTTPException: If the file is not a PDF or upload fails.
-    """
-    # Validate file type
     if not file.filename.lower().endswith(".pdf"):
-        raise HTTPException(
-            status_code=400,
-            detail="Only PDF files are allowed",
-        )
+        raise HTTPException(status_code=400, detail="Only PDF files are allowed")
 
-    # Ensure directory exists
     PDF_DIR.mkdir(parents=True, exist_ok=True)
-
-    # Sanitize filename and save
     safe_filename = Path(file.filename).name
     file_path = PDF_DIR / safe_filename
 
@@ -122,10 +67,7 @@ async def upload_pdf(file: UploadFile) -> UploadResponse:
         with open(file_path, "wb") as f:
             f.write(content)
     except Exception as e:
-        raise HTTPException(
-            status_code=500,
-            detail=f"Failed to save file: {str(e)}",
-        )
+        raise HTTPException(status_code=500, detail=f"Failed to save file: {e}")
 
     return UploadResponse(
         success=True,
@@ -136,18 +78,7 @@ async def upload_pdf(file: UploadFile) -> UploadResponse:
 
 @app.get("/status", response_model=StatusResponse)
 async def get_status() -> StatusResponse:
-    """Get the current ingestion status.
-
-    Returns the status of the ingestion process including:
-    - idle: No ingestion in progress
-    - processing: Currently processing files
-    - complete: Successfully processed
-    - error: Failed with an error
-
-    Returns:
-        StatusResponse with current status details.
-    """
-    status = read_status()
+    status = read_status(STORAGE_DIR)
     return StatusResponse(
         status=status.get("status", "idle"),
         started_at=status.get("started_at"),
@@ -159,9 +90,4 @@ async def get_status() -> StatusResponse:
 
 @app.get("/health")
 async def health() -> dict[str, str]:
-    """Health check endpoint.
-
-    Returns:
-        Dictionary with health status.
-    """
     return {"status": "healthy", "service": "ingestion-api"}

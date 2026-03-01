@@ -3,7 +3,6 @@ from typing import Any
 
 
 class BaseEmbedder(ABC):
-    """Abstract base class for embedding providers."""
 
     def __init__(self, model: str, **kwargs: Any):
         self.model = model
@@ -24,7 +23,6 @@ class BaseEmbedder(ABC):
 
 
 class BaseLLM(ABC):
-    """Abstract base class for LLM providers."""
 
     def __init__(self, model: str, **kwargs: Any):
         self.model = model

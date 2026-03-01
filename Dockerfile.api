@@ -20,8 +20,8 @@ COPY backend/api ./backend/api
 # Install dependencies
 RUN uv sync --frozen --no-dev
 
-# Set Python path
-ENV PYTHONPATH=/app/backend/src
+# Set Python path: backend/src for core modules, backend for api package
+ENV PYTHONPATH=/app/backend/src:/app/backend
 
 # Expose default ports
 EXPOSE 8000 8001

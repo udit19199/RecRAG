@@ -7,8 +7,7 @@ import { usePathname } from 'next/navigation';
  * Navigation link configuration
  */
 const navLinks = [
-  { href: '/', label: 'Query', description: 'Ask questions about your documents' },
-  { href: '/ingest', label: 'Ingest', description: 'Upload PDFs for processing' },
+  { href: '/', label: 'Chat', description: 'Upload documents and ask questions' },
 ];
 
 /**

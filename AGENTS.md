@@ -13,8 +13,9 @@ RecRAG is a Retrieval-Augmented Generation pipeline with separate ingestion and 
 ## Build / Lint / Test Commands
 
 ```bash
-# Installation
+# Installation (run once)
 uv sync
+uv pip install -e .
 
 # Testing
 uv run pytest                                     # Run all tests
@@ -30,16 +31,25 @@ uv run ruff check --fix .                         # Auto-fix
 # Type Checking
 uv run mypy backend/
 
-# Local Development
-uv run python backend/watch.py                    # File watcher
-uv run streamlit run backend/app.py               # Streamlit UI
-uv run python backend/ingest.py --force           # One-time ingestion
+# Local Development (all commands require --env-file .env)
+uv run --env-file .env python backend/ingest.py --force           # One-time ingestion
+uv run --env-file .env python backend/watch.py                    # File watcher daemon
+uv run --env-file .env uvicorn api.retrieval.main:app --host 0.0.0.0 --port 8000
+uv run --env-file .env uvicorn api.ingestion.main:app --host 0.0.0.0 --port 8001
+uv run --env-file .env streamlit run backend/app.py               # Streamlit UI (legacy)
+
+# Frontend (Next.js)
+cd frontend && pnpm install && pnpm dev           # http://localhost:3000
 
 # Docker
 docker-compose build                               # Build images
 docker-compose up -d                               # Start all services
 docker-compose down                                # Stop containers
 ```
+
+> **Why `--env-file .env`?**  The `.env` file sets `PYTHONPATH=backend` which makes the
+> `api` package (in `backend/api/`) importable by uvicorn and other tools. Without it,
+> `ModuleNotFoundError: No module named 'api'` is raised.
 
 ---
 

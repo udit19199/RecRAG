@@ -11,6 +11,7 @@ from config import (
     get_storage_dir,
     load_config,
 )
+from src.utils.status import get_status_file as _get_status_file_from_dir, read_status as _read_status_from_dir
 from pipelines import get_retrieval_pipeline
 from evaluation.ragas_eval import get_evaluator
 
@@ -27,17 +28,13 @@ CONFIG = load_config(CONFIG_PATH)
 
 
 def get_status_file() -> Path:
-    return get_storage_dir(CONFIG, CONFIG_PATH) / "ingestion_status.json"
+    return _get_status_file_from_dir(get_storage_dir(CONFIG, CONFIG_PATH))
 
 
 def get_ingestion_status() -> dict:
-    status_file = get_status_file()
-    if not status_file.exists():
-        return {"status": "idle"}
     try:
-        with open(status_file, "r") as f:
-            return json.load(f)
-    except (json.JSONDecodeError, FileNotFoundError):
+        return _read_status_from_dir(get_storage_dir(CONFIG, CONFIG_PATH))
+    except FileNotFoundError:
         return {"status": "idle"}
 
 
