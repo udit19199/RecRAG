@@ -3,33 +3,32 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-/**
- * Navigation link configuration
- */
 const navLinks = [
-  { href: '/', label: 'Chat', description: 'Upload documents and ask questions' },
+  { href: '/', label: 'Chat', description: 'Ask questions about your documents' },
+  { href: '/ingest', label: 'Documents', description: 'Upload and manage documents' },
 ];
 
-/**
- * Navbar component with navigation links
- *
- * Displays links to Query and Ingest pages with active state indication.
- */
 export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="border-b border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
-      <div className="mx-auto max-w-5xl px-6 py-4">
+    <nav className="bg-gradient-to-r from-zinc-950 via-zinc-900 to-zinc-950">
+      <div className="mx-auto max-w-7xl px-6 py-3">
         <div className="flex items-center justify-between">
           {/* Logo / App name */}
-          <div className="flex items-center gap-3">
-            <span className="text-xl font-bold text-zinc-900 dark:text-zinc-50">
-              RecRAG
-            </span>
-            <span className="rounded-full bg-blue-100 px-2 py-0.5 text-xs font-medium text-blue-700 dark:bg-blue-900 dark:text-blue-300">
-              Beta
-            </span>
+          <div className="flex items-center gap-2.5">
+            <div className="flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-sky-500 shadow-md">
+                <span className="text-sm font-bold text-white">R</span>
+              </div>
+              <div>
+                <div className="text-lg font-semibold text-zinc-50">RecRAG</div>
+                <div className="text-[11px] text-zinc-400">Retrieval + RAG</div>
+              </div>
+              <span className="rounded-full bg-blue-900/60 px-2 py-0.5 text-xs font-medium text-blue-300">
+                Beta
+              </span>
+            </div>
           </div>
 
           {/* Navigation links */}
@@ -42,8 +41,8 @@ export default function Navbar() {
                   href={link.href}
                   className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors ${
                     isActive
-                      ? 'bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-50'
-                      : 'text-zinc-600 hover:bg-zinc-50 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-900 dark:hover:text-zinc-50'
+                    ? 'bg-zinc-800 text-zinc-50'
+                      : 'text-zinc-400 hover:bg-zinc-700 hover:text-zinc-50'
                   }`}
                   title={link.description}
                 >

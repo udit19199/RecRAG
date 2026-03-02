@@ -94,12 +94,9 @@ export default function FileUploader({ onUpload, isUploading, disabled }: FileUp
         onDrop={handleDrop}
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
-        className={`cursor-pointer rounded-lg border-2 border-dashed p-8 text-center transition-colors ${
-          isDragging
-            ? 'border-blue-500 bg-blue-50 dark:bg-blue-950/30'
-            : 'border-zinc-300 hover:border-zinc-400 dark:border-zinc-700 dark:hover:border-zinc-600'
-        } ${disabled || isUploading ? 'cursor-not-allowed opacity-50' : ''}`}
+        className={`cursor-pointer p-8 text-center transition-colors ${disabled || isUploading ? 'cursor-not-allowed opacity-50' : ''}`}
       >
+        <div className={`mx-auto max-w-lg rounded-xl p-6 panel ${isDragging ? 'ring-2 ring-blue-500/30' : ''}`}>
         <input
           ref={fileInputRef}
           type="file"
@@ -124,19 +121,20 @@ export default function FileUploader({ onUpload, isUploading, disabled }: FileUp
               d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15m0-3l-3-3m0 0l-3 3m3-3v11.25"
             />
           </svg>
-          <div className="text-zinc-600 dark:text-zinc-400">
-            <span className="font-medium text-blue-600 dark:text-blue-400">
-              Click to upload
-            </span>{' '}
-            or drag and drop
-          </div>
-          <p className="text-xs text-zinc-400">PDF files only (max 50MB)</p>
+           <div className="text-zinc-300">
+             <span className="font-medium text-white">
+               Click to upload
+             </span>{' '}
+             or drag and drop
+           </div>
+           <p className="text-xs text-zinc-400">PDF files only (max 50MB)</p>
+         </div>
         </div>
       </div>
 
       {/* Error message */}
       {error && (
-        <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950/50 dark:text-red-300">
+        <div className="rounded-lg p-3 text-sm text-red-300 soft-border" role="alert">
           {error}
         </div>
       )}
@@ -144,15 +142,15 @@ export default function FileUploader({ onUpload, isUploading, disabled }: FileUp
       {/* Selected files list */}
       {selectedFiles.length > 0 && (
         <div className="flex flex-col gap-2">
-          <h3 className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
+          <h3 className="text-sm font-medium text-zinc-300">
             Selected files ({selectedFiles.length})
           </h3>
           <div className="flex flex-col gap-2">
             {selectedFiles.map((file, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-between rounded-lg border border-zinc-200 bg-white px-4 py-2 dark:border-zinc-800 dark:bg-zinc-900"
-              >
+          <div
+            key={index}
+            className="flex items-center justify-between rounded-lg px-4 py-2 soft-border"
+          >
                 <div className="flex items-center gap-3 overflow-hidden">
                   <svg
                     className="h-5 w-5 flex-shrink-0 text-zinc-400"
@@ -162,19 +160,19 @@ export default function FileUploader({ onUpload, isUploading, disabled }: FileUp
                     <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z" />
                     <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" />
                   </svg>
-                  <span className="truncate text-sm text-zinc-700 dark:text-zinc-300">
+                  <span className="truncate text-sm text-zinc-300">
                     {file.name}
                   </span>
                   <span className="text-xs text-zinc-400">
                     ({(file.size / 1024 / 1024).toFixed(1)} MB)
                   </span>
                 </div>
-                <button
-                  type="button"
-                  onClick={() => removeFile(index)}
-                  className="flex-shrink-0 rounded p-1 text-zinc-400 hover:bg-zinc-100 hover:text-zinc-600 dark:hover:bg-zinc-800 dark:hover:text-zinc-300"
-                  disabled={isUploading}
-                >
+                 <button
+                   type="button"
+                   onClick={() => removeFile(index)}
+                   className="flex-shrink-0 rounded p-1 text-zinc-400 hover:bg-zinc-800 hover:text-zinc-300"
+                   disabled={isUploading}
+                 >
                   <svg
                     className="h-4 w-4"
                     viewBox="0 0 20 20"

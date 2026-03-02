@@ -60,7 +60,7 @@ export default function IngestionStatusDisplay({
             clipRule="evenodd"
           />
         </svg>
-        <p className="text-sm text-red-600 dark:text-red-400">{error}</p>
+        <p className="text-sm text-red-400">{error}</p>
       </div>
     );
   }
@@ -73,7 +73,7 @@ export default function IngestionStatusDisplay({
     idle: {
       label: 'Idle',
       description: 'No ingestion in progress. Upload files to start processing.',
-      color: 'text-zinc-500 dark:text-zinc-400',
+      color: 'text-zinc-400',
       icon: (
         <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
           <path
@@ -87,7 +87,7 @@ export default function IngestionStatusDisplay({
     processing: {
       label: 'Processing',
       description: `Started at ${status.started_at || 'unknown'}. Waiting for ingestion to complete...`,
-      color: 'text-blue-600 dark:text-blue-400',
+      color: 'text-blue-400',
       icon: (
         <svg className="h-5 w-5 animate-spin" viewBox="0 0 24 24" fill="none">
           <circle
@@ -109,7 +109,7 @@ export default function IngestionStatusDisplay({
     complete: {
       label: 'Complete',
       description: `Successfully processed ${status.files_processed || 0} files.`,
-      color: 'text-green-600 dark:text-green-400',
+      color: 'text-green-400',
       icon: (
         <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
           <path
@@ -123,7 +123,7 @@ export default function IngestionStatusDisplay({
     error: {
       label: 'Error',
       description: status.error_message || 'An unknown error occurred.',
-      color: 'text-red-600 dark:text-red-400',
+      color: 'text-red-400',
       icon: (
         <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
           <path
