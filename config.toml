@@ -3,7 +3,7 @@
 
 [embedding]
 provider = "ollama"
-model = "nomic-embed-text"
+model = "nomic-embed-text:latest"
 base_url = "http://localhost:11434"
 
 [llm]
@@ -37,6 +37,12 @@ metric_type = "L2"
 # directory is used only for tracking ingestion status (processed_files.json)
 directory = "storage"
 [storage.server]
-# Set MILVUS_HOST env var to override (useful in Docker where service is 'milvus')
+# Set MILVUS_HOST env var to override (useful when using cloud or custom host).
+# `MILVUS_HOST` may be a hostname (e.g. 'localhost'), a host:port (e.g. 'host:19530'),
+# or a full URL (e.g. 'https://in03-...serverless...cloud.zilliz.com').
 host = "${MILVUS_HOST:-localhost}"
 port = 19530
+
+# Optional credentials for cloud Milvus providers. Set these in your `.env`.
+username = "${MILVUS_USERNAME:-}"
+password = "${MILVUS_PASSWORD:-}"

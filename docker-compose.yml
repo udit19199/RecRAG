@@ -53,6 +53,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      target: worker
     depends_on:
       ollama-init:
         condition: service_completed_successfully
@@ -67,7 +68,7 @@ services:
         limits:
           memory: 2G
           cpus: '2'
-    command: uv run python backend/watch.py
+    command: uv run python cli/watch.py
     container_name: recrag-ingestion
     networks:
       - recrag-network
@@ -76,7 +77,11 @@ services:
   api-ingestion:
     build:
       context: .
-      dockerfile: Dockerfile.api
+      dockerfile: Dockerfile
+      target: api
+    depends_on:
+      ollama-init:
+        condition: service_completed_successfully
     volumes:
       - ./data:/app/data
       - ./storage:/app/storage
@@ -87,6 +92,11 @@ services:
       - "8001:8001"
     command: uv run uvicorn api.ingestion.main:app --host 0.0.0.0 --port 8001
     container_name: recrag-api-ingestion
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8001/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
     networks:
       - recrag-network
 
@@ -94,7 +104,8 @@ services:
   api-retrieval:
     build:
       context: .
-      dockerfile: Dockerfile.api
+      dockerfile: Dockerfile
+      target: api
     volumes:
       - ./storage:/app/storage
       - ./config.toml:/app/config.toml
@@ -107,31 +118,11 @@ services:
         condition: service_completed_successfully
     command: uv run uvicorn api.retrieval.main:app --host 0.0.0.0 --port 8000
     container_name: recrag-api-retrieval
-    networks:
-      - recrag-network
-
-  retrieval:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    depends_on:
-      ollama-init:
-        condition: service_completed_successfully
-    volumes:
-      - ./data:/app/data
-      - ./storage:/app/storage
-      - ./config.toml:/app/config.toml
-    env_file:
-      - .env
-    ports:
-      - "8501:8501"
-    deploy:
-      resources:
-        limits:
-          memory: 2G
-          cpus: '2'
-    command: uv run streamlit run backend/app.py --server.port=8501 --server.address=0.0.0.0
-    container_name: recrag-retrieval
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8000/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
     networks:
       - recrag-network
 
@@ -156,8 +147,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      target: evaluation
     depends_on:
-      retrieval:
+      api-retrieval:
         condition: service_started
     volumes:
       - ./data:/app/data
@@ -170,30 +162,16 @@ services:
         limits:
           memory: 4G
           cpus: '2'
-    command: uv run python backend/evaluate.py
+    command: uv run python cli/evaluate.py
     container_name: recrag-evaluation
     profiles:
       - eval
     networks:
       - recrag-network
 
-networks:
-  recrag-network:
-    driver: bridge
-
-volumes:
-  ollama_data:
-  # Volumes for the Milvus Standalone server stack (--profile server)
-  etcd_data:
-  minio_data:
-  milvus_data:
-
-# ---------------------------------------------------------------------------
-# Milvus Standalone server stack
-# Used when storage.deploy = "server" in config.toml.
-# Start with: docker-compose --profile server up -d
-# ---------------------------------------------------------------------------
-services:
+# Milvus Standalone server stack (profile: server)
+# These services are included under the top-level `services:` block so
+# the compose file only contains one `services:` mapping.
   etcd:
     image: quay.io/coreos/etcd:v3.5.5
     profiles: [server]
@@ -260,3 +238,14 @@ services:
       retries: 3
     networks:
       - recrag-network
+
+networks:
+  recrag-network:
+    driver: bridge
+
+volumes:
+  ollama_data:
+  # Volumes for the Milvus Standalone server stack (--profile server)
+  etcd_data:
+  minio_data:
+  milvus_data:
