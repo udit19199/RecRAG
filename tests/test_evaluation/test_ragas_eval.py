@@ -3,19 +3,14 @@ from pathlib import Path
 from unittest.mock import MagicMock, patch
 
 import pytest
-from datasets import Dataset
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent / "backend" / "src"))
 
-from evaluation.ragas_eval import RagasEvaluator, Faithfulness, AnswerRelevancy, ContextPrecision, ContextRecall
+from evaluation.ragas_eval import RagasEvaluator, ContextPrecision, ContextRecall
 
 
-from unittest.mock import MagicMock, patch
 
-import pytest
-from datasets import Dataset
 
-from evaluation.ragas_eval import RagasEvaluator, Faithfulness, AnswerRelevancy, ContextPrecision, ContextRecall
 from ragas.llms.base import InstructorBaseRagasLLM
 from ragas.embeddings.base import BaseRagasEmbedding
 

@@ -4,10 +4,11 @@ This module provides ``InMemoryVectorStore``, a ``BaseVectorStore`` implementati
 backed by plain Python lists.  It performs brute-force L2 similarity search so
 tests stay fast and dependency-free (no Milvus instance required).
 """
+
 from typing import Any, Optional
 
 from models.chunk import RetrievalResult
-from stores.base import BaseVectorStore
+from stores import BaseVectorStore
 
 
 def _l2_distance(a: list[float], b: list[float]) -> float:
@@ -42,9 +43,7 @@ class InMemoryVectorStore(BaseVectorStore):
             metadata_list = [{} for _ in documents]
 
         # Remove stale entries for sources being re-added.
-        sources: set[str] = {
-            str(m["source"]) for m in metadata_list if m.get("source")
-        }
+        sources: set[str] = {str(m["source"]) for m in metadata_list if m.get("source")}
         if sources:
             kept = [
                 (v, d)

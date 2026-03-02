@@ -9,7 +9,6 @@ dependencies = [
     "llama-index-embeddings-nvidia>=0.1.0",
     "llama-index-llms-nvidia>=0.1.0",
     "python-dotenv>=1.2.1",
-    "streamlit>=1.54.0",
     "requests>=2.31.0",
     "toml>=0.10.2",
     "openai>=1.0.0",
@@ -26,6 +25,9 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+legacy = [
+    "streamlit>=1.54.0",
+]
 dev = [
     "pytest>=8.0",
     "pytest-mock>=3.0",
@@ -34,16 +36,27 @@ dev = [
 ]
 
 [tool.setuptools.packages.find]
-where = ["backend/src"]
+where = ["src"]
 
 [tool.setuptools]
-package-dir = {"" = "backend/src"}
+package-dir = {"" = "src"}
 
 [tool.pytest.ini_options]
-pythonpath = ["backend/src", "."]
+pythonpath = ["src", "."]
 testpaths = ["tests"]
 
+[tool.mypy]
+ignore_missing_imports = true
+explicit_package_bases = true
+mypy_path = "src"
+
 [tool.pyright]
-include = ["backend/src", "tests"]
-extraPaths = ["backend/src"]
+include = ["src", "tests"]
+extraPaths = ["src"]
 typeCheckingMode = "basic"
+
+[dependency-groups]
+dev = [
+    "types-requests>=2.32.4.20260107",
+    "types-toml>=0.10.8.20240310",
+]
