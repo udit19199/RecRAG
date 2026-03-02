@@ -4,52 +4,55 @@ Guidelines for agentic coding agents working in this repository.
 
 ## Project Overview
 
-RecRAG is a Retrieval-Augmented Generation pipeline with separate ingestion and retrieval containers.
+RecRAG is a Retrieval-Augmented Generation pipeline with separate ingestion and retrieval
+microservices, a Next.js frontend, and a file-watcher daemon for automatic PDF indexing.
 
-**Tech Stack:** Python 3.12+, llama-index, FAISS, Streamlit, uv, Docker, OpenAI/Ollama/NVIDIA NIM
+**Tech Stack:** Python 3.12+, FastAPI, pymilvus (Milvus/Zilliz), uv, Next.js, Docker,
+OpenAI/Ollama/NVIDIA NIM
 
 ---
 
 ## Build / Lint / Test Commands
 
 ```bash
-# Installation (run once)
-uv sync
-uv pip install -e .
+# ── One-time setup ────────────────────────────────────────────────────────────
+make install          # uv sync + uv pip install -e . + pnpm install
 
-# Testing
-uv run pytest                                     # Run all tests
-uv run pytest tests/test_ingest.py                # Run single file
-uv run pytest tests/test_ingest.py::test_name     # Run single test
-uv run pytest -k "pattern"                        # Run tests matching pattern
+# ── Local development (starts all three services) ─────────────────────────────
+make dev              # retrieval :8000 | ingestion :8001 | frontend :3000
 
-# Linting & Formatting
-uv run ruff check .                               # Lint
-uv run ruff format .                              # Format
-uv run ruff check --fix .                         # Auto-fix
+# ── Individual services ───────────────────────────────────────────────────────
+make retrieval        # retrieval API only  (http://localhost:8000)
+make ingestion        # ingestion API only  (http://localhost:8001)
+make frontend         # Next.js dev server  (http://localhost:3000)
 
-# Type Checking
-uv run mypy backend/
+# ── Backend CLI tools ─────────────────────────────────────────────────────────
+make ingest           # one-shot PDF ingestion (--force)
+make watch            # file-watcher daemon
 
-# Local Development (all commands require --env-file .env)
-uv run --env-file .env python backend/ingest.py --force           # One-time ingestion
-uv run --env-file .env python backend/watch.py                    # File watcher daemon
-uv run --env-file .env uvicorn api.retrieval.main:app --host 0.0.0.0 --port 8000
-uv run --env-file .env uvicorn api.ingestion.main:app --host 0.0.0.0 --port 8001
-uv run --env-file .env streamlit run backend/app.py               # Streamlit UI (legacy)
+# ── Quality checks ────────────────────────────────────────────────────────────
+make lint             # ruff check .
+make format           # ruff format .
+make test             # pytest
+make typecheck        # mypy backend/
 
-# Frontend (Next.js)
-cd frontend && pnpm install && pnpm dev           # http://localhost:3000
+# ── Pytest variants ───────────────────────────────────────────────────────────
+uv run pytest tests/test_ingest.py                # single file
+uv run pytest tests/test_ingest.py::test_name     # single test
+uv run pytest -k "pattern"                        # filter by name
 
-# Docker
-docker-compose build                               # Build images
-docker-compose up -d                               # Start all services
-docker-compose down                                # Stop containers
+# ── Docker ────────────────────────────────────────────────────────────────────
+docker-compose build          # build images
+docker-compose up -d          # start all services
+docker-compose down           # stop containers
 ```
 
-> **Why `--env-file .env`?**  The `.env` file sets `PYTHONPATH=backend` which makes the
-> `api` package (in `backend/api/`) importable by uvicorn and other tools. Without it,
-> `ModuleNotFoundError: No module named 'api'` is raised.
+> **`PYTHONPATH` note:** `PYTHONPATH=backend` is set inline in every Makefile target so
+> the `api` package (in `backend/api/`) is importable by uvicorn. `.env` only needs to
+> contain API keys — **do not add `PYTHONPATH` back to `.env`**.
+>
+> If you run uvicorn directly (outside `make`), prefix the command:
+> `PYTHONPATH=backend uv run --env-file .env uvicorn api.retrieval.main:app ...`
 
 ---
 
@@ -111,6 +114,7 @@ Write docstrings for all public functions and classes with Args and Returns sect
 ### Adapter Pattern (`backend/src/adapters/`)
 - `BaseEmbedder` and `BaseLLM` are abstract base classes
 - Factory functions in `__init__.py`: `create_embedder()`, `create_llm()`
+- Each concrete adapter has a `provider` class attribute (`"openai"`, `"ollama"`, `"nim"`)
 
 ### Configuration (`backend/src/config.py`)
 - `load_config()`: Loads TOML with `${VAR:-default}` substitution
@@ -131,21 +135,40 @@ Write docstrings for all public functions and classes with Args and Returns sect
 
 ```
 RecRAG/
+├── Makefile                  # Dev shortcuts (make dev, make install, etc.)
 ├── backend/
+│   ├── api/
+│   │   ├── ingestion/
+│   │   │   └── main.py       # FastAPI :8001 — upload, status, config, reindex
+│   │   └── retrieval/
+│   │       └── main.py       # FastAPI :8000 — query, health, config, providers
 │   ├── src/
 │   │   ├── config.py         # Config loading & path resolution
-│   │   ├── core.py           # Document processing & vector store
-│   │   ├── pipelines.py      # Ingestion & retrieval pipelines
-│   │   └── adapters/         # LLM & embedding providers
-│   ├── app.py                # Streamlit UI
-│   ├── ingest.py             # CLI tool
-│   └── watch.py              # File watcher daemon
-├── Dockerfile                # Docker image definition
+│   │   ├── adapters/         # LLM & embedding providers (openai, ollama, nim)
+│   │   ├── pipelines/        # Ingestion & retrieval pipeline logic
+│   │   ├── stores/           # Vector store (Milvus)
+│   │   ├── loaders/          # PDF document loader
+│   │   ├── splitters/        # Text chunking
+│   │   └── evaluation/       # RAGAS evaluation helpers
+│   ├── app.py                # Legacy Streamlit UI (kept for reference, not deployed)
+│   ├── ingest.py             # CLI: one-shot ingestion
+│   ├── watch.py              # Daemon: watches data/pdfs/ for new files
+│   └── evaluate.py           # CLI: batch RAGAS evaluation
+├── frontend/                 # Next.js App Router
+│   ├── app/
+│   │   ├── page.tsx          # "/" — chat interface with sidebar document upload
+│   │   └── ingest/page.tsx   # "/ingest" — standalone document management page
+│   └── src/
+│       ├── components/       # FileUploader, IngestionStatusDisplay, ModelPicker, Navbar
+│       └── lib/api.ts        # Typed API client for both backend services
+├── Dockerfile                # Python image (watch.py / evaluate.py)
+├── Dockerfile.api            # Python image (FastAPI services)
 ├── docker-compose.yml        # Multi-container orchestration
-├── config.toml               # Application config
-├── .env                      # Environment variables (not in git)
+├── config.toml               # Application config (non-sensitive)
+├── .env                      # API keys only (not in git)
+├── .env.example              # Template for .env
 ├── data/pdfs/                # PDF uploads (not in git)
-└── storage/                  # FAISS index (not in git)
+└── storage/                  # Milvus state & ingestion status files (not in git)
 ```
 
 ---
@@ -154,12 +177,14 @@ RecRAG/
 
 ### File Organization
 - **`config.toml`**: All configuration settings (provider, model, URLs, chunk sizes, etc.)
-- **`.env`**: API keys only (sensitive information)
+- **`.env`**: API keys only (sensitive information) — no `PYTHONPATH` here
 
 ### Environment Variables (`.env`)
 Only sensitive values:
 - `OPENAI_API_KEY`: Required for OpenAI provider
 - `NVIDIA_API_KEY`: Required for NVIDIA NIM provider (starts with "nvapi-")
+- `OLLAMA_API_KEY`: Required if using Ollama Cloud API
+- `MILVUS_HOST` / `MILVUS_USERNAME` / `MILVUS_PASSWORD`: Required for Zilliz Cloud
 
 ### Config Settings (`config.toml`)
 All non-sensitive configuration including providers, models, and URLs:
