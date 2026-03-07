@@ -26,11 +26,14 @@ cp .env.example .env
 
 ### Running Locally
 ```bash
-# Terminal 1: File watcher
-uv run python backend/watch.py
+# Terminal 1: Retrieval API
+uv run uvicorn api.retrieval.main:app --port 8000
 
-# Terminal 2: Streamlit UI
-uv run streamlit run backend/app.py
+# Terminal 2: Ingestion API
+uv run uvicorn api.ingestion.main:app --port 8001
+
+# Terminal 3: Frontend
+cd frontend && pnpm dev
 ```
 
 ### Running with Docker
