@@ -12,7 +12,6 @@ dependencies = [
     "requests>=2.31.0",
     "toml>=0.10.2",
     "openai>=1.0.0",
-    "watchdog>=5.0.0",
     "tiktoken>=0.5.0",
     "ragas>=0.1.0",
     "langchain-openai>=0.1.0",
@@ -25,9 +24,6 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-legacy = [
-    "streamlit>=1.54.0",
-]
 dev = [
     "pytest>=8.0",
     "pytest-mock>=3.0",
