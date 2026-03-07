@@ -76,7 +76,7 @@ The system has evolved from a dual-container pattern to a microservices architec
            ▼                                              ▼
 ┌──────────────────────┐                   ┌───────────────────────────────┐
 │  Retrieval Pipeline  │                   │  Ingestion Pipeline           │
-│  (watch.py)          │                   │  (watch.py)                   │
+│                      │                   │  (full corpus rebuild)        │
 └──────────┬───────────┘                   └─────────────┬─────────────────┘
            │                                             │
            └─────────────────────┬───────────────────────┘
@@ -112,13 +112,12 @@ The system has evolved from a dual-container pattern to a microservices architec
 | `frontend`           | 3000 | Next.js UI             |
 | `api-retrieval`      | 8000 | Query endpoint         |
 | `api-ingestion`      | 8001 | Upload/status endpoint |
-| `retrieval` (legacy) | 8501 | Streamlit UI           |
+| `retrieval` (legacy) | 8501 | (removed) Legacy Streamlit UI |
 
 
 **Legacy Support:**
 
-- The Streamlit UI (port 8501) remains available for comparison/migration
-- Next.js is the recommended frontend for new deployments
+- The legacy Streamlit UI (previously served from `app.py` on port 8501) has been removed from the repository; Next.js is the recommended frontend for all current deployments
 
 **Key Alternatives Not Used:**
 
@@ -154,9 +153,8 @@ backend/
 │   │   └── main.py
 │   └── retrieval/         # Retrieval API (query)
 │       └── main.py
-├── app.py                 # Streamlit UI entry point
+├── app.py                 # (removed) Legacy Streamlit UI was previously here
 ├── ingest.py              # CLI ingestion tool
-└── watch.py               # File watcher daemon with debouncing
 
 frontend/                  # Next.js application
 ├── app/                  # App router pages
@@ -223,18 +221,12 @@ storage/                   # FAISS index & status files (shared volume)
 ### Ingestion Flow (PDF → Embeddings)
 
 ```
-User uploads PDF
-       │
-       ▼
-┌──────────────────┐
-│   watch.py       │──► Detects file change (5s debounce)
-│  (file watcher)  │
-└──────────────────┘
+User uploads full PDF batch
        │
        ▼
 ┌──────────────────┐
 │IngestionPipeline │
-│  run_incremental │
+│ run full rebuild │
 └──────────────────┘
        │
        ├──► DocumentLoader.load_file()
@@ -412,8 +404,7 @@ User asks question
 - **Modes**:
   - `run()`: Load all documents at once (high memory)
   - `run_streaming()`: Batch processing with configurable batch size (default: 100)
-  - `run_incremental()`: MD5 hash-based change detection, only processes new/changed files
-- **State Tracking**: `processed_files.json` maps file paths to MD5 hashes
+- **Corpus Model**: each uploaded batch replaces the previous corpus before a full rebuild
 - **Batch Processing**: `_process_file_batch()`, `_embed_and_store()` helpers reduce duplication
 
 `**RetrievalPipeline`**
@@ -436,7 +427,6 @@ User asks question
 - `data/pdfs/*.pdf`: Source documents (user uploads)
 - `storage/faiss_{model}.index`: FAISS vector index (binary)
 - `storage/faiss_{model}.json`: Metadata sidecar (JSON array)
-- `storage/processed_files.json`: File hash tracking for incremental ingestion
 - `storage/ingestion_status.json`: Status communication between containers
 
 **Computed State (Memory):**
@@ -445,10 +435,11 @@ User asks question
 - Embeddings stored only in FAISS (not duplicated in metadata)
 - Metadata loaded as Python list of dicts
 
+
 **Ephemeral State:**
 
-- `st.session_state` in Streamlit (pipeline instance caching)
-- Thread-local state in file watcher (debounce timers, pending files)
+- `st.session_state` in the legacy Streamlit UI (pipeline instance caching; UI removed)
+- Ingestion pipeline singleton and status in the ingestion API process
 
 ### 6.2 Index Lifecycle
 
@@ -460,10 +451,10 @@ User asks question
 
 **Updates:**
 
-1. Incremental ingestion checks MD5 hashes in `processed_files.json`
-2. Changed files trigger `_remove_by_sources()` (removes metadata only)
-3. New embeddings appended to FAISS index
-4. **Limitation**: FAISS index not rebuilt; old vectors remain (metadata inconsistency)
+1. Bulk upload replaces the current files in `data/pdfs/`
+2. Ingestion clears the active vector index for the selected embedding model
+3. All uploaded documents are re-embedded and written back to storage
+4. Chat is enabled after the ingestion status becomes `complete`
 
 **Invalidation:**
 
@@ -510,7 +501,7 @@ model = "${EMBEDDING_MODEL:-text-embedding-3-small}"
 
 **Running Commands:**
 
-- `uv run python backend/watch.py`: Run in virtual environment
+- `uv run python cli/ingest.py --force`: Run a full ingestion manually
 - `uv run pytest`: Execute test suite
 - `uv run ruff check .`: Linting
 - `uv run mypy backend/`: Type checking
@@ -653,7 +644,7 @@ if errors:
 1. **FAISS Search**: O(n) complexity with `IndexFlatL2`. At 100k vectors, search becomes slow.
 2. **No Embedding Cache**: Same queries re-embedded every time
 3. **Full Metadata Write**: Every `add()` writes entire metadata JSON to disk
-4. **UI Blocking**: `app.py` polls for 2 minutes with `time.sleep(2)` blocking the Streamlit thread
+4. **UI Blocking**: The removed legacy Streamlit UI previously polled for 2 minutes with `time.sleep(2)`, which blocked the Streamlit thread; the Next.js frontend and FastAPI services do not use that pattern
 5. **No Batch Writes**: Individual file writes for each document batch
 
 **File Locking Overhead:**
@@ -683,11 +674,9 @@ if errors:
 
 ### 8.4 Security Gaps
 
-**File Upload (app.py:80-96):**
+**File Upload (legacy Streamlit UI):**
 
-- No file size limits (memory exhaustion risk)
-- No PDF magic byte validation (`%PDF-`)
-- No filename sanitization (path traversal risk via `../`)
+- Historical issues reported against the removed `app.py` endpoint included: lack of file size limits, missing PDF magic-byte validation, and filename sanitization gaps. These concerns were addressed in the ingestion API (`backend/api/ingestion/main.py`) and in the ingestion pipeline (size limits, magic-byte checks, filename sanitization).
 
 **Input Validation:**
 

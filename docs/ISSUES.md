@@ -12,7 +12,7 @@ Issues identified during code review, grouped by severity and category.
 
 `get_vector_store_paths` is imported and re-exported in `pipelines/__init__.py` but the function does not exist anywhere in `pipelines/base.py`. It is a stale leftover from the FAISS era.
 
-**Impact**: `ImportError` on any import of the `pipelines` package. Every execution path (API, Streamlit app, CLI ingest, watcher) crashes at startup.
+**Impact**: `ImportError` on any import of the `pipelines` package. Every execution path (API, Streamlit app, CLI ingest) crashes at startup.
 
 **Solution**: Remove the stale symbol from `pipelines/__init__.py` and from the `from .base import (...)` block. Verify with `python -c "from pipelines import get_retrieval_pipeline"`.
 
@@ -81,29 +81,20 @@ max_retries = 3
 
 ---
 
-### 2. Streamlit Blocking Poll
+### 2. Legacy Streamlit Blocking Poll (historical)
 
-**File**: `backend/app.py:122-136`
-
-```python
-for _ in range(60):
-    time.sleep(2)  # Blocks UI thread for 2 minutes!
-```
-
-**Impact**: UI frozen, poor user experience.
-
-**Solution**: Use `st.rerun()` with `st.session_state` for non-blocking updates.
-
-Architecture context: see `docs/ARCHITECTURE.md` §8.2 **Performance Bottlenecks** (UI blocking) and §2 **Architecture** (Streamlit vs API services).
+The blocking poll was part of the removed legacy Streamlit UI and is retained
+only in historical documentation. The Streamlit entrypoint (`app.py`) has been
+removed from the repository and the polling code no longer exists in source.
 
 ---
 
 ### 3. Non-Atomic Status File Writes
 
-**File**: `backend/watch.py:74-75`
+**File**: `src/utils/status.py:41-42`
 
 ```python
-with open(self.status_file, "w") as f:
+with open(get_status_file(storage_dir), "w") as f:
     json.dump(status_data, f, indent=2)
 ```
 
@@ -172,7 +163,7 @@ def get_pipeline():
 
 `max_retries=3` is passed as a plain integer. `requests` converts this to `Retry(total=3)`, which retries on **all HTTP methods including POST**. Both embedding and generation endpoints use POST.
 
-**Impact**: A transient 429 or 503 from the Ollama embedding endpoint causes the same batch to be resubmitted, generating duplicate vectors in the store. Corrupts incremental ingestion state.
+**Impact**: A transient 429 or 503 from the Ollama embedding endpoint causes the same batch to be resubmitted, generating duplicate vectors in the store. Corrupts ingestion state.
 
 **Solution**: Restrict retries to safe methods only:
 ```python
@@ -185,35 +176,6 @@ retry_strategy = Retry(
     status_forcelist={429, 502, 503, 504},
 )
 ```
-
----
-
-### 7. Each File Is Hashed Twice per Ingestion Run
-
-**File**: `backend/src/pipelines/ingestion.py` — `_get_changed_files()` + `_process_files_in_batches()`
-
-`_compute_file_hash(file_path)` is called once in `_get_changed_files()` to detect changes, and again in `_process_files_in_batches()` to record the final hash. For large PDF corpora this doubles disk I/O.
-
-**Impact**: For 100 × 50 MB PDFs, ~5 GB of redundant reads per run. Measurable regression at scale.
-
-**Solution**: Return the computed hash from `_get_changed_files` and thread it through to `_process_files_in_batches`:
-```python
-def _get_changed_files(...) -> list[tuple[Path, bool, str]]:  # add str hash
-    ...
-    return [(path, is_new, file_hash), ...]
-```
-
----
-
-### 8. `pending_files` Race Condition Silently Drops Files
-
-**File**: `backend/watch.py` — `_trigger_ingestion()` / `_run_ingestion_with_lock()`
-
-The lock is released between clearing `pending_files` and checking `is_processing`. A file event arriving in that window is added to `pending_files`, starts a debounce timer, but when the timer fires it finds `is_processing=True` and returns immediately — the file is now lost from `pending_files` with no processing queued.
-
-**Impact**: Files uploaded during an active ingestion run are silently skipped until the user uploads another file to re-trigger the watcher.
-
-**Solution**: Don't clear `pending_files` in `_trigger_ingestion` if `is_processing` is already True. Let the debounce mechanism naturally queue the next batch after the current run completes.
 
 ---
 
@@ -320,7 +282,7 @@ def __init__(self, model: str = "...", **kwargs: Any):
 
 ### 10. `validate_file()` Reads Entire File Into Memory for Magic-Byte Check
 
-**File**: `backend/app.py:56` — `validate_file()`
+**File**: `backend/app.py:56` — `validate_file()` (historical reference; `app.py` removed)
 
 ```python
 content = uploaded_file.getvalue()   # loads entire file
@@ -342,7 +304,7 @@ if header != PDF_MAGIC_BYTES:
 
 ### 11. `get_evaluator()` Creates a New Client Instance on Every Call
 
-**Files**: `backend/src/evaluation/ragas_eval.py:98`, `backend/app.py:157`
+**Files**: `backend/src/evaluation/ragas_eval.py:98`, `backend/app.py:157` (historical reference; `app.py` removed)
 
 `get_evaluator()` instantiates a new `RagasEvaluator` — including a new `OpenAI` client and `llm_factory` call — on every evaluation request from the Streamlit UI.
 
@@ -427,9 +389,9 @@ The `_EMBEDDER_REGISTRY` and `_LLM_REGISTRY` dicts are populated via module-leve
 
 | Risk | Location | Status |
 |------|----------|--------|
-| File upload DoS | `app.py` | ✅ Fixed (size limits) |
-| Path traversal | `app.py` | ✅ Fixed (filename sanitization) |
-| Malformed PDFs | `app.py` | ✅ Fixed (magic byte check) |
+| File upload DoS | `app.py` (historical) | ✅ Fixed (size limits) |
+| Path traversal | `app.py` (historical) | ✅ Fixed (filename sanitization) |
+| Malformed PDFs | `app.py` (historical) | ✅ Fixed (magic byte check) |
 | Prompt injection | `retrieval.py` | Open (complex to mitigate) |
 | API key exposure | `.env` | Use secrets manager in production |
 | API key leak in `self.kwargs` | `adapters/embedding.py`, `adapters/llm.py` | Open — see Medium Priority issue 8 |
@@ -451,7 +413,7 @@ The `_EMBEDDER_REGISTRY` and `_LLM_REGISTRY` dicts are populated via module-leve
 **Coverage Gaps:**
 
 - No integration tests (end-to-end flow)
-- No tests for `watch.py` file watcher
+- No tests for ingestion API batch replacement behavior
 - No tests for `pipelines.py` (only unit tests for components)
 - No tests for `config.py` edge cases
 - No tests for error recovery paths

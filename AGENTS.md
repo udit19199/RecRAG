@@ -5,7 +5,7 @@ Guidelines for agentic coding agents working in this repository.
 ## Project Overview
 
 RecRAG is a Retrieval-Augmented Generation pipeline with separate ingestion and retrieval
-microservices, a Next.js frontend, and a file-watcher daemon for automatic PDF indexing.
+microservices and a Next.js frontend for bulk PDF upload, indexing, and querying.
 
 **Tech Stack:** Python 3.12+, FastAPI, pymilvus (Milvus/Zilliz), uv, Next.js, Docker,
 OpenAI/Ollama/NVIDIA NIM
@@ -28,7 +28,6 @@ make frontend         # Next.js dev server  (http://localhost:3000)
 
 # ── Backend CLI tools ─────────────────────────────────────────────────────────
 make ingest           # one-shot PDF ingestion (--force)
-make watch            # file-watcher daemon
 
 # ── Quality checks ────────────────────────────────────────────────────────────
 make lint             # ruff check .
@@ -150,9 +149,8 @@ RecRAG/
 │   │   ├── loaders/          # PDF document loader
 │   │   ├── splitters/        # Text chunking
 │   │   └── evaluation/       # RAGAS evaluation helpers
-│   ├── app.py                # Legacy Streamlit UI (kept for reference, not deployed)
+│   ├── app.py                # (removed) Legacy Streamlit UI was previously here
 │   ├── ingest.py             # CLI: one-shot ingestion
-│   ├── watch.py              # Daemon: watches data/pdfs/ for new files
 │   └── evaluate.py           # CLI: batch RAGAS evaluation
 ├── frontend/                 # Next.js App Router
 │   ├── app/
@@ -161,7 +159,7 @@ RecRAG/
 │   └── src/
 │       ├── components/       # FileUploader, IngestionStatusDisplay, ModelPicker, Navbar
 │       └── lib/api.ts        # Typed API client for both backend services
-├── Dockerfile                # Python image (watch.py / evaluate.py)
+├── Dockerfile                # Python image (APIs / evaluation)
 ├── Dockerfile.api            # Python image (FastAPI services)
 ├── docker-compose.yml        # Multi-container orchestration
 ├── config.toml               # Application config (non-sensitive)

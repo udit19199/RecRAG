@@ -9,16 +9,14 @@ Current state of the RecRAG system and planned improvements.
 ```
 Entry Points          Pipelines              Components
 ─────────────         ─────────              ──────────
-app.py (Streamlit) →  IngestionPipeline  →   PDFLoader
-ingest.py (CLI)       RetrievalPipeline      TextSplitter (Sentence)
-watch.py (daemon)                            FAISSVectorStore
-                                             OpenAI/Ollama/NIM adapters
+ingest.py (CLI)       IngestionPipeline  →   PDFLoader
+                      RetrievalPipeline      TextSplitter (Sentence)
+                                              OpenAI/Ollama/NIM adapters
 ```
 
 ### Implemented Features
 - Adapter pattern with registry for LLM/embedding providers
 - Dependency injection in pipelines
-- Incremental indexing with MD5 hash tracking
 - Batch streaming ingestion (configurable batch size)
 - File locking for concurrent FAISS access
 - Connection pooling for HTTP adapters
@@ -76,7 +74,7 @@ Status file can be corrupted if process dies mid-write.
 - Implement atomic writes (temp file + rename)
 - Add status file validation on startup
 
-**Files**: `backend/watch.py`
+**Files**: `src/utils/status.py`
 
 ---
 
@@ -112,18 +110,12 @@ Every `add()` writes entire metadata JSON. For bulk ingestion, should batch.
 
 ---
 
-### 6. Streamlit Non-Blocking Updates
+### 6. Legacy Streamlit Notes (removed)
 
-**Status**: Not Started | **Impact**: UI responsiveness
-
-Current polling blocks UI thread for up to 2 minutes.
-
-**Tasks**:
-- Replace polling with `st.rerun()` pattern
-- Use `st.session_state` for status tracking
-- Add manual refresh button
-
-**Files**: `backend/app.py`
+The legacy Streamlit UI (previously `app.py`) has been removed from the codebase.
+Outstanding items related to its blocking behavior or upload handling are
+historical; the ingestion API and Next.js frontend are the supported paths
+going forward.
 
 ---
 
@@ -145,7 +137,6 @@ Current polling blocks UI thread for up to 2 minutes.
 
 - [x] Adapter pattern with registry
 - [x] Dependency injection in pipelines
-- [x] Incremental indexing
 - [x] Batch streaming ingestion
 - [x] File locking for concurrent access
 - [x] Connection pooling
@@ -161,4 +152,4 @@ Current polling blocks UI thread for up to 2 minutes.
   - Removed all `sys.path.insert()` hacks; proper package install via `pyproject.toml`
   - Consolidated backward compatibility aliases to `__init__.py` files
   - Fixed private attribute naming inconsistency (`_dimensions` → `_dimension`)
-  - Simplified `app.py` config handling
+  - Simplified legacy Streamlit `app.py` config handling (historical; app removed)
