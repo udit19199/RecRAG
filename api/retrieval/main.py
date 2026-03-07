@@ -2,7 +2,7 @@ import os
 import threading
 from typing import Any
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
@@ -35,6 +35,28 @@ class ContextItem(BaseModel):
 class QueryResponse(BaseModel):
     response: str
     context: list[ContextItem]
+    # Async evaluation job id (if eval requested async)
+    eval_job_id: str | None = None
+    # Synchronous eval scores (if eval requested sync)
+    eval: dict[str, float] | None = None
+
+
+class EvaluateRequest(BaseModel):
+    query: str
+    contexts: list[str]
+    response: str
+    ground_truth: str | None = None
+
+
+class EvaluateResponse(BaseModel):
+    scores: dict[str, float]
+
+
+class EvalJobStatus(BaseModel):
+    id: str
+    status: str
+    scores: dict[str, float] | None = None
+    error: str | None = None
 
 
 class HealthResponse(BaseModel):
@@ -113,11 +135,45 @@ def get_pipeline() -> Any:
     return _pipeline
 
 
+# Simple in-memory job store for evaluation jobs. For production replace with
+# Redis, database or task queue to persist across restarts.
+_eval_jobs: dict[str, dict] = {}
+
+
+def _run_eval_job(
+    job_id: str,
+    query: str,
+    contexts: list[str],
+    response: str,
+    ground_truth: str | None,
+) -> None:
+    """Background worker to run RAGAS evaluation and store result in _eval_jobs."""
+    try:
+        from evaluation.ragas_eval import get_evaluator
+
+        evaluator = get_evaluator()
+        scores = evaluator.evaluate_query(
+            query, contexts, response, ground_truth=ground_truth
+        )
+        _eval_jobs[job_id] = {"status": "complete", "scores": scores}
+    except Exception as exc:
+        _eval_jobs[job_id] = {"status": "error", "error": str(exc)}
+
+
 # ── Routes ────────────────────────────────────────────────────────────────────
 
 
 @app.post("/query", response_model=QueryResponse)
-async def query(request: QueryRequest) -> QueryResponse:
+async def query(
+    request: QueryRequest, background_tasks: BackgroundTasks, eval: str | None = None
+) -> QueryResponse:
+    """Query the retrieval pipeline.
+
+    Optional query param `eval` may be:
+      - None or 'false' (default): no evaluation
+      - 'sync': run evaluation synchronously and return scores inline
+      - 'async': schedule evaluation in background and return `eval_job_id`
+    """
     if not request.query.strip():
         raise HTTPException(status_code=400, detail="Query cannot be empty")
 
@@ -130,7 +186,47 @@ async def query(request: QueryRequest) -> QueryResponse:
             for doc in result["context"]
         ]
 
-        return QueryResponse(response=result["response"], context=context)
+        # If evaluation not requested, return normal response
+        if not eval or eval.lower() in ("false", "0"):
+            return QueryResponse(response=result["response"], context=context)
+
+        # Prepare contexts as plain strings for evaluator
+        contexts_texts = [doc.text for doc in result["context"]]
+
+        # Synchronous evaluation (blocking)
+        if eval.lower() == "sync":
+            try:
+                from evaluation.ragas_eval import get_evaluator
+
+                evaluator = get_evaluator()
+                scores = evaluator.evaluate_query(
+                    request.query, contexts_texts, result["response"]
+                )
+                return QueryResponse(
+                    response=result["response"], context=context, eval=scores
+                )
+            except Exception as e:
+                raise HTTPException(status_code=500, detail=f"Evaluation failed: {e}")
+
+        # Asynchronous evaluation: schedule background task and return job id
+        if eval.lower() == "async":
+            import uuid
+
+            job_id = str(uuid.uuid4())
+            _eval_jobs[job_id] = {"status": "pending"}
+            background_tasks.add_task(
+                _run_eval_job,
+                job_id,
+                request.query,
+                contexts_texts,
+                result["response"],
+                None,
+            )
+            return QueryResponse(
+                response=result["response"], context=context, eval_job_id=job_id
+            )
+
+        raise HTTPException(status_code=400, detail=f"Unknown eval mode: {eval}")
     except HTTPException:
         raise
     except Exception as e:
@@ -363,3 +459,36 @@ async def set_config(patch: ConfigPatch) -> SetConfigResponse:
             model=getattr(pipeline.llm, "model", "unknown"),
         ),
     )
+
+
+@app.post("/evaluate", response_model=EvaluateResponse)
+async def evaluate_once(req: EvaluateRequest) -> EvaluateResponse:
+    """Evaluate a single query/response pair synchronously.
+
+    This endpoint is primarily for frontend dev and debugging; it calls the
+    same RAGAS evaluator used by background jobs.
+    """
+    try:
+        from evaluation.ragas_eval import get_evaluator
+
+        evaluator = get_evaluator()
+        scores = evaluator.evaluate_query(
+            req.query, req.contexts, req.response, ground_truth=req.ground_truth
+        )
+        return EvaluateResponse(scores=scores)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Evaluation failed: {e}")
+
+
+@app.get("/evaluate/{job_id}", response_model=EvalJobStatus)
+async def eval_status(job_id: str) -> EvalJobStatus:
+    """Get status of an async evaluation job."""
+    job = _eval_jobs.get(job_id)
+    if job is None:
+        raise HTTPException(status_code=404, detail="Job not found")
+    status = job.get("status", "pending")
+    if status == "complete":
+        return EvalJobStatus(id=job_id, status=status, scores=job.get("scores"))
+    if status == "error":
+        return EvalJobStatus(id=job_id, status=status, error=job.get("error"))
+    return EvalJobStatus(id=job_id, status=status)
