@@ -9,7 +9,7 @@ interface FileUploaderProps {
 }
 
 /**
- * File uploader component for PDF uploads
+ * File uploader component for full PDF batch uploads
  *
  * Provides drag-and-drop and click-to-upload functionality.
  * Validates that only PDF files are accepted.
@@ -94,9 +94,9 @@ export default function FileUploader({ onUpload, isUploading, disabled }: FileUp
         onDrop={handleDrop}
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
-        className={`cursor-pointer p-8 text-center transition-colors ${disabled || isUploading ? 'cursor-not-allowed opacity-50' : ''}`}
+        className={`cursor-pointer text-center transition-colors ${disabled || isUploading ? 'cursor-not-allowed opacity-50' : ''}`}
       >
-        <div className={`mx-auto max-w-lg rounded-xl p-6 panel ${isDragging ? 'ring-2 ring-blue-500/30' : ''}`}>
+        <div className={`mx-auto max-w-lg rounded-lg border border-dashed border-input bg-card p-4 ${isDragging ? 'border-ring bg-accent/40' : ''}`}>
         <input
           ref={fileInputRef}
           type="file"
@@ -109,7 +109,7 @@ export default function FileUploader({ onUpload, isUploading, disabled }: FileUp
 
         <div className="flex flex-col items-center gap-2">
           <svg
-            className="h-10 w-10 text-zinc-400"
+            className="h-7 w-7 text-muted-foreground"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -121,20 +121,21 @@ export default function FileUploader({ onUpload, isUploading, disabled }: FileUp
               d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15m0-3l-3-3m0 0l-3 3m3-3v11.25"
             />
           </svg>
-           <div className="text-zinc-300">
-             <span className="font-medium text-white">
-               Click to upload
-             </span>{' '}
-             or drag and drop
-           </div>
-           <p className="text-xs text-zinc-400">PDF files only (max 50MB)</p>
+            <div className="text-foreground">
+              <span className="font-medium text-foreground">
+                Upload your full batch
+              </span>{' '}
+              or drag and drop
+            </div>
+            <p className="text-xs text-muted-foreground">PDF files only (max 50MB)</p>
+            <p className="text-xs text-muted-foreground">A new batch replaces the current corpus</p>
+          </div>
          </div>
-        </div>
-      </div>
+       </div>
 
       {/* Error message */}
       {error && (
-        <div className="rounded-lg p-3 text-sm text-red-300 soft-border" role="alert">
+        <div className="rounded-md border border-destructive/40 bg-destructive/10 p-3 text-sm text-destructive" role="alert">
           {error}
         </div>
       )}
@@ -142,35 +143,35 @@ export default function FileUploader({ onUpload, isUploading, disabled }: FileUp
       {/* Selected files list */}
       {selectedFiles.length > 0 && (
         <div className="flex flex-col gap-2">
-          <h3 className="text-sm font-medium text-zinc-300">
+          <h3 className="text-sm font-medium text-foreground">
             Selected files ({selectedFiles.length})
           </h3>
           <div className="flex flex-col gap-2">
             {selectedFiles.map((file, index) => (
           <div
             key={index}
-            className="flex items-center justify-between rounded-lg px-4 py-2 soft-border"
+            className="flex items-center justify-between rounded-md border border-border bg-card px-4 py-2"
           >
                 <div className="flex items-center gap-3 overflow-hidden">
                   <svg
-                    className="h-5 w-5 flex-shrink-0 text-zinc-400"
+                    className="h-5 w-5 flex-shrink-0 text-muted-foreground"
                     viewBox="0 0 24 24"
                     fill="currentColor"
                   >
                     <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z" />
                     <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" />
                   </svg>
-                  <span className="truncate text-sm text-zinc-300">
+                  <span className="truncate text-sm text-foreground">
                     {file.name}
                   </span>
-                  <span className="text-xs text-zinc-400">
+                  <span className="text-xs text-muted-foreground">
                     ({(file.size / 1024 / 1024).toFixed(1)} MB)
                   </span>
                 </div>
                  <button
                    type="button"
                    onClick={() => removeFile(index)}
-                   className="flex-shrink-0 rounded p-1 text-zinc-400 hover:bg-zinc-800 hover:text-zinc-300"
+                   className="flex-shrink-0 rounded p-1 text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-ring/50"
                    disabled={isUploading}
                  >
                   <svg
@@ -196,7 +197,7 @@ export default function FileUploader({ onUpload, isUploading, disabled }: FileUp
         <button
           onClick={handleUpload}
           disabled={isUploading || disabled || selectedFiles.length === 0}
-          className="self-start rounded-lg bg-blue-600 px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500/20 disabled:cursor-not-allowed disabled:opacity-50"
+          className="self-start rounded-lg bg-primary px-6 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50"
         >
           {isUploading ? (
             <span className="flex items-center gap-2">
@@ -222,7 +223,7 @@ export default function FileUploader({ onUpload, isUploading, disabled }: FileUp
               Uploading...
             </span>
           ) : (
-            `Upload ${selectedFiles.length} file${selectedFiles.length > 1 ? 's' : ''}`
+            `Replace corpus with ${selectedFiles.length} file${selectedFiles.length > 1 ? 's' : ''}`
           )}
         </button>
       )}

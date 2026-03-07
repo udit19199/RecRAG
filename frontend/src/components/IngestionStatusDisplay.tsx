@@ -21,46 +21,53 @@ export default function IngestionStatusDisplay({
 }: IngestionStatusDisplayProps) {
   if (isLoading && !status) {
     return (
-      <div className="flex items-center gap-2 text-zinc-500">
-        <svg
-          className="h-4 w-4 animate-spin"
-          viewBox="0 0 24 24"
-          fill="none"
-        >
-          <circle
-            className="opacity-25"
-            cx="12"
-            cy="12"
-            r="10"
-            stroke="currentColor"
-            strokeWidth="4"
-          />
-          <path
-            className="opacity-75"
-            fill="currentColor"
-            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-          />
-        </svg>
-        <span className="text-sm">Loading status...</span>
+      <div className="rounded-lg border border-border bg-card px-4 py-3">
+        <div className="flex items-center gap-3 text-muted-foreground">
+          <svg
+            className="h-4 w-4 animate-spin"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <circle
+              className="opacity-25"
+              cx="12"
+              cy="12"
+              r="10"
+              stroke="currentColor"
+              strokeWidth="4"
+            />
+            <path
+              className="opacity-75"
+              fill="currentColor"
+              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+            />
+          </svg>
+          <span className="text-sm font-medium">Loading status...</span>
+        </div>
       </div>
     );
   }
 
   if (error) {
     return (
-      <div className="flex items-center gap-2">
-        <svg
-          className="h-5 w-5 text-red-500"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-        >
-          <path
-            fillRule="evenodd"
-            d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
-            clipRule="evenodd"
-          />
-        </svg>
-        <p className="text-sm text-red-400">{error}</p>
+      <div className="rounded-lg border border-destructive/40 bg-destructive/10 px-4 py-3">
+        <div className="flex items-start gap-3">
+          <svg
+            className="mt-0.5 h-5 w-5 shrink-0 text-destructive"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fillRule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+              clipRule="evenodd"
+            />
+          </svg>
+          <div>
+            <p className="text-sm font-medium text-destructive">Status unavailable</p>
+            <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{error}</p>
+          </div>
+        </div>
       </div>
     );
   }
@@ -72,8 +79,8 @@ export default function IngestionStatusDisplay({
   const statusConfig = {
     idle: {
       label: 'Idle',
-      description: 'No ingestion in progress. Upload files to start processing.',
-      color: 'text-zinc-400',
+      description: 'Upload your full PDF batch to build the corpus before chatting.',
+      color: 'text-muted-foreground',
       icon: (
         <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
           <path
@@ -86,8 +93,8 @@ export default function IngestionStatusDisplay({
     },
     processing: {
       label: 'Processing',
-      description: `Started at ${status.started_at || 'unknown'}. Waiting for ingestion to complete...`,
-      color: 'text-blue-400',
+      description: `Started at ${status.started_at || 'unknown'}. Rebuilding the corpus and preparing chat...`,
+      color: 'text-primary',
       icon: (
         <svg className="h-5 w-5 animate-spin" viewBox="0 0 24 24" fill="none">
           <circle
@@ -108,8 +115,8 @@ export default function IngestionStatusDisplay({
     },
     complete: {
       label: 'Complete',
-      description: `Successfully processed ${status.files_processed || 0} files.`,
-      color: 'text-green-400',
+      description: `Successfully processed ${status.files_processed || 0} files. Chat is now enabled.`,
+      color: 'text-emerald-400',
       icon: (
         <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
           <path
@@ -123,7 +130,7 @@ export default function IngestionStatusDisplay({
     error: {
       label: 'Error',
       description: status.error_message || 'An unknown error occurred.',
-      color: 'text-red-400',
+      color: 'text-destructive',
       icon: (
         <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
           <path
@@ -137,19 +144,27 @@ export default function IngestionStatusDisplay({
   };
 
   const config = statusConfig[status.status];
+  const containerClass = status.status === 'processing'
+    ? 'border-border bg-muted/40'
+    : 'border-border bg-card';
 
   return (
-    <div className="flex items-center gap-3">
-      <div className={`flex-shrink-0 ${config.color}`}>{config.icon}</div>
-      <div>
-        <p className={`text-sm font-medium ${config.color}`}>
-          {config.label}: {config.description}
-        </p>
+    <div className={`rounded-lg border px-4 py-3 ${containerClass}`}>
+      <div className="flex items-start gap-3">
+        <div className={`mt-0.5 flex-shrink-0 ${config.color}`}>{config.icon}</div>
+        <div className="min-w-0">
+            <span className={`inline-flex rounded-full border border-border bg-muted px-2 py-0.5 text-xs font-medium ${config.color}`}>
+              {config.label}
+            </span>
+          <p className="mt-2 text-sm leading-relaxed text-foreground">
+            {config.description}
+          </p>
         {status.completed_at && (
-          <p className="text-xs text-zinc-400 mt-1">
+          <p className="mt-1 text-xs text-muted-foreground">
             Completed at: {status.completed_at}
           </p>
         )}
+        </div>
       </div>
     </div>
   );

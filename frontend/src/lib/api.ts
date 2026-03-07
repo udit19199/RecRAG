@@ -30,6 +30,23 @@ export interface QueryResponse {
   context: ContextItem[];
 }
 
+/** Evaluation types */
+export interface EvalScores {
+  [metric: string]: number;
+}
+
+export interface EvalJobStatus {
+  id: string;
+  status: 'pending' | 'complete' | 'error';
+  scores?: EvalScores;
+  error?: string;
+}
+
+export interface QueryWithEvalResponse extends QueryResponse {
+  eval_job_id?: string;
+  eval?: EvalScores;
+}
+
 /** Request body for /query endpoint */
 export interface QueryRequest {
   query: string;
@@ -47,7 +64,7 @@ export interface IngestionStatus {
 /** Upload response from /upload */
 export interface UploadResponse {
   success: boolean;
-  filename: string;
+  files_uploaded: number;
   message: string;
 }
 
@@ -126,7 +143,32 @@ export async function queryRAG(query: string): Promise<QueryResponse> {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ query }),
   });
-  return handleResponse<QueryResponse>(res);
+  return handleResponse<QueryWithEvalResponse>(res);
+}
+
+
+/**
+ * Query the RAG pipeline and optionally request evaluation.
+ * mode: undefined|'sync'|'async'
+ */
+export async function queryRAGWithEval(
+  query: string,
+  mode?: 'sync' | 'async'
+): Promise<QueryWithEvalResponse> {
+  const params = mode ? `?eval=${mode}` : '';
+  const res = await fetch(`${RETRIEVAL_API_URL}/query${params}`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ query }),
+  });
+  return handleResponse<any>(res);
+}
+
+
+/** Get async evaluation job status */
+export async function getEvalStatus(jobId: string): Promise<EvalJobStatus> {
+  const res = await fetch(`${RETRIEVAL_API_URL}/evaluate/${jobId}`);
+  return handleResponse<EvalJobStatus>(res);
 }
 
 /**
@@ -170,11 +212,13 @@ export async function setConfig(patch: ConfigPatch): Promise<SetConfigResponse> 
 // ── Ingestion API ─────────────────────────────────────────────────────────────
 
 /**
- * Upload a PDF file for ingestion.
+ * Upload a full PDF batch for ingestion.
  */
-export async function uploadPDF(file: File): Promise<UploadResponse> {
+export async function uploadPDFs(files: File[]): Promise<UploadResponse> {
   const formData = new FormData();
-  formData.append('file', file);
+  for (const file of files) {
+    formData.append('files', file);
+  }
 
   const res = await fetch(`${INGESTION_API_URL}/upload`, {
     method: 'POST',

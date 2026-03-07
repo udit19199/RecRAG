@@ -2,14 +2,15 @@
 
 import { useEffect, useState, useCallback } from 'react';
 import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
+  Combobox,
+  ComboboxContent,
+  ComboboxEmpty,
+  ComboboxGroup,
+  ComboboxInput,
+  ComboboxItem,
+  ComboboxLabel,
+  ComboboxList,
+} from '@/components/ui/combobox';
 import {
   AlertDialog,
   AlertDialogAction,
@@ -83,6 +84,25 @@ export default function ModelPicker({
     loadData();
   }, [loadData]);
 
+  // Load persisted selections from localStorage (fast UI) — will be overwritten by server config
+  useEffect(() => {
+    try {
+      const llm = localStorage.getItem('lastLLM');
+      const emb = localStorage.getItem('lastEmbedding');
+      if (llm && !currentLLM) {
+        const [provider, model] = llm.split('::');
+        if (provider && model) setCurrentLLM({ provider, model });
+      }
+      if (emb && !currentEmbedding) {
+        const [provider, model] = emb.split('::');
+        if (provider && model) setCurrentEmbedding({ provider, model });
+      }
+    } catch {
+      // ignore
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   // ── LLM change ──────────────────────────────────────────────────────────────
   const handleLLMChange = async (value: string) => {
     // value format: "provider::model"
@@ -94,6 +114,7 @@ export default function ModelPicker({
     try {
       const result = await setConfig({ llm: { provider, model } });
       setCurrentLLM(result.llm);
+      try { localStorage.setItem('lastLLM', makeValue(result.llm.provider, result.llm.model)); } catch {}
       onConfigChanged?.({ embedding: result.embedding, llm: result.llm });
     } catch (err) {
       console.error('Failed to change LLM:', err);
@@ -114,7 +135,7 @@ export default function ModelPicker({
     if (!pendingEmbedChange) return;
     const { provider, model } = pendingEmbedChange;
     setPendingEmbedChange(null);
-    setEmbedChanging(true);
+      setEmbedChanging(true);
 
     try {
       // Update both retrieval and ingestion pipelines
@@ -124,6 +145,7 @@ export default function ModelPicker({
       ]);
 
       setCurrentEmbedding(result.embedding);
+      try { localStorage.setItem('lastEmbedding', makeValue(result.embedding.provider, result.embedding.model)); } catch {}
       onConfigChanged?.({ embedding: result.embedding, llm: result.llm });
 
       if (result.requires_reindex) {
@@ -154,9 +176,11 @@ export default function ModelPicker({
   ) => {
     if (isLoading || !providers) {
       return (
-        <div className="flex flex-col gap-1">
-          <span className="text-xs text-zinc-400">{label}</span>
-          <Skeleton className="h-9 w-44 rounded-md" />
+        <div className="flex flex-col gap-1.5">
+          <span className="text-xs text-muted-foreground">
+            {label}
+          </span>
+          <Skeleton className="h-10 w-[13.5rem] rounded-md" />
         </div>
       );
     }
@@ -164,41 +188,38 @@ export default function ModelPicker({
     const providerMap = role === 'llm' ? providers.llms : providers.embedders;
 
     return (
-        <div className="flex flex-col gap-1">
-        <span className="text-xs font-medium text-zinc-400">{label}</span>
-        <Select
-          value={value}
-          onValueChange={onChange}
+      <div className="flex flex-col gap-1.5">
+        <span className="text-xs text-muted-foreground">
+          {label}
+        </span>
+        <Combobox
+          items={Object.entries(providerMap).flatMap(([providerKey, info]) =>
+            info.available ? info.models.map((model) => makeValue(providerKey, model)) : []
+          )}
+          value={value ?? null}
+          onValueChange={(nextValue) => {
+            if (typeof nextValue === 'string') onChange(nextValue);
+          }}
           disabled={disabled || isChanging}
         >
-          <SelectTrigger
-            className={`h-9 w-52 text-sm ${isChanging ? 'opacity-60' : ''}`}
-          >
-            {isChanging ? (
-                <span className="flex items-center gap-2 text-zinc-400">
-                <svg className="h-3.5 w-3.5 animate-spin" viewBox="0 0 24 24" fill="none">
-                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-                </svg>
-                Applying...
-              </span>
-            ) : (
-              <SelectValue placeholder="Select model" />
-            )}
-          </SelectTrigger>
-          <SelectContent>
+          <ComboboxInput
+            placeholder={isChanging ? 'Applying...' : 'Select model'}
+            readOnly={isChanging}
+            className={`w-[13.5rem] ${isChanging ? 'opacity-60' : ''}`}
+          />
+          <ComboboxContent>
+            <ComboboxEmpty>No matching models.</ComboboxEmpty>
+            <ComboboxList>
             {Object.entries(providerMap).map(([providerKey, info]) => {
               const label = PROVIDER_LABELS[providerKey] ?? providerKey;
               if (!info.available || info.models.length === 0) {
                 return (
-                  <SelectGroup key={providerKey}>
-                    <SelectLabel className="flex items-center justify-between">
+                  <ComboboxGroup key={providerKey}>
+                    <ComboboxLabel className="flex items-center justify-between">
                       <span>{label}</span>
                       <Tooltip>
                         <TooltipTrigger asChild>
-                <span className="ml-2 cursor-default text-xs text-zinc-400">
-                            unavailable
-                          </span>
+                          <span className="ml-2 cursor-default text-xs text-muted-foreground">unavailable</span>
                         </TooltipTrigger>
                         <TooltipContent side="right">
                           <p className="max-w-xs text-xs">
@@ -206,26 +227,27 @@ export default function ModelPicker({
                           </p>
                         </TooltipContent>
                       </Tooltip>
-                    </SelectLabel>
-                  </SelectGroup>
+                    </ComboboxLabel>
+                  </ComboboxGroup>
                 );
               }
               return (
-                <SelectGroup key={providerKey}>
-                  <SelectLabel>{label}</SelectLabel>
+                <ComboboxGroup key={providerKey}>
+                  <ComboboxLabel>{label}</ComboboxLabel>
                   {info.models.map((model) => (
-                    <SelectItem
+                    <ComboboxItem
                       key={makeValue(providerKey, model)}
                       value={makeValue(providerKey, model)}
                     >
                       {model}
-                    </SelectItem>
+                    </ComboboxItem>
                   ))}
-                </SelectGroup>
+                </ComboboxGroup>
               );
             })}
-          </SelectContent>
-        </Select>
+            </ComboboxList>
+          </ComboboxContent>
+        </Combobox>
       </div>
     );
   };
@@ -265,7 +287,7 @@ export default function ModelPicker({
                 </span>{' '}
                 will require re-indexing all your documents.
               </span>
-              <span className="block text-amber-600 dark:text-amber-400">
+              <span className="block text-muted-foreground">
                 Existing search will be unavailable until re-indexing completes. This may take several minutes depending on the size of your document collection.
               </span>
             </AlertDialogDescription>
