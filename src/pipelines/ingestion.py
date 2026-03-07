@@ -1,5 +1,3 @@
-import hashlib
-import json
 import logging
 from pathlib import Path
 from typing import Any
@@ -20,19 +18,10 @@ from .base import (
 logger = logging.getLogger(__name__)
 
 
-def _compute_file_hash(file_path: Path) -> str:
-    """Compute MD5 hash of a file for change detection."""
-    hasher = hashlib.md5()
-    with open(file_path, "rb") as f:
-        for chunk in iter(lambda: f.read(8192), b""):
-            hasher.update(chunk)
-    return hasher.hexdigest()
-
-
 class IngestionPipeline:
     """Pipeline for ingesting documents and creating embeddings.
 
-    Supports dependency injection, incremental indexing, and batch streaming.
+    Supports dependency injection and full-corpus batch ingestion.
     """
 
     def __init__(
@@ -52,7 +41,6 @@ class IngestionPipeline:
         self.config = config or {}
         self.config_path = config_path
         self.batch_size = batch_size
-        self._processed_files: dict[str, str] = {}
 
     @classmethod
     def from_config(
@@ -90,55 +78,12 @@ class IngestionPipeline:
             batch_size=batch_size,
         )
 
-    # ── Tracking file helpers ─────────────────────────────────────────────────
-
-    def _load_processed_files(self, storage_dir: Path) -> dict[str, str]:
-        tracking_file = storage_dir / "processed_files.json"
-        if tracking_file.exists():
-            try:
-                with open(tracking_file) as f:
-                    return json.load(f)
-            except (json.JSONDecodeError, IOError):
-                pass
-        return {}
-
-    def _save_processed_files(self, storage_dir: Path) -> None:
-        tracking_file = storage_dir / "processed_files.json"
-        tracking_file.parent.mkdir(parents=True, exist_ok=True)
-        with open(tracking_file, "w") as f:
-            json.dump(self._processed_files, f, indent=2)
-
-    def _get_storage_dir(self) -> Path | None:
-        if not self.config_path:
-            return None
-        return get_storage_dir(self.config, self.config_path)
-
     # ── File discovery ────────────────────────────────────────────────────────
 
     def _discover_files(self, directory: Path) -> list[Path]:
         if not directory.exists():
             return []
         return sorted(directory.glob("*.pdf"))
-
-    def _get_changed_files(
-        self, directory: Path, processed: dict[str, str]
-    ) -> list[tuple[Path, bool]]:
-        """Return (file_path, is_new) tuples for new or modified files."""
-        results = []
-        for fp in self._discover_files(directory):
-            key = str(fp)
-            is_new = key not in processed
-            if is_new or processed[key] != _compute_file_hash(fp):
-                results.append((fp, is_new))
-        return results
-
-    def _get_files_to_process(
-        self, files: list[Path] | None
-    ) -> list[tuple[Path, bool]]:
-        if files is not None:
-            return [(f, str(f) not in self._processed_files) for f in files]
-        ingestion_dir = get_ingestion_dir(self.config, self.config_path or Path("."))
-        return self._get_changed_files(ingestion_dir, self._processed_files)
 
     # ── Core processing ───────────────────────────────────────────────────────
 
@@ -174,58 +119,14 @@ class IngestionPipeline:
             )
             total_chunks += chunks
             total_embeddings += embeddings
-            for fp in batch:
-                self._processed_files[str(fp)] = _compute_file_hash(fp)
         return total_chunks, total_embeddings
 
     def _prepare_for_ingestion(self, force: bool) -> None:
         if force:
             logger.info("Force re-indexing — clearing existing index")
             self.vector_store.delete_all()
-            self._processed_files = {}
 
     # ── Public API ────────────────────────────────────────────────────────────
-
-    def process_new_and_changed_documents(
-        self, files: list[Path] | None = None
-    ) -> dict[str, Any]:
-        """Incremental ingestion — only process new or changed files."""
-        storage_dir = self._get_storage_dir()
-        if storage_dir:
-            self._processed_files = self._load_processed_files(storage_dir)
-
-        changed_files = self._get_files_to_process(files)
-
-        if not changed_files:
-            logger.info("No new or changed files to process")
-            return {
-                "documents": 0,
-                "chunks": 0,
-                "embeddings": 0,
-                "total_vectors": self.vector_store.count,
-                "skipped": 0,
-            }
-
-        new_files = [f for f, is_new in changed_files if is_new]
-        updated_files = [f for f, is_new in changed_files if not is_new]
-        all_files = new_files + updated_files
-
-        logger.info(
-            "Processing %d new, %d updated files", len(new_files), len(updated_files)
-        )
-        total_chunks, total_embeddings = self._process_files_in_batches(all_files)
-
-        if storage_dir:
-            self._save_processed_files(storage_dir)
-
-        return {
-            "documents": len(all_files),
-            "new_documents": len(new_files),
-            "updated_documents": len(updated_files),
-            "chunks": total_chunks,
-            "embeddings": total_embeddings,
-            "total_vectors": self.vector_store.count,
-        }
 
     def process_documents_streaming(self, force: bool = False) -> dict[str, Any]:
         """Process all documents in the ingestion directory, optionally forcing re-index."""
@@ -267,14 +168,9 @@ class IngestionPipeline:
 def run_ingestion(
     config_path: Path = Path("config.toml"),
     force: bool = False,
-    incremental: bool = False,
-    files: list[Path] | None = None,
 ) -> dict[str, Any]:
     from config import load_config
 
     config = load_config(config_path)
     pipeline = IngestionPipeline.from_config(config, config_path)
-
-    if incremental:
-        return pipeline.process_new_and_changed_documents(files=files)
-    return pipeline.process_all_documents(force=force)
+    return pipeline.process_documents_streaming(force=force)

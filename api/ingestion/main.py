@@ -1,9 +1,10 @@
 import logging
+import shutil
 import threading
 from pathlib import Path
 from typing import Any
 
-from fastapi import BackgroundTasks, FastAPI, HTTPException, UploadFile
+from fastapi import BackgroundTasks, FastAPI, File, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
@@ -26,7 +27,7 @@ PDF_DIR = DATA_DIR / "pdfs"
 STORAGE_DIR = _REPO_ROOT / "storage"
 CONFIG_PATH = _REPO_ROOT / "config.toml"
 
-# ── Pipeline (lazy-initialised once at first upload) ──────────────────────────
+# ── Pipeline (lazy-initialised once at first ingestion) ───────────────────────
 _pipeline: Any = None
 _pipeline_lock = threading.Lock()
 _ingestion_lock = threading.Lock()
@@ -50,16 +51,16 @@ def _get_pipeline() -> Any:
 # ── Background ingestion tasks ────────────────────────────────────────────────
 
 
-def _run_ingestion_background(file_path: Path) -> None:
-    """Run incremental ingestion for *file_path* and update the status file."""
+def _run_ingestion_background() -> None:
+    """Run full-corpus ingestion and update the status file."""
     with _ingestion_lock:
         started_at = now()
         write_status(STORAGE_DIR, "processing", started_at=started_at)
-        logger.info("Ingestion started for %s", file_path.name)
+        logger.info("Ingestion started for uploaded corpus")
 
         try:
             pipeline = _get_pipeline()
-            results = pipeline.process_new_and_changed_documents(files=[file_path])
+            results = pipeline.process_documents_streaming(force=True)
             completed_at = now()
             docs = results.get("documents", 0)
             write_status(
@@ -135,7 +136,7 @@ class StatusResponse(BaseModel):
 
 class UploadResponse(BaseModel):
     success: bool
-    filename: str
+    files_uploaded: int
     message: str
 
 
@@ -170,38 +171,63 @@ app.add_middleware(
 
 
 @app.post("/upload", response_model=UploadResponse)
-async def upload_pdf(
-    file: UploadFile,
+async def upload_pdfs(
     background_tasks: BackgroundTasks,
+    files: list[UploadFile] = File(...),
 ) -> UploadResponse:
-    if not file.filename or not file.filename.lower().endswith(".pdf"):
-        raise HTTPException(status_code=400, detail="Only PDF files are allowed")
+    if not files:
+        raise HTTPException(status_code=400, detail="At least one PDF file is required")
 
     current = read_status(STORAGE_DIR)
     if current.get("status") == "processing":
-        return UploadResponse(
-            success=False,
-            filename=file.filename,
-            message="Ingestion already in progress. Please wait for it to complete.",
+        raise HTTPException(
+            status_code=409,
+            detail="Ingestion already in progress. Please wait for it to complete.",
         )
 
+    staged_files: list[tuple[str, bytes]] = []
+    seen_names: set[str] = set()
+    for upload in files:
+        if not upload.filename:
+            raise HTTPException(status_code=400, detail="Filename is required")
+        if not upload.filename.lower().endswith(".pdf"):
+            raise HTTPException(status_code=400, detail="Only PDF files are allowed")
+
+        safe_filename = Path(upload.filename).name
+        if safe_filename in seen_names:
+            raise HTTPException(
+                status_code=400,
+                detail=f"Duplicate filename in batch: {safe_filename}",
+            )
+
+        try:
+            content = await upload.read()
+        except Exception as e:
+            raise HTTPException(status_code=500, detail=f"Failed to read file: {e}")
+
+        staged_files.append((safe_filename, content))
+        seen_names.add(safe_filename)
+
     PDF_DIR.mkdir(parents=True, exist_ok=True)
-    safe_filename = Path(file.filename).name
-    file_path = PDF_DIR / safe_filename
 
     try:
-        content = await file.read()
-        with open(file_path, "wb") as f:
-            f.write(content)
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to save file: {e}")
+        shutil.rmtree(PDF_DIR)
+        PDF_DIR.mkdir(parents=True, exist_ok=True)
 
-    background_tasks.add_task(_run_ingestion_background, file_path)
+        for safe_filename, content in staged_files:
+            file_path = PDF_DIR / safe_filename
+            with open(file_path, "wb") as f:
+                f.write(content)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to save batch: {e}")
+
+    write_status(STORAGE_DIR, "idle", files_processed=0)
+    background_tasks.add_task(_run_ingestion_background)
 
     return UploadResponse(
         success=True,
-        filename=safe_filename,
-        message="File uploaded. Ingestion has started.",
+        files_uploaded=len(staged_files),
+        message="Batch uploaded. Ingestion has started.",
     )
 
 

@@ -3,7 +3,6 @@
 # Build targets:
 #   base        – shared Python environment (deps installed, code copied)
 #   api         – FastAPI services (retrieval :8000 or ingestion :8001)
-#   worker      – file-watcher daemon (cli/watch.py)
 #   evaluation  – batch RAGAS evaluation (cli/evaluate.py)
 
 # ── base ──────────────────────────────────────────────────────────────────────
@@ -36,11 +35,6 @@ EXPOSE 8000 8001
 
 # Default: retrieval API (override via docker-compose command:)
 CMD ["uv", "run", "uvicorn", "api.retrieval.main:app", "--host", "0.0.0.0", "--port", "8000"]
-
-# ── worker ────────────────────────────────────────────────────────────────────
-FROM base AS worker
-
-CMD ["uv", "run", "python", "cli/watch.py"]
 
 # ── evaluation ────────────────────────────────────────────────────────────────
 FROM base AS evaluation

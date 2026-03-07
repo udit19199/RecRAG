@@ -49,30 +49,6 @@ services:
     networks:
       - recrag-network
 
-  ingestion:
-    build:
-      context: .
-      dockerfile: Dockerfile
-      target: worker
-    depends_on:
-      ollama-init:
-        condition: service_completed_successfully
-    volumes:
-      - ./data:/app/data
-      - ./storage:/app/storage
-      - ./config.toml:/app/config.toml
-    env_file:
-      - .env
-    deploy:
-      resources:
-        limits:
-          memory: 2G
-          cpus: '2'
-    command: uv run python cli/watch.py
-    container_name: recrag-ingestion
-    networks:
-      - recrag-network
-
   # FastAPI service for ingestion (upload PDFs, check status)
   api-ingestion:
     build:

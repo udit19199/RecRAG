@@ -34,7 +34,7 @@ Answer:"""
 deployment = "server"
 collection_prefix = "recrag_"
 metric_type = "L2"
-# directory is used only for tracking ingestion status (processed_files.json)
+# directory is used only for tracking ingestion status
 directory = "storage"
 [storage.server]
 # Set MILVUS_HOST env var to override (useful when using cloud or custom host).

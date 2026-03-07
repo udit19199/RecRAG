@@ -7,14 +7,13 @@
 #   make ingestion  – ingestion API only  (port 8001)
 #   make frontend   – Next.js dev server  (port 3000)
 #   make ingest     – one-shot PDF ingestion (--force)
-#   make watch      – file-watcher daemon
 #   make lint       – ruff check
 #   make format     – ruff format
 #   make test       – pytest
 #   make typecheck  – mypy
 #   make help       – this message
 
-.PHONY: install dev retrieval ingestion frontend ingest watch \
+.PHONY: install dev retrieval ingestion frontend ingest \
         lint format test typecheck help
 
 # PYTHONPATH is set inline here so .env only needs to carry API keys.
@@ -63,9 +62,6 @@ frontend:
 ingest:
 	$(PYTHON_ENV) python cli/ingest.py --force
 
-watch:
-	$(PYTHON_ENV) python cli/watch.py
-
 # ── Quality checks ─────────────────────────────────────────────────────────────
 
 lint:
@@ -90,7 +86,6 @@ help:
 	@echo "  make ingestion  – ingestion API only  (http://localhost:8001)"
 	@echo "  make frontend   – Next.js dev server  (http://localhost:3000)"
 	@echo "  make ingest     – one-shot PDF ingestion"
-	@echo "  make watch      – file-watcher daemon"
 	@echo "  make lint       – ruff check"
 	@echo "  make format     – ruff format"
 	@echo "  make test       – pytest"
