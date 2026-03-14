@@ -1,224 +1,242 @@
-# AGENTS.md - Development Guidelines for RecRAG
+# AGENTS.md - Guidance for Coding Agents
 
-Guidelines for agentic coding agents working in this repository.
+Default operating guide for agentic coding tools working in `RecRAG`.
 
-## Project Overview
+## Project Summary
 
-RecRAG is a Retrieval-Augmented Generation pipeline with separate ingestion and retrieval
-microservices and a Next.js frontend for bulk PDF upload, indexing, and querying.
+RecRAG is a Retrieval-Augmented Generation app with:
+- retrieval FastAPI routes in `api/retrieval/`
+- ingestion FastAPI routes in `api/ingestion/`
+- shared Python packages in `src/`
+- CLI entrypoints in `cli/`
+- a Next.js frontend in `frontend/`
+- tests in `tests/`
 
-**Tech Stack:** Python 3.12+, FastAPI, pymilvus (Milvus/Zilliz), uv, Next.js, Docker,
-OpenAI/Ollama/NVIDIA NIM
+Backend stack: Python 3.12, `uv`, FastAPI, pytest, Ruff, mypy, Milvus.
+Frontend stack: Next.js, React 19, TypeScript, Tailwind, Biome.
 
----
+## Repo-Specific Rule Files
 
-## Build / Lint / Test Commands
+Checked locations:
+- `.cursor/rules/`: not present
+- `.cursorrules`: not present
+- `.github/copilot-instructions.md`: not present
+
+If any are added later, treat them as higher-priority instructions and merge them with this file.
+
+## Working Norms
+
+- Prefer small, focused changes.
+- Preserve architecture unless the task requires refactoring.
+- Keep backend and frontend API contracts aligned.
+- Do not commit local-only tooling files unless requested.
+- Avoid destructive git commands.
+- Keep secrets in `.env`, not in tracked config.
+
+## Setup And Dev Commands
+
+Run from the repository root unless noted otherwise.
 
 ```bash
-# ── One-time setup ────────────────────────────────────────────────────────────
-make install          # uv sync + uv pip install -e . + pnpm install
-
-# ── Local development (starts all three services) ─────────────────────────────
-make dev              # retrieval :8000 | ingestion :8001 | frontend :3000
-
-# ── Individual services ───────────────────────────────────────────────────────
-make retrieval        # retrieval API only  (http://localhost:8000)
-make ingestion        # ingestion API only  (http://localhost:8001)
-make frontend         # Next.js dev server  (http://localhost:3000)
-
-# ── Backend CLI tools ─────────────────────────────────────────────────────────
-make ingest           # one-shot PDF ingestion (--force)
-
-# ── Quality checks ────────────────────────────────────────────────────────────
-make lint             # ruff check .
-make format           # ruff format .
-make test             # pytest
-make typecheck        # mypy src/
-
-# ── Pytest variants ───────────────────────────────────────────────────────────
-uv run pytest tests/test_ingest.py                # single file
-uv run pytest tests/test_ingest.py::test_name     # single test
-uv run pytest -k "pattern"                        # filter by name
-
-# ── Docker ────────────────────────────────────────────────────────────────────
-docker-compose build          # build images
-docker-compose up -d          # start all services
-docker-compose down           # stop containers
+make install
+make dev
+make retrieval
+make ingestion
+make frontend
+make ingest
 ```
 
-> **`PYTHONPATH` note:** `PYTHONPATH=src` is set inline in every Makefile target so
-> the `api` and `src` packages are importable by uvicorn/cli tools. `.env` only needs to
-> contain API keys — **do not add `PYTHONPATH` back to `.env`**.
->
-> If you run uvicorn directly (outside `make`), prefix the command:
-> `PYTHONPATH=src uv run --env-file .env uvicorn api.retrieval.main:app ...`
+Notes:
+- `make dev` starts retrieval on `:8000`, ingestion on `:8001`, frontend on `:3000`.
+- The Makefile uses `PYTHONPATH=src uv run --env-file .env ...`.
+- Do not move `PYTHONPATH` into `.env`.
+- Keep API keys in `.env` only.
 
----
+Manual equivalents:
 
-## Code Style Guidelines
-
-### Import Order
-Group imports with blank lines between: 1) Standard library 2) Third-party 3) Local application
-
-```python
-import json
-from pathlib import Path
-from typing import Any, Optional
-
-import requests
-from openai import OpenAI
-
-from adapters.base import BaseEmbedder
-from config import load_config, resolve_path
+```bash
+PYTHONPATH=src uv run --env-file .env uvicorn api.retrieval.main:app --port 8000 --reload
+PYTHONPATH=src uv run --env-file .env uvicorn api.ingestion.main:app --port 8001 --reload
+cd frontend && pnpm dev
 ```
 
-### Naming Conventions
-| Element | Convention | Example |
-|---------|------------|---------|
-| Functions/variables | snake_case | `get_documents()`, `file_path` |
-| Classes | PascalCase | `DocumentLoader` |
-| Constants | UPPER_SNAKE_CASE | `MAX_CHUNK_SIZE` |
-| Private members | underscore prefix | `_internal_method()` |
+## Build, Lint, And Format
 
-### Type Hints
-- Always use type hints for function parameters and return types
-- Use `list[X]`, `dict[str, X]` instead of `List`, `Dict`
-- Use `X | None` for optional values
+Backend:
 
-```python
-def load_config(config_path: Path = Path("config.toml")) -> dict[str, Any]:
-def embed(self, text: str) -> list[float]:
+```bash
+make lint
+make format
+make typecheck
+uv run ruff check .
+uv run ruff format .
+uv run mypy src/
 ```
 
-### File Paths
-- Use `pathlib.Path` instead of string paths
-- Resolve paths relative to config file using `resolve_path()`
+Frontend:
 
-```python
-from config import resolve_path
-storage_dir = resolve_path(config["storage"]["directory"], config_path)
+```bash
+cd frontend && pnpm lint
+cd frontend && pnpm format
+cd frontend && pnpm build
 ```
+
+Important details:
+- `make lint` covers backend Ruff only.
+- Frontend lint/format use Biome from `frontend/package.json`.
+- After frontend changes, run at least `cd frontend && pnpm lint`.
+- Prefer `cd frontend && pnpm build` after meaningful UI or API-client changes.
+
+## Test Commands
+
+Primary entrypoint:
+
+```bash
+make test
+uv run pytest
+```
+
+Run a single file:
+
+```bash
+uv run pytest tests/test_ingest.py
+uv run pytest tests/test_evaluation/test_ragas_eval.py
+```
+
+Run a single test:
+
+```bash
+uv run pytest tests/test_ingest.py::test_name
+uv run pytest tests/test_evaluation/test_ragas_eval.py::test_name
+```
+
+Run by pattern:
+
+```bash
+uv run pytest -k "pattern"
+```
+
+Useful iteration flags:
+
+```bash
+uv run pytest -x
+uv run pytest -q
+```
+
+Type checking note:
+- `mypy` is the standard command here.
+- `pyright` is configured in `pyproject.toml`, but not wired into `make`.
+
+## Key Paths
+
+- `api/ingestion/main.py`: ingestion API routes and reindex/status endpoints
+- `api/retrieval/main.py`: retrieval API, provider/config routes, eval job polling
+- `src/adapters/`: LLM and embedding providers
+- `src/pipelines/`: ingestion and retrieval pipelines
+- `src/evaluation/`: RAGAS helpers
+- `src/stores/`: vector store integration
+- `frontend/src/lib/api.ts`: frontend API client
+- `frontend/src/components/ui/`: shared UI primitives
+- `tests/`: pytest suite
+
+## Python Style Guidelines
+
+### Imports
+
+Use three groups with blank lines between them:
+1. standard library
+2. third-party packages
+3. local application imports
+
+Prefer explicit imports over wildcard imports.
+
+### Formatting
+
+- Follow Ruff formatting.
+- Keep functions and route handlers easy to scan.
+- Prefer multiline calls when argument lists get dense.
+- Add comments only when intent is not obvious.
+
+### Types
+
+- Add type hints for public functions, methods, and important helpers.
+- Prefer built-in generics like `list[str]` and `dict[str, Any]`.
+- Prefer `X | None` over `Optional[X]`.
+- Keep FastAPI request/response models explicitly typed.
+- Preserve Pydantic model structure unless the API contract changes.
+
+### Naming
+
+- functions and variables: `snake_case`
+- classes: `PascalCase`
+- constants: `UPPER_SNAKE_CASE`
+- private helpers and attributes: leading underscore
+
+### Paths And Config
+
+- Prefer `pathlib.Path` over raw strings for filesystem work.
+- Use helpers from `src/config.py` for config loading and path resolution.
+- Keep non-sensitive defaults in `config.toml`.
+- Keep secrets and credentials in `.env` only.
 
 ### Error Handling
-- Use specific exception types, not bare `Exception`
-- Provide meaningful error messages
+
+- Use specific exception types where practical.
+- In API routes, raise `HTTPException` with actionable messages.
+- Avoid bare `except:` blocks.
+- Only suppress exceptions intentionally and document why.
+- Do not leak secrets in error messages.
 
 ### Docstrings
-Write docstrings for all public functions and classes with Args and Returns sections.
 
----
+- Public functions and classes should have concise docstrings.
+- Explain behavior and constraints, not line-by-line implementation.
 
-## Key Patterns
+## Backend Patterns
 
-### Adapter Pattern (`src/adapters/`)
-- `BaseEmbedder` and `BaseLLM` are abstract base classes
-- Factory functions in `__init__.py`: `create_embedder()`, `create_llm()`
-- Each concrete adapter has a `provider` class attribute (`"openai"`, `"ollama"`, `"nim"`)
+- Keep route schemas near route code using Pydantic models.
+- Reuse shared pipeline/config helpers instead of duplicating setup logic.
+- If changing route behavior, update backend models and `frontend/src/lib/api.ts` together.
+- Background evaluation uses async job polling; preserve that contract carefully.
+- CORS is permissive for development; do not change it unless the task is about deployment or security.
 
-### Configuration (`src/config.py`)
-- `load_config()`: Loads TOML with `${VAR:-default}` substitution
-- `resolve_path()`: Resolves paths relative to config file
-- `get_config_value()`: Gets nested config via dot notation
+## Frontend Style Guidelines
 
-### Ollama API
-- **Always set `"stream": False`** in request payloads
-- Embeddings: `/api/embeddings` endpoint
-- Generation: `/api/generate` endpoint
+- Follow the App Router structure in `frontend/app/`.
+- Use typed props and typed API responses.
+- Keep shared primitives in `frontend/src/components/ui/`.
+- Prefer existing utilities like `cn` instead of duplicating class-merging logic.
+- Keep API calls centralized in `frontend/src/lib/api.ts`.
+- Use function components and hooks.
 
-### Docker Networking
-- Use `http://ollama:11434` (not `host.docker.internal`) for container-to-container
+Frontend tooling details:
+- Biome handles lint and format.
+- Tailwind utility classes are standard in this codebase.
+- Preserve established UI patterns unless a task explicitly calls for redesign.
 
----
+## Testing Expectations
 
-## Project Structure
+- Add or update tests when changing shared pipeline, adapter, or evaluation behavior.
+- For API contract changes, validate both backend behavior and frontend types.
+- Start with the smallest relevant test run, then broaden as needed.
+- If you cannot run full verification, say what was run and what remains unverified.
 
-```
-RecRAG/
-├── Makefile                  # Dev shortcuts (make dev, make install, etc.)
-├── api/
-│   ├── ingestion/
-│   │   └── main.py           # FastAPI :8001 — upload, status, config, reindex
-│   └── retrieval/
-│       └── main.py           # FastAPI :8000 — query, health, config, providers
-├── src/
-│   ├── config.py             # Config loading & path resolution
-│   ├── adapters/             # LLM & embedding providers (openai, ollama, nim)
-│   ├── pipelines/            # Ingestion & retrieval pipeline logic
-│   ├── stores/               # Vector store (Milvus)
-│   ├── loaders/              # PDF document loader
-│   ├── splitters/            # Text chunking
-│   └── evaluation/           # RAGAS evaluation helpers
-├── cli/
-│   ├── ingest.py             # CLI: one-shot ingestion
-│   └── evaluate.py           # CLI: batch RAGAS evaluation
-├── frontend/                 # Next.js App Router
-│   ├── app/
-│   │   ├── page.tsx          # "/" — chat interface with sidebar document upload
-│   │   └── ingest/page.tsx   # "/ingest" — standalone document management page
-│   └── src/
-│       ├── components/       # FileUploader, IngestionStatusDisplay, ModelPicker, Navbar
-│       └── lib/api.ts        # Typed API client for both backend services
-├── tests/                    # Pytest suite
-├── Dockerfile                # Python image (APIs / evaluation)
-├── Dockerfile.api            # Python image (FastAPI services)
-├── docker-compose.yml        # Multi-container orchestration
-├── config.toml               # Application config (non-sensitive)
-├── .env                      # API keys only (not in git)
-├── .env.example              # Template for .env
-├── data/pdfs/                # PDF uploads (not in git)
-└── storage/                  # Milvus state & ingestion status files (not in git)
-```
+## Commit Guidance
 
----
+- Use conventional commits.
+- Common types here: `feat`, `fix`, `refactor`, `docs`, `test`, `chore`.
+- Keep subjects lowercase, imperative, and under 72 characters.
+- Split commits by intent when UI, API, and config changes are logically separate.
 
-## Configuration
+Examples: `feat(frontend): add app shell and comparison workspace`, `refactor(retrieval): make query evaluation always asynchronous`, `chore(config): update local model and ui defaults`
 
-### File Organization
-- **`config.toml`**: All configuration settings (provider, model, URLs, chunk sizes, etc.)
-- **`.env`**: API keys only (sensitive information) — no `PYTHONPATH` here
+## Agent Checklist
 
-### Environment Variables (`.env`)
-Only sensitive values:
-- `OPENAI_API_KEY`: Required for OpenAI provider
-- `NVIDIA_API_KEY`: Required for NVIDIA NIM provider (starts with "nvapi-")
-- `OLLAMA_API_KEY`: Required if using Ollama Cloud API
-- `MILVUS_HOST` / `MILVUS_USERNAME` / `MILVUS_PASSWORD`: Required for Zilliz Cloud
+Before finishing:
+- imports are grouped correctly
+- types are updated where contracts changed
+- backend and frontend API shapes still match
+- the smallest relevant lint/test/build commands have run
+- local-only files were not staged by accident
 
-### Config Settings (`config.toml`)
-All non-sensitive configuration including providers, models, and URLs:
-```toml
-[embedding]
-provider = "openai"  # or "ollama", "nim"
-model = "text-embedding-3-small"
-base_url = ""  # e.g., "http://ollama:11434" for Docker
-
-[llm]
-provider = "openai"
-model = "gpt-4o-mini"
-base_url = ""  # e.g., "http://ollama:11434" for Docker
-```
-
----
-
-## Commit Messages
-
-Use conventional commits format: `<type>(<scope>): <subject>`
-
-**Types:** `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`, `perf`, `ci`
-
-**Scopes:** `adapters`, `config`, `pipelines`, `docker`, `docs`
-
-**Examples:**
-```
-feat(adapters): add HuggingFace embedding provider
-fix(llm): set stream=False in Ollama API requests
-docs(readme): update Docker commands
-refactor(config): simplify path resolution
-test(pipelines): add unit tests for ingestion
-```
-
-**Rules:**
-- Subject line: max 72 chars, lowercase, no period
-- Use imperative mood ("add" not "added")
-- Body: explain what and why (not how)
-- Reference issues: `Closes #123`
+Keep this file practical and repository-specific when updating it.
