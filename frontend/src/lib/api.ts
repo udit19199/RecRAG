@@ -44,7 +44,6 @@ export interface EvalJobStatus {
 
 export interface QueryWithEvalResponse extends QueryResponse {
   eval_job_id?: string;
-  eval?: EvalScores;
 }
 
 /** Request body for /query endpoint */
@@ -136,32 +135,15 @@ async function handleResponse<T>(res: Response): Promise<T> {
 
 /**
  * Query the RAG pipeline.
+ * Evaluation is automatically performed asynchronously and will return an eval_job_id.
  */
-export async function queryRAG(query: string): Promise<QueryResponse> {
+export async function queryRAG(query: string): Promise<QueryWithEvalResponse> {
   const res = await fetch(`${RETRIEVAL_API_URL}/query`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ query }),
   });
   return handleResponse<QueryWithEvalResponse>(res);
-}
-
-
-/**
- * Query the RAG pipeline and optionally request evaluation.
- * mode: undefined|'sync'|'async'
- */
-export async function queryRAGWithEval(
-  query: string,
-  mode?: 'sync' | 'async'
-): Promise<QueryWithEvalResponse> {
-  const params = mode ? `?eval=${mode}` : '';
-  const res = await fetch(`${RETRIEVAL_API_URL}/query${params}`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ query }),
-  });
-  return handleResponse<any>(res);
 }
 
 
