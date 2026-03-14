@@ -35,14 +35,15 @@ dev:
 	@echo "Starting ingestion API  → http://localhost:8001"
 	@echo "Starting Next.js        → http://localhost:3000"
 	@echo "Press Ctrl-C to stop all services."
-	@$(PYTHON_ENV) uvicorn api.retrieval.main:app \
+	@trap 'kill 0' EXIT; \
+	$(PYTHON_ENV) uvicorn api.retrieval.main:app \
 	    --host 0.0.0.0 --port 8000 --reload \
-	    2>&1 | sed 's/^/[retrieval] /' &
-	@$(PYTHON_ENV) uvicorn api.ingestion.main:app \
+	    2>&1 | sed 's/^/[retrieval] /' & \
+	$(PYTHON_ENV) uvicorn api.ingestion.main:app \
 	    --host 0.0.0.0 --port 8001 --reload \
-	    2>&1 | sed 's/^/[ingestion] /' &
-	@cd frontend && pnpm dev 2>&1 | sed 's/^/[frontend]  /' &
-	@wait
+	    2>&1 | sed 's/^/[ingestion] /' & \
+	cd frontend && pnpm dev 2>&1 | sed 's/^/[frontend]  /' & \
+	wait
 
 # ── Individual services ────────────────────────────────────────────────────────
 

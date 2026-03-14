@@ -21,6 +21,7 @@ dependencies = [
     "python-multipart>=0.0.9",
     "pydantic>=2.9.0",
     "pymilvus>=2.6.9",
+    "torch>=2.0.0",
 ]
 
 [project.optional-dependencies]

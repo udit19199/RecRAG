@@ -177,7 +177,7 @@ export default function ModelPicker({
     if (isLoading || !providers) {
       return (
         <div className="flex flex-col gap-1.5">
-          <span className="text-xs text-muted-foreground">
+          <span className="text-sm font-medium text-muted-foreground">
             {label}
           </span>
           <Skeleton className="h-10 w-[13.5rem] rounded-md" />
@@ -189,7 +189,7 @@ export default function ModelPicker({
 
     return (
       <div className="flex flex-col gap-1.5">
-        <span className="text-xs text-muted-foreground">
+        <span className="text-sm font-medium text-muted-foreground">
           {label}
         </span>
         <Combobox

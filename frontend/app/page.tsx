@@ -3,13 +3,10 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import FileUploader from '@/components/FileUploader';
-import IngestionStatusDisplay from '@/components/IngestionStatusDisplay';
 import ModelPicker from '@/components/ModelPicker';
+import IngestionStatusDisplay from '@/components/IngestionStatusDisplay';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import Sidebar, { SidebarProvider, SidebarHeader, SidebarContent, SidebarFooter, SidebarGroup } from '@/components/ui/sidebar';
-import { Switch } from '@/components/ui/switch';
 import {
   Collapsible,
   CollapsibleContent,
@@ -21,24 +18,26 @@ import {
   TooltipTrigger,
 } from '@/components/ui/tooltip';
 import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
+  Empty,
+  EmptyContent,
+  EmptyDescription,
+  EmptyHeader,
+  EmptyMedia,
+  EmptyTitle,
+} from "@/components/ui/empty";
+import { UploadDialog } from '@/components/UploadDialog';
+import { IconCloud, IconRobot } from '@tabler/icons-react';
 import {
   queryRAG,
-  queryRAGWithEval,
   getEvalStatus,
   checkRetrievalHealth,
   uploadPDFs,
   getIngestionStatus,
   waitForIngestionComplete,
   type QueryResponse,
-  type QueryWithEvalResponse,
   type IngestionStatus,
 } from '@/lib/api';
+import { cn } from '@/lib/utils';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -57,7 +56,6 @@ interface Message {
 
 export default function HomePage() {
   const [isReady, setIsReady] = useState(false);
-  const [healthMessage, setHealthMessage] = useState<string | null>(null);
 
   const [ingestionStatus, setIngestionStatus] = useState<IngestionStatus | null>(null);
   const [statusError, setStatusError] = useState<string | null>(null);
@@ -65,23 +63,11 @@ export default function HomePage() {
   const [uploadFeedback, setUploadFeedback] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
 
   const [messages, setMessages] = useState<Message[]>([]);
-  const [enableEval, setEnableEval] = useState(false);
-  const [evalMode, setEvalMode] = useState<'async' | 'sync'>('async');
   const [isQuerying, setIsQuerying] = useState(false);
   const [messageIdCounter, setMessageIdCounter] = useState(0);
-  
+
 
   const chatBottomRef = useRef<HTMLDivElement>(null);
-
-  // Restore persisted prefs
-  useEffect(() => {
-    try {
-      const stored = localStorage.getItem('enableEval');
-      if (stored !== null) setEnableEval(stored === 'true');
-      const storedMode = localStorage.getItem('evalMode');
-      if (storedMode === 'sync' || storedMode === 'async') setEvalMode(storedMode as 'async' | 'sync');
-    } catch { /* ignore */ }
-  }, []);
 
   // ── Ingestion status polling ─────────────────────────────────────────────
 
@@ -100,9 +86,8 @@ export default function HomePage() {
       try {
         const health = await checkRetrievalHealth();
         setIsReady(health.pipeline_loaded ?? false);
-        setHealthMessage(health.pipeline_loaded ? null : 'Retrieval pipeline is loading…');
       } catch {
-        setHealthMessage('Cannot reach retrieval API. Ensure the service is running.');
+        setIsReady(false);
       }
     };
     checkHealth();
@@ -121,7 +106,7 @@ export default function HomePage() {
 
   useEffect(() => {
     chatBottomRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages]);
+  });
 
   // ── Query handler ────────────────────────────────────────────────────────
 
@@ -139,10 +124,8 @@ export default function HomePage() {
     setIsQuerying(true);
 
     try {
-      const result = enableEval ? await queryRAGWithEval(query, evalMode) : await queryRAG(query);
-      const asyncEvalJobId = enableEval && evalMode === 'async'
-        ? (result as QueryWithEvalResponse).eval_job_id
-        : undefined;
+      const result = await queryRAG(query);
+      const asyncEvalJobId = result.eval_job_id;
       const assistantMsg: Message = {
         id: nextId(),
         role: 'assistant',
@@ -159,7 +142,7 @@ export default function HomePage() {
         const jobId = asyncEvalJobId;
         (async function poll() {
           try {
-            for (;;) {
+            for (; ;) {
               const status = await getEvalStatus(jobId);
               if (status.status === 'complete') {
                 setMessages((prev) =>
@@ -219,144 +202,94 @@ export default function HomePage() {
   // ── Render ───────────────────────────────────────────────────────────────
 
   return (
-    <SidebarProvider>
-      <div className="flex h-screen w-full flex-col overflow-hidden bg-muted/30">
-        {/* header removed - controls moved into main column */}
-
-        <div className="mx-auto flex min-h-0 w-full max-w-[1440px] flex-1 gap-4 overflow-hidden p-4">
-          <Sidebar className="">
-            <SidebarHeader>
-              <div className="space-y-1">
-                <h2 className="text-sm font-semibold text-foreground">Library</h2>
-                <p className="text-xs text-muted-foreground">Upload your full PDF set, then wait for indexing to finish.</p>
-              </div>
-            </SidebarHeader>
-            <SidebarContent>
-              <SidebarGroup>
-                <IngestionStatusDisplay status={ingestionStatus} error={statusError} isLoading={false} />
-              </SidebarGroup>
-              <SidebarGroup>
-                {uploadFeedback && (
-                  <div className={`rounded-lg border px-3 py-2.5 text-xs ${uploadFeedback.type === 'success' ? 'border-emerald-500/20 bg-emerald-500/5 text-emerald-600 dark:text-emerald-400' : 'border-destructive/30 bg-destructive/5 text-destructive'}`}>
-                    {uploadFeedback.message}
-                  </div>
-                )}
-                <FileUploader onUpload={handleUpload} isUploading={isUploading} disabled={isIngesting} />
-              </SidebarGroup>
-              <SidebarGroup>
-                <div className="space-y-3 rounded-xl border bg-card p-4">
-                  <h3 className="text-xs font-semibold text-foreground">Tips</h3>
-                  <div className="space-y-2">
-                    <TipRow text="Use text-based PDFs, not scanned images" />
-                    <TipRow text="Keep files under 50 MB" />
-                    <TipRow text="Wait for Complete before querying" />
-                    <TipRow text="A new upload batch replaces the current corpus" />
-                  </div>
-                </div>
-              </SidebarGroup>
-            </SidebarContent>
-            <SidebarFooter>
-              <div className="text-xs text-muted-foreground">Status: {ingestionStatus?.status ?? 'idle'}</div>
-            </SidebarFooter>
-          </Sidebar>
-
-          <section className="flex min-w-0 flex-1 flex-col gap-4 overflow-hidden">
-            <div className="flex-1 overflow-hidden rounded-xl border bg-card flex flex-col">
-              <div className="px-4 py-3 border-b bg-background">
-                <div className="flex flex-wrap items-center gap-3">
-                  <ModelPicker disabled={isIngesting} onReindexStarted={handleReindexStarted} onConfigChanged={() => {}} />
-                  <div className="hidden h-8 w-px bg-border md:block" />
-                  <label className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <span>Evaluation</span>
-                    <Switch
-                      checked={enableEval}
-                      onCheckedChange={(checked) => {
-                        setEnableEval(checked as boolean);
-                        try { localStorage.setItem('enableEval', String(checked)); } catch {}
-                      }}
-                    />
-                  </label>
-
-                  {enableEval && (
-                    <Select
-                      value={evalMode}
-                      onValueChange={(v) => {
-                        setEvalMode(v as 'async' | 'sync');
-                        try { localStorage.setItem('evalMode', v); } catch {}
-                      }}
-                    >
-                      <SelectTrigger className="h-9 w-32 bg-background text-sm">
-                        <SelectValue />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="async">Async</SelectItem>
-                        <SelectItem value="sync">Sync</SelectItem>
-                      </SelectContent>
-                    </Select>
+    <div className="flex h-full min-h-0 w-full flex-col overflow-hidden bg-muted/30">
+      <div className="mx-auto flex min-h-0 w-full max-w-[1440px] flex-1 gap-4 overflow-hidden p-4">
+        <section className="flex min-w-0 flex-1 flex-col gap-4 overflow-hidden">
+          <div className="flex-1 overflow-hidden rounded-xl border bg-card flex flex-col">
+            <div className="px-4 py-3 border-b bg-background space-y-3">
+              {isIngesting || (uploadFeedback && uploadFeedback.type === 'error') ? (
+                <div className="animate-in fade-in slide-in-from-top-2 duration-300">
+                  <IngestionStatusDisplay status={ingestionStatus} error={statusError} isLoading={false} />
+                  {uploadFeedback && uploadFeedback.type === 'error' && (
+                    <div className="mt-2 rounded-lg border border-destructive/30 bg-destructive/5 px-3 py-2 text-xs text-destructive">
+                      {uploadFeedback.message}
+                    </div>
                   )}
                 </div>
-              </div>
+              ) : null}
 
-              <div className="h-full overflow-y-auto p-4 md:p-6">
-                {messages.length === 0 ? (
-                  <EmptyState isReady={isReady} />
-                ) : (
-                  <div className="mx-auto flex w-full max-w-3xl flex-col gap-5">
-                    {messages.map((msg) => (
-                      <ChatMessage key={msg.id} message={msg} />
-                    ))}
-                    {isQuerying && <TypingIndicator />}
-                    <div ref={chatBottomRef} />
-                  </div>
-                )}
+              {uploadFeedback && uploadFeedback.type === 'success' && !isIngesting && (
+                <div className="animate-in fade-in slide-in-from-top-1 duration-300 rounded-lg border border-emerald-500/20 bg-emerald-500/5 px-3 py-2 text-xs text-emerald-600 dark:text-emerald-400">
+                  {uploadFeedback.message}
+                </div>
+              )}
+
+              <div className="flex flex-wrap items-center gap-3">
+                <ModelPicker disabled={isIngesting} onReindexStarted={handleReindexStarted} onConfigChanged={() => { }} />
               </div>
             </div>
+            <div className="h-full overflow-y-auto p-4 md:p-6">
+              {messages.length === 0 ? (
+                <EmptyState isReady={isReady} onUpload={handleUpload} isUploading={isUploading} />
+              ) : (
+                <div className="mx-auto flex w-full max-w-3xl flex-col gap-5">
+                  {messages.map((msg) => (
+                    <ChatMessage key={msg.id} message={msg} />
+                  ))}
+                  {isQuerying && <TypingIndicator />}
+                  <div ref={chatBottomRef} />
+                </div>
+              )}
+            </div>
+          </div>
 
           <div className="shrink-0 rounded-xl border bg-card p-4">
             <ChatInput
               onSubmit={handleQuery}
+              onUpload={handleUpload}
               isLoading={isQuerying}
-              disabled={!canChat}
+              isUploading={isUploading || isIngesting}
+              disabled={!canChat || isIngesting}
               disabledReason={
                 isIngesting
                   ? 'Document indexing in progress…'
                   : !isReady
-                  ? 'Waiting for retrieval pipeline…'
-                  : ingestionStatus?.status !== 'complete'
-                  ? 'Upload and index your full document set before chatting.'
-                  : undefined
+                    ? 'Waiting for retrieval pipeline…'
+                    : ingestionStatus?.status !== 'complete'
+                      ? 'Upload and index your documents before chatting.'
+                      : undefined
               }
             />
           </div>
         </section>
       </div>
     </div>
-    </SidebarProvider>
   );
 }
 
 // ── Sub-components ────────────────────────────────────────────────────────────
 
-function EmptyState({ isReady }: { isReady: boolean }) {
+function EmptyState({ isReady, onUpload, isUploading }: { isReady: boolean; onUpload: (files: File[]) => Promise<void>; isUploading: boolean }) {
   return (
     <div className="flex h-full items-center justify-center">
-      <div className="flex w-full max-w-xl flex-col items-center gap-4 rounded-xl border border-dashed bg-muted/30 px-6 py-12 text-center">
-        <div className="flex h-12 w-12 items-center justify-center rounded-lg border bg-background">
-          <svg className="h-6 w-6 text-muted-foreground" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
-          </svg>
-        </div>
-        <div>
-          <p className="font-semibold text-foreground">
-            {isReady ? 'Ask a question about your documents' : 'Pipeline loading…'}
-          </p>
-          <p className="mt-1 text-sm text-muted-foreground">
+      <Empty className="border border-dashed bg-muted/20 rounded-2xl max-w-md w-full py-12">
+        <EmptyHeader>
+          <EmptyMedia variant="icon">
+            <IconCloud className="h-6 w-6 text-muted-foreground" />
+          </EmptyMedia>
+          <EmptyTitle>{isReady ? 'Library Empty' : 'Pipeline Loading…'}</EmptyTitle>
+          <EmptyDescription>
             {isReady
-              ? 'Upload your full PDF batch in the library panel. Chat unlocks after indexing completes.'
+              ? 'Upload your PDF documents to the library to start chatting with your AI.'
               : 'The retrieval service is initialising. Please wait a moment.'}
-          </p>
-        </div>
-      </div>
+          </EmptyDescription>
+        </EmptyHeader>
+        {isReady && (
+          <EmptyContent>
+            <UploadDialog onUpload={onUpload} isUploading={isUploading} />
+          </EmptyContent>
+        )}
+      </Empty>
     </div>
   );
 }
@@ -364,8 +297,8 @@ function EmptyState({ isReady }: { isReady: boolean }) {
 function TypingIndicator() {
   return (
     <div className="flex items-center gap-3">
-      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border bg-background text-[11px] font-medium text-muted-foreground">
-        AI
+      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border bg-background text-muted-foreground">
+        <IconRobot className="h-4 w-4" />
       </div>
       <div className="rounded-xl border bg-muted/30 px-4 py-3">
         <div className="flex gap-1.5">
@@ -397,8 +330,8 @@ function ChatMessage({ message }: { message: Message }) {
 
   return (
     <div className="flex items-start gap-3">
-      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border bg-background text-[11px] font-medium text-muted-foreground">
-        AI
+      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border bg-background text-muted-foreground">
+        <IconRobot className="h-4 w-4" />
       </div>
       <div className="min-w-0 flex-1 space-y-3">
         {message.error ? (
@@ -461,7 +394,7 @@ function SourceContext({ context }: { context: QueryResponse['context'] }) {
       <div className="divide-y divide-border">
         {context.map((item, i) => (
           <Collapsible
-            key={i}
+            key={`${item.source}-${item.distance}-${item.text}`}
             open={openIndexes.has(i)}
             onOpenChange={() => toggle(i)}
           >
@@ -486,6 +419,7 @@ function SourceContext({ context }: { context: QueryResponse['context'] }) {
                   </TooltipContent>
                 </Tooltip>
                 <svg
+                  aria-hidden="true"
                   className={`h-3.5 w-3.5 text-muted-foreground transition-transform ${openIndexes.has(i) ? 'rotate-180' : ''}`}
                   viewBox="0 0 20 20" fill="currentColor"
                 >
@@ -509,12 +443,16 @@ function SourceContext({ context }: { context: QueryResponse['context'] }) {
 
 function ChatInput({
   onSubmit,
+  onUpload,
   isLoading,
+  isUploading,
   disabled,
   disabledReason,
 }: {
   onSubmit: (query: string) => Promise<void>;
+  onUpload: (files: File[]) => Promise<void>;
   isLoading: boolean;
+  isUploading: boolean;
   disabled?: boolean;
   disabledReason?: string;
 }) {
@@ -537,15 +475,43 @@ function ChatInput({
 
   return (
     <form onSubmit={handleSubmit} className="mx-auto max-w-3xl">
-      {disabledReason && (
-        <p className="mb-2 text-center text-xs text-muted-foreground">{disabledReason}</p>
-      )}
-      <div className="flex items-end gap-3 rounded-xl border bg-background px-4 py-3 focus-within:border-ring focus-within:ring-[3px] focus-within:ring-ring/20">
+      <div
+        className={cn(
+          "flex items-end gap-3 rounded-xl border bg-background px-4 py-3 transition-all",
+          !disabled && "focus-within:border-ring focus-within:ring-[3px] focus-within:ring-ring/20",
+          disabled && "cursor-not-allowed bg-muted/20 opacity-60"
+        )}
+      >
+        <UploadDialog
+          onUpload={onUpload}
+          isUploading={isUploading}
+          trigger={
+            <Button
+              type="button"
+              variant="ghost"
+              size="icon"
+              className="h-9 w-9 shrink-0 text-muted-foreground hover:text-foreground"
+              disabled={isUploading}
+              title="Upload PDFs"
+            >
+              {isUploading ? (
+                <svg aria-hidden="true" className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                </svg>
+              ) : (
+                <svg aria-hidden="true" className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                </svg>
+              )}
+            </Button>
+          }
+        />
         <textarea
           value={value}
           onChange={(e) => setValue(e.target.value)}
           onKeyDown={handleKeyDown}
-          placeholder="Ask a question about your documents..."
+          placeholder={disabled ? (disabledReason || "Chat disabled") : "Ask a question about your documents..."}
           rows={1}
           disabled={disabled}
           className="max-h-36 min-h-[1.5rem] flex-1 resize-none bg-transparent text-sm text-foreground placeholder:text-muted-foreground focus:outline-none disabled:cursor-not-allowed"
@@ -561,12 +527,12 @@ function ChatInput({
           size="icon"
         >
           {isLoading ? (
-            <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none">
+            <svg aria-hidden="true" className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none">
               <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
               <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
             </svg>
           ) : (
-            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+            <svg aria-hidden="true" className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
             </svg>
           )}
@@ -576,16 +542,5 @@ function ChatInput({
         Enter to send, Shift+Enter for newline
       </p>
     </form>
-  );
-}
-
-function TipRow({ text }: { text: string }) {
-  return (
-    <div className="flex items-start gap-2 text-xs text-muted-foreground">
-      <svg className="mt-0.5 h-3.5 w-3.5 shrink-0 text-muted-foreground" viewBox="0 0 20 20" fill="currentColor">
-        <path fillRule="evenodd" d="M16.704 5.29a1 1 0 010 1.414l-7.02 7.02a1 1 0 01-1.414 0l-3.02-3.02a1 1 0 111.414-1.414l2.313 2.313 6.313-6.313a1 1 0 011.414 0z" clipRule="evenodd" />
-      </svg>
-      <span>{text}</span>
-    </div>
   );
 }

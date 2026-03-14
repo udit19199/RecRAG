@@ -22,7 +22,7 @@ class RagasEvaluator:
 
     def __init__(
         self,
-        model: str = "gpt-4o",
+        model: str = "gpt-4o-mini",
         embeddings_model: str = "text-embedding-3-small",
         openai_api_key: Optional[str] = None,
     ):
@@ -72,23 +72,22 @@ class RagasEvaluator:
         dataset = Dataset.from_dict(data)
 
         # Filter metrics if no ground truth is provided
-        active_metrics = self.metrics
         if not ground_truth:
             active_metrics = [
                 m
                 for m in self.metrics
-                if not isinstance(m, (ContextPrecision, ContextRecall))
+                if not any(isinstance(m, t) for t in (ContextPrecision, ContextRecall))
             ]
             logger.warning(
                 "No ground truth provided. Skipping context_precision and context_recall."
             )
+        else:
+            active_metrics = self.metrics
 
         try:
             result = evaluate(
                 dataset,
-                metrics=active_metrics,  # type: ignore[arg-type]
-                llm=self.llm,  # type: ignore[arg-type]
-                embeddings=self.embeddings,
+                metrics=active_metrics,
             )
             return result.to_pandas().iloc[0].to_dict()  # type: ignore[union-attr]
         except Exception as e:
@@ -108,23 +107,22 @@ class RagasEvaluator:
             Dictionary of scores (averages).
         """
         # Determine metrics based on presence of ground_truth
-        active_metrics = self.metrics
         if "ground_truth" not in dataset.column_names:
             active_metrics = [
                 m
                 for m in self.metrics
-                if not isinstance(m, (ContextPrecision, ContextRecall))
+                if not any(isinstance(m, t) for t in (ContextPrecision, ContextRecall))
             ]
             logger.warning(
                 "No ground truth provided. Skipping context_precision and context_recall."
             )
+        else:
+            active_metrics = self.metrics
 
         try:
             result = evaluate(
                 dataset,
-                metrics=active_metrics,  # type: ignore[arg-type]
-                llm=self.llm,  # type: ignore[arg-type]
-                embeddings=self.embeddings,
+                metrics=active_metrics,
             )
             return result  # type: ignore[return-value]
         except Exception as e:
@@ -134,4 +132,6 @@ class RagasEvaluator:
 
 def get_evaluator() -> RagasEvaluator:
     """Create a RagasEvaluator instance from environment."""
-    return RagasEvaluator()
+    model = os.getenv("RAGAS_MODEL", "gpt-4o-mini")
+    embeddings_model = os.getenv("RAGAS_EMBEDDINGS_MODEL", "text-embedding-3-small")
+    return RagasEvaluator(model=model, embeddings_model=embeddings_model)

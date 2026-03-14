@@ -33,7 +33,7 @@ make ingest           # one-shot PDF ingestion (--force)
 make lint             # ruff check .
 make format           # ruff format .
 make test             # pytest
-make typecheck        # mypy backend/
+make typecheck        # mypy src/
 
 # ── Pytest variants ───────────────────────────────────────────────────────────
 uv run pytest tests/test_ingest.py                # single file
@@ -46,12 +46,12 @@ docker-compose up -d          # start all services
 docker-compose down           # stop containers
 ```
 
-> **`PYTHONPATH` note:** `PYTHONPATH=backend` is set inline in every Makefile target so
-> the `api` package (in `backend/api/`) is importable by uvicorn. `.env` only needs to
+> **`PYTHONPATH` note:** `PYTHONPATH=src` is set inline in every Makefile target so
+> the `api` and `src` packages are importable by uvicorn/cli tools. `.env` only needs to
 > contain API keys — **do not add `PYTHONPATH` back to `.env`**.
 >
 > If you run uvicorn directly (outside `make`), prefix the command:
-> `PYTHONPATH=backend uv run --env-file .env uvicorn api.retrieval.main:app ...`
+> `PYTHONPATH=src uv run --env-file .env uvicorn api.retrieval.main:app ...`
 
 ---
 
@@ -110,12 +110,12 @@ Write docstrings for all public functions and classes with Args and Returns sect
 
 ## Key Patterns
 
-### Adapter Pattern (`backend/src/adapters/`)
+### Adapter Pattern (`src/adapters/`)
 - `BaseEmbedder` and `BaseLLM` are abstract base classes
 - Factory functions in `__init__.py`: `create_embedder()`, `create_llm()`
 - Each concrete adapter has a `provider` class attribute (`"openai"`, `"ollama"`, `"nim"`)
 
-### Configuration (`backend/src/config.py`)
+### Configuration (`src/config.py`)
 - `load_config()`: Loads TOML with `${VAR:-default}` substitution
 - `resolve_path()`: Resolves paths relative to config file
 - `get_config_value()`: Gets nested config via dot notation
@@ -135,21 +135,20 @@ Write docstrings for all public functions and classes with Args and Returns sect
 ```
 RecRAG/
 ├── Makefile                  # Dev shortcuts (make dev, make install, etc.)
-├── backend/
-│   ├── api/
-│   │   ├── ingestion/
-│   │   │   └── main.py       # FastAPI :8001 — upload, status, config, reindex
-│   │   └── retrieval/
-│   │       └── main.py       # FastAPI :8000 — query, health, config, providers
-│   ├── src/
-│   │   ├── config.py         # Config loading & path resolution
-│   │   ├── adapters/         # LLM & embedding providers (openai, ollama, nim)
-│   │   ├── pipelines/        # Ingestion & retrieval pipeline logic
-│   │   ├── stores/           # Vector store (Milvus)
-│   │   ├── loaders/          # PDF document loader
-│   │   ├── splitters/        # Text chunking
-│   │   └── evaluation/       # RAGAS evaluation helpers
-│   ├── app.py                # (removed) Legacy Streamlit UI was previously here
+├── api/
+│   ├── ingestion/
+│   │   └── main.py           # FastAPI :8001 — upload, status, config, reindex
+│   └── retrieval/
+│       └── main.py           # FastAPI :8000 — query, health, config, providers
+├── src/
+│   ├── config.py             # Config loading & path resolution
+│   ├── adapters/             # LLM & embedding providers (openai, ollama, nim)
+│   ├── pipelines/            # Ingestion & retrieval pipeline logic
+│   ├── stores/               # Vector store (Milvus)
+│   ├── loaders/              # PDF document loader
+│   ├── splitters/            # Text chunking
+│   └── evaluation/           # RAGAS evaluation helpers
+├── cli/
 │   ├── ingest.py             # CLI: one-shot ingestion
 │   └── evaluate.py           # CLI: batch RAGAS evaluation
 ├── frontend/                 # Next.js App Router
@@ -159,6 +158,7 @@ RecRAG/
 │   └── src/
 │       ├── components/       # FileUploader, IngestionStatusDisplay, ModelPicker, Navbar
 │       └── lib/api.ts        # Typed API client for both backend services
+├── tests/                    # Pytest suite
 ├── Dockerfile                # Python image (APIs / evaluation)
 ├── Dockerfile.api            # Python image (FastAPI services)
 ├── docker-compose.yml        # Multi-container orchestration
