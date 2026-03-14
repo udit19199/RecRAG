@@ -8,8 +8,8 @@ base_url = "http://localhost:11434"
 
 [llm]
 provider = "ollama"
-model = "glm-5"
-base_url = "https://ollama.com"
+model = "gpt-oss:20b"
+base_url = "http://localhost:11434"
 api_key = "${OLLAMA_API_KEY}"
 
 [ingestion]
