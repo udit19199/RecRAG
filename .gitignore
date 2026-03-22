@@ -49,3 +49,6 @@ htmlcov/
 
 # Gemini CLI
 .gemini/
+
+# Security Reports
+security_best_practices_report.md
