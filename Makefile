@@ -1,36 +1,39 @@
-# RecRAG – local development helpers
+# RecRAG – Local development and orchestration helpers
 #
 # Usage:
-#   make install    – one-time setup (uv sync + pnpm install)
-#   make dev        – start all three services concurrently
-#   make retrieval  – retrieval API only  (port 8000)
-#   make ingestion  – ingestion API only  (port 8001)
-#   make frontend   – Next.js dev server  (port 3000)
-#   make ingest     – one-shot PDF ingestion (--force)
-#   make lint       – ruff check
-#   make format     – ruff format
-#   make test       – pytest
-#   make typecheck  – mypy
-#   make help       – this message
+#   make help       – Show this message
 
-.PHONY: install dev retrieval ingestion frontend ingest \
-        lint format test typecheck help
+.PHONY: install setup dev retrieval ingestion frontend ingest evaluate \
+        lint lint-backend lint-frontend format format-backend format-frontend \
+        test typecheck check clean infra-up infra-down infra-logs docker-up docker-down help
 
-# PYTHONPATH is set inline here so .env only needs to carry API keys.
-# --env-file .env is still passed so OPENAI_API_KEY etc. are loaded.
+# ── Variables ─────────────────────────────────────────────────────────────────
+
 PYTHON_ENV := PYTHONPATH=src uv run --env-file .env
+DOCKER_COMPOSE := docker compose
+FRONTEND_DIR := frontend
 
-# ── One-time setup ─────────────────────────────────────────────────────────────
+# ── Setup ─────────────────────────────────────────────────────────────────────
 
-install:
+help: ## Show this help message
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
+
+install: ## One-time setup: install Python and Node dependencies
 	uv sync
 	uv pip install -e .
-	cd frontend && pnpm install
+	cd $(FRONTEND_DIR) && pnpm install
 
-# ── Run all services ───────────────────────────────────────────────────────────
-# Each process gets its own log prefix. Ctrl-C kills all three.
+setup: install ## Full setup: install dependencies and create .env
+	@if [ ! -f .env ]; then \
+		cp .env.example .env; \
+		echo ".env file created from .env.example. Please update it with your API keys."; \
+	else \
+		echo ".env file already exists."; \
+	fi
 
-dev:
+# ── Development ───────────────────────────────────────────────────────────────
+
+dev: ## Start retrieval, ingestion, and frontend together locally
 	@echo "Starting retrieval API  → http://localhost:8000"
 	@echo "Starting ingestion API  → http://localhost:8001"
 	@echo "Starting Next.js        → http://localhost:3000"
@@ -42,53 +45,78 @@ dev:
 	$(PYTHON_ENV) uvicorn api.ingestion.main:app \
 	    --host 0.0.0.0 --port 8001 --reload \
 	    2>&1 | sed 's/^/[ingestion] /' & \
-	cd frontend && pnpm dev 2>&1 | sed 's/^/[frontend]  /' & \
+	cd $(FRONTEND_DIR) && pnpm dev 2>&1 | sed 's/^/[frontend]  /' & \
 	wait
 
-# ── Individual services ────────────────────────────────────────────────────────
+retrieval: ## Start only the retrieval API
+	$(PYTHON_ENV) uvicorn api.retrieval.main:app --host 0.0.0.0 --port 8000 --reload
 
-retrieval:
-	$(PYTHON_ENV) uvicorn api.retrieval.main:app \
-	    --host 0.0.0.0 --port 8000 --reload
+ingestion: ## Start only the ingestion API
+	$(PYTHON_ENV) uvicorn api.ingestion.main:app --host 0.0.0.0 --port 8001 --reload
 
-ingestion:
-	$(PYTHON_ENV) uvicorn api.ingestion.main:app \
-	    --host 0.0.0.0 --port 8001 --reload
+frontend: ## Start only the Next.js dev server
+	cd $(FRONTEND_DIR) && pnpm dev
 
-frontend:
-	cd frontend && pnpm dev
+# ── Infrastructure ────────────────────────────────────────────────────────────
 
-# ── Backend CLI tools ──────────────────────────────────────────────────────────
+infra-up: ## Start infrastructure services (Milvus stack + Ollama)
+	$(DOCKER_COMPOSE) --profile server up -d
 
-ingest:
+infra-down: ## Stop infrastructure services
+	$(DOCKER_COMPOSE) --profile server down
+
+infra-logs: ## Show logs for infrastructure services
+	$(DOCKER_COMPOSE) --profile server logs -f
+
+docker-up: ## Start the full stack (including apps) in Docker
+	$(DOCKER_COMPOSE) up -d
+
+docker-down: ## Stop the full stack
+	$(DOCKER_COMPOSE) down
+
+# ── Data & Pipeline ───────────────────────────────────────────────────────────
+
+ingest: ## Run one-shot PDF ingestion from cli/ingest.py
 	$(PYTHON_ENV) python cli/ingest.py --force
 
-# ── Quality checks ─────────────────────────────────────────────────────────────
+evaluate: ## Run RAGAS evaluation on the dataset
+	$(PYTHON_ENV) python cli/evaluate.py
 
-lint:
+# ── Quality Checks ────────────────────────────────────────────────────────────
+
+lint: lint-backend lint-frontend ## Run all linters
+
+lint-backend: ## Run ruff check on backend
 	uv run ruff check .
 
-format:
+lint-frontend: ## Run biome check on frontend
+	cd $(FRONTEND_DIR) && pnpm lint
+
+format: format-backend format-frontend ## Run all formatters
+
+format-backend: ## Run ruff format on backend
 	uv run ruff format .
 
-test:
+format-frontend: ## Run biome format on frontend
+	cd $(FRONTEND_DIR) && pnpm format
+
+test: ## Run backend tests with pytest
 	uv run pytest
 
-typecheck:
+typecheck: ## Run mypy type checking
 	uv run mypy src/
 
-# ── Help ───────────────────────────────────────────────────────────────────────
+check: lint typecheck test ## Run all quality checks (lint, typecheck, test)
 
-help:
-	@echo ""
-	@echo "  make install    – one-time setup (uv sync + pnpm install)"
-	@echo "  make dev        – start retrieval, ingestion, and frontend together"
-	@echo "  make retrieval  – retrieval API only  (http://localhost:8000)"
-	@echo "  make ingestion  – ingestion API only  (http://localhost:8001)"
-	@echo "  make frontend   – Next.js dev server  (http://localhost:3000)"
-	@echo "  make ingest     – one-shot PDF ingestion"
-	@echo "  make lint       – ruff check"
-	@echo "  make format     – ruff format"
-	@echo "  make test       – pytest"
-	@echo "  make typecheck  – mypy"
-	@echo ""
+# ── Maintenance ───────────────────────────────────────────────────────────────
+
+clean: ## Remove build artifacts, caches, and temporary files
+	rm -rf .venv/
+	rm -rf .mypy_cache/
+	rm -rf .pytest_cache/
+	rm -rf .ruff_cache/
+	rm -rf $(FRONTEND_DIR)/node_modules/
+	rm -rf $(FRONTEND_DIR)/.next/
+	find . -type d -name "__pycache__" -exec rm -rf {} +
+	find . -type f -name "*.pyc" -delete
+	@echo "Cleaned all temporary files and caches."

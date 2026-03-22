@@ -6,8 +6,9 @@ Thank you for your interest in contributing to RecRAG! This document provides gu
 
 ### Prerequisites
 - Python 3.12+
+- Node.js & pnpm
 - Docker & Docker Compose
-- uv (package manager)
+- [uv](https://docs.astral.sh/uv/) (package manager)
 
 ### Setup
 ```bash
@@ -15,44 +16,43 @@ Thank you for your interest in contributing to RecRAG! This document provides gu
 git clone https://github.com/your-org/RecRAG.git
 cd RecRAG
 
-# Install dependencies
-uv sync
-
-# Create .env file (see .env.example)
-cp .env.example .env
+# Full setup (install dependencies and create .env)
+make setup
 ```
 
 ## Development Workflow
 
 ### Running Locally
+To start all services concurrently:
 ```bash
-# Terminal 1: Retrieval API
-uv run uvicorn api.retrieval.main:app --port 8000
-
-# Terminal 2: Ingestion API
-uv run uvicorn api.ingestion.main:app --port 8001
-
-# Terminal 3: Frontend
-cd frontend && pnpm dev
+make dev
 ```
 
-### Running with Docker
+To run individual services:
 ```bash
-docker-compose up -d
+make retrieval  # Port 8000
+make ingestion  # Port 8001
+make frontend   # Port 3000
 ```
 
-### Running Tests
+### Infrastructure (Docker)
+To start infrastructure only (Milvus/Ollama):
 ```bash
-uv run pytest                                     # All tests
-uv run pytest tests/test_ingest.py                # Single file
-uv run pytest tests/test_ingest.py::test_name     # Single test
+make infra-up
 ```
 
-### Linting & Formatting
+To start the full stack in Docker:
 ```bash
-uv run ruff check .                               # Check
-uv run ruff format .                              # Format
-uv run ruff check --fix .                         # Auto-fix
+make docker-up
+```
+
+### Quality Checks
+```bash
+make lint       # Ruff (backend) + Biome (frontend)
+make format     # Format both backend and frontend
+make test       # Run pytest
+make typecheck  # Run mypy
+make check      # Run lint, typecheck, and test
 ```
 
 ---
@@ -70,84 +70,17 @@ We use **Conventional Commits** format. All commits must follow this structure:
 ```
 
 ### Types
-
-| Type | Description | Example |
-|------|-------------|---------|
-| `feat` | New feature | `feat(adapters): add HuggingFace embedding provider` |
-| `fix` | Bug fix | `fix(llm): set stream=False in Ollama API requests` |
-| `docs` | Documentation changes | `docs(readme): update Docker commands` |
-| `style` | Code style (formatting, whitespace) | `style(pipelines): fix indentation` |
-| `refactor` | Code refactoring | `refactor(config): simplify path resolution` |
-| `test` | Adding/updating tests | `test(pipelines): add ingestion unit tests` |
-| `chore` | Maintenance tasks | `chore(deps): update dependencies` |
-| `perf` | Performance improvements | `perf(embedding): batch embedding requests` |
-| `ci` | CI/CD changes | `ci(github): add test workflow` |
-
-### Scopes
-
-Use the module or component name:
-
-| Scope | Description |
-|-------|-------------|
-| `adapters` | LLM/embedding providers |
-| `config` | Configuration loading |
-| `pipelines` | Ingestion/retrieval pipelines |
-| `core` | Document processing, vector store |
-| `docker` | Docker configuration |
-| `docs` | Documentation |
-| `ci` | CI/CD configuration |
-
-### Subject Line Rules
-
-1. **Max 72 characters**
-2. **Lowercase only** (no capitalization)
-3. **No period** at the end
-4. **Imperative mood** ("add" not "added" or "adds")
-5. **Be specific** about what changed
-
-### Body (Optional)
-
-- Explain **what** and **why** (not how)
-- Separate from subject with blank line
-- Wrap at 72 characters
-
-### Footer (Optional)
-
-- Reference issues: `Closes #123`, `Fixes #456`
-- Breaking changes: `BREAKING CHANGE: description`
-
-### Examples
-
-**Simple commit:**
-```
-feat(adapters): add HuggingFace embedding provider
-```
-
-**Commit with body:**
-```
-fix(llm): set stream=False in Ollama API requests
-
-Ollama returns streaming responses by default which causes JSON
-parsing errors. Setting stream=False ensures a single JSON response.
-```
-
-**Commit with issue reference:**
-```
-fix(config): correct regex pattern for env var substitution
-
-The regex pattern was looking for ::- instead of :- which prevented
-environment variables from being substituted correctly.
-
-Fixes #42
-```
-
-**Breaking change:**
-```
-refactor(api)!: change embedder interface to support batches
-
-BREAKING CHANGE: The embed() method now returns list[float] instead
-of numpy array. Update all callers accordingly.
-```
+| Type | Description |
+|------|-------------|
+| `feat` | New feature |
+| `fix` | Bug fix |
+| `docs` | Documentation changes |
+| `style` | Code style (formatting, whitespace) |
+| `refactor` | Code refactoring |
+| `test` | Adding/updating tests |
+| `chore` | Maintenance tasks |
+| `perf` | Performance improvements |
+| `ci` | CI/CD changes |
 
 ---
 
@@ -158,54 +91,28 @@ of numpy array. Update all callers accordingly.
    git checkout -b feat/your-feature-name
    ```
 
-2. **Make your changes** following code style guidelines
+2. **Make your changes** following code style guidelines.
 
-3. **Write/update tests** for your changes
-
-4. **Run linting and tests**:
+3. **Run quality checks**:
    ```bash
-   uv run ruff check .
-   uv run pytest
+   make check
    ```
 
-5. **Commit with proper message format**
+4. **Commit with proper message format**.
 
-6. **Push and create PR**:
-   ```bash
-   git push origin feat/your-feature-name
-   ```
-
-7. **Fill out PR template** completely
-
-### PR Title Format
-
-Use the same format as commit messages:
-```
-<type>(<scope>): <description>
-```
-
-Example: `feat(adapters): add HuggingFace embedding provider`
+5. **Push and create PR**.
 
 ---
 
 ## Code Style
 
 ### Python
-- Follow PEP 8
-- Use type hints for all functions
-- Write docstrings for public functions/classes
-- Max line length: 100 characters
+- Follow PEP 8 (enforced by Ruff).
+- Use type hints for all functions.
+- Write docstrings for public functions/classes.
 
-### Imports
-Order: standard library → third-party → local (separate with blank lines)
-
-### Naming
-| Element | Convention |
-|---------|------------|
-| Functions/variables | `snake_case` |
-| Classes | `PascalCase` |
-| Constants | `UPPER_SNAKE_CASE` |
-| Private members | `_underscore_prefix` |
+### Frontend
+- Enforced by Biome (linting and formatting).
 
 ---
 

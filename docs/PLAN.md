@@ -1,155 +1,129 @@
 # RecRAG Development Roadmap
 
-Current state of the RecRAG system and planned improvements.
+Future work for the RecRAG system.
 
 ---
 
-## Current Architecture
+## Verified Open Issues
 
-```
-Entry Points          Pipelines              Components
-─────────────         ─────────              ──────────
-ingest.py (CLI)       IngestionPipeline  →   PDFLoader
-                      RetrievalPipeline      TextSplitter (Sentence)
-                                              OpenAI/Ollama/NIM adapters
-```
+### 1. Ingestion upload blocks the event loop
 
-### Implemented Features
-- Adapter pattern with registry for LLM/embedding providers
-- Dependency injection in pipelines
-- Batch streaming ingestion (configurable batch size)
-- File locking for concurrent FAISS access
-- Connection pooling for HTTP adapters
-- Environment variable substitution in config
-- File upload validation (size, magic bytes, filename sanitization)
-- Token counting with context truncation (tiktoken)
-- FAISS index rebuild on source removal (no orphaned vectors)
+**Status**: Open | **Impact**: Ingestion throughput
 
-### Test Coverage
-- 28 tests in `tests/`
-- Unit tests for core components (VectorStore, TextSplitter, DocumentLoader)
-- Mock embedder/LLM fixtures for isolated testing
-
----
-
-## Priority 1: High Priority
-
-### 1. Configurable Timeouts
-
-**Status**: Not Started | **Impact**: Production reliability
-
-Timeouts hardcoded (30s embeddings, 120s LLM). No retry logic.
+`api/ingestion/main.py` still writes uploaded PDFs with synchronous file I/O inside an `async` route.
 
 **Tasks**:
-- Add timeout settings to `config.toml` under `[adapters]`
-- Implement exponential backoff retry
-- Add max retry configuration
+- Replace direct file writes with async-friendly or threaded writes
+- Keep batch replacement behavior intact
+- Add a regression test for concurrent upload/status handling
 
-**Files**: `backend/src/adapters/embedding.py`, `backend/src/adapters/llm.py`
+### 2. Adapter timeouts are hardcoded
 
----
+**Status**: Open | **Impact**: Production reliability
 
-### 2. Embedding Cache
-
-**Status**: Not Started | **Impact**: API cost, performance
-
-Re-embedding same queries/documents has no caching.
+Embedding and LLM adapters still hardcode request timeouts.
 
 **Tasks**:
-- Add in-memory LRU cache with configurable size
-- Add cache hit/miss metrics for monitoring
-- Consider persistent cache (SQLite) for production
+- Move timeout settings to `config.toml`
+- Preserve current defaults
+- Add config parsing tests
 
-**Files**: New `backend/src/cache.py` or in adapters
+### 3. Retry policy can replay POSTs
 
----
+**Status**: Open | **Impact**: Duplicate ingestion requests
 
-### 3. Atomic Status File Writes
-
-**Status**: Not Started | **Impact**: Data corruption risk
-
-Status file can be corrupted if process dies mid-write.
+`src/adapters/utils.py` still uses `HTTPAdapter(max_retries=...)` directly.
 
 **Tasks**:
-- Implement atomic writes (temp file + rename)
-- Add status file validation on startup
+- Switch to `urllib3.util.Retry`
+- Restrict retries to idempotent methods
+- Add tests for adapter construction
 
-**Files**: `src/utils/status.py`
+### 4. Token counting fallback is inaccurate
 
----
+**Status**: Open | **Impact**: Context truncation errors
 
-## Priority 2: Performance
-
-### 4. Scalable FAISS Index
-
-**Status**: Not Started | **Impact**: Search performance at scale
-
-`IndexFlatL2` is O(n) brute-force. Slow at 100k+ vectors.
+`src/pipelines/retrieval.py` still falls back to `cl100k_base` for unknown models.
 
 **Tasks**:
-- Add `IndexIVFFlat` for approximate search
-- Make index type configurable
-- Add automatic index selection based on vector count
+- Make the fallback explicit in config or model mapping
+- Document expected accuracy limits
+- Add a test for non-OpenAI models
 
-**Files**: `backend/src/stores/faiss.py`
+### 5. NIM embedder probes the API in `__init__`
 
----
+**Status**: Open | **Impact**: Startup latency and testability
 
-### 5. Batch Metadata Writes
-
-**Status**: Not Started | **Impact**: Ingestion performance
-
-Every `add()` writes entire metadata JSON. For bulk ingestion, should batch.
+`src/adapters/nim.py` still makes a live call to detect embedding dimensions.
 
 **Tasks**:
-- Add `flush()` method for explicit persistence
-- Implement batched writes with configurable batch size
-- Auto-flush on reaching batch limit
+- Use a lazy dimension lookup or config override
+- Preserve compatibility with existing models
+- Add a unit test for constructor behavior
 
-**Files**: `backend/src/stores/faiss.py`
+### 6. API keys can remain in `self.kwargs`
 
----
+**Status**: Open | **Impact**: Secret exposure risk
 
-### 6. Legacy Streamlit Notes (removed)
+Base adapter constructors still store kwargs before OpenAI keys are removed.
 
-The legacy Streamlit UI (previously `app.py`) has been removed from the codebase.
-Outstanding items related to its blocking behavior or upload handling are
-historical; the ingestion API and Next.js frontend are the supported paths
-going forward.
+**Tasks**:
+- Pop secrets before calling `super().__init__()`
+- Avoid storing credentials in `self.kwargs`
+- Add a regression test for adapter state
 
----
+### 7. No document deletion API
+
+**Status**: Open | **Impact**: Lifecycle management gap
+
+The system still has no endpoint for deleting a document from storage and the vector index.
+
+**Tasks**:
+- Define deletion semantics for file and vector-store cleanup
+- Add a DELETE route and tests
+- Update the frontend/API client if needed
+
+### 8. API authentication is missing
+
+**Status**: Open | **Impact**: Unauthenticated access
+
+No bearer-token or similar auth guard exists on the APIs.
+
+**Tasks**:
+- Add a lightweight auth mechanism
+- Apply it consistently across both services
+- Document env vars and local-dev behavior
+
+## Security Considerations
+
+| Risk | Status |
+|------|--------|
+| Unauthenticated Access | Open |
+
+## Issue Notes
+
+- Path traversal is fixed via filename sanitization in the upload route.
+- File type validation is fixed via the PDF extension check.
+- CORS is fixed through configured frontend origins in `config.toml`.
+- Status writes are now atomic via temp-file replacement.
+- CORS is now restricted through `config.toml` frontend origins.
+- MD5-based change detection is not present in the current codebase.
+
+## Execution Plan
+
+1. Fix ingestion and status persistence first.
+2. Fix adapter retry, timeout, and secret handling.
+3. Address auth.
+4. Fix retrieval/NIM edge cases.
+5. Add deletion support if storage contracts are clear.
+6. Run targeted tests and update the roadmap notes.
 
 ## Future Considerations
 
 | Feature | Priority | Notes |
 |---------|----------|-------|
 | Hybrid search | Medium | Combine dense + sparse retrieval |
-| Async execution | Medium | Non-blocking operations |
-| Document deletion UI | Medium | Remove documents from index |
 | Reranking | Medium | Improve retrieval quality |
 | Evaluation framework | High | Compare pipeline performance |
 | Metrics/monitoring | Medium | Prometheus/OpenTelemetry |
 | Circuit breaker | Medium | Graceful degradation |
-
----
-
-## Completed
-
-- [x] Adapter pattern with registry
-- [x] Dependency injection in pipelines
-- [x] Batch streaming ingestion
-- [x] File locking for concurrent access
-- [x] Connection pooling
-- [x] Environment variable substitution
-- [x] Basic test coverage (28 tests)
-- [x] FAISS index rebuild on source removal
-- [x] BaseVectorStore import in retrieval pipeline
-- [x] File upload validation (size, magic bytes, sanitization)
-- [x] Token counting with context truncation
-- [x] **Codebase refactoring (2026-02-20)**:
-  - Removed `core.py` deprecated facade
-  - Added `get_storage_dir()`, `get_ingestion_dir()` helpers to `config.py`
-  - Removed all `sys.path.insert()` hacks; proper package install via `pyproject.toml`
-  - Consolidated backward compatibility aliases to `__init__.py` files
-  - Fixed private attribute naming inconsistency (`_dimensions` → `_dimension`)
-  - Simplified legacy Streamlit `app.py` config handling (historical; app removed)
