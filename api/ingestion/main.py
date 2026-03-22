@@ -1,4 +1,5 @@
 import logging
+import os
 import shutil
 from pathlib import Path
 from typing import Any
@@ -22,6 +23,8 @@ from models.api import (
 
 logger = logging.getLogger(__name__)
 
+_IS_PRODUCTION = os.getenv("ENVIRONMENT", "").lower() == "production"
+
 _APP_DIR = Path("/app")
 _REPO_ROOT = _APP_DIR if _APP_DIR.exists() else Path(__file__).resolve().parents[2]
 
@@ -37,6 +40,9 @@ app = FastAPI(
     title="RecRAG Ingestion API",
     description="API for uploading documents and checking ingestion status",
     version="1.0.0",
+    docs_url=None if _IS_PRODUCTION else "/docs",
+    redoc_url=None if _IS_PRODUCTION else "/redoc",
+    openapi_url=None if _IS_PRODUCTION else "/openapi.json",
 )
 
 app.add_middleware(

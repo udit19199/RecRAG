@@ -33,10 +33,15 @@ from models.api import (
 
 STORAGE_DIR = Path("storage")
 
+_IS_PRODUCTION = os.getenv("ENVIRONMENT", "").lower() == "production"
+
 app = FastAPI(
     title="RecRAG Retrieval API",
     description="API for querying documents using Retrieval-Augmented Generation",
     version="1.0.0",
+    docs_url=None if _IS_PRODUCTION else "/docs",
+    redoc_url=None if _IS_PRODUCTION else "/redoc",
+    openapi_url=None if _IS_PRODUCTION else "/openapi.json",
 )
 
 app.add_middleware(
