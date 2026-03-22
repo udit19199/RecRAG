@@ -3,7 +3,6 @@
 import logging
 import os
 import urllib.parse
-from abc import ABC, abstractmethod
 from typing import Any, Optional
 
 from pymilvus import DataType, MilvusClient
@@ -13,38 +12,7 @@ from models.chunk import RetrievalResult
 logger = logging.getLogger(__name__)
 
 
-class BaseVectorStore(ABC):
-    def __init__(self, dimension: int, **kwargs: Any):
-        self.dimension = dimension
-
-    @abstractmethod
-    def add(
-        self,
-        embeddings: list[list[float]],
-        documents: list[str],
-        metadata_list: Optional[list[dict[str, Any]]] = None,
-    ) -> None:
-        pass
-
-    @abstractmethod
-    def search(
-        self,
-        query_embedding: list[float],
-        k: int = 4,
-    ) -> tuple[list[float], list[RetrievalResult]]:
-        pass
-
-    @abstractmethod
-    def delete_all(self) -> None:
-        pass
-
-    @property
-    @abstractmethod
-    def count(self) -> int:
-        pass
-
-
-class MilvusVectorStore(BaseVectorStore):
+class VectorStore:
     """Milvus-backed vector store (standalone or distributed server)."""
 
     def __init__(
@@ -55,7 +23,7 @@ class MilvusVectorStore(BaseVectorStore):
         metric_type: str = "L2",
         index_params: Optional[dict[str, Any]] = None,
     ) -> None:
-        super().__init__(dimension)
+        self.dimension = dimension
         self._collection_name = collection_name
         self._metric_type = metric_type
         self._index_params = index_params or {
@@ -190,7 +158,4 @@ class MilvusVectorStore(BaseVectorStore):
         self._client.close()
 
 
-# Default alias
-VectorStore = MilvusVectorStore
-
-__all__ = ["BaseVectorStore", "MilvusVectorStore", "VectorStore"]
+__all__ = ["VectorStore"]

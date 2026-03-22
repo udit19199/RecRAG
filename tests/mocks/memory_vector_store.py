@@ -1,6 +1,6 @@
 """Lightweight in-memory vector store for fast unit tests.
 
-This module provides ``InMemoryVectorStore``, a ``BaseVectorStore`` implementation
+This module provides ``InMemoryVectorStore``, a ``VectorStore`` implementation
 backed by plain Python lists.  It performs brute-force L2 similarity search so
 tests stay fast and dependency-free (no Milvus instance required).
 """
@@ -8,7 +8,6 @@ tests stay fast and dependency-free (no Milvus instance required).
 from typing import Any, Optional
 
 from models.chunk import RetrievalResult
-from stores import BaseVectorStore
 
 
 def _l2_distance(a: list[float], b: list[float]) -> float:
@@ -16,21 +15,21 @@ def _l2_distance(a: list[float], b: list[float]) -> float:
     return sum((x - y) ** 2 for x, y in zip(a, b))
 
 
-class InMemoryVectorStore(BaseVectorStore):
+class InMemoryVectorStore:
     """In-memory vector store used for unit testing.
 
-    Mirrors the public contract of ``MilvusVectorStore`` without requiring a
+    Mirrors the public contract of ``VectorStore`` without requiring a
     running Milvus instance.  Source-based deduplication (overwrite-on-re-add)
     is preserved so pipeline logic can be exercised end-to-end.
     """
 
     def __init__(self, dimension: int, **kwargs: Any) -> None:
-        super().__init__(dimension)
+        self.dimension = dimension
         self._vectors: list[list[float]] = []
         self._docs: list[dict[str, Any]] = []  # {text, source, **extra_meta}
 
     # ------------------------------------------------------------------
-    # BaseVectorStore interface
+    # VectorStore interface
     # ------------------------------------------------------------------
 
     def add(

@@ -86,7 +86,9 @@ class TestOllamaEmbedder:
     def test_embed_batch_raises_on_failure(self) -> None:
         with patch("requests.Session.post") as mock_post:
             # Use RequestException to trigger fallback to parallel which also fails
-            mock_post.side_effect = requests.exceptions.RequestException("Connection failed")
+            mock_post.side_effect = requests.exceptions.RequestException(
+                "Connection failed"
+            )
 
             embedder = OllamaEmbedder(model="nomic-embed-text")
 
@@ -104,9 +106,9 @@ class TestOllamaEmbedder:
             if call_count[0] == 1:
                 raise requests.exceptions.RequestException("Batch failed")
             # Next calls are individual /api/embeddings
-            if call_count[0] == 3: # Fail the second individual call (idx 1)
+            if call_count[0] == 3:  # Fail the second individual call (idx 1)
                 raise Exception("Failed on second call")
-            
+
             mock_response = MagicMock()
             mock_response.json.return_value = {"embedding": [0.1] * 768}
             mock_response.raise_for_status = MagicMock()

@@ -3,16 +3,15 @@ from pathlib import Path
 from typing import Any
 
 from adapters import BaseEmbedder
-from config import get_config_value, get_ingestion_dir, get_storage_dir
+from config import get_config_value, get_ingestion_dir
 from loaders import BaseDocumentLoader, DocumentLoader
 from models.chunk import Chunk
 from splitters import BaseTextSplitter, TextSplitter
-from stores import BaseVectorStore, VectorStore
+from stores import VectorStore
 from .base import (
     DEFAULT_BATCH_SIZE,
     create_embedder_from_config,
-    get_collection_name,
-    get_milvus_uri,
+    create_vector_store_from_config,
 )
 
 logger = logging.getLogger(__name__)
@@ -29,7 +28,7 @@ class IngestionPipeline:
         embedder: BaseEmbedder,
         splitter: BaseTextSplitter,
         loader: BaseDocumentLoader,
-        vector_store: BaseVectorStore,
+        vector_store: VectorStore,
         config: dict[str, Any] | None = None,
         config_path: Path | None = None,
         batch_size: int = DEFAULT_BATCH_SIZE,
@@ -53,14 +52,7 @@ class IngestionPipeline:
         chunk_overlap = get_config_value(config, "ingestion.chunk_overlap", 50)
         splitter = TextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
 
-        collection_name = get_collection_name(config, embedder.model)
-        uri = get_milvus_uri(config, config_path)
-        vector_store = VectorStore(
-            dimension=embedder.dimension,
-            collection_name=collection_name,
-            uri=uri,
-            metric_type=config.get("storage", {}).get("metric_type", "L2"),
-        )
+        vector_store = create_vector_store_from_config(config, config_path, embedder)
 
         ingestion_dir = get_ingestion_dir(config, config_path)
         loader = DocumentLoader(str(ingestion_dir))

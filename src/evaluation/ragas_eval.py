@@ -1,12 +1,14 @@
 import logging
 import os
-from typing import Any, Dict, List, Optional
+from collections.abc import Sequence
+from typing import Any, Dict, List, Optional, cast
 
 from datasets import Dataset
 from openai import OpenAI
 from ragas import evaluate
 from ragas.embeddings import OpenAIEmbeddings
 from ragas.llms import llm_factory
+from ragas.metrics.base import Metric
 from ragas.metrics.collections import (
     AnswerRelevancy,
     ContextPrecision,
@@ -85,9 +87,10 @@ class RagasEvaluator:
             active_metrics = self.metrics
 
         try:
+            metrics = cast(Sequence[Metric], active_metrics)
             result = evaluate(
                 dataset,
-                metrics=active_metrics,
+                metrics=metrics,
             )
             return result.to_pandas().iloc[0].to_dict()  # type: ignore[union-attr]
         except Exception as e:
@@ -120,9 +123,10 @@ class RagasEvaluator:
             active_metrics = self.metrics
 
         try:
+            metrics = cast(Sequence[Metric], active_metrics)
             result = evaluate(
                 dataset,
-                metrics=active_metrics,
+                metrics=metrics,
             )
             return result  # type: ignore[return-value]
         except Exception as e:

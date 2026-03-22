@@ -1,24 +1,27 @@
 import logging
 import shutil
-import threading
 from pathlib import Path
 from typing import Any
 
 from fastapi import BackgroundTasks, FastAPI, File, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
 
-from config import find_config_path, load_config
-from pipelines import IngestionPipeline
-from adapters import create_embedder
-from stores import VectorStore
-from pipelines.base import get_collection_name, get_milvus_uri
-from utils.status import now, read_status, write_status
+from config import find_config_path, get_frontend_origins, load_config
+from utils.status import read_status, write_status
+from services.ingestion import (
+    run_ingestion_background,
+    run_reindex_background,
+    swap_runtime_config,
+)
+from models.api import (
+    EmbeddingConfigPatch,
+    ReindexResponse,
+    StatusResponse,
+    UploadResponse,
+)
 
 logger = logging.getLogger(__name__)
 
-# ── Path resolution ───────────────────────────────────────────────────────────
-# /app is the container root; outside Docker resolve from the repo root.
 _APP_DIR = Path("/app")
 _REPO_ROOT = _APP_DIR if _APP_DIR.exists() else Path(__file__).resolve().parents[2]
 
@@ -26,132 +29,6 @@ DATA_DIR = _REPO_ROOT / "data"
 PDF_DIR = DATA_DIR / "pdfs"
 STORAGE_DIR = _REPO_ROOT / "storage"
 CONFIG_PATH = _REPO_ROOT / "config.toml"
-
-# ── Pipeline (lazy-initialised once at first ingestion) ───────────────────────
-_pipeline: Any = None
-_pipeline_lock = threading.Lock()
-_ingestion_lock = threading.Lock()
-
-
-def _get_pipeline() -> Any:
-    """Return the shared IngestionPipeline, building it on first call."""
-    global _pipeline
-    if _pipeline is None:
-        with _pipeline_lock:
-            if _pipeline is None:
-                config_path = find_config_path(
-                    CONFIG_PATH if CONFIG_PATH.exists() else None
-                )
-                config = load_config(config_path)
-                _pipeline = IngestionPipeline.from_config(config, config_path)
-                logger.info("Ingestion pipeline initialised")
-    return _pipeline
-
-
-# ── Background ingestion tasks ────────────────────────────────────────────────
-
-
-def _run_ingestion_background() -> None:
-    """Run full-corpus ingestion and update the status file."""
-    with _ingestion_lock:
-        started_at = now()
-        write_status(STORAGE_DIR, "processing", started_at=started_at)
-        logger.info("Ingestion started for uploaded corpus")
-
-        try:
-            pipeline = _get_pipeline()
-            results = pipeline.process_documents_streaming(force=True)
-            completed_at = now()
-            docs = results.get("documents", 0)
-            write_status(
-                STORAGE_DIR,
-                "complete",
-                started_at=started_at,
-                completed_at=completed_at,
-                files_processed=docs,
-            )
-            logger.info(
-                "Ingestion complete — docs: %d, chunks: %d",
-                docs,
-                results.get("chunks", 0),
-            )
-        except Exception as exc:
-            completed_at = now()
-            logger.error("Ingestion failed: %s", exc)
-            write_status(
-                STORAGE_DIR,
-                "error",
-                started_at=started_at,
-                completed_at=completed_at,
-                error_message=str(exc),
-            )
-
-
-def _run_reindex_background() -> None:
-    """Force re-index all documents using the current embedder configuration."""
-    with _ingestion_lock:
-        started_at = now()
-        write_status(STORAGE_DIR, "processing", started_at=started_at)
-        logger.info("Re-index started (force=True)")
-
-        try:
-            pipeline = _get_pipeline()
-            results = pipeline.process_documents_streaming(force=True)
-            completed_at = now()
-            docs = results.get("documents", 0)
-            write_status(
-                STORAGE_DIR,
-                "complete",
-                started_at=started_at,
-                completed_at=completed_at,
-                files_processed=docs,
-            )
-            logger.info(
-                "Re-index complete — docs: %d, chunks: %d",
-                docs,
-                results.get("chunks", 0),
-            )
-        except Exception as exc:
-            completed_at = now()
-            logger.error("Re-index failed: %s", exc)
-            write_status(
-                STORAGE_DIR,
-                "error",
-                started_at=started_at,
-                completed_at=completed_at,
-                error_message=str(exc),
-            )
-
-
-# ── Pydantic models ───────────────────────────────────────────────────────────
-
-
-class StatusResponse(BaseModel):
-    status: str
-    started_at: str | None = None
-    completed_at: str | None = None
-    files_processed: int | None = None
-    error_message: str | None = None
-
-
-class UploadResponse(BaseModel):
-    success: bool
-    files_uploaded: int
-    message: str
-
-
-class AdapterConfig(BaseModel):
-    provider: str
-    model: str
-
-
-class EmbeddingConfigPatch(BaseModel):
-    embedding: AdapterConfig
-
-
-class ReindexResponse(BaseModel):
-    started: bool
-    message: str
 
 
 # ── FastAPI app ───────────────────────────────────────────────────────────────
@@ -164,7 +41,9 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=get_frontend_origins(
+        load_config(find_config_path(CONFIG_PATH if CONFIG_PATH.exists() else None))
+    ),
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -222,7 +101,7 @@ async def upload_pdfs(
         raise HTTPException(status_code=500, detail=f"Failed to save batch: {e}")
 
     write_status(STORAGE_DIR, "idle", files_processed=0)
-    background_tasks.add_task(_run_ingestion_background)
+    background_tasks.add_task(run_ingestion_background, STORAGE_DIR)
 
     return UploadResponse(
         success=True,
@@ -255,53 +134,23 @@ async def set_config(patch: EmbeddingConfigPatch) -> dict[str, Any]:
     Rebuilds the embedder and vector store on the existing pipeline singleton
     so subsequent uploads are indexed with the new model.
     """
-    global _pipeline
-
     try:
         config_path = find_config_path(CONFIG_PATH if CONFIG_PATH.exists() else None)
         config = load_config(config_path)
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to load config: {e}")
-
-    embed_section = config.get("embedding", {})
-    embed_kwargs: dict[str, Any] = {
-        k: v for k, v in embed_section.items() if k not in ("provider", "model")
-    }
-
-    try:
-        new_embedder = create_embedder(
-            patch.embedding.provider,
-            model=patch.embedding.model,
-            **embed_kwargs,
+        embed_provider, embed_model = swap_runtime_config(
+            config,
+            config_path,
+            embedding={
+                "provider": patch.embedding.provider,
+                "model": patch.embedding.model,
+            },
         )
     except Exception as e:
-        raise HTTPException(status_code=400, detail=f"Failed to create embedder: {e}")
-
-    new_collection = get_collection_name(config, new_embedder.model)
-    uri = get_milvus_uri(config, config_path)
-    try:
-        new_vs = VectorStore(
-            dimension=new_embedder.dimension,
-            collection_name=new_collection,
-            uri=uri,
-            metric_type=config.get("storage", {}).get("metric_type", "L2"),
-        )
-    except Exception as e:
-        raise HTTPException(
-            status_code=500, detail=f"Failed to initialise vector store: {e}"
-        )
-
-    with _pipeline_lock:
-        pipeline = _get_pipeline()
-        pipeline.embedder = new_embedder
-        pipeline.vector_store = new_vs
+        raise HTTPException(status_code=500, detail=f"Failed to update config: {e}")
 
     return {
         "applied": True,
-        "embedding": {
-            "provider": patch.embedding.provider,
-            "model": patch.embedding.model,
-        },
+        "embedding": {"provider": embed_provider, "model": embed_model},
     }
 
 
@@ -318,7 +167,7 @@ async def reindex(background_tasks: BackgroundTasks) -> ReindexResponse:
             detail="Ingestion already in progress. Please wait for it to complete.",
         )
 
-    background_tasks.add_task(_run_reindex_background)
+    background_tasks.add_task(run_reindex_background, STORAGE_DIR)
 
     return ReindexResponse(
         started=True,

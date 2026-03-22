@@ -3,6 +3,7 @@ import urllib.parse
 from typing import Any, Callable
 
 from adapters import BaseEmbedder, BaseLLM, create_embedder, create_llm
+from stores import VectorStore
 
 DEFAULT_CONTEXT_TEMPLATE = """Context information:
 {context}
@@ -108,3 +109,17 @@ def get_milvus_uri(config: dict[str, Any], config_path: Path) -> str:
         authority = f"{user_enc}:{pass_enc}@{authority}"
 
     return f"{scheme}://{authority}"
+
+
+def create_vector_store_from_config(
+    config: dict[str, Any], config_path: Path, embedder: BaseEmbedder
+) -> VectorStore:
+    """Create a configured VectorStore instance using the common configuration."""
+    collection_name = get_collection_name(config, embedder.model)
+    uri = get_milvus_uri(config, config_path)
+    return VectorStore(
+        dimension=embedder.dimension,
+        collection_name=collection_name,
+        uri=uri,
+        metric_type=config.get("storage", {}).get("metric_type", "L2"),
+    )

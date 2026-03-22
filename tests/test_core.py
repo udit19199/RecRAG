@@ -34,7 +34,9 @@ class TestVectorStore:
         assert results[0].text == document
         assert results[0].source == "test.pdf"
 
-    def test_add_multiple_documents(self, temp_vector_store: InMemoryVectorStore) -> None:
+    def test_add_multiple_documents(
+        self, temp_vector_store: InMemoryVectorStore
+    ) -> None:
         embeddings = [[0.1] * 128, [0.2] * 128, [0.3] * 128]
         documents = ["Doc 1", "Doc 2", "Doc 3"]
         metadata_list = [{"source": "a.pdf"}, {"source": "b.pdf"}, {"source": "c.pdf"}]
@@ -43,7 +45,9 @@ class TestVectorStore:
 
         assert temp_vector_store.count == 3
 
-    def test_search_returns_results(self, temp_vector_store: InMemoryVectorStore) -> None:
+    def test_search_returns_results(
+        self, temp_vector_store: InMemoryVectorStore
+    ) -> None:
         embeddings = [[0.1] * 128, [0.5] * 128]
         documents = ["Document A", "Document B"]
         metadata_list = [{"source": "a.pdf"}, {"source": "b.pdf"}]

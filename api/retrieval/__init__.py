@@ -2,4 +2,3 @@
 
 Contains the FastAPI routes and helpers for the retrieval service.
 """
-

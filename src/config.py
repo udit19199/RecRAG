@@ -32,6 +32,10 @@ def find_config_path(explicit_path: Path | None = None) -> Path:
 def load_config(config_path: Path = Path("config.toml")) -> dict[str, Any]:
     """Load TOML config with ${VAR:-default} environment variable substitution."""
     config = toml.load(config_path)
+    if not isinstance(config, dict):
+        raise ValueError(
+            f"Config file must contain a table at top level: {config_path}"
+        )
     return _substitute_env_vars(config)
 
 
@@ -48,7 +52,7 @@ def _substitute_env_vars(value: Any) -> Any:
 def _substitute_string(value: str) -> str:
     pattern = r"\$\{([^}:]+)(?::-([^}]*))?\}"
 
-    def replacer(match):
+    def replacer(match: re.Match[str]) -> str:
         var_name = match.group(1)
         default = match.group(2) or ""
         return os.environ.get(var_name, default)
@@ -87,3 +91,11 @@ def get_ingestion_dir(config: dict, config_path: Path) -> Path:
     """
     ingestion_dir = config.get("ingestion", {}).get("directory", "data/pdfs")
     return resolve_path(ingestion_dir, config_path)
+
+
+def get_frontend_origins(config: dict[str, Any]) -> list[str]:
+    """Return the configured frontend origins for CORS."""
+    origins = config.get("frontend", {}).get("origins", ["http://localhost:3000"])
+    if isinstance(origins, str):
+        return [origin.strip() for origin in origins.split(",") if origin.strip()]
+    return [str(origin).strip() for origin in origins if str(origin).strip()]

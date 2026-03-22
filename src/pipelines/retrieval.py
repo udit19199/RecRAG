@@ -6,14 +6,13 @@ import tiktoken
 from adapters import BaseEmbedder, BaseLLM
 from config import get_config_value, load_config
 from models.chunk import RetrievalResult
-from stores import BaseVectorStore, VectorStore
+from stores import VectorStore
 from .base import (
     DEFAULT_CONTEXT_TEMPLATE,
     DEFAULT_TOP_K,
     create_embedder_from_config,
     create_llm_from_config,
-    get_collection_name,
-    get_milvus_uri,
+    create_vector_store_from_config,
 )
 
 logger = logging.getLogger(__name__)
@@ -40,7 +39,7 @@ class RetrievalPipeline:
         self,
         embedder: BaseEmbedder,
         llm: BaseLLM,
-        vector_store: BaseVectorStore,
+        vector_store: VectorStore,
         top_k: int = DEFAULT_TOP_K,
         context_template: str = DEFAULT_CONTEXT_TEMPLATE,
         max_context_tokens: int = DEFAULT_MAX_CONTEXT_TOKENS,
@@ -63,14 +62,7 @@ class RetrievalPipeline:
         embedder = create_embedder_from_config(config)
         llm = create_llm_from_config(config)
 
-        collection_name = get_collection_name(config, embedder.model)
-        uri = get_milvus_uri(config, config_path)
-        vector_store = VectorStore(
-            dimension=embedder.dimension,
-            collection_name=collection_name,
-            uri=uri,
-            metric_type=config.get("storage", {}).get("metric_type", "L2"),
-        )
+        vector_store = create_vector_store_from_config(config, config_path, embedder)
 
         return cls(
             embedder=embedder,

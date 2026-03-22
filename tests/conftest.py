@@ -66,7 +66,7 @@ def temp_vector_store(
     """Return a fresh in-memory vector store for fast unit tests.
 
     Uses ``InMemoryVectorStore`` so tests have no dependency on a running
-    Milvus instance while still exercising the full ``BaseVectorStore`` API.
+    Milvus instance while still exercising the full ``VectorStore`` API.
     """
     return InMemoryVectorStore(dimension=mock_embedder.dimension)
 

@@ -2,4 +2,3 @@
 
 Keeps test package namespace tidy; no runtime side-effects expected.
 """
-
