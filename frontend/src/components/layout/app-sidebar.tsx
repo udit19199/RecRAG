@@ -63,8 +63,6 @@ export function AppSidebar() {
 						</div>
 					</SidebarMenuItem>
 				</SidebarMenu>
-
-				{/* keyboard hint removed to keep header clean */}
 			</SidebarHeader>
 
 			<SidebarContent className="px-1.5 py-3">
@@ -118,8 +116,6 @@ export function AppSidebar() {
 					</SidebarGroup>
 				))}
 			</SidebarContent>
-
-			{/* Footer removed to keep sidebar minimal */}
 
 			<SidebarRail />
 		</Sidebar>

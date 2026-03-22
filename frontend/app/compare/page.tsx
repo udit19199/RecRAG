@@ -1,5 +1,5 @@
-import { ModelComparisonWorkbench } from '@/components/compare/model-comparison-workbench';
+import { ModelComparisonWorkbench } from "@/features/model-compare/components/model-comparison-workbench";
 
 export default function ComparePage() {
-  return <ModelComparisonWorkbench />;
+	return <ModelComparisonWorkbench />;
 }
