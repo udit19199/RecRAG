@@ -98,6 +98,7 @@ class HealthResponse(BaseModel):
     status: str
     service: str
     pipeline_loaded: bool
+    has_documents: bool = False
     error_message: str | None = None
 
 

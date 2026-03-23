@@ -4,7 +4,8 @@ from typing import Any
 
 from adapters import BaseEmbedder
 from config import get_config_value, get_ingestion_dir
-from loaders import BaseDocumentLoader, DocumentLoader
+from loaders import BaseDocumentLoader, DocumentLoader, VisionPDFLoader
+from models.api import ExtractionMode
 from models.chunk import Chunk
 from splitters import BaseTextSplitter, TextSplitter
 from stores import VectorStore
@@ -32,6 +33,9 @@ class IngestionPipeline:
         config: dict[str, Any] | None = None,
         config_path: Path | None = None,
         batch_size: int = DEFAULT_BATCH_SIZE,
+        extraction_mode: ExtractionMode = ExtractionMode.TEXT_ONLY,
+        vision_provider: str | None = None,
+        vision_model: str | None = None,
     ):
         self.embedder = embedder
         self.splitter = splitter
@@ -40,10 +44,18 @@ class IngestionPipeline:
         self.config = config or {}
         self.config_path = config_path
         self.batch_size = batch_size
+        self.extraction_mode = extraction_mode
+        self.vision_provider = vision_provider
+        self.vision_model = vision_model
 
     @classmethod
     def from_config(
-        cls, config: dict[str, Any], config_path: Path
+        cls,
+        config: dict[str, Any],
+        config_path: Path,
+        extraction_mode: ExtractionMode = ExtractionMode.TEXT_ONLY,
+        vision_provider: str | None = None,
+        vision_model: str | None = None,
     ) -> "IngestionPipeline":
         """Create pipeline from configuration dictionary."""
         embedder = create_embedder_from_config(config)
@@ -55,7 +67,28 @@ class IngestionPipeline:
         vector_store = create_vector_store_from_config(config, config_path, embedder)
 
         ingestion_dir = get_ingestion_dir(config, config_path)
-        loader = DocumentLoader(str(ingestion_dir))
+
+        # Select loader based on extraction mode
+        loader: BaseDocumentLoader
+        if extraction_mode == ExtractionMode.VISION_ASSISTED:
+            # Get vision config from config or use provided overrides
+            vision_cfg = config.get("vision", {})
+            provider = vision_provider or vision_cfg.get("provider", "openai")
+            model = vision_model or vision_cfg.get("model", "gpt-4o-mini")
+            vision_kwargs = {
+                k: v for k, v in vision_cfg.items() if k not in ("provider", "model")
+            }
+            loader = VisionPDFLoader(
+                str(ingestion_dir),
+                vision_provider=provider,
+                vision_model=model,
+                vision_kwargs=vision_kwargs,
+            )
+            logger.info("Using vision-assisted extraction with %s/%s", provider, model)
+        else:
+            loader = DocumentLoader(str(ingestion_dir))
+            logger.info("Using text-only extraction")
+
         batch_size = get_config_value(
             config, "ingestion.batch_size", DEFAULT_BATCH_SIZE
         )
@@ -68,6 +101,9 @@ class IngestionPipeline:
             config=config,
             config_path=config_path,
             batch_size=batch_size,
+            extraction_mode=extraction_mode,
+            vision_provider=vision_provider,
+            vision_model=vision_model,
         )
 
     # ── File discovery ────────────────────────────────────────────────────────
@@ -133,6 +169,7 @@ class IngestionPipeline:
                 "chunks": 0,
                 "embeddings": 0,
                 "total_vectors": self.vector_store.count,
+                "extraction_mode": self.extraction_mode.value,
             }
 
         total_chunks, total_embeddings = self._process_files_in_batches(all_files)
@@ -141,6 +178,7 @@ class IngestionPipeline:
             "chunks": total_chunks,
             "embeddings": total_embeddings,
             "total_vectors": self.vector_store.count,
+            "extraction_mode": self.extraction_mode.value,
         }
 
     def process_all_documents(self, force: bool = False) -> dict[str, Any]:
@@ -154,15 +192,25 @@ class IngestionPipeline:
             "chunks": len(chunks),
             "embeddings": embeddings_count,
             "total_vectors": self.vector_store.count,
+            "extraction_mode": self.extraction_mode.value,
         }
 
 
 def run_ingestion(
     config_path: Path = Path("config.toml"),
     force: bool = False,
+    extraction_mode: ExtractionMode = ExtractionMode.TEXT_ONLY,
+    vision_provider: str | None = None,
+    vision_model: str | None = None,
 ) -> dict[str, Any]:
     from config import load_config
 
     config = load_config(config_path)
-    pipeline = IngestionPipeline.from_config(config, config_path)
+    pipeline = IngestionPipeline.from_config(
+        config,
+        config_path,
+        extraction_mode=extraction_mode,
+        vision_provider=vision_provider,
+        vision_model=vision_model,
+    )
     return pipeline.process_documents_streaming(force=force)

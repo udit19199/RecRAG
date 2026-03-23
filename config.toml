@@ -17,6 +17,16 @@ directory = "data/pdfs"
 chunk_size = 1024
 chunk_overlap = 50
 
+[vision]
+# Vision extraction settings (used when extraction_mode = "vision_assisted")
+# Provider options: "openai", "ollama", "nim"
+provider = "openai"
+model = "gpt-4o-mini"
+# For Ollama, uncomment:
+# provider = "ollama"
+# model = "llava:latest"
+# base_url = "http://localhost:11434"
+
 [retrieval]
 top_k = 4
 max_context_tokens = 4096

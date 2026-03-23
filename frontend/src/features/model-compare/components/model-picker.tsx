@@ -36,6 +36,12 @@ import {
 	setIngestionConfig,
 	triggerReindex,
 } from "@/lib/api";
+import type { ExtractionOptions, VisionProvider } from "@/lib/api/types";
+
+export interface VisionConfig {
+	provider: VisionProvider;
+	model: string;
+}
 
 interface ModelPickerProps {
 	onReindexStarted?: () => void;
@@ -43,6 +49,7 @@ interface ModelPickerProps {
 		embedding: AdapterConfig;
 		llm: AdapterConfig;
 	}) => void;
+	onVisionConfigChanged?: (config: VisionConfig | null) => void;
 	disabled?: boolean;
 }
 
@@ -58,15 +65,23 @@ function makeValue(provider: string, model: string) {
 	return `${provider}::${model}`;
 }
 
+function parseValue(value: string): { provider: string; model: string } | null {
+	const [provider, model] = value.split("::");
+	if (!provider || !model) return null;
+	return { provider, model };
+}
+
 export default function ModelPicker({
 	onReindexStarted,
 	onConfigChanged,
+	onVisionConfigChanged,
 	disabled = false,
 }: ModelPickerProps) {
 	const [providers, setProviders] = useState<ProvidersResponse | null>(null);
 	const [currentEmbedding, setCurrentEmbedding] =
 		useState<AdapterConfig | null>(null);
 	const [currentLLM, setCurrentLLM] = useState<AdapterConfig | null>(null);
+	const [currentVision, setCurrentVision] = useState<VisionConfig | null>(null);
 	const [isLoading, setIsLoading] = useState(true);
 	const [llmChanging, setLlmChanging] = useState(false);
 	const [embedChanging, setEmbedChanging] = useState(false);
@@ -99,6 +114,7 @@ export default function ModelPicker({
 		try {
 			const llm = localStorage.getItem("lastLLM");
 			const emb = localStorage.getItem("lastEmbedding");
+			const vision = localStorage.getItem("lastVision");
 
 			if (llm) {
 				const [provider, model] = llm.split("::");
@@ -111,10 +127,22 @@ export default function ModelPicker({
 				if (provider && model)
 					setCurrentEmbedding((prev) => prev ?? { provider, model });
 			}
+
+			if (vision) {
+				const parsed = parseValue(vision);
+				if (parsed) {
+					const visionConfig = {
+						provider: parsed.provider as VisionProvider,
+						model: parsed.model,
+					};
+					setCurrentVision(visionConfig);
+					onVisionConfigChanged?.(visionConfig);
+				}
+			}
 		} catch {
 			// ignore
 		}
-	}, []);
+	}, [onVisionConfigChanged]);
 
 	const handleLLMChange = async (value: string) => {
 		const [provider, model] = value.split("::");
@@ -153,6 +181,40 @@ export default function ModelPicker({
 		setPendingEmbedChange({ provider, model });
 	};
 
+	const handleVisionChange = (value: string | null) => {
+		if (!value) {
+			// Clear vision model
+			setCurrentVision(null);
+			onVisionConfigChanged?.(null);
+			try {
+				localStorage.removeItem("lastVision");
+			} catch {}
+			return;
+		}
+
+		const parsed = parseValue(value);
+		if (!parsed) return;
+
+		const visionConfig: VisionConfig = {
+			provider: parsed.provider as VisionProvider,
+			model: parsed.model,
+		};
+
+		if (
+			currentVision?.provider === visionConfig.provider &&
+			currentVision?.model === visionConfig.model
+		) {
+			return;
+		}
+
+		setCurrentVision(visionConfig);
+		onVisionConfigChanged?.(visionConfig);
+
+		try {
+			localStorage.setItem("lastVision", value);
+		} catch {}
+	};
+
 	const confirmEmbedChange = async () => {
 		if (!pendingEmbedChange) return;
 		const { provider, model } = pendingEmbedChange;
@@ -177,7 +239,15 @@ export default function ModelPicker({
 			onConfigChanged?.({ embedding: result.embedding, llm: result.llm });
 
 			if (result.requires_reindex) {
-				await triggerReindex();
+				// Build extraction options based on current vision config
+				const extractionOptions: ExtractionOptions | undefined = currentVision
+					? {
+							extraction_mode: "vision_assisted",
+							vision_provider: currentVision.provider,
+							vision_model: currentVision.model,
+						}
+					: undefined;
+				await triggerReindex(extractionOptions);
 				onReindexStarted?.();
 			}
 		} catch (err) {
@@ -195,13 +265,17 @@ export default function ModelPicker({
 	const currentEmbedValue = currentEmbedding
 		? makeValue(currentEmbedding.provider, currentEmbedding.model)
 		: undefined;
+	const currentVisionValue = currentVision
+		? makeValue(currentVision.provider, currentVision.model)
+		: undefined;
 
 	const renderSelect = (
-		role: "llm" | "embedding",
+		role: "llm" | "embedding" | "vision",
 		label: string,
 		value: string | undefined,
 		onChange: (v: string) => void,
 		isChanging: boolean,
+		allowClear = false,
 	) => {
 		if (isLoading || !providers) {
 			return (
@@ -214,7 +288,40 @@ export default function ModelPicker({
 			);
 		}
 
-		const providerMap = role === "llm" ? providers.llms : providers.embedders;
+		const providerMap =
+			role === "llm"
+				? providers.llms
+				: role === "embedding"
+					? providers.embedders
+					: (providers.vision ?? {});
+
+		const hasAnyModels = Object.values(providerMap).some(
+			(info) => info.available && info.models.length > 0,
+		);
+
+		// For vision, if no models available, show disabled state
+		if (role === "vision" && !hasAnyModels) {
+			return (
+				<div className="flex flex-col gap-1.5">
+					<span className="text-sm font-medium text-muted-foreground">
+						{label}
+					</span>
+					<Tooltip>
+						<TooltipTrigger asChild>
+							<div className="flex h-10 w-[13.5rem] cursor-not-allowed items-center rounded-md border border-input bg-muted/50 px-3 text-sm text-muted-foreground">
+								None (text only)
+							</div>
+						</TooltipTrigger>
+						<TooltipContent>
+							<p className="max-w-xs text-xs">
+								No vision models available. Configure OpenAI, Ollama with LLaVA,
+								or NVIDIA NIM to enable vision-assisted extraction.
+							</p>
+						</TooltipContent>
+					</Tooltip>
+				</div>
+			);
+		}
 
 		return (
 			<div className="flex flex-col gap-1.5">
@@ -231,18 +338,35 @@ export default function ModelPicker({
 					)}
 					value={value ?? null}
 					onValueChange={(nextValue) => {
-						if (typeof nextValue === "string") onChange(nextValue);
+						if (typeof nextValue === "string") {
+							onChange(nextValue);
+						} else if (nextValue === null && allowClear) {
+							onChange("");
+						}
 					}}
 					disabled={disabled || isChanging}
 				>
 					<ComboboxInput
-						placeholder={isChanging ? "Applying..." : "Select model"}
+						placeholder={
+							isChanging
+								? "Applying..."
+								: allowClear
+									? "None (text only)"
+									: "Select model"
+						}
 						readOnly={isChanging}
 						className={`w-[13.5rem] ${isChanging ? "opacity-60" : ""}`}
 					/>
 					<ComboboxContent>
 						<ComboboxEmpty>No matching models.</ComboboxEmpty>
 						<ComboboxList>
+							{allowClear && (
+								<ComboboxGroup>
+									<ComboboxItem value="" className="text-muted-foreground">
+										None (text only)
+									</ComboboxItem>
+								</ComboboxGroup>
+							)}
 							{Object.entries(providerMap).map(([providerKey, info]) => {
 								const providerLabel =
 									PROVIDER_LABELS[providerKey] ?? providerKey;
@@ -294,6 +418,14 @@ export default function ModelPicker({
 	return (
 		<>
 			<div className="flex items-end gap-4">
+				{renderSelect(
+					"vision",
+					"Vision Model",
+					currentVisionValue,
+					(v) => handleVisionChange(v || null),
+					false,
+					true,
+				)}
 				{renderSelect(
 					"embedding",
 					"Embedding",

@@ -1,5 +1,6 @@
 "use client";
 
+import { Eye, TextT } from "@phosphor-icons/react";
 import type { IngestionStatus } from "@/lib/api";
 
 interface IngestionStatusDisplayProps {
@@ -124,7 +125,7 @@ export default function IngestionStatusDisplay({
 		},
 		complete: {
 			label: "Complete",
-			description: `Successfully processed ${status.files_processed || 0} files. Chat is now enabled.`,
+			description: `Successfully processed ${status.files_processed || 0} files. Processing complete — you can now ask questions.`,
 			color: "text-emerald-400",
 			icon: (
 				<svg
@@ -187,6 +188,20 @@ export default function IngestionStatusDisplay({
 						<p className="mt-1 text-xs text-muted-foreground">
 							Completed at: {status.completed_at}
 						</p>
+					) : null}
+					{status.extraction_mode && status.status !== "idle" ? (
+						<div className="mt-2 flex items-center gap-1.5">
+							{status.extraction_mode === "vision_assisted" ? (
+								<Eye className="h-3.5 w-3.5 text-muted-foreground" />
+							) : (
+								<TextT className="h-3.5 w-3.5 text-muted-foreground" />
+							)}
+							<span className="text-xs text-muted-foreground">
+								{status.extraction_mode === "vision_assisted"
+									? "Vision Assisted"
+									: "Text Only"}
+							</span>
+						</div>
 					) : null}
 				</div>
 			</div>

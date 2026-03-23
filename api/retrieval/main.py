@@ -114,16 +114,29 @@ async def query(
     except HTTPException:
         raise
     except Exception as exc:
-        raise HTTPException(status_code=500, detail=f"Query failed: {exc}")
+        error_msg = str(exc)
+        if "Connection refused" in error_msg:
+            error_msg = "Could not connect to the model provider. Is the service (e.g. Ollama) running?"
+        raise HTTPException(status_code=500, detail=f"Query failed: {error_msg}")
 
 
 @app.get("/health", response_model=HealthResponse)
 async def health() -> HealthResponse:
     status, error = get_pipeline_status()
+    has_documents = False
+    if is_pipeline_loaded():
+        from services.retrieval import require_pipeline
+
+        try:
+            has_documents = require_pipeline().vector_store.count() > 0
+        except Exception:
+            pass
+
     return HealthResponse(
         status="healthy" if is_pipeline_loaded() else status,
         service="retrieval-api",
         pipeline_loaded=is_pipeline_loaded(),
+        has_documents=has_documents,
         error_message=error,
     )
 

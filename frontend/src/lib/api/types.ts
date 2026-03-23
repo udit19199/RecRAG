@@ -62,6 +62,7 @@ export interface HealthResponse {
 	status: string;
 	service: string;
 	pipeline_loaded?: boolean;
+	has_documents?: boolean;
 	error_message?: string | null;
 }
 

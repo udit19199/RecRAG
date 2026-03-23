@@ -73,7 +73,9 @@ export function UploadDialog({
 							<li className="flex items-start gap-2">
 								<span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
 								<span>
-									Use text-based PDFs (scanned images may not be readable).
+									Select a <strong>Vision Model</strong> above to enable
+									vision-assisted extraction for scanned documents and
+									infographics.
 								</span>
 							</li>
 							<li className="flex items-start gap-2">

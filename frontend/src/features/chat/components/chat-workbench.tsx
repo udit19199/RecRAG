@@ -1,17 +1,21 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { ChatInput } from "@/features/chat/components/chat-input";
 import { ChatMessageView } from "@/features/chat/components/chat-message";
 import { EmptyState } from "@/features/chat/components/empty-state";
 import { TypingIndicator } from "@/features/chat/components/typing-indicator";
 import { useChatSession } from "@/features/chat/hooks/use-chat-session";
 import IngestionStatusDisplay from "@/features/ingestion/components/ingestion-status";
-import ModelPicker from "@/features/model-compare/components/model-picker";
+import ModelPicker, {
+	type VisionConfig,
+} from "@/features/model-compare/components/model-picker";
+import type { ExtractionOptions } from "@/lib/api/types";
 
 export function ChatWorkbench() {
 	const {
 		isReady,
+		hasDocuments,
 		ingestionStatus,
 		statusError,
 		isUploading,
@@ -24,6 +28,7 @@ export function ChatWorkbench() {
 	} = useChatSession();
 
 	const chatBottomRef = useRef<HTMLDivElement>(null);
+	const [visionConfig, setVisionConfig] = useState<VisionConfig | null>(null);
 
 	useEffect(() => {
 		chatBottomRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -31,7 +36,32 @@ export function ChatWorkbench() {
 
 	const isIngesting = ingestionStatus?.status === "processing";
 	const canChat =
-		isReady && ingestionStatus?.status === "complete" && !isIngesting;
+		isReady &&
+		!isIngesting &&
+		(hasDocuments || ingestionStatus?.status === "complete");
+
+	// Build extraction options based on vision config
+	const getExtractionOptions = useCallback(():
+		| ExtractionOptions
+		| undefined => {
+		if (!visionConfig) {
+			return undefined;
+		}
+		return {
+			extraction_mode: "vision_assisted",
+			vision_provider: visionConfig.provider,
+			vision_model: visionConfig.model,
+		};
+	}, [visionConfig]);
+
+	// Wrap handleUpload to include extraction options
+	const handleUploadWithVision = useCallback(
+		async (files: File[]) => {
+			const options = getExtractionOptions();
+			await handleUpload(files, options);
+		},
+		[handleUpload, getExtractionOptions],
+	);
 
 	return (
 		<div className="flex h-full min-h-0 w-full flex-col overflow-hidden bg-muted/30">
@@ -39,13 +69,20 @@ export function ChatWorkbench() {
 				<section className="flex min-w-0 flex-1 flex-col gap-4 overflow-hidden">
 					<div className="flex flex-1 flex-col overflow-hidden rounded-xl border bg-card">
 						<div className="space-y-3 border-b bg-background px-4 py-3">
-							{isIngesting || uploadFeedback?.type === "error" ? (
+							{isIngesting ||
+							ingestionStatus?.status === "complete" ||
+							uploadFeedback?.type === "error" ? (
 								<div className="animate-in fade-in slide-in-from-top-2 duration-300">
 									<IngestionStatusDisplay
 										status={ingestionStatus}
 										error={statusError}
 										isLoading={false}
 									/>
+									{ingestionStatus?.status === "complete" && !isIngesting ? (
+										<div className="mt-2 rounded-lg border border-emerald-500/20 bg-emerald-500/5 px-3 py-2 text-xs text-emerald-600 dark:text-emerald-400">
+											Processing complete — you can now ask questions.
+										</div>
+									) : null}
 									{uploadFeedback?.type === "error" ? (
 										<div className="mt-2 rounded-lg border border-destructive/30 bg-destructive/5 px-3 py-2 text-xs text-destructive">
 											{uploadFeedback.message}
@@ -65,6 +102,7 @@ export function ChatWorkbench() {
 									disabled={isIngesting}
 									onReindexStarted={handleReindexStarted}
 									onConfigChanged={() => {}}
+									onVisionConfigChanged={setVisionConfig}
 								/>
 							</div>
 						</div>
@@ -73,7 +111,7 @@ export function ChatWorkbench() {
 							{messages.length === 0 ? (
 								<EmptyState
 									isReady={isReady}
-									onUpload={handleUpload}
+									onUpload={handleUploadWithVision}
 									isUploading={isUploading}
 								/>
 							) : (
@@ -91,7 +129,7 @@ export function ChatWorkbench() {
 					<div className="shrink-0 rounded-xl border bg-card p-4">
 						<ChatInput
 							onSubmit={handleQuery}
-							onUpload={handleUpload}
+							onUpload={handleUploadWithVision}
 							isLoading={isQuerying}
 							isUploading={isUploading || isIngesting}
 							disabled={!canChat || isIngesting}
@@ -100,7 +138,7 @@ export function ChatWorkbench() {
 									? "Document indexing in progress…"
 									: !isReady
 										? "Waiting for retrieval pipeline…"
-										: ingestionStatus?.status !== "complete"
+										: !(hasDocuments || ingestionStatus?.status === "complete")
 											? "Upload and index your documents before chatting."
 											: undefined
 							}

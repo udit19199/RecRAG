@@ -2,9 +2,10 @@ import logging
 import os
 import shutil
 from pathlib import Path
+from contextlib import asynccontextmanager
 from typing import Any
 
-from fastapi import BackgroundTasks, FastAPI, File, HTTPException, UploadFile
+from fastapi import BackgroundTasks, FastAPI, File, Form, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 
 from config import find_config_path, get_frontend_origins, load_config
@@ -16,6 +17,8 @@ from services.ingestion import (
 )
 from models.api import (
     EmbeddingConfigPatch,
+    ExtractionMode,
+    ReindexRequest,
     ReindexResponse,
     StatusResponse,
     UploadResponse,
@@ -36,6 +39,21 @@ CONFIG_PATH = _REPO_ROOT / "config.toml"
 
 # ── FastAPI app ───────────────────────────────────────────────────────────────
 
+
+@asynccontextmanager
+async def lifespan(_: FastAPI):
+    """Clear old ingestion status on startup."""
+    from utils.status import get_status_file
+
+    status_file = get_status_file(STORAGE_DIR)
+    if status_file.exists():
+        try:
+            status_file.unlink()
+        except OSError:
+            pass
+    yield
+
+
 app = FastAPI(
     title="RecRAG Ingestion API",
     description="API for uploading documents and checking ingestion status",
@@ -43,6 +61,7 @@ app = FastAPI(
     docs_url=None if _IS_PRODUCTION else "/docs",
     redoc_url=None if _IS_PRODUCTION else "/redoc",
     openapi_url=None if _IS_PRODUCTION else "/openapi.json",
+    lifespan=lifespan,
 )
 
 app.add_middleware(
@@ -59,9 +78,30 @@ app.add_middleware(
 async def upload_pdfs(
     background_tasks: BackgroundTasks,
     files: list[UploadFile] = File(...),
+    extraction_mode: str = Form(default="text_only"),
+    vision_provider: str | None = Form(default=None),
+    vision_model: str | None = Form(default=None),
 ) -> UploadResponse:
+    """Upload PDF files for ingestion.
+
+    Args:
+        files: PDF files to upload.
+        extraction_mode: "text_only" (default) or "vision_assisted".
+        vision_provider: Vision provider (openai, ollama, nim) when using vision mode.
+        vision_model: Vision model name when using vision mode.
+    """
     if not files:
         raise HTTPException(status_code=400, detail="At least one PDF file is required")
+
+    # Validate extraction mode
+    try:
+        mode = ExtractionMode(extraction_mode)
+    except ValueError:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Invalid extraction_mode: {extraction_mode}. "
+            f"Must be one of: {[e.value for e in ExtractionMode]}",
+        )
 
     current = read_status(STORAGE_DIR)
     if current.get("status") == "processing":
@@ -106,13 +146,20 @@ async def upload_pdfs(
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to save batch: {e}")
 
-    write_status(STORAGE_DIR, "idle", files_processed=0)
-    background_tasks.add_task(run_ingestion_background, STORAGE_DIR)
+    write_status(STORAGE_DIR, "idle", files_processed=0, extraction_mode=mode.value)
+    background_tasks.add_task(
+        run_ingestion_background,
+        STORAGE_DIR,
+        extraction_mode=mode,
+        vision_provider=vision_provider,
+        vision_model=vision_model,
+    )
 
     return UploadResponse(
         success=True,
         files_uploaded=len(staged_files),
-        message="Batch uploaded. Ingestion has started.",
+        message=f"Batch uploaded. Ingestion has started (mode={mode.value}).",
+        extraction_mode=mode.value,
     )
 
 
@@ -125,6 +172,7 @@ async def get_status() -> StatusResponse:
         completed_at=status.get("completed_at"),
         files_processed=status.get("files_processed"),
         error_message=status.get("error_message"),
+        extraction_mode=status.get("extraction_mode"),
     )
 
 
@@ -161,8 +209,14 @@ async def set_config(patch: EmbeddingConfigPatch) -> dict[str, Any]:
 
 
 @app.post("/reindex", response_model=ReindexResponse)
-async def reindex(background_tasks: BackgroundTasks) -> ReindexResponse:
+async def reindex(
+    background_tasks: BackgroundTasks,
+    request: ReindexRequest | None = None,
+) -> ReindexResponse:
     """Trigger a full re-index of all previously uploaded documents.
+
+    Args:
+        request: Optional request body with extraction_mode and vision settings.
 
     Rejected if ingestion is already running.
     """
@@ -173,9 +227,21 @@ async def reindex(background_tasks: BackgroundTasks) -> ReindexResponse:
             detail="Ingestion already in progress. Please wait for it to complete.",
         )
 
-    background_tasks.add_task(run_reindex_background, STORAGE_DIR)
+    # Use defaults if no request body provided
+    mode = request.extraction_mode if request else ExtractionMode.TEXT_ONLY
+    vision_provider = request.vision_provider if request else None
+    vision_model = request.vision_model if request else None
+
+    background_tasks.add_task(
+        run_reindex_background,
+        STORAGE_DIR,
+        extraction_mode=mode,
+        vision_provider=vision_provider,
+        vision_model=vision_model,
+    )
 
     return ReindexResponse(
         started=True,
-        message="Re-indexing started. Poll /status for progress.",
+        message=f"Re-indexing started (mode={mode.value}). Poll /status for progress.",
+        extraction_mode=mode.value,
     )

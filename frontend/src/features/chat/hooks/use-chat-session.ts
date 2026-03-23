@@ -15,6 +15,7 @@ import type { ExtractionOptions } from "@/lib/api/types";
 
 export function useChatSession() {
 	const [isReady, setIsReady] = useState(false);
+	const [hasDocuments, setHasDocuments] = useState(false);
 	const [ingestionStatus, setIngestionStatus] =
 		useState<IngestionStatus | null>(null);
 	const [statusError, setStatusError] = useState<string | null>(null);
@@ -48,6 +49,7 @@ export function useChatSession() {
 			try {
 				const health = await checkRetrievalHealth();
 				setIsReady(health.pipeline_loaded ?? false);
+				setHasDocuments(health.has_documents ?? false);
 			} catch {
 				setIsReady(false);
 			}
@@ -182,6 +184,7 @@ export function useChatSession() {
 
 	return {
 		isReady,
+		hasDocuments,
 		ingestionStatus,
 		statusError,
 		isUploading,

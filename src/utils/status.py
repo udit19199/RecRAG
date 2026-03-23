@@ -29,6 +29,7 @@ def write_status(
     completed_at: str | None = None,
     files_processed: int = 0,
     error_message: str | None = None,
+    extraction_mode: str | None = None,
 ) -> None:
     """Write ingestion status JSON to ``storage_dir``."""
     data: dict[str, Any] = {
@@ -37,6 +38,7 @@ def write_status(
         "completed_at": completed_at,
         "files_processed": files_processed,
         "error_message": error_message,
+        "extraction_mode": extraction_mode,
     }
     atomic_write_json(get_status_file(storage_dir), data)
 

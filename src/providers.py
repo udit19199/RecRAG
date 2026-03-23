@@ -26,6 +26,25 @@ OPENAI_LLM_MODELS = [
     "o3-mini",
 ]
 
+# Vision-capable models (multimodal)
+OPENAI_VISION_MODELS = [
+    "gpt-4o",
+    "gpt-4o-mini",
+    "gpt-4-turbo",
+]
+
+OLLAMA_VISION_MODELS = [
+    "llava:latest",
+    "llava-llama3:latest",
+    "bakllava:latest",
+    "llava:13b",
+    "llava:34b",
+]
+
+NIM_VISION_MODELS = [
+    "microsoft/phi-4-multimodal-instruct",
+]
+
 
 def _sorted_unique(values: list[str]) -> list[str]:
     return sorted(set(values))
@@ -131,3 +150,71 @@ def _fetch_nim_models(
         ]
     )
     return embed_models, llm_models
+
+
+def _fetch_ollama_vision_models(base_url: str) -> list[str]:
+    """Fetch vision-capable models from Ollama.
+
+    Ollama doesn't have a direct way to identify vision models,
+    so we check if known vision model names are available.
+
+    Returns:
+        List of available vision model names.
+    """
+    url = base_url.rstrip("/") + "/api/tags"
+    data = _fetch_json(url, timeout=5.0)
+    if data is None:
+        return []
+
+    available = {m["name"] for m in data.get("models", [])}
+    # Return intersection of known vision models and available models
+    vision_models = [m for m in OLLAMA_VISION_MODELS if m in available]
+    # Also include any model with 'llava' in the name
+    for name in available:
+        if "llava" in name.lower() and name not in vision_models:
+            vision_models.append(name)
+    return _sorted_unique(vision_models)
+
+
+def _fetch_openai_vision_models(api_key: str, base_url: str | None = None) -> list[str]:
+    """Fetch vision-capable models from OpenAI.
+
+    Returns:
+        List of available vision model names.
+    """
+    url = (base_url or "https://api.openai.com").rstrip("/") + "/v1/models"
+    headers = {"Authorization": f"Bearer {api_key}"}
+    data = _fetch_json(url, headers=headers)
+    if data is None:
+        return OPENAI_VISION_MODELS
+
+    all_ids: set[str] = {m["id"] for m in data.get("data", [])}
+    # Return intersection of known vision models and available models
+    return (
+        _sorted_unique([m for m in OPENAI_VISION_MODELS if m in all_ids])
+        or OPENAI_VISION_MODELS
+    )
+
+
+def _fetch_nim_vision_models(api_key: str, base_url: str | None = None) -> list[str]:
+    """Fetch vision-capable models from NVIDIA NIM.
+
+    Returns:
+        List of available vision model names.
+    """
+    url = (base_url or "https://integrate.api.nvidia.com/v1").rstrip("/") + "/models"
+    headers = {"Authorization": f"Bearer {api_key}"}
+    data = _fetch_json(url, headers=headers)
+    if data is None:
+        return NIM_VISION_MODELS
+
+    all_ids: set[str] = {m["id"] for m in data.get("data", [])}
+    # Return intersection of known vision models and available models
+    # Also include any model with 'multimodal' or 'vision' in the name
+    vision_models = [m for m in NIM_VISION_MODELS if m in all_ids]
+    for model_id in all_ids:
+        if (
+            "multimodal" in model_id.lower() or "vision" in model_id.lower()
+        ) and model_id not in vision_models:
+            vision_models.append(model_id)
+    return _sorted_unique(vision_models)
