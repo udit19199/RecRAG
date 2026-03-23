@@ -1,9 +1,26 @@
+from enum import Enum
+
 from pydantic import BaseModel
+
+
+class ExtractionMode(str, Enum):
+    """PDF extraction mode for ingestion."""
+
+    TEXT_ONLY = "text_only"
+    VISION_ASSISTED = "vision_assisted"
 
 
 class AdapterConfig(BaseModel):
     provider: str
     model: str
+
+
+class VisionConfig(BaseModel):
+    """Configuration for vision-assisted extraction."""
+
+    provider: str = "openai"
+    model: str = "gpt-4o-mini"
+    base_url: str | None = None
 
 
 # Ingestion models
@@ -13,26 +30,46 @@ class StatusResponse(BaseModel):
     completed_at: str | None = None
     files_processed: int | None = None
     error_message: str | None = None
+    extraction_mode: str | None = None
+
+
+class UploadRequest(BaseModel):
+    """Request body for upload endpoint (used with form data)."""
+
+    extraction_mode: ExtractionMode = ExtractionMode.TEXT_ONLY
+    vision_provider: str | None = None
+    vision_model: str | None = None
 
 
 class UploadResponse(BaseModel):
     success: bool
     files_uploaded: int
     message: str
+    extraction_mode: str
 
 
 class EmbeddingConfigPatch(BaseModel):
     embedding: AdapterConfig
 
 
+class ReindexRequest(BaseModel):
+    """Request body for reindex endpoint."""
+
+    extraction_mode: ExtractionMode = ExtractionMode.TEXT_ONLY
+    vision_provider: str | None = None
+    vision_model: str | None = None
+
+
 class ReindexResponse(BaseModel):
     started: bool
     message: str
+    extraction_mode: str
 
 
 # Retrieval models
 class QueryRequest(BaseModel):
     query: str
+    llm: AdapterConfig | None = None
 
 
 class ContextItem(BaseModel):
@@ -61,6 +98,7 @@ class HealthResponse(BaseModel):
     status: str
     service: str
     pipeline_loaded: bool
+    error_message: str | None = None
 
 
 class ProviderInfo(BaseModel):
@@ -72,6 +110,7 @@ class ProviderInfo(BaseModel):
 class ProvidersResponse(BaseModel):
     embedders: dict[str, ProviderInfo]
     llms: dict[str, ProviderInfo]
+    vision: dict[str, ProviderInfo] | None = None
 
 
 class ConfigResponse(BaseModel):

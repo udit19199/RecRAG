@@ -1,4 +1,5 @@
 import os
+from contextlib import asynccontextmanager
 from pathlib import Path
 
 from fastapi import BackgroundTasks, FastAPI, HTTPException
@@ -7,13 +8,19 @@ from fastapi.middleware.cors import CORSMiddleware
 from config import find_config_path, get_frontend_origins, load_config
 from providers import (
     _fetch_nim_models,
+    _fetch_nim_vision_models,
     _fetch_ollama_models,
+    _fetch_ollama_vision_models,
     _fetch_openai_models,
+    _fetch_openai_vision_models,
 )
 from services.retrieval import (
+    RetrievalUnavailableError,
+    get_pipeline_status,
     is_pipeline_loaded,
     run_eval_job,
     run_query,
+    start_pipeline_warmer,
     swap_runtime_config,
 )
 from utils.eval_jobs import read_eval_jobs
@@ -35,6 +42,14 @@ STORAGE_DIR = Path("storage")
 
 _IS_PRODUCTION = os.getenv("ENVIRONMENT", "").lower() == "production"
 
+
+@asynccontextmanager
+async def lifespan(_: FastAPI):
+    """Warm the retrieval pipeline before serving traffic."""
+    start_pipeline_warmer()
+    yield
+
+
 app = FastAPI(
     title="RecRAG Retrieval API",
     description="API for querying documents using Retrieval-Augmented Generation",
@@ -42,6 +57,7 @@ app = FastAPI(
     docs_url=None if _IS_PRODUCTION else "/docs",
     redoc_url=None if _IS_PRODUCTION else "/redoc",
     openapi_url=None if _IS_PRODUCTION else "/openapi.json",
+    lifespan=lifespan,
 )
 
 app.add_middleware(
@@ -63,8 +79,19 @@ async def query(
     if not request.query.strip():
         raise HTTPException(status_code=400, detail="Query cannot be empty")
 
+    if not is_pipeline_loaded():
+        status, error = get_pipeline_status()
+        detail = error or "Retrieval pipeline is not ready"
+        raise HTTPException(status_code=503, detail=f"{status}: {detail}")
+
     try:
-        result = run_query(request.query, STORAGE_DIR)
+        custom_llm = None
+        if request.llm:
+            from adapters import create_llm
+
+            custom_llm = create_llm(request.llm.provider, model=request.llm.model)
+
+        result = run_query(request.query, STORAGE_DIR, custom_llm=custom_llm)
         context = [
             ContextItem(text=doc.text, source=doc.source, distance=doc.distance)
             for doc in result.context
@@ -82,6 +109,8 @@ async def query(
         return QueryResponse(
             response=result.response, context=context, eval_job_id=result.eval_job_id
         )
+    except RetrievalUnavailableError as exc:
+        raise HTTPException(status_code=503, detail=str(exc))
     except HTTPException:
         raise
     except Exception as exc:
@@ -90,10 +119,12 @@ async def query(
 
 @app.get("/health", response_model=HealthResponse)
 async def health() -> HealthResponse:
+    status, error = get_pipeline_status()
     return HealthResponse(
-        status="healthy" if is_pipeline_loaded() else "starting",
+        status="healthy" if is_pipeline_loaded() else status,
         service="retrieval-api",
         pipeline_loaded=is_pipeline_loaded(),
+        error_message=error,
     )
 
 
@@ -142,15 +173,20 @@ async def get_providers() -> ProvidersResponse:
         _, extra_llm = _fetch_ollama_models(ollama_llm_url)
         ollama_llm_models = sorted(set(ollama_llm_models + extra_llm))
     ollama_available = bool(ollama_embed_models or ollama_llm_models)
+    ollama_vision_models = (
+        _fetch_ollama_vision_models(ollama_embed_url) if ollama_available else []
+    )
 
     openai_key = os.environ.get("OPENAI_API_KEY", "")
     if openai_key:
         openai_embed_models, openai_llm_models = _fetch_openai_models(openai_key)
         openai_available = bool(openai_embed_models or openai_llm_models)
         openai_reason = None
+        openai_vision_models = _fetch_openai_vision_models(openai_key)
     else:
         openai_embed_models = []
         openai_llm_models = []
+        openai_vision_models = []
         openai_available = False
         openai_reason = "OPENAI_API_KEY not set"
 
@@ -159,9 +195,13 @@ async def get_providers() -> ProvidersResponse:
         nim_embed_models, nim_llm_models = _fetch_nim_models(nvidia_key)
         nim_available = bool(nim_embed_models or nim_llm_models)
         nim_reason = None if nim_available else "No NIM models available"
+        nim_vision_models = (
+            _fetch_nim_vision_models(nvidia_key) if nim_available else []
+        )
     else:
         nim_embed_models = []
         nim_llm_models = []
+        nim_vision_models = []
         nim_available = False
         nim_reason = "NVIDIA_API_KEY not set"
 
@@ -198,6 +238,23 @@ async def get_providers() -> ProvidersResponse:
                 available=nim_available,
                 models=nim_llm_models,
                 reason=nim_reason,
+            ),
+        },
+        vision={
+            "ollama": ProviderInfo(
+                available=ollama_available and bool(ollama_vision_models),
+                models=ollama_vision_models,
+                reason=None if ollama_vision_models else "No vision models found",
+            ),
+            "openai": ProviderInfo(
+                available=openai_available and bool(openai_vision_models),
+                models=openai_vision_models,
+                reason=openai_reason if not openai_available else None,
+            ),
+            "nim": ProviderInfo(
+                available=nim_available and bool(nim_vision_models),
+                models=nim_vision_models,
+                reason=nim_reason if not nim_available else None,
             ),
         },
     )

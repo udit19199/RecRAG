@@ -29,6 +29,17 @@ export interface QueryWithEvalResponse extends QueryResponse {
 
 export interface QueryRequest {
 	query: string;
+	llm?: AdapterConfig;
+}
+
+export type ExtractionMode = "text_only" | "vision_assisted";
+
+export type VisionProvider = "openai" | "ollama" | "nim";
+
+export interface ExtractionOptions {
+	extraction_mode: ExtractionMode;
+	vision_provider?: VisionProvider;
+	vision_model?: string;
 }
 
 export interface IngestionStatus {
@@ -37,18 +48,21 @@ export interface IngestionStatus {
 	completed_at?: string;
 	files_processed?: number;
 	error_message?: string;
+	extraction_mode?: ExtractionMode;
 }
 
 export interface UploadResponse {
 	success: boolean;
 	files_uploaded: number;
 	message: string;
+	extraction_mode: ExtractionMode;
 }
 
 export interface HealthResponse {
 	status: string;
 	service: string;
 	pipeline_loaded?: boolean;
+	error_message?: string | null;
 }
 
 export interface AdapterConfig {
@@ -70,6 +84,7 @@ export interface ProviderInfo {
 export interface ProvidersResponse {
 	embedders: Record<string, ProviderInfo>;
 	llms: Record<string, ProviderInfo>;
+	vision?: Record<string, ProviderInfo>;
 }
 
 export interface ConfigPatch {
@@ -87,4 +102,5 @@ export interface SetConfigResponse {
 export interface ReindexResponse {
 	started: boolean;
 	message: string;
+	extraction_mode: ExtractionMode;
 }

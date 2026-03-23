@@ -5,15 +5,18 @@ import type {
 	EvalJobStatus,
 	HealthResponse,
 	ProvidersResponse,
+	QueryRequest,
 	QueryWithEvalResponse,
 	SetConfigResponse,
 } from "@/lib/api/types";
 
-export async function queryRAG(query: string): Promise<QueryWithEvalResponse> {
+export async function queryRAG(
+	request: QueryRequest,
+): Promise<QueryWithEvalResponse> {
 	const res = await fetch(getRetrievalApiUrl("/query"), {
 		method: "POST",
 		headers: { "Content-Type": "application/json" },
-		body: JSON.stringify({ query }),
+		body: JSON.stringify(request),
 	});
 
 	return handleResponse<QueryWithEvalResponse>(res);

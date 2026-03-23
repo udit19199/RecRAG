@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import logging
 import threading
 import uuid
 from dataclasses import dataclass
@@ -14,6 +15,8 @@ from pipelines import get_retrieval_pipeline
 from pipelines.base import create_vector_store_from_config
 from utils.eval_jobs import create_eval_job, update_eval_job
 
+logger = logging.getLogger(__name__)
+
 
 @dataclass(slots=True)
 class RetrievalQueryResult:
@@ -22,9 +25,15 @@ class RetrievalQueryResult:
     eval_job_id: str
 
 
-def run_query(query: str, storage_dir: Path) -> RetrievalQueryResult:
-    pipeline = get_pipeline()
-    result = pipeline.query(query)
+class RetrievalUnavailableError(RuntimeError):
+    """Raised when the retrieval pipeline cannot be used."""
+
+
+def run_query(
+    query: str, storage_dir: Path, custom_llm: Any | None = None
+) -> RetrievalQueryResult:
+    pipeline = require_pipeline()
+    result = pipeline.query(query, llm_override=custom_llm)
 
     job_id = str(uuid.uuid4())
     create_eval_job(storage_dir, job_id, query)
@@ -114,6 +123,11 @@ def swap_runtime_config(
 
 _PIPELINE: Any | None = None
 _PIPELINE_LOCK = threading.Lock()
+_PIPELINE_WARMER_LOCK = threading.Lock()
+_PIPELINE_WARMER_STARTED = False
+_PIPELINE_READY = threading.Event()
+_PIPELINE_STATUS = "starting"
+_PIPELINE_ERROR: str | None = None
 
 
 def get_pipeline() -> Any:
@@ -122,8 +136,66 @@ def get_pipeline() -> Any:
         with _PIPELINE_LOCK:
             if _PIPELINE is None:
                 _PIPELINE = get_retrieval_pipeline(find_config_path())
+                _mark_pipeline_ready()
+    return _PIPELINE
+
+
+def require_pipeline() -> Any:
+    if _PIPELINE is None:
+        status, error = get_pipeline_status()
+        message = error or "Retrieval pipeline is still starting"
+        raise RetrievalUnavailableError(f"{status}: {message}")
     return _PIPELINE
 
 
 def is_pipeline_loaded() -> bool:
     return _PIPELINE is not None
+
+
+def get_pipeline_status() -> tuple[str, str | None]:
+    return _PIPELINE_STATUS, _PIPELINE_ERROR
+
+
+def _mark_pipeline_ready() -> None:
+    global _PIPELINE_STATUS, _PIPELINE_ERROR
+    _PIPELINE_STATUS = "healthy"
+    _PIPELINE_ERROR = None
+    _PIPELINE_READY.set()
+
+
+def _mark_pipeline_degraded(error: str) -> None:
+    global _PIPELINE_STATUS, _PIPELINE_ERROR
+    _PIPELINE_STATUS = "degraded"
+    _PIPELINE_ERROR = error
+
+
+def warm_pipeline_once() -> bool:
+    try:
+        get_pipeline()
+        return True
+    except Exception as exc:  # noqa: BLE001
+        logger.exception("Retrieval pipeline warmup failed")
+        _mark_pipeline_degraded(str(exc))
+        return False
+
+
+def start_pipeline_warmer(retry_interval: float = 5.0) -> None:
+    global _PIPELINE_WARMER_STARTED
+
+    with _PIPELINE_WARMER_LOCK:
+        if _PIPELINE_WARMER_STARTED:
+            return
+        _PIPELINE_WARMER_STARTED = True
+
+    def _loop() -> None:
+        while not _PIPELINE_READY.is_set():
+            if warm_pipeline_once():
+                return
+            _PIPELINE_READY.wait(retry_interval)
+
+    thread = threading.Thread(
+        target=_loop,
+        name="retrieval-pipeline-warmer",
+        daemon=True,
+    )
+    thread.start()

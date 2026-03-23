@@ -87,10 +87,14 @@ class RetrievalPipeline:
         return results
 
     def generate(
-        self, query: str, context: Optional[list[RetrievalResult]] = None
+        self,
+        query: str,
+        context: Optional[list[RetrievalResult]] = None,
+        llm_override: Optional[BaseLLM] = None,
     ) -> str:
         context = context or self.retrieve(query)
-        model = getattr(self.llm, "model", "gpt-4")
+        llm_to_use = llm_override or self.llm
+        model = getattr(llm_to_use, "model", "gpt-4")
         overhead = _count_tokens(
             self.context_template.format(context="", question=query), model
         )
@@ -118,13 +122,18 @@ class RetrievalPipeline:
                 self.max_context_tokens,
             )
 
-        return self.llm.generate(
+        return llm_to_use.generate(
             self.context_template.format(context=context_text, question=query)
         )
 
-    def query(self, query: str) -> dict[str, Any]:
+    def query(
+        self, query: str, llm_override: Optional[BaseLLM] = None
+    ) -> dict[str, Any]:
         context = self.retrieve(query)
-        return {"response": self.generate(query, context), "context": context}
+        return {
+            "response": self.generate(query, context, llm_override),
+            "context": context,
+        }
 
 
 def get_retrieval_pipeline(

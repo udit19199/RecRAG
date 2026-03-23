@@ -1,25 +1,35 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
-import { Badge } from "@/components/ui/badge";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
+	Combobox,
+	ComboboxContent,
+	ComboboxEmpty,
+	ComboboxGroup,
+	ComboboxInput,
+	ComboboxItem,
+	ComboboxLabel,
+	ComboboxList,
+} from "@/components/ui/combobox";
+import {
 	Empty,
-	EmptyContent,
 	EmptyDescription,
 	EmptyHeader,
 	EmptyMedia,
 	EmptyTitle,
 } from "@/components/ui/empty";
-import { Separator } from "@/components/ui/separator";
+import { ChatInput } from "@/features/chat/components/chat-input";
+import { ChatMessageView } from "@/features/chat/components/chat-message";
+import { TypingIndicator } from "@/features/chat/components/typing-indicator";
+import type { ChatMessage } from "@/features/chat/types";
 import {
 	type AdapterConfig,
 	getConfig,
 	getProviders,
-	type ProviderInfo,
 	type ProvidersResponse,
+	queryRAG,
 } from "@/lib/api";
-import { cn } from "@/lib/utils";
 
 type CompareRole = "llm" | "embedding";
 
@@ -39,7 +49,7 @@ const PROVIDER_LABELS: Record<string, string> = {
 	nim: "NVIDIA NIM",
 };
 
-const ROLE_LABELS: Record<CompareRole, string> = {
+const _ROLE_LABELS: Record<CompareRole, string> = {
 	llm: "LLM",
 	embedding: "Embedding",
 };
@@ -48,60 +58,44 @@ function makeValue(provider: string, model: string) {
 	return `${provider}::${model}`;
 }
 
-function buildDefaults(
-	role: CompareRole,
-	providers: ProvidersResponse,
-	config: { embedding: AdapterConfig; llm: AdapterConfig },
-) {
-	const providerMap = role === "llm" ? providers.llms : providers.embedders;
-	const active = role === "llm" ? config.llm : config.embedding;
-	const keys = Object.entries(providerMap).flatMap(([provider, info]) =>
-		info.available
-			? info.models.map((model) => makeValue(provider, model))
-			: [],
-	);
-
-	const defaults: string[] = [];
-	const activeKey = makeValue(active.provider, active.model);
-
-	if (keys.includes(activeKey)) {
-		defaults.push(activeKey);
-	}
-
-	for (const key of keys) {
-		if (!defaults.includes(key)) defaults.push(key);
-		if (defaults.length === 2) break;
-	}
-
-	return defaults;
+function parseValue(value: string): AdapterConfig | null {
+	const [provider, model] = value.split("::");
+	if (!provider || !model) return null;
+	return { provider, model };
 }
 
 function getModelFamily(model: string) {
 	return model.split(/[:/]/)[0] || model;
 }
 
-function getModelVariant(model: string) {
+function _getModelVariant(model: string) {
 	const parts = model.split(":");
 	return parts.length > 1 ? parts.slice(1).join(":") : "default tag";
 }
 
-function getActivationImpact(role: CompareRole, isActive: boolean) {
-	if (isActive) return "Already active";
-	return role === "embedding" ? "Requires re-index" : "Hot-swappable";
-}
-
 export function ModelComparisonWorkbench() {
-	const [role, setRole] = useState<CompareRole>("llm");
 	const [providers, setProviders] = useState<ProvidersResponse | null>(null);
 	const [config, setConfig] = useState<{
 		embedding: AdapterConfig;
 		llm: AdapterConfig;
 	} | null>(null);
-	const [selectedByRole, setSelectedByRole] = useState<
-		Record<CompareRole, string[]>
-	>({ llm: [], embedding: [] });
+
+	const [slotA, setSlotA] = useState<string | null>(null);
+	const [slotB, setSlotB] = useState<string | null>(null);
+
 	const [isLoading, setIsLoading] = useState(true);
 	const [error, setError] = useState<string | null>(null);
+
+	// Chat state
+	const [messagesA, setMessagesA] = useState<ChatMessage[]>([]);
+	const [messagesB, setMessagesB] = useState<ChatMessage[]>([]);
+	const [isQuerying, setIsQuerying] = useState(false);
+	const messageIdRef = useRef(0);
+	const chatBottomRef = useRef<HTMLDivElement>(null);
+
+	const nextId = useCallback(() => {
+		return messageIdRef.current++;
+	}, []);
 
 	const loadData = useCallback(async () => {
 		setIsLoading(true);
@@ -114,10 +108,31 @@ export function ModelComparisonWorkbench() {
 			]);
 			setConfig(nextConfig);
 			setProviders(nextProviders);
-			setSelectedByRole({
-				llm: buildDefaults("llm", nextProviders, nextConfig),
-				embedding: buildDefaults("embedding", nextProviders, nextConfig),
-			});
+
+			// Pre-select defaults
+			const providerMap = nextProviders.llms;
+			const activeKey = makeValue(
+				nextConfig.llm.provider,
+				nextConfig.llm.model,
+			);
+			const keys = Object.entries(providerMap).flatMap(([provider, info]) =>
+				info.available
+					? info.models.map((model) => makeValue(provider, model))
+					: [],
+			);
+
+			const defaults: string[] = [];
+			if (keys.includes(activeKey)) {
+				defaults.push(activeKey);
+			}
+
+			for (const key of keys) {
+				if (!defaults.includes(key)) defaults.push(key);
+				if (defaults.length === 2) break;
+			}
+
+			if (defaults[0]) setSlotA(defaults[0]);
+			if (defaults[1]) setSlotB(defaults[1]);
 		} catch (err) {
 			setError(
 				err instanceof Error ? err.message : "Unable to load model inventory",
@@ -131,370 +146,302 @@ export function ModelComparisonWorkbench() {
 		loadData();
 	}, [loadData]);
 
-	const providerMap = useMemo(() => {
-		if (!providers) return null;
-		return role === "llm" ? providers.llms : providers.embedders;
-	}, [providers, role]);
+	useEffect(() => {
+		chatBottomRef.current?.scrollIntoView({ behavior: "smooth" });
+	});
 
-	const selectedModels = useMemo<CompareModel[]>(() => {
-		if (!providerMap || !config) return [];
+	const providerMap = providers?.llms;
 
-		const active = role === "llm" ? config.llm : config.embedding;
+	const getCompareModel = useCallback(
+		(value: string | null): CompareModel | null => {
+			if (!value || !providerMap || !config) return null;
 
-		return selectedByRole[role]
-			.map((value) => {
-				const [provider, model] = value.split("::");
-				if (!provider || !model) return null;
+			const parsed = parseValue(value);
+			if (!parsed) return null;
 
-				const info = providerMap[provider];
-				if (!info) return null;
+			const info = providerMap[parsed.provider];
+			if (!info) return null;
 
-				return {
-					id: value,
-					provider,
-					providerLabel: PROVIDER_LABELS[provider] ?? provider,
-					model,
-					role,
-					available: info.available,
-					isActive: active.provider === provider && active.model === model,
-				} satisfies CompareModel;
-			})
-			.filter((item): item is CompareModel => item !== null);
-	}, [config, providerMap, role, selectedByRole]);
+			return {
+				id: value,
+				provider: parsed.provider,
+				providerLabel: PROVIDER_LABELS[parsed.provider] ?? parsed.provider,
+				model: parsed.model,
+				role: "llm",
+				available: info.available,
+				isActive:
+					config.llm.provider === parsed.provider &&
+					config.llm.model === parsed.model,
+			};
+		},
+		[providerMap, config],
+	);
 
-	const selectedCount = selectedByRole[role].length;
-	const availableCount = useMemo(() => {
-		if (!providerMap) return 0;
-		return Object.values(providerMap).reduce(
-			(total, info) => total + (info.available ? info.models.length : 0),
-			0,
+	const modelA = getCompareModel(slotA);
+	const modelB = getCompareModel(slotB);
+
+	const handleQuery = useCallback(
+		async (query: string) => {
+			if (!query.trim() || isQuerying || !slotA || !slotB) return;
+
+			const configA = parseValue(slotA);
+			const configB = parseValue(slotB);
+			if (!configA || !configB) return;
+
+			const userMessageA: ChatMessage = {
+				id: nextId(),
+				role: "user",
+				content: query,
+			};
+			const userMessageB: ChatMessage = {
+				id: nextId(),
+				role: "user",
+				content: query,
+			};
+
+			setMessagesA((prev) => [...prev, userMessageA]);
+			setMessagesB((prev) => [...prev, userMessageB]);
+			setIsQuerying(true);
+
+			try {
+				const [resultA, resultB] = await Promise.allSettled([
+					queryRAG({ query, llm: configA }),
+					queryRAG({ query, llm: configB }),
+				]);
+
+				if (resultA.status === "fulfilled") {
+					setMessagesA((prev) => [
+						...prev,
+						{
+							id: nextId(),
+							role: "assistant",
+							content: resultA.value.response,
+							context: resultA.value.context,
+						},
+					]);
+				} else {
+					setMessagesA((prev) => [
+						...prev,
+						{
+							id: nextId(),
+							role: "assistant",
+							content: "",
+							error:
+								resultA.reason instanceof Error
+									? resultA.reason.message
+									: "Query failed",
+						},
+					]);
+				}
+
+				if (resultB.status === "fulfilled") {
+					setMessagesB((prev) => [
+						...prev,
+						{
+							id: nextId(),
+							role: "assistant",
+							content: resultB.value.response,
+							context: resultB.value.context,
+						},
+					]);
+				} else {
+					setMessagesB((prev) => [
+						...prev,
+						{
+							id: nextId(),
+							role: "assistant",
+							content: "",
+							error:
+								resultB.reason instanceof Error
+									? resultB.reason.message
+									: "Query failed",
+						},
+					]);
+				}
+			} finally {
+				setIsQuerying(false);
+			}
+		},
+		[isQuerying, slotA, slotB, nextId],
+	);
+
+	const renderCombobox = (
+		slot: "A" | "B",
+		value: string | null,
+		otherValue: string | null,
+	) => {
+		if (isLoading || !providerMap) {
+			return (
+				<Button variant="outline" disabled className="w-full justify-start">
+					Loading...
+				</Button>
+			);
+		}
+
+		return (
+			<Combobox
+				items={Object.entries(providerMap).flatMap(([providerKey, info]) =>
+					info.available
+						? info.models
+								.map((m) => makeValue(providerKey, m))
+								.filter((val) => val !== otherValue) // Prevent duplicate selection
+						: [],
+				)}
+				value={value}
+				onValueChange={(nextValue) => {
+					if (typeof nextValue === "string") {
+						if (slot === "A") setSlotA(nextValue);
+						else setSlotB(nextValue);
+					}
+				}}
+				disabled={isQuerying}
+			>
+				<ComboboxInput placeholder="Select model" className="w-full" />
+				<ComboboxContent className="w-[300px]">
+					<ComboboxEmpty>No matching models.</ComboboxEmpty>
+					<ComboboxList>
+						{Object.entries(providerMap).map(([providerKey, info]) => {
+							const providerLabel = PROVIDER_LABELS[providerKey] ?? providerKey;
+							if (!info.available || info.models.length === 0) return null;
+
+							const availableModels = info.models.filter(
+								(m) => makeValue(providerKey, m) !== otherValue,
+							);
+
+							if (availableModels.length === 0) return null;
+
+							return (
+								<ComboboxGroup key={providerKey}>
+									<ComboboxLabel>{providerLabel}</ComboboxLabel>
+									{availableModels.map((model) => (
+										<ComboboxItem
+											key={model}
+											value={makeValue(providerKey, model)}
+										>
+											{model}
+										</ComboboxItem>
+									))}
+								</ComboboxGroup>
+							);
+						})}
+					</ComboboxList>
+				</ComboboxContent>
+			</Combobox>
 		);
-	}, [providerMap]);
-
-	const availableProviders = useMemo(() => {
-		if (!providerMap) return 0;
-		return Object.values(providerMap).filter((info) => info.available).length;
-	}, [providerMap]);
-
-	const toggleSelection = (value: string) => {
-		setSelectedByRole((current) => {
-			const selection = current[role];
-
-			if (selection.includes(value)) {
-				return {
-					...current,
-					[role]: selection.filter((entry) => entry !== value),
-				};
-			}
-
-			if (selection.length >= 3) {
-				return { ...current, [role]: [...selection.slice(1), value] };
-			}
-
-			return { ...current, [role]: [...selection, value] };
-		});
 	};
 
 	return (
 		<div className="flex h-full min-h-0 w-full flex-col overflow-hidden bg-muted/30 p-4">
-			<div className="grid min-h-0 flex-1 gap-4 xl:grid-cols-[340px_minmax(0,1fr)]">
-				<aside className="flex min-h-0 flex-col gap-4 rounded-xl border bg-card p-4">
-					<div className="flex flex-col gap-2">
-						<p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
-							Selection scope
-						</p>
-						<div className="grid grid-cols-2 gap-2">
-							{(["llm", "embedding"] as const).map((nextRole) => (
-								<Button
-									key={nextRole}
-									type="button"
-									variant={role === nextRole ? "default" : "outline"}
-									onClick={() => setRole(nextRole)}
-								>
-									{ROLE_LABELS[nextRole]}
-								</Button>
-							))}
-						</div>
-					</div>
-
-					<div className="grid gap-3 sm:grid-cols-3 xl:grid-cols-1">
-						<SummaryCard
-							label="Available models"
-							value={availableCount}
-							detail={`${availableProviders} providers online`}
-						/>
-						<SummaryCard
-							label="Selected"
-							value={selectedCount}
-							detail="Up to 3 side by side"
-						/>
-						<SummaryCard
-							label="Active profile"
-							value={config ? ROLE_LABELS[role] : "--"}
-							detail={
-								config
-									? role === "llm"
-										? config.llm.model
-										: config.embedding.model
-									: "Waiting for API"
-							}
-						/>
-					</div>
-
-					<Separator />
-
-					<div className="flex items-center justify-between gap-3">
+			<div className="mx-auto flex h-full w-full max-w-[1440px] flex-col gap-4">
+				<header className="shrink-0 rounded-xl border bg-card p-5">
+					<div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
 						<div>
-							<p className="text-sm font-semibold uppercase tracking-[0.16em] text-foreground">
-								Candidate models
+							<h1 className="text-xl font-semibold text-foreground">
+								Model Comparison
+							</h1>
+							<p className="mt-1 text-sm text-muted-foreground">
+								Select two LLMs to compare their generation quality
+								side-by-side.
 							</p>
-							<p className="text-xs text-muted-foreground">
-								Pick two or three entries to compare metadata and activation
-								impact.
-							</p>
 						</div>
-						<Button
-							type="button"
-							variant="outline"
-							size="sm"
-							onClick={loadData}
-							disabled={isLoading}
-						>
-							{isLoading ? "Refreshing..." : "Refresh"}
-						</Button>
+						{error && <p className="text-sm text-destructive">{error}</p>}
 					</div>
 
-					<div className="min-h-0 flex-1 overflow-y-auto pr-1">
-						{error ? (
-							<div className="rounded-xl border border-destructive/30 bg-destructive/5 px-4 py-3 text-sm text-destructive">
-								{error}
-							</div>
-						) : null}
-						{!error && !providerMap ? (
-							<div className="rounded-xl border bg-muted/30 px-4 py-3 text-sm text-muted-foreground">
-								Loading available providers...
-							</div>
-						) : null}
-						{!error && providerMap ? (
-							<div className="flex flex-col gap-4">
-								{Object.entries(providerMap).map(([provider, info]) => (
-									<ProviderGroup
-										key={provider}
-										provider={provider}
-										info={info}
-										role={role}
-										selected={selectedByRole[role]}
-										onToggle={toggleSelection}
-									/>
-								))}
-							</div>
-						) : null}
-					</div>
-				</aside>
-
-				<section className="flex min-h-0 flex-col gap-4">
-					<div className="rounded-xl border bg-card px-5 py-4">
-						<div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
-							<div>
-								<p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
-									Comparison board
-								</p>
-								<h2 className="text-lg font-semibold text-foreground">
-									{ROLE_LABELS[role]} inventory snapshot
-								</h2>
-							</div>
-
-							<div className="flex flex-wrap items-center gap-2">
-								{selectedModels.map((model) => (
-									<Badge
-										key={model.id}
-										variant={model.isActive ? "default" : "secondary"}
-									>
-										{model.model}
-									</Badge>
-								))}
-							</div>
+					<div className="mt-6 grid gap-6 md:grid-cols-2">
+						<div className="flex flex-col gap-2">
+							<span className="text-sm font-medium text-foreground">
+								Slot A
+							</span>
+							{renderCombobox("A", slotA, slotB)}
+							{modelA && (
+								<div className="mt-2 text-xs text-muted-foreground">
+									{modelA.providerLabel} &bull; {getModelFamily(modelA.model)}
+								</div>
+							)}
+						</div>
+						<div className="flex flex-col gap-2">
+							<span className="text-sm font-medium text-foreground">
+								Slot B
+							</span>
+							{renderCombobox("B", slotB, slotA)}
+							{modelB && (
+								<div className="mt-2 text-xs text-muted-foreground">
+									{modelB.providerLabel} &bull; {getModelFamily(modelB.model)}
+								</div>
+							)}
 						</div>
 					</div>
+				</header>
 
-					{selectedModels.length >= 2 ? (
-						<div className="grid min-h-0 flex-1 auto-rows-fr gap-4 md:grid-cols-2 xl:grid-cols-3">
-							{selectedModels.map((model) => (
-								<CompareCard key={model.id} model={model} />
-							))}
-						</div>
-					) : (
-						<Empty className="min-h-[320px] rounded-xl border bg-card">
+				{!modelA || !modelB ? (
+					<div className="flex flex-1 items-center justify-center rounded-xl border bg-card p-8">
+						<Empty>
 							<EmptyHeader>
 								<EmptyMedia variant="icon">{"//"}</EmptyMedia>
-								<EmptyTitle>Select at least two models</EmptyTitle>
+								<EmptyTitle>Select exactly two models</EmptyTitle>
 								<EmptyDescription>
-									Use the inventory list to choose multiple{" "}
-									{ROLE_LABELS[role].toLowerCase()} candidates. The comparison
-									grid updates instantly and keeps the current active model
-									highlighted.
+									Use the dropdowns above to choose two different LLM
+									candidates.
 								</EmptyDescription>
 							</EmptyHeader>
-							<EmptyContent>
-								<Badge variant="outline">Max 3 models</Badge>
-							</EmptyContent>
 						</Empty>
-					)}
-				</section>
-			</div>
-		</div>
-	);
-}
-
-function SummaryCard({
-	label,
-	value,
-	detail,
-}: {
-	label: string;
-	value: string | number;
-	detail: string;
-}) {
-	return (
-		<div className="rounded-xl border bg-muted/20 px-4 py-3">
-			<p className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
-				{label}
-			</p>
-			<p className="mt-2 text-lg font-semibold text-foreground">{value}</p>
-			<p className="mt-1 text-xs text-muted-foreground">{detail}</p>
-		</div>
-	);
-}
-
-function ProviderGroup({
-	provider,
-	info,
-	role,
-	selected,
-	onToggle,
-}: {
-	provider: string;
-	info: ProviderInfo;
-	role: CompareRole;
-	selected: string[];
-	onToggle: (value: string) => void;
-}) {
-	const providerLabel = PROVIDER_LABELS[provider] ?? provider;
-
-	return (
-		<div className="flex flex-col gap-2">
-			<div className="flex items-center justify-between gap-3">
-				<p className="text-xs font-semibold uppercase tracking-[0.14em] text-foreground">
-					{providerLabel}
-				</p>
-				<Badge variant={info.available ? "secondary" : "outline"}>
-					{info.available ? `${info.models.length} online` : "Unavailable"}
-				</Badge>
-			</div>
-
-			{!info.available ? (
-				<div className="rounded-xl border border-dashed bg-muted/20 px-3 py-2 text-xs text-muted-foreground">
-					{info.reason ||
-						`No ${ROLE_LABELS[role].toLowerCase()} models reported by this provider.`}
-				</div>
-			) : (
-				<div className="flex flex-col gap-2">
-					{info.models.map((model) => {
-						const value = makeValue(provider, model);
-						const isSelected = selected.includes(value);
-
-						return (
-							<button
-								key={value}
-								type="button"
-								onClick={() => onToggle(value)}
-								className={cn(
-									"flex w-full flex-col gap-1 rounded-xl border px-3 py-3 text-left transition-colors",
-									isSelected
-										? "border-foreground bg-muted text-foreground"
-										: "bg-background hover:bg-muted/40",
-								)}
-							>
-								<div className="flex items-center justify-between gap-3">
-									<span className="truncate text-sm font-medium text-foreground">
-										{model}
-									</span>
-									<Badge variant={isSelected ? "default" : "outline"}>
-										{isSelected ? "Selected" : "Add"}
-									</Badge>
+					</div>
+				) : (
+					<div className="flex min-h-0 flex-1 flex-col gap-4 overflow-hidden">
+						<div className="grid min-h-0 flex-1 grid-cols-1 gap-4 overflow-hidden md:grid-cols-2">
+							{/* Chat A */}
+							<div className="flex h-full flex-col overflow-y-auto rounded-xl border bg-card p-4">
+								<h3 className="sticky top-0 z-10 bg-card pb-4 text-sm font-semibold tracking-wider text-foreground">
+									{modelA.model}
+								</h3>
+								<div className="flex flex-col gap-5">
+									{messagesA.length === 0 ? (
+										<p className="text-sm text-muted-foreground">
+											No messages yet.
+										</p>
+									) : (
+										messagesA.map((msg) => (
+											<ChatMessageView key={msg.id} message={msg} />
+										))
+									)}
+									{isQuerying && <TypingIndicator />}
+									<div ref={chatBottomRef} />
 								</div>
-								<span className="text-xs text-muted-foreground">
-									{role === "embedding"
-										? "Vector indexing candidate"
-										: "Generation candidate"}
-								</span>
-							</button>
-						);
-					})}
-				</div>
-			)}
-		</div>
-	);
-}
+							</div>
 
-function CompareCard({ model }: { model: CompareModel }) {
-	return (
-		<article className="flex h-full flex-col rounded-xl border bg-card p-5">
-			<div className="flex items-start justify-between gap-3">
-				<div className="min-w-0">
-					<p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
-						{ROLE_LABELS[model.role]}
-					</p>
-					<h3 className="mt-2 break-words text-base font-semibold text-foreground">
-						{model.model}
-					</h3>
-					<p className="mt-1 text-sm text-muted-foreground">
-						{model.providerLabel}
-					</p>
-				</div>
+							{/* Chat B */}
+							<div className="flex h-full flex-col overflow-y-auto rounded-xl border bg-card p-4">
+								<h3 className="sticky top-0 z-10 bg-card pb-4 text-sm font-semibold tracking-wider text-foreground">
+									{modelB.model}
+								</h3>
+								<div className="flex flex-col gap-5">
+									{messagesB.length === 0 ? (
+										<p className="text-sm text-muted-foreground">
+											No messages yet.
+										</p>
+									) : (
+										messagesB.map((msg) => (
+											<ChatMessageView key={msg.id} message={msg} />
+										))
+									)}
+									{isQuerying && <TypingIndicator />}
+									<div ref={chatBottomRef} />
+								</div>
+							</div>
+						</div>
 
-				<div className="flex flex-col items-end gap-2">
-					<Badge variant={model.isActive ? "default" : "secondary"}>
-						{model.isActive ? "Active" : "Candidate"}
-					</Badge>
-					<Badge variant={model.available ? "outline" : "destructive"}>
-						{model.available ? "Available" : "Offline"}
-					</Badge>
-				</div>
+						<div className="shrink-0 rounded-xl border bg-card p-4">
+							<ChatInput
+								onSubmit={handleQuery}
+								onUpload={async () => {}} // Not supporting upload here
+								isLoading={isQuerying}
+								isUploading={false}
+								disabled={isQuerying}
+							/>
+						</div>
+					</div>
+				)}
 			</div>
-
-			<Separator className="my-4" />
-
-			<dl className="flex flex-1 flex-col gap-3 text-sm">
-				<MetricRow label="Provider" value={model.providerLabel} />
-				<MetricRow label="Family" value={getModelFamily(model.model)} />
-				<MetricRow label="Variant" value={getModelVariant(model.model)} />
-				<MetricRow
-					label="Switch impact"
-					value={getActivationImpact(model.role, model.isActive)}
-				/>
-				<MetricRow
-					label="Current role"
-					value={
-						model.role === "embedding"
-							? "Retrieval embeddings"
-							: "Response generation"
-					}
-				/>
-			</dl>
-		</article>
-	);
-}
-
-function MetricRow({ label, value }: { label: string; value: string }) {
-	return (
-		<div className="flex items-start justify-between gap-4 border-b border-dashed pb-3 last:border-b-0 last:pb-0">
-			<dt className="text-xs uppercase tracking-[0.14em] text-muted-foreground">
-				{label}
-			</dt>
-			<dd className="max-w-[65%] text-right text-sm text-foreground">
-				{value}
-			</dd>
 		</div>
 	);
 }

@@ -11,6 +11,7 @@ import {
 	uploadPDFs,
 	waitForIngestionComplete,
 } from "@/lib/api";
+import type { ExtractionOptions } from "@/lib/api/types";
 
 export function useChatSession() {
 	const [isReady, setIsReady] = useState(false);
@@ -78,7 +79,7 @@ export function useChatSession() {
 			setIsQuerying(true);
 
 			try {
-				const result = await queryRAG(query);
+				const result = await queryRAG({ query });
 				const assistantId = nextId();
 				setMessages((prev) => [
 					...prev,
@@ -154,27 +155,30 @@ export function useChatSession() {
 		[isQuerying, nextId],
 	);
 
-	const handleUpload = useCallback(async (files: File[]) => {
-		setIsUploading(true);
-		setUploadFeedback(null);
+	const handleUpload = useCallback(
+		async (files: File[], options?: ExtractionOptions) => {
+			setIsUploading(true);
+			setUploadFeedback(null);
 
-		try {
-			await uploadPDFs(files);
-			setUploadFeedback({
-				type: "success",
-				message: `${files.length} file${files.length > 1 ? "s" : ""} uploaded. Existing corpus replaced and processing started.`,
-			});
-			const finalStatus = await waitForIngestionComplete();
-			setIngestionStatus(finalStatus);
-		} catch (err) {
-			setUploadFeedback({
-				type: "error",
-				message: err instanceof Error ? err.message : "Upload failed",
-			});
-		} finally {
-			setIsUploading(false);
-		}
-	}, []);
+			try {
+				await uploadPDFs(files, options);
+				setUploadFeedback({
+					type: "success",
+					message: `${files.length} file${files.length > 1 ? "s" : ""} uploaded. Existing corpus replaced and processing started.`,
+				});
+				const finalStatus = await waitForIngestionComplete();
+				setIngestionStatus(finalStatus);
+			} catch (err) {
+				setUploadFeedback({
+					type: "error",
+					message: err instanceof Error ? err.message : "Upload failed",
+				});
+			} finally {
+				setIsUploading(false);
+			}
+		},
+		[],
+	);
 
 	return {
 		isReady,
