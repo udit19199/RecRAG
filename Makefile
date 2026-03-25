@@ -5,7 +5,8 @@
 
 .PHONY: install setup dev retrieval ingestion frontend ingest evaluate \
         lint lint-backend lint-frontend format format-backend format-frontend \
-        test typecheck check clean infra-up infra-down infra-logs docker-up docker-down help
+        test typecheck check clean infra-up infra-down infra-logs \
+        milvus-up milvus-down milvus-logs docker-up docker-down help
 
 # ── Variables ─────────────────────────────────────────────────────────────────
 
@@ -67,6 +68,15 @@ infra-down: ## Stop infrastructure services
 
 infra-logs: ## Show logs for infrastructure services
 	$(DOCKER_COMPOSE) --profile server logs -f
+
+milvus-up: ## Start only Milvus + etcd + MinIO
+	$(DOCKER_COMPOSE) -f docker-compose.milvus.yml up -d
+
+milvus-down: ## Stop only Milvus + etcd + MinIO
+	$(DOCKER_COMPOSE) -f docker-compose.milvus.yml down
+
+milvus-logs: ## Show logs for only Milvus + etcd + MinIO
+	$(DOCKER_COMPOSE) -f docker-compose.milvus.yml logs -f
 
 docker-up: ## Start the full stack (including apps) in Docker
 	$(DOCKER_COMPOSE) up -d

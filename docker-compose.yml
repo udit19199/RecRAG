@@ -1,63 +1,10 @@
 services:
-  ollama:
-    image: ollama/ollama:latest
-    volumes:
-      - ollama_data:/root/.ollama
-    ports:
-      - "11434:11434"
-    container_name: recrag-ollama
-    deploy:
-      resources:
-        limits:
-          memory: 8G
-          cpus: '4'
-        reservations:
-          devices:
-            - driver: nvidia
-              count: 1
-              capabilities: [gpu]
-    healthcheck:
-      test: ["CMD-SHELL", "ollama list > /dev/null 2>&1"]
-      interval: 5s
-      timeout: 5s
-      retries: 10
-    networks:
-      - recrag-network
-
-  ollama-init:
-    image: curlimages/curl:latest
-    depends_on:
-      ollama:
-        condition: service_healthy
-    env_file:
-      - .env
-    volumes:
-      - ollama_data:/root/.ollama
-    container_name: recrag-ollama-init
-    command: >
-      sh -c "
-        echo 'Pulling embedding model: '$$EMBEDDING_MODEL'...' &&
-        curl -s -X POST http://ollama:11434/api/pull -d '{\"name\": \"'$$EMBEDDING_MODEL'\"}' &&
-        echo 'Embedding model pulled successfully' &&
-        if [ \"$$LLM_PROVIDER\" = 'ollama' ]; then
-          echo 'Pulling LLM model: '$$LLM_MODEL'...' &&
-          curl -s -X POST http://ollama:11434/api/pull -d '{\"name\": \"'$$LLM_MODEL'\"}' &&
-          echo 'LLM model pulled successfully'
-        fi &&
-        echo 'All models pulled successfully'
-      "
-    networks:
-      - recrag-network
-
   # FastAPI service for ingestion (upload PDFs, check status)
   api-ingestion:
     build:
       context: .
       dockerfile: Dockerfile
       target: api
-    depends_on:
-      ollama-init:
-        condition: service_completed_successfully
     volumes:
       - ./data:/app/data
       - ./storage:/app/storage
@@ -89,9 +36,6 @@ services:
       - .env
     ports:
       - "8000:8000"
-    depends_on:
-      ollama-init:
-        condition: service_completed_successfully
     command: uv run uvicorn api.retrieval.main:app --host 0.0.0.0 --port 8000
     container_name: recrag-api-retrieval
     healthcheck:
@@ -220,7 +164,6 @@ networks:
     driver: bridge
 
 volumes:
-  ollama_data:
   # Volumes for the Milvus Standalone server stack (--profile server)
   etcd_data:
   minio_data:

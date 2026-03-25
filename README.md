@@ -22,6 +22,16 @@ make dev        # Start all services (Next.js + APIs)
 - **Checks**: `make check` (Lint + Test)
 - **Tools**: `make ingest` / `make evaluate`
 
+## Milvus Only
+
+If you only want the vector database stack, run:
+
+```bash
+make milvus-up
+```
+
+This starts only `etcd`, `minio`, and `milvus` from `docker-compose.milvus.yml`.
+
 ---
 
 ## Configuration
