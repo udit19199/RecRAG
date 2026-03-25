@@ -1,17 +1,8 @@
 "use client";
 
+import { Loader2 } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
-import {
-	Combobox,
-	ComboboxContent,
-	ComboboxEmpty,
-	ComboboxGroup,
-	ComboboxInput,
-	ComboboxItem,
-	ComboboxLabel,
-	ComboboxList,
-} from "@/components/ui/combobox";
 import {
 	Empty,
 	EmptyDescription,
@@ -24,67 +15,46 @@ import { ChatMessageView } from "@/features/chat/components/chat-message";
 import { TypingIndicator } from "@/features/chat/components/typing-indicator";
 import type { ChatMessage } from "@/features/chat/types";
 import {
-	type AdapterConfig,
+	checkIndexStatus,
 	getConfig,
+	getIngestionStatus,
 	getProviders,
 	type ProvidersResponse,
 	queryRAG,
+	triggerTargetedIngest,
 } from "@/lib/api";
+import { makeValue, parseValue, SlotPicker } from "./slot-picker";
 
-type CompareRole = "llm" | "embedding";
-
-type CompareModel = {
-	id: string;
-	provider: string;
-	providerLabel: string;
-	model: string;
-	role: CompareRole;
-	available: boolean;
-	isActive: boolean;
+type SlotState = {
+	vision: string | null;
+	embedding: string | null;
+	llm: string | null;
+	hasDocuments: boolean;
+	isChecking: boolean;
 };
-
-const PROVIDER_LABELS: Record<string, string> = {
-	ollama: "Ollama",
-	openai: "OpenAI",
-	nim: "NVIDIA NIM",
-};
-
-const _ROLE_LABELS: Record<CompareRole, string> = {
-	llm: "LLM",
-	embedding: "Embedding",
-};
-
-function makeValue(provider: string, model: string) {
-	return `${provider}::${model}`;
-}
-
-function parseValue(value: string): AdapterConfig | null {
-	const [provider, model] = value.split("::");
-	if (!provider || !model) return null;
-	return { provider, model };
-}
-
-function getModelFamily(model: string) {
-	return model.split(/[:/]/)[0] || model;
-}
-
-function _getModelVariant(model: string) {
-	const parts = model.split(":");
-	return parts.length > 1 ? parts.slice(1).join(":") : "default tag";
-}
 
 export function ModelComparisonWorkbench() {
 	const [providers, setProviders] = useState<ProvidersResponse | null>(null);
-	const [config, setConfig] = useState<{
-		embedding: AdapterConfig;
-		llm: AdapterConfig;
-	} | null>(null);
-
-	const [slotA, setSlotA] = useState<string | null>(null);
-	const [slotB, setSlotB] = useState<string | null>(null);
-
 	const [isLoading, setIsLoading] = useState(true);
 	const [error, setError] = useState<string | null>(null);
+
+	const [slotA, setSlotA] = useState<SlotState>({
+		vision: null,
+		embedding: null,
+		llm: null,
+		hasDocuments: false,
+		isChecking: false,
+	});
+	const [slotB, setSlotB] = useState<SlotState>({
+		vision: null,
+		embedding: null,
+		llm: null,
+		hasDocuments: false,
+		isChecking: false,
+	});
+
+	const [ingestingSlot, setIngestingSlot] = useState<"A" | "B" | null>(null);
+	const [isIngesting, setIsIngesting] = useState(false);
 
 	// Chat state
 	const [messagesA, setMessagesA] = useState<ChatMessage[]>([]);
@@ -106,15 +76,18 @@ export function ModelComparisonWorkbench() {
 				getConfig(),
 				getProviders(),
 			]);
-			setConfig(nextConfig);
 			setProviders(nextProviders);
 
-			// Pre-select defaults
-			const providerMap = nextProviders.llms;
-			const activeKey = makeValue(
+			const defaultLlm = makeValue(
 				nextConfig.llm.provider,
 				nextConfig.llm.model,
 			);
+			const defaultEmbed = makeValue(
+				nextConfig.embedding.provider,
+				nextConfig.embedding.model,
+			);
+
+			const providerMap = nextProviders.llms;
 			const keys = Object.entries(providerMap).flatMap(([provider, info]) =>
 				info.available
 					? info.models.map((model) => makeValue(provider, model))
@@ -122,8 +95,8 @@ export function ModelComparisonWorkbench() {
 			);
 
 			const defaults: string[] = [];
-			if (keys.includes(activeKey)) {
-				defaults.push(activeKey);
+			if (keys.includes(defaultLlm)) {
+				defaults.push(defaultLlm);
 			}
 
 			for (const key of keys) {
@@ -131,8 +104,16 @@ export function ModelComparisonWorkbench() {
 				if (defaults.length === 2) break;
 			}
 
-			if (defaults[0]) setSlotA(defaults[0]);
-			if (defaults[1]) setSlotB(defaults[1]);
+			setSlotA((prev) => ({
+				...prev,
+				embedding: defaultEmbed,
+				llm: defaults[0] || null,
+			}));
+			setSlotB((prev) => ({
+				...prev,
+				embedding: defaultEmbed,
+				llm: defaults[1] || null,
+			}));
 		} catch (err) {
 			setError(
 				err instanceof Error ? err.message : "Unable to load model inventory",
@@ -150,43 +131,105 @@ export function ModelComparisonWorkbench() {
 		chatBottomRef.current?.scrollIntoView({ behavior: "smooth" });
 	});
 
-	const providerMap = providers?.llms;
+	const checkSlotStatus = useCallback(
+		async (slotKey: "A" | "B", state: SlotState) => {
+			if (!state.embedding) return;
 
-	const getCompareModel = useCallback(
-		(value: string | null): CompareModel | null => {
-			if (!value || !providerMap || !config) return null;
+			const setSlot = slotKey === "A" ? setSlotA : setSlotB;
+			setSlot((prev) => ({ ...prev, isChecking: true }));
 
-			const parsed = parseValue(value);
-			if (!parsed) return null;
+			try {
+				const embedConfig = parseValue(state.embedding);
+				const visionConfig = state.vision
+					? parseValue(state.vision)
+					: undefined;
 
-			const info = providerMap[parsed.provider];
-			if (!info) return null;
-
-			return {
-				id: value,
-				provider: parsed.provider,
-				providerLabel: PROVIDER_LABELS[parsed.provider] ?? parsed.provider,
-				model: parsed.model,
-				role: "llm",
-				available: info.available,
-				isActive:
-					config.llm.provider === parsed.provider &&
-					config.llm.model === parsed.model,
-			};
+				if (embedConfig) {
+					const res = await checkIndexStatus({
+						embedding: embedConfig,
+						vision: visionConfig
+							? { provider: visionConfig.provider, model: visionConfig.model }
+							: undefined,
+					});
+					setSlot((prev) => ({ ...prev, hasDocuments: res.has_documents }));
+				}
+			} catch (err) {
+				console.error(`Failed to check index status for Slot ${slotKey}:`, err);
+			} finally {
+				setSlot((prev) => ({ ...prev, isChecking: false }));
+			}
 		},
-		[providerMap, config],
+		[],
 	);
 
-	const modelA = getCompareModel(slotA);
-	const modelB = getCompareModel(slotB);
+	// Re-check status when vision or embedding changes
+	useEffect(() => {
+		if (slotA.embedding) checkSlotStatus("A", slotA);
+	}, [slotA.embedding, slotA.vision, checkSlotStatus, slotA]);
+
+	useEffect(() => {
+		if (slotB.embedding) checkSlotStatus("B", slotB);
+	}, [slotB.embedding, slotB.vision, checkSlotStatus, slotB]);
+
+	const handleIngest = async (slotKey: "A" | "B", state: SlotState) => {
+		if (!state.embedding || isIngesting) return;
+
+		const embedConfig = parseValue(state.embedding);
+		const visionConfig = state.vision ? parseValue(state.vision) : null;
+
+		if (!embedConfig) return;
+
+		setIngestingSlot(slotKey);
+		setIsIngesting(true);
+
+		try {
+			await triggerTargetedIngest({
+				extraction_mode: visionConfig ? "vision_assisted" : "text_only",
+				vision_provider: visionConfig?.provider,
+				vision_model: visionConfig?.model,
+				embedding_provider: embedConfig.provider,
+				embedding_model: embedConfig.model,
+			});
+
+			// Poll for completion
+			const poll = async () => {
+				const status = await getIngestionStatus();
+				if (status.status === "complete") {
+					await checkSlotStatus("A", slotA);
+					await checkSlotStatus("B", slotB);
+					setIsIngesting(false);
+					setIngestingSlot(null);
+				} else if (status.status === "error") {
+					setError(`Ingestion failed: ${status.error_message}`);
+					setIsIngesting(false);
+					setIngestingSlot(null);
+				} else {
+					setTimeout(poll, 3000);
+				}
+			};
+
+			setTimeout(poll, 3000);
+		} catch (err) {
+			setError(
+				err instanceof Error ? err.message : "Failed to start ingestion",
+			);
+			setIsIngesting(false);
+			setIngestingSlot(null);
+		}
+	};
 
 	const handleQuery = useCallback(
 		async (query: string) => {
-			if (!query.trim() || isQuerying || !slotA || !slotB) return;
+			if (!query.trim() || isQuerying || !slotA.llm || !slotB.llm) return;
 
-			const configA = parseValue(slotA);
-			const configB = parseValue(slotB);
-			if (!configA || !configB) return;
+			const llmA = parseValue(slotA.llm);
+			const llmB = parseValue(slotB.llm);
+			const embedA = parseValue(slotA.embedding);
+			const embedB = parseValue(slotB.embedding);
+			const visionA = parseValue(slotA.vision);
+			const visionB = parseValue(slotB.vision);
+
+			if (!llmA || !llmB || !embedA || !embedB) return;
 
 			const userMessageA: ChatMessage = {
 				id: nextId(),
@@ -205,8 +248,22 @@ export function ModelComparisonWorkbench() {
 
 			try {
 				const [resultA, resultB] = await Promise.allSettled([
-					queryRAG({ query, llm: configA }),
-					queryRAG({ query, llm: configB }),
+					queryRAG({
+						query,
+						llm: llmA,
+						embedding: embedA,
+						vision: visionA
+							? { provider: visionA.provider, model: visionA.model }
+							: undefined,
+					}),
+					queryRAG({
+						query,
+						llm: llmB,
+						embedding: embedB,
+						vision: visionB
+							? { provider: visionB.provider, model: visionB.model }
+							: undefined,
+					}),
 				]);
 
 				if (resultA.status === "fulfilled") {
@@ -265,70 +322,48 @@ export function ModelComparisonWorkbench() {
 		[isQuerying, slotA, slotB, nextId],
 	);
 
-	const renderCombobox = (
-		slot: "A" | "B",
-		value: string | null,
-		otherValue: string | null,
-	) => {
-		if (isLoading || !providerMap) {
+	const renderSlotStatus = (slotKey: "A" | "B", state: SlotState) => {
+		if (state.isChecking || !state.embedding || !state.llm) {
+			return null;
+		}
+
+		if (isIngesting && ingestingSlot === slotKey) {
 			return (
-				<Button variant="outline" disabled className="w-full justify-start">
-					Loading...
-				</Button>
+				<div className="flex items-center gap-2 text-sm text-muted-foreground mt-4 px-4 py-3 rounded-lg border bg-muted/50">
+					<Loader2 className="h-4 w-4 animate-spin" />
+					Processing documents...
+				</div>
 			);
 		}
 
-		return (
-			<Combobox
-				items={Object.entries(providerMap).flatMap(([providerKey, info]) =>
-					info.available
-						? info.models
-								.map((m) => makeValue(providerKey, m))
-								.filter((val) => val !== otherValue) // Prevent duplicate selection
-						: [],
-				)}
-				value={value}
-				onValueChange={(nextValue) => {
-					if (typeof nextValue === "string") {
-						if (slot === "A") setSlotA(nextValue);
-						else setSlotB(nextValue);
-					}
-				}}
-				disabled={isQuerying}
-			>
-				<ComboboxInput placeholder="Select model" className="w-full" />
-				<ComboboxContent className="w-[300px]">
-					<ComboboxEmpty>No matching models.</ComboboxEmpty>
-					<ComboboxList>
-						{Object.entries(providerMap).map(([providerKey, info]) => {
-							const providerLabel = PROVIDER_LABELS[providerKey] ?? providerKey;
-							if (!info.available || info.models.length === 0) return null;
+		if (!state.hasDocuments) {
+			return (
+				<div className="flex flex-col gap-2 mt-4 p-4 rounded-lg border border-destructive/30 bg-destructive/5 text-sm">
+					<p className="text-destructive font-medium">Index not found</p>
+					<p className="text-muted-foreground mb-2">
+						This combination of Vision + Embedding models hasn't been used to
+						index your files yet.
+					</p>
+					<Button
+						onClick={() => handleIngest(slotKey, state)}
+						disabled={isIngesting}
+						size="sm"
+					>
+						Process Documents for Slot {slotKey}
+					</Button>
+				</div>
+			);
+		}
 
-							const availableModels = info.models.filter(
-								(m) => makeValue(providerKey, m) !== otherValue,
-							);
-
-							if (availableModels.length === 0) return null;
-
-							return (
-								<ComboboxGroup key={providerKey}>
-									<ComboboxLabel>{providerLabel}</ComboboxLabel>
-									{availableModels.map((model) => (
-										<ComboboxItem
-											key={model}
-											value={makeValue(providerKey, model)}
-										>
-											{model}
-										</ComboboxItem>
-									))}
-								</ComboboxGroup>
-							);
-						})}
-					</ComboboxList>
-				</ComboboxContent>
-			</Combobox>
-		);
+		return null;
 	};
+
+	const canChat =
+		slotA.hasDocuments &&
+		slotB.hasDocuments &&
+		slotA.llm &&
+		slotB.llm &&
+		!isIngesting;
 
 	return (
 		<div className="flex h-full min-h-0 w-full flex-col overflow-hidden bg-muted/30 p-4">
@@ -340,7 +375,7 @@ export function ModelComparisonWorkbench() {
 								Model Comparison
 							</h1>
 							<p className="mt-1 text-sm text-muted-foreground">
-								Select two LLMs to compare their generation quality
+								Select two configurations to compare their generation quality
 								side-by-side.
 							</p>
 						</div>
@@ -348,40 +383,46 @@ export function ModelComparisonWorkbench() {
 					</div>
 
 					<div className="mt-6 grid gap-6 md:grid-cols-2">
-						<div className="flex flex-col gap-2">
-							<span className="text-sm font-medium text-foreground">
-								Slot A
-							</span>
-							{renderCombobox("A", slotA, slotB)}
-							{modelA && (
-								<div className="mt-2 text-xs text-muted-foreground">
-									{modelA.providerLabel} &bull; {getModelFamily(modelA.model)}
-								</div>
-							)}
-						</div>
-						<div className="flex flex-col gap-2">
-							<span className="text-sm font-medium text-foreground">
-								Slot B
-							</span>
-							{renderCombobox("B", slotB, slotA)}
-							{modelB && (
-								<div className="mt-2 text-xs text-muted-foreground">
-									{modelB.providerLabel} &bull; {getModelFamily(modelB.model)}
-								</div>
-							)}
-						</div>
+						<SlotPicker
+							label="Slot A Configuration"
+							providers={providers}
+							isLoading={isLoading}
+							disabled={isQuerying || isIngesting}
+							visionValue={slotA.vision}
+							embedValue={slotA.embedding}
+							llmValue={slotA.llm}
+							onVisionChange={(val) => setSlotA((p) => ({ ...p, vision: val }))}
+							onEmbedChange={(val) =>
+								setSlotA((p) => ({ ...p, embedding: val }))
+							}
+							onLlmChange={(val) => setSlotA((p) => ({ ...p, llm: val }))}
+						/>
+						<SlotPicker
+							label="Slot B Configuration"
+							providers={providers}
+							isLoading={isLoading}
+							disabled={isQuerying || isIngesting}
+							visionValue={slotB.vision}
+							embedValue={slotB.embedding}
+							llmValue={slotB.llm}
+							onVisionChange={(val) => setSlotB((p) => ({ ...p, vision: val }))}
+							onEmbedChange={(val) =>
+								setSlotB((p) => ({ ...p, embedding: val }))
+							}
+							onLlmChange={(val) => setSlotB((p) => ({ ...p, llm: val }))}
+						/>
 					</div>
 				</header>
 
-				{!modelA || !modelB ? (
+				{!slotA.llm || !slotB.llm || !slotA.embedding || !slotB.embedding ? (
 					<div className="flex flex-1 items-center justify-center rounded-xl border bg-card p-8">
 						<Empty>
 							<EmptyHeader>
 								<EmptyMedia variant="icon">{"//"}</EmptyMedia>
-								<EmptyTitle>Select exactly two models</EmptyTitle>
+								<EmptyTitle>Select complete configurations</EmptyTitle>
 								<EmptyDescription>
-									Use the dropdowns above to choose two different LLM
-									candidates.
+									Use the dropdowns above to choose the Vision, Embedding, and
+									LLM for both slots.
 								</EmptyDescription>
 							</EmptyHeader>
 						</Empty>
@@ -392,9 +433,10 @@ export function ModelComparisonWorkbench() {
 							{/* Chat A */}
 							<div className="flex h-full flex-col overflow-y-auto rounded-xl border bg-card p-4">
 								<h3 className="sticky top-0 z-10 bg-card pb-4 text-sm font-semibold tracking-wider text-foreground">
-									{modelA.model}
+									Slot A
 								</h3>
-								<div className="flex flex-col gap-5">
+								{renderSlotStatus("A", slotA)}
+								<div className="flex flex-col gap-5 mt-4">
 									{messagesA.length === 0 ? (
 										<p className="text-sm text-muted-foreground">
 											No messages yet.
@@ -412,9 +454,10 @@ export function ModelComparisonWorkbench() {
 							{/* Chat B */}
 							<div className="flex h-full flex-col overflow-y-auto rounded-xl border bg-card p-4">
 								<h3 className="sticky top-0 z-10 bg-card pb-4 text-sm font-semibold tracking-wider text-foreground">
-									{modelB.model}
+									Slot B
 								</h3>
-								<div className="flex flex-col gap-5">
+								{renderSlotStatus("B", slotB)}
+								<div className="flex flex-col gap-5 mt-4">
 									{messagesB.length === 0 ? (
 										<p className="text-sm text-muted-foreground">
 											No messages yet.
@@ -436,7 +479,14 @@ export function ModelComparisonWorkbench() {
 								onUpload={async () => {}} // Not supporting upload here
 								isLoading={isQuerying}
 								isUploading={false}
-								disabled={isQuerying}
+								disabled={!canChat || isQuerying}
+								disabledReason={
+									isIngesting
+										? "Document processing in progress..."
+										: !canChat
+											? "Make sure both slots have documents processed."
+											: undefined
+								}
 							/>
 						</div>
 					</div>

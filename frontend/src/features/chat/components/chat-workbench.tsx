@@ -16,6 +16,7 @@ export function ChatWorkbench() {
 	const {
 		isReady,
 		hasDocuments,
+		uploadedFiles,
 		ingestionStatus,
 		statusError,
 		isUploading,
@@ -105,6 +106,20 @@ export function ChatWorkbench() {
 									onVisionConfigChanged={setVisionConfig}
 								/>
 							</div>
+
+							{uploadedFiles && uploadedFiles.length > 0 && (
+								<div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
+									<span className="font-medium">Active Files:</span>
+									{uploadedFiles.map((file) => (
+										<span
+											key={file}
+											className="rounded-md bg-secondary px-2 py-0.5 border border-border"
+										>
+											{file}
+										</span>
+									))}
+								</div>
+							)}
 						</div>
 
 						<div className="h-full overflow-y-auto p-4 md:p-6">

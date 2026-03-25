@@ -6,6 +6,7 @@ import {
 	checkRetrievalHealth,
 	getEvalStatus,
 	getIngestionStatus,
+	getUploadedFiles,
 	type IngestionStatus,
 	queryRAG,
 	uploadPDFs,
@@ -24,6 +25,7 @@ export function useChatSession() {
 		type: "success" | "error";
 		message: string;
 	} | null>(null);
+	const [uploadedFiles, setUploadedFiles] = useState<string[]>([]);
 	const [messages, setMessages] = useState<ChatMessage[]>([]);
 	const [isQuerying, setIsQuerying] = useState(false);
 	const messageIdRef = useRef(0);
@@ -32,17 +34,29 @@ export function useChatSession() {
 		return messageIdRef.current++;
 	}, []);
 
+	const fetchFiles = useCallback(async () => {
+		try {
+			const res = await getUploadedFiles();
+			setUploadedFiles(res.files);
+		} catch (_err) {
+			// fail silently
+		}
+	}, []);
+
 	const fetchIngestionStatus = useCallback(async () => {
 		try {
 			const nextStatus = await getIngestionStatus();
 			setIngestionStatus(nextStatus);
 			setStatusError(null);
+			if (nextStatus.status === "complete") {
+				void fetchFiles();
+			}
 		} catch (err) {
 			setStatusError(
 				err instanceof Error ? err.message : "Failed to fetch status",
 			);
 		}
-	}, []);
+	}, [fetchFiles]);
 
 	useEffect(() => {
 		const checkHealth = async () => {
@@ -57,7 +71,8 @@ export function useChatSession() {
 
 		checkHealth();
 		fetchIngestionStatus();
-	}, [fetchIngestionStatus]);
+		fetchFiles();
+	}, [fetchIngestionStatus, fetchFiles]);
 
 	useEffect(() => {
 		if (ingestionStatus?.status !== "processing") return;
@@ -186,6 +201,7 @@ export function useChatSession() {
 		isReady,
 		hasDocuments,
 		ingestionStatus,
+		uploadedFiles,
 		statusError,
 		isUploading,
 		uploadFeedback,
