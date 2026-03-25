@@ -50,5 +50,12 @@ htmlcov/
 # Gemini CLI
 .gemini/
 
+# Agents / skills
+AGENTS.md
+.agents/
+skills-lock.json
+frontend/.agents/
+frontend/skills-lock.json
+
 # Security Reports
 security_best_practices_report.md
