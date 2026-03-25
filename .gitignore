@@ -59,3 +59,6 @@ frontend/skills-lock.json
 
 # Security Reports
 security_best_practices_report.md
+
+# Local tool cache
+.api_quota.json
