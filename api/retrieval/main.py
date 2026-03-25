@@ -85,13 +85,80 @@ async def query(
         raise HTTPException(status_code=503, detail=f"{status}: {detail}")
 
     try:
-        custom_llm = None
-        if request.llm:
-            from adapters import create_llm
+        if request.embedding:
+            # Stateless query mode
+            from adapters import create_embedder, create_llm
+            from pipelines.base import create_vector_store_from_config
+            from pipelines.retrieval import RetrievalPipeline
+            import uuid
+            from utils.eval_jobs import create_eval_job
 
-            custom_llm = create_llm(request.llm.provider, model=request.llm.model)
+            config_path = find_config_path()
+            config = load_config(config_path)
 
-        result = run_query(request.query, STORAGE_DIR, custom_llm=custom_llm)
+            # Override embedding
+            embed_kwargs = {
+                k: v
+                for k, v in config.get("embedding", {}).items()
+                if k not in ("provider", "model")
+            }
+            embedder = create_embedder(
+                request.embedding.provider,
+                model=request.embedding.model,
+                **embed_kwargs,
+            )
+
+            # Create vector store with specific collection name
+            vision_model = request.vision.model if request.vision else None
+            vector_store = create_vector_store_from_config(
+                config, config_path, embedder, vision_model
+            )
+
+            # Create LLM
+            llm_to_use = None
+            if request.llm:
+                llm_kwargs = {
+                    k: v
+                    for k, v in config.get("llm", {}).items()
+                    if k not in ("provider", "model")
+                }
+                llm_to_use = create_llm(
+                    request.llm.provider, model=request.llm.model, **llm_kwargs
+                )
+            else:
+                from services.retrieval import get_pipeline
+
+                llm_to_use = get_pipeline().llm
+
+            # Execute
+            pipeline = RetrievalPipeline(
+                embedder=embedder,
+                llm=llm_to_use,
+                vector_store=vector_store,
+                config=config,
+                config_path=config_path,
+            )
+            raw_result = pipeline.query(request.query)
+
+            job_id = str(uuid.uuid4())
+            create_eval_job(STORAGE_DIR, job_id, request.query)
+
+            from services.retrieval import RetrievalQueryResult
+
+            result = RetrievalQueryResult(
+                response=raw_result["response"],
+                context=raw_result["context"],
+                eval_job_id=job_id,
+            )
+
+        else:
+            custom_llm = None
+            if request.llm:
+                from adapters import create_llm
+
+                custom_llm = create_llm(request.llm.provider, model=request.llm.model)
+            result = run_query(request.query, STORAGE_DIR, custom_llm=custom_llm)
+
         context = [
             ContextItem(text=doc.text, source=doc.source, distance=doc.distance)
             for doc in result.context

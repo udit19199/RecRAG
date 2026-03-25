@@ -18,10 +18,14 @@ from services.ingestion import (
 from models.api import (
     EmbeddingConfigPatch,
     ExtractionMode,
+    FileListResponse,
     ReindexRequest,
     ReindexResponse,
     StatusResponse,
     UploadResponse,
+    IndexStatusRequest,
+    IndexStatusResponse,
+    TargetedIngestRequest,
 )
 
 logger = logging.getLogger(__name__)
@@ -181,6 +185,17 @@ async def health() -> dict[str, str]:
     return {"status": "healthy", "service": "ingestion-api"}
 
 
+@app.get("/files", response_model=FileListResponse)
+async def list_files() -> FileListResponse:
+    """Return a list of uploaded PDF files."""
+    files = []
+    if PDF_DIR.exists():
+        for file_path in PDF_DIR.glob("*.pdf"):
+            if file_path.is_file():
+                files.append(file_path.name)
+    return FileListResponse(files=sorted(files))
+
+
 @app.post("/config")
 async def set_config(patch: EmbeddingConfigPatch) -> dict[str, Any]:
     """Swap the embedding model used by the ingestion pipeline at runtime.
@@ -206,6 +221,69 @@ async def set_config(patch: EmbeddingConfigPatch) -> dict[str, Any]:
         "applied": True,
         "embedding": {"provider": embed_provider, "model": embed_model},
     }
+
+
+@app.post("/status/index", response_model=IndexStatusResponse)
+async def check_index_status(request: IndexStatusRequest) -> IndexStatusResponse:
+    from pipelines.base import get_collection_name, get_milvus_uri
+    from stores import VectorStore
+
+    config_path = find_config_path(CONFIG_PATH if CONFIG_PATH.exists() else None)
+    config = load_config(config_path)
+
+    embed_model = (
+        request.embedding.model
+        if request.embedding
+        else config.get("embedding", {}).get("model", "text-embedding-3-small")
+    )
+    vision_model = request.vision.model if request.vision else None
+
+    collection_name = get_collection_name(config, embed_model, vision_model)
+    uri = get_milvus_uri(config, config_path)
+
+    try:
+        vs = VectorStore(
+            dimension=1,  # Dimension doesn't matter just to check count
+            collection_name=collection_name,
+            uri=uri,
+        )
+        return IndexStatusResponse(has_documents=vs.count > 0)
+    except Exception as e:
+        logger.warning(f"Error checking index status: {e}")
+        return IndexStatusResponse(has_documents=False)
+
+
+@app.post("/ingest/target", response_model=ReindexResponse)
+async def targeted_ingest(
+    background_tasks: BackgroundTasks,
+    request: TargetedIngestRequest,
+) -> ReindexResponse:
+    """Trigger a targeted ingest for a specific permutation."""
+    current = read_status(STORAGE_DIR)
+    if current.get("status") == "processing":
+        raise HTTPException(
+            status_code=409,
+            detail="Ingestion already in progress. Please wait for it to complete.",
+        )
+
+    # Use run_reindex_background but we need to pass embedding overrides
+    from services.ingestion import run_targeted_ingestion_background
+
+    background_tasks.add_task(
+        run_targeted_ingestion_background,
+        STORAGE_DIR,
+        extraction_mode=request.extraction_mode,
+        vision_provider=request.vision_provider,
+        vision_model=request.vision_model,
+        embedding_provider=request.embedding_provider,
+        embedding_model=request.embedding_model,
+    )
+
+    return ReindexResponse(
+        started=True,
+        message="Targeted ingestion started. Poll /status for progress.",
+        extraction_mode=request.extraction_mode.value,
+    )
 
 
 @app.post("/reindex", response_model=ReindexResponse)

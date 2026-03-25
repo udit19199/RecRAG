@@ -64,17 +64,23 @@ class IngestionPipeline:
         chunk_overlap = get_config_value(config, "ingestion.chunk_overlap", 50)
         splitter = TextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
 
-        vector_store = create_vector_store_from_config(config, config_path, embedder)
+        # Get vision config from config or use provided overrides
+        vision_cfg = config.get("vision", {})
+        provider = vision_provider or vision_cfg.get("provider", "openai")
+        model = vision_model or vision_cfg.get("model", "gpt-4o-mini")
+
+        vector_store = create_vector_store_from_config(
+            config,
+            config_path,
+            embedder,
+            model if extraction_mode == ExtractionMode.VISION_ASSISTED else None,
+        )
 
         ingestion_dir = get_ingestion_dir(config, config_path)
 
         # Select loader based on extraction mode
         loader: BaseDocumentLoader
         if extraction_mode == ExtractionMode.VISION_ASSISTED:
-            # Get vision config from config or use provided overrides
-            vision_cfg = config.get("vision", {})
-            provider = vision_provider or vision_cfg.get("provider", "openai")
-            model = vision_model or vision_cfg.get("model", "gpt-4o-mini")
             vision_kwargs = {
                 k: v for k, v in vision_cfg.items() if k not in ("provider", "model")
             }
@@ -202,10 +208,17 @@ def run_ingestion(
     extraction_mode: ExtractionMode = ExtractionMode.TEXT_ONLY,
     vision_provider: str | None = None,
     vision_model: str | None = None,
+    embedding_provider: str | None = None,
+    embedding_model: str | None = None,
 ) -> dict[str, Any]:
     from config import load_config
 
     config = load_config(config_path)
+
+    if embedding_provider and embedding_model:
+        config.setdefault("embedding", {})["provider"] = embedding_provider
+        config.setdefault("embedding", {})["model"] = embedding_model
+
     pipeline = IngestionPipeline.from_config(
         config,
         config_path,

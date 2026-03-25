@@ -43,7 +43,11 @@ class NIMEmbedder(BaseEmbedder):
         )
 
         if model not in _NIM_DIMENSION_CACHE:
+            from utils.rate_limit import check_rate_limit, record_success
+
+            check_rate_limit("embedding")
             _NIM_DIMENSION_CACHE[model] = len(self._client.get_query_embedding("test"))
+            record_success("embedding")
         self._dimension = _NIM_DIMENSION_CACHE[model]
 
     @property
@@ -51,12 +55,22 @@ class NIMEmbedder(BaseEmbedder):
         return self._dimension
 
     def embed(self, text: str) -> list[float]:
-        return self._client.get_query_embedding(text)
+        from utils.rate_limit import check_rate_limit, record_success
+
+        check_rate_limit("embedding")
+        res = self._client.get_query_embedding(text)
+        record_success("embedding")
+        return res
 
     def embed_batch(self, texts: list[str]) -> list[list[float]]:
         if not texts:
             return []
-        return self._client.get_text_embedding_batch(texts)
+        from utils.rate_limit import check_rate_limit, record_success
+
+        check_rate_limit("embedding")
+        res = self._client.get_text_embedding_batch(texts)
+        record_success("embedding")
+        return res
 
 
 class NIMLLM(BaseLLM):
@@ -96,14 +110,21 @@ class NIMLLM(BaseLLM):
         return False
 
     def generate(self, prompt: str, **kwargs: Any) -> str:
+        from utils.rate_limit import check_rate_limit, record_success
+
+        check_rate_limit("llm")
         response = self._client.complete(
             prompt,
             temperature=kwargs.get("temperature", self._temperature),
             max_tokens=kwargs.get("max_tokens", self._max_tokens),
         )
+        record_success("llm")
         return response.text
 
     def chat(self, messages: list[dict[str, str]], **kwargs: Any) -> str:
+        from utils.rate_limit import check_rate_limit, record_success
+
+        check_rate_limit("llm")
         chat_messages = [
             ChatMessage(role=msg["role"], content=msg["content"]) for msg in messages
         ]
@@ -112,4 +133,5 @@ class NIMLLM(BaseLLM):
             temperature=kwargs.get("temperature", self._temperature),
             max_tokens=kwargs.get("max_tokens", self._max_tokens),
         )
+        record_success("llm")
         return response.message.content or ""

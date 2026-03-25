@@ -57,12 +57,14 @@ class RetrievalPipeline:
 
     @classmethod
     def from_config(
-        cls, config: dict[str, Any], config_path: Path
+        cls, config: dict[str, Any], config_path: Path, vision_model: str | None = None
     ) -> "RetrievalPipeline":
         embedder = create_embedder_from_config(config)
         llm = create_llm_from_config(config)
 
-        vector_store = create_vector_store_from_config(config, config_path, embedder)
+        vector_store = create_vector_store_from_config(
+            config, config_path, embedder, vision_model
+        )
 
         return cls(
             embedder=embedder,

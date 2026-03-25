@@ -24,6 +24,10 @@ class VisionConfig(BaseModel):
 
 
 # Ingestion models
+class FileListResponse(BaseModel):
+    files: list[str]
+
+
 class StatusResponse(BaseModel):
     status: str
     started_at: str | None = None
@@ -52,6 +56,23 @@ class EmbeddingConfigPatch(BaseModel):
     embedding: AdapterConfig
 
 
+class IndexStatusRequest(BaseModel):
+    embedding: AdapterConfig | None = None
+    vision: AdapterConfig | None = None
+
+
+class IndexStatusResponse(BaseModel):
+    has_documents: bool
+
+
+class TargetedIngestRequest(BaseModel):
+    extraction_mode: ExtractionMode = ExtractionMode.TEXT_ONLY
+    vision_provider: str | None = None
+    vision_model: str | None = None
+    embedding_provider: str | None = None
+    embedding_model: str | None = None
+
+
 class ReindexRequest(BaseModel):
     """Request body for reindex endpoint."""
 
@@ -70,6 +91,8 @@ class ReindexResponse(BaseModel):
 class QueryRequest(BaseModel):
     query: str
     llm: AdapterConfig | None = None
+    embedding: AdapterConfig | None = None
+    vision: AdapterConfig | None = None
 
 
 class ContextItem(BaseModel):

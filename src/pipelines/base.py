@@ -45,15 +45,20 @@ def create_llm_from_config(config: dict[str, Any]) -> BaseLLM:
     return _create_adapter_from_config(config, "llm", create_llm, defaults)
 
 
-def get_collection_name(config: dict[str, Any], embedder_model: str) -> str:
-    """Return a Milvus collection name derived from the embedder model.
+def get_collection_name(
+    config: dict[str, Any], embedder_model: str, vision_model: str | None = None
+) -> str:
+    """Return a Milvus collection name derived from the embedder model and vision model.
 
     The name is prefixed by ``storage.collection_prefix`` (default ``recrag_``)
     and the model slug (slashes and hyphens replaced with underscores).
     """
     prefix = config.get("storage", {}).get("collection_prefix", "recrag_")
     embedding_id = embedder_model.replace("/", "_").replace("-", "_").replace(":", "_")
-    return f"{prefix}{embedding_id}"
+    if vision_model:
+        v_id = vision_model.replace("/", "_").replace("-", "_").replace(":", "_")
+        return f"{prefix}{v_id}_{embedding_id}"
+    return f"{prefix}text_only_{embedding_id}"
 
 
 def get_milvus_uri(config: dict[str, Any], config_path: Path) -> str:
@@ -112,10 +117,13 @@ def get_milvus_uri(config: dict[str, Any], config_path: Path) -> str:
 
 
 def create_vector_store_from_config(
-    config: dict[str, Any], config_path: Path, embedder: BaseEmbedder
+    config: dict[str, Any],
+    config_path: Path,
+    embedder: BaseEmbedder,
+    vision_model: str | None = None,
 ) -> VectorStore:
     """Create a configured VectorStore instance using the common configuration."""
-    collection_name = get_collection_name(config, embedder.model)
+    collection_name = get_collection_name(config, embedder.model, vision_model)
     uri = get_milvus_uri(config, config_path)
     return VectorStore(
         dimension=embedder.dimension,

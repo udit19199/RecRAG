@@ -106,6 +106,62 @@ def run_ingestion_background(
             )
 
 
+def run_targeted_ingestion_background(
+    storage_dir: Path,
+    extraction_mode: ExtractionMode = ExtractionMode.TEXT_ONLY,
+    vision_provider: str | None = None,
+    vision_model: str | None = None,
+    embedding_provider: str | None = None,
+    embedding_model: str | None = None,
+) -> None:
+    with _INGESTION_LOCK:
+        started_at = now()
+        write_status(
+            storage_dir,
+            "processing",
+            started_at=started_at,
+            extraction_mode=extraction_mode.value,
+        )
+        logger.info("Targeted Ingestion started (mode=%s)", extraction_mode.value)
+        try:
+            resolved = find_config_path()
+            config = load_config(resolved)
+
+            if embedding_provider and embedding_model:
+                if "embedding" not in config:
+                    config["embedding"] = {}
+                config["embedding"]["provider"] = embedding_provider
+                config["embedding"]["model"] = embedding_model
+
+            pipeline = IngestionPipeline.from_config(
+                config,
+                resolved,
+                extraction_mode=extraction_mode,
+                vision_provider=vision_provider,
+                vision_model=vision_model,
+            )
+            results = pipeline.process_documents_streaming(force=True)
+            completed_at = now()
+            write_status(
+                storage_dir,
+                "complete",
+                started_at=started_at,
+                completed_at=completed_at,
+                files_processed=results.get("documents", 0),
+                extraction_mode=extraction_mode.value,
+            )
+        except Exception as exc:  # noqa: BLE001
+            logger.exception("Targeted Ingestion failed")
+            write_status(
+                storage_dir,
+                "error",
+                started_at=started_at,
+                completed_at=now(),
+                error_message=str(exc),
+                extraction_mode=extraction_mode.value,
+            )
+
+
 def run_reindex_background(
     storage_dir: Path,
     extraction_mode: ExtractionMode = ExtractionMode.TEXT_ONLY,
@@ -146,7 +202,14 @@ def swap_runtime_config(
     new_embedder = create_embedder(
         embedding["provider"], model=embedding["model"], **embed_kwargs
     )
-    new_vs = create_vector_store_from_config(config, config_path, new_embedder)
+    new_vs = create_vector_store_from_config(
+        config,
+        config_path,
+        new_embedder,
+        pipeline.vision_model
+        if pipeline.extraction_mode == ExtractionMode.VISION_ASSISTED
+        else None,
+    )
 
     # Swap components atomically under the lock
     with _PIPELINE_LOCK:

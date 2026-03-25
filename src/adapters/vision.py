@@ -248,6 +248,9 @@ class NIMVisionExtractor(BaseVisionExtractor):
         return base64.b64encode(image_bytes).decode("utf-8")
 
     def extract_text(self, image_bytes: bytes, prompt: str | None = None) -> str:
+        from utils.rate_limit import check_rate_limit, record_success
+
+        check_rate_limit("vlm")
         prompt = prompt or DEFAULT_EXTRACTION_PROMPT
         base64_image = self._encode_image(image_bytes)
 
@@ -285,7 +288,9 @@ class NIMVisionExtractor(BaseVisionExtractor):
                 timeout=120,
             )
             response.raise_for_status()
-            return response.json()["choices"][0]["message"]["content"]
+            res = response.json()["choices"][0]["message"]["content"]
+            record_success("vlm")
+            return res
         except requests.RequestException as e:
             logger.error("NIM vision API call failed: %s", e)
             raise
