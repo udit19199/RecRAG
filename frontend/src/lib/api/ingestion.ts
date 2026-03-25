@@ -2,9 +2,13 @@ import { getIngestionApiUrl, handleResponse } from "@/lib/api/client";
 import type {
 	AdapterConfig,
 	ExtractionOptions,
+	FileListResponse,
 	HealthResponse,
+	IndexStatusRequest,
+	IndexStatusResponse,
 	IngestionStatus,
 	ReindexResponse,
+	TargetedIngestRequest,
 	UploadResponse,
 } from "@/lib/api/types";
 
@@ -47,6 +51,11 @@ export async function checkIngestionHealth(): Promise<HealthResponse> {
 	return handleResponse<HealthResponse>(res);
 }
 
+export async function getUploadedFiles(): Promise<FileListResponse> {
+	const res = await fetch(getIngestionApiUrl("/files"));
+	return handleResponse<FileListResponse>(res);
+}
+
 export async function setIngestionConfig(
 	embedding: AdapterConfig,
 ): Promise<void> {
@@ -66,6 +75,30 @@ export async function triggerReindex(
 		method: "POST",
 		headers: { "Content-Type": "application/json" },
 		body: options ? JSON.stringify(options) : undefined,
+	});
+
+	return handleResponse<ReindexResponse>(res);
+}
+
+export async function checkIndexStatus(
+	request: IndexStatusRequest,
+): Promise<IndexStatusResponse> {
+	const res = await fetch(getIngestionApiUrl("/status/index"), {
+		method: "POST",
+		headers: { "Content-Type": "application/json" },
+		body: JSON.stringify(request),
+	});
+
+	return handleResponse<IndexStatusResponse>(res);
+}
+
+export async function triggerTargetedIngest(
+	request: TargetedIngestRequest,
+): Promise<ReindexResponse> {
+	const res = await fetch(getIngestionApiUrl("/ingest/target"), {
+		method: "POST",
+		headers: { "Content-Type": "application/json" },
+		body: JSON.stringify(request),
 	});
 
 	return handleResponse<ReindexResponse>(res);

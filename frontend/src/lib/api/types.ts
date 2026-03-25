@@ -30,6 +30,8 @@ export interface QueryWithEvalResponse extends QueryResponse {
 export interface QueryRequest {
 	query: string;
 	llm?: AdapterConfig;
+	embedding?: AdapterConfig;
+	vision?: AdapterConfig;
 }
 
 export type ExtractionMode = "text_only" | "vision_assisted";
@@ -56,6 +58,10 @@ export interface UploadResponse {
 	files_uploaded: number;
 	message: string;
 	extraction_mode: ExtractionMode;
+}
+
+export interface FileListResponse {
+	files: string[];
 }
 
 export interface HealthResponse {
@@ -98,6 +104,23 @@ export interface SetConfigResponse {
 	requires_reindex: boolean;
 	embedding: AdapterConfig;
 	llm: AdapterConfig;
+}
+
+export interface IndexStatusRequest {
+	embedding?: AdapterConfig;
+	vision?: AdapterConfig;
+}
+
+export interface IndexStatusResponse {
+	has_documents: boolean;
+}
+
+export interface TargetedIngestRequest {
+	extraction_mode: ExtractionMode;
+	vision_provider?: string;
+	vision_model?: string;
+	embedding_provider?: string;
+	embedding_model?: string;
 }
 
 export interface ReindexResponse {
