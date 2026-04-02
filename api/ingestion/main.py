@@ -1,20 +1,23 @@
 import logging
 import os
 import shutil
-from pathlib import Path
 from contextlib import asynccontextmanager
+from pathlib import Path
 from typing import Any
 
-from fastapi import BackgroundTasks, FastAPI, File, Form, HTTPException, UploadFile
+from fastapi import (
+    BackgroundTasks,
+    Depends,
+    FastAPI,
+    File,
+    Form,
+    HTTPException,
+    Request,
+    UploadFile,
+)
 from fastapi.middleware.cors import CORSMiddleware
 
 from config import find_config_path, get_frontend_origins, load_config
-from utils.status import read_status, write_status
-from services.ingestion import (
-    run_ingestion_background,
-    run_reindex_background,
-    swap_runtime_config,
-)
 from models.api import (
     EmbeddingConfigPatch,
     ExtractionMode,
@@ -27,6 +30,8 @@ from models.api import (
     IndexStatusResponse,
     TargetedIngestRequest,
 )
+from runtime import IngestionRuntime
+from utils.status import read_status, write_status
 
 logger = logging.getLogger(__name__)
 
@@ -45,9 +50,12 @@ CONFIG_PATH = _REPO_ROOT / "config.toml"
 
 
 @asynccontextmanager
-async def lifespan(_: FastAPI):
+async def lifespan(app_instance: FastAPI):
     """Clear old ingestion status on startup."""
     from utils.status import get_status_file
+
+    runtime = IngestionRuntime()
+    app_instance.state.ingestion_runtime = runtime
 
     status_file = get_status_file(STORAGE_DIR)
     if status_file.exists():
@@ -55,7 +63,16 @@ async def lifespan(_: FastAPI):
             status_file.unlink()
         except OSError:
             pass
+    await runtime.warm()
     yield
+    await runtime.shutdown()
+
+
+def get_ingestion_runtime(request: Request) -> IngestionRuntime:
+    runtime = getattr(request.app.state, "ingestion_runtime", None)
+    if runtime is None:
+        raise HTTPException(status_code=503, detail="Ingestion runtime unavailable")
+    return runtime
 
 
 app = FastAPI(
@@ -81,6 +98,7 @@ app.add_middleware(
 @app.post("/upload", response_model=UploadResponse)
 async def upload_pdfs(
     background_tasks: BackgroundTasks,
+    runtime: IngestionRuntime = Depends(get_ingestion_runtime),
     files: list[UploadFile] = File(...),
     extraction_mode: str = Form(default="text_only"),
     vision_provider: str | None = Form(default=None),
@@ -152,7 +170,7 @@ async def upload_pdfs(
 
     write_status(STORAGE_DIR, "idle", files_processed=0, extraction_mode=mode.value)
     background_tasks.add_task(
-        run_ingestion_background,
+        runtime.run_ingestion,
         STORAGE_DIR,
         extraction_mode=mode,
         vision_provider=vision_provider,
@@ -198,17 +216,14 @@ async def list_files() -> FileListResponse:
 
 @app.post("/config")
 async def set_config(patch: EmbeddingConfigPatch) -> dict[str, Any]:
-    """Swap the embedding model used by the ingestion pipeline at runtime.
-
-    Rebuilds the embedder and vector store on the existing pipeline singleton
-    so subsequent uploads are indexed with the new model.
-    """
+    """Swap the default embedding used by future ingestion jobs."""
     try:
         config_path = find_config_path(CONFIG_PATH if CONFIG_PATH.exists() else None)
         config = load_config(config_path)
-        embed_provider, embed_model = swap_runtime_config(
-            config,
-            config_path,
+        runtime = app.state.ingestion_runtime
+        embed_provider, embed_model = await runtime.update_embedding_default(
+            config=config,
+            config_path=config_path,
             embedding={
                 "provider": patch.embedding.provider,
                 "model": patch.embedding.model,
@@ -257,6 +272,7 @@ async def check_index_status(request: IndexStatusRequest) -> IndexStatusResponse
 async def targeted_ingest(
     background_tasks: BackgroundTasks,
     request: TargetedIngestRequest,
+    runtime: IngestionRuntime = Depends(get_ingestion_runtime),
 ) -> ReindexResponse:
     """Trigger a targeted ingest for a specific permutation."""
     current = read_status(STORAGE_DIR)
@@ -266,11 +282,8 @@ async def targeted_ingest(
             detail="Ingestion already in progress. Please wait for it to complete.",
         )
 
-    # Use run_reindex_background but we need to pass embedding overrides
-    from services.ingestion import run_targeted_ingestion_background
-
     background_tasks.add_task(
-        run_targeted_ingestion_background,
+        runtime.run_targeted_ingestion,
         STORAGE_DIR,
         extraction_mode=request.extraction_mode,
         vision_provider=request.vision_provider,
@@ -290,6 +303,7 @@ async def targeted_ingest(
 async def reindex(
     background_tasks: BackgroundTasks,
     request: ReindexRequest | None = None,
+    runtime: IngestionRuntime = Depends(get_ingestion_runtime),
 ) -> ReindexResponse:
     """Trigger a full re-index of all previously uploaded documents.
 
@@ -311,7 +325,7 @@ async def reindex(
     vision_model = request.vision_model if request else None
 
     background_tasks.add_task(
-        run_reindex_background,
+        runtime.run_ingestion,
         STORAGE_DIR,
         extraction_mode=mode,
         vision_provider=vision_provider,

@@ -1,29 +1,14 @@
+import asyncio
+import contextlib
 import os
+import uuid
 from contextlib import asynccontextmanager
 from pathlib import Path
 
-from fastapi import BackgroundTasks, FastAPI, HTTPException
+from fastapi import BackgroundTasks, Depends, FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 
 from config import find_config_path, get_frontend_origins, load_config
-from providers import (
-    _fetch_nim_models,
-    _fetch_nim_vision_models,
-    _fetch_ollama_models,
-    _fetch_ollama_vision_models,
-    _fetch_openai_models,
-    _fetch_openai_vision_models,
-)
-from services.retrieval import (
-    RetrievalUnavailableError,
-    get_pipeline_status,
-    is_pipeline_loaded,
-    run_eval_job,
-    run_query,
-    start_pipeline_warmer,
-    swap_runtime_config,
-)
-from utils.eval_jobs import read_eval_jobs
 from models.api import (
     AdapterConfig,
     ConfigResponse,
@@ -37,6 +22,20 @@ from models.api import (
     QueryResponse,
     SetConfigResponse,
 )
+from providers import (
+    _fetch_nim_models,
+    _fetch_nim_vision_models,
+    _fetch_ollama_models,
+    _fetch_ollama_vision_models,
+    _fetch_openai_models,
+    _fetch_openai_vision_models,
+)
+from runtime import RetrievalRuntime, RuntimeUnavailableError
+from utils.eval_jobs import create_eval_job, read_eval_jobs, update_eval_job
+
+from adapters import create_embedder, create_llm
+from pipelines.base import create_vector_store_from_config
+from pipelines.retrieval import RetrievalPipeline
 
 STORAGE_DIR = Path("storage")
 
@@ -44,10 +43,43 @@ _IS_PRODUCTION = os.getenv("ENVIRONMENT", "").lower() == "production"
 
 
 @asynccontextmanager
-async def lifespan(_: FastAPI):
-    """Warm the retrieval pipeline before serving traffic."""
-    start_pipeline_warmer()
+async def lifespan(app_instance: FastAPI):
+    """Warm the retrieval runtime before serving traffic."""
+    runtime = RetrievalRuntime()
+    app_instance.state.retrieval_runtime = runtime
+    warm_task = asyncio.create_task(runtime.warm_with_retry())
     yield
+    warm_task.cancel()
+    with contextlib.suppress(asyncio.CancelledError):
+        await warm_task
+    await runtime.shutdown()
+
+
+def get_retrieval_runtime(request: Request) -> RetrievalRuntime:
+    runtime = getattr(request.app.state, "retrieval_runtime", None)
+    if runtime is None:
+        raise HTTPException(status_code=503, detail="Retrieval runtime unavailable")
+    return runtime
+
+
+def run_eval_job(
+    storage_dir: Path,
+    job_id: str,
+    query: str,
+    contexts: list[str],
+    response: str,
+    ground_truth: str | None,
+) -> None:
+    from evaluation.ragas_eval import get_evaluator
+
+    try:
+        evaluator = get_evaluator()
+        scores = evaluator.evaluate_query(
+            query, contexts, response, ground_truth=ground_truth
+        )
+        update_eval_job(storage_dir, job_id, status="complete", scores=scores)
+    except Exception as exc:  # noqa: BLE001
+        update_eval_job(storage_dir, job_id, status="error", error=str(exc))
 
 
 app = FastAPI(
@@ -73,26 +105,23 @@ app.add_middleware(
 
 @app.post("/query", response_model=QueryResponse)
 async def query(
-    request: QueryRequest, background_tasks: BackgroundTasks
+    request: QueryRequest,
+    background_tasks: BackgroundTasks,
+    runtime: RetrievalRuntime = Depends(get_retrieval_runtime),
 ) -> QueryResponse:
     """Query the retrieval pipeline. Evaluation is always performed asynchronously."""
     if not request.query.strip():
         raise HTTPException(status_code=400, detail="Query cannot be empty")
 
-    if not is_pipeline_loaded():
-        status, error = get_pipeline_status()
+    if not runtime.is_loaded():
+        status = runtime.state.value
+        error = runtime.error
         detail = error or "Retrieval pipeline is not ready"
         raise HTTPException(status_code=503, detail=f"{status}: {detail}")
 
     try:
         if request.embedding:
             # Stateless query mode
-            from adapters import create_embedder, create_llm
-            from pipelines.base import create_vector_store_from_config
-            from pipelines.retrieval import RetrievalPipeline
-            import uuid
-            from utils.eval_jobs import create_eval_job
-
             config_path = find_config_path()
             config = load_config(config_path)
 
@@ -115,7 +144,6 @@ async def query(
             )
 
             # Create LLM
-            llm_to_use = None
             if request.llm:
                 llm_kwargs = {
                     k: v
@@ -126,9 +154,8 @@ async def query(
                     request.llm.provider, model=request.llm.model, **llm_kwargs
                 )
             else:
-                from services.retrieval import get_pipeline
-
-                llm_to_use = get_pipeline().llm
+                async with runtime.acquire() as active_pipeline:
+                    llm_to_use = active_pipeline.llm
 
             # Execute
             pipeline = RetrievalPipeline(
@@ -142,41 +169,41 @@ async def query(
 
             job_id = str(uuid.uuid4())
             create_eval_job(STORAGE_DIR, job_id, request.query)
-
-            from services.retrieval import RetrievalQueryResult
-
-            result = RetrievalQueryResult(
-                response=raw_result["response"],
-                context=raw_result["context"],
-                eval_job_id=job_id,
-            )
+            response_text = raw_result["response"]
+            result_context = raw_result["context"]
+            eval_job_id = job_id
 
         else:
             custom_llm = None
             if request.llm:
-                from adapters import create_llm
-
                 custom_llm = create_llm(request.llm.provider, model=request.llm.model)
-            result = run_query(request.query, STORAGE_DIR, custom_llm=custom_llm)
+            async with runtime.acquire() as pipeline:
+                raw_result = pipeline.query(request.query, llm_override=custom_llm)
+            eval_job_id = str(uuid.uuid4())
+            create_eval_job(STORAGE_DIR, eval_job_id, request.query)
+            response_text = raw_result["response"]
+            result_context = raw_result["context"]
 
         context = [
             ContextItem(text=doc.text, source=doc.source, distance=doc.distance)
-            for doc in result.context
+            for doc in result_context
         ]
 
         background_tasks.add_task(
             run_eval_job,
             STORAGE_DIR,
-            result.eval_job_id,
+            eval_job_id,
             request.query,
-            [doc.text for doc in result.context],
-            result.response,
+            [doc.text for doc in result_context],
+            response_text,
             None,
         )
         return QueryResponse(
-            response=result.response, context=context, eval_job_id=result.eval_job_id
+            response=response_text,
+            context=context,
+            eval_job_id=eval_job_id,
         )
-    except RetrievalUnavailableError as exc:
+    except RuntimeUnavailableError as exc:
         raise HTTPException(status_code=503, detail=str(exc))
     except HTTPException:
         raise
@@ -188,42 +215,43 @@ async def query(
 
 
 @app.get("/health", response_model=HealthResponse)
-async def health() -> HealthResponse:
-    status, error = get_pipeline_status()
+async def health(
+    runtime: RetrievalRuntime = Depends(get_retrieval_runtime),
+) -> HealthResponse:
+    status = runtime.state.value
+    error = runtime.error
     has_documents = False
-    if is_pipeline_loaded():
-        from services.retrieval import require_pipeline
-
+    if runtime.is_loaded():
         try:
-            has_documents = require_pipeline().vector_store.count() > 0
+            async with runtime.acquire(timeout_s=0.5) as pipeline:
+                has_documents = pipeline.vector_store.count > 0
         except Exception:
             pass
 
     return HealthResponse(
-        status="healthy" if is_pipeline_loaded() else status,
+        status="healthy" if runtime.is_loaded() else status,
         service="retrieval-api",
-        pipeline_loaded=is_pipeline_loaded(),
+        pipeline_loaded=runtime.is_loaded(),
         has_documents=has_documents,
         error_message=error,
     )
 
 
 @app.get("/config", response_model=ConfigResponse)
-async def get_config() -> ConfigResponse:
+async def get_config(
+    runtime: RetrievalRuntime = Depends(get_retrieval_runtime),
+) -> ConfigResponse:
     """Return the currently active embedding and LLM configuration."""
     try:
-        config_path = find_config_path()
-        config = load_config(config_path)
-        embed_cfg = config.get("embedding", {})
-        llm_cfg = config.get("llm", {})
+        embed_cfg, llm_cfg = runtime.get_active_config()
         return ConfigResponse(
             embedding=AdapterConfig(
-                provider=embed_cfg.get("provider", "openai"),
-                model=embed_cfg.get("model", "text-embedding-3-small"),
+                provider=embed_cfg["provider"],
+                model=embed_cfg["model"],
             ),
             llm=AdapterConfig(
-                provider=llm_cfg.get("provider", "openai"),
-                model=llm_cfg.get("model", "gpt-4o-mini"),
+                provider=llm_cfg["provider"],
+                model=llm_cfg["model"],
             ),
         )
     except Exception as e:
@@ -355,15 +383,16 @@ async def set_config(patch: ConfigUpdateRequest) -> SetConfigResponse:
             if patch.llm is not None
             else None
         )
+        runtime = app.state.retrieval_runtime
         (
             embed_provider,
             embed_model,
             llm_provider,
             llm_model,
             requires_reindex,
-        ) = swap_runtime_config(
-            config,
-            config_path,
+        ) = await runtime.reload(
+            config=config,
+            config_path=config_path,
             embedding=embedding_payload,
             llm=llm_payload,
         )

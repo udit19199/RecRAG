@@ -133,7 +133,7 @@ services:
       - recrag-network
 
   milvus:
-    image: milvusdb/milvus:v2.4-latest
+    image: milvusdb/milvus:latest
     profiles: [server]
     command: ["milvus", "run", "standalone"]
     security_opt:
