@@ -32,5 +32,23 @@ make infra-up
 
 ---
 
+---
+
+## Deployment
+
+For detailed deployment guidance across AWS, GCP, and Azure for development and testing phases:
+
+📖 **[Development & Testing Deployment Guide](docs/DEPLOYMENT_GUIDE_DEV.md)**
+
+Includes:
+- Architecture overview and service breakdown
+- Hardware requirements for each service
+- Stress testing specifications
+- Cost comparison across AWS, GCP, and Azure
+- Step-by-step deployment instructions
+- Monitoring and troubleshooting tips
+
+---
+
 ## Configuration
 Configuration is managed in `config.toml` (supports `${VAR:-default}` env var substitution).
