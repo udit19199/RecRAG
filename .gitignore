@@ -27,7 +27,7 @@ ENV/
 # OS
 .DS_Store
 Thumbs.db
-
+.reference
 # Project specific
 storage/
 data/pdfs/
