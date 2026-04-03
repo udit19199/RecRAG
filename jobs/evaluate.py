@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 def run_batch_evaluation(
     dataset_path: str = "data/eval_dataset.json",
-    output_dir: str = "storage",
+    output_dir: str = "state",
 ) -> None:
     """Run RAGAS evaluation on a dataset of questions.
 

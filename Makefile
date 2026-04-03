@@ -6,7 +6,7 @@
 .PHONY: install setup dev retrieval ingestion frontend ingest evaluate \
         lint lint-backend lint-frontend format format-backend format-frontend \
         test typecheck check clean infra-up infra-down infra-logs \
-        milvus-up milvus-down milvus-logs docker-up docker-down help
+        docker-up docker-down help
 
 # ── Variables ─────────────────────────────────────────────────────────────────
 
@@ -40,43 +40,34 @@ dev: ## Start retrieval, ingestion, and frontend together locally
 	@echo "Starting Next.js        → http://localhost:3000"
 	@echo "Press Ctrl-C to stop all services."
 	@trap 'kill 0' EXIT; \
-	$(PYTHON_ENV) uvicorn api.retrieval.main:app \
+	$(PYTHON_ENV) uvicorn app.retrieval.main:app \
 	    --host 0.0.0.0 --port 8000 --reload \
 	    2>&1 | sed 's/^/[retrieval] /' & \
-	$(PYTHON_ENV) uvicorn api.ingestion.main:app \
+	$(PYTHON_ENV) uvicorn app.ingestion.main:app \
 	    --host 0.0.0.0 --port 8001 --reload \
 	    2>&1 | sed 's/^/[ingestion] /' & \
 	cd $(FRONTEND_DIR) && pnpm dev 2>&1 | sed 's/^/[frontend]  /' & \
 	wait
 
 retrieval: ## Start only the retrieval API
-	$(PYTHON_ENV) uvicorn api.retrieval.main:app --host 0.0.0.0 --port 8000 --reload
+	$(PYTHON_ENV) uvicorn app.retrieval.main:app --host 0.0.0.0 --port 8000 --reload
 
 ingestion: ## Start only the ingestion API
-	$(PYTHON_ENV) uvicorn api.ingestion.main:app --host 0.0.0.0 --port 8001 --reload
+	$(PYTHON_ENV) uvicorn app.ingestion.main:app --host 0.0.0.0 --port 8001 --reload
 
 frontend: ## Start only the Next.js dev server
 	cd $(FRONTEND_DIR) && pnpm dev
 
 # ── Infrastructure ────────────────────────────────────────────────────────────
 
-infra-up: ## Start infrastructure services (Milvus stack + Ollama)
-	$(DOCKER_COMPOSE) --profile server up -d
+infra-up: ## Start optional local Milvus stack for development
+	$(DOCKER_COMPOSE) -f docker-compose.dev.yml up -d
 
-infra-down: ## Stop infrastructure services
-	$(DOCKER_COMPOSE) --profile server down
+infra-down: ## Stop optional local Milvus stack
+	$(DOCKER_COMPOSE) -f docker-compose.dev.yml down
 
-infra-logs: ## Show logs for infrastructure services
-	$(DOCKER_COMPOSE) --profile server logs -f
-
-milvus-up: ## Start only Milvus + etcd + MinIO
-	$(DOCKER_COMPOSE) -f docker-compose.milvus.yml up -d
-
-milvus-down: ## Stop only Milvus + etcd + MinIO
-	$(DOCKER_COMPOSE) -f docker-compose.milvus.yml down
-
-milvus-logs: ## Show logs for only Milvus + etcd + MinIO
-	$(DOCKER_COMPOSE) -f docker-compose.milvus.yml logs -f
+infra-logs: ## Show logs for optional local Milvus stack
+	$(DOCKER_COMPOSE) -f docker-compose.dev.yml logs -f
 
 docker-up: ## Start the full stack (including apps) in Docker
 	$(DOCKER_COMPOSE) up -d
@@ -86,11 +77,11 @@ docker-down: ## Stop the full stack
 
 # ── Data & Pipeline ───────────────────────────────────────────────────────────
 
-ingest: ## Run one-shot PDF ingestion from cli/ingest.py
-	$(PYTHON_ENV) python cli/ingest.py --force
+ingest: ## Run one-shot PDF ingestion from jobs/ingest.py
+	$(PYTHON_ENV) python jobs/ingest.py --force
 
 evaluate: ## Run RAGAS evaluation on the dataset
-	$(PYTHON_ENV) python cli/evaluate.py
+	$(PYTHON_ENV) python jobs/evaluate.py
 
 # ── Quality Checks ────────────────────────────────────────────────────────────
 

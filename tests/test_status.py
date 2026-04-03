@@ -8,9 +8,9 @@ from utils import status as status_utils
 
 
 def test_write_status_is_atomic(tmp_path: Path) -> None:
-    storage_dir = tmp_path / "storage"
-    storage_dir.mkdir()
-    status_file = storage_dir / "ingestion_status.json"
+    state_dir = tmp_path / "state"
+    state_dir.mkdir()
+    status_file = state_dir / "ingestion_status.json"
     status_file.write_text('{"status": "idle"}')
 
     def fake_dump(data: Any, fp: Any, indent: int = 2, **kwargs: Any) -> None:
@@ -23,7 +23,7 @@ def test_write_status_is_atomic(tmp_path: Path) -> None:
 
     try:
         with pytest.raises(RuntimeError, match="simulated write failure"):
-            status_utils.write_status(storage_dir, "processing")
+            status_utils.write_status(state_dir, "processing")
     finally:
         io_utils.json.dump = original_dump  # type: ignore[assignment]
 
@@ -31,16 +31,16 @@ def test_write_status_is_atomic(tmp_path: Path) -> None:
 
 
 def test_write_status_persists_valid_json(tmp_path: Path) -> None:
-    storage_dir = tmp_path / "storage"
+    state_dir = tmp_path / "state"
 
     status_utils.write_status(
-        storage_dir,
+        state_dir,
         "complete",
         started_at="2026-01-01T00:00:00",
         completed_at="2026-01-01T00:01:00",
         files_processed=3,
     )
 
-    status_file = storage_dir / "ingestion_status.json"
+    status_file = state_dir / "ingestion_status.json"
     assert status_file.exists()
-    assert status_utils.read_status(storage_dir)["status"] == "complete"
+    assert status_utils.read_status(state_dir)["status"] == "complete"

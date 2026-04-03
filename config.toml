@@ -42,13 +42,13 @@ origins = ["http://localhost:3000"]
 
 [storage]
 # "lite"   – Milvus Lite: embedded local file, no Docker service required (default).
-# "server" – Milvus Standalone / Distributed: requires the milvus service
-#             in docker-compose (run with --profile server).
+# "server" – Managed/serverless Milvus (recommended) or optional local Milvus
+#             from docker-compose.dev.yml.
 deployment = "server"
 collection_prefix = "recrag_"
 metric_type = "L2"
 # directory is used only for tracking ingestion status
-directory = "storage"
+directory = "state"
 [storage.server]
 # Set MILVUS_HOST env var to override (useful when using cloud or custom host).
 # `MILVUS_HOST` may be a hostname (e.g. 'localhost'), a host:port (e.g. 'host:19530'),

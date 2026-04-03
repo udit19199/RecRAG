@@ -10,7 +10,7 @@ Future work for the RecRAG system.
 
 **Status**: Open | **Impact**: Ingestion throughput
 
-`api/ingestion/main.py` still writes uploaded PDFs with synchronous file I/O inside an `async` route.
+`app/ingestion/main.py` still writes uploaded PDFs with synchronous file I/O inside an `async` route.
 
 **Tasks**:
 - Replace direct file writes with async-friendly or threaded writes
@@ -76,7 +76,7 @@ Base adapter constructors still store kwargs before OpenAI keys are removed.
 
 **Status**: Open | **Impact**: Lifecycle management gap
 
-The system still has no endpoint for deleting a document from storage and the vector index.
+The system still has no endpoint for deleting a document from the state record and the vector index.
 
 **Tasks**:
 - Define deletion semantics for file and vector-store cleanup
@@ -115,7 +115,7 @@ No bearer-token or similar auth guard exists on the APIs.
 2. Fix adapter retry, timeout, and secret handling.
 3. Address auth.
 4. Fix retrieval/NIM edge cases.
-5. Add deletion support if storage contracts are clear.
+5. Add deletion support if state contracts are clear.
 6. Run targeted tests and update the roadmap notes.
 
 ## Future Considerations

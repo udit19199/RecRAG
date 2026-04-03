@@ -75,8 +75,8 @@ def get_config_value(config: dict, key_path: str, default: Any = None) -> Any:
 
 
 def get_storage_dir(config: dict, config_path: Path) -> Path:
-    storage_dir = config.get("storage", {}).get("directory", "storage")
-    return resolve_path(storage_dir, config_path)
+    state_dir = config.get("storage", {}).get("directory", "state")
+    return resolve_path(state_dir, config_path)
 
 
 def get_ingestion_dir(config: dict, config_path: Path) -> Path:

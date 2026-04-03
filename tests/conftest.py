@@ -53,10 +53,10 @@ def mock_llm() -> MockLLM:
 
 
 @pytest.fixture
-def temp_storage_dir(tmp_path: Path) -> Path:
-    storage_dir = tmp_path / "storage"
-    storage_dir.mkdir()
-    return storage_dir
+def temp_state_dir(tmp_path: Path) -> Path:
+    state_dir = tmp_path / "state"
+    state_dir.mkdir()
+    return state_dir
 
 
 @pytest.fixture
@@ -97,7 +97,7 @@ provider = "openai"
 model = "gpt-4o-mini"
 
 [storage]
-directory = "storage"
+directory = "state"
 
 [ingestion]
 directory = "data/pdfs"

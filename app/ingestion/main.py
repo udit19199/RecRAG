@@ -42,7 +42,7 @@ _REPO_ROOT = _APP_DIR if _APP_DIR.exists() else Path(__file__).resolve().parents
 
 DATA_DIR = _REPO_ROOT / "data"
 PDF_DIR = DATA_DIR / "pdfs"
-STORAGE_DIR = _REPO_ROOT / "storage"
+STATE_DIR = _REPO_ROOT / "state"
 CONFIG_PATH = _REPO_ROOT / "config.toml"
 
 
@@ -57,7 +57,7 @@ async def lifespan(app_instance: FastAPI):
     runtime = IngestionRuntime()
     app_instance.state.ingestion_runtime = runtime
 
-    status_file = get_status_file(STORAGE_DIR)
+    status_file = get_status_file(STATE_DIR)
     if status_file.exists():
         try:
             status_file.unlink()
@@ -125,7 +125,7 @@ async def upload_pdfs(
             f"Must be one of: {[e.value for e in ExtractionMode]}",
         )
 
-    current = read_status(STORAGE_DIR)
+    current = read_status(STATE_DIR)
     if current.get("status") == "processing":
         raise HTTPException(
             status_code=409,
@@ -168,10 +168,10 @@ async def upload_pdfs(
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to save batch: {e}")
 
-    write_status(STORAGE_DIR, "idle", files_processed=0, extraction_mode=mode.value)
+    write_status(STATE_DIR, "idle", files_processed=0, extraction_mode=mode.value)
     background_tasks.add_task(
         runtime.run_ingestion,
-        STORAGE_DIR,
+        STATE_DIR,
         extraction_mode=mode,
         vision_provider=vision_provider,
         vision_model=vision_model,
@@ -187,7 +187,7 @@ async def upload_pdfs(
 
 @app.get("/status", response_model=StatusResponse)
 async def get_status() -> StatusResponse:
-    status = read_status(STORAGE_DIR)
+    status = read_status(STATE_DIR)
     return StatusResponse(
         status=status.get("status", "idle"),
         started_at=status.get("started_at"),
@@ -275,7 +275,7 @@ async def targeted_ingest(
     runtime: IngestionRuntime = Depends(get_ingestion_runtime),
 ) -> ReindexResponse:
     """Trigger a targeted ingest for a specific permutation."""
-    current = read_status(STORAGE_DIR)
+    current = read_status(STATE_DIR)
     if current.get("status") == "processing":
         raise HTTPException(
             status_code=409,
@@ -284,7 +284,7 @@ async def targeted_ingest(
 
     background_tasks.add_task(
         runtime.run_targeted_ingestion,
-        STORAGE_DIR,
+        STATE_DIR,
         extraction_mode=request.extraction_mode,
         vision_provider=request.vision_provider,
         vision_model=request.vision_model,
@@ -312,7 +312,7 @@ async def reindex(
 
     Rejected if ingestion is already running.
     """
-    current = read_status(STORAGE_DIR)
+    current = read_status(STATE_DIR)
     if current.get("status") == "processing":
         raise HTTPException(
             status_code=409,
@@ -326,7 +326,7 @@ async def reindex(
 
     background_tasks.add_task(
         runtime.run_ingestion,
-        STORAGE_DIR,
+        STATE_DIR,
         extraction_mode=mode,
         vision_provider=vision_provider,
         vision_model=vision_model,

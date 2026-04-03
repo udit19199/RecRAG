@@ -1,4 +1,5 @@
 services:
+  # Optional local Milvus stack for development only.
   etcd:
     image: quay.io/coreos/etcd:v3.5.5
     environment:

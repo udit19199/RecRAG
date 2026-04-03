@@ -37,7 +37,7 @@ from adapters import create_embedder, create_llm
 from pipelines.base import create_vector_store_from_config
 from pipelines.retrieval import RetrievalPipeline
 
-STORAGE_DIR = Path("storage")
+STATE_DIR = Path("state")
 
 _IS_PRODUCTION = os.getenv("ENVIRONMENT", "").lower() == "production"
 
@@ -168,7 +168,7 @@ async def query(
             raw_result = pipeline.query(request.query)
 
             job_id = str(uuid.uuid4())
-            create_eval_job(STORAGE_DIR, job_id, request.query)
+            create_eval_job(STATE_DIR, job_id, request.query)
             response_text = raw_result["response"]
             result_context = raw_result["context"]
             eval_job_id = job_id
@@ -180,7 +180,7 @@ async def query(
             async with runtime.acquire() as pipeline:
                 raw_result = pipeline.query(request.query, llm_override=custom_llm)
             eval_job_id = str(uuid.uuid4())
-            create_eval_job(STORAGE_DIR, eval_job_id, request.query)
+            create_eval_job(STATE_DIR, eval_job_id, request.query)
             response_text = raw_result["response"]
             result_context = raw_result["context"]
 
@@ -191,7 +191,7 @@ async def query(
 
         background_tasks.add_task(
             run_eval_job,
-            STORAGE_DIR,
+            STATE_DIR,
             eval_job_id,
             request.query,
             [doc.text for doc in result_context],
@@ -410,7 +410,7 @@ async def set_config(patch: ConfigUpdateRequest) -> SetConfigResponse:
 @app.get("/evaluate/{job_id}", response_model=EvalJobStatus)
 async def eval_status(job_id: str) -> EvalJobStatus:
     """Get status of an async evaluation job."""
-    job = read_eval_jobs(STORAGE_DIR).get(job_id)
+    job = read_eval_jobs(STATE_DIR).get(job_id)
     if job is None:
         raise HTTPException(status_code=404, detail="Job not found")
     status = job.get("status", "pending")
