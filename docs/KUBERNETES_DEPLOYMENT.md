@@ -33,22 +33,28 @@ self-managed.
 
 ## Quick Start
 
+The fastest way to go from clone to running:
+
 ```bash
-# 1. Create secrets with your real credentials
-kubectl create namespace recrag
-kubectl create secret generic recrag-secrets \
-  --namespace recrag \
-  --from-literal=rec-rag-api-key='your-secret-key' \
-  --from-literal=openai-api-key='sk-...' \
-  --from-literal=milvus-host='in03-xxxx.serverless.cloud.zilliz.com'
-
-# 2. Deploy everything
-kubectl kustomize k8s/overlays/dev | kubectl apply -f -
-
-# 3. Check status
-kubectl get all -n recrag
-kubectl get ingress -n recrag
+# ONE COMMAND — installs K8s + deploys everything
+git clone https://github.com/udit19199/RecRAG.git && cd RecRAG
+cp .env.example .env                    # Edit with your API keys
+make deploy-k8s
 ```
+
+That's it. The `scripts/bootstrap.sh` script handles everything:
+
+1. Installs **k3s** (lightweight K8s) if no cluster is present
+2. Installs **kustomize** if missing
+3. Installs **nginx-ingress** controller
+4. Reads `.env` and creates the `recrag-secrets` Secret
+5. Patches ingress hostnames with your domain (default: `example.com`)
+6. Applies the Kustomize manifests
+7. Waits for rollout and prints access URLs
+
+### Manual Deploy
+
+If you already have a cluster, you can skip the bootstrap:
 
 ---
 

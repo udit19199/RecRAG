@@ -2,12 +2,25 @@
 
 Lightweight RAG pipeline: upload a PDF batch, index the full corpus, and query via LLM-backed RAG.
 
-## Quick Start (Kubernetes)
+## Quick Start (Kubernetes — one command)
+
+On any cloud VM (Ubuntu/Debian) with Docker installed:
 
 ```bash
-# Deploy to any K8s cluster via Kustomize
-cp .env.example .env  # Update with your API keys
-kubectl kustomize k8s/overlays/dev | kubectl apply -f -
+git clone https://github.com/udit19199/RecRAG.git && cd RecRAG
+cp .env.example .env                    # Edit with your API keys
+make deploy-k8s                          # One command: installs K8s + deploys everything
+```
+
+The script installs k3s, kustomize, and nginx-ingress if needed, creates
+secrets from `.env`, and applies the Kustomize manifests. After ~3-5 minutes
+you'll see access URLs printed.
+
+Advanced variants:
+
+```bash
+make deploy-k8s-dev                      # Dev overlay (smaller resources, no HPA)
+OVERLAY=dev DOMAIN=my.vm.ip.nip.io bash scripts/bootstrap.sh  # Custom domain
 ```
 
 See [Kubernetes Deployment Guide](docs/KUBERNETES_DEPLOYMENT.md) for full details.
