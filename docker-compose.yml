@@ -13,8 +13,13 @@ services:
       - .env
     ports:
       - "8001:8001"
-    command: uv run uvicorn app.ingestion.main:app --host 0.0.0.0 --port 8001
+    command: uv run uvicorn app.ingestion.main:app --host 0.0.0.0 --port 8001 --timeout-graceful-shutdown 30
     container_name: recrag-api-ingestion
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+          cpus: '1'
     healthcheck:
       test: ["CMD-SHELL", "curl -sf http://localhost:8001/health || exit 1"]
       interval: 10s
@@ -36,8 +41,13 @@ services:
       - .env
     ports:
       - "8000:8000"
-    command: uv run uvicorn app.retrieval.main:app --host 0.0.0.0 --port 8000
+    command: uv run uvicorn app.retrieval.main:app --host 0.0.0.0 --port 8000 --timeout-graceful-shutdown 30
     container_name: recrag-api-retrieval
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+          cpus: '1'
     healthcheck:
       test: ["CMD-SHELL", "curl -sf http://localhost:8000/health || exit 1"]
       interval: 10s
@@ -51,6 +61,9 @@ services:
     build:
       context: .
       dockerfile: frontend/Dockerfile
+      args:
+        NEXT_PUBLIC_RETRIEVAL_API_URL: http://api-retrieval:8000
+        NEXT_PUBLIC_INGESTION_API_URL: http://api-ingestion:8001
     environment:
       - NEXT_PUBLIC_RETRIEVAL_API_URL=http://api-retrieval:8000
       - NEXT_PUBLIC_INGESTION_API_URL=http://api-ingestion:8001

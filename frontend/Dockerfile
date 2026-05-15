@@ -8,6 +8,12 @@ FROM node:22-alpine AS builder
 # Set working directory
 WORKDIR /app
 
+# Build-time public API URLs for the browser bundle.
+ARG NEXT_PUBLIC_RETRIEVAL_API_URL=http://localhost:8000
+ARG NEXT_PUBLIC_INGESTION_API_URL=http://localhost:8001
+ENV NEXT_PUBLIC_RETRIEVAL_API_URL=${NEXT_PUBLIC_RETRIEVAL_API_URL}
+ENV NEXT_PUBLIC_INGESTION_API_URL=${NEXT_PUBLIC_INGESTION_API_URL}
+
 # Copy package files
 COPY frontend/package.json frontend/pnpm-lock.yaml ./
 

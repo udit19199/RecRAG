@@ -1,0 +1,334 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_PREFIX: ${{ github.repository }}
+
+jobs:
+  # ── Backend Quality Checks ──────────────────────────────────────────────────
+  backend-checks:
+    name: Backend Checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: ".python-version"
+
+      - name: Install dependencies
+        run: uv sync --frozen --all-extras
+
+      - name: Lint (Ruff)
+        run: uv run ruff check .
+
+      - name: Format check (Ruff)
+        run: uv run ruff format --check .
+
+      - name: Type check (mypy)
+        run: uv run mypy src/
+
+      - name: Run tests
+        run: uv run pytest --tb=short -q
+
+  # ── Frontend Quality Checks ─────────────────────────────────────────────────
+  frontend-checks:
+    name: Frontend Checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: "20"
+          cache: "pnpm"
+          cache-dependency-path: frontend/pnpm-lock.yaml
+
+      - name: Install dependencies
+        working-directory: frontend
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint (Biome)
+        working-directory: frontend
+        run: pnpm lint
+
+      - name: Format check (Biome)
+        working-directory: frontend
+        run: pnpm format
+
+      - name: Build
+        working-directory: frontend
+        run: pnpm build
+        env:
+          NEXT_PUBLIC_RETRIEVAL_API_URL: http://localhost:8000
+          NEXT_PUBLIC_INGESTION_API_URL: http://localhost:8001
+
+  # ── Security Scanning ──────────────────────────────────────────────────────
+  security-scan:
+    name: Security Scan
+    runs-on: ubuntu-latest
+    needs: [backend-checks]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: ".python-version"
+
+      - name: Install dependencies
+        run: uv sync --frozen
+
+      - name: Install pip-audit
+        run: uv pip install pip-audit
+
+      - name: Run pip-audit
+        run: uv run pip-audit --format json --output pip-audit-results.json || true
+
+      - name: Upload audit results
+        uses: actions/upload-artifact@v4
+        with:
+          name: pip-audit-results
+          path: pip-audit-results.json
+
+      - name: Dockerfile Trivy scan
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: "config"
+          scan-ref: "."
+          format: "table"
+          exit-code: "0"
+
+  # ── Kustomize overlay sync ──────────────────────────────────────────────────
+  # Keeps overlay image tags in sync with the latest main branch.
+  # Does NOT require any cluster access — purely a repo-side update.
+  update-kustomize-tags:
+    name: Sync Kustomize Tags
+    runs-on: ubuntu-latest
+    needs: [backend-checks, frontend-checks]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install kustomize
+        run: |
+          curl -sSLO https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2Fv5.4.3/kustomize_v5.4.3_linux_amd64.tar.gz
+          tar -xzf kustomize_v5.4.3_linux_amd64.tar.gz
+          chmod +x kustomize && sudo mv kustomize /usr/local/bin/
+
+      - name: Update prod overlay image tags
+        working-directory: k8s/overlays/prod
+        run: |
+          kustomize edit set image \
+            ghcr.io/udit19199/recrag-api=ghcr.io/udit19199/recrag-api:sha-${{ github.sha }} \
+            ghcr.io/udit19199/recrag-frontend=ghcr.io/udit19199/recrag-frontend:sha-${{ github.sha }}
+
+      - name: Commit tag updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add k8s/overlays/prod/kustomization.yaml
+          git diff --staged --quiet || git commit -m "chore(k8s): bump prod overlay images to sha-${{ github.sha }}"
+          git push
+
+  # ── Build and Push Docker Images ────────────────────────────────────────────
+  build-and-push:
+    name: Build & Push Images
+    runs-on: ubuntu-latest
+    needs: [backend-checks, frontend-checks, security-scan]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    permissions:
+      contents: read
+      packages: write
+    outputs:
+      image-tag: ${{ steps.meta.outputs.tags }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}
+          tags: |
+            type=sha,prefix=
+            type=ref,event=branch
+            type=semver,pattern={{version}}
+
+      - name: Build and push backend image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: Dockerfile
+          target: api
+          push: true
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}-api:${{ steps.meta.outputs.version }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Build and push frontend image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: frontend/Dockerfile
+          push: true
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}-frontend:${{ steps.meta.outputs.version }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          build-args: |
+            NEXT_PUBLIC_RETRIEVAL_API_URL=${{ vars.NEXT_PUBLIC_RETRIEVAL_API_URL || 'http://localhost:8000' }}
+            NEXT_PUBLIC_INGESTION_API_URL=${{ vars.NEXT_PUBLIC_INGESTION_API_URL || 'http://localhost:8001' }}
+
+  # ── Deploy to EC2 ──────────────────────────────────────────────────────────
+  deploy-ec2:
+    name: Deploy to EC2
+    runs-on: ubuntu-latest
+    needs: [build-and-push]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure SSH
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.EC2_SSH_KEY }}
+
+      - name: Deploy to EC2
+        env:
+          EC2_HOST: ${{ secrets.EC2_HOST }}
+          EC2_USER: ${{ secrets.EC2_USER || 'ec2-user' }}
+          IMAGE_TAG: ${{ needs.build-and-push.outputs.image-tag }}
+        run: |
+          ssh -o StrictHostKeyChecking=no $EC2_USER@$EC2_HOST << 'EOF'
+            set -e
+
+            # Pull latest images
+            docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}-api:sha-${{ github.sha }}
+            docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}-frontend:sha-${{ github.sha }}
+
+            # Stop existing containers (if any)
+            docker stop recrag-api-ingestion recrag-api-retrieval recrag-frontend || true
+            docker rm recrag-api-ingestion recrag-api-retrieval recrag-frontend || true
+
+            # Start services with updated images
+            docker run -d \
+              --name recrag-api-ingestion \
+              --restart unless-stopped \
+              --network recrag-network \
+              -p 8001:8001 \
+              -v /opt/recrag/data:/app/data \
+              -v /opt/recrag/state:/app/state \
+              -v /opt/recrag/config.toml:/app/config.toml \
+              --env-file /opt/recrag/.env \
+              --memory=2g \
+              --cpus=1 \
+              ${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}-api:sha-${{ github.sha }} \
+              uv run uvicorn app.ingestion.main:app --host 0.0.0.0 --port 8001
+
+            docker run -d \
+              --name recrag-api-retrieval \
+              --restart unless-stopped \
+              --network recrag-network \
+              -p 8000:8000 \
+              -v /opt/recrag/state:/app/state \
+              -v /opt/recrag/config.toml:/app/config.toml \
+              --env-file /opt/recrag/.env \
+              --memory=2g \
+              --cpus=1 \
+              ${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}-api:sha-${{ github.sha }} \
+              uv run uvicorn app.retrieval.main:app --host 0.0.0.0 --port 8000
+
+            docker run -d \
+              --name recrag-frontend \
+              --restart unless-stopped \
+              --network recrag-network \
+              -p 3000:3000 \
+              -e NEXT_PUBLIC_RETRIEVAL_API_URL=http://api-retrieval:8000 \
+              -e NEXT_PUBLIC_INGESTION_API_URL=http://api-ingestion:8001 \
+              ${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}-frontend:sha-${{ github.sha }}
+
+            # Clean up old images
+            docker image prune -f
+          EOF
+
+      - name: Wait for services to start
+        run: sleep 15
+
+  # ── Smoke Tests ────────────────────────────────────────────────────────────
+  smoke-tests:
+    name: Smoke Tests
+    runs-on: ubuntu-latest
+    needs: [deploy-ec2]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    steps:
+      - name: Health check - Retrieval API
+        run: |
+          for i in {1..10}; do
+            if curl -sf ${{ secrets.EC2_HEALTH_URL || 'http://ec2-host:8000' }}/health; then
+              echo "Retrieval API is healthy"
+              exit 0
+            fi
+            echo "Attempt $i failed, retrying..."
+            sleep 5
+          done
+          echo "Retrieval API health check failed"
+          exit 1
+
+      - name: Health check - Ingestion API
+        run: |
+          for i in {1..10}; do
+            if curl -sf ${{ secrets.EC2_HEALTH_URL || 'http://ec2-host:8001' }}/health; then
+              echo "Ingestion API is healthy"
+              exit 0
+            fi
+            echo "Attempt $i failed, retrying..."
+            sleep 5
+          done
+          echo "Ingestion API health check failed"
+          exit 1
+
+      - name: Health check - Frontend
+        run: |
+          for i in {1..10}; do
+            if curl -sf ${{ secrets.FRONTEND_URL || 'http://ec2-host:3000' }}; then
+              echo "Frontend is healthy"
+              exit 0
+            fi
+            echo "Attempt $i failed, retrying..."
+            sleep 5
+          done
+          echo "Frontend health check failed"
+          exit 1

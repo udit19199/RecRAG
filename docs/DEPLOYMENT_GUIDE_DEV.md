@@ -215,7 +215,7 @@ make infra-up         # (Optional) Start local Milvus
 make docker-up
 
 # Scale individual services
-docker-compose up -d --scale retrieval=2
+docker-compose up -d --scale api-retrieval=2
 
 # View logs
 make infra-logs

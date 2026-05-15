@@ -1,0 +1,104 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+# ── Production overlay ────────────────────────────────────────────────────
+# Production-tuned manifest set: multi-replica, autoscaling, TLS, larger PVCs.
+
+resources:
+  - ../../base
+
+# ── Environment-specific patches ──────────────────────────────────────────
+patches:
+  # ── Prod replica count ──────────────────────────────────────────────────
+  - target:
+      kind: Deployment
+      name: api-ingestion
+    patch: |-
+      - op: replace
+        path: /spec/replicas
+        value: 2
+  - target:
+      kind: Deployment
+      name: api-retrieval
+    patch: |-
+      - op: replace
+        path: /spec/replicas
+        value: 2
+  - target:
+      kind: Deployment
+      name: frontend
+    patch: |-
+      - op: replace
+        path: /spec/replicas
+        value: 2
+
+  # ── Prod ingress hostname ────────────────────────────────────────────────
+  # Override these with your real domain name:
+  - target:
+      kind: Ingress
+      name: recrag-ingress
+    patch: |-
+      - op: replace
+        path: /spec/rules
+        value:
+          - host: recrag.example.com
+            http:
+              paths:
+                - path: /
+                  pathType: Prefix
+                  backend:
+                    service:
+                      name: svc-frontend
+                      port:
+                        number: 3000
+          - host: retrieval.recrag.example.com
+            http:
+              paths:
+                - path: /
+                  pathType: Prefix
+                  backend:
+                    service:
+                      name: svc-retrieval
+                      port:
+                        number: 8000
+          - host: ingestion.recrag.example.com
+            http:
+              paths:
+                - path: /
+                  pathType: Prefix
+                  backend:
+                    service:
+                      name: svc-ingestion
+                      port:
+                        number: 8001
+      - op: add
+        path: /spec/tls
+        value:
+          - hosts:
+              - recrag.example.com
+              - retrieval.recrag.example.com
+              - ingestion.recrag.example.com
+            secretName: recrag-tls
+
+  # ── Prod-sized PVCs ────────────────────────────────────────────────────
+  - target:
+      kind: PersistentVolumeClaim
+      name: recrag-data
+    patch: |-
+      - op: replace
+        path: /spec/resources/requests/storage
+        value: 50Gi
+  - target:
+      kind: PersistentVolumeClaim
+      name: recrag-state
+    patch: |-
+      - op: replace
+        path: /spec/resources/requests/storage
+        value: 5Gi
+
+# Override image tags for production deploy (CI/CD sets these)
+images:
+  - name: ghcr.io/udit19199/recrag-api
+    newTag: latest
+  - name: ghcr.io/udit19199/recrag-frontend
+    newTag: latest

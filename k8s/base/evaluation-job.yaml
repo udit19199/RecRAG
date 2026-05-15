@@ -1,0 +1,97 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: recrag-evaluation
+  namespace: recrag
+  labels:
+    app.kubernetes.io/name: recrag
+    app.kubernetes.io/component: evaluation
+spec:
+  ttlSecondsAfterFinished: 604800  # 7 days
+  backoffLimit: 2
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/component: evaluation
+    spec:
+      restartPolicy: Never
+      serviceAccountName: recrag
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1000
+        fsGroup: 1000
+      containers:
+        - name: evaluation
+          image: ghcr.io/udit19199/recrag-api:latest
+          imagePullPolicy: Always
+          command:
+            - uv
+            - run
+            - python
+            - jobs/evaluate.py
+          env:
+            - name: OPENAI_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: recrag-secrets
+                  key: openai-api-key
+                  optional: true
+            - name: NVIDIA_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: recrag-secrets
+                  key: nvidia-api-key
+                  optional: true
+            - name: OLLAMA_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: recrag-secrets
+                  key: ollama-api-key
+                  optional: true
+            - name: MILVUS_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: recrag-secrets
+                  key: milvus-host
+                  optional: true
+            - name: MILVUS_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: recrag-secrets
+                  key: milvus-username
+                  optional: true
+            - name: MILVUS_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: recrag-secrets
+                  key: milvus-password
+                  optional: true
+          volumeMounts:
+            - name: config
+              mountPath: /app/config.toml
+              subPath: config.toml
+              readOnly: true
+            - name: data
+              mountPath: /app/data
+            - name: state
+              mountPath: /app/state
+          resources:
+            limits:
+              cpu: "2"
+              memory: 4Gi
+            requests:
+              cpu: "1"
+              memory: 2Gi
+      volumes:
+        - name: config
+          configMap:
+            name: recrag-config
+            items:
+              - key: config.toml
+                path: config.toml
+        - name: data
+          persistentVolumeClaim:
+            claimName: recrag-data
+        - name: state
+          persistentVolumeClaim:
+            claimName: recrag-state

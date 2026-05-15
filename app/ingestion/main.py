@@ -16,8 +16,12 @@ from fastapi import (
     UploadFile,
 )
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import Response
 
+from auth import verify_api_key
 from config import find_config_path, get_frontend_origins, load_config
+from structured_logging import StructuredLoggingMiddleware
+from metrics import MetricsMiddleware, metrics_endpoint
 from models.api import (
     EmbeddingConfigPatch,
     ExtractionMode,
@@ -32,6 +36,7 @@ from models.api import (
 )
 from runtime import IngestionRuntime
 from utils.status import read_status, write_status
+from validation import validate_filename, validate_file_size
 
 logger = logging.getLogger(__name__)
 
@@ -90,9 +95,16 @@ app.add_middleware(
     allow_origins=get_frontend_origins(
         load_config(find_config_path(CONFIG_PATH if CONFIG_PATH.exists() else None))
     ),
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["GET", "POST", "PATCH", "OPTIONS"],
+    allow_headers=["Content-Type", "Authorization", "RecRAG-API-Key"],
+    expose_headers=["X-Request-ID"],
 )
+
+# Add structured logging middleware
+app.add_middleware(StructuredLoggingMiddleware)
+
+# Add metrics middleware
+app.add_middleware(MetricsMiddleware)
 
 
 @app.post("/upload", response_model=UploadResponse)
@@ -103,6 +115,7 @@ async def upload_pdfs(
     extraction_mode: str = Form(default="text_only"),
     vision_provider: str | None = Form(default=None),
     vision_model: str | None = Form(default=None),
+    _: None = Depends(verify_api_key),
 ) -> UploadResponse:
     """Upload PDF files for ingestion.
 
@@ -137,10 +150,16 @@ async def upload_pdfs(
     for upload in files:
         if not upload.filename:
             raise HTTPException(status_code=400, detail="Filename is required")
-        if not upload.filename.lower().endswith(".pdf"):
+        
+        # Validate filename
+        try:
+            safe_filename = validate_filename(upload.filename)
+        except ValueError as e:
+            raise HTTPException(status_code=400, detail=str(e))
+        
+        if not safe_filename.lower().endswith(".pdf"):
             raise HTTPException(status_code=400, detail="Only PDF files are allowed")
-
-        safe_filename = Path(upload.filename).name
+        
         if safe_filename in seen_names:
             raise HTTPException(
                 status_code=400,
@@ -149,6 +168,10 @@ async def upload_pdfs(
 
         try:
             content = await upload.read()
+            # Validate file size
+            validate_file_size(content)
+        except ValueError as e:
+            raise HTTPException(status_code=413, detail=str(e))
         except Exception as e:
             raise HTTPException(status_code=500, detail=f"Failed to read file: {e}")
 
@@ -203,6 +226,12 @@ async def health() -> dict[str, str]:
     return {"status": "healthy", "service": "ingestion-api"}
 
 
+@app.get("/metrics")
+async def metrics() -> Response:
+    """Prometheus metrics endpoint."""
+    return metrics_endpoint()
+
+
 @app.get("/files", response_model=FileListResponse)
 async def list_files() -> FileListResponse:
     """Return a list of uploaded PDF files."""
@@ -215,7 +244,10 @@ async def list_files() -> FileListResponse:
 
 
 @app.post("/config")
-async def set_config(patch: EmbeddingConfigPatch) -> dict[str, Any]:
+async def set_config(
+    patch: EmbeddingConfigPatch,
+    _: None = Depends(verify_api_key),
+) -> dict[str, Any]:
     """Swap the default embedding used by future ingestion jobs."""
     try:
         config_path = find_config_path(CONFIG_PATH if CONFIG_PATH.exists() else None)
@@ -239,7 +271,10 @@ async def set_config(patch: EmbeddingConfigPatch) -> dict[str, Any]:
 
 
 @app.post("/status/index", response_model=IndexStatusResponse)
-async def check_index_status(request: IndexStatusRequest) -> IndexStatusResponse:
+async def check_index_status(
+    request: IndexStatusRequest,
+    _: None = Depends(verify_api_key),
+) -> IndexStatusResponse:
     from pipelines.base import get_collection_name, get_milvus_uri
     from stores import VectorStore
 
@@ -273,6 +308,7 @@ async def targeted_ingest(
     background_tasks: BackgroundTasks,
     request: TargetedIngestRequest,
     runtime: IngestionRuntime = Depends(get_ingestion_runtime),
+    _: None = Depends(verify_api_key),
 ) -> ReindexResponse:
     """Trigger a targeted ingest for a specific permutation."""
     current = read_status(STATE_DIR)
@@ -304,6 +340,7 @@ async def reindex(
     background_tasks: BackgroundTasks,
     request: ReindexRequest | None = None,
     runtime: IngestionRuntime = Depends(get_ingestion_runtime),
+    _: None = Depends(verify_api_key),
 ) -> ReindexResponse:
     """Trigger a full re-index of all previously uploaded documents.
 

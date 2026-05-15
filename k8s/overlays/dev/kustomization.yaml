@@ -1,0 +1,133 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+# ── Development overlay ────────────────────────────────────────────────────
+# Overrides the base for local dev / minikube / k3s clusters.
+# Reduces resource requests, uses smaller replicas, and skips HPA.
+
+resources:
+  - ../../base
+
+# ── Environment-specific patches ──────────────────────────────────────────
+patches:
+  # ── Dev-friendly resource limits ────────────────────────────────────────
+  - target:
+      kind: Deployment
+      name: api-ingestion
+    patch: |-
+      - op: replace
+        path: /spec/replicas
+        value: 1
+      - op: replace
+        path: /spec/template/spec/containers/0/resources
+        value:
+          limits:
+            cpu: "0.5"
+            memory: 1Gi
+          requests:
+            cpu: 100m
+            memory: 256Mi
+  - target:
+      kind: Deployment
+      name: api-retrieval
+    patch: |-
+      - op: replace
+        path: /spec/replicas
+        value: 1
+      - op: replace
+        path: /spec/template/spec/containers/0/resources
+        value:
+          limits:
+            cpu: "0.5"
+            memory: 1Gi
+          requests:
+            cpu: 100m
+            memory: 256Mi
+  - target:
+      kind: Deployment
+      name: frontend
+    patch: |-
+      - op: replace
+        path: /spec/replicas
+        value: 1
+      - op: replace
+        path: /spec/template/spec/containers/0/resources
+        value:
+          limits:
+            cpu: "0.5"
+            memory: 512Mi
+          requests:
+            cpu: 50m
+            memory: 128Mi
+
+  # ── Dev ingress hostname ─────────────────────────────────────────────────
+  - target:
+      kind: Ingress
+      name: recrag-ingress
+    patch: |-
+      - op: replace
+        path: /spec/rules
+        value:
+          - host: recrag.dev.local
+            http:
+              paths:
+                - path: /
+                  pathType: Prefix
+                  backend:
+                    service:
+                      name: svc-frontend
+                      port:
+                        number: 3000
+          - host: retrieval.recrag.dev.local
+            http:
+              paths:
+                - path: /
+                  pathType: Prefix
+                  backend:
+                    service:
+                      name: svc-retrieval
+                      port:
+                        number: 8000
+          - host: ingestion.recrag.dev.local
+            http:
+              paths:
+                - path: /
+                  pathType: Prefix
+                  backend:
+                    service:
+                      name: svc-ingestion
+                      port:
+                        number: 8001
+
+  # ── Remove HPA in dev ───────────────────────────────────────────────────
+  - target:
+      kind: HorizontalPodAutoscaler
+    patch: |-
+      $patch: delete
+      apiVersion: autoscaling/v2
+      kind: HorizontalPodAutoscaler
+      metadata:
+        name: placeholder
+
+  # ── Smaller PVCs in dev ─────────────────────────────────────────────────
+  - target:
+      kind: PersistentVolumeClaim
+      name: recrag-data
+    patch: |-
+      - op: replace
+        path: /spec/resources/requests/storage
+        value: 1Gi
+  - target:
+      kind: PersistentVolumeClaim
+      name: recrag-state
+    patch: |-
+      - op: replace
+        path: /spec/resources/requests/storage
+        value: 256Mi
+
+# Use latest dev images by default
+images:
+  - name: ghcr.io/udit19199/recrag-api
+    newTag: dev
+  - name: ghcr.io/udit19199/recrag-frontend
+    newTag: dev

@@ -1,4 +1,8 @@
-import { getIngestionApiUrl, handleResponse } from "@/lib/api/client";
+import {
+	authenticatedFetch,
+	getIngestionApiUrl,
+	handleResponse,
+} from "@/lib/api/client";
 import type {
 	AdapterConfig,
 	ExtractionOptions,
@@ -33,7 +37,7 @@ export async function uploadPDFs(
 		}
 	}
 
-	const res = await fetch(getIngestionApiUrl("/upload"), {
+	const res = await authenticatedFetch(getIngestionApiUrl("/upload"), {
 		method: "POST",
 		body: formData,
 	});
@@ -42,7 +46,7 @@ export async function uploadPDFs(
 }
 
 export async function getIngestionStatus(): Promise<IngestionStatus> {
-	const res = await fetch(getIngestionApiUrl("/status"));
+	const res = await authenticatedFetch(getIngestionApiUrl("/status"));
 	return handleResponse<IngestionStatus>(res);
 }
 
@@ -52,14 +56,14 @@ export async function checkIngestionHealth(): Promise<HealthResponse> {
 }
 
 export async function getUploadedFiles(): Promise<FileListResponse> {
-	const res = await fetch(getIngestionApiUrl("/files"));
+	const res = await authenticatedFetch(getIngestionApiUrl("/files"));
 	return handleResponse<FileListResponse>(res);
 }
 
 export async function setIngestionConfig(
 	embedding: AdapterConfig,
 ): Promise<void> {
-	const res = await fetch(getIngestionApiUrl("/config"), {
+	const res = await authenticatedFetch(getIngestionApiUrl("/config"), {
 		method: "POST",
 		headers: { "Content-Type": "application/json" },
 		body: JSON.stringify({ embedding }),
@@ -71,7 +75,7 @@ export async function setIngestionConfig(
 export async function triggerReindex(
 	options?: ExtractionOptions,
 ): Promise<ReindexResponse> {
-	const res = await fetch(getIngestionApiUrl("/reindex"), {
+	const res = await authenticatedFetch(getIngestionApiUrl("/reindex"), {
 		method: "POST",
 		headers: { "Content-Type": "application/json" },
 		body: options ? JSON.stringify(options) : undefined,
@@ -83,7 +87,7 @@ export async function triggerReindex(
 export async function checkIndexStatus(
 	request: IndexStatusRequest,
 ): Promise<IndexStatusResponse> {
-	const res = await fetch(getIngestionApiUrl("/status/index"), {
+	const res = await authenticatedFetch(getIngestionApiUrl("/status/index"), {
 		method: "POST",
 		headers: { "Content-Type": "application/json" },
 		body: JSON.stringify(request),
@@ -95,7 +99,7 @@ export async function checkIndexStatus(
 export async function triggerTargetedIngest(
 	request: TargetedIngestRequest,
 ): Promise<ReindexResponse> {
-	const res = await fetch(getIngestionApiUrl("/ingest/target"), {
+	const res = await authenticatedFetch(getIngestionApiUrl("/ingest/target"), {
 		method: "POST",
 		headers: { "Content-Type": "application/json" },
 		body: JSON.stringify(request),

@@ -7,8 +7,12 @@ from pathlib import Path
 
 from fastapi import BackgroundTasks, Depends, FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import Response
 
+from auth import verify_api_key
 from config import find_config_path, get_frontend_origins, load_config
+from structured_logging import StructuredLoggingMiddleware
+from metrics import MetricsMiddleware, metrics_endpoint
 from models.api import (
     AdapterConfig,
     ConfigResponse,
@@ -32,6 +36,7 @@ from providers import (
 )
 from runtime import RetrievalRuntime, RuntimeUnavailableError
 from utils.eval_jobs import create_eval_job, read_eval_jobs, update_eval_job
+from validation import validate_query
 
 from adapters import create_embedder, create_llm
 from pipelines.base import create_vector_store_from_config
@@ -95,9 +100,16 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=get_frontend_origins(load_config(find_config_path())),
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["GET", "POST", "PATCH", "OPTIONS"],
+    allow_headers=["Content-Type", "Authorization", "RecRAG-API-Key"],
+    expose_headers=["X-Request-ID"],
 )
+
+# Add structured logging middleware
+app.add_middleware(StructuredLoggingMiddleware)
+
+# Add metrics middleware
+app.add_middleware(MetricsMiddleware)
 
 
 # ── Routes ────────────────────────────────────────────────────────────────────
@@ -108,10 +120,15 @@ async def query(
     request: QueryRequest,
     background_tasks: BackgroundTasks,
     runtime: RetrievalRuntime = Depends(get_retrieval_runtime),
+    _: None = Depends(verify_api_key),
 ) -> QueryResponse:
     """Query the retrieval pipeline. Evaluation is always performed asynchronously."""
-    if not request.query.strip():
-        raise HTTPException(status_code=400, detail="Query cannot be empty")
+    # Validate query input
+    try:
+        validated_query = validate_query(request.query)
+        request.query = validated_query
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
 
     if not runtime.is_loaded():
         status = runtime.state.value
@@ -237,9 +254,16 @@ async def health(
     )
 
 
+@app.get("/metrics")
+async def metrics() -> Response:
+    """Prometheus metrics endpoint."""
+    return metrics_endpoint()
+
+
 @app.get("/config", response_model=ConfigResponse)
 async def get_config(
     runtime: RetrievalRuntime = Depends(get_retrieval_runtime),
+    _: None = Depends(verify_api_key),
 ) -> ConfigResponse:
     """Return the currently active embedding and LLM configuration."""
     try:
@@ -259,7 +283,7 @@ async def get_config(
 
 
 @app.get("/providers", response_model=ProvidersResponse)
-async def get_providers() -> ProvidersResponse:
+async def get_providers(_: None = Depends(verify_api_key)) -> ProvidersResponse:
     """Return available providers and their models, fetched live where possible."""
     ollama_embed_url = "http://localhost:11434"
     ollama_llm_url = "http://localhost:11434"
@@ -369,7 +393,10 @@ async def get_providers() -> ProvidersResponse:
 
 
 @app.post("/config", response_model=SetConfigResponse)
-async def set_config(patch: ConfigUpdateRequest) -> SetConfigResponse:
+async def set_config(
+    patch: ConfigUpdateRequest,
+    _: None = Depends(verify_api_key),
+) -> SetConfigResponse:
     try:
         config_path = find_config_path()
         config = load_config(config_path)

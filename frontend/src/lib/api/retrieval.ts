@@ -1,4 +1,8 @@
-import { getRetrievalApiUrl, handleResponse } from "@/lib/api/client";
+import {
+	authenticatedFetch,
+	getRetrievalApiUrl,
+	handleResponse,
+} from "@/lib/api/client";
 import type {
 	ConfigPatch,
 	ConfigResponse,
@@ -13,7 +17,7 @@ import type {
 export async function queryRAG(
 	request: QueryRequest,
 ): Promise<QueryWithEvalResponse> {
-	const res = await fetch(getRetrievalApiUrl("/query"), {
+	const res = await authenticatedFetch(getRetrievalApiUrl("/query"), {
 		method: "POST",
 		headers: { "Content-Type": "application/json" },
 		body: JSON.stringify(request),
@@ -33,19 +37,19 @@ export async function checkRetrievalHealth(): Promise<HealthResponse> {
 }
 
 export async function getConfig(): Promise<ConfigResponse> {
-	const res = await fetch(getRetrievalApiUrl("/config"));
+	const res = await authenticatedFetch(getRetrievalApiUrl("/config"));
 	return handleResponse<ConfigResponse>(res);
 }
 
 export async function getProviders(): Promise<ProvidersResponse> {
-	const res = await fetch(getRetrievalApiUrl("/providers"));
+	const res = await authenticatedFetch(getRetrievalApiUrl("/providers"));
 	return handleResponse<ProvidersResponse>(res);
 }
 
 export async function setConfig(
 	patch: ConfigPatch,
 ): Promise<SetConfigResponse> {
-	const res = await fetch(getRetrievalApiUrl("/config"), {
+	const res = await authenticatedFetch(getRetrievalApiUrl("/config"), {
 		method: "POST",
 		headers: { "Content-Type": "application/json" },
 		body: JSON.stringify(patch),
