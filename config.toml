@@ -5,12 +5,14 @@
 provider = "ollama"
 model = "nomic-embed-text:latest"
 base_url = "http://localhost:11434"
+timeout = 120
 
 [llm]
 provider = "ollama"
 model = "gpt-oss:20b"
 base_url = "http://localhost:11434"
 api_key = "${OLLAMA_API_KEY}"
+timeout = 120
 
 [ingestion]
 directory = "data/pdfs"
@@ -22,6 +24,7 @@ chunk_overlap = 50
 # Provider options: "openai", "ollama", "nim"
 provider = "openai"
 model = "gpt-4o-mini"
+timeout = 120
 # For Ollama, uncomment:
 # provider = "ollama"
 # model = "llava:latest"
@@ -30,6 +33,7 @@ model = "gpt-4o-mini"
 [retrieval]
 top_k = 4
 max_context_tokens = 4096
+tokenizer_fallback = "cl100k_base"  # Encoding to use when tiktoken cannot find the model's encoder
 context_template = """Context information:
 {context}
 

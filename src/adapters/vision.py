@@ -105,6 +105,9 @@ class OpenAIVisionExtractor(BaseVisionExtractor):
         base_url: str | None = None,
         **kwargs: Any,
     ):
+        kwargs.pop("api_key", None)
+        kwargs.pop("base_url", None)
+        self._timeout = kwargs.pop("timeout", 120)
         super().__init__(model, **kwargs)
         self.api_key = api_key or os.getenv("OPENAI_API_KEY")
         self.base_url = (base_url or "https://api.openai.com/v1").rstrip("/")
@@ -131,7 +134,7 @@ class OpenAIVisionExtractor(BaseVisionExtractor):
             f"{self.base_url}/chat/completions",
             headers=headers,
             json=payload,
-            timeout=120,
+            timeout=self._timeout,
         )
         response.raise_for_status()
         return response.json()["choices"][0]["message"]["content"]
@@ -183,6 +186,8 @@ class OllamaVisionExtractor(BaseVisionExtractor):
         base_url: str | None = None,
         **kwargs: Any,
     ):
+        kwargs.pop("base_url", None)
+        self._timeout = kwargs.pop("timeout", 180)
         super().__init__(model, **kwargs)
         resolved_url = base_url or os.getenv("OLLAMA_HOST") or "http://localhost:11434"
         self.base_url = resolved_url.rstrip("/")
@@ -205,7 +210,7 @@ class OllamaVisionExtractor(BaseVisionExtractor):
             response = requests.post(
                 f"{self.base_url}/api/generate",
                 json=payload,
-                timeout=180,
+                timeout=self._timeout,
             )
             response.raise_for_status()
             return response.json().get("response", "")
@@ -235,6 +240,9 @@ class NIMVisionExtractor(BaseVisionExtractor):
         base_url: str | None = None,
         **kwargs: Any,
     ):
+        kwargs.pop("api_key", None)
+        kwargs.pop("base_url", None)
+        self._timeout = kwargs.pop("timeout", 120)
         super().__init__(model, **kwargs)
         self.api_key = api_key or os.getenv("NVIDIA_API_KEY")
         self.base_url = (base_url or "https://integrate.api.nvidia.com/v1").rstrip("/")
@@ -285,7 +293,7 @@ class NIMVisionExtractor(BaseVisionExtractor):
                 f"{self.base_url}/chat/completions",
                 headers=headers,
                 json=payload,
-                timeout=120,
+                timeout=self._timeout,
             )
             response.raise_for_status()
             res = response.json()["choices"][0]["message"]["content"]

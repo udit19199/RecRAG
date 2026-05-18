@@ -29,7 +29,7 @@ def _create_adapter_from_config(
     model = section_config.get("model", defaults["model"])
 
     extra_kwargs = {
-        k: v for k, v in section_config.items() if k not in ("provider", "model")
+        k: v for k, v in section_config.items() if k not in ("provider", "model") and not k.startswith("_")
     }
 
     return create_fn(provider, model=model, **extra_kwargs)

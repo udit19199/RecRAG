@@ -40,8 +40,8 @@ async def verify_api_key(request: Request) -> None:
     if request.url.path in PUBLIC_PATHS:
         return
     
-    # Verify API key
-    provided_key = request.headers.get("x-api-key")
+    # Verify API key (must match the header name from APIKeyHeader)
+    provided_key = request.headers.get("RecRAG-API-Key")
     if not provided_key or provided_key != api_key:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,

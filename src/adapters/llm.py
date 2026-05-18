@@ -70,6 +70,9 @@ class OllamaLLM(BaseLLM):
         api_key: Optional[str] = None,
         **kwargs: Any,
     ):
+        kwargs.pop("api_key", None)
+        kwargs.pop("base_url", None)
+        self._timeout = kwargs.pop("timeout", 120)
         super().__init__(model, **kwargs)
         self.base_url = base_url.rstrip("/")
         self.temperature = temperature
@@ -101,7 +104,7 @@ class OllamaLLM(BaseLLM):
             f"{self.base_url}/api/generate",
             json=payload,
             headers=self._headers,
-            timeout=120,
+            timeout=self._timeout,
         )
         response.raise_for_status()
         return response.json()["response"]
@@ -113,7 +116,7 @@ class OllamaLLM(BaseLLM):
             f"{self.base_url}/api/chat",
             json=payload,
             headers=self._headers,
-            timeout=120,
+            timeout=self._timeout,
         )
         response.raise_for_status()
         return response.json()["message"]["content"]

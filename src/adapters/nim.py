@@ -14,8 +14,8 @@ _NIM_DIMENSION_CACHE: dict[str, int] = {}
 class NIMEmbedder(BaseEmbedder):
     """NVIDIA NIM embedding provider.
 
-    Detects embedding dimension via a test call on first use per model;
-    subsequent instantiations with the same model name reuse the cached value.
+    Detects embedding dimension lazily on first access via a test call;
+    subsequent accesses and same-model instantiations reuse the cached value.
     """
 
     provider = "nim"
@@ -28,6 +28,9 @@ class NIMEmbedder(BaseEmbedder):
         truncate: str = "NONE",
         **kwargs: Any,
     ):
+        # Pop sensitive/known kwargs before passing to base to avoid leaking into self.kwargs
+        kwargs.pop("api_key", None)
+        kwargs.pop("base_url", None)
         super().__init__(model, **kwargs)
         self._api_key = api_key or os.environ.get("NVIDIA_API_KEY")
         if not self._api_key:
@@ -42,16 +45,26 @@ class NIMEmbedder(BaseEmbedder):
             truncate=truncate,
         )
 
-        if model not in _NIM_DIMENSION_CACHE:
-            from utils.rate_limit import check_rate_limit, record_success
+        # Dimension resolved lazily on first property access
+        self._dimension: Optional[int] = None
 
-            check_rate_limit("embedding")
-            _NIM_DIMENSION_CACHE[model] = len(self._client.get_query_embedding("test"))
-            record_success("embedding")
-        self._dimension = _NIM_DIMENSION_CACHE[model]
+    def _resolve_dimension(self) -> int:
+        """Resolve and cache the embedding dimension via a test call."""
+        if self.model in _NIM_DIMENSION_CACHE:
+            return _NIM_DIMENSION_CACHE[self.model]
+
+        from utils.rate_limit import check_rate_limit, record_success
+
+        check_rate_limit("embedding")
+        dim = len(self._client.get_query_embedding("test"))
+        record_success("embedding")
+        _NIM_DIMENSION_CACHE[self.model] = dim
+        return dim
 
     @property
     def dimension(self) -> int:
+        if self._dimension is None:
+            self._dimension = self._resolve_dimension()
         return self._dimension
 
     def embed(self, text: str) -> list[float]:
@@ -87,6 +100,9 @@ class NIMLLM(BaseLLM):
         max_tokens: Optional[int] = None,
         **kwargs: Any,
     ):
+        # Pop sensitive/known kwargs before passing to base to avoid leaking into self.kwargs
+        kwargs.pop("api_key", None)
+        kwargs.pop("base_url", None)
         super().__init__(model, **kwargs)
         self._api_key = api_key or os.environ.get("NVIDIA_API_KEY")
         if not self._api_key:

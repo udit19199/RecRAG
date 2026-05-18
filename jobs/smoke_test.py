@@ -93,7 +93,7 @@ def query_rag(base_url: str, question: str) -> bool:
         if answer:
             print(f"[OK] Query returned answer ({len(answer)} chars)")
             return True
-        print(f"[FAIL] Query returned empty answer")
+        print("[FAIL] Query returned empty answer")
         return False
     except requests.RequestException as e:
         print(f"[FAIL] Query failed: {e}")

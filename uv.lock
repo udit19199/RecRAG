@@ -2854,6 +2854,7 @@ name = "recrag"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "anyio" },
     { name = "auth0-fastapi-api" },
     { name = "datasets" },
     { name = "fastapi" },
@@ -2892,6 +2893,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "anyio", specifier = ">=4.0.0" },
     { name = "auth0-fastapi-api", specifier = ">=1.0.0b5" },
     { name = "datasets", specifier = ">=2.15.0" },
     { name = "fastapi", specifier = ">=0.115.0" },

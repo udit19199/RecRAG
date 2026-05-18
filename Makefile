@@ -6,7 +6,7 @@
 .PHONY: install setup dev retrieval ingestion frontend ingest evaluate \
         lint lint-backend lint-frontend format format-backend format-frontend \
         test typecheck check clean infra-up infra-down infra-logs \
-        docker-up docker-down deploy-k8s help
+        docker-up docker-down deploy help
 
 # ── Variables ─────────────────────────────────────────────────────────────────
 
@@ -75,11 +75,11 @@ docker-up: ## Start the full stack (including apps) in Docker
 docker-down: ## Stop the full stack
 	$(DOCKER_COMPOSE) down
 
-deploy-k8s: ## One-command K8s deploy: bootstraps cluster, secrets, and deploys RecRAG
-	bash scripts/bootstrap.sh
+deploy: ## Build, import into k3s, and deploy RecRAG (single command)
+	bash scripts/deploy.sh
 
-deploy-k8s-dev: ## One-command K8s deploy using the dev overlay (lightweight)
-	OVERLAY=dev bash scripts/bootstrap.sh
+deploy-dev: ## Deploy with dev overlay (lightweight)
+	OVERLAY=dev bash scripts/deploy.sh
 
 # ── Data & Pipeline ───────────────────────────────────────────────────────────
 

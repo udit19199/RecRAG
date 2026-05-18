@@ -27,9 +27,15 @@ class OpenAIEmbedder(BaseEmbedder):
         api_key = kwargs.pop("api_key", None) or os.environ.get("OPENAI_API_KEY")
         base_url = kwargs.pop("base_url", None)
         dimensions = kwargs.pop("dimensions", None)
+        self._timeout = kwargs.pop("timeout", None)
         super().__init__(model, **kwargs)
 
-        self.client = OpenAI(api_key=api_key, base_url=base_url)
+        client_kwargs: dict[str, Any] = {"api_key": api_key}
+        if base_url:
+            client_kwargs["base_url"] = base_url
+        if self._timeout:
+            client_kwargs["timeout"] = float(self._timeout)
+        self.client = OpenAI(**client_kwargs)
         self._dimension: Optional[int] = dimensions
 
     @property
@@ -65,6 +71,9 @@ class OllamaEmbedder(BaseEmbedder):
         **kwargs: Any,
     ):
         dimension = kwargs.pop("dimension", DEFAULT_OLLAMA_DIMENSION)
+        kwargs.pop("api_key", None)  # Not used by Ollama; pop to avoid leaking into self.kwargs
+        kwargs.pop("base_url", None)
+        self._timeout = kwargs.pop("timeout", 120)
         super().__init__(model, **kwargs)
         self.base_url = base_url.rstrip("/")
         self._dimension = dimension
@@ -80,7 +89,7 @@ class OllamaEmbedder(BaseEmbedder):
         response = self.session.post(
             f"{self.base_url}/api/embeddings",
             json={"model": self.model, "prompt": text},
-            timeout=30,
+            timeout=self._timeout,
         )
         response.raise_for_status()
         return response.json()["embedding"]
@@ -105,7 +114,7 @@ class OllamaEmbedder(BaseEmbedder):
             response = self.session.post(
                 f"{self.base_url}/api/embed",
                 json={"model": self.model, "input": texts},
-                timeout=120,
+                timeout=self._timeout,
             )
             response.raise_for_status()
             return response.json().get("embeddings", [])

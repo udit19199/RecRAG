@@ -25,6 +25,7 @@ dependencies = [
     "pymupdf>=1.24.0",
     "auth0-fastapi-api>=1.0.0b5",
     "prometheus-client>=0.21.0",
+    "anyio>=4.0.0",
 ]
 
 [project.optional-dependencies]

@@ -146,6 +146,17 @@ class VectorStore:
         )
         return int(result.get("delete_count", 0)) if isinstance(result, dict) else 0
 
+    def delete_document(self, source: str) -> int:
+        """Delete all vectors associated with a given document source.
+
+        Args:
+            source: The document source (filename) to delete.
+
+        Returns:
+            Number of vectors deleted.
+        """
+        return self.delete_by_filter(f'source == "{source}"')
+
     @property
     def count(self) -> int:
         stats = self._client.get_collection_stats(self._collection_name)

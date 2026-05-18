@@ -4,11 +4,11 @@ This is the fastest way to get RecRAG running on any cloud VM.
 
 ## What you need
 
-- A cloud VM (Ubuntu/Debian preferred) with **Docker** installed
+- A cloud VM (Ubuntu/Debian preferred)
 - API keys for at least one LLM provider (OpenAI, Ollama, or NVIDIA NIM)
 - A **Milvus** instance (recommended: [Zilliz Cloud free tier](https://cloud.zilliz.com/))
 
-> **No Kubernetes experience required.** The bootstrap script installs k3s
+> **No Kubernetes experience required.** The deploy script installs k3s
 > (lightweight Kubernetes, ~80MB binary) automatically. If you already have
 > a cluster, it skips that step and deploys straight into yours.
 
@@ -23,13 +23,31 @@ cd RecRAG
 
 # 2. Set up your API keys
 cp .env.example .env
-nano .env     # paste in your keys (see tips below)
+# Edit .env with your keys (see .env tips below)
 
 # 3. Run it
-make deploy-k8s
+make deploy
 ```
 
-That's it. After 3-5 minutes you'll see:
+That's it. The script:
+
+| # | Step |
+|---|------|
+| 1 | Validates `.env` (checks required keys exist, **never sources** the file) |
+| 2 | Installs **Docker** if missing |
+| 3 | Installs **k3s** (lightweight K8s) if missing |
+| 4 | Builds API + frontend Docker images locally |
+| 5 | Imports images into k3s containerd |
+| 6 | Creates the `recrag` namespace |
+| 7 | Creates secrets from `.env` using `--from-env-file` (avoids process-list leakage) |
+| 8 | Creates ConfigMap from `config.toml` |
+| 9 | Applies Kustomize manifests (patched to `imagePullPolicy: IfNotPresent`) |
+| 10 | Creates `recrag-tunnel.service` for port-forwards |
+| 11 | Waits for all deployments to roll out |
+| 12 | Runs smoke tests (pod health checks) |
+| 13 | Prints access URLs and next steps |
+
+After 3-5 minutes you'll see:
 
 ```
 ══════════════════════════════════════════════════════
@@ -60,7 +78,9 @@ MILVUS_PASSWORD=your-password
 REC_RAG_API_KEY=my-secret-key
 ```
 
-Leave any provider keys blank if you're not using that provider.
+> **Security**: The deploy script reads `.env` keys using `grep` (without sourcing)
+> to validate, and creates Kubernetes secrets using `--from-env-file` which avoids
+> exposing values in process listings. Never source `.env` in deployment scripts.
 
 ---
 
@@ -71,10 +91,10 @@ real domain (or a nip.io address for quick testing):
 
 ```bash
 # Quick test without DNS — nip.io resolves <IP>.nip.io to the IP
-DOMAIN=203.0.113.42.nip.io make deploy-k8s
+DOMAIN=203.0.113.42.nip.io make deploy
 
 # Production domain
-DOMAIN=recrag.mycompany.com make deploy-k8s
+DOMAIN=recrag.mycompany.com make deploy
 ```
 
 This sets up three hostnames:
@@ -92,7 +112,7 @@ This sets up three hostnames:
 On a low-resource VM (1-2 GB RAM), use the dev overlay:
 
 ```bash
-make deploy-k8s-dev
+make deploy-dev
 ```
 
 This reduces resource requests (256Mi per pod instead of 2Gi), disables
@@ -100,23 +120,7 @@ autoscaling, and uses 1Gi PVCs. Good for testing.
 
 ---
 
-## What happens behind the scenes
-
-The `scripts/bootstrap.sh` script runs these steps automatically:
-
-| # | Step |
-|---|------|
-| 1 | Detects if a Kubernetes cluster exists; if not, installs **k3s** |
-| 2 | Installs **kustomize** for manifest management |
-| 3 | Installs **nginx-ingress** controller for traffic routing |
-| 4 | Creates the `recrag` namespace |
-| 5 | Reads your `.env` file and creates the `recrag-secrets` Secret |
-| 6 | Patches ingress hostnames to your domain |
-| 7 | Applies all K8s manifests (Deployments, Services, PVCs, HPAs, Ingress) |
-| 8 | Waits for every deployment to roll out successfully |
-| 9 | Prints access URLs and next steps |
-
-The three services deployed:
+## Service architecture
 
 ```
                         ┌──────────────────┐
@@ -169,44 +173,6 @@ kubectl delete namespace recrag
 
 ---
 
-## Accessing the services
-
-### Via DNS
-
-Point these DNS records to your cluster's Ingress IP:
-
-```bash
-# Get the Ingress IP
-kubectl get svc -n ingress-nginx ingress-nginx-controller \
-  -o jsonpath='{.status.loadBalancer.ingress[0].ip}'
-```
-
-Then add A records:
-```
-recrag.<your-domain>       → <ingress-ip>
-retrieval.<your-domain>    → <ingress-ip>
-ingestion.<your-domain>    → <ingress-ip>
-```
-
-### Via /etc/hosts (quick test)
-
-```bash
-echo "<ingress-ip> recrag.example.com retrieval.example.com ingestion.example.com" \
-  | sudo tee -a /etc/hosts
-```
-
-### Via port-forward (no DNS needed)
-
-```bash
-kubectl port-forward -n recrag deployment/frontend 3000:3000 &
-kubectl port-forward -n recrag deployment/api-retrieval 8000:8000 &
-kubectl port-forward -n recrag deployment/api-ingestion 8001:8001 &
-```
-
-Then access: http://localhost:3000
-
----
-
 ## Known limitations
 
 - **Frontend API URLs are baked at build time.** Changing the ingress domain
@@ -224,8 +190,8 @@ Then access: http://localhost:3000
 
 | File | Description |
 |------|-------------|
-| `scripts/bootstrap.sh` | The one-command bootstrap script |
-| `Makefile` | `make deploy-k8s` and `make deploy-k8s-dev` targets |
+| `scripts/deploy.sh` | The one-command deploy script |
+| `Makefile` | `make deploy` and `make deploy-dev` targets |
 | `k8s/base/` | Shared Kubernetes manifests |
 | `k8s/overlays/dev/` | Dev overlay (smaller resources) |
 | `k8s/overlays/prod/` | Production overlay (multi-replica, TLS) |

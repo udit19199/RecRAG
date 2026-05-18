@@ -18,20 +18,21 @@ from .base import (
 logger = logging.getLogger(__name__)
 
 DEFAULT_MAX_CONTEXT_TOKENS = 4096
+DEFAULT_TOKENIZER_FALLBACK = "cl100k_base"
 _ENCODING_CACHE: dict[str, tiktoken.Encoding] = {}
 
 
-def _get_tokenizer(model: str) -> tiktoken.Encoding:
+def _get_tokenizer(model: str, fallback: str = DEFAULT_TOKENIZER_FALLBACK) -> tiktoken.Encoding:
     if model not in _ENCODING_CACHE:
         try:
             _ENCODING_CACHE[model] = tiktoken.encoding_for_model(model)
         except KeyError:
-            _ENCODING_CACHE[model] = tiktoken.get_encoding("cl100k_base")
+            _ENCODING_CACHE[model] = tiktoken.get_encoding(fallback)
     return _ENCODING_CACHE[model]
 
 
-def _count_tokens(text: str, model: str = "gpt-4") -> int:
-    return len(_get_tokenizer(model).encode(text))
+def _count_tokens(text: str, model: str = "gpt-4", fallback: str = DEFAULT_TOKENIZER_FALLBACK) -> int:
+    return len(_get_tokenizer(model, fallback).encode(text))
 
 
 class RetrievalPipeline:
@@ -43,6 +44,7 @@ class RetrievalPipeline:
         top_k: int = DEFAULT_TOP_K,
         context_template: str = DEFAULT_CONTEXT_TEMPLATE,
         max_context_tokens: int = DEFAULT_MAX_CONTEXT_TOKENS,
+        tokenizer_fallback: str = DEFAULT_TOKENIZER_FALLBACK,
         config: dict[str, Any] | None = None,
         config_path: Path | None = None,
     ):
@@ -52,6 +54,7 @@ class RetrievalPipeline:
         self.top_k = top_k
         self.context_template = context_template
         self.max_context_tokens = max_context_tokens
+        self.tokenizer_fallback = tokenizer_fallback
         self.config = config or {}
         self.config_path = config_path
 
@@ -77,6 +80,9 @@ class RetrievalPipeline:
             max_context_tokens=get_config_value(
                 config, "retrieval.max_context_tokens", DEFAULT_MAX_CONTEXT_TOKENS
             ),
+            tokenizer_fallback=config.get("retrieval", {}).get(
+                "tokenizer_fallback", DEFAULT_TOKENIZER_FALLBACK
+            ),
             config=config,
             config_path=config_path,
         )
@@ -98,7 +104,8 @@ class RetrievalPipeline:
         llm_to_use = llm_override or self.llm
         model = getattr(llm_to_use, "model", "gpt-4")
         overhead = _count_tokens(
-            self.context_template.format(context="", question=query), model
+            self.context_template.format(context="", question=query), model,
+            fallback=self.tokenizer_fallback,
         )
         available = self.max_context_tokens - overhead
 
@@ -107,7 +114,7 @@ class RetrievalPipeline:
         truncated = False
 
         for doc in context:
-            tokens = _count_tokens(doc.text, model)
+            tokens = _count_tokens(doc.text, model, fallback=self.tokenizer_fallback)
             if current + tokens <= available:
                 context_text = (
                     f"{context_text}\n\n{doc.text}" if context_text else doc.text

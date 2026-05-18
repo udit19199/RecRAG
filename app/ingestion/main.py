@@ -1,10 +1,11 @@
+import asyncio
 import logging
 import os
-import shutil
 from contextlib import asynccontextmanager
 from pathlib import Path
 from typing import Any
 
+from anyio import open_file
 from fastapi import (
     BackgroundTasks,
     Depends,
@@ -43,6 +44,15 @@ logger = logging.getLogger(__name__)
 _IS_PRODUCTION = os.getenv("ENVIRONMENT", "").lower() == "production"
 
 _APP_DIR = Path("/app")
+
+
+def _reset_directory(path: Path) -> None:
+    """Remove all contents of a directory and recreate it (called via asyncio.to_thread)."""
+    import shutil
+
+    if path.exists():
+        shutil.rmtree(str(path))
+    path.mkdir(parents=True, exist_ok=True)
 _REPO_ROOT = _APP_DIR if _APP_DIR.exists() else Path(__file__).resolve().parents[2]
 
 DATA_DIR = _REPO_ROOT / "data"
@@ -95,7 +105,7 @@ app.add_middleware(
     allow_origins=get_frontend_origins(
         load_config(find_config_path(CONFIG_PATH if CONFIG_PATH.exists() else None))
     ),
-    allow_methods=["GET", "POST", "PATCH", "OPTIONS"],
+    allow_methods=["GET", "POST", "PATCH", "DELETE", "OPTIONS"],
     allow_headers=["Content-Type", "Authorization", "RecRAG-API-Key"],
     expose_headers=["X-Request-ID"],
 )
@@ -178,16 +188,15 @@ async def upload_pdfs(
         staged_files.append((safe_filename, content))
         seen_names.add(safe_filename)
 
-    PDF_DIR.mkdir(parents=True, exist_ok=True)
-
     try:
-        shutil.rmtree(PDF_DIR)
-        PDF_DIR.mkdir(parents=True, exist_ok=True)
+        # Async-safe directory reset: remove and recreate using asyncio.to_thread
+        await asyncio.to_thread(PDF_DIR.mkdir, parents=True, exist_ok=True)
+        await asyncio.to_thread(_reset_directory, PDF_DIR)
 
         for safe_filename, content in staged_files:
             file_path = PDF_DIR / safe_filename
-            with open(file_path, "wb") as f:
-                f.write(content)
+            async with await open_file(file_path, "wb") as f:
+                await f.write(content)
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to save batch: {e}")
 
@@ -241,6 +250,58 @@ async def list_files() -> FileListResponse:
             if file_path.is_file():
                 files.append(file_path.name)
     return FileListResponse(files=sorted(files))
+
+
+@app.delete("/documents/{filename}")
+async def delete_document(
+    filename: str,
+    _: None = Depends(verify_api_key),
+) -> dict[str, Any]:
+    """Delete an uploaded PDF and remove its vectors from the store.
+
+    Args:
+        filename: The PDF filename to delete (e.g. "report.pdf").
+    """
+    # Validate filename to prevent path traversal
+    try:
+        safe_filename = validate_filename(filename)
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+    if not safe_filename.lower().endswith(".pdf"):
+        raise HTTPException(status_code=400, detail="Only PDF files can be deleted")
+
+    file_path = PDF_DIR / safe_filename
+    if not file_path.exists():
+        raise HTTPException(status_code=404, detail=f"File not found: {safe_filename}")
+
+    # Delete from filesystem
+    try:
+        file_path.unlink()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to delete file: {e}")
+
+    # Delete from vector store
+    config_path = find_config_path(
+        CONFIG_PATH if CONFIG_PATH.exists() else None
+    )
+    config = load_config(config_path)
+
+    from pipelines.base import create_embedder_from_config, create_vector_store_from_config
+
+    try:
+        embedder = create_embedder_from_config(config)
+        vector_store = create_vector_store_from_config(config, config_path, embedder)
+        deleted = vector_store.delete_document(safe_filename)
+    except Exception as e:
+        logger.warning("Vector store cleanup failed for %s: %s", safe_filename, e)
+        deleted = 0
+
+    return {
+        "deleted": True,
+        "filename": safe_filename,
+        "vectors_removed": deleted,
+    }
 
 
 @app.post("/config")
