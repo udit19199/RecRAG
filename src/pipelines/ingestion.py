@@ -7,6 +7,7 @@ from config import get_config_value, get_ingestion_dir
 from loaders import (
     BaseDocumentLoader,
     DocumentLoader,
+    LiteparseLoader,
     LlamaParseLoader,
     VisionPDFLoader,
 )
@@ -101,11 +102,11 @@ class IngestionPipeline:
 
             if DEV_MODE:
                 try:
-                    loader = LlamaParseLoader(str(ingestion_dir))
-                    logger.info("DEV MODE: Using LlamaParse for document extraction")
-                except (ImportError, ValueError) as exc:
+                    loader = LiteparseLoader(str(ingestion_dir))
+                    logger.info("DEV MODE: Using LiteParse for document extraction")
+                except Exception as exc:
                     logger.warning(
-                        "DEV MODE: LlamaParse unavailable (%s), falling back to PDFLoader",
+                        "DEV MODE: LiteParse unavailable (%s), falling back to PDFLoader",
                         exc,
                     )
                     loader = DocumentLoader(str(ingestion_dir))

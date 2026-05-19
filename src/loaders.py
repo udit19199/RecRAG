@@ -280,11 +280,171 @@ class LlamaParseLoader(BaseDocumentLoader):
         return result
 
 
+class LiteparseLoader(BaseDocumentLoader):
+    """Document loader using LiteParse CLI (lit) for local PDF parsing.
+
+    Parses PDFs locally - no cloud dependencies, no API keys.
+    Supports OCR, bounding boxes, page ranges.
+
+    Requires ``@llamaindex/liteparse`` to be installed globally:
+        npm i -g @llamaindex/liteparse
+
+    For Office docs (DOCX, PPTX, XLSX), LibreOffice is required.
+    For image parsing, ImageMagick is required.
+    """
+
+    def __init__(
+        self,
+        directory: Path | str,
+        dpi: int = 150,
+        ocr_enabled: bool = True,
+        ocr_language: str = "en",
+        target_pages: str | None = None,
+        max_pages: int | None = None,
+        precise_bbox: bool = True,
+        skip_diagonal_text: bool = False,
+        preserve_small_text: bool = False,
+    ):
+        self.directory = Path(directory)
+        self.dpi = dpi
+        self.ocr_enabled = ocr_enabled
+        self.ocr_language = ocr_language
+        self.target_pages = target_pages
+        self.max_pages = max_pages
+        self.precise_bbox = precise_bbox
+        self.skip_diagonal_text = skip_diagonal_text
+        self.preserve_small_text = preserve_small_text
+
+    def _build_cmd(self, file_path: Path) -> list[str]:
+        cmd = ["lit", "parse", str(file_path), "--format", "json"]
+
+        if not self.ocr_enabled:
+            cmd.append("--no-ocr")
+        if self.ocr_language != "en":
+            cmd.extend(["--ocr-language", self.ocr_language])
+        if self.dpi != 150:
+            cmd.extend(["--dpi", str(self.dpi)])
+        if self.target_pages:
+            cmd.extend(["--target-pages", self.target_pages])
+        if self.max_pages is not None:
+            cmd.extend(["--max-pages", str(self.max_pages)])
+        if not self.precise_bbox:
+            cmd.append("--no-precise-bbox")
+        if self.skip_diagonal_text:
+            cmd.append("--skip-diagonal-text")
+        if self.preserve_small_text:
+            cmd.append("--preserve-small-text")
+
+        return cmd
+
+    def _extract_from_json(self, data: Any, file_path: Path) -> list[LlamaDocument]:
+        """Convert LiteParse JSON output to LlamaDocuments."""
+        documents: list[LlamaDocument] = []
+
+        if isinstance(data, list):
+            # List of pages
+            for i, page in enumerate(data):
+                text = page.get("text", page.get("content", "")) or ""
+                if text.strip():
+                    doc = LlamaDocument(
+                        text=text,
+                        metadata={
+                            "file_name": file_path.name,
+                            "file_path": str(file_path),
+                            "page_label": str(page.get("page", i + 1)),
+                            "extraction_mode": "liteparse",
+                        },
+                    )
+                    documents.append(doc)
+        elif isinstance(data, dict):
+            # Single document or a container with pages key
+            pages = data.get("pages", data.get("results", [data]))
+            if isinstance(pages, list):
+                return self._extract_from_json(pages, file_path)
+
+            text = data.get("text", data.get("content", "")) or ""
+            if text.strip():
+                doc = LlamaDocument(
+                    text=text,
+                    metadata={
+                        "file_name": file_path.name,
+                        "file_path": str(file_path),
+                        "page_label": str(data.get("page", 1)),
+                        "extraction_mode": "liteparse",
+                    },
+                )
+                documents.append(doc)
+
+        return documents
+
+    def load(self) -> list[LlamaDocument]:
+        if not self.directory.exists():
+            raise FileNotFoundError(f"Directory not found: {self.directory}")
+
+        documents = []
+        for pdf_path in sorted(self.directory.glob("*.pdf")):
+            try:
+                documents.extend(self.load_file(pdf_path))
+            except Exception as e:
+                logger.warning("LiteParse failed for %s: %s", pdf_path, e)
+        return documents
+
+    def load_file(self, file_path: Path | str) -> list[LlamaDocument]:
+        import json
+        import subprocess
+
+        file_path = Path(file_path)
+        cmd = self._build_cmd(file_path)
+
+        try:
+            result = subprocess.run(
+                cmd, capture_output=True, text=True, check=True, timeout=300
+            )
+        except FileNotFoundError:
+            raise RuntimeError(
+                "LiteParse CLI not found. Install with: npm i -g @llamaindex/liteparse"
+            )
+        except subprocess.CalledProcessError as e:
+            stderr = e.stderr.strip()
+            raise RuntimeError(
+                f"LiteParse failed for {file_path.name}: {stderr or e}"
+            )
+
+        try:
+            data = json.loads(result.stdout)
+        except json.JSONDecodeError:
+            logger.warning(
+                "LiteParse returned non-JSON output for %s, treating as plain text",
+                file_path.name,
+            )
+            text = result.stdout.strip()
+            if text:
+                return [
+                    LlamaDocument(
+                        text=text,
+                        metadata={
+                            "file_name": file_path.name,
+                            "file_path": str(file_path),
+                            "extraction_mode": "liteparse",
+                        },
+                    )
+                ]
+            return []
+
+        documents = self._extract_from_json(data, file_path)
+
+        if not documents:
+            logger.warning("LiteParse returned no content for %s", file_path.name)
+
+        return documents
+
+
 __all__ = [
     "BaseDocumentLoader",
     "PDFLoader",
     "VisionPDFLoader",
     "HybridPDFLoader",
     "LlamaParseLoader",
+    "LiteparseLoader",
     "DocumentLoader",
 ]
