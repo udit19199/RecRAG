@@ -15,7 +15,11 @@ logger = logging.getLogger(__name__)
 # Track temp directories for cleanup on shutdown
 _DEV_TEMP_DIRS: list[str] = []
 
-
+# Increase gRPC keepalive interval to avoid "too_many_pings" errors from Milvus Lite
+os.environ.setdefault("GRPC_KEEPALIVE_TIME_MS", "120000")   # 120s (default 10s)
+os.environ.setdefault("GRPC_KEEPALIVE_TIMEOUT_MS", "20000") # 20s
+os.environ.setdefault("GRPC_HTTP2_MIN_TIME_BETWEEN_PINGS_MS", "120000")
+os.environ.setdefault("GRPC_HTTP2_MAX_PINGS_WITHOUT_DATA", "0")
 DEV_MODE = os.environ.get("RECRAG_DEV", "").lower() in ("1", "true", "yes")
 
 
