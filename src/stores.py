@@ -2,6 +2,7 @@
 
 import logging
 import os
+import tempfile
 import urllib.parse
 from typing import Any, Optional
 
@@ -10,6 +11,41 @@ from pymilvus import DataType, MilvusClient
 from models.chunk import RetrievalResult
 
 logger = logging.getLogger(__name__)
+
+# Track temp directories for cleanup on shutdown
+_DEV_TEMP_DIRS: list[str] = []
+
+
+DEV_MODE = os.environ.get("RECRAG_DEV", "").lower() in ("1", "true", "yes")
+
+
+def _get_milvus_uri(uri: str) -> str:
+    """If dev mode is active, redirect to a temporary directory."""
+    if not DEV_MODE:
+        return uri
+    # Check if this is a file-based URI (Milvus Lite lite mode)
+    if uri.endswith(".db") or "/" in uri and not uri.startswith("http"):
+        tmp_dir = tempfile.mkdtemp(prefix="recrag_milvus_")
+        _DEV_TEMP_DIRS.append(tmp_dir)
+        db_path = os.path.join(tmp_dir, "milvus_lite.db")
+        logger.info("DEV MODE: Using in-memory Milvus Lite at %s", db_path)
+        return db_path
+    return uri
+
+
+def cleanup_dev_temp_dirs() -> None:
+    """Remove all temp directories created during dev mode.
+
+    Call this during application shutdown.
+    """
+    import shutil
+
+    for d in _DEV_TEMP_DIRS:
+        try:
+            shutil.rmtree(d, ignore_errors=True)
+        except Exception:
+            pass
+    _DEV_TEMP_DIRS.clear()
 
 
 class VectorStore:
@@ -32,13 +68,15 @@ class VectorStore:
             "params": {},
         }
 
+        resolved_uri = _get_milvus_uri(uri)
+
         env_user = os.environ.get("MILVUS_USERNAME")
         env_pass = os.environ.get("MILVUS_PASSWORD")
 
         if env_user and env_pass:
-            self._client = MilvusClient(uri=uri, token=f"{env_user}:{env_pass}")
+            self._client = MilvusClient(uri=resolved_uri, token=f"{env_user}:{env_pass}")
         else:
-            parsed = urllib.parse.urlparse(uri)
+            parsed = urllib.parse.urlparse(resolved_uri)
             if parsed.username and parsed.password:
                 token = f"{urllib.parse.unquote(parsed.username)}:{urllib.parse.unquote(parsed.password)}"
                 netloc: str = parsed.hostname or ""
@@ -47,35 +85,38 @@ class VectorStore:
                 cleaned_uri = urllib.parse.urlunparse(parsed._replace(netloc=netloc))
                 self._client = MilvusClient(uri=cleaned_uri, token=token)
             else:
-                self._client = MilvusClient(uri=uri)
+                self._client = MilvusClient(uri=resolved_uri)
 
         self._ensure_collection()
 
     def _ensure_collection(self) -> None:
-        if self._client.has_collection(self._collection_name):
-            return
+        exists = self._client.has_collection(self._collection_name)
 
-        schema = self._client.create_schema(auto_id=True, enable_dynamic_field=False)
-        schema.add_field("id", DataType.INT64, is_primary=True)
-        schema.add_field("vector", DataType.FLOAT_VECTOR, dim=self.dimension)
-        schema.add_field("text", DataType.VARCHAR, max_length=65_535)
-        schema.add_field("source", DataType.VARCHAR, max_length=2_048)
-        schema.add_field("extra_meta", DataType.JSON)
+        if not exists:
+            schema = self._client.create_schema(auto_id=True, enable_dynamic_field=False)
+            schema.add_field("id", DataType.INT64, is_primary=True)
+            schema.add_field("vector", DataType.FLOAT_VECTOR, dim=self.dimension)
+            schema.add_field("text", DataType.VARCHAR, max_length=65_535)
+            schema.add_field("source", DataType.VARCHAR, max_length=2_048)
+            schema.add_field("extra_meta", DataType.JSON)
 
-        index_params = self._client.prepare_index_params()
-        index_params.add_index(
-            field_name="vector",
-            index_type=self._index_params.get("index_type", "FLAT"),
-            metric_type=self._metric_type,
-            params=self._index_params.get("params", {}),
-        )
+            index_params = self._client.prepare_index_params()
+            index_params.add_index(
+                field_name="vector",
+                index_type=self._index_params.get("index_type", "FLAT"),
+                metric_type=self._metric_type,
+                params=self._index_params.get("params", {}),
+            )
 
-        self._client.create_collection(
-            collection_name=self._collection_name,
-            schema=schema,
-            index_params=index_params,
-        )
-        logger.info("Created Milvus collection '%s'", self._collection_name)
+            self._client.create_collection(
+                collection_name=self._collection_name,
+                schema=schema,
+                index_params=index_params,
+            )
+            logger.info("Created Milvus collection '%s'", self._collection_name)
+
+        # Load the collection into memory so search works (required for Milvus Lite).
+        self._client.load_collection(self._collection_name)
 
     @staticmethod
     def _build_source_filter(sources: set[str]) -> str:

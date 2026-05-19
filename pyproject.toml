@@ -20,20 +20,12 @@ dependencies = [
     "uvicorn[standard]>=0.30.0",
     "python-multipart>=0.0.9",
     "pydantic>=2.9.0",
-    "pymilvus>=2.6.9",
+    "pymilvus[milvus-lite]>=2.6.9",
     "torch>=2.0.0",
     "pymupdf>=1.24.0",
     "auth0-fastapi-api>=1.0.0b5",
     "prometheus-client>=0.21.0",
     "anyio>=4.0.0",
-]
-
-[project.optional-dependencies]
-dev = [
-    "pytest>=8.0",
-    "pytest-mock>=3.0",
-    "ruff>=0.1.0",
-    "mypy>=1.0",
 ]
 
 [tool.setuptools.packages.find]
@@ -56,8 +48,18 @@ include = ["src", "tests"]
 extraPaths = ["src"]
 typeCheckingMode = "basic"
 
+[project.optional-dependencies]
+dev = [
+    "google-generativeai>=0.8.0",
+    "llama-parse>=0.5.0",
+]
+
 [dependency-groups]
 dev = [
+    "pytest>=8.0",
+    "pytest-mock>=3.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0",
     "types-requests>=2.32.4.20260107",
     "types-toml>=0.10.8.20240310",
 ]

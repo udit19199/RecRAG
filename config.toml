@@ -2,17 +2,22 @@
 # All non-sensitive configuration values
 
 [embedding]
-provider = "ollama"
-model = "nomic-embed-text:latest"
-base_url = "http://localhost:11434"
+provider = "openai"
+model = "text-embedding-3-small"
 timeout = 120
 
+# For Gemini (free tier), use:
+# provider = "gemini"
+# model = "models/text-embedding-004"
+
 [llm]
-provider = "ollama"
-model = "gpt-oss:20b"
-base_url = "http://localhost:11434"
-api_key = "${OLLAMA_API_KEY}"
+provider = "openai"
+model = "gpt-4o-mini"
 timeout = 120
+
+# For Gemini (free tier), use:
+# provider = "gemini"
+# model = "models/gemini-2.0-flash-lite"
 
 [ingestion]
 directory = "data/pdfs"
@@ -21,10 +26,13 @@ chunk_overlap = 50
 
 [vision]
 # Vision extraction settings (used when extraction_mode = "vision_assisted")
-# Provider options: "openai", "ollama", "nim"
+# Provider options: "openai", "ollama", "nim", "gemini"
 provider = "openai"
 model = "gpt-4o-mini"
 timeout = 120
+# For Gemini (free tier), uncomment:
+# provider = "gemini"
+# model = "models/gemini-2.0-flash-lite"
 # For Ollama, uncomment:
 # provider = "ollama"
 # model = "llava:latest"
@@ -48,7 +56,7 @@ origins = ["http://localhost:3000"]
 # "lite"   – Milvus Lite: embedded local file, no Docker service required (default).
 # "server" – Managed/serverless Milvus (recommended) or optional local Milvus
 #             from docker-compose.dev.yml.
-deployment = "server"
+deployment = "lite"
 collection_prefix = "recrag_"
 metric_type = "L2"
 # directory is used only for tracking ingestion status

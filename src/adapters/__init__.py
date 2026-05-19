@@ -44,6 +44,14 @@ from adapters.embedding import OpenAIEmbedder, OllamaEmbedder  # noqa: E402
 from adapters.llm import OpenAILLM, OllamaLLM  # noqa: E402
 from adapters.nim import NIMEmbedder, NIMLLM  # noqa: E402
 
+try:
+    from adapters.gemini import GeminiEmbedder, GeminiLLM  # noqa: E402
+
+    register_embedder("gemini", GeminiEmbedder)
+    register_llm("gemini", GeminiLLM)
+except ImportError:
+    pass
+
 register_embedder("openai", OpenAIEmbedder)
 register_embedder("ollama", OllamaEmbedder)
 register_embedder("nim", NIMEmbedder)

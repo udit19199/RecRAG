@@ -212,6 +212,11 @@ class IngestionRuntime:
         if pipeline is not None:
             await self._drain_and_close(pipeline, event, timeout_s)
 
+        # Clean up any dev-mode temp directories
+        from stores import cleanup_dev_temp_dirs
+
+        await asyncio.to_thread(cleanup_dev_temp_dirs)
+
     async def _run_ingestion_internal(
         self,
         storage_dir: Path,

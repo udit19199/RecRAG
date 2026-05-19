@@ -66,3 +66,7 @@ security_best_practices_report.md
 # Temporary files
 temp.md
 requirements.txt
+
+# Test artifacts
+*.db
+/test_*/

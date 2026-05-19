@@ -4,6 +4,7 @@ from abc import ABC, abstractmethod
 from pathlib import Path
 from typing import Any
 import logging
+import os
 
 from llama_index.core import SimpleDirectoryReader
 from llama_index.core.schema import Document as LlamaDocument
@@ -195,10 +196,95 @@ class HybridPDFLoader(BaseDocumentLoader):
 # Default alias
 DocumentLoader = PDFLoader
 
+
+class LlamaParseLoader(BaseDocumentLoader):
+    """Document loader using LlamaParse cloud API.
+
+    Requires ``LLAMA_CLOUD_API_KEY`` environment variable.
+    Only available when ``RECRAG_DEV=1`` is set.
+    Provides better parsing for complex PDFs, tables, and scanned docs.
+    """
+
+    def __init__(
+        self,
+        directory: Path | str,
+        result_type: str = "markdown",
+        tier: str = "agentic",
+        **kwargs: Any,
+    ):
+        self.directory = Path(directory)
+        self.result_type = result_type
+        self.tier = tier
+        self._extra_kwargs = kwargs
+        self._parser = None
+
+    def _get_parser(self):
+        if self._parser is not None:
+            return self._parser
+        try:
+            from llama_parse import LlamaParse
+        except ImportError:
+            raise ImportError(
+                "llama-parse package is required. Install with: uv pip install llama-parse"
+            )
+
+        api_key = os.environ.get("LLAMA_CLOUD_API_KEY")
+        if not api_key:
+            raise ValueError(
+                "LLAMA_CLOUD_API_KEY environment variable is required for LlamaParseLoader"
+            )
+
+        self._parser = LlamaParse(
+            result_type=self.result_type,
+            tier=self.tier,
+            api_key=api_key,
+            **self._extra_kwargs,
+        )
+        return self._parser
+
+    def load(self) -> list[LlamaDocument]:
+        if not self.directory.exists():
+            raise FileNotFoundError(f"Directory not found: {self.directory}")
+
+        documents = []
+        for pdf_path in sorted(self.directory.glob("*.pdf")):
+            try:
+                documents.extend(self.load_file(pdf_path))
+            except Exception as e:
+                logger.warning("LlamaParse failed for %s: %s", pdf_path, e)
+        return documents
+
+    def load_file(self, file_path: Path | str) -> list[LlamaDocument]:
+        parser = self._get_parser()
+        file_path = Path(file_path)
+
+        # LlamaParse returns a list of Document objects
+        docs = parser.load_data(str(file_path))
+
+        # Convert to LlamaDocument if needed
+        result = []
+        for doc in docs:
+            text = getattr(doc, "text", getattr(doc, "content", str(doc)))
+            metadata = dict(getattr(doc, "metadata", {}))
+            metadata.setdefault("file_name", file_path.name)
+            metadata.setdefault("file_path", str(file_path))
+            metadata.setdefault("extraction_mode", "llamaparse")
+            metadata.setdefault("tier", self.tier)
+
+            llama_doc = LlamaDocument(text=text, metadata=metadata)
+            result.append(llama_doc)
+
+        if not result:
+            logger.warning("LlamaParse returned no content for %s", file_path)
+
+        return result
+
+
 __all__ = [
     "BaseDocumentLoader",
     "PDFLoader",
     "VisionPDFLoader",
     "HybridPDFLoader",
+    "LlamaParseLoader",
     "DocumentLoader",
 ]

@@ -315,6 +315,13 @@ register_vision_extractor("openai", OpenAIVisionExtractor)
 register_vision_extractor("ollama", OllamaVisionExtractor)
 register_vision_extractor("nim", NIMVisionExtractor)
 
+try:
+    from adapters.gemini import GeminiVisionExtractor  # noqa: E402
+
+    register_vision_extractor("gemini", GeminiVisionExtractor)
+except ImportError:
+    pass
+
 __all__ = [
     "BaseVisionExtractor",
     "OpenAIVisionExtractor",

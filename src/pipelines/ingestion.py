@@ -4,7 +4,12 @@ from typing import Any
 
 from adapters import BaseEmbedder
 from config import get_config_value, get_ingestion_dir
-from loaders import BaseDocumentLoader, DocumentLoader, VisionPDFLoader
+from loaders import (
+    BaseDocumentLoader,
+    DocumentLoader,
+    LlamaParseLoader,
+    VisionPDFLoader,
+)
 from models.api import ExtractionMode
 from models.chunk import Chunk
 from splitters import BaseTextSplitter, TextSplitter
@@ -92,8 +97,21 @@ class IngestionPipeline:
             )
             logger.info("Using vision-assisted extraction with %s/%s", provider, model)
         else:
-            loader = DocumentLoader(str(ingestion_dir))
-            logger.info("Using text-only extraction")
+            from stores import DEV_MODE
+
+            if DEV_MODE:
+                try:
+                    loader = LlamaParseLoader(str(ingestion_dir))
+                    logger.info("DEV MODE: Using LlamaParse for document extraction")
+                except (ImportError, ValueError) as exc:
+                    logger.warning(
+                        "DEV MODE: LlamaParse unavailable (%s), falling back to PDFLoader",
+                        exc,
+                    )
+                    loader = DocumentLoader(str(ingestion_dir))
+            else:
+                loader = DocumentLoader(str(ingestion_dir))
+                logger.info("Using text-only extraction")
 
         batch_size = get_config_value(
             config, "ingestion.batch_size", DEFAULT_BATCH_SIZE

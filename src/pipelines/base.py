@@ -64,11 +64,21 @@ def get_collection_name(
 def get_milvus_uri(config: dict[str, Any], config_path: Path) -> str:
     """Return the Milvus connection URI.
 
-    Milvus Lite (embedded) support has been removed — always use a
-    standalone Milvus server. The server address is hardcoded to the
-    local default for simplicity and to match deployment assumptions.
+    Supports two deployment modes:
+    - "lite": embedded local file via milvus-lite (no Docker required).
+    - "server": standalone or cloud Milvus server.
     """
-    server_cfg = config.get("storage", {}).get("server", {}) or {}
+    storage_cfg = config.get("storage", {})
+    deployment = storage_cfg.get("deployment", "lite")
+
+    if deployment == "lite":
+        # Use a local file for embedded Milvus Lite
+        db_dir = storage_cfg.get("directory", "state")
+        db_path = Path(db_dir) / "milvus_lite.db"
+        return str(db_path.resolve())
+
+    # Server mode
+    server_cfg = storage_cfg.get("server", {}) or {}
     host = server_cfg.get("host", "localhost")
     port = server_cfg.get("port", 19530)
 
