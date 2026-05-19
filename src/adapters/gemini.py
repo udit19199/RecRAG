@@ -19,10 +19,10 @@ logger = logging.getLogger(__name__)
 DEFAULT_GEMINI_API_BASE = "https://generativelanguage.googleapis.com/v1beta"
 
 # Models known to work — users can pass any valid Gemini model name.
-EMBEDDING_MODELS = {"text-embedding-004", "models/embedding-001"}
+EMBEDDING_MODELS = {"text-embedding-004", "models/embedding-001", "gemini-embedding-001", "gemini-embedding-2"}
 # Defaults
 DEFAULT_LLM_MODEL = "models/gemini-2.0-flash-lite"
-DEFAULT_EMBEDDING_MODEL = "models/text-embedding-004"
+DEFAULT_EMBEDDING_MODEL = "gemini-embedding-001"
 DEFAULT_VISION_MODEL = "models/gemini-2.0-flash-lite"
 
 
@@ -169,8 +169,8 @@ class GeminiEmbedder(BaseEmbedder):
         self._timeout = kwargs.pop("timeout", 120)
         super().__init__(model, **kwargs)
         self._api_key = _get_api_key()
-        # text-embedding-004 outputs 768-dim vectors
-        self._dimension = 768
+        # Default to 768 dimensions (gemini-embedding models support output_dimensionality)
+        self._dimension = kwargs.pop("dimensions", 768)
 
     @property
     def dimension(self) -> int:
@@ -178,18 +178,22 @@ class GeminiEmbedder(BaseEmbedder):
 
     def embed(self, text: str) -> list[float]:
         url = _build_url(self.model, "embedContent")
-        payload = {"content": {"parts": [{"text": text}]}}
+        payload: dict[str, Any] = {"content": {"parts": [{"text": text}]}}
+        if self._dimension != 3072:
+            payload["output_dimensionality"] = self._dimension
         data = _call_gemini(url, payload, self._api_key, self._timeout)
         return data["embedding"]["values"]
 
     def embed_batch(self, texts: list[str]) -> list[list[float]]:
         url = _build_url(self.model, "batchEmbedContents")
-        payload = {
+        payload: dict[str, Any] = {
             "requests": [
                 {"model": f"models/{self.model.removeprefix('models/')}", "content": {"parts": [{"text": t}]}}
                 for t in texts
             ]
         }
+        if self._dimension != 3072:
+            payload["output_dimensionality"] = self._dimension
         data = _call_gemini(url, payload, self._api_key, self._timeout)
         return [e["values"] for e in data.get("embeddings", [])]
 

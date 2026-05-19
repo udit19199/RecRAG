@@ -2,22 +2,14 @@
 # All non-sensitive configuration values
 
 [embedding]
-provider = "openai"
-model = "text-embedding-3-small"
+provider = "gemini"
+model = "gemini-embedding-001"
 timeout = 120
-
-# For Gemini (free tier), use:
-# provider = "gemini"
-# model = "models/text-embedding-004"
 
 [llm]
-provider = "openai"
-model = "gpt-4o-mini"
+provider = "gemini"
+model = "gemini-3.1-flash-lite"
 timeout = 120
-
-# For Gemini (free tier), use:
-# provider = "gemini"
-# model = "models/gemini-2.0-flash-lite"
 
 [ingestion]
 directory = "data/pdfs"
@@ -25,18 +17,9 @@ chunk_size = 1024
 chunk_overlap = 50
 
 [vision]
-# Vision extraction settings (used when extraction_mode = "vision_assisted")
-# Provider options: "openai", "ollama", "nim", "gemini"
-provider = "openai"
-model = "gpt-4o-mini"
+provider = "gemini"
+model = "gemini-3.1-flash-lite"
 timeout = 120
-# For Gemini (free tier), uncomment:
-# provider = "gemini"
-# model = "models/gemini-2.0-flash-lite"
-# For Ollama, uncomment:
-# provider = "ollama"
-# model = "llava:latest"
-# base_url = "http://localhost:11434"
 
 [retrieval]
 top_k = 4
