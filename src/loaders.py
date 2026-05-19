@@ -316,7 +316,7 @@ class LiteparseLoader(BaseDocumentLoader):
         self.preserve_small_text = preserve_small_text
 
     def _build_cmd(self, file_path: Path) -> list[str]:
-        cmd = ["lit", "parse", str(file_path), "--format", "json"]
+        cmd = ["npx", "--yes", "@llamaindex/liteparse", "parse", str(file_path), "--format", "json"]
 
         if not self.ocr_enabled:
             cmd.append("--no-ocr")
@@ -402,7 +402,7 @@ class LiteparseLoader(BaseDocumentLoader):
             )
         except FileNotFoundError:
             raise RuntimeError(
-                "LiteParse CLI not found. Install with: npm i -g @llamaindex/liteparse"
+                "npx not found. Ensure Node.js is installed."
             )
         except subprocess.CalledProcessError as e:
             stderr = e.stderr.strip()

@@ -23,6 +23,8 @@ install: ## One-time setup: install Python and Node dependencies
 	uv sync
 	uv pip install -e .
 	cd $(FRONTEND_DIR) && pnpm install
+	@echo "Pre-caching LiteParse (first parse will be instant)..."
+	@npx --yes @llamaindex/liteparse --version 2>/dev/null || true
 
 setup: install ## Full setup: install dependencies and create .env
 	@if [ ! -f .env ]; then \
