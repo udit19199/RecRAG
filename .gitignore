@@ -63,9 +63,16 @@ security_best_practices_report.md
 # Local tool cache
 .api_quota.json
 
+# No-op Milvus config stubs (empty comments only)
+embedEtcd.yaml
+user.yaml
+
 # Temporary files
 temp.md
 requirements.txt
+
+# Documentation (planning/deployment guides — out of date)
+docs/
 
 # Test artifacts
 *.db
