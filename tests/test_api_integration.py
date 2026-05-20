@@ -54,13 +54,13 @@ class TestIngestionAPI:
         response = client.post("/upload")
         assert response.status_code == 422  # validation error
 
-    def test_upload_without_auth_when_key_configured(
-        self, client: TestClient
-    ) -> None:
+    def test_upload_without_auth_when_key_configured(self, client: TestClient) -> None:
         with patch.dict("os.environ", {"REC_RAG_API_KEY": "test-key"}):
             response = client.post(
                 "/upload",
-                files={"files": ("test.pdf", b"%PDF-1.4 test %%EOF", "application/pdf")},
+                files={
+                    "files": ("test.pdf", b"%PDF-1.4 test %%EOF", "application/pdf")
+                },
             )
             # Without API key header, should be 401
             assert response.status_code == 401

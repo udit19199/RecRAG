@@ -12,7 +12,7 @@ MAX_REQUESTS = 35
 def _load_quota() -> dict[str, list[float]]:
     if QUOTA_FILE.exists():
         try:
-            with open(QUOTA_FILE, "r") as f:
+            with open(QUOTA_FILE) as f:
                 return json.load(f)
         except Exception:
             return {}

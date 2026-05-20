@@ -1,5 +1,5 @@
 import os
-from typing import Any, Optional
+from typing import Any
 
 from llama_index.embeddings.nvidia import NVIDIAEmbedding
 from llama_index.llms.nvidia import NVIDIA as NVIDIALLM
@@ -23,7 +23,7 @@ class NIMEmbedder(BaseEmbedder):
     def __init__(
         self,
         model: str,
-        api_key: Optional[str] = None,
+        api_key: str | None = None,
         base_url: str = "https://integrate.api.nvidia.com/v1",
         truncate: str = "NONE",
         **kwargs: Any,
@@ -46,7 +46,7 @@ class NIMEmbedder(BaseEmbedder):
         )
 
         # Dimension resolved lazily on first property access
-        self._dimension: Optional[int] = None
+        self._dimension: int | None = None
 
     def _resolve_dimension(self) -> int:
         """Resolve and cache the embedding dimension via a test call."""
@@ -94,10 +94,10 @@ class NIMLLM(BaseLLM):
     def __init__(
         self,
         model: str,
-        api_key: Optional[str] = None,
+        api_key: str | None = None,
         base_url: str = "https://integrate.api.nvidia.com/v1",
         temperature: float = 0.7,
-        max_tokens: Optional[int] = None,
+        max_tokens: int | None = None,
         **kwargs: Any,
     ):
         # Pop sensitive/known kwargs before passing to base to avoid leaking into self.kwargs

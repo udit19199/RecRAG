@@ -19,7 +19,12 @@ logger = logging.getLogger(__name__)
 DEFAULT_GEMINI_API_BASE = "https://generativelanguage.googleapis.com/v1beta"
 
 # Models known to work — users can pass any valid Gemini model name.
-EMBEDDING_MODELS = {"text-embedding-004", "models/embedding-001", "gemini-embedding-001", "gemini-embedding-2"}
+EMBEDDING_MODELS = {
+    "text-embedding-004",
+    "models/embedding-001",
+    "gemini-embedding-001",
+    "gemini-embedding-2",
+}
 # Defaults
 DEFAULT_LLM_MODEL = "models/gemini-2.0-flash-lite"
 DEFAULT_EMBEDDING_MODEL = "gemini-embedding-001"
@@ -64,7 +69,7 @@ def _call_gemini(
             detail = resp.json().get("error", {}).get("message", resp.text)
         except Exception:
             pass
-        raise RuntimeError(f"Gemini API error ({resp.status}): {detail}")
+        raise RuntimeError(f"Gemini API error ({resp.status_code}): {detail}")
     return resp.json()
 
 
@@ -118,9 +123,11 @@ class GeminiLLM(BaseLLM):
             # Check for blocked response
             try:
                 reason = data["candidates"][0]["finishReason"]
-                msg = data["candidates"][0].get(
-                    "safetyRatings", [{}]
-                )[0].get("category", "unknown")
+                msg = (
+                    data["candidates"][0]
+                    .get("safetyRatings", [{}])[0]
+                    .get("category", "unknown")
+                )
                 raise RuntimeError(
                     f"Gemini response blocked: finishReason={reason}, category={msg}"
                 )
@@ -169,17 +176,28 @@ class GeminiEmbedder(BaseEmbedder):
         self._timeout = kwargs.pop("timeout", 120)
         super().__init__(model, **kwargs)
         self._api_key = _get_api_key()
-        # Default to 768 dimensions (gemini-embedding models support output_dimensionality)
-        self._dimension = kwargs.pop("dimensions", 768)
+        # gemini-embedding-001 defaults to 3072; text-embedding-* defaults to 768
+        # and supports output_dimensionality to reduce dims
+        self._dimension = kwargs.pop("dimensions", 3072)
 
     @property
     def dimension(self) -> int:
         return self._dimension
 
+    @staticmethod
+    def _supports_output_dimensionality(model: str) -> bool:
+        """Check if the model supports the output_dimensionality parameter.
+
+        Only newer text-embedding-* models accept this parameter.
+        gemini-embedding-* models always use their default dimension.
+        """
+        model_name = model.removeprefix("models/")
+        return model_name.startswith("text-embedding-")
+
     def embed(self, text: str) -> list[float]:
         url = _build_url(self.model, "embedContent")
         payload: dict[str, Any] = {"content": {"parts": [{"text": text}]}}
-        if self._dimension != 3072:
+        if self._supports_output_dimensionality(self.model) and self._dimension != 3072:
             payload["output_dimensionality"] = self._dimension
         data = _call_gemini(url, payload, self._api_key, self._timeout)
         return data["embedding"]["values"]
@@ -188,11 +206,14 @@ class GeminiEmbedder(BaseEmbedder):
         url = _build_url(self.model, "batchEmbedContents")
         payload: dict[str, Any] = {
             "requests": [
-                {"model": f"models/{self.model.removeprefix('models/')}", "content": {"parts": [{"text": t}]}}
+                {
+                    "model": f"models/{self.model.removeprefix('models/')}",
+                    "content": {"parts": [{"text": t}]},
+                }
                 for t in texts
             ]
         }
-        if self._dimension != 3072:
+        if self._supports_output_dimensionality(self.model) and self._dimension != 3072:
             payload["output_dimensionality"] = self._dimension
         data = _call_gemini(url, payload, self._api_key, self._timeout)
         return [e["values"] for e in data.get("embeddings", [])]

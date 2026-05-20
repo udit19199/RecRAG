@@ -5,7 +5,7 @@ backed by plain Python lists.  It performs brute-force L2 similarity search so
 tests stay fast and dependency-free (no Milvus instance required).
 """
 
-from typing import Any, Optional
+from typing import Any
 
 from models.chunk import RetrievalResult
 
@@ -36,7 +36,7 @@ class InMemoryVectorStore:
         self,
         embeddings: list[list[float]],
         documents: list[str],
-        metadata_list: Optional[list[dict[str, Any]]] = None,
+        metadata_list: list[dict[str, Any]] | None = None,
     ) -> None:
         if metadata_list is None:
             metadata_list = [{} for _ in documents]

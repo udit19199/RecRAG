@@ -2,14 +2,14 @@
 
 from __future__ import annotations
 
-from contextlib import asynccontextmanager
-from enum import Enum
-from typing import Any, AsyncIterator, Protocol, TypeVar
+from enum import StrEnum
+from typing import Any, Protocol, TypeVar
+from collections.abc import AsyncIterator
 
-PipelineT = TypeVar("PipelineT")
+PipelineT = TypeVar("PipelineT", covariant=True)
 
 
-class RuntimeState(str, Enum):
+class RuntimeState(StrEnum):
     """Lifecycle state for runtime-managed pipelines."""
 
     STARTING = "starting"
@@ -33,7 +33,6 @@ class PipelineRuntime(Protocol[PipelineT]):
 
     def is_loaded(self) -> bool: ...
 
-    @asynccontextmanager
     async def acquire(self, timeout_s: float = 2.0) -> AsyncIterator[PipelineT]: ...
 
     async def warm(self) -> None: ...

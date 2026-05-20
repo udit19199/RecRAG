@@ -8,7 +8,6 @@ from loaders import (
     BaseDocumentLoader,
     DocumentLoader,
     LiteparseLoader,
-    LlamaParseLoader,
     VisionPDFLoader,
 )
 from models.api import ExtractionMode

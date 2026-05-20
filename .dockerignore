@@ -1,0 +1,44 @@
+# RecRAG .dockerignore — prevents sending unnecessary files to Docker build context
+
+# Virtual environments
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+frontend/node_modules/
+.next/
+frontend/.next/
+
+# State/data (runtime, not build)
+data/
+state/
+
+# IDE
+.idea/
+.vscode/
+.DS_Store
+
+# Git
+.git/
+.gitignore
+
+# Environment (secrets — don't bake into image)
+.env
+.env.*
+
+# Testing
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Dependency lock kept (uv.lock, pnpm-lock.yaml needed for builds)
+# But no need for local tarballs or archives
+*.tar.gz
+*.whl
+
+# Docs and misc
+docs/
+*.md

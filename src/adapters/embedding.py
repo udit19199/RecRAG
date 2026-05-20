@@ -1,6 +1,6 @@
 import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from typing import Any, Optional
+from typing import Any
 
 import requests
 from openai import OpenAI
@@ -36,7 +36,7 @@ class OpenAIEmbedder(BaseEmbedder):
         if self._timeout:
             client_kwargs["timeout"] = float(self._timeout)
         self.client = OpenAI(**client_kwargs)
-        self._dimension: Optional[int] = dimensions
+        self._dimension: int | None = dimensions
 
     @property
     def dimension(self) -> int:
@@ -71,7 +71,9 @@ class OllamaEmbedder(BaseEmbedder):
         **kwargs: Any,
     ):
         dimension = kwargs.pop("dimension", DEFAULT_OLLAMA_DIMENSION)
-        kwargs.pop("api_key", None)  # Not used by Ollama; pop to avoid leaking into self.kwargs
+        kwargs.pop(
+            "api_key", None
+        )  # Not used by Ollama; pop to avoid leaking into self.kwargs
         kwargs.pop("base_url", None)
         self._timeout = kwargs.pop("timeout", 120)
         super().__init__(model, **kwargs)
@@ -123,7 +125,7 @@ class OllamaEmbedder(BaseEmbedder):
 
     def _embed_batch_parallel(self, texts: list[str]) -> list[list[float]]:
         """Fallback when the batch /api/embed endpoint fails."""
-        results: list[Optional[list[float]]] = [None] * len(texts)
+        results: list[list[float] | None] = [None] * len(texts)
         errors: list[tuple[int, Exception]] = []
 
         def embed_with_index(args: tuple[int, str]) -> tuple[int, list[float]]:

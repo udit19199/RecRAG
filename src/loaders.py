@@ -316,7 +316,15 @@ class LiteparseLoader(BaseDocumentLoader):
         self.preserve_small_text = preserve_small_text
 
     def _build_cmd(self, file_path: Path) -> list[str]:
-        cmd = ["npx", "--yes", "@llamaindex/liteparse", "parse", str(file_path), "--format", "json"]
+        cmd = [
+            "npx",
+            "--yes",
+            "@llamaindex/liteparse",
+            "parse",
+            str(file_path),
+            "--format",
+            "json",
+        ]
 
         if not self.ocr_enabled:
             cmd.append("--no-ocr")
@@ -401,14 +409,10 @@ class LiteparseLoader(BaseDocumentLoader):
                 cmd, capture_output=True, text=True, check=True, timeout=300
             )
         except FileNotFoundError:
-            raise RuntimeError(
-                "npx not found. Ensure Node.js is installed."
-            )
+            raise RuntimeError("npx not found. Ensure Node.js is installed.")
         except subprocess.CalledProcessError as e:
             stderr = e.stderr.strip()
-            raise RuntimeError(
-                f"LiteParse failed for {file_path.name}: {stderr or e}"
-            )
+            raise RuntimeError(f"LiteParse failed for {file_path.name}: {stderr or e}")
 
         try:
             data = json.loads(result.stdout)
@@ -441,10 +445,10 @@ class LiteparseLoader(BaseDocumentLoader):
 
 __all__ = [
     "BaseDocumentLoader",
+    "DocumentLoader",
+    "HybridPDFLoader",
+    "LiteparseLoader",
+    "LlamaParseLoader",
     "PDFLoader",
     "VisionPDFLoader",
-    "HybridPDFLoader",
-    "LlamaParseLoader",
-    "LiteparseLoader",
-    "DocumentLoader",
 ]

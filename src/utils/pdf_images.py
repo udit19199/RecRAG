@@ -1,7 +1,7 @@
 """PDF to image conversion utilities."""
 
 from pathlib import Path
-from typing import Iterator
+from collections.abc import Iterator
 import logging
 
 logger = logging.getLogger(__name__)
@@ -121,4 +121,4 @@ def get_pdf_page_count(pdf_path: Path | str) -> int:
         doc.close()
 
 
-__all__ = ["pdf_to_images", "pdf_page_to_image", "get_pdf_page_count"]
+__all__ = ["get_pdf_page_count", "pdf_page_to_image", "pdf_to_images"]

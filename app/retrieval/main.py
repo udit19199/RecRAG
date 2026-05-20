@@ -83,7 +83,7 @@ def run_eval_job(
             query, contexts, response, ground_truth=ground_truth
         )
         update_eval_job(storage_dir, job_id, status="complete", scores=scores)
-    except Exception as exc:  # noqa: BLE001
+    except Exception as exc:
         update_eval_job(storage_dir, job_id, status="error", error=str(exc))
 
 

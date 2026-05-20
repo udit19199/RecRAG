@@ -1,5 +1,5 @@
 import os
-from typing import Any, Optional
+from typing import Any
 
 from openai import OpenAI
 
@@ -18,7 +18,7 @@ class OpenAILLM(BaseLLM):
         self,
         model: str = "gpt-4o-mini",
         temperature: float = DEFAULT_TEMPERATURE,
-        max_tokens: Optional[int] = None,
+        max_tokens: int | None = None,
         **kwargs: Any,
     ):
         api_key = kwargs.pop("api_key", None) or os.environ.get("OPENAI_API_KEY")
@@ -65,9 +65,9 @@ class OllamaLLM(BaseLLM):
         self,
         model: str = "llama3",
         temperature: float = DEFAULT_TEMPERATURE,
-        max_tokens: Optional[int] = None,
+        max_tokens: int | None = None,
         base_url: str = "http://localhost:11434",
-        api_key: Optional[str] = None,
+        api_key: str | None = None,
         **kwargs: Any,
     ):
         kwargs.pop("api_key", None)

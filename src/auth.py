@@ -18,7 +18,7 @@ API_KEY_HEADER = APIKeyHeader(name="RecRAG-API-Key", auto_error=False)
 
 def get_api_key() -> str | None:
     """Return the configured API key from environment.
-    
+
     Returns None if no API key is configured (authentication disabled).
     """
     return os.environ.get("REC_RAG_API_KEY")
@@ -26,20 +26,20 @@ def get_api_key() -> str | None:
 
 async def verify_api_key(request: Request) -> None:
     """Verify the API key for a request.
-    
+
     Raises HTTPException if authentication fails.
     Skips authentication for public paths or when no API key is configured.
     """
     api_key = get_api_key()
-    
+
     # Authentication disabled if no key configured
     if not api_key:
         return
-    
+
     # Skip authentication for public endpoints
     if request.url.path in PUBLIC_PATHS:
         return
-    
+
     # Verify API key (must match the header name from APIKeyHeader)
     provided_key = request.headers.get("RecRAG-API-Key")
     if not provided_key or provided_key != api_key:

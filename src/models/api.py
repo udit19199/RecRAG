@@ -1,9 +1,9 @@
-from enum import Enum
+from enum import StrEnum
 
 from pydantic import BaseModel
 
 
-class ExtractionMode(str, Enum):
+class ExtractionMode(StrEnum):
     """PDF extraction mode for ingestion."""
 
     TEXT_ONLY = "text_only"

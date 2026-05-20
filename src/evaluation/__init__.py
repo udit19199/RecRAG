@@ -1,5 +1,4 @@
-"""Evaluation helpers and utilities for RAGAS and other evaluation workflows.
+"""Evaluation helpers for RAG quality scoring.
 
-This package contains evaluation-specific helpers used by the test
-and evaluation tooling.
+Provides lightweight evaluation via direct LLM prompts (no ragas/datasets dependency).
 """

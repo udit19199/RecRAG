@@ -1,4 +1,35 @@
 services:
+  # ── Infrastructure ────────────────────────────────────────────
+  # Single-container Milvus standalone with embedded etcd (no external deps)
+  milvus:
+    image: milvusdb/milvus:latest
+    command: ["milvus", "run", "standalone"]
+    security_opt:
+      - seccomp:unconfined
+    environment:
+      ETCD_USE_EMBED: "true"
+      ETCD_DATA_DIR: /var/lib/milvus/etcd
+      ETCD_CONFIG_PATH: /milvus/configs/embedEtcd.yaml
+      COMMON_STORAGETYPE: local
+      DEPLOY_MODE: STANDALONE
+    volumes:
+      - milvus_data:/var/lib/milvus
+      - ./embedEtcd.yaml:/milvus/configs/embedEtcd.yaml
+      - ./user.yaml:/milvus/configs/user.yaml
+    ports:
+      - "19530:19530"
+      - "9091:9091"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9091/healthz"]
+      interval: 30s
+      timeout: 20s
+      start_period: 90s
+      retries: 3
+    restart: unless-stopped
+    networks:
+      - recrag-network
+
+  # ── App Services ──────────────────────────────────────────────
   # FastAPI service for ingestion (upload PDFs, check status)
   api-ingestion:
     build:
@@ -11,10 +42,16 @@ services:
       - ./config.toml:/app/config.toml
     env_file:
       - .env
+    environment:
+      - MILVUS_HOST=milvus
+      - REC_RAG_API_KEY=${REC_RAG_API_KEY:-}
     ports:
       - "8001:8001"
     command: uv run uvicorn app.ingestion.main:app --host 0.0.0.0 --port 8001 --timeout-graceful-shutdown 30
     container_name: recrag-api-ingestion
+    depends_on:
+      milvus:
+        condition: service_healthy
     deploy:
       resources:
         limits:
@@ -39,10 +76,16 @@ services:
       - ./config.toml:/app/config.toml
     env_file:
       - .env
+    environment:
+      - MILVUS_HOST=milvus
+      - REC_RAG_API_KEY=${REC_RAG_API_KEY:-}
     ports:
       - "8000:8000"
     command: uv run uvicorn app.retrieval.main:app --host 0.0.0.0 --port 8000 --timeout-graceful-shutdown 30
     container_name: recrag-api-retrieval
+    depends_on:
+      milvus:
+        condition: service_healthy
     deploy:
       resources:
         limits:
@@ -101,6 +144,9 @@ services:
       - eval
     networks:
       - recrag-network
+
+volumes:
+  milvus_data:
 
 networks:
   recrag-network:

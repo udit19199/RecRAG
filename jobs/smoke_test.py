@@ -41,7 +41,9 @@ def upload_pdf(base_url: str, pdf_path: Path) -> str | None:
     url = f"{base_url}:8001/upload"
     try:
         with open(pdf_path, "rb") as f:
-            resp = requests.post(url, files={"file": (pdf_path.name, f, "application/pdf")}, timeout=60)
+            resp = requests.post(
+                url, files={"file": (pdf_path.name, f, "application/pdf")}, timeout=60
+            )
         resp.raise_for_status()
         data = resp.json()
         task_id = data.get("task_id")
@@ -68,7 +70,9 @@ def wait_for_ingestion(base_url: str, task_id: str) -> bool:
                 print(f"[OK] Ingestion completed in {time.time() - start:.1f}s")
                 return True
             if state == "failed":
-                print(f"[FAIL] Ingestion failed: {status.get('error', 'unknown error')}")
+                print(
+                    f"[FAIL] Ingestion failed: {status.get('error', 'unknown error')}"
+                )
                 return False
 
             print(f"  Ingestion state: {state} ({time.time() - start:.0f}s elapsed)")
@@ -146,8 +150,15 @@ def run_smoke_tests(base_url: str, test_pdf: Path) -> int:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="RecRAG post-deployment smoke tests")
-    parser.add_argument("--base-url", default="http://localhost", help="Base URL for the APIs")
-    parser.add_argument("--test-pdf", type=Path, default=Path("data/sample.pdf"), help="Path to a test PDF")
+    parser.add_argument(
+        "--base-url", default="http://localhost", help="Base URL for the APIs"
+    )
+    parser.add_argument(
+        "--test-pdf",
+        type=Path,
+        default=Path("data/sample.pdf"),
+        help="Path to a test PDF",
+    )
     args = parser.parse_args()
 
     return run_smoke_tests(args.base_url, args.test_pdf)

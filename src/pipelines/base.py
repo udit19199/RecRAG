@@ -1,6 +1,7 @@
 from pathlib import Path
 import urllib.parse
-from typing import Any, Callable
+from typing import Any
+from collections.abc import Callable
 
 from adapters import BaseEmbedder, BaseLLM, create_embedder, create_llm
 from stores import VectorStore
@@ -29,7 +30,9 @@ def _create_adapter_from_config(
     model = section_config.get("model", defaults["model"])
 
     extra_kwargs = {
-        k: v for k, v in section_config.items() if k not in ("provider", "model") and not k.startswith("_")
+        k: v
+        for k, v in section_config.items()
+        if k not in ("provider", "model") and not k.startswith("_")
     }
 
     return create_fn(provider, model=model, **extra_kwargs)

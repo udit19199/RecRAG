@@ -54,9 +54,7 @@ class TestB6ApiKeyLeak:
             assert "base_url" not in llm.kwargs
 
     def test_openai_embedder_does_not_leak_api_key_in_kwargs(self) -> None:
-        embedder = OpenAIEmbedder(
-            model="text-embedding-3-small", api_key="test-key"
-        )
+        embedder = OpenAIEmbedder(model="text-embedding-3-small", api_key="test-key")
         assert "api_key" not in embedder.kwargs
         assert "base_url" not in embedder.kwargs
 
@@ -103,6 +101,7 @@ class TestB8AuthHeaderMismatch:
     def test_api_key_header_name_matches(self) -> None:
         """APIKeyHeader name must be 'RecRAG-API-Key'."""
         import auth as auth_module
+
         header_scheme = auth_module.API_KEY_HEADER
         assert header_scheme.model.name == "RecRAG-API-Key"
 
@@ -110,23 +109,27 @@ class TestB8AuthHeaderMismatch:
         """verify_api_key must check 'RecRAG-API-Key' header, not 'x-api-key'."""
         import auth as auth_module
         import inspect
+
         source = inspect.getsource(auth_module.verify_api_key)
         assert "RecRAG-API-Key" in source
         assert "x-api-key" not in source
 
     def test_public_paths_defined(self) -> None:
         from auth import PUBLIC_PATHS
+
         assert "/health" in PUBLIC_PATHS
         assert "/docs" in PUBLIC_PATHS
         assert "/openapi.json" in PUBLIC_PATHS
 
     def test_get_api_key_returns_none_when_not_set(self) -> None:
         from auth import get_api_key
+
         with patch.dict("os.environ", {}, clear=True):
             assert get_api_key() is None
 
     def test_get_api_key_returns_value_when_set(self) -> None:
         from auth import get_api_key
+
         with patch.dict("os.environ", {"REC_RAG_API_KEY": "my-secret"}):
             assert get_api_key() == "my-secret"
 
@@ -141,10 +144,11 @@ class TestB1AsyncFileIO:
         """_reset_directory must handle existing directories."""
         from app.ingestion.main import _reset_directory
 
-        with patch("shutil.rmtree") as mock_rmtree, \
-             patch("pathlib.Path.mkdir") as mock_mkdir, \
-             patch("pathlib.Path.exists", return_value=True):
-
+        with (
+            patch("shutil.rmtree") as mock_rmtree,
+            patch("pathlib.Path.mkdir") as mock_mkdir,
+            patch("pathlib.Path.exists", return_value=True),
+        ):
             _reset_directory(Path("/tmp/test"))
             mock_rmtree.assert_called_once_with("/tmp/test")
             mock_mkdir.assert_called_once_with(parents=True, exist_ok=True)
@@ -152,10 +156,11 @@ class TestB1AsyncFileIO:
     def test_reset_directory_creates_if_missing(self) -> None:
         from app.ingestion.main import _reset_directory
 
-        with patch("shutil.rmtree") as mock_rmtree, \
-             patch("pathlib.Path.mkdir") as mock_mkdir, \
-             patch("pathlib.Path.exists", return_value=False):
-
+        with (
+            patch("shutil.rmtree") as mock_rmtree,
+            patch("pathlib.Path.mkdir") as mock_mkdir,
+            patch("pathlib.Path.exists", return_value=False),
+        ):
             _reset_directory(Path("/tmp/test"))
             mock_rmtree.assert_not_called()
             mock_mkdir.assert_called_once_with(parents=True, exist_ok=True)
@@ -206,6 +211,7 @@ class TestB2ConfigurableTimeouts:
             }
         }
         from pipelines.base import create_embedder_from_config
+
         embedder = create_embedder_from_config(config)
         assert isinstance(embedder, OllamaEmbedder)
         assert embedder._timeout == 60
@@ -262,6 +268,7 @@ class TestB4TokenCountingFallback:
 
     def test_retrieval_pipeline_accepts_tokenizer_fallback(self) -> None:
         import inspect
+
         sig = inspect.signature(RetrievalPipeline.__init__)
         assert "tokenizer_fallback" in sig.parameters
         default = sig.parameters["tokenizer_fallback"].default
@@ -271,6 +278,7 @@ class TestB4TokenCountingFallback:
         """_get_tokenizer should cache encodings."""
         # Clear cache
         from pipelines.retrieval import _ENCODING_CACHE
+
         _ENCODING_CACHE.clear()
         t1 = _get_tokenizer("gpt-4")
         t2 = _get_tokenizer("gpt-4")
@@ -280,6 +288,7 @@ class TestB4TokenCountingFallback:
         """When model is unknown, _get_tokenizer falls back to configured encoding."""
         # Clear cache before test
         from pipelines.retrieval import _ENCODING_CACHE
+
         _ENCODING_CACHE.clear()
         tokenizer = _get_tokenizer("nonexistent-model-xyz", fallback="cl100k_base")
         assert tokenizer.name == "cl100k_base"
@@ -353,4 +362,5 @@ class TestAuthEnvSafety:
         """When REC_RAG_API_KEY is not set, functions should still work."""
         with patch.dict(os.environ, {}, clear=True):
             from auth import get_api_key
+
             assert get_api_key() is None

@@ -7,7 +7,8 @@ import copy
 import logging
 from contextlib import asynccontextmanager
 from pathlib import Path
-from typing import Any, AsyncIterator
+from typing import Any
+from collections.abc import AsyncIterator
 
 from config import find_config_path, load_config
 from pipelines.retrieval import RetrievalPipeline
@@ -83,7 +84,7 @@ class RetrievalRuntime:
             pipeline = await asyncio.to_thread(
                 self._build_pipeline, None, None, None, None
             )
-        except Exception as exc:  # noqa: BLE001
+        except Exception as exc:
             self._state = RuntimeState.DEGRADED
             self._error = str(exc)
             raise
@@ -100,7 +101,7 @@ class RetrievalRuntime:
             try:
                 await self.warm()
                 return
-            except Exception:  # noqa: BLE001
+            except Exception:
                 logger.exception("Retrieval runtime warmup failed")
                 await asyncio.sleep(retry_interval)
 
@@ -121,7 +122,7 @@ class RetrievalRuntime:
             new_pipeline = await asyncio.to_thread(
                 self._build_pipeline, config, config_path, embedding, llm
             )
-        except Exception as exc:  # noqa: BLE001
+        except Exception as exc:
             self._state = RuntimeState.DEGRADED
             self._error = str(exc)
             raise
@@ -161,7 +162,7 @@ class RetrievalRuntime:
 
         try:
             await asyncio.wait_for(self._lock.acquire(), timeout=timeout_s)
-        except asyncio.TimeoutError as exc:
+        except TimeoutError as exc:
             raise RuntimeUnavailableError(
                 "Timed out waiting for retrieval runtime"
             ) from exc
@@ -245,7 +246,7 @@ class RetrievalRuntime:
         if event is not None:
             try:
                 await asyncio.wait_for(event.wait(), timeout=timeout_s)
-            except asyncio.TimeoutError:
+            except TimeoutError:
                 logger.warning("Timed out draining retrieval pipeline; forcing close")
 
         await asyncio.to_thread(close_pipeline_resources, pipeline)

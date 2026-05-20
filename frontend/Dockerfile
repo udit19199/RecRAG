@@ -14,14 +14,14 @@ ARG NEXT_PUBLIC_INGESTION_API_URL=http://localhost:8001
 ENV NEXT_PUBLIC_RETRIEVAL_API_URL=${NEXT_PUBLIC_RETRIEVAL_API_URL}
 ENV NEXT_PUBLIC_INGESTION_API_URL=${NEXT_PUBLIC_INGESTION_API_URL}
 
-# Copy package files
-COPY frontend/package.json frontend/pnpm-lock.yaml ./
+# Copy all source code first (node_modules excluded via .dockerignore)
+COPY frontend/ ./
 
 # Install dependencies
-RUN corepack enable pnpm && pnpm install --frozen-lockfile
-
-# Copy source code
-COPY frontend/ ./
+# Pin pnpm to v10 (compatible with package.json config)
+RUN corepack enable pnpm && corepack prepare pnpm@10 --activate && \
+    pnpm config set store-dir /app/.pnpm-store && \
+    CI=true pnpm install --frozen-lockfile
 
 # Build the application
 RUN pnpm build

@@ -1,7 +1,7 @@
 """Vision extractors for PDF page image analysis."""
 
 from abc import ABC, abstractmethod
-from typing import Any, Type
+from typing import Any
 import base64
 import logging
 import os
@@ -53,10 +53,10 @@ class BaseVisionExtractor(ABC):
 
 # ── Registry ──────────────────────────────────────────────────────────────────
 
-_VISION_REGISTRY: dict[str, Type[BaseVisionExtractor]] = {}
+_VISION_REGISTRY: dict[str, type[BaseVisionExtractor]] = {}
 
 
-def register_vision_extractor(provider: str, cls: Type[BaseVisionExtractor]) -> None:
+def register_vision_extractor(provider: str, cls: type[BaseVisionExtractor]) -> None:
     _VISION_REGISTRY[provider] = cls
 
 
@@ -316,19 +316,19 @@ register_vision_extractor("ollama", OllamaVisionExtractor)
 register_vision_extractor("nim", NIMVisionExtractor)
 
 try:
-    from adapters.gemini import GeminiVisionExtractor  # noqa: E402
+    from adapters.gemini import GeminiVisionExtractor
 
     register_vision_extractor("gemini", GeminiVisionExtractor)
 except ImportError:
     pass
 
 __all__ = [
-    "BaseVisionExtractor",
-    "OpenAIVisionExtractor",
-    "OllamaVisionExtractor",
-    "NIMVisionExtractor",
-    "create_vision_extractor",
-    "register_vision_extractor",
-    "list_vision_providers",
     "DEFAULT_EXTRACTION_PROMPT",
+    "BaseVisionExtractor",
+    "NIMVisionExtractor",
+    "OllamaVisionExtractor",
+    "OpenAIVisionExtractor",
+    "create_vision_extractor",
+    "list_vision_providers",
+    "register_vision_extractor",
 ]

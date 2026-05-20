@@ -39,7 +39,7 @@ origins = ["http://localhost:3000"]
 # "lite"   – Milvus Lite: embedded local file, no Docker service required (default).
 # "server" – Managed/serverless Milvus (recommended) or optional local Milvus
 #             from docker-compose.dev.yml.
-deployment = "lite"
+deployment = "server"
 collection_prefix = "recrag_"
 metric_type = "L2"
 # directory is used only for tracking ingestion status

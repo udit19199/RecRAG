@@ -44,4 +44,4 @@ def write_status(
 
 
 # Export now for backwards compatibility
-__all__ = ["get_status_file", "read_status", "write_status", "now"]
+__all__ = ["get_status_file", "now", "read_status", "write_status"]

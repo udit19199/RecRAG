@@ -5,9 +5,9 @@ from .ingestion import IngestionRuntime
 from .retrieval import RetrievalRuntime
 
 __all__ = [
+    "IngestionRuntime",
     "PipelineRuntime",
+    "RetrievalRuntime",
     "RuntimeState",
     "RuntimeUnavailableError",
-    "RetrievalRuntime",
-    "IngestionRuntime",
 ]

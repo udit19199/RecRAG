@@ -52,13 +52,13 @@ class MetricsMiddleware:
             if message["type"] == "http.response.start":
                 status = str(message.get("status", 500))
                 duration = time.time() - start_time
-                
+
                 REQUEST_COUNT.labels(
                     method=method,
                     path=path,
                     status=status,
                 ).inc()
-                
+
                 REQUEST_DURATION.labels(
                     method=method,
                     path=path,
@@ -79,6 +79,7 @@ class MetricsMiddleware:
 def metrics_endpoint() -> Response:
     """Return Prometheus metrics endpoint response."""
     from fastapi.responses import Response
+
     return Response(
         content=generate_latest(),
         media_type=CONTENT_TYPE_LATEST,

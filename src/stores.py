@@ -4,7 +4,7 @@ import logging
 import os
 import tempfile
 import urllib.parse
-from typing import Any, Optional
+from typing import Any
 
 from pymilvus import DataType, MilvusClient
 
@@ -16,8 +16,8 @@ logger = logging.getLogger(__name__)
 _DEV_TEMP_DIRS: list[str] = []
 
 # Increase gRPC keepalive interval to avoid "too_many_pings" errors from Milvus Lite
-os.environ.setdefault("GRPC_KEEPALIVE_TIME_MS", "120000")   # 120s (default 10s)
-os.environ.setdefault("GRPC_KEEPALIVE_TIMEOUT_MS", "20000") # 20s
+os.environ.setdefault("GRPC_KEEPALIVE_TIME_MS", "120000")  # 120s (default 10s)
+os.environ.setdefault("GRPC_KEEPALIVE_TIMEOUT_MS", "20000")  # 20s
 os.environ.setdefault("GRPC_HTTP2_MIN_TIME_BETWEEN_PINGS_MS", "120000")
 os.environ.setdefault("GRPC_HTTP2_MAX_PINGS_WITHOUT_DATA", "0")
 DEV_MODE = os.environ.get("RECRAG_DEV", "").lower() in ("1", "true", "yes")
@@ -28,7 +28,7 @@ def _get_milvus_uri(uri: str) -> str:
     if not DEV_MODE:
         return uri
     # Check if this is a file-based URI (Milvus Lite lite mode)
-    if uri.endswith(".db") or "/" in uri and not uri.startswith("http"):
+    if uri.endswith(".db") or ("/" in uri and not uri.startswith("http")):
         tmp_dir = tempfile.mkdtemp(prefix="recrag_milvus_")
         _DEV_TEMP_DIRS.append(tmp_dir)
         db_path = os.path.join(tmp_dir, "milvus_lite.db")
@@ -61,7 +61,7 @@ class VectorStore:
         collection_name: str = "recrag_default",
         uri: str = "http://localhost:19530",
         metric_type: str = "L2",
-        index_params: Optional[dict[str, Any]] = None,
+        index_params: dict[str, Any] | None = None,
     ) -> None:
         self.dimension = dimension
         self._collection_name = collection_name
@@ -78,7 +78,9 @@ class VectorStore:
         env_pass = os.environ.get("MILVUS_PASSWORD")
 
         if env_user and env_pass:
-            self._client = MilvusClient(uri=resolved_uri, token=f"{env_user}:{env_pass}")
+            self._client = MilvusClient(
+                uri=resolved_uri, token=f"{env_user}:{env_pass}"
+            )
         else:
             parsed = urllib.parse.urlparse(resolved_uri)
             if parsed.username and parsed.password:
@@ -97,7 +99,9 @@ class VectorStore:
         exists = self._client.has_collection(self._collection_name)
 
         if not exists:
-            schema = self._client.create_schema(auto_id=True, enable_dynamic_field=False)
+            schema = self._client.create_schema(
+                auto_id=True, enable_dynamic_field=False
+            )
             schema.add_field("id", DataType.INT64, is_primary=True)
             schema.add_field("vector", DataType.FLOAT_VECTOR, dim=self.dimension)
             schema.add_field("text", DataType.VARCHAR, max_length=65_535)
@@ -131,7 +135,7 @@ class VectorStore:
         self,
         embeddings: list[list[float]],
         documents: list[str],
-        metadata_list: Optional[list[dict[str, Any]]] = None,
+        metadata_list: list[dict[str, Any]] | None = None,
     ) -> None:
         if metadata_list is None:
             metadata_list = [{} for _ in documents]

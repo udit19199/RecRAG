@@ -66,8 +66,10 @@ class StructuredLoggingMiddleware:
                 "duration_ms": round(duration_ms, 2),
                 "level": "error" if status_code and status_code >= 500 else "info",
             }
-            
-            log_method = logger.error if status_code and status_code >= 500 else logger.info
+
+            log_method = (
+                logger.error if status_code and status_code >= 500 else logger.info
+            )
             log_method(json.dumps(log_entry))
 
         await log_response()

@@ -55,7 +55,7 @@ class TestVectorStore:
         temp_vector_store.add(embeddings, documents, metadata_list)
 
         query_embedding = [0.1] * 128
-        distances, results = temp_vector_store.search(query_embedding, k=2)
+        _distances, results = temp_vector_store.search(query_embedding, k=2)
 
         assert len(results) == 2
         assert results[0].text == "Document A"
@@ -128,7 +128,7 @@ class TestVectorStore:
 
         temp_vector_store.add([embedding], [document], [metadata])
 
-        distances, results = temp_vector_store.search(embedding, k=1)
+        _distances, results = temp_vector_store.search(embedding, k=1)
         assert len(results) == 1
         assert results[0].text == document
         assert results[0].metadata.get("page") == 3

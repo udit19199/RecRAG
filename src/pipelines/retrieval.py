@@ -1,6 +1,6 @@
 import logging
 from pathlib import Path
-from typing import Any, Optional
+from typing import Any
 
 import tiktoken
 from adapters import BaseEmbedder, BaseLLM
@@ -22,7 +22,9 @@ DEFAULT_TOKENIZER_FALLBACK = "cl100k_base"
 _ENCODING_CACHE: dict[str, tiktoken.Encoding] = {}
 
 
-def _get_tokenizer(model: str, fallback: str = DEFAULT_TOKENIZER_FALLBACK) -> tiktoken.Encoding:
+def _get_tokenizer(
+    model: str, fallback: str = DEFAULT_TOKENIZER_FALLBACK
+) -> tiktoken.Encoding:
     if model not in _ENCODING_CACHE:
         try:
             _ENCODING_CACHE[model] = tiktoken.encoding_for_model(model)
@@ -31,7 +33,9 @@ def _get_tokenizer(model: str, fallback: str = DEFAULT_TOKENIZER_FALLBACK) -> ti
     return _ENCODING_CACHE[model]
 
 
-def _count_tokens(text: str, model: str = "gpt-4", fallback: str = DEFAULT_TOKENIZER_FALLBACK) -> int:
+def _count_tokens(
+    text: str, model: str = "gpt-4", fallback: str = DEFAULT_TOKENIZER_FALLBACK
+) -> int:
     return len(_get_tokenizer(model, fallback).encode(text))
 
 
@@ -87,9 +91,7 @@ class RetrievalPipeline:
             config_path=config_path,
         )
 
-    def retrieve(
-        self, query: str, top_k: Optional[int] = None
-    ) -> list[RetrievalResult]:
+    def retrieve(self, query: str, top_k: int | None = None) -> list[RetrievalResult]:
         query_embedding = self.embedder.embed(query)
         _, results = self.vector_store.search(query_embedding, k=top_k or self.top_k)
         return results
@@ -97,14 +99,15 @@ class RetrievalPipeline:
     def generate(
         self,
         query: str,
-        context: Optional[list[RetrievalResult]] = None,
-        llm_override: Optional[BaseLLM] = None,
+        context: list[RetrievalResult] | None = None,
+        llm_override: BaseLLM | None = None,
     ) -> str:
         context = context or self.retrieve(query)
         llm_to_use = llm_override or self.llm
         model = getattr(llm_to_use, "model", "gpt-4")
         overhead = _count_tokens(
-            self.context_template.format(context="", question=query), model,
+            self.context_template.format(context="", question=query),
+            model,
             fallback=self.tokenizer_fallback,
         )
         available = self.max_context_tokens - overhead
@@ -135,9 +138,7 @@ class RetrievalPipeline:
             self.context_template.format(context=context_text, question=query)
         )
 
-    def query(
-        self, query: str, llm_override: Optional[BaseLLM] = None
-    ) -> dict[str, Any]:
+    def query(self, query: str, llm_override: BaseLLM | None = None) -> dict[str, Any]:
         context = self.retrieve(query)
         return {
             "response": self.generate(query, context, llm_override),

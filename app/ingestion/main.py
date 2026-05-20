@@ -53,6 +53,8 @@ def _reset_directory(path: Path) -> None:
     if path.exists():
         shutil.rmtree(str(path))
     path.mkdir(parents=True, exist_ok=True)
+
+
 _REPO_ROOT = _APP_DIR if _APP_DIR.exists() else Path(__file__).resolve().parents[2]
 
 DATA_DIR = _REPO_ROOT / "data"
@@ -160,16 +162,16 @@ async def upload_pdfs(
     for upload in files:
         if not upload.filename:
             raise HTTPException(status_code=400, detail="Filename is required")
-        
+
         # Validate filename
         try:
             safe_filename = validate_filename(upload.filename)
         except ValueError as e:
             raise HTTPException(status_code=400, detail=str(e))
-        
+
         if not safe_filename.lower().endswith(".pdf"):
             raise HTTPException(status_code=400, detail="Only PDF files are allowed")
-        
+
         if safe_filename in seen_names:
             raise HTTPException(
                 status_code=400,
@@ -282,12 +284,13 @@ async def delete_document(
         raise HTTPException(status_code=500, detail=f"Failed to delete file: {e}")
 
     # Delete from vector store
-    config_path = find_config_path(
-        CONFIG_PATH if CONFIG_PATH.exists() else None
-    )
+    config_path = find_config_path(CONFIG_PATH if CONFIG_PATH.exists() else None)
     config = load_config(config_path)
 
-    from pipelines.base import create_embedder_from_config, create_vector_store_from_config
+    from pipelines.base import (
+        create_embedder_from_config,
+        create_vector_store_from_config,
+    )
 
     try:
         embedder = create_embedder_from_config(config)

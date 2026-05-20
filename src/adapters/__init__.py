@@ -1,16 +1,16 @@
-from typing import Any, Type
+from typing import Any
 
 from adapters.base import BaseEmbedder, BaseLLM
 
-_EMBEDDER_REGISTRY: dict[str, Type[BaseEmbedder]] = {}
-_LLM_REGISTRY: dict[str, Type[BaseLLM]] = {}
+_EMBEDDER_REGISTRY: dict[str, type[BaseEmbedder]] = {}
+_LLM_REGISTRY: dict[str, type[BaseLLM]] = {}
 
 
-def register_embedder(provider: str, cls: Type[BaseEmbedder]) -> None:
+def register_embedder(provider: str, cls: type[BaseEmbedder]) -> None:
     _EMBEDDER_REGISTRY[provider] = cls
 
 
-def register_llm(provider: str, cls: Type[BaseLLM]) -> None:
+def register_llm(provider: str, cls: type[BaseLLM]) -> None:
     _LLM_REGISTRY[provider] = cls
 
 
@@ -45,7 +45,7 @@ from adapters.llm import OpenAILLM, OllamaLLM  # noqa: E402
 from adapters.nim import NIMEmbedder, NIMLLM  # noqa: E402
 
 try:
-    from adapters.gemini import GeminiEmbedder, GeminiLLM  # noqa: E402
+    from adapters.gemini import GeminiEmbedder, GeminiLLM
 
     register_embedder("gemini", GeminiEmbedder)
     register_llm("gemini", GeminiLLM)

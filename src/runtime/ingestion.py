@@ -7,7 +7,8 @@ import copy
 import logging
 from contextlib import asynccontextmanager
 from pathlib import Path
-from typing import Any, AsyncIterator
+from typing import Any
+from collections.abc import AsyncIterator
 
 from config import find_config_path, load_config
 from models.api import ExtractionMode
@@ -57,7 +58,7 @@ class IngestionRuntime:
                 None,
                 None,
             )
-        except Exception as exc:  # noqa: BLE001
+        except Exception as exc:
             self._state = RuntimeState.DEGRADED
             self._error = str(exc)
             raise
@@ -90,7 +91,7 @@ class IngestionRuntime:
                 embedding["provider"],
                 embedding["model"],
             )
-        except Exception as exc:  # noqa: BLE001
+        except Exception as exc:
             self._state = RuntimeState.DEGRADED
             self._error = str(exc)
             raise
@@ -121,7 +122,7 @@ class IngestionRuntime:
     async def acquire(self, timeout_s: float = 2.0) -> AsyncIterator[IngestionPipeline]:
         try:
             await asyncio.wait_for(self._lock.acquire(), timeout=timeout_s)
-        except asyncio.TimeoutError as exc:
+        except TimeoutError as exc:
             raise RuntimeUnavailableError(
                 "Timed out waiting for ingestion runtime"
             ) from exc
@@ -258,7 +259,7 @@ class IngestionRuntime:
                     files_processed=results.get("documents", 0),
                     extraction_mode=extraction_mode.value,
                 )
-            except Exception as exc:  # noqa: BLE001
+            except Exception as exc:
                 logger.exception("%s failed", log_name)
                 write_status(
                     storage_dir,
@@ -337,7 +338,7 @@ class IngestionRuntime:
         if event is not None:
             try:
                 await asyncio.wait_for(event.wait(), timeout=timeout_s)
-            except asyncio.TimeoutError:
+            except TimeoutError:
                 logger.warning("Timed out draining ingestion pipeline; forcing close")
 
         await asyncio.to_thread(close_pipeline_resources, pipeline)
