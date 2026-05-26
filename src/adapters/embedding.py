@@ -65,7 +65,7 @@ class OllamaEmbedder(BaseEmbedder):
     def __init__(
         self,
         model: str = "nomic-embed-text",
-        base_url: str = "http://localhost:11434",
+        base_url: str | None = None,
         max_workers: int = 8,
         batch_size: int = DEFAULT_BATCH_SIZE,
         **kwargs: Any,
@@ -77,7 +77,9 @@ class OllamaEmbedder(BaseEmbedder):
         kwargs.pop("base_url", None)
         self._timeout = kwargs.pop("timeout", 120)
         super().__init__(model, **kwargs)
-        self.base_url = base_url.rstrip("/")
+        # Resolve base_url: explicit > OLLAMA_HOST env > default
+        resolved_url = base_url or os.environ.get("OLLAMA_HOST") or "http://localhost:11434"
+        self.base_url = resolved_url.rstrip("/")
         self._dimension = dimension
         self._max_workers = max_workers
         self._batch_size = batch_size

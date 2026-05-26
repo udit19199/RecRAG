@@ -4,55 +4,65 @@ from unittest.mock import MagicMock, patch
 
 import pytest
 
-from evaluation.ragas_eval import RagasEvaluator
+from adapters.base import BaseLLM
+from evaluation.ragas_eval import RagasEvaluator, get_evaluator
+
+
+class FakeLLM(BaseLLM):
+    """A fake LLM that returns canned responses for testing."""
+
+    provider = "test"
+
+    def __init__(self, responses: list[str] | None = None, **kwargs):
+        super().__init__(model="test-model", **kwargs)
+        self.responses = iter(responses or [""])
+        self._supports_streaming = False
+
+    @property
+    def supports_streaming(self) -> bool:
+        return self._supports_streaming
+
+    def generate(self, prompt: str, **kwargs) -> str:
+        return next(self.responses, "")
+
+    def chat(self, messages: list[dict[str, str]], **kwargs) -> str:
+        return next(self.responses, "")
+
+
+def make_evaluator(responses: list[str] | None = None) -> RagasEvaluator:
+    return RagasEvaluator(llm=FakeLLM(responses=responses))
 
 
 class TestRagasEvaluator:
-    def test_init_requires_api_key(self) -> None:
-        """Without an API key, construction should raise."""
-        with patch.dict("os.environ", {}, clear=True):
-            with pytest.raises(ValueError, match="OPENAI_API_KEY"):
-                RagasEvaluator()
+    def test_init_requires_llm(self) -> None:
+        """Without an llm, construction should raise."""
+        with pytest.raises(TypeError):
+            RagasEvaluator()  # type: ignore[call-arg]
 
-    def test_init_with_env_key(self) -> None:
-        """With OPENAI_API_KEY set, construction succeeds and client is ready."""
-        with patch.dict("os.environ", {"OPENAI_API_KEY": "test-key"}):
-            evaluator = RagasEvaluator()
-            assert evaluator.client is not None
-            assert evaluator.model == "gpt-4o-mini"
-
-    def test_init_with_explicit_key(self) -> None:
-        """An explicitly passed key takes precedence."""
-        evaluator = RagasEvaluator(openai_api_key="explicit-key")
-        assert evaluator.client.api_key == "explicit-key"
-
-    def test_init_custom_model(self) -> None:
-        """A custom model is accepted and stored."""
-        evaluator = RagasEvaluator(model="gpt-4", openai_api_key="key")
-        assert evaluator.model == "gpt-4"
+    def test_init_with_llm(self) -> None:
+        """With a BaseLLM, construction succeeds."""
+        evaluator = RagasEvaluator(llm=FakeLLM())
+        assert evaluator.llm is not None
+        assert evaluator.llm.model == "test-model"
 
     # ── Faithfulness ──────────────────────────────────────────────────────
 
-    @patch("evaluation.ragas_eval.RagasEvaluator._call_llm")
-    def test_faithfulness_returns_score(self, mock_call: MagicMock) -> None:
+    def test_faithfulness_returns_score(self) -> None:
         """Faithfulness parses the verification result correctly."""
-        # First call: extract claims
-        # Second call: verify claims against context
-        mock_call.side_effect = [
-            '["Claim 1", "Claim 2"]',
-            '{"Claim 1": true, "Claim 2": false}',
-        ]
-        evaluator = RagasEvaluator(openai_api_key="key")
+        evaluator = make_evaluator(
+            responses=[
+                '["Claim 1", "Claim 2"]',
+                '{"Claim 1": true, "Claim 2": false}',
+            ]
+        )
         score = evaluator._faithfulness(
             contexts=["Some context text."], response="Claim 1 and Claim 2."
         )
         assert score == 0.5  # 1 of 2 claims supported
 
-    @patch("evaluation.ragas_eval.RagasEvaluator._call_llm")
-    def test_faithfulness_empty_claims_fallback(self, mock_call: MagicMock) -> None:
+    def test_faithfulness_empty_claims_fallback(self) -> None:
         """When claim extraction returns empty, score defaults to 0."""
-        mock_call.return_value = "[]"
-        evaluator = RagasEvaluator(openai_api_key="key")
+        evaluator = make_evaluator(responses=["[]"])
         score = evaluator._faithfulness(
             contexts=["ctx"], response="Some answer."
         )
@@ -60,32 +70,26 @@ class TestRagasEvaluator:
 
     # ── Answer relevancy ───────────────────────────────────────────────────
 
-    @patch("evaluation.ragas_eval.RagasEvaluator._call_llm")
-    def test_answer_relevancy_returns_score(self, mock_call: MagicMock) -> None:
+    def test_answer_relevancy_returns_score(self) -> None:
         """Answer relevancy parses a numeric score from the LLM."""
-        mock_call.return_value = "0.85"
-        evaluator = RagasEvaluator(openai_api_key="key")
+        evaluator = make_evaluator(responses=["0.85"])
         score = evaluator._answer_relevancy(
             question="What is X?", response="X is Y."
         )
         assert score == 0.85
 
-    @patch("evaluation.ragas_eval.RagasEvaluator._call_llm")
-    def test_answer_relevancy_bounds_clamping(self, mock_call: MagicMock) -> None:
+    def test_answer_relevancy_bounds_clamping(self) -> None:
         """Scores outside 0-1 are clamped."""
-        mock_call.return_value = "1.5"
-        evaluator = RagasEvaluator(openai_api_key="key")
+        evaluator = make_evaluator(responses=["1.5"])
         score = evaluator._answer_relevancy("q", "a")
         assert score == 1.0
 
     # ── Context precision ──────────────────────────────────────────────────
 
-    @patch("evaluation.ragas_eval.RagasEvaluator._call_llm")
-    def test_context_precision_returns_score(self, mock_call: MagicMock) -> None:
+    def test_context_precision_returns_score(self) -> None:
         """Context precision returns a rank-weighted score."""
         # Two contexts, first more relevant
-        mock_call.side_effect = ["0.9", "0.5"]
-        evaluator = RagasEvaluator(openai_api_key="key")
+        evaluator = make_evaluator(responses=["0.9", "0.5"])
         score = evaluator._context_precision(
             question="What is X?",
             contexts=["Very relevant chunk.", "Somewhat relevant chunk."],
@@ -94,20 +98,17 @@ class TestRagasEvaluator:
         # = (0.9 + 0.25) / 1.5 = 0.7667
         assert score == pytest.approx(0.7667, rel=1e-3)
 
-    @patch("evaluation.ragas_eval.RagasEvaluator._call_llm")
-    def test_context_precision_empty(self, mock_call: MagicMock) -> None:
+    def test_context_precision_empty(self) -> None:
         """Empty context list returns 0."""
-        evaluator = RagasEvaluator(openai_api_key="key")
+        evaluator = make_evaluator()
         score = evaluator._context_precision(question="q", contexts=[])
         assert score == 0.0
 
     # ── Context recall ─────────────────────────────────────────────────────
 
-    @patch("evaluation.ragas_eval.RagasEvaluator._call_llm")
-    def test_context_recall_returns_score(self, mock_call: MagicMock) -> None:
+    def test_context_recall_returns_score(self) -> None:
         """Context recall parses a score from the LLM."""
-        mock_call.return_value = "0.75"
-        evaluator = RagasEvaluator(openai_api_key="key")
+        evaluator = make_evaluator(responses=["0.75"])
         score = evaluator._context_recall(
             contexts=["Some context."], ground_truth="Expected answer."
         )
@@ -129,7 +130,7 @@ class TestRagasEvaluator:
         mock_relevancy.return_value = 0.8
         mock_precision.return_value = 0.7
 
-        evaluator = RagasEvaluator(openai_api_key="key")
+        evaluator = make_evaluator()
         scores = evaluator.evaluate_query("q", ["c1"], "a")
 
         assert scores == {
@@ -156,7 +157,7 @@ class TestRagasEvaluator:
         mock_precision.return_value = 0.7
         mock_recall.return_value = 0.6
 
-        evaluator = RagasEvaluator(openai_api_key="key")
+        evaluator = make_evaluator()
         scores = evaluator.evaluate_query("q", ["c1"], "a", ground_truth="gt")
 
         assert scores == {
@@ -180,7 +181,7 @@ class TestRagasEvaluator:
         mock_relevancy.return_value = 0.8
         mock_precision.return_value = 0.7
 
-        evaluator = RagasEvaluator(openai_api_key="key")
+        evaluator = make_evaluator()
         scores = evaluator.evaluate_query("q", ["c1"], "a")
 
         assert "faithfulness" not in scores
@@ -189,25 +190,28 @@ class TestRagasEvaluator:
 
     # ── get_evaluator factory ──────────────────────────────────────────────
 
-    def test_get_evaluator_uses_env(self) -> None:
-        """get_evaluator reads model from env and creates evaluator."""
-        from evaluation.ragas_eval import get_evaluator
+    @patch("evaluation.ragas_eval.create_llm")
+    def test_get_evaluator_creates_llm_from_config(
+        self, mock_create_llm: MagicMock
+    ) -> None:
+        """get_evaluator creates an LLM from config."""
+        mock_llm = FakeLLM()
+        mock_create_llm.return_value = mock_llm
 
-        with patch.dict(
-            "os.environ",
-            {"OPENAI_API_KEY": "key", "RAGAS_MODEL": "gpt-4"},
-        ):
-            evaluator = get_evaluator()
-            assert evaluator.model == "gpt-4"
+        evaluator = get_evaluator()
+        assert evaluator.llm is not None
+        mock_create_llm.assert_called_once()
 
-    def test_get_evaluator_defaults(self) -> None:
-        """get_evaluator falls back to default model when env is unset."""
-        from evaluation.ragas_eval import get_evaluator
+    @patch("evaluation.ragas_eval.create_llm")
+    def test_get_evaluator_passes_override(
+        self, mock_create_llm: MagicMock
+    ) -> None:
+        """get_evaluator passes provider/model overrides."""
+        mock_llm = FakeLLM()
+        mock_create_llm.return_value = mock_llm
 
-        with patch.dict(
-            "os.environ",
-            {"OPENAI_API_KEY": "key"},
-            clear=True,
-        ):
-            evaluator = get_evaluator()
-            assert evaluator.model == "gpt-4o-mini"
+        evaluator = get_evaluator(provider="ollama", model="llama3.2")
+        assert evaluator.llm is not None
+        mock_create_llm.assert_called_once_with(
+            "ollama", model="llama3.2", timeout=120
+        )

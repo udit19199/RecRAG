@@ -2,9 +2,7 @@ import json
 import logging
 from pathlib import Path
 
-from datasets import Dataset
-
-from config import find_config_path, get_storage_dir, load_config
+from config import find_config_path, load_config, get_storage_dir
 from evaluation.ragas_eval import get_evaluator
 from pipelines import get_retrieval_pipeline
 
@@ -39,7 +37,7 @@ def run_batch_evaluation(
 
     questions: list[str] = []
     answers: list[str] = []
-    contexts: list[list[str]] = []
+    contexts_list: list[list[str]] = []
     ground_truths: list[str] = []
 
     for item in eval_data:
@@ -54,35 +52,45 @@ def run_batch_evaluation(
 
         questions.append(question)
         answers.append(result["response"])
-        contexts.append([doc.text for doc in result["context"]])
+        contexts_list.append([doc.text for doc in result["context"]])
         if ground_truth:
             ground_truths.append(ground_truth)
 
-    data: dict = {
-        "question": questions,
-        "answer": answers,
-        "contexts": contexts,
-    }
-    if ground_truths:
-        data["ground_truth"] = ground_truths
-
-    dataset = Dataset.from_dict(data)
+    if not questions:
+        logger.warning("No valid questions found in dataset.")
+        return
 
     logger.info("Running RAGAS evaluation...")
-    result = evaluator.evaluate_query_batch(dataset)
+    scores_list = evaluator.evaluate_query_batch(
+        questions,
+        contexts_list,
+        answers,
+        ground_truths=ground_truths if ground_truths else None,
+    )
 
     output_path = get_storage_dir(config, config_path) / "evaluation_results.json"
 
-    results_df = result.to_pandas()
-    detailed_results = results_df.to_dict(orient="records")
-
-    summary = {metric: results_df[metric].mean() for metric in result.scores[0].keys()}
+    # Compute summary across all queries
+    if scores_list:
+        all_metrics = list(scores_list[0].keys())
+        summary = {}
+        for metric in all_metrics:
+            values = [
+                s[metric] for s in scores_list if metric in s and s[metric] is not None
+            ]
+            summary[metric] = sum(values) / len(values) if values else 0.0
+    else:
+        summary = {}
 
     final_output = {
         "summary": summary,
-        "detailed_results": detailed_results,
+        "detailed_results": [
+            {"question": q, **s}
+            for q, s in zip(questions, scores_list)
+        ],
     }
 
+    output_path.parent.mkdir(parents=True, exist_ok=True)
     with open(output_path, "w") as f:
         json.dump(final_output, f, indent=4)
 

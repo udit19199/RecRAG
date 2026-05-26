@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# RecRAG Frontend
 
-## Getting Started
+Next.js 16 (App Router) + React 19 + TypeScript + Tailwind CSS + Biome.
 
-First, run the development server:
+## Quick Start
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The frontend expects the retrieval API on `:8000` and ingestion API on `:8001`.
+Override with environment variables:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+NEXT_PUBLIC_RETRIEVAL_API_URL=http://localhost:8000 \
+NEXT_PUBLIC_INGESTION_API_URL=http://localhost:8001 \
+pnpm dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Structure
 
-## Learn More
+```
+app/
+  page.tsx            Chat workbench (main page)
+  compare/page.tsx    A/B model comparison
+  layout.tsx          Root layout with sidebar + theme
+  globals.css         Tailwind base styles
 
-To learn more about Next.js, take a look at the following resources:
+src/
+  components/ui/      Shared UI primitives (shadcn/ui)
+  features/
+    chat/             Chat workbench, messages, file upload
+    ingestion/        Ingestion status display, upload dialog
+    model-compare/    Model picker + A/B comparison workbench
+  lib/api/            API client with typed request/response helpers
+  hooks/              Shared React hooks
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Building
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+pnpm build           # TypeScript check + production build
+pnpm lint            # Biome lint
+pnpm format          # Biome format
+```
 
-## Deploy on Vercel
+## API Endpoints
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The API client in `src/lib/api/` calls these endpoints:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Method | Route | Service |
+|--------|-------|---------|
+| POST | `/query` | Retrieval API |
+| GET | `/health` | Retrieval API |
+| GET | `/config` | Retrieval API |
+| POST | `/config` | Retrieval API |
+| GET | `/providers` | Retrieval API |
+| GET | `/evaluate/{id}` | Retrieval API |
+| POST | `/upload` | Ingestion API |
+| GET | `/status` | Ingestion API |
+| GET | `/files` | Ingestion API |
+| POST | `/reindex` | Ingestion API |
+| POST | `/ingest/target` | Ingestion API |
+| POST | `/status/index` | Ingestion API |
+| DELETE | `/documents/{name}` | Ingestion API |
+
+See `src/lib/api/types.ts` for the full request/response type definitions.

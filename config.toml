@@ -1,15 +1,19 @@
 # RecRAG Configuration
 # All non-sensitive configuration values
+#
+# Environment variable substitution: ${VAR:-default}
 
 [embedding]
-provider = "gemini"
-model = "gemini-embedding-001"
+provider = "ollama"
+model = "nomic-embed-text"
 timeout = 120
+# base_url = "http://localhost:11434"  # Uncomment to override Ollama host
 
 [llm]
-provider = "gemini"
-model = "gemini-3.1-flash-lite"
+provider = "ollama"
+model = "llama3.2"
 timeout = 120
+# base_url = "http://localhost:11434"  # Uncomment to override Ollama host
 
 [ingestion]
 directory = "data/pdfs"
@@ -17,9 +21,10 @@ chunk_size = 1024
 chunk_overlap = 50
 
 [vision]
-provider = "gemini"
-model = "gemini-3.1-flash-lite"
-timeout = 120
+provider = "ollama"
+model = "llama3.2-vision"
+timeout = 180
+# base_url = "http://localhost:11434"  # Uncomment to override Ollama host
 
 [retrieval]
 top_k = 4
@@ -39,7 +44,7 @@ origins = ["http://localhost:3000"]
 # "lite"   – Milvus Lite: embedded local file, no Docker service required (default).
 # "server" – Managed/serverless Milvus (recommended) or optional local Milvus
 #             from docker-compose.dev.yml.
-deployment = "server"
+deployment = "lite"
 collection_prefix = "recrag_"
 metric_type = "L2"
 # directory is used only for tracking ingestion status

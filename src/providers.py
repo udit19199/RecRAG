@@ -9,6 +9,45 @@ from typing import Any
 
 # ── Static fallback model lists ───────────────────────────────────────────────
 
+# Known embedding-capable models on Ollama
+OLLAMA_EMBEDDING_MODELS = [
+    "nomic-embed-text",
+    "all-minilm",
+    "mxbai-embed-large",
+    "snowflake-arctic-embed",
+    "bge-m3",
+    "bge-large",
+    "bge-small",
+]
+
+# Known LLM models on Ollama (most popular ones)
+OLLAMA_LLM_MODELS = [
+    "llama3.2",
+    "llama3.2:1b",
+    "llama3.1",
+    "llama3.1:8b",
+    "llama3.1:70b",
+    "llama3.1:405b",
+    "llama3",
+    "llama2",
+    "mistral",
+    "mixtral",
+    "codellama",
+    "phi3",
+    "phi3:mini",
+    "phi3:medium",
+    "gemma2",
+    "gemma2:2b",
+    "qwen2.5",
+    "qwen2.5:7b",
+    "qwen2.5:72b",
+    "deepseek-r1",
+    "deepseek-coder",
+    "neural-chat",
+    "orca-mini",
+    "tinyllama",
+]
+
 OPENAI_EMBEDDING_MODELS = [
     "text-embedding-3-small",
     "text-embedding-3-large",
@@ -34,16 +73,30 @@ OPENAI_VISION_MODELS = [
 ]
 
 OLLAMA_VISION_MODELS = [
+    "llama3.2-vision",
+    "llama3.2-vision:90b",
+    "llava",
     "llava:latest",
-    "llava-llama3:latest",
-    "bakllava:latest",
+    "llava-llama3",
     "llava:13b",
     "llava:34b",
+    "bakllava",
+    "minicpm-v",
+    "moondream",
 ]
 
 NIM_VISION_MODELS = [
     "microsoft/phi-4-multimodal-instruct",
 ]
+
+# Known embedding model name patterns (contains these substrings)
+EMBEDDING_KEYWORDS = ["embed", "minilm", "bge-", "snowflake", "mxbai"]
+
+
+def _is_embedding_model(model_name: str) -> bool:
+    """Heuristic to guess if an Ollama model supports embeddings."""
+    lower = model_name.lower()
+    return any(kw in lower for kw in EMBEDDING_KEYWORDS)
 
 
 def _sorted_unique(values: list[str]) -> list[str]:
@@ -65,8 +118,7 @@ def _fetch_json(
 def _fetch_ollama_models(base_url: str) -> tuple[list[str], list[str]]:
     """Fetch models from Ollama /api/tags.
 
-    Ollama does not distinguish embed vs LLM models in the tags endpoint,
-    so the same list is returned for both roles.
+    Uses heuristics to distinguish embedding vs LLM models.
 
     Returns:
         (embed_models, llm_models)
@@ -74,10 +126,27 @@ def _fetch_ollama_models(base_url: str) -> tuple[list[str], list[str]]:
     url = base_url.rstrip("/") + "/api/tags"
     data = _fetch_json(url, timeout=5.0)
     if data is None:
-        return [], []
+        return OLLAMA_EMBEDDING_MODELS, OLLAMA_LLM_MODELS
 
-    models = _sorted_unique([m["name"] for m in data.get("models", [])])
-    return models, models
+    all_models = sorted(
+        {m["name"] for m in data.get("models", [])},
+    )
+
+    if not all_models:
+        return OLLAMA_EMBEDDING_MODELS, OLLAMA_LLM_MODELS
+
+    embed_models = _sorted_unique(
+        [m for m in all_models if _is_embedding_model(m)]
+    )
+    llm_models = _sorted_unique(
+        [m for m in all_models if not _is_embedding_model(m)]
+    )
+
+    # If embedding heuristic found nothing, return all models for both (conservative)
+    if not embed_models:
+        return all_models, all_models
+
+    return embed_models, llm_models
 
 
 def _fetch_openai_models(
@@ -155,25 +224,29 @@ def _fetch_nim_models(
 def _fetch_ollama_vision_models(base_url: str) -> list[str]:
     """Fetch vision-capable models from Ollama.
 
-    Ollama doesn't have a direct way to identify vision models,
-    so we check if known vision model names are available.
-
     Returns:
         List of available vision model names.
     """
     url = base_url.rstrip("/") + "/api/tags"
     data = _fetch_json(url, timeout=5.0)
     if data is None:
-        return []
+        return OLLAMA_VISION_MODELS
 
     available = {m["name"] for m in data.get("models", [])}
+    if not available:
+        return OLLAMA_VISION_MODELS
+
     # Return intersection of known vision models and available models
     vision_models = [m for m in OLLAMA_VISION_MODELS if m in available]
-    # Also include any model with 'llava' in the name
+
+    # Also include any model with vision-related keywords
     for name in available:
-        if "llava" in name.lower() and name not in vision_models:
-            vision_models.append(name)
-    return _sorted_unique(vision_models)
+        lower = name.lower()
+        if any(kw in lower for kw in ("vision", "llava", "minicpm", "moondream", "bakllava")):
+            if name not in vision_models:
+                vision_models.append(name)
+
+    return _sorted_unique(vision_models) if vision_models else OLLAMA_VISION_MODELS
 
 
 def _fetch_openai_vision_models(api_key: str, base_url: str | None = None) -> list[str]:
@@ -217,4 +290,4 @@ def _fetch_nim_vision_models(api_key: str, base_url: str | None = None) -> list[
             "multimodal" in model_id.lower() or "vision" in model_id.lower()
         ) and model_id not in vision_models:
             vision_models.append(model_id)
-    return _sorted_unique(vision_models)
+    return _sorted_unique(vision_models) if vision_models else NIM_VISION_MODELS

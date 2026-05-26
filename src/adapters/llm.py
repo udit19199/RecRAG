@@ -63,10 +63,10 @@ class OllamaLLM(BaseLLM):
 
     def __init__(
         self,
-        model: str = "llama3",
+        model: str = "llama3.2",
         temperature: float = DEFAULT_TEMPERATURE,
         max_tokens: int | None = None,
-        base_url: str = "http://localhost:11434",
+        base_url: str | None = None,
         api_key: str | None = None,
         **kwargs: Any,
     ):
@@ -74,7 +74,9 @@ class OllamaLLM(BaseLLM):
         kwargs.pop("base_url", None)
         self._timeout = kwargs.pop("timeout", 120)
         super().__init__(model, **kwargs)
-        self.base_url = base_url.rstrip("/")
+        # Resolve base_url: explicit > OLLAMA_HOST env > default
+        resolved_url = base_url or os.environ.get("OLLAMA_HOST") or "http://localhost:11434"
+        self.base_url = resolved_url.rstrip("/")
         self.temperature = temperature
         self.max_tokens = max_tokens
         self.session = create_session_with_pooling()

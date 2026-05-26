@@ -287,16 +287,29 @@ async def get_providers(_: None = Depends(verify_api_key)) -> ProvidersResponse:
     """Return available providers and their models, fetched live where possible."""
     ollama_embed_url = "http://localhost:11434"
     ollama_llm_url = "http://localhost:11434"
+    ollama_vision_url = "http://localhost:11434"
 
     try:
         config_path = find_config_path()
         config = load_config(config_path)
         embed_cfg = config.get("embedding", {})
         llm_cfg = config.get("llm", {})
-        if embed_cfg.get("provider") == "ollama" and embed_cfg.get("base_url"):
+        vision_cfg = config.get("vision", {})
+
+        # Use the configured base_url from each section if available
+        if embed_cfg.get("base_url"):
             ollama_embed_url = embed_cfg["base_url"]
-        if llm_cfg.get("provider") == "ollama" and llm_cfg.get("base_url"):
+        if llm_cfg.get("base_url"):
             ollama_llm_url = llm_cfg["base_url"]
+        if vision_cfg.get("base_url"):
+            ollama_vision_url = vision_cfg["base_url"]
+
+        # Also fallback to a common OLLAMA_HOST env var if set
+        env_host = os.environ.get("OLLAMA_HOST", "").strip()
+        if env_host:
+            ollama_embed_url = env_host
+            ollama_llm_url = env_host
+            ollama_vision_url = env_host
     except Exception:
         pass
 
@@ -306,7 +319,7 @@ async def get_providers(_: None = Depends(verify_api_key)) -> ProvidersResponse:
         ollama_llm_models = sorted(set(ollama_llm_models + extra_llm))
     ollama_available = bool(ollama_embed_models or ollama_llm_models)
     ollama_vision_models = (
-        _fetch_ollama_vision_models(ollama_embed_url) if ollama_available else []
+        _fetch_ollama_vision_models(ollama_vision_url) if ollama_available else []
     )
 
     openai_key = os.environ.get("OPENAI_API_KEY", "")

@@ -26,9 +26,9 @@ EMBEDDING_MODELS = {
     "gemini-embedding-2",
 }
 # Defaults
-DEFAULT_LLM_MODEL = "models/gemini-2.0-flash-lite"
+DEFAULT_LLM_MODEL = "gemini-2.0-flash"
 DEFAULT_EMBEDDING_MODEL = "gemini-embedding-001"
-DEFAULT_VISION_MODEL = "models/gemini-2.0-flash-lite"
+DEFAULT_VISION_MODEL = "gemini-2.0-flash"
 
 
 # ── Shared helpers ────────────────────────────────────────────────────────────

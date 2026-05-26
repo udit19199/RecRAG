@@ -75,5 +75,6 @@ def test_fetch_ollama_models_deduplicates_ids() -> None:
     with patch("requests.Session.get", return_value=mock_response):
         embed_models, llm_models = _fetch_ollama_models("http://localhost:11434")
 
-    assert embed_models == ["llama3", "nomic-embed-text"]
-    assert llm_models == ["llama3", "nomic-embed-text"]
+    # nomic-embed-text matches embedding keyword; llama3 is LLM-only
+    assert embed_models == ["nomic-embed-text"]
+    assert llm_models == ["llama3"]

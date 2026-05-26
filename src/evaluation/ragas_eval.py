@@ -1,19 +1,19 @@
 """Lightweight RAG evaluation via direct LLM calls — no ragas/datasets/pyarrow/torch.
 
-Replaces the ragas framework with direct GPT-4 prompts for each metric.
 Each metric makes one or two LLM calls with a structured prompt and parses
-a numeric score from the response.
+a numeric score from the response. Works with any LLM provider (OpenAI,
+Ollama, Gemini, NIM) through the adapter layer.
 """
 
 from __future__ import annotations
 
 import json
 import logging
-import os
 import re
 from typing import Any
 
-from openai import OpenAI
+from adapters import BaseLLM, create_llm
+from config import find_config_path, load_config
 
 logger = logging.getLogger(__name__)
 
@@ -110,29 +110,16 @@ class RagasEvaluator:
 
     Computes the same metrics as the ragas framework (faithfulness, answer
     relevancy, context precision, context recall) but without the dependency
-    overhead. Each metric makes one or two GPT calls with structured prompts.
+    overhead. Each metric makes one or two LLM calls with structured prompts.
+    Works with any RecRAG LLM provider (OpenAI, Ollama, Gemini, NIM).
     """
 
-    def __init__(
-        self,
-        model: str = "gpt-4o-mini",
-        openai_api_key: str | None = None,
-    ):
-        api_key = openai_api_key or os.getenv("OPENAI_API_KEY")
-        if not api_key:
-            raise ValueError("OPENAI_API_KEY must be provided or set in environment")
-
-        self.client = OpenAI(api_key=api_key)
-        self.model = model
+    def __init__(self, llm: BaseLLM):
+        self.llm = llm
 
     def _call_llm(self, prompt: str) -> str:
         """Make a single LLM call and return the response text."""
-        response = self.client.chat.completions.create(
-            model=self.model,
-            messages=[{"role": "user", "content": prompt}],
-            temperature=0.0,
-        )
-        return response.choices[0].message.content or ""
+        return self.llm.generate(prompt)
 
     # ── Individual metrics ─────────────────────────────────────────────────
 
@@ -310,7 +297,35 @@ class RagasEvaluator:
         return results
 
 
-def get_evaluator() -> RagasEvaluator:
-    """Create a RagasEvaluator instance from environment."""
-    model = os.getenv("RAGAS_MODEL", "gpt-4o-mini")
-    return RagasEvaluator(model=model)
+def get_evaluator(
+    provider: str | None = None,
+    model: str | None = None,
+    **kwargs: Any,
+) -> RagasEvaluator:
+    """Create a RagasEvaluator from config, defaulting to the configured LLM.
+
+    Args:
+        provider: Override LLM provider (e.g. "ollama", "openai", "gemini").
+        model: Override LLM model name.
+        **kwargs: Additional arguments passed to the LLM adapter constructor.
+
+    Returns:
+        A configured RagasEvaluator instance.
+    """
+    config_path = find_config_path()
+    config = load_config(config_path)
+
+    actual_provider = provider or config.get("llm", {}).get("provider", "openai")
+    actual_model = model or config.get("llm", {}).get("model", "gpt-4o-mini")
+
+    # Pass extra config values (timeout, base_url, etc.) to the adapter
+    llm_config = config.get("llm", {})
+    extra_kwargs = {
+        k: v
+        for k, v in llm_config.items()
+        if k not in ("provider", "model") and not k.startswith("_")
+    }
+    extra_kwargs.update(kwargs)
+
+    llm = create_llm(actual_provider, model=actual_model, **extra_kwargs)
+    return RagasEvaluator(llm=llm)
