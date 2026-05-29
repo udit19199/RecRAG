@@ -31,15 +31,6 @@ def create_llm(provider: str, **kwargs: Any) -> BaseLLM:
         raise ValueError(f"Unknown LLM provider: {provider}. Available: {available}")
     return _LLM_REGISTRY[provider](**kwargs)
 
-
-def list_embedder_providers() -> list[str]:
-    return list(_EMBEDDER_REGISTRY.keys())
-
-
-def list_llm_providers() -> list[str]:
-    return list(_LLM_REGISTRY.keys())
-
-
 from adapters.embedding import OpenAIEmbedder, OllamaEmbedder  # noqa: E402
 from adapters.llm import OpenAILLM, OllamaLLM  # noqa: E402
 from adapters.nim import NIMEmbedder, NIMLLM  # noqa: E402
@@ -58,3 +49,37 @@ register_embedder("nim", NIMEmbedder)
 register_llm("openai", OpenAILLM)
 register_llm("ollama", OllamaLLM)
 register_llm("nim", NIMLLM)
+
+
+def create_llm_from_config(
+    config: dict[str, Any],
+    provider: str | None = None,
+    model: str | None = None,
+    **overrides: Any,
+) -> BaseLLM:
+    """Build a BaseLLM from a loaded config dict.
+
+    Priority: explicit args > config.toml [llm] section > built-in defaults.
+    Extra keys from the [llm] config section (timeout, base_url, etc.) are
+    forwarded to the adapter constructor; ``provider`` and ``model`` are
+    consumed here. Caller-supplied ``overrides`` take precedence over config.
+
+    Args:
+        config: Parsed config dict (output of ``load_config``).
+        provider: Override the LLM provider name (e.g. ``"ollama"``).
+        model: Override the model name.
+        **overrides: Additional kwargs forwarded to the adapter (highest priority).
+
+    Returns:
+        A configured ``BaseLLM`` instance.
+    """
+    llm_cfg = config.get("llm", {})
+    actual_provider = provider or llm_cfg.get("provider", "openai")
+    actual_model = model or llm_cfg.get("model", "gpt-4o-mini")
+    kwargs = {
+        k: v
+        for k, v in llm_cfg.items()
+        if k not in ("provider", "model") and not k.startswith("_")
+    }
+    kwargs.update(overrides)
+    return create_llm(actual_provider, model=actual_model, **kwargs)
