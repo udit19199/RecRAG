@@ -257,7 +257,6 @@ sequenceDiagram
 | `app/ingestion/main.py` | API | ✅ Production-ready |
 | `jobs/ingest.py` | CLI | ✅ Functional |
 | `jobs/evaluate.py` | CLI | ✅ Functional |
-| `jobs/smoke_test.py` | CLI | ✅ Functional |
 | `frontend/` | UI | ⚠️ Needs experiment UI |
 | `src/experiments/` | **Missing** | ❌ [Gap] Experiment orchestrator |
 | `app/experiments/` or endpoints | **Missing** | ❌ [Gap] Experiment API |
