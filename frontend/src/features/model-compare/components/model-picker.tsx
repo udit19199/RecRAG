@@ -28,6 +28,11 @@ import {
 	TooltipTrigger,
 } from "@/components/ui/tooltip";
 import {
+	makeValue,
+	parseValue,
+	uniqueModels,
+} from "@/features/model-compare/lib";
+import {
 	type AdapterConfig,
 	getConfig,
 	getProviders,
@@ -61,16 +66,6 @@ const PROVIDER_LABELS: Record<string, string> = {
 	nim: "NVIDIA NIM",
 };
 
-function makeValue(provider: string, model: string) {
-	return `${provider}::${model}`;
-}
-
-function parseValue(value: string): { provider: string; model: string } | null {
-	const [provider, model] = value.split("::");
-	if (!provider || !model) return null;
-	return { provider, model };
-}
-
 export default function ModelPicker({
 	onReindexStarted,
 	onConfigChanged,
@@ -82,7 +77,7 @@ export default function ModelPicker({
 		useState<AdapterConfig | null>(null);
 	const [currentLLM, setCurrentLLM] = useState<AdapterConfig | null>(null);
 	const [currentVision, setCurrentVision] = useState<VisionConfig | null>(null);
-	const [isLoading, setIsLoading] = useState(true);
+	const isLoading = !providers;
 	const [llmChanging, setLlmChanging] = useState(false);
 	const [embedChanging, setEmbedChanging] = useState(false);
 	const [pendingEmbedChange, setPendingEmbedChange] =
@@ -90,7 +85,6 @@ export default function ModelPicker({
 	const hydratedSelectionRef = useRef(false);
 
 	const loadData = useCallback(async () => {
-		setIsLoading(true);
 		try {
 			const [cfg, prov] = await Promise.all([getConfig(), getProviders()]);
 			setCurrentEmbedding(cfg.embedding);
@@ -98,8 +92,6 @@ export default function ModelPicker({
 			setProviders(prov);
 		} catch {
 			// ignore and render skeletons
-		} finally {
-			setIsLoading(false);
 		}
 	}, []);
 
@@ -256,8 +248,6 @@ export default function ModelPicker({
 			setEmbedChanging(false);
 		}
 	};
-
-	const uniqueModels = (models: string[]) => Array.from(new Set(models));
 
 	const currentLLMValue = currentLLM
 		? makeValue(currentLLM.provider, currentLLM.model)

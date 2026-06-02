@@ -50,7 +50,7 @@ export async function getIngestionStatus(): Promise<IngestionStatus> {
 	return handleResponse<IngestionStatus>(res);
 }
 
-export async function checkIngestionHealth(): Promise<HealthResponse> {
+async function checkIngestionHealth(): Promise<HealthResponse> {
 	const res = await fetch(getIngestionApiUrl("/health"));
 	return handleResponse<HealthResponse>(res);
 }

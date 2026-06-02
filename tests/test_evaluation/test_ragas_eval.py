@@ -190,28 +190,32 @@ class TestRagasEvaluator:
 
     # ── get_evaluator factory ──────────────────────────────────────────────
 
-    @patch("evaluation.ragas_eval.create_llm")
+    @patch("evaluation.ragas_eval.load_config")
+    @patch("evaluation.ragas_eval.create_llm_from_config")
     def test_get_evaluator_creates_llm_from_config(
-        self, mock_create_llm: MagicMock
+        self, mock_create_llm_from_config: MagicMock, mock_load_config: MagicMock
     ) -> None:
         """get_evaluator creates an LLM from config."""
+        mock_load_config.return_value = {}
         mock_llm = FakeLLM()
-        mock_create_llm.return_value = mock_llm
+        mock_create_llm_from_config.return_value = mock_llm
 
         evaluator = get_evaluator()
         assert evaluator.llm is not None
-        mock_create_llm.assert_called_once()
+        mock_create_llm_from_config.assert_called_once()
 
-    @patch("evaluation.ragas_eval.create_llm")
+    @patch("evaluation.ragas_eval.load_config")
+    @patch("evaluation.ragas_eval.create_llm_from_config")
     def test_get_evaluator_passes_override(
-        self, mock_create_llm: MagicMock
+        self, mock_create_llm_from_config: MagicMock, mock_load_config: MagicMock
     ) -> None:
-        """get_evaluator passes provider/model overrides."""
+        """get_evaluator passes provider/model overrides to create_llm_from_config."""
+        mock_load_config.return_value = {}
         mock_llm = FakeLLM()
-        mock_create_llm.return_value = mock_llm
+        mock_create_llm_from_config.return_value = mock_llm
 
         evaluator = get_evaluator(provider="ollama", model="llama3.2")
         assert evaluator.llm is not None
-        mock_create_llm.assert_called_once_with(
-            "ollama", model="llama3.2", timeout=120
+        mock_create_llm_from_config.assert_called_once_with(
+            {}, "ollama", "llama3.2"
         )

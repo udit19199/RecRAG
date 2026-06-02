@@ -49,7 +49,7 @@ export function UploadDialog({
 			<AlertDialogContent className="max-w-md">
 				<AlertDialogHeader>
 					<AlertDialogTitle className="flex items-center gap-2">
-						<FilePlus className="h-5 w-5 text-primary" />
+						<FilePlus className="size-5 text-primary" />
 						Upload Documents
 					</AlertDialogTitle>
 					<AlertDialogDescription>
@@ -60,18 +60,18 @@ export function UploadDialog({
 				<div className="space-y-4 py-4">
 					<div className="rounded-lg border bg-muted/30 p-4">
 						<h4 className="flex items-center gap-2 text-xs font-semibold text-foreground">
-							<Info className="h-4 w-4" />
+							<Info className="size-4" />
 							Guidelines & Tips
 						</h4>
 						<ul className="mt-3 space-y-2 text-xs text-muted-foreground">
 							<li className="flex items-start gap-2">
-								<span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+								<span className="mt-1 size-1.5 shrink-0 rounded-full bg-primary" />
 								<span>
 									Only <strong>PDF files</strong> are supported for ingestion.
 								</span>
 							</li>
 							<li className="flex items-start gap-2">
-								<span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+								<span className="mt-1 size-1.5 shrink-0 rounded-full bg-primary" />
 								<span>
 									Select a <strong>Vision Model</strong> above to enable
 									vision-assisted extraction for scanned documents and
@@ -79,13 +79,13 @@ export function UploadDialog({
 								</span>
 							</li>
 							<li className="flex items-start gap-2">
-								<span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+								<span className="mt-1 size-1.5 shrink-0 rounded-full bg-primary" />
 								<span>
 									Keep individual files under <strong>50 MB</strong>.
 								</span>
 							</li>
 							<li className="flex items-start gap-2">
-								<span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+								<span className="mt-1 size-1.5 shrink-0 rounded-full bg-primary" />
 								<span>
 									A new upload will <strong>replace</strong> the entire current
 									corpus.
@@ -103,6 +103,7 @@ export function UploadDialog({
 							type="file"
 							multiple
 							accept=".pdf"
+							aria-label="Select PDF files to upload"
 							className="hidden"
 							onChange={handleFileChange}
 						/>
@@ -111,7 +112,7 @@ export function UploadDialog({
 							onClick={() => fileInputRef.current?.click()}
 							disabled={isUploading}
 						>
-							{isUploading ? "Uploading..." : "Select Files & Start Ingestion"}
+							{isUploading ? "Uploading…" : "Select Files & Start Ingestion"}
 						</Button>
 					</div>
 				</div>

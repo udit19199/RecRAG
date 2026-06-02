@@ -14,6 +14,7 @@ import {
 	TooltipContent,
 	TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { makeValue, uniqueModels } from "@/features/model-compare/lib";
 import type { ProvidersResponse } from "@/lib/api";
 
 type Role = "llm" | "embedding" | "vision";
@@ -37,17 +38,6 @@ const PROVIDER_LABELS: Record<string, string> = {
 	nim: "NVIDIA NIM",
 };
 
-export function makeValue(provider: string, model: string) {
-	return `${provider}::${model}`;
-}
-
-export function parseValue(value: string | null) {
-	if (!value) return null;
-	const [provider, model] = value.split("::");
-	if (!provider || !model) return null;
-	return { provider, model };
-}
-
 export function SlotPicker({
 	label,
 	providers,
@@ -60,8 +50,6 @@ export function SlotPicker({
 	onEmbedChange,
 	onVisionChange,
 }: SlotPickerProps) {
-	const uniqueModels = (models: string[]) => Array.from(new Set(models));
-
 	const renderSelect = (
 		role: Role,
 		title: string,

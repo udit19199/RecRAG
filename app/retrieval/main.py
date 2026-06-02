@@ -38,7 +38,7 @@ from runtime import RetrievalRuntime, RuntimeUnavailableError
 from utils.eval_jobs import create_eval_job, read_eval_jobs, update_eval_job
 from validation import validate_query
 
-from adapters import create_embedder, create_llm
+from adapters import create_embedder, create_llm, create_llm_from_config
 from pipelines.base import create_vector_store_from_config
 from pipelines.retrieval import RetrievalPipeline
 
@@ -162,13 +162,8 @@ async def query(
 
             # Create LLM
             if request.llm:
-                llm_kwargs = {
-                    k: v
-                    for k, v in config.get("llm", {}).items()
-                    if k not in ("provider", "model")
-                }
-                llm_to_use = create_llm(
-                    request.llm.provider, model=request.llm.model, **llm_kwargs
+                llm_to_use = create_llm_from_config(
+                    config, request.llm.provider, request.llm.model
                 )
             else:
                 async with runtime.acquire() as active_pipeline:
@@ -285,9 +280,12 @@ async def get_config(
 @app.get("/providers", response_model=ProvidersResponse)
 async def get_providers(_: None = Depends(verify_api_key)) -> ProvidersResponse:
     """Return available providers and their models, fetched live where possible."""
-    ollama_embed_url = "http://localhost:11434"
-    ollama_llm_url = "http://localhost:11434"
-    ollama_vision_url = "http://localhost:11434"
+    # Priority: explicit config base_url > OLLAMA_HOST env var > localhost default.
+    # This matches the resolution order in OllamaLLM and OllamaEmbedder.
+    env_host = os.environ.get("OLLAMA_HOST", "").strip() or "http://localhost:11434"
+    ollama_embed_url = env_host
+    ollama_llm_url = env_host
+    ollama_vision_url = env_host
 
     try:
         config_path = find_config_path()
@@ -296,25 +294,19 @@ async def get_providers(_: None = Depends(verify_api_key)) -> ProvidersResponse:
         llm_cfg = config.get("llm", {})
         vision_cfg = config.get("vision", {})
 
-        # Use the configured base_url from each section if available
+        # Per-section base_url overrides the env fallback
         if embed_cfg.get("base_url"):
             ollama_embed_url = embed_cfg["base_url"]
         if llm_cfg.get("base_url"):
             ollama_llm_url = llm_cfg["base_url"]
         if vision_cfg.get("base_url"):
             ollama_vision_url = vision_cfg["base_url"]
-
-        # Also fallback to a common OLLAMA_HOST env var if set
-        env_host = os.environ.get("OLLAMA_HOST", "").strip()
-        if env_host:
-            ollama_embed_url = env_host
-            ollama_llm_url = env_host
-            ollama_vision_url = env_host
     except Exception:
         pass
 
     ollama_embed_models, ollama_llm_models = _fetch_ollama_models(ollama_embed_url)
     if ollama_embed_url != ollama_llm_url:
+        # Separate Ollama hosts configured for embed vs LLM — merge both model lists
         _, extra_llm = _fetch_ollama_models(ollama_llm_url)
         ollama_llm_models = sorted(set(ollama_llm_models + extra_llm))
     ollama_available = bool(ollama_embed_models or ollama_llm_models)

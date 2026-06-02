@@ -38,7 +38,7 @@ def run_batch_evaluation(
     questions: list[str] = []
     answers: list[str] = []
     contexts_list: list[list[str]] = []
-    ground_truths: list[str] = []
+    ground_truths: list[str | None] = []
 
     for item in eval_data:
         question = item.get("question")
@@ -53,8 +53,7 @@ def run_batch_evaluation(
         questions.append(question)
         answers.append(result["response"])
         contexts_list.append([doc.text for doc in result["context"]])
-        if ground_truth:
-            ground_truths.append(ground_truth)
+        ground_truths.append(ground_truth or None)
 
     if not questions:
         logger.warning("No valid questions found in dataset.")
@@ -65,7 +64,7 @@ def run_batch_evaluation(
         questions,
         contexts_list,
         answers,
-        ground_truths=ground_truths if ground_truths else None,
+        ground_truths=ground_truths,
     )
 
     output_path = get_storage_dir(config, config_path) / "evaluation_results.json"
@@ -85,8 +84,7 @@ def run_batch_evaluation(
     final_output = {
         "summary": summary,
         "detailed_results": [
-            {"question": q, **s}
-            for q, s in zip(questions, scores_list)
+            {"question": q, **s} for q, s in zip(questions, scores_list)
         ],
     }
 

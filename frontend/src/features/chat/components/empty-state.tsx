@@ -23,7 +23,7 @@ export function EmptyState({
 			<Empty className="max-w-md w-full rounded-2xl border border-dashed bg-muted/20 py-12">
 				<EmptyHeader>
 					<EmptyMedia variant="icon">
-						<Cloud className="h-6 w-6 text-muted-foreground" />
+						<Cloud className="size-6 text-muted-foreground" />
 					</EmptyMedia>
 					<EmptyTitle>
 						{isReady ? "Library Empty" : "Pipeline Loading…"}

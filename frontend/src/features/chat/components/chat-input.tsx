@@ -54,13 +54,13 @@ export function ChatInput({
 							type="button"
 							variant="ghost"
 							size="icon"
-							className="h-9 w-9 shrink-0 text-muted-foreground hover:text-foreground"
+							className="size-9 shrink-0 text-muted-foreground hover:text-foreground"
 							disabled={isUploading}
 							title="Upload PDFs"
 						>
 							<svg
 								aria-hidden="true"
-								className="h-5 w-5"
+								className="size-5"
 								fill="none"
 								viewBox="0 0 24 24"
 								strokeWidth={2}
@@ -79,6 +79,7 @@ export function ChatInput({
 					value={value}
 					onChange={(event) => setValue(event.target.value)}
 					onKeyDown={handleKeyDown}
+					aria-label="Ask a question about your documents"
 					placeholder={
 						disabled
 							? disabledReason || "Chat disabled"
@@ -101,7 +102,7 @@ export function ChatInput({
 					{isLoading ? (
 						<svg
 							aria-hidden="true"
-							className="h-4 w-4 animate-spin"
+							className="size-4 animate-spin"
 							viewBox="0 0 24 24"
 							fill="none"
 						>
@@ -122,7 +123,7 @@ export function ChatInput({
 					) : (
 						<svg
 							aria-hidden="true"
-							className="h-4 w-4"
+							className="size-4"
 							fill="none"
 							viewBox="0 0 24 24"
 							strokeWidth={2}

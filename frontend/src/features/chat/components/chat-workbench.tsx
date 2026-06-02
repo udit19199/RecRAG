@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ChatInput } from "@/features/chat/components/chat-input";
 import { ChatMessageView } from "@/features/chat/components/chat-message";
 import { EmptyState } from "@/features/chat/components/empty-state";
@@ -42,7 +42,7 @@ export function ChatWorkbench() {
 		(hasDocuments || ingestionStatus?.status === "complete");
 
 	// Build extraction options based on vision config
-	const getExtractionOptions = useCallback(():
+	const getExtractionOptions = ():
 		| ExtractionOptions
 		| undefined => {
 		if (!visionConfig) {
@@ -53,16 +53,13 @@ export function ChatWorkbench() {
 			vision_provider: visionConfig.provider,
 			vision_model: visionConfig.model,
 		};
-	}, [visionConfig]);
+	};
 
 	// Wrap handleUpload to include extraction options
-	const handleUploadWithVision = useCallback(
-		async (files: File[]) => {
-			const options = getExtractionOptions();
-			await handleUpload(files, options);
-		},
-		[handleUpload, getExtractionOptions],
-	);
+	const handleUploadWithVision = async (files: File[]) => {
+		const options = getExtractionOptions();
+		await handleUpload(files, options);
+	};
 
 	return (
 		<div className="flex h-full min-h-0 w-full flex-col overflow-hidden bg-muted/30">
@@ -81,7 +78,7 @@ export function ChatWorkbench() {
 									/>
 									{ingestionStatus?.status === "complete" && !isIngesting ? (
 										<div className="mt-2 rounded-lg border border-emerald-500/20 bg-emerald-500/5 px-3 py-2 text-xs text-emerald-600 dark:text-emerald-400">
-											Processing complete — you can now ask questions.
+											Processing complete, you can now ask questions.
 										</div>
 									) : null}
 									{uploadFeedback?.type === "error" ? (

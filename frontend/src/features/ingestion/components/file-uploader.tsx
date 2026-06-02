@@ -57,7 +57,7 @@ export default function FileUploader({
 
 	const handleDragLeave = () => setIsDragging(false);
 
-	const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+	const onFileInputChange = (event: ChangeEvent<HTMLInputElement>) => {
 		handleFiles(event.target.files);
 	};
 
@@ -87,7 +87,8 @@ export default function FileUploader({
 						type="file"
 						accept=".pdf"
 						multiple
-						onChange={handleChange}
+						onChange={onFileInputChange}
+						aria-label="Select PDF files to upload"
 						className="hidden"
 						disabled={disabled || isUploading}
 					/>
@@ -95,7 +96,7 @@ export default function FileUploader({
 					<div className="flex flex-col items-center gap-2">
 						<svg
 							aria-hidden="true"
-							className="h-7 w-7 text-muted-foreground"
+							className="size-7 text-muted-foreground"
 							viewBox="0 0 24 24"
 							fill="none"
 							stroke="currentColor"
@@ -146,7 +147,7 @@ export default function FileUploader({
 								<div className="flex items-center gap-3 overflow-hidden">
 									<svg
 										aria-hidden="true"
-										className="h-5 w-5 flex-shrink-0 text-muted-foreground"
+										className="size-5 flex-shrink-0 text-muted-foreground"
 										viewBox="0 0 24 24"
 										fill="currentColor"
 									>
@@ -163,12 +164,13 @@ export default function FileUploader({
 								<button
 									type="button"
 									onClick={() => removeFile(index)}
+									aria-label={`Remove ${file.name}`}
 									className="flex-shrink-0 rounded p-1 text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-ring/50"
 									disabled={isUploading}
 								>
 									<svg
 										aria-hidden="true"
-										className="h-4 w-4"
+										className="size-4"
 										viewBox="0 0 20 20"
 										fill="currentColor"
 									>
@@ -196,7 +198,7 @@ export default function FileUploader({
 						<span className="flex items-center gap-2">
 							<svg
 								aria-hidden="true"
-								className="h-4 w-4 animate-spin"
+								className="size-4 animate-spin"
 								viewBox="0 0 24 24"
 								fill="none"
 							>
@@ -214,7 +216,7 @@ export default function FileUploader({
 									d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
 								/>
 							</svg>
-							Uploading...
+							Uploading…
 						</span>
 					) : (
 						`Replace corpus with ${selectedFiles.length} file${selectedFiles.length > 1 ? "s" : ""}`

@@ -18,8 +18,8 @@ export function ChatMessageView({ message }: { message: ChatMessage }) {
 
 	return (
 		<div className="flex items-start gap-3">
-			<div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border bg-background text-muted-foreground">
-				<Robot className="h-4 w-4" />
+			<div className="flex size-8 shrink-0 items-center justify-center rounded-full border bg-background text-muted-foreground">
+				<Robot className="size-4" />
 			</div>
 			<div className="min-w-0 flex-1 space-y-3">
 				{message.error ? (

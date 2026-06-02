@@ -47,7 +47,7 @@ export function SourceContext({
 							<div className="flex min-w-0 items-center gap-2.5">
 								<Badge
 									variant="outline"
-									className="h-5 w-5 rounded-full p-0 text-[10px]"
+									className="size-5 rounded-full p-0 text-[10px]"
 								>
 									{index + 1}
 								</Badge>
@@ -68,7 +68,7 @@ export function SourceContext({
 								</Tooltip>
 								<svg
 									aria-hidden="true"
-									className={`h-3.5 w-3.5 text-muted-foreground transition-transform ${openIndexes.has(index) ? "rotate-180" : ""}`}
+									className={`size-3.5 text-muted-foreground transition-transform ${openIndexes.has(index) ? "rotate-180" : ""}`}
 									viewBox="0 0 20 20"
 									fill="currentColor"
 								>

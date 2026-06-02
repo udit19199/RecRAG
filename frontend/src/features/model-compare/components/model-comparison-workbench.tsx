@@ -14,16 +14,18 @@ import { ChatInput } from "@/features/chat/components/chat-input";
 import { ChatMessageView } from "@/features/chat/components/chat-message";
 import { TypingIndicator } from "@/features/chat/components/typing-indicator";
 import type { ChatMessage } from "@/features/chat/types";
+import { makeValue, parseValue } from "@/features/model-compare/lib";
 import {
 	checkIndexStatus,
 	getConfig,
 	getIngestionStatus,
 	getProviders,
 	type ProvidersResponse,
+	type QueryResponse,
 	queryRAG,
 	triggerTargetedIngest,
 } from "@/lib/api";
-import { makeValue, parseValue, SlotPicker } from "./slot-picker";
+import { SlotPicker } from "./slot-picker";
 
 type SlotState = {
 	vision: string | null;
@@ -35,8 +37,8 @@ type SlotState = {
 
 export function ModelComparisonWorkbench() {
 	const [providers, setProviders] = useState<ProvidersResponse | null>(null);
-	const [isLoading, setIsLoading] = useState(true);
 	const [error, setError] = useState<string | null>(null);
+	const isLoading = !providers && !error;
 
 	const [slotA, setSlotA] = useState<SlotState>({
 		vision: null,
@@ -63,12 +65,11 @@ export function ModelComparisonWorkbench() {
 	const messageIdRef = useRef(0);
 	const chatBottomRef = useRef<HTMLDivElement>(null);
 
-	const nextId = useCallback(() => {
+	const nextId = () => {
 		return messageIdRef.current++;
-	}, []);
+	};
 
 	const loadData = useCallback(async () => {
-		setIsLoading(true);
 		setError(null);
 
 		try {
@@ -94,15 +95,17 @@ export function ModelComparisonWorkbench() {
 					: [],
 			);
 
-			const defaults: string[] = [];
+			const defaultsSet = new Set<string>();
 			if (keys.includes(defaultLlm)) {
-				defaults.push(defaultLlm);
+				defaultsSet.add(defaultLlm);
 			}
 
 			for (const key of keys) {
-				if (!defaults.includes(key)) defaults.push(key);
-				if (defaults.length === 2) break;
+				if (!defaultsSet.has(key)) defaultsSet.add(key);
+				if (defaultsSet.size === 2) break;
 			}
+
+			const defaults = [...defaultsSet];
 
 			setSlotA((prev) => ({
 				...prev,
@@ -118,8 +121,6 @@ export function ModelComparisonWorkbench() {
 			setError(
 				err instanceof Error ? err.message : "Unable to load model inventory",
 			);
-		} finally {
-			setIsLoading(false);
 		}
 	}, []);
 
@@ -218,109 +219,84 @@ export function ModelComparisonWorkbench() {
 		}
 	};
 
-	const handleQuery = useCallback(
-		async (query: string) => {
-			if (!query.trim() || isQuerying || !slotA.llm || !slotB.llm) return;
+	const handleQuery = async (query: string) => {
+		if (!query.trim() || isQuerying || !slotA.llm || !slotB.llm) return;
 
-			const llmA = parseValue(slotA.llm);
-			const llmB = parseValue(slotB.llm);
-			const embedA = parseValue(slotA.embedding);
-			const embedB = parseValue(slotB.embedding);
-			const visionA = parseValue(slotA.vision);
-			const visionB = parseValue(slotB.vision);
+		const llmA = parseValue(slotA.llm);
+		const llmB = parseValue(slotB.llm);
+		const embedA = parseValue(slotA.embedding);
+		const embedB = parseValue(slotB.embedding);
+		const visionA = parseValue(slotA.vision);
+		const visionB = parseValue(slotB.vision);
 
-			if (!llmA || !llmB || !embedA || !embedB) return;
+		if (!llmA || !llmB || !embedA || !embedB) return;
 
-			const userMessageA: ChatMessage = {
-				id: nextId(),
-				role: "user",
-				content: query,
-			};
-			const userMessageB: ChatMessage = {
-				id: nextId(),
-				role: "user",
-				content: query,
-			};
+		const userMessageA: ChatMessage = {
+			id: nextId(),
+			role: "user",
+			content: query,
+		};
+		const userMessageB: ChatMessage = {
+			id: nextId(),
+			role: "user",
+			content: query,
+		};
 
-			setMessagesA((prev) => [...prev, userMessageA]);
-			setMessagesB((prev) => [...prev, userMessageB]);
-			setIsQuerying(true);
+		setMessagesA((prev) => [...prev, userMessageA]);
+		setMessagesB((prev) => [...prev, userMessageB]);
+		setIsQuerying(true);
 
-			try {
-				const [resultA, resultB] = await Promise.allSettled([
-					queryRAG({
-						query,
-						llm: llmA,
-						embedding: embedA,
-						vision: visionA
-							? { provider: visionA.provider, model: visionA.model }
-							: undefined,
-					}),
-					queryRAG({
-						query,
-						llm: llmB,
-						embedding: embedB,
-						vision: visionB
-							? { provider: visionB.provider, model: visionB.model }
-							: undefined,
-					}),
-				]);
-
-				if (resultA.status === "fulfilled") {
-					setMessagesA((prev) => [
-						...prev,
-						{
+		const handleSlotResult = (
+			result: PromiseSettledResult<QueryResponse>,
+			setMessages: React.Dispatch<React.SetStateAction<ChatMessage[]>>,
+		) => {
+			setMessages((prev) => [
+				...prev,
+				result.status === "fulfilled"
+					? {
 							id: nextId(),
-							role: "assistant",
-							content: resultA.value.response,
-							context: resultA.value.context,
-						},
-					]);
-				} else {
-					setMessagesA((prev) => [
-						...prev,
-						{
+							role: "assistant" as const,
+							content: result.value.response,
+							context: result.value.context,
+						}
+					: {
 							id: nextId(),
-							role: "assistant",
+							role: "assistant" as const,
 							content: "",
 							error:
-								resultA.reason instanceof Error
-									? resultA.reason.message
+								result.reason instanceof Error
+									? result.reason.message
 									: "Query failed",
 						},
-					]);
-				}
+			]);
+		};
 
-				if (resultB.status === "fulfilled") {
-					setMessagesB((prev) => [
-						...prev,
-						{
-							id: nextId(),
-							role: "assistant",
-							content: resultB.value.response,
-							context: resultB.value.context,
-						},
-					]);
-				} else {
-					setMessagesB((prev) => [
-						...prev,
-						{
-							id: nextId(),
-							role: "assistant",
-							content: "",
-							error:
-								resultB.reason instanceof Error
-									? resultB.reason.message
-									: "Query failed",
-						},
-					]);
-				}
-			} finally {
-				setIsQuerying(false);
-			}
-		},
-		[isQuerying, slotA, slotB, nextId],
-	);
+		try {
+			const [resultA, resultB] = await Promise.allSettled([
+				queryRAG({
+					query,
+					llm: llmA,
+					embedding: embedA,
+					vision: visionA
+						? { provider: visionA.provider, model: visionA.model }
+						: undefined,
+				}),
+				queryRAG({
+					query,
+					llm: llmB,
+					embedding: embedB,
+					vision: visionB
+						? { provider: visionB.provider, model: visionB.model }
+						: undefined,
+				}),
+			]);
+
+			handleSlotResult(resultA, setMessagesA);
+			handleSlotResult(resultB, setMessagesB);
+		} finally {
+			setIsQuerying(false);
+		}
+	};
 
 	const renderSlotStatus = (slotKey: "A" | "B", state: SlotState) => {
 		if (state.isChecking || !state.embedding || !state.llm) {
@@ -330,8 +306,8 @@ export function ModelComparisonWorkbench() {
 		if (isIngesting && ingestingSlot === slotKey) {
 			return (
 				<div className="flex items-center gap-2 text-sm text-muted-foreground mt-4 px-4 py-3 rounded-lg border bg-muted/50">
-					<Loader2 className="h-4 w-4 animate-spin" />
-					Processing documents...
+					<Loader2 className="size-4 animate-spin" />
+					Processing documents…
 				</div>
 			);
 		}
@@ -482,7 +458,7 @@ export function ModelComparisonWorkbench() {
 								disabled={!canChat || isQuerying}
 								disabledReason={
 									isIngesting
-										? "Document processing in progress..."
+										? "Document processing in progress…"
 										: !canChat
 											? "Make sure both slots have documents processed."
 											: undefined

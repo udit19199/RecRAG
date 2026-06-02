@@ -20,7 +20,7 @@ export default function IngestionStatusDisplay({
 				<div className="flex items-center gap-3 text-muted-foreground">
 					<svg
 						aria-hidden="true"
-						className="h-4 w-4 animate-spin"
+						className="size-4 animate-spin"
 						viewBox="0 0 24 24"
 						fill="none"
 					>
@@ -38,7 +38,7 @@ export default function IngestionStatusDisplay({
 							d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
 						/>
 					</svg>
-					<span className="text-sm font-medium">Loading status...</span>
+					<span className="text-sm font-medium">Loading status…</span>
 				</div>
 			</div>
 		);
@@ -50,7 +50,7 @@ export default function IngestionStatusDisplay({
 				<div className="flex items-start gap-3">
 					<svg
 						aria-hidden="true"
-						className="mt-0.5 h-5 w-5 shrink-0 text-destructive"
+						className="mt-0.5 size-5 shrink-0 text-destructive"
 						viewBox="0 0 20 20"
 						fill="currentColor"
 					>
@@ -84,7 +84,7 @@ export default function IngestionStatusDisplay({
 			icon: (
 				<svg
 					aria-hidden="true"
-					className="h-5 w-5"
+					className="size-5"
 					viewBox="0 0 20 20"
 					fill="currentColor"
 				>
@@ -103,7 +103,7 @@ export default function IngestionStatusDisplay({
 			icon: (
 				<svg
 					aria-hidden="true"
-					className="h-5 w-5 animate-spin"
+					className="size-5 animate-spin"
 					viewBox="0 0 24 24"
 					fill="none"
 				>
@@ -125,12 +125,12 @@ export default function IngestionStatusDisplay({
 		},
 		complete: {
 			label: "Complete",
-			description: `Successfully processed ${status.files_processed || 0} files. Processing complete — you can now ask questions.`,
+			description: `Successfully processed ${status.files_processed || 0} files. Processing complete, you can now ask questions.`,
 			color: "text-emerald-400",
 			icon: (
 				<svg
 					aria-hidden="true"
-					className="h-5 w-5"
+					className="size-5"
 					viewBox="0 0 20 20"
 					fill="currentColor"
 				>
@@ -149,7 +149,7 @@ export default function IngestionStatusDisplay({
 			icon: (
 				<svg
 					aria-hidden="true"
-					className="h-5 w-5"
+					className="size-5"
 					viewBox="0 0 20 20"
 					fill="currentColor"
 				>
@@ -192,9 +192,9 @@ export default function IngestionStatusDisplay({
 					{status.extraction_mode && status.status !== "idle" ? (
 						<div className="mt-2 flex items-center gap-1.5">
 							{status.extraction_mode === "vision_assisted" ? (
-								<Eye className="h-3.5 w-3.5 text-muted-foreground" />
+								<Eye className="size-3.5 text-muted-foreground" />
 							) : (
-								<TextT className="h-3.5 w-3.5 text-muted-foreground" />
+								<TextT className="size-3.5 text-muted-foreground" />
 							)}
 							<span className="text-xs text-muted-foreground">
 								{status.extraction_mode === "vision_assisted"

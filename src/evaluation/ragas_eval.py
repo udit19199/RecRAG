@@ -12,7 +12,7 @@ import logging
 import re
 from typing import Any
 
-from adapters import BaseLLM, create_llm
+from adapters import BaseLLM, create_llm_from_config
 from config import find_config_path, load_config
 
 logger = logging.getLogger(__name__)
@@ -20,40 +20,40 @@ logger = logging.getLogger(__name__)
 # ── Prompts ───────────────────────────────────────────────────────────────────
 
 FAITHFULNESS_EXTRACT_PROMPT = (
-    'Extract the factual claims from the following answer. '
+    "Extract the factual claims from the following answer. "
     'Return them as a JSON array of strings, e.g. ["claim 1", "claim 2"]. '
-    'Include only claims that state facts, not opinions or instructions.\n\n'
-    'Answer: {answer}'
+    "Include only claims that state facts, not opinions or instructions.\n\n"
+    "Answer: {answer}"
 )
 
 FAITHFULNESS_VERIFY_PROMPT = (
-    'Given the following context, determine if each claim is supported.\n'
-    'Respond with a JSON object mapping each claim to a boolean: true if supported, false if not.\n\n'
-    'Context: {context}\n\n'
-    'Claims: {claims}'
+    "Given the following context, determine if each claim is supported.\n"
+    "Respond with a JSON object mapping each claim to a boolean: true if supported, false if not.\n\n"
+    "Context: {context}\n\n"
+    "Claims: {claims}"
 )
 
 ANSWER_RELEVANCY_PROMPT = (
-    'Given the question and the answer below, rate how well the answer addresses the question.\n'
-    'Respond with only a number between 0.0 and 1.0, where 0 means completely irrelevant '
-    'and 1 means perfectly relevant.\n\n'
-    'Question: {question}\n\nAnswer: {answer}'
+    "Given the question and the answer below, rate how well the answer addresses the question.\n"
+    "Respond with only a number between 0.0 and 1.0, where 0 means completely irrelevant "
+    "and 1 means perfectly relevant.\n\n"
+    "Question: {question}\n\nAnswer: {answer}"
 )
 
 CONTEXT_PRECISION_PROMPT = (
-    'Given the question and a retrieved context chunk, rate how useful this context chunk is '
-    'for answering the question.\n'
-    'Respond with only a number between 0.0 and 1.0, where 0 means not useful at all '
-    'and 1 means highly useful.\n\n'
-    'Question: {question}\n\nContext: {context}'
+    "Given the question and a retrieved context chunk, rate how useful this context chunk is "
+    "for answering the question.\n"
+    "Respond with only a number between 0.0 and 1.0, where 0 means not useful at all "
+    "and 1 means highly useful.\n\n"
+    "Question: {question}\n\nContext: {context}"
 )
 
 CONTEXT_RECALL_PROMPT = (
-    'Given the ground truth answer and the retrieved context below, '
-    'rate what fraction of the information in the ground truth is covered by the context.\n'
-    'Respond with only a number between 0.0 and 1.0, where 0 means none of the ground truth '
-    'is covered and 1 means all of it is covered.\n\n'
-    'Ground truth: {ground_truth}\n\nContext: {context}'
+    "Given the ground truth answer and the retrieved context below, "
+    "rate what fraction of the information in the ground truth is covered by the context.\n"
+    "Respond with only a number between 0.0 and 1.0, where 0 means none of the ground truth "
+    "is covered and 1 means all of it is covered.\n\n"
+    "Ground truth: {ground_truth}\n\nContext: {context}"
 )
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
@@ -191,14 +191,10 @@ class RagasEvaluator:
 
         # Rank-aware: weight by position (earlier = higher weight)
         total_weight = sum(1.0 / (i + 1) for i in range(len(scores)))
-        weighted = sum(
-            s * (1.0 / (i + 1)) for i, s in enumerate(scores)
-        )
+        weighted = sum(s * (1.0 / (i + 1)) for i, s in enumerate(scores))
         return weighted / max(total_weight, 1.0)
 
-    def _context_recall(
-        self, contexts: list[str], ground_truth: str
-    ) -> float:
+    def _context_recall(self, contexts: list[str], ground_truth: str) -> float:
         """How much of the ground truth is covered by the context."""
         context_joined = "\n\n".join(contexts)
         result = self._call_llm(
@@ -228,37 +224,27 @@ class RagasEvaluator:
         Returns:
             Dictionary of metric names to scores (0.0–1.0).
         """
+        if not ground_truth:
+            logger.warning("No ground truth provided. Skipping context_recall.")
+
+        metrics: list[tuple[str, Any]] = [
+            ("faithfulness", lambda: self._faithfulness(contexts, response)),
+            ("answer_relevancy", lambda: self._answer_relevancy(query, response)),
+            ("context_precision", lambda: self._context_precision(query, contexts)),
+        ]
+        if ground_truth:
+            metrics.append(
+                ("context_recall", lambda: self._context_recall(contexts, ground_truth))
+            )
+
         scores: dict[str, float] = {}
         errors: list[str] = []
-
-        try:
-            scores["faithfulness"] = self._faithfulness(contexts, response)
-        except Exception as e:
-            logger.error("faithfulness failed: %s", e)
-            errors.append(f"faithfulness: {e}")
-
-        try:
-            scores["answer_relevancy"] = self._answer_relevancy(query, response)
-        except Exception as e:
-            logger.error("answer_relevancy failed: %s", e)
-            errors.append(f"answer_relevancy: {e}")
-
-        try:
-            scores["context_precision"] = self._context_precision(query, contexts)
-        except Exception as e:
-            logger.error("context_precision failed: %s", e)
-            errors.append(f"context_precision: {e}")
-
-        if ground_truth:
+        for name, compute in metrics:
             try:
-                scores["context_recall"] = self._context_recall(contexts, ground_truth)
+                scores[name] = compute()
             except Exception as e:
-                logger.error("context_recall failed: %s", e)
-                errors.append(f"context_recall: {e}")
-        else:
-            logger.warning(
-                "No ground truth provided. Skipping context_recall."
-            )
+                logger.error("%s failed: %s", name, e)
+                errors.append(f"{name}: {e}")
 
         if errors:
             logger.warning(
@@ -307,25 +293,10 @@ def get_evaluator(
     Args:
         provider: Override LLM provider (e.g. "ollama", "openai", "gemini").
         model: Override LLM model name.
-        **kwargs: Additional arguments passed to the LLM adapter constructor.
+        **kwargs: Additional kwargs forwarded to the adapter (highest priority).
 
     Returns:
         A configured RagasEvaluator instance.
     """
-    config_path = find_config_path()
-    config = load_config(config_path)
-
-    actual_provider = provider or config.get("llm", {}).get("provider", "openai")
-    actual_model = model or config.get("llm", {}).get("model", "gpt-4o-mini")
-
-    # Pass extra config values (timeout, base_url, etc.) to the adapter
-    llm_config = config.get("llm", {})
-    extra_kwargs = {
-        k: v
-        for k, v in llm_config.items()
-        if k not in ("provider", "model") and not k.startswith("_")
-    }
-    extra_kwargs.update(kwargs)
-
-    llm = create_llm(actual_provider, model=actual_model, **extra_kwargs)
-    return RagasEvaluator(llm=llm)
+    config = load_config(find_config_path())
+    return RagasEvaluator(llm=create_llm_from_config(config, provider, model, **kwargs))

@@ -48,8 +48,8 @@ function InputGroupAddon({
 	...props
 }: React.ComponentProps<"div"> & VariantProps<typeof inputGroupAddonVariants>) {
 	return (
-		// biome-ignore lint/a11y/noStaticElementInteractions: layout wrapper
-		// biome-ignore lint/a11y/useKeyWithClickEvents: layout wrapper
+		// biome-ignore lint/a11y/noStaticElementInteractions: click-to-focus layout wrapper for input group
+		// biome-ignore lint/a11y/useKeyWithClickEvents: onKeyDown is handled below
 		<div
 			data-slot="input-group-addon"
 			data-align={align}
@@ -59,6 +59,15 @@ function InputGroupAddon({
 					return;
 				}
 				event.currentTarget.parentElement?.querySelector("input")?.focus();
+			}}
+			onKeyDown={(event) => {
+				if (event.key === "Enter" || event.key === " ") {
+					event.preventDefault();
+					if ((event.target as HTMLElement).closest("button")) {
+						return;
+					}
+					event.currentTarget.parentElement?.querySelector("input")?.focus();
+				}
 			}}
 			{...props}
 		/>

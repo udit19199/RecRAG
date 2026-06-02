@@ -30,9 +30,9 @@ export function useChatSession() {
 	const [isQuerying, setIsQuerying] = useState(false);
 	const messageIdRef = useRef(0);
 
-	const nextId = useCallback(() => {
+	const nextId = () => {
 		return messageIdRef.current++;
-	}, []);
+	};
 
 	const fetchFiles = useCallback(async () => {
 		try {
@@ -81,121 +81,113 @@ export function useChatSession() {
 		return () => clearInterval(interval);
 	}, [fetchIngestionStatus, ingestionStatus?.status]);
 
-	const handleReindexStarted = useCallback(() => {
+	const handleReindexStarted = () => {
 		fetchIngestionStatus();
-	}, [fetchIngestionStatus]);
+	};
 
-	const handleQuery = useCallback(
-		async (query: string) => {
-			if (!query.trim() || isQuerying) return;
+	const handleQuery = async (query: string) => {
+		if (!query.trim() || isQuerying) return;
 
+		setMessages((prev) => [
+			...prev,
+			{ id: nextId(), role: "user", content: query },
+		]);
+		setIsQuerying(true);
+
+		try {
+			const result = await queryRAG({ query });
+			const assistantId = nextId();
 			setMessages((prev) => [
 				...prev,
-				{ id: nextId(), role: "user", content: query },
+				{
+					id: assistantId,
+					role: "assistant",
+					content: result.response,
+					context: result.context,
+					...(result.eval_job_id
+						? { eval_job_id: result.eval_job_id, eval_status: "pending" }
+						: {}),
+				},
 			]);
-			setIsQuerying(true);
 
-			try {
-				const result = await queryRAG({ query });
-				const assistantId = nextId();
-				setMessages((prev) => [
-					...prev,
-					{
-						id: assistantId,
-						role: "assistant",
-						content: result.response,
-						context: result.context,
-						...(result.eval_job_id
-							? { eval_job_id: result.eval_job_id, eval_status: "pending" }
-							: {}),
-					},
-				]);
-
-				if (result.eval_job_id) {
-					const jobId = result.eval_job_id;
-					void (async () => {
-						try {
-							for (;;) {
-								const status = await getEvalStatus(jobId);
-								if (status.status === "complete") {
-									setMessages((prev) =>
-										prev.map((message) =>
-											message.role === "assistant" &&
-											message.eval_job_id === jobId
-												? {
-														...message,
-														...(status.scores ? { eval: status.scores } : {}),
-														eval_status: "complete",
-													}
-												: message,
-										),
-									);
-									break;
-								}
-
-								if (status.status === "error") {
-									setMessages((prev) =>
-										prev.map((message) =>
-											message.role === "assistant" &&
-											message.eval_job_id === jobId
-												? { ...message, eval_status: "error" }
-												: message,
-										),
-									);
-									break;
-								}
-
-								await new Promise((resolve) => setTimeout(resolve, 1500));
+			if (result.eval_job_id) {
+				const jobId = result.eval_job_id;
+				void (async () => {
+					try {
+						for (;;) {
+							const status = await getEvalStatus(jobId);
+							if (status.status === "complete") {
+								setMessages((prev) =>
+									prev.map((message) =>
+										message.role === "assistant" &&
+										message.eval_job_id === jobId
+											? {
+													...message,
+													...(status.scores ? { eval: status.scores } : {}),
+													eval_status: "complete",
+												}
+											: message,
+									),
+								);
+								break;
 							}
-						} catch {
-							// Ignore polling errors.
+
+							if (status.status === "error") {
+								setMessages((prev) =>
+									prev.map((message) =>
+										message.role === "assistant" &&
+										message.eval_job_id === jobId
+											? { ...message, eval_status: "error" }
+											: message,
+									),
+								);
+								break;
+							}
+
+							await new Promise((resolve) => setTimeout(resolve, 1500));
 						}
-					})();
-				}
-			} catch (err) {
-				setMessages((prev) => [
-					...prev,
-					{
-						id: nextId(),
-						role: "assistant",
-						content: "",
-						error:
-							err instanceof Error
-								? err.message
-								: "An unexpected error occurred",
-					},
-				]);
-			} finally {
-				setIsQuerying(false);
+					} catch {
+						// Ignore polling errors.
+					}
+				})();
 			}
-		},
-		[isQuerying, nextId],
-	);
+		} catch (err) {
+			setMessages((prev) => [
+				...prev,
+				{
+					id: nextId(),
+					role: "assistant",
+					content: "",
+					error:
+						err instanceof Error ? err.message : "An unexpected error occurred",
+				},
+			]);
+		} finally {
+			setIsQuerying(false);
+		}
+	};
 
-	const handleUpload = useCallback(
-		async (files: File[], options?: ExtractionOptions) => {
-			setIsUploading(true);
-			setUploadFeedback(null);
+	const handleUpload = async (files: File[], options?: ExtractionOptions) => {
+		setIsUploading(true);
+		setUploadFeedback(null);
 
-			try {
-				await uploadPDFs(files, options);
-				setUploadFeedback({
-					type: "success",
-					message: `${files.length} file${files.length > 1 ? "s" : ""} uploaded. Existing corpus replaced and processing started.`,
-				});
-				const finalStatus = await waitForIngestionComplete();
-				setIngestionStatus(finalStatus);
-			} catch (err) {
-				setUploadFeedback({
-					type: "error",
-					message: err instanceof Error ? err.message : "Upload failed",
-				});
-			} finally {
-				setIsUploading(false);
-			}
-		},
-		[],
-	);
+		try {
+			await uploadPDFs(files, options);
+			setUploadFeedback({
+				type: "success",
+				message: `${files.length} file${files.length > 1 ? "s" : ""} uploaded. Existing corpus replaced and processing started.`,
+			});
+			const finalStatus = await waitForIngestionComplete();
+			setIngestionStatus(finalStatus);
+		} catch (err) {
+			setUploadFeedback({
+				type: "error",
+				message: err instanceof Error ? err.message : "Upload failed",
+			});
+		} finally {
+			setIsUploading(false);
+		}
+	};
 
 	return {
 		isReady,

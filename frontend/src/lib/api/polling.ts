@@ -27,7 +27,7 @@ export async function waitForIngestionComplete(
 	);
 }
 
-export async function waitForEvalComplete(
+async function waitForEvalComplete(
 	jobId: string,
 	intervalMs: number = 1500,
 	timeoutMs: number = 120000,

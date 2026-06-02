@@ -121,26 +121,26 @@ def _fetch_ollama_models(base_url: str) -> tuple[list[str], list[str]]:
     Uses heuristics to distinguish embedding vs LLM models.
 
     Returns:
-        (embed_models, llm_models)
+        (embed_models, llm_models). Both lists are empty when Ollama is
+        unreachable. Static fallback lists are used when Ollama is reachable
+        but reports no installed models (e.g. fresh install).
     """
     url = base_url.rstrip("/") + "/api/tags"
     data = _fetch_json(url, timeout=5.0)
     if data is None:
-        return OLLAMA_EMBEDDING_MODELS, OLLAMA_LLM_MODELS
+        # Ollama is not reachable — signal unavailability with empty lists so
+        # the UI does not present Ollama as an option.
+        return [], []
 
-    all_models = sorted(
-        {m["name"] for m in data.get("models", [])},
-    )
+    all_models = sorted({m["name"] for m in data.get("models", [])})
 
     if not all_models:
+        # Ollama is up but has no models installed — return well-known defaults
+        # so the user can see what to pull.
         return OLLAMA_EMBEDDING_MODELS, OLLAMA_LLM_MODELS
 
-    embed_models = _sorted_unique(
-        [m for m in all_models if _is_embedding_model(m)]
-    )
-    llm_models = _sorted_unique(
-        [m for m in all_models if not _is_embedding_model(m)]
-    )
+    embed_models = [m for m in all_models if _is_embedding_model(m)]
+    llm_models = [m for m in all_models if not _is_embedding_model(m)]
 
     # If embedding heuristic found nothing, return all models for both (conservative)
     if not embed_models:
@@ -225,24 +225,26 @@ def _fetch_ollama_vision_models(base_url: str) -> list[str]:
     """Fetch vision-capable models from Ollama.
 
     Returns:
-        List of available vision model names.
+        List of available vision model names. Empty list when Ollama is
+        unreachable. Static fallback used when Ollama is up but has no models.
     """
     url = base_url.rstrip("/") + "/api/tags"
     data = _fetch_json(url, timeout=5.0)
     if data is None:
-        return OLLAMA_VISION_MODELS
+        return []  # Ollama unreachable — don't show phantom models
 
     available = {m["name"] for m in data.get("models", [])}
     if not available:
-        return OLLAMA_VISION_MODELS
+        return OLLAMA_VISION_MODELS  # Fresh install — show known vision models
 
-    # Return intersection of known vision models and available models
+    # Intersection of known vision models plus keyword scan of installed models
     vision_models = [m for m in OLLAMA_VISION_MODELS if m in available]
-
-    # Also include any model with vision-related keywords
     for name in available:
         lower = name.lower()
-        if any(kw in lower for kw in ("vision", "llava", "minicpm", "moondream", "bakllava")):
+        if any(
+            kw in lower
+            for kw in ("vision", "llava", "minicpm", "moondream", "bakllava")
+        ):
             if name not in vision_models:
                 vision_models.append(name)
 
