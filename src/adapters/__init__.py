@@ -31,6 +31,7 @@ def create_llm(provider: str, **kwargs: Any) -> BaseLLM:
         raise ValueError(f"Unknown LLM provider: {provider}. Available: {available}")
     return _LLM_REGISTRY[provider](**kwargs)
 
+
 from adapters.embedding import OpenAIEmbedder, OllamaEmbedder  # noqa: E402
 from adapters.llm import OpenAILLM, OllamaLLM  # noqa: E402
 from adapters.nim import NIMEmbedder, NIMLLM  # noqa: E402

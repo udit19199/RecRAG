@@ -1,7 +1,10 @@
 """Vector store implementations for RecRAG."""
 
+import atexit
+import json
 import logging
 import os
+import socket
 import tempfile
 import urllib.parse
 from typing import Any
@@ -15,6 +18,13 @@ logger = logging.getLogger(__name__)
 # Track temp directories for cleanup on shutdown
 _DEV_TEMP_DIRS: list[str] = []
 
+# Shared dev-mode coordination: only one process starts Milvus Lite;
+# the other connects as a gRPC client via the saved port.
+_DEV_SHARED_DIR = os.path.join(tempfile.gettempdir(), "recrag_dev")
+_DEV_SHARED_DB = os.path.join(_DEV_SHARED_DIR, "milvus_lite.db")
+_DEV_PORT_FILE = os.path.join(_DEV_SHARED_DIR, "milvus_port.json")
+_DEV_LOCK_FILE = os.path.join(_DEV_SHARED_DIR, "startup.lock")
+
 # Increase gRPC keepalive interval to avoid "too_many_pings" errors from Milvus Lite
 os.environ.setdefault("GRPC_KEEPALIVE_TIME_MS", "120000")  # 120s (default 10s)
 os.environ.setdefault("GRPC_KEEPALIVE_TIMEOUT_MS", "20000")  # 20s
@@ -23,29 +33,130 @@ os.environ.setdefault("GRPC_HTTP2_MAX_PINGS_WITHOUT_DATA", "0")
 DEV_MODE = os.environ.get("RECRAG_DEV", "").lower() in ("1", "true", "yes")
 
 
+def _dev_shared_milvus_uri() -> str:
+    """Return a URI for a shared Milvus Lite instance in dev mode.
+
+    Only the first process starts the embedded gRPC server; subsequent
+    processes connect as gRPC clients via a saved port file.
+    """
+    os.makedirs(_DEV_SHARED_DIR, exist_ok=True)
+
+    # Acquire startup lock to prevent race condition between concurrent processes
+    lock_fd = None
+    try:
+        import fcntl
+
+        lock_fd = open(_DEV_LOCK_FILE, "w")
+        fcntl.flock(lock_fd, fcntl.LOCK_EX)
+    except (ImportError, OSError):
+        pass
+
+    try:
+        # Check if another process already started the server
+        try:
+            with open(_DEV_PORT_FILE) as fh:
+                info = json.load(fh)
+            port: int = info["port"]
+            pid: int = info["pid"]
+            # Verify the port is still reachable and the owning process is alive
+            if _is_port_open("127.0.0.1", port) and _is_process_alive(pid):
+                logger.info(
+                    "DEV MODE: Reusing shared Milvus Lite at 127.0.0.1:%d (pid %d)",
+                    port,
+                    pid,
+                )
+                return f"http://127.0.0.1:{port}"
+        except (FileNotFoundError, json.JSONDecodeError, KeyError):
+            pass
+
+        # No running server found — start one
+        from milvus_lite.server_manager import server_manager_instance
+
+        uri = server_manager_instance.start_and_get_uri(_DEV_SHARED_DB)
+        if uri is None:
+            raise RuntimeError("DEV MODE: Failed to start shared Milvus Lite server")
+
+        port = int(uri.rsplit(":", 1)[-1])
+        with open(_DEV_PORT_FILE, "w") as fh:
+            json.dump({"port": port, "pid": os.getpid()}, fh)
+
+        logger.info(
+            "DEV MODE: Started shared Milvus Lite at 127.0.0.1:%d (pid %d)",
+            port,
+            os.getpid(),
+        )
+        _DEV_TEMP_DIRS.append(_DEV_SHARED_DIR)
+
+        # Clean up port file on exit (only the owning process)
+        atexit.register(_cleanup_dev_port_file, port)
+
+        return uri
+    finally:
+        if lock_fd is not None:
+            try:
+                import fcntl
+
+                fcntl.flock(lock_fd, fcntl.LOCK_UN)
+            except Exception:
+                pass
+            lock_fd.close()
+
+
+def _is_port_open(host: str, port: int, timeout: float = 0.5) -> bool:
+    """Check if a TCP port is accepting connections."""
+    try:
+        with socket.create_connection((host, port), timeout=timeout):
+            return True
+    except OSError:
+        return False
+
+
+def _is_process_alive(pid: int) -> bool:
+    """Check if a process with the given PID is running."""
+    if pid == os.getpid():
+        return True
+    try:
+        os.kill(pid, 0)
+        return True
+    except OSError:
+        return False
+
+
+def _cleanup_dev_port_file(port: int) -> None:
+    """Remove the port file if it still points to this process."""
+    try:
+        with open(_DEV_PORT_FILE) as fh:
+            info = json.load(fh)
+        if info.get("pid") == os.getpid():
+            os.unlink(_DEV_PORT_FILE)
+    except (FileNotFoundError, json.JSONDecodeError):
+        pass
+
+
 def _get_milvus_uri(uri: str) -> str:
-    """If dev mode is active, redirect to a temporary directory."""
+    """If dev mode is active, redirect to a shared temporary directory."""
     if not DEV_MODE:
         return uri
     # Check if this is a file-based URI (Milvus Lite lite mode)
     if uri.endswith(".db") or ("/" in uri and not uri.startswith("http")):
-        tmp_dir = tempfile.mkdtemp(prefix="recrag_milvus_")
-        _DEV_TEMP_DIRS.append(tmp_dir)
-        db_path = os.path.join(tmp_dir, "milvus_lite.db")
-        logger.info("DEV MODE: Using in-memory Milvus Lite at %s", db_path)
-        return db_path
+        return _dev_shared_milvus_uri()
     return uri
 
 
 def cleanup_dev_temp_dirs() -> None:
-    """Remove all temp directories created during dev mode.
+    """Remove temp directories created during dev mode on shutdown.
 
-    Call this during application shutdown.
+    The shared dev directory is only removed when no other process
+    holds the port file (i.e. when the owning process has exited).
     """
     import shutil
 
     for d in _DEV_TEMP_DIRS:
         try:
+            if os.path.abspath(d) == os.path.abspath(_DEV_SHARED_DIR):
+                if os.path.exists(_DEV_PORT_FILE):
+                    # Another process may still be using the shared dir
+                    continue
             shutil.rmtree(d, ignore_errors=True)
         except Exception:
             pass

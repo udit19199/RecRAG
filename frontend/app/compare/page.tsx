@@ -3,7 +3,8 @@ import { ModelComparisonWorkbench } from "@/features/model-compare/components/mo
 
 export const metadata: Metadata = {
 	title: "Model Comparison — RecRAG",
-	description: "Compare AI model configurations side-by-side for generation quality.",
+	description:
+		"Compare AI model configurations side-by-side for generation quality.",
 };
 
 export default function ComparePage() {

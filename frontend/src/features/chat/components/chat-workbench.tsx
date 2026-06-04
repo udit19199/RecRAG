@@ -42,9 +42,7 @@ export function ChatWorkbench() {
 		(hasDocuments || ingestionStatus?.status === "complete");
 
 	// Build extraction options based on vision config
-	const getExtractionOptions = ():
-		| ExtractionOptions
-		| undefined => {
+	const getExtractionOptions = (): ExtractionOptions | undefined => {
 		if (!visionConfig) {
 			return undefined;
 		}

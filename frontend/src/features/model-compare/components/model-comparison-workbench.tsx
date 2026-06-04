@@ -133,17 +133,19 @@ export function ModelComparisonWorkbench() {
 	});
 
 	const checkSlotStatus = useCallback(
-		async (slotKey: "A" | "B", state: SlotState) => {
-			if (!state.embedding) return;
+		async (
+			slotKey: "A" | "B",
+			embedding: string | null,
+			vision: string | null,
+		) => {
+			if (!embedding) return;
 
 			const setSlot = slotKey === "A" ? setSlotA : setSlotB;
 			setSlot((prev) => ({ ...prev, isChecking: true }));
 
 			try {
-				const embedConfig = parseValue(state.embedding);
-				const visionConfig = state.vision
-					? parseValue(state.vision)
-					: undefined;
+				const embedConfig = parseValue(embedding);
+				const visionConfig = vision ? parseValue(vision) : undefined;
 
 				if (embedConfig) {
 					const res = await checkIndexStatus({
@@ -165,12 +167,12 @@ export function ModelComparisonWorkbench() {
 
 	// Re-check status when vision or embedding changes
 	useEffect(() => {
-		if (slotA.embedding) checkSlotStatus("A", slotA);
-	}, [slotA.embedding, slotA.vision, checkSlotStatus, slotA]);
+		if (slotA.embedding) checkSlotStatus("A", slotA.embedding, slotA.vision);
+	}, [slotA.embedding, slotA.vision, checkSlotStatus]);
 
 	useEffect(() => {
-		if (slotB.embedding) checkSlotStatus("B", slotB);
-	}, [slotB.embedding, slotB.vision, checkSlotStatus, slotB]);
+		if (slotB.embedding) checkSlotStatus("B", slotB.embedding, slotB.vision);
+	}, [slotB.embedding, slotB.vision, checkSlotStatus]);
 
 	const handleIngest = async (slotKey: "A" | "B", state: SlotState) => {
 		if (!state.embedding || isIngesting) return;
@@ -196,8 +198,8 @@ export function ModelComparisonWorkbench() {
 			const poll = async () => {
 				const status = await getIngestionStatus();
 				if (status.status === "complete") {
-					await checkSlotStatus("A", slotA);
-					await checkSlotStatus("B", slotB);
+					await checkSlotStatus("A", slotA.embedding, slotA.vision);
+					await checkSlotStatus("B", slotB.embedding, slotB.vision);
 					setIsIngesting(false);
 					setIngestingSlot(null);
 				} else if (status.status === "error") {

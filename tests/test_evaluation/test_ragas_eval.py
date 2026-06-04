@@ -63,9 +63,7 @@ class TestRagasEvaluator:
     def test_faithfulness_empty_claims_fallback(self) -> None:
         """When claim extraction returns empty, score defaults to 0."""
         evaluator = make_evaluator(responses=["[]"])
-        score = evaluator._faithfulness(
-            contexts=["ctx"], response="Some answer."
-        )
+        score = evaluator._faithfulness(contexts=["ctx"], response="Some answer.")
         assert score == 0.0
 
     # ── Answer relevancy ───────────────────────────────────────────────────
@@ -73,9 +71,7 @@ class TestRagasEvaluator:
     def test_answer_relevancy_returns_score(self) -> None:
         """Answer relevancy parses a numeric score from the LLM."""
         evaluator = make_evaluator(responses=["0.85"])
-        score = evaluator._answer_relevancy(
-            question="What is X?", response="X is Y."
-        )
+        score = evaluator._answer_relevancy(question="What is X?", response="X is Y.")
         assert score == 0.85
 
     def test_answer_relevancy_bounds_clamping(self) -> None:
@@ -216,6 +212,4 @@ class TestRagasEvaluator:
 
         evaluator = get_evaluator(provider="ollama", model="llama3.2")
         assert evaluator.llm is not None
-        mock_create_llm_from_config.assert_called_once_with(
-            {}, "ollama", "llama3.2"
-        )
+        mock_create_llm_from_config.assert_called_once_with({}, "ollama", "llama3.2")

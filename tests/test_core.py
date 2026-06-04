@@ -146,3 +146,72 @@ class TestDocumentLoader:
         loader = DocumentLoader(empty_dir)
         with pytest.raises(ValueError, match="No files found"):
             loader.load()
+
+
+class TestDevSharedMilvusUri:
+    def test_dev_shared_milvus_uri_reuse_existing(
+        self, tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        import json
+        import stores
+
+        shared_dir = tmp_path / "recrag_dev"
+        shared_dir.mkdir()
+        port_file = shared_dir / "milvus_port.json"
+        lock_file = shared_dir / "startup.lock"
+        db_file = shared_dir / "milvus_lite.db"
+
+        monkeypatch.setattr(stores, "_DEV_SHARED_DIR", str(shared_dir))
+        monkeypatch.setattr(stores, "_DEV_SHARED_DB", str(db_file))
+        monkeypatch.setattr(stores, "_DEV_PORT_FILE", str(port_file))
+        monkeypatch.setattr(stores, "_DEV_LOCK_FILE", str(lock_file))
+
+        dummy_port = 19530
+        dummy_pid = 99999
+        with open(port_file, "w") as fh:
+            json.dump({"port": dummy_port, "pid": dummy_pid}, fh)
+
+        monkeypatch.setattr(stores, "_is_port_open", lambda host, port: True)
+        monkeypatch.setattr(stores, "_is_process_alive", lambda pid: True)
+
+        uri = stores._dev_shared_milvus_uri()
+        assert uri == f"http://127.0.0.1:{dummy_port}"
+
+    def test_dev_shared_milvus_uri_start_new(
+        self, tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        import json
+        import os
+        import stores
+        from unittest.mock import MagicMock
+
+        shared_dir = tmp_path / "recrag_dev"
+        shared_dir.mkdir()
+        port_file = shared_dir / "milvus_port.json"
+        lock_file = shared_dir / "startup.lock"
+        db_file = shared_dir / "milvus_lite.db"
+
+        monkeypatch.setattr(stores, "_DEV_SHARED_DIR", str(shared_dir))
+        monkeypatch.setattr(stores, "_DEV_SHARED_DB", str(db_file))
+        monkeypatch.setattr(stores, "_DEV_PORT_FILE", str(port_file))
+        monkeypatch.setattr(stores, "_DEV_LOCK_FILE", str(lock_file))
+
+        monkeypatch.setattr(stores, "_is_port_open", lambda host, port: False)
+        monkeypatch.setattr(stores, "_is_process_alive", lambda pid: False)
+
+        mock_server_manager = MagicMock()
+        mock_server_manager.start_and_get_uri.return_value = "http://127.0.0.1:12345"
+
+        monkeypatch.setattr(
+            "milvus_lite.server_manager.server_manager_instance",
+            mock_server_manager,
+        )
+
+        uri = stores._dev_shared_milvus_uri()
+        assert uri == "http://127.0.0.1:12345"
+        mock_server_manager.start_and_get_uri.assert_called_once_with(str(db_file))
+
+        with open(port_file) as fh:
+            info = json.load(fh)
+        assert info["port"] == 12345
+        assert info["pid"] == os.getpid()

@@ -7,13 +7,11 @@
 provider = "ollama"
 model = "nomic-embed-text"
 timeout = 120
-# base_url = "http://localhost:11434"  # Uncomment to override Ollama host
 
 [llm]
 provider = "ollama"
 model = "llama3.2"
 timeout = 120
-# base_url = "http://localhost:11434"  # Uncomment to override Ollama host
 
 [ingestion]
 directory = "data/pdfs"
@@ -24,7 +22,6 @@ chunk_overlap = 50
 provider = "ollama"
 model = "llama3.2-vision"
 timeout = 180
-# base_url = "http://localhost:11434"  # Uncomment to override Ollama host
 
 [retrieval]
 top_k = 4

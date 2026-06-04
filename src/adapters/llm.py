@@ -75,7 +75,9 @@ class OllamaLLM(BaseLLM):
         self._timeout = kwargs.pop("timeout", 120)
         super().__init__(model, **kwargs)
         # Resolve base_url: explicit > OLLAMA_HOST env > default
-        resolved_url = base_url or os.environ.get("OLLAMA_HOST") or "http://localhost:11434"
+        resolved_url = (
+            base_url or os.environ.get("OLLAMA_HOST") or "http://localhost:11434"
+        )
         self.base_url = resolved_url.rstrip("/")
         self.temperature = temperature
         self.max_tokens = max_tokens
