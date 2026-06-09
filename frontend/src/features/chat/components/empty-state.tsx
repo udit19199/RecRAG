@@ -1,4 +1,4 @@
-import { Cloud } from "@phosphor-icons/react";
+import { IconCloud } from "@tabler/icons-react";
 import {
 	Empty,
 	EmptyContent,
@@ -26,10 +26,10 @@ export function EmptyState({
 }) {
 	return (
 		<div className="flex h-full items-center justify-center">
-			<Empty className="max-w-md w-full rounded-2xl border border-dashed bg-muted/20 py-12">
+			<Empty className="w-full max-w-md rounded-2xl border border-dashed bg-muted/20 py-12">
 				<EmptyHeader>
 					<EmptyMedia variant="icon">
-						<Cloud className="size-6 text-muted-foreground" />
+						<IconCloud />
 					</EmptyMedia>
 					<EmptyTitle>
 						{isReady
@@ -42,7 +42,7 @@ export function EmptyState({
 						{isReady ? (
 							"Upload your PDF documents to the library to start chatting with your AI."
 						) : error ? (
-							<span className="text-destructive font-medium">{error}</span>
+							<span className="font-medium text-destructive">{error}</span>
 						) : (
 							"The retrieval service is initialising. Please wait a moment."
 						)}

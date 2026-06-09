@@ -1,6 +1,6 @@
 "use client";
 
-import { FilePlus, Info } from "@phosphor-icons/react";
+import { IconFilePlus, IconInfoCircle } from "@tabler/icons-react";
 import * as React from "react";
 import {
 	AlertDialog,
@@ -13,6 +13,13 @@ import {
 	AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+	Field,
+	FieldDescription,
+	FieldGroup,
+	FieldLabel,
+} from "@/components/ui/field";
 import { Switch } from "@/components/ui/switch";
 import type { UploadOptions } from "@/lib/api/types";
 
@@ -63,7 +70,7 @@ export function UploadDialog({
 			<AlertDialogContent className="max-w-md">
 				<AlertDialogHeader>
 					<AlertDialogTitle className="flex items-center gap-2">
-						<FilePlus className="size-5 text-primary" />
+						<IconFilePlus className="text-primary" />
 						Upload Documents
 					</AlertDialogTitle>
 					<AlertDialogDescription>
@@ -72,54 +79,65 @@ export function UploadDialog({
 					</AlertDialogDescription>
 				</AlertDialogHeader>
 
-				<div className="space-y-4 py-4">
-					<div className="rounded-lg border bg-muted/30 p-4">
-						<h4 className="flex items-center gap-2 text-xs font-semibold text-foreground">
-							<Info className="size-4" />
-							Guidelines & Tips
-						</h4>
-						<ul className="mt-3 space-y-2 text-xs text-muted-foreground">
-							<li className="flex items-start gap-2">
-								<span className="mt-1 size-1.5 shrink-0 rounded-full bg-primary" />
-								<span>
-									Only <strong>PDF files</strong> are supported for ingestion.
-								</span>
-							</li>
-							<li className="flex items-start gap-2">
-								<span className="mt-1 size-1.5 shrink-0 rounded-full bg-primary" />
-								<span>
-									Select a <strong>Vision Model</strong> above to enable
-									vision-assisted extraction for scanned documents and
-									infographics.
-								</span>
-							</li>
-							<li className="flex items-start gap-2">
-								<span className="mt-1 size-1.5 shrink-0 rounded-full bg-primary" />
-								<span>
-									Keep individual files under <strong>50 MB</strong>.
-								</span>
-							</li>
-						</ul>
-					</div>
+				<div className="flex flex-col gap-4 py-4">
+					<Card size="sm" className="bg-muted/30">
+						<CardHeader className="border-b pb-3">
+							<CardTitle className="flex items-center gap-2 text-xs">
+								<IconInfoCircle />
+								Guidelines & Tips
+							</CardTitle>
+						</CardHeader>
+						<CardContent>
+							<ul className="flex flex-col gap-2 text-xs text-muted-foreground">
+								<li className="flex items-start gap-2">
+									<span className="mt-1 size-1.5 shrink-0 rounded-full bg-primary" />
+									<span>
+										Only <strong>PDF files</strong> are supported for ingestion.
+									</span>
+								</li>
+								<li className="flex items-start gap-2">
+									<span className="mt-1 size-1.5 shrink-0 rounded-full bg-primary" />
+									<span>
+										Select a <strong>Vision Model</strong> above to enable
+										vision-assisted extraction for scanned documents and
+										infographics.
+									</span>
+								</li>
+								<li className="flex items-start gap-2">
+									<span className="mt-1 size-1.5 shrink-0 rounded-full bg-primary" />
+									<span>
+										Keep individual files under <strong>50 MB</strong>.
+									</span>
+								</li>
+							</ul>
+						</CardContent>
+					</Card>
 
-					<div className="flex items-center justify-between gap-3 rounded-lg border bg-background px-4 py-3">
-						<div className="min-w-0">
-							<p className="text-sm font-medium text-foreground">
-								Replace existing documents
-							</p>
-							<p className="mt-0.5 text-xs text-muted-foreground">
-								{replaceExisting
-									? "The current library will be cleared before indexing."
-									: "New files will be added to your existing library."}
-							</p>
-						</div>
-						<Switch
-							checked={replaceExisting}
-							onCheckedChange={setReplaceExisting}
-							disabled={isUploading}
-							aria-label="Replace existing documents"
-						/>
-					</div>
+					<Card size="sm">
+						<CardContent>
+							<FieldGroup>
+								<Field orientation="horizontal">
+									<div className="flex flex-1 flex-col gap-1">
+										<FieldLabel htmlFor="replace-existing">
+											Replace existing documents
+										</FieldLabel>
+										<FieldDescription>
+											{replaceExisting
+												? "The current library will be cleared before indexing."
+												: "New files will be added to your existing library."}
+										</FieldDescription>
+									</div>
+									<Switch
+										id="replace-existing"
+										checked={replaceExisting}
+										onCheckedChange={setReplaceExisting}
+										disabled={isUploading}
+										aria-label="Replace existing documents"
+									/>
+								</Field>
+							</FieldGroup>
+						</CardContent>
+					</Card>
 
 					<div className="flex flex-col gap-2">
 						<p className="px-1 text-[10px] font-bold uppercase tracking-wider text-muted-foreground">

@@ -1,22 +1,29 @@
-import { Robot } from "@phosphor-icons/react";
+import { IconRobot } from "@tabler/icons-react";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Card, CardContent } from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export function TypingIndicator() {
 	return (
 		<div className="flex items-center gap-3">
-			<div className="flex size-8 shrink-0 items-center justify-center rounded-full border bg-background text-muted-foreground">
-				<Robot className="size-4" />
-			</div>
-			<div className="rounded-xl border bg-muted/30 px-4 py-3">
-				<div className="flex gap-1.5">
-					{[0, 1, 2].map((i) => (
-						<span
-							key={i}
-							className="size-2 animate-pulse rounded-full bg-muted-foreground"
-							style={{ animationDelay: `${i * 150}ms` }}
-						/>
-					))}
-				</div>
-			</div>
+			<Avatar size="sm">
+				<AvatarFallback>
+					<IconRobot />
+				</AvatarFallback>
+			</Avatar>
+			<Card className="py-3">
+				<CardContent>
+					<div className="flex gap-1.5">
+						{[0, 1, 2].map((i) => (
+							<Skeleton
+								key={i}
+								className="size-2 rounded-full"
+								style={{ animationDelay: `${i * 150}ms` }}
+							/>
+						))}
+					</div>
+				</CardContent>
+			</Card>
 		</div>
 	);
 }
