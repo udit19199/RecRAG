@@ -39,12 +39,12 @@ def _create_adapter_from_config(
 
 
 def create_embedder_from_config(config: dict[str, Any]) -> BaseEmbedder:
-    defaults = {"provider": "openai", "model": "text-embedding-3-small"}
+    defaults = {"provider": "gemini", "model": "gemini-embedding-001"}
     return _create_adapter_from_config(config, "embedding", create_embedder, defaults)
 
 
 def create_llm_from_config(config: dict[str, Any]) -> BaseLLM:
-    defaults = {"provider": "openai", "model": "gpt-4o-mini"}
+    defaults = {"provider": "gemini", "model": "gemini-2.0-flash"}
     return _create_adapter_from_config(config, "llm", create_llm, defaults)
 
 

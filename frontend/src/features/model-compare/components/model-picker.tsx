@@ -64,6 +64,7 @@ const PROVIDER_LABELS: Record<string, string> = {
 	ollama: "Ollama",
 	openai: "OpenAI",
 	nim: "NVIDIA NIM",
+	gemini: "Google Gemini",
 };
 
 export default function ModelPicker({

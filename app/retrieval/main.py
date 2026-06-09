@@ -1,3 +1,7 @@
+import logging
+
+
+
 import asyncio
 import contextlib
 import os
@@ -27,6 +31,8 @@ from models.api import (
     SetConfigResponse,
 )
 from providers import (
+    _fetch_gemini_models,
+    _fetch_gemini_vision_models,
     _fetch_nim_models,
     _fetch_nim_vision_models,
     _fetch_ollama_models,
@@ -86,6 +92,8 @@ def run_eval_job(
     except Exception as exc:
         update_eval_job(storage_dir, job_id, status="error", error=str(exc))
 
+
+logging.basicConfig(level=logging.INFO, format="%(levelname)s:     %(message)s")
 
 app = FastAPI(
     title="RecRAG Retrieval API",
@@ -342,6 +350,21 @@ async def get_providers(_: None = Depends(verify_api_key)) -> ProvidersResponse:
         nim_available = False
         nim_reason = "NVIDIA_API_KEY not set"
 
+    gemini_key = os.environ.get("GEMINI_API_KEY", "")
+    if gemini_key:
+        gemini_embed_models, gemini_llm_models = _fetch_gemini_models(gemini_key)
+        gemini_available = bool(gemini_embed_models or gemini_llm_models)
+        gemini_reason = None if gemini_available else "No Gemini models available"
+        gemini_vision_models = (
+            _fetch_gemini_vision_models(gemini_key) if gemini_available else []
+        )
+    else:
+        gemini_embed_models = []
+        gemini_llm_models = []
+        gemini_vision_models = []
+        gemini_available = False
+        gemini_reason = "GEMINI_API_KEY not set"
+
     return ProvidersResponse(
         embedders={
             "ollama": ProviderInfo(
@@ -358,6 +381,11 @@ async def get_providers(_: None = Depends(verify_api_key)) -> ProvidersResponse:
                 available=nim_available,
                 models=nim_embed_models,
                 reason=nim_reason,
+            ),
+            "gemini": ProviderInfo(
+                available=gemini_available,
+                models=gemini_embed_models,
+                reason=gemini_reason,
             ),
         },
         llms={
@@ -376,6 +404,11 @@ async def get_providers(_: None = Depends(verify_api_key)) -> ProvidersResponse:
                 models=nim_llm_models,
                 reason=nim_reason,
             ),
+            "gemini": ProviderInfo(
+                available=gemini_available,
+                models=gemini_llm_models,
+                reason=gemini_reason,
+            ),
         },
         vision={
             "ollama": ProviderInfo(
@@ -392,6 +425,11 @@ async def get_providers(_: None = Depends(verify_api_key)) -> ProvidersResponse:
                 available=nim_available and bool(nim_vision_models),
                 models=nim_vision_models,
                 reason=nim_reason if not nim_available else None,
+            ),
+            "gemini": ProviderInfo(
+                available=gemini_available and bool(gemini_vision_models),
+                models=gemini_vision_models,
+                reason=gemini_reason if not gemini_available else None,
             ),
         },
     )

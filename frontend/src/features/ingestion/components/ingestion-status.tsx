@@ -126,7 +126,7 @@ export default function IngestionStatusDisplay({
 		complete: {
 			label: "Complete",
 			description: `Successfully processed ${status.files_processed || 0} files. Processing complete, you can now ask questions.`,
-			color: "text-emerald-400",
+			color: "text-success dark:text-success-foreground",
 			icon: (
 				<svg
 					aria-hidden="true"

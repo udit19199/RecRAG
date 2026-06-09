@@ -20,6 +20,7 @@ export function useChatSession() {
 	const [ingestionStatus, setIngestionStatus] =
 		useState<IngestionStatus | null>(null);
 	const [statusError, setStatusError] = useState<string | null>(null);
+	const [healthError, setHealthError] = useState<string | null>(null);
 	const [isUploading, setIsUploading] = useState(false);
 	const [uploadFeedback, setUploadFeedback] = useState<{
 		type: "success" | "error";
@@ -64,8 +65,17 @@ export function useChatSession() {
 				const health = await checkRetrievalHealth();
 				setIsReady(health.pipeline_loaded ?? false);
 				setHasDocuments(health.has_documents ?? false);
-			} catch {
+
+				if (!health.pipeline_loaded && health.error_message) {
+					setHealthError(health.error_message);
+				} else {
+					setHealthError(null);
+				}
+			} catch (err) {
 				setIsReady(false);
+				setHealthError(
+					err instanceof Error ? err.message : "Service unreachable",
+				);
 			}
 		};
 
@@ -195,6 +205,7 @@ export function useChatSession() {
 		ingestionStatus,
 		uploadedFiles,
 		statusError,
+		healthError,
 		isUploading,
 		uploadFeedback,
 		messages,

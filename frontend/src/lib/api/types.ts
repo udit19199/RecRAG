@@ -36,7 +36,7 @@ export interface QueryRequest {
 
 export type ExtractionMode = "text_only" | "vision_assisted";
 
-export type VisionProvider = "openai" | "ollama" | "nim";
+export type VisionProvider = "openai" | "ollama" | "nim" | "gemini";
 
 export interface ExtractionOptions {
 	extraction_mode: ExtractionMode;

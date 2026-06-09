@@ -6,7 +6,8 @@
 .PHONY: install setup dev retrieval ingestion frontend ingest evaluate \
         lint lint-backend lint-frontend format format-backend format-frontend \
         test typecheck check clean infra-up infra-down infra-logs \
-        docker-up docker-down deploy smoke-test quickstart help
+        docker-up docker-down deploy smoke-test quickstart help \
+        version bump-major bump-minor bump-patch
 
 # ── Variables ─────────────────────────────────────────────────────────────────
 
@@ -135,3 +136,17 @@ clean: ## Remove build artifacts, caches, and temporary files
 	find . -type d -name "__pycache__" -exec rm -rf {} +
 	find . -type f -name "*.pyc" -delete
 	@echo "Cleaned all temporary files and caches."
+
+# ── Versioning ────────────────────────────────────────────────────────────────
+
+version: ## Show the current version
+	@cat VERSION
+
+bump-patch: ## Bump patch version (0.1.0 → 0.1.1)
+	bash scripts/bump-version.sh patch
+
+bump-minor: ## Bump minor version (0.1.0 → 0.2.0)
+	bash scripts/bump-version.sh minor
+
+bump-major: ## Bump major version (0.1.0 → 1.0.0)
+	bash scripts/bump-version.sh major

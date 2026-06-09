@@ -55,25 +55,25 @@ class RetrievalRuntime:
             llm_cfg = config.get("llm", {})
             return (
                 {
-                    "provider": str(embed_cfg.get("provider", "openai")),
-                    "model": str(embed_cfg.get("model", "text-embedding-3-small")),
+                    "provider": str(embed_cfg.get("provider", "gemini")),
+                    "model": str(embed_cfg.get("model", "gemini-embedding-001")),
                 },
                 {
-                    "provider": str(llm_cfg.get("provider", "openai")),
-                    "model": str(llm_cfg.get("model", "gpt-4o-mini")),
+                    "provider": str(llm_cfg.get("provider", "gemini")),
+                    "model": str(llm_cfg.get("model", "gemini-2.0-flash")),
                 },
             )
 
         return (
             {
-                "provider": str(getattr(pipeline.embedder, "provider", "openai")),
+                "provider": str(getattr(pipeline.embedder, "provider", "gemini")),
                 "model": str(
-                    getattr(pipeline.embedder, "model", "text-embedding-3-small")
+                    getattr(pipeline.embedder, "model", "gemini-embedding-001")
                 ),
             },
             {
-                "provider": str(getattr(pipeline.llm, "provider", "openai")),
-                "model": str(getattr(pipeline.llm, "model", "gpt-4o-mini")),
+                "provider": str(getattr(pipeline.llm, "provider", "gemini")),
+                "model": str(getattr(pipeline.llm, "model", "gemini-2.0-flash")),
             },
         )
 
@@ -87,6 +87,7 @@ class RetrievalRuntime:
         except Exception as exc:
             self._state = RuntimeState.DEGRADED
             self._error = str(exc)
+            print("DEBUG: Exception:", repr(exc))
             raise
 
         async with self._lock:
@@ -125,6 +126,7 @@ class RetrievalRuntime:
         except Exception as exc:
             self._state = RuntimeState.DEGRADED
             self._error = str(exc)
+            print("DEBUG: Exception:", repr(exc))
             raise
 
         requires_reindex = False

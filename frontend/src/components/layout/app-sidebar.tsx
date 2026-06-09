@@ -25,7 +25,7 @@ const navigation = [
 		title: "Workspace",
 		items: [
 			{
-				href: "/",
+				href: "/chat",
 				label: "Chat",
 				description: "Query indexed documents",
 				icon: ChatCenteredTextIcon,
@@ -49,13 +49,13 @@ export function AppSidebar() {
 			<SidebarHeader className="gap-3 border-b border-sidebar-border/80 px-3 py-4">
 				<SidebarMenu>
 					<SidebarMenuItem>
-						<div className="flex items-center gap-3">
+						<div className="flex items-center gap-3 min-w-0">
 							<SidebarTrigger
 								className="flex size-8 shrink-0 items-center justify-center border border-sidebar-border bg-sidebar text-sidebar-foreground"
 								aria-label="Toggle sidebar"
 							/>
 
-							<div className="flex min-w-0 items-center">
+							<div className="flex min-w-0 items-center flex-1">
 								<span className="truncate text-base font-semibold uppercase tracking-[0.12em]">
 									RecRAG
 								</span>
@@ -71,10 +71,7 @@ export function AppSidebar() {
 						<SidebarGroupContent>
 							<SidebarMenu>
 								{group.items.map((item) => {
-									const isActive =
-										item.href === "/"
-											? pathname === item.href
-											: pathname.startsWith(item.href);
+									const isActive = pathname === item.href;
 
 									return (
 										<SidebarMenuItem key={item.href}>

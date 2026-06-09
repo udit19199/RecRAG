@@ -4,13 +4,13 @@
 # Environment variable substitution: ${VAR:-default}
 
 [embedding]
-provider = "ollama"
-model = "nomic-embed-text"
+provider = "gemini"
+model = "gemini-embedding-001"
 timeout = 120
 
 [llm]
-provider = "ollama"
-model = "llama3.2"
+provider = "gemini"
+model = "gemini-2.0-flash"
 timeout = 120
 
 [ingestion]
@@ -19,8 +19,8 @@ chunk_size = 1024
 chunk_overlap = 50
 
 [vision]
-provider = "ollama"
-model = "llama3.2-vision"
+provider = "gemini"
+model = "gemini-2.0-flash"
 timeout = 180
 
 [retrieval]

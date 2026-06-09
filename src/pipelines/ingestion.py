@@ -71,8 +71,8 @@ class IngestionPipeline:
 
         # Get vision config from config or use provided overrides
         vision_cfg = config.get("vision", {})
-        provider = vision_provider or vision_cfg.get("provider", "openai")
-        model = vision_model or vision_cfg.get("model", "gpt-4o-mini")
+        provider = vision_provider or vision_cfg.get("provider", "gemini")
+        model = vision_model or vision_cfg.get("model", "gemini-2.0-flash")
 
         vector_store = create_vector_store_from_config(
             config,

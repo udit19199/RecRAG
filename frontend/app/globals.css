@@ -21,6 +21,8 @@
   --accent-foreground: oklch(0.216 0.006 56.043);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: 210 40% 98%;
+  --success: oklch(0.648 0.2 131.684);
+  --success-foreground: 210 40% 98%;
   --border: oklch(0.923 0.003 48.717);
   --input: oklch(0.923 0.003 48.717);
   --ring: oklch(0.709 0.01 56.259);
@@ -58,6 +60,8 @@
   --accent-foreground: oklch(0.985 0.001 106.423);
   --destructive: oklch(0.704 0.191 22.216);
   --destructive-foreground: 210 40% 98%;
+  --success: oklch(0.768 0.233 130.85);
+  --success-foreground: 210 40% 98%;
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.553 0.013 58.071);
@@ -93,6 +97,8 @@
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
   --color-destructive: var(--destructive);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
@@ -110,6 +116,7 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
   --color-chart-5: var(--chart-5);
   --color-chart-4: var(--chart-4);
@@ -138,7 +145,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     height: 100%;
-    @apply font-mono;
+    @apply font-sans;
   }
 
   body {

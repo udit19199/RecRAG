@@ -19,6 +19,7 @@ export function ChatWorkbench() {
 		uploadedFiles,
 		ingestionStatus,
 		statusError,
+		healthError,
 		isUploading,
 		uploadFeedback,
 		messages,
@@ -75,7 +76,7 @@ export function ChatWorkbench() {
 										isLoading={false}
 									/>
 									{ingestionStatus?.status === "complete" && !isIngesting ? (
-										<div className="mt-2 rounded-lg border border-emerald-500/20 bg-emerald-500/5 px-3 py-2 text-xs text-emerald-600 dark:text-emerald-400">
+										<div className="mt-2 rounded-lg border border-success/20 bg-success/5 px-3 py-2 text-xs text-success dark:text-success-foreground">
 											Processing complete, you can now ask questions.
 										</div>
 									) : null}
@@ -88,7 +89,7 @@ export function ChatWorkbench() {
 							) : null}
 
 							{uploadFeedback?.type === "success" && !isIngesting ? (
-								<div className="animate-in fade-in slide-in-from-top-1 duration-300 rounded-lg border border-emerald-500/20 bg-emerald-500/5 px-3 py-2 text-xs text-emerald-600 dark:text-emerald-400">
+								<div className="animate-in fade-in slide-in-from-top-1 duration-300 rounded-lg border border-success/20 bg-success/5 px-3 py-2 text-xs text-success dark:text-success-foreground">
 									{uploadFeedback.message}
 								</div>
 							) : null}
@@ -121,6 +122,7 @@ export function ChatWorkbench() {
 							{messages.length === 0 ? (
 								<EmptyState
 									isReady={isReady}
+									error={healthError}
 									onUpload={handleUploadWithVision}
 									isUploading={isUploading}
 								/>

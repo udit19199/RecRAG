@@ -4,6 +4,8 @@ Uses a shared ``requests.Session`` per function call (short-lived) to avoid
 the ``httpx`` dependency.
 """
 
+import os
+
 import requests
 from typing import Any
 
@@ -88,6 +90,8 @@ OLLAMA_VISION_MODELS = [
 NIM_VISION_MODELS = [
     "microsoft/phi-4-multimodal-instruct",
 ]
+
+
 
 # Known embedding model name patterns (contains these substrings)
 EMBEDDING_KEYWORDS = ["embed", "minilm", "bge-", "snowflake", "mxbai"]
@@ -293,3 +297,53 @@ def _fetch_nim_vision_models(api_key: str, base_url: str | None = None) -> list[
         ) and model_id not in vision_models:
             vision_models.append(model_id)
     return _sorted_unique(vision_models) if vision_models else NIM_VISION_MODELS
+
+
+_DEFAULT_GEMINI_API_BASE = "https://generativelanguage.googleapis.com/v1beta"
+
+
+def _fetch_gemini_models(api_key: str) -> tuple[list[str], list[str]]:
+    """Fetch models from the Gemini API.
+
+    Uses the ``supportedGenerationMethods`` field to distinguish
+    embedders (``embedContent``) from LLMs (``generateContent``).
+    All ``generateContent`` models are considered vision-capable.
+
+    Returns:
+        (embed_models, llm_models). Both empty when the API is unreachable
+        or the key is invalid.
+    """
+    base = os.environ.get("GEMINI_API_BASE", _DEFAULT_GEMINI_API_BASE)
+    url = f"{base.rstrip('/')}/models?key={api_key}"
+    data = _fetch_json(url, {"Content-Type": "application/json"}, timeout=10.0)
+    if data is None:
+        return [], []
+
+    embed_models: list[str] = []
+    llm_models: list[str] = []
+    for model in data.get("models", []):
+        name = model.get("name", "")
+        methods = model.get("supportedGenerationMethods", [])
+        # Strip "models/" prefix for consistency
+        display_name = name.removeprefix("models/")
+        if not display_name:
+            continue
+        if "embedContent" in methods:
+            embed_models.append(display_name)
+        if "generateContent" in methods:
+            llm_models.append(display_name)
+
+    return _sorted_unique(embed_models), _sorted_unique(llm_models)
+
+
+def _fetch_gemini_vision_models(api_key: str) -> list[str]:
+    """Fetch vision-capable models from Gemini.
+
+    All Gemini models that support ``generateContent`` are multimodal.
+
+    Returns:
+        List of available vision model names.
+    """
+    _, llm_models = _fetch_gemini_models(api_key)
+    return llm_models
+

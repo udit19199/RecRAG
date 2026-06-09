@@ -75,8 +75,8 @@ def create_llm_from_config(
         A configured ``BaseLLM`` instance.
     """
     llm_cfg = config.get("llm", {})
-    actual_provider = provider or llm_cfg.get("provider", "openai")
-    actual_model = model or llm_cfg.get("model", "gpt-4o-mini")
+    actual_provider = provider or llm_cfg.get("provider", "gemini")
+    actual_model = model or llm_cfg.get("model", "gemini-2.0-flash")
     kwargs = {
         k: v
         for k, v in llm_cfg.items()

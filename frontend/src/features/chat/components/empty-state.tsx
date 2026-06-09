@@ -11,10 +11,12 @@ import { UploadDialog } from "@/features/ingestion/components/upload-dialog";
 
 export function EmptyState({
 	isReady,
+	error,
 	onUpload,
 	isUploading,
 }: {
 	isReady: boolean;
+	error?: string | null;
 	onUpload: (files: File[]) => Promise<void>;
 	isUploading: boolean;
 }) {
@@ -26,12 +28,20 @@ export function EmptyState({
 						<Cloud className="size-6 text-muted-foreground" />
 					</EmptyMedia>
 					<EmptyTitle>
-						{isReady ? "Library Empty" : "Pipeline Loading…"}
+						{isReady
+							? "Library Empty"
+							: error
+								? "Configuration Error"
+								: "Pipeline Loading…"}
 					</EmptyTitle>
 					<EmptyDescription>
-						{isReady
-							? "Upload your PDF documents to the library to start chatting with your AI."
-							: "The retrieval service is initialising. Please wait a moment."}
+						{isReady ? (
+							"Upload your PDF documents to the library to start chatting with your AI."
+						) : error ? (
+							<span className="text-destructive font-medium">{error}</span>
+						) : (
+							"The retrieval service is initialising. Please wait a moment."
+						)}
 					</EmptyDescription>
 				</EmptyHeader>
 				{isReady ? (

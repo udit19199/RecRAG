@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { JetBrains_Mono } from "next/font/google";
-import { AppShell } from "@/components/layout/app-shell";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
+
+const inter = Inter({
+	subsets: ["latin"],
+	variable: "--font-sans",
+});
 
 const jetbrainsMono = JetBrains_Mono({
 	subsets: ["latin"],
@@ -21,11 +25,17 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" className={cn("dark", "font-mono", jetbrainsMono.variable)}>
+		<html
+			lang="en"
+			className={cn(
+				"dark",
+				"font-sans",
+				inter.variable,
+				jetbrainsMono.variable,
+			)}
+		>
 			<body className="min-h-screen bg-background text-foreground antialiased">
-				<TooltipProvider>
-					<AppShell>{children}</AppShell>
-				</TooltipProvider>
+				<TooltipProvider>{children}</TooltipProvider>
 			</body>
 		</html>
 	);

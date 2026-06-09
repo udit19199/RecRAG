@@ -56,7 +56,7 @@ export function ChatInput({
 							size="icon"
 							className="size-9 shrink-0 text-muted-foreground hover:text-foreground"
 							disabled={isUploading}
-							title="Upload PDFs"
+							aria-label="Upload PDFs"
 						>
 							<svg
 								aria-hidden="true"
@@ -98,6 +98,7 @@ export function ChatInput({
 					type="submit"
 					disabled={!value.trim() || isLoading || disabled}
 					size="icon"
+					aria-label={isLoading ? "Sending..." : "Send message"}
 				>
 					{isLoading ? (
 						<svg

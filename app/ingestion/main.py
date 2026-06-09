@@ -1,5 +1,7 @@
-import asyncio
 import logging
+
+import asyncio
+
 import os
 from contextlib import asynccontextmanager
 from pathlib import Path
@@ -37,7 +39,6 @@ from models.api import (
 )
 from runtime import IngestionRuntime
 from utils.status import read_status, write_status
-from validation import validate_filename, validate_file_size
 
 logger = logging.getLogger(__name__)
 
@@ -91,6 +92,8 @@ def get_ingestion_runtime(request: Request) -> IngestionRuntime:
         raise HTTPException(status_code=503, detail="Ingestion runtime unavailable")
     return runtime
 
+
+logging.basicConfig(level=logging.INFO, format="%(levelname)s:     %(message)s")
 
 app = FastAPI(
     title="RecRAG Ingestion API",
@@ -163,40 +166,29 @@ async def upload_pdfs(
         if not upload.filename:
             raise HTTPException(status_code=400, detail="Filename is required")
 
-        # Validate filename
-        try:
-            safe_filename = validate_filename(upload.filename)
-        except ValueError as e:
-            raise HTTPException(status_code=400, detail=str(e))
+        filename = upload.filename
 
-        if not safe_filename.lower().endswith(".pdf"):
-            raise HTTPException(status_code=400, detail="Only PDF files are allowed")
-
-        if safe_filename in seen_names:
+        if filename in seen_names:
             raise HTTPException(
                 status_code=400,
-                detail=f"Duplicate filename in batch: {safe_filename}",
+                detail=f"Duplicate filename in batch: {filename}",
             )
 
         try:
             content = await upload.read()
-            # Validate file size
-            validate_file_size(content)
-        except ValueError as e:
-            raise HTTPException(status_code=413, detail=str(e))
         except Exception as e:
             raise HTTPException(status_code=500, detail=f"Failed to read file: {e}")
 
-        staged_files.append((safe_filename, content))
-        seen_names.add(safe_filename)
+        staged_files.append((filename, content))
+        seen_names.add(filename)
 
     try:
         # Async-safe directory reset: remove and recreate using asyncio.to_thread
         await asyncio.to_thread(PDF_DIR.mkdir, parents=True, exist_ok=True)
         await asyncio.to_thread(_reset_directory, PDF_DIR)
 
-        for safe_filename, content in staged_files:
-            file_path = PDF_DIR / safe_filename
+        for filename, content in staged_files:
+            file_path = PDF_DIR / filename
             async with await open_file(file_path, "wb") as f:
                 await f.write(content)
     except Exception as e:
@@ -264,18 +256,9 @@ async def delete_document(
     Args:
         filename: The PDF filename to delete (e.g. "report.pdf").
     """
-    # Validate filename to prevent path traversal
-    try:
-        safe_filename = validate_filename(filename)
-    except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e))
-
-    if not safe_filename.lower().endswith(".pdf"):
-        raise HTTPException(status_code=400, detail="Only PDF files can be deleted")
-
-    file_path = PDF_DIR / safe_filename
+    file_path = PDF_DIR / filename
     if not file_path.exists():
-        raise HTTPException(status_code=404, detail=f"File not found: {safe_filename}")
+        raise HTTPException(status_code=404, detail=f"File not found: {filename}")
 
     # Delete from filesystem
     try:
@@ -295,14 +278,14 @@ async def delete_document(
     try:
         embedder = create_embedder_from_config(config)
         vector_store = create_vector_store_from_config(config, config_path, embedder)
-        deleted = vector_store.delete_document(safe_filename)
+        deleted = vector_store.delete_document(filename)
     except Exception as e:
-        logger.warning("Vector store cleanup failed for %s: %s", safe_filename, e)
+        logger.warning("Vector store cleanup failed for %s: %s", filename, e)
         deleted = 0
 
     return {
         "deleted": True,
-        "filename": safe_filename,
+        "filename": filename,
         "vectors_removed": deleted,
     }
 

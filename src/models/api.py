@@ -18,8 +18,8 @@ class AdapterConfig(BaseModel):
 class VisionConfig(BaseModel):
     """Configuration for vision-assisted extraction."""
 
-    provider: str = "openai"
-    model: str = "gpt-4o-mini"
+    provider: str = "gemini"
+    model: str = "gemini-2.0-flash"
     base_url: str | None = None
 
 

@@ -47,8 +47,8 @@ class VisionPDFLoader(BaseDocumentLoader):
     def __init__(
         self,
         directory: Path | str,
-        vision_provider: str = "openai",
-        vision_model: str = "gpt-4o-mini",
+        vision_provider: str = "gemini",
+        vision_model: str = "gemini-2.0-flash",
         vision_kwargs: dict[str, Any] | None = None,
         dpi: int = 150,
     ):
@@ -132,8 +132,8 @@ class HybridPDFLoader(BaseDocumentLoader):
     def __init__(
         self,
         directory: Path | str,
-        vision_provider: str = "openai",
-        vision_model: str = "gpt-4o-mini",
+        vision_provider: str = "gemini",
+        vision_model: str = "gemini-2.0-flash",
         vision_kwargs: dict[str, Any] | None = None,
         min_chars_per_page: int = 100,
         dpi: int = 150,
