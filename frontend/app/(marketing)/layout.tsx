@@ -15,18 +15,18 @@ export default function MarketingLayout({ children }: { children: ReactNode }) {
 					</Link>
 
 					<nav className="flex items-center gap-6 text-sm font-medium">
-						<a
+						<Link
 							href="/docs"
 							className="text-muted-foreground hover:text-foreground transition-colors"
 						>
 							Documentation
-						</a>
-						<a
+						</Link>
+						<Link
 							href="/github"
 							className="text-muted-foreground hover:text-foreground transition-colors"
 						>
 							GitHub
-						</a>
+						</Link>
 						<Link
 							href="/onboarding"
 							className="bg-foreground text-background px-4 py-1.5 rounded-md hover:bg-foreground/90 transition-colors"

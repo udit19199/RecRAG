@@ -1,6 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 
 interface WorkspaceSetupProps {
 	onComplete: () => void;
@@ -12,31 +17,35 @@ export function WorkspaceSetup({ onComplete, onPrev }: WorkspaceSetupProps) {
 	const [teammates, setTeammates] = useState("");
 	const [message, setMessage] = useState("Come join my RecRAG workspace!");
 
-	const handleKeyDown = (e: React.KeyboardEvent) => {
-		if ((e.metaKey || e.ctrlKey) && e.key === "Enter" && workspaceName.trim()) {
+	const handleWorkspaceNameKeyDown = (
+		event: React.KeyboardEvent<HTMLInputElement>,
+	) => {
+		if (
+			(event.metaKey || event.ctrlKey) &&
+			event.key === "Enter" &&
+			workspaceName.trim()
+		) {
 			onComplete();
 		}
 	};
 
 	return (
-		<form
-			className="flex flex-col animate-in fade-in duration-300"
-			onKeyDown={handleKeyDown}
-			onSubmit={(e) => e.preventDefault()}
-		>
-			<div className="w-full border-b border-border -mt-8 md:-mt-12 -mx-8 md:-mx-12 px-8 md:px-12 py-6 mb-8 bg-muted/30 flex items-center justify-between">
+		<div className="flex animate-in flex-col duration-300 fade-in">
+			<div className="-mx-8 -mt-8 mb-8 flex items-center justify-between border-b bg-muted/30 px-8 py-6 md:-mx-12 md:-mt-12 md:px-12">
 				<div className="flex items-center gap-3">
-					<div className="w-8 h-8 bg-foreground rounded-sm flex items-center justify-center text-background font-bold text-xs">
-						{workspaceName ? workspaceName.charAt(0).toUpperCase() : "W"}
-					</div>
+					<Avatar size="sm">
+						<AvatarFallback className="rounded-sm bg-foreground font-bold text-background text-xs">
+							{workspaceName ? workspaceName.charAt(0).toUpperCase() : "W"}
+						</AvatarFallback>
+					</Avatar>
 					<span className="font-mono text-sm font-medium text-foreground">
 						workspace_init.sh
 					</span>
 				</div>
 			</div>
 
-			<div className="text-left mb-8">
-				<h1 className="text-2xl font-semibold text-foreground mb-1 tracking-tight">
+			<div className="mb-8 text-left">
+				<h1 className="mb-1 text-2xl font-semibold tracking-tight text-foreground">
 					Configure Workspace
 				</h1>
 				<p className="text-sm text-muted-foreground">
@@ -44,77 +53,59 @@ export function WorkspaceSetup({ onComplete, onPrev }: WorkspaceSetupProps) {
 				</p>
 			</div>
 
-			<div className="flex flex-col gap-6">
-				<div className="flex flex-col gap-2 text-left">
-					<label
-						htmlFor="workspaceName"
-						className="text-sm font-medium text-foreground"
-					>
-						Name your workspace
-					</label>
-					<input
+			<FieldGroup>
+				<Field>
+					<FieldLabel htmlFor="workspaceName">Name your workspace</FieldLabel>
+					<Input
 						id="workspaceName"
 						type="text"
 						placeholder="e.g. Acme Corp Knowledge Base"
 						value={workspaceName}
 						onChange={(e) => setWorkspaceName(e.target.value)}
-						className="w-full p-2.5 bg-background border border-input rounded-md focus:outline-none focus:ring-1 focus:ring-foreground focus:border-foreground transition-colors text-foreground placeholder:text-muted-foreground font-mono text-sm"
+						onKeyDown={handleWorkspaceNameKeyDown}
+						className="font-mono"
 					/>
-				</div>
+				</Field>
 
-				<div className="flex flex-col gap-2 text-left">
-					<label
-						htmlFor="teammates"
-						className="text-sm font-medium text-foreground"
-					>
+				<Field>
+					<FieldLabel htmlFor="teammates">
 						Add your teammates (Optional)
-					</label>
-					<input
+					</FieldLabel>
+					<Input
 						id="teammates"
 						type="text"
 						placeholder="Type names or emails..."
 						value={teammates}
 						onChange={(e) => setTeammates(e.target.value)}
-						className="w-full p-2.5 bg-background border border-input rounded-md focus:outline-none focus:ring-1 focus:ring-foreground focus:border-foreground transition-colors text-foreground placeholder:text-muted-foreground font-mono text-sm"
+						className="font-mono"
 					/>
-				</div>
+				</Field>
 
-				{teammates.length > 0 && (
-					<div className="flex flex-col gap-2 text-left animate-in fade-in slide-in-from-top-2">
-						<label
-							htmlFor="message"
-							className="text-sm font-medium text-foreground"
-						>
-							Custom message
-						</label>
-						<textarea
+				{teammates.length > 0 ? (
+					<Field className="animate-in fade-in slide-in-from-top-2">
+						<FieldLabel htmlFor="message">Custom message</FieldLabel>
+						<Textarea
 							id="message"
 							rows={3}
 							value={message}
 							onChange={(e) => setMessage(e.target.value)}
-							className="w-full p-2.5 bg-background border border-input rounded-md focus:outline-none focus:ring-1 focus:ring-foreground focus:border-foreground transition-colors resize-none text-foreground text-sm"
 						/>
-					</div>
-				)}
-			</div>
+					</Field>
+				) : null}
+			</FieldGroup>
 
 			<div className="mt-10 flex items-center justify-between">
-				<button
-					type="button"
-					onClick={onPrev}
-					className="text-muted-foreground hover:text-foreground text-sm font-medium transition-colors"
-				>
+				<Button type="button" variant="ghost" onClick={onPrev}>
 					Back
-				</button>
-				<button
+				</Button>
+				<Button
 					type="button"
 					onClick={onComplete}
-					className="bg-foreground hover:bg-foreground/90 text-background px-6 py-2 rounded-md font-medium transition-colors disabled:opacity-50"
 					disabled={!workspaceName.trim()}
 				>
 					{teammates ? "Invite & Finish" : "Finish Setup"}
-				</button>
+				</Button>
 			</div>
-		</form>
+		</div>
 	);
 }

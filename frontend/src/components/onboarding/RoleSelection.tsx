@@ -1,23 +1,29 @@
 "use client";
 
-import { Briefcase, Crown, UserCircle, Users } from "lucide-react";
+import {
+	IconBriefcase,
+	IconCrown,
+	IconUserCircle,
+	IconUsers,
+} from "@tabler/icons-react";
+import { Button } from "@/components/ui/button";
 
 interface RoleSelectionProps {
 	onNext: () => void;
 }
 
 const ROLES = [
-	{ id: "solo", label: "Working solo", icon: UserCircle },
-	{ id: "member", label: "Team member", icon: Users },
-	{ id: "manager", label: "Team manager", icon: Briefcase },
-	{ id: "executive", label: "Executive (C-level / VP)", icon: Crown },
+	{ id: "solo", label: "Working solo", icon: IconUserCircle },
+	{ id: "member", label: "Team member", icon: IconUsers },
+	{ id: "manager", label: "Team manager", icon: IconBriefcase },
+	{ id: "executive", label: "Executive (C-level / VP)", icon: IconCrown },
 ];
 
 export function RoleSelection({ onNext }: RoleSelectionProps) {
 	return (
-		<div className="flex flex-col animate-in fade-in duration-300">
-			<div className="text-left mb-8">
-				<h1 className="text-2xl font-semibold text-foreground mb-1 tracking-tight">
+		<div className="flex animate-in flex-col duration-300 fade-in">
+			<div className="mb-8 text-left">
+				<h1 className="mb-1 text-2xl font-semibold tracking-tight text-foreground">
 					Select Operating Mode
 				</h1>
 				<p className="text-sm text-muted-foreground">
@@ -29,31 +35,28 @@ export function RoleSelection({ onNext }: RoleSelectionProps) {
 				{ROLES.map((role) => {
 					const Icon = role.icon;
 					return (
-						<button
+						<Button
 							key={role.id}
 							type="button"
+							variant="outline"
 							onClick={onNext}
-							className="flex items-center gap-4 w-full p-3 text-left border border-border rounded-md hover:border-foreground hover:bg-muted/50 transition-all duration-150 group bg-card"
+							className="group h-auto w-full justify-start gap-4 p-3"
 						>
-							<div className="p-2 border border-transparent rounded-sm bg-muted text-muted-foreground group-hover:border-border group-hover:bg-background group-hover:text-foreground transition-colors">
-								<Icon className="w-5 h-5" aria-hidden="true" />
+							<div className="rounded-sm border border-transparent bg-muted p-2 text-muted-foreground transition-colors group-hover:border-border group-hover:bg-background group-hover:text-foreground">
+								<Icon data-icon="inline-start" />
 							</div>
-							<span className="font-medium text-foreground text-sm">
+							<span className="text-sm font-medium text-foreground">
 								{role.label}
 							</span>
-						</button>
+						</Button>
 					);
 				})}
 			</div>
 
 			<div className="mt-8 flex justify-end">
-				<button
-					type="button"
-					onClick={onNext}
-					className="text-muted-foreground hover:text-foreground text-sm font-medium transition-colors"
-				>
+				<Button type="button" variant="ghost" onClick={onNext}>
 					Skip
-				</button>
+				</Button>
 			</div>
 		</div>
 	);

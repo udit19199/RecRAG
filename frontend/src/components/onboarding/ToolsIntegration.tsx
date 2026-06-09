@@ -1,16 +1,18 @@
 "use client";
 
 import {
-	CheckCircle2,
-	Circle,
-	Cloud,
-	Database,
-	FileText,
-	HardDrive,
-	LayoutList,
-	MessageSquare,
-} from "lucide-react";
+	IconBrandGoogleDrive,
+	IconCircle,
+	IconCircleCheck,
+	IconCloud,
+	IconDatabase,
+	IconFileText,
+	IconLayoutList,
+	IconMessage,
+} from "@tabler/icons-react";
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 interface ToolsIntegrationProps {
 	onNext: () => void;
@@ -18,27 +20,12 @@ interface ToolsIntegrationProps {
 }
 
 const TOOLS = [
-	{ id: "s3", label: "Amazon S3", icon: Cloud, color: "text-chart-1" },
-	{
-		id: "drive",
-		label: "Google Drive",
-		icon: HardDrive,
-		color: "text-chart-2",
-	},
-	{
-		id: "confluence",
-		label: "Confluence",
-		icon: LayoutList,
-		color: "text-chart-3",
-	},
-	{ id: "notion", label: "Notion", icon: FileText, color: "text-foreground" },
-	{ id: "slack", label: "Slack", icon: MessageSquare, color: "text-chart-4" },
-	{
-		id: "snowflake",
-		label: "Snowflake",
-		icon: Database,
-		color: "text-chart-5",
-	},
+	{ id: "s3", label: "Amazon S3", icon: IconCloud },
+	{ id: "drive", label: "Google Drive", icon: IconBrandGoogleDrive },
+	{ id: "confluence", label: "Confluence", icon: IconLayoutList },
+	{ id: "notion", label: "Notion", icon: IconFileText },
+	{ id: "slack", label: "Slack", icon: IconMessage },
+	{ id: "snowflake", label: "Snowflake", icon: IconDatabase },
 ];
 
 export function ToolsIntegration({ onNext, onPrev }: ToolsIntegrationProps) {
@@ -55,9 +42,9 @@ export function ToolsIntegration({ onNext, onPrev }: ToolsIntegrationProps) {
 	};
 
 	return (
-		<div className="flex flex-col animate-in fade-in duration-300">
-			<div className="text-left mb-8">
-				<h1 className="text-2xl font-semibold text-foreground mb-1 tracking-tight">
+		<div className="flex animate-in flex-col duration-300 fade-in">
+			<div className="mb-8 text-left">
+				<h1 className="mb-1 text-2xl font-semibold tracking-tight text-foreground">
 					Connect Data Sources
 				</h1>
 				<p className="text-sm text-muted-foreground">
@@ -65,61 +52,47 @@ export function ToolsIntegration({ onNext, onPrev }: ToolsIntegrationProps) {
 				</p>
 			</div>
 
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+			<div className="grid grid-cols-1 gap-4 md:grid-cols-2">
 				{TOOLS.map((tool) => {
 					const isSelected = selected.has(tool.id);
 					const Icon = tool.icon;
 					return (
-						<button
+						<Button
 							key={tool.id}
 							type="button"
+							variant="outline"
 							onClick={() => toggleTool(tool.id)}
-							className={`flex items-center justify-between p-3 text-left border rounded-md transition-all duration-150 ${
-								isSelected
-									? "border-foreground bg-muted/30"
-									: "border-border bg-card hover:border-foreground/50 hover:bg-muted/10"
-							}`}
+							className={cn(
+								"h-auto justify-between p-3",
+								isSelected && "border-foreground bg-muted/30",
+							)}
 						>
 							<div className="flex items-center gap-3">
-								<Icon
-									className={`w-4 h-4 text-foreground`}
-									aria-hidden="true"
-								/>
-								<span className="font-medium text-sm text-foreground">
+								<Icon data-icon="inline-start" />
+								<span className="text-sm font-medium text-foreground">
 									{tool.label}
 								</span>
 							</div>
 							{isSelected ? (
-								<CheckCircle2
-									className="w-4 h-4 text-foreground"
-									aria-hidden="true"
-								/>
+								<IconCircleCheck data-icon="inline-end" />
 							) : (
-								<Circle
-									className="w-4 h-4 text-muted-foreground/30"
-									aria-hidden="true"
+								<IconCircle
+									data-icon="inline-end"
+									className="text-muted-foreground/30"
 								/>
 							)}
-						</button>
+						</Button>
 					);
 				})}
 			</div>
 
 			<div className="mt-10 flex items-center justify-between">
-				<button
-					type="button"
-					onClick={onPrev}
-					className="text-muted-foreground hover:text-foreground text-sm font-medium transition-colors"
-				>
+				<Button type="button" variant="ghost" onClick={onPrev}>
 					Back
-				</button>
-				<button
-					type="button"
-					onClick={onNext}
-					className="bg-foreground hover:bg-foreground/90 text-background px-6 py-2 rounded-md font-medium transition-colors"
-				>
+				</Button>
+				<Button type="button" onClick={onNext}>
 					Next
-				</button>
+				</Button>
 			</div>
 		</div>
 	);
