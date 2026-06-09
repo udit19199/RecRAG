@@ -36,6 +36,41 @@ export async function authenticatedFetch(
 	});
 }
 
+export function uploadFormData(
+	url: string,
+	formData: FormData,
+	onProgress?: (percent: number) => void,
+): Promise<Response> {
+	return new Promise((resolve, reject) => {
+		const xhr = new XMLHttpRequest();
+		xhr.open("POST", url);
+
+		for (const [key, value] of Object.entries(getAuthHeaders())) {
+			xhr.setRequestHeader(key, value);
+		}
+
+		xhr.upload.onprogress = (event) => {
+			if (event.lengthComputable && onProgress) {
+				onProgress(Math.round((event.loaded / event.total) * 100));
+			}
+		};
+
+		xhr.onload = () => {
+			resolve(
+				new Response(xhr.responseText, {
+					status: xhr.status,
+					statusText: xhr.statusText,
+				}),
+			);
+		};
+
+		xhr.onerror = () => reject(new Error("Network error during upload"));
+		xhr.onabort = () => reject(new Error("Upload cancelled"));
+
+		xhr.send(formData);
+	});
+}
+
 export async function handleResponse<T>(res: Response): Promise<T> {
 	if (!res.ok) {
 		const error = await res.json().catch(() => ({ detail: "Unknown error" }));

@@ -22,6 +22,7 @@ export function useChatSession() {
 	const [statusError, setStatusError] = useState<string | null>(null);
 	const [healthError, setHealthError] = useState<string | null>(null);
 	const [isUploading, setIsUploading] = useState(false);
+	const [uploadProgress, setUploadProgress] = useState<number | null>(null);
 	const [uploadFeedback, setUploadFeedback] = useState<{
 		type: "success" | "error";
 		message: string;
@@ -179,15 +180,21 @@ export function useChatSession() {
 
 	const handleUpload = async (files: File[], options?: ExtractionOptions) => {
 		setIsUploading(true);
+		setUploadProgress(0);
 		setUploadFeedback(null);
 
 		try {
-			await uploadPDFs(files, options);
+			await uploadPDFs(files, options, setUploadProgress);
+			setUploadProgress(null);
 			setUploadFeedback({
 				type: "success",
-				message: `${files.length} file${files.length > 1 ? "s" : ""} uploaded. Existing corpus replaced and processing started.`,
+				message: `${files.length} file${files.length > 1 ? "s" : ""} uploaded. Indexing documents…`,
 			});
-			const finalStatus = await waitForIngestionComplete();
+			const finalStatus = await waitForIngestionComplete(
+				2000,
+				120000,
+				setIngestionStatus,
+			);
 			setIngestionStatus(finalStatus);
 		} catch (err) {
 			setUploadFeedback({
@@ -196,6 +203,7 @@ export function useChatSession() {
 			});
 		} finally {
 			setIsUploading(false);
+			setUploadProgress(null);
 		}
 	};
 
@@ -207,6 +215,7 @@ export function useChatSession() {
 		statusError,
 		healthError,
 		isUploading,
+		uploadProgress,
 		uploadFeedback,
 		messages,
 		isQuerying,

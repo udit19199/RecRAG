@@ -5,11 +5,13 @@ import type { IngestionStatus } from "@/lib/api/types";
 export async function waitForIngestionComplete(
 	intervalMs: number = 2000,
 	timeoutMs: number = 120000,
+	onPoll?: (status: IngestionStatus) => void,
 ): Promise<IngestionStatus> {
 	const startTime = Date.now();
 
 	while (Date.now() - startTime < timeoutMs) {
 		const status = await getIngestionStatus();
+		onPoll?.(status);
 
 		if (status.status === "complete") {
 			return status;

@@ -184,6 +184,13 @@ export default function IngestionStatusDisplay({
 					<p className="mt-2 text-sm leading-relaxed text-foreground">
 						{config.description}
 					</p>
+					{status.status === "processing" ? (
+						<progress
+							aria-label="Indexing in progress"
+							aria-busy="true"
+							className="mt-3 h-2 w-full animate-pulse overflow-hidden rounded-full bg-primary/20 accent-primary [&::-moz-progress-bar]:rounded-full [&::-moz-progress-bar]:bg-primary/70 [&::-webkit-progress-bar]:rounded-full [&::-webkit-progress-bar]:bg-primary/20 [&::-webkit-progress-value]:rounded-full [&::-webkit-progress-value]:bg-primary/70"
+						/>
+					) : null}
 					{status.completed_at ? (
 						<p className="mt-1 text-xs text-muted-foreground">
 							Completed at: {status.completed_at}

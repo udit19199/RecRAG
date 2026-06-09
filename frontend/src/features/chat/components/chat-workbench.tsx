@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { Progress } from "@/components/ui/progress";
 import { ChatInput } from "@/features/chat/components/chat-input";
 import { ChatMessageView } from "@/features/chat/components/chat-message";
 import { EmptyState } from "@/features/chat/components/empty-state";
@@ -21,6 +22,7 @@ export function ChatWorkbench() {
 		statusError,
 		healthError,
 		isUploading,
+		uploadProgress,
 		uploadFeedback,
 		messages,
 		isQuerying,
@@ -37,6 +39,10 @@ export function ChatWorkbench() {
 	});
 
 	const isIngesting = ingestionStatus?.status === "processing";
+	const isAwaitingIngestion =
+		isUploading &&
+		uploadProgress === null &&
+		uploadFeedback?.type === "success";
 	const canChat =
 		isReady &&
 		!isIngesting &&
@@ -66,14 +72,33 @@ export function ChatWorkbench() {
 				<section className="flex min-w-0 flex-1 flex-col gap-4 overflow-hidden">
 					<div className="flex flex-1 flex-col overflow-hidden rounded-xl border bg-card">
 						<div className="space-y-3 border-b bg-background px-4 py-3">
+							{isUploading && uploadProgress !== null ? (
+								<div className="animate-in fade-in slide-in-from-top-2 duration-300 rounded-lg border border-border bg-muted/40 px-4 py-3">
+									<div className="flex items-center justify-between gap-3 text-sm">
+										<span className="font-medium text-foreground">
+											Uploading files…
+										</span>
+										<span className="text-xs tabular-nums text-muted-foreground">
+											{uploadProgress}%
+										</span>
+									</div>
+									<Progress
+										className="mt-3"
+										value={uploadProgress}
+										aria-label="Upload progress"
+									/>
+								</div>
+							) : null}
+
 							{isIngesting ||
+							isAwaitingIngestion ||
 							ingestionStatus?.status === "complete" ||
 							uploadFeedback?.type === "error" ? (
 								<div className="animate-in fade-in slide-in-from-top-2 duration-300">
 									<IngestionStatusDisplay
 										status={ingestionStatus}
 										error={statusError}
-										isLoading={false}
+										isLoading={isAwaitingIngestion && !isIngesting}
 									/>
 									{ingestionStatus?.status === "complete" && !isIngesting ? (
 										<div className="mt-2 rounded-lg border border-success/20 bg-success/5 px-3 py-2 text-xs text-success dark:text-success-foreground">
@@ -88,8 +113,8 @@ export function ChatWorkbench() {
 								</div>
 							) : null}
 
-							{uploadFeedback?.type === "success" && !isIngesting ? (
-								<div className="animate-in fade-in slide-in-from-top-1 duration-300 rounded-lg border border-success/20 bg-success/5 px-3 py-2 text-xs text-success dark:text-success-foreground">
+							{uploadFeedback?.type === "success" && isIngesting ? (
+								<div className="animate-in fade-in slide-in-from-top-1 duration-300 rounded-lg border border-primary/20 bg-primary/5 px-3 py-2 text-xs text-foreground">
 									{uploadFeedback.message}
 								</div>
 							) : null}

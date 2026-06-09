@@ -2,6 +2,7 @@ import {
 	authenticatedFetch,
 	getIngestionApiUrl,
 	handleResponse,
+	uploadFormData,
 } from "@/lib/api/client";
 import type {
 	AdapterConfig,
@@ -19,6 +20,7 @@ import type {
 export async function uploadPDFs(
 	files: File[],
 	options?: ExtractionOptions,
+	onProgress?: (percent: number) => void,
 ): Promise<UploadResponse> {
 	const formData = new FormData();
 
@@ -37,10 +39,11 @@ export async function uploadPDFs(
 		}
 	}
 
-	const res = await authenticatedFetch(getIngestionApiUrl("/upload"), {
-		method: "POST",
-		body: formData,
-	});
+	const res = await uploadFormData(
+		getIngestionApiUrl("/upload"),
+		formData,
+		onProgress,
+	);
 
 	return handleResponse<UploadResponse>(res);
 }
