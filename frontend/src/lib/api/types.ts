@@ -44,6 +44,11 @@ export interface ExtractionOptions {
 	vision_model?: string;
 }
 
+export interface UploadOptions extends ExtractionOptions {
+	/** When true, remove existing PDFs before saving the new batch. */
+	replace?: boolean;
+}
+
 export interface IngestionStatus {
 	status: "idle" | "processing" | "complete" | "error";
 	started_at?: string;

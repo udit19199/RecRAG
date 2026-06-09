@@ -13,9 +13,14 @@ import {
 	AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
+import { Switch } from "@/components/ui/switch";
+import type { UploadOptions } from "@/lib/api/types";
 
 interface UploadDialogProps {
-	onUpload: (files: File[]) => Promise<void>;
+	onUpload: (
+		files: File[],
+		options?: Pick<UploadOptions, "replace">,
+	) => Promise<void>;
 	isUploading: boolean;
 	trigger?: React.ReactNode;
 }
@@ -27,18 +32,27 @@ export function UploadDialog({
 }: UploadDialogProps) {
 	const fileInputRef = React.useRef<HTMLInputElement>(null);
 	const [open, setOpen] = React.useState(false);
+	const [replaceExisting, setReplaceExisting] = React.useState(false);
+
+	const handleOpenChange = (nextOpen: boolean) => {
+		setOpen(nextOpen);
+		if (!nextOpen) {
+			setReplaceExisting(false);
+		}
+	};
 
 	const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		const files = Array.from(event.target.files || []);
 		if (files.length > 0) {
-			void onUpload(files);
+			void onUpload(files, replaceExisting ? { replace: true } : undefined);
 			setOpen(false);
+			setReplaceExisting(false);
 			if (fileInputRef.current) fileInputRef.current.value = "";
 		}
 	};
 
 	return (
-		<AlertDialog open={open} onOpenChange={setOpen}>
+		<AlertDialog open={open} onOpenChange={handleOpenChange}>
 			<AlertDialogTrigger asChild>
 				{trigger || (
 					<Button variant="outline" size="sm">
@@ -53,7 +67,8 @@ export function UploadDialog({
 						Upload Documents
 					</AlertDialogTitle>
 					<AlertDialogDescription>
-						Choose your full PDF document set to build the retrieval corpus.
+						Add PDF documents to your library. You can upload more files at any
+						time.
 					</AlertDialogDescription>
 				</AlertDialogHeader>
 
@@ -84,14 +99,26 @@ export function UploadDialog({
 									Keep individual files under <strong>50 MB</strong>.
 								</span>
 							</li>
-							<li className="flex items-start gap-2">
-								<span className="mt-1 size-1.5 shrink-0 rounded-full bg-primary" />
-								<span>
-									A new upload will <strong>replace</strong> the entire current
-									corpus.
-								</span>
-							</li>
 						</ul>
+					</div>
+
+					<div className="flex items-center justify-between gap-3 rounded-lg border bg-background px-4 py-3">
+						<div className="min-w-0">
+							<p className="text-sm font-medium text-foreground">
+								Replace existing documents
+							</p>
+							<p className="mt-0.5 text-xs text-muted-foreground">
+								{replaceExisting
+									? "The current library will be cleared before indexing."
+									: "New files will be added to your existing library."}
+							</p>
+						</div>
+						<Switch
+							checked={replaceExisting}
+							onCheckedChange={setReplaceExisting}
+							disabled={isUploading}
+							aria-label="Replace existing documents"
+						/>
 					</div>
 
 					<div className="flex flex-col gap-2">

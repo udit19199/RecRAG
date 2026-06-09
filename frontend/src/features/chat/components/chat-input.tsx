@@ -1,6 +1,7 @@
 import { type FormEvent, type KeyboardEvent, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { UploadDialog } from "@/features/ingestion/components/upload-dialog";
+import type { UploadOptions } from "@/lib/api/types";
 import { cn } from "@/lib/utils";
 
 export function ChatInput({
@@ -12,7 +13,10 @@ export function ChatInput({
 	disabledReason,
 }: {
 	onSubmit: (query: string) => Promise<void>;
-	onUpload: (files: File[]) => Promise<void>;
+	onUpload: (
+		files: File[],
+		options?: Pick<UploadOptions, "replace">,
+	) => Promise<void>;
 	isLoading: boolean;
 	isUploading: boolean;
 	disabled?: boolean;

@@ -11,7 +11,7 @@ import IngestionStatusDisplay from "@/features/ingestion/components/ingestion-st
 import ModelPicker, {
 	type VisionConfig,
 } from "@/features/model-compare/components/model-picker";
-import type { ExtractionOptions } from "@/lib/api/types";
+import type { ExtractionOptions, UploadOptions } from "@/lib/api/types";
 
 export function ChatWorkbench() {
 	const {
@@ -60,10 +60,20 @@ export function ChatWorkbench() {
 		};
 	};
 
-	// Wrap handleUpload to include extraction options
-	const handleUploadWithVision = async (files: File[]) => {
-		const options = getExtractionOptions();
-		await handleUpload(files, options);
+	const handleUploadWithVision = async (
+		files: File[],
+		uploadOpts?: Pick<UploadOptions, "replace">,
+	) => {
+		const extraction = getExtractionOptions();
+		if (!extraction && !uploadOpts?.replace) {
+			await handleUpload(files);
+			return;
+		}
+
+		await handleUpload(files, {
+			...(extraction ?? { extraction_mode: "text_only" as const }),
+			...(uploadOpts?.replace ? { replace: true } : {}),
+		});
 	};
 
 	return (

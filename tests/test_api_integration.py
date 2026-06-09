@@ -120,6 +120,72 @@ class TestIngestionAPIAuth:
             assert response.status_code == 401
 
 
+class TestUploadCorpusModes:
+    """Upload should append by default and replace only when requested."""
+
+    @pytest.fixture
+    def client(self) -> TestClient:
+        with patch("app.ingestion.main.IngestionRuntime") as MockRuntime:
+            mock_runtime = MagicMock()
+            mock_runtime.warm = AsyncMock()
+            mock_runtime.shutdown = AsyncMock()
+            MockRuntime.return_value = mock_runtime
+
+            from app.ingestion.main import app
+
+            with TestClient(app) as tc:
+                yield tc
+
+    def test_additive_upload_keeps_existing_files(self, client: TestClient, tmp_path: Path) -> None:
+        pdf_dir = tmp_path / "pdfs"
+        pdf_dir.mkdir()
+        (pdf_dir / "existing.pdf").write_bytes(b"%PDF-1.4 existing %%EOF")
+
+        with (
+            patch.dict("os.environ", {"REC_RAG_API_KEY": "valid-key"}),
+            patch("app.ingestion.main.PDF_DIR", pdf_dir),
+            patch("app.ingestion.main.read_status", return_value={"status": "idle"}),
+            patch("app.ingestion.main.write_status"),
+        ):
+            response = client.post(
+                "/upload",
+                data={"replace": "false"},
+                files={
+                    "files": ("new.pdf", b"%PDF-1.4 new %%EOF", "application/pdf"),
+                },
+                headers={"RecRAG-API-Key": "valid-key"},
+            )
+
+        assert response.status_code == 200
+        assert sorted(p.name for p in pdf_dir.glob("*.pdf")) == [
+            "existing.pdf",
+            "new.pdf",
+        ]
+
+    def test_replace_upload_clears_existing_files(self, client: TestClient, tmp_path: Path) -> None:
+        pdf_dir = tmp_path / "pdfs"
+        pdf_dir.mkdir()
+        (pdf_dir / "existing.pdf").write_bytes(b"%PDF-1.4 existing %%EOF")
+
+        with (
+            patch.dict("os.environ", {"REC_RAG_API_KEY": "valid-key"}),
+            patch("app.ingestion.main.PDF_DIR", pdf_dir),
+            patch("app.ingestion.main.read_status", return_value={"status": "idle"}),
+            patch("app.ingestion.main.write_status"),
+        ):
+            response = client.post(
+                "/upload",
+                data={"replace": "true"},
+                files={
+                    "files": ("new.pdf", b"%PDF-1.4 new %%EOF", "application/pdf"),
+                },
+                headers={"RecRAG-API-Key": "valid-key"},
+            )
+
+        assert response.status_code == 200
+        assert sorted(p.name for p in pdf_dir.glob("*.pdf")) == ["new.pdf"]
+
+
 # ── Retrieval API Tests ───────────────────────────────────────────────────────
 
 

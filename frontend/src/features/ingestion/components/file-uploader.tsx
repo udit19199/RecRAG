@@ -2,8 +2,10 @@
 
 import { type ChangeEvent, useRef, useState } from "react";
 
+import type { UploadOptions } from "@/lib/api/types";
+
 interface FileUploaderProps {
-	onUpload: (files: File[]) => Promise<void>;
+	onUpload: (files: File[], options?: UploadOptions) => Promise<void>;
 	isUploading: boolean;
 	disabled?: boolean;
 }
@@ -63,7 +65,10 @@ export default function FileUploader({
 
 	const handleUpload = async () => {
 		if (selectedFiles.length === 0 || isUploading || disabled) return;
-		await onUpload(selectedFiles);
+		await onUpload(selectedFiles, {
+			extraction_mode: "text_only",
+			replace: true,
+		});
 		setSelectedFiles([]);
 	};
 
@@ -118,7 +123,7 @@ export default function FileUploader({
 							PDF files only (max 50MB)
 						</p>
 						<p className="text-xs text-muted-foreground">
-							A new batch replaces the current corpus
+							This replaces your current document library
 						</p>
 					</div>
 				</div>

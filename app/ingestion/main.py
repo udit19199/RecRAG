@@ -130,6 +130,7 @@ async def upload_pdfs(
     extraction_mode: str = Form(default="text_only"),
     vision_provider: str | None = Form(default=None),
     vision_model: str | None = Form(default=None),
+    replace: bool = Form(default=False),
     _: None = Depends(verify_api_key),
 ) -> UploadResponse:
     """Upload PDF files for ingestion.
@@ -139,6 +140,8 @@ async def upload_pdfs(
         extraction_mode: "text_only" (default) or "vision_assisted".
         vision_provider: Vision provider (openai, ollama, nim) when using vision mode.
         vision_model: Vision model name when using vision mode.
+        replace: When true, remove existing PDFs before saving the new batch.
+            When false (default), new files are added alongside existing ones.
     """
     if not files:
         raise HTTPException(status_code=400, detail="At least one PDF file is required")
@@ -183,9 +186,9 @@ async def upload_pdfs(
         seen_names.add(filename)
 
     try:
-        # Async-safe directory reset: remove and recreate using asyncio.to_thread
         await asyncio.to_thread(PDF_DIR.mkdir, parents=True, exist_ok=True)
-        await asyncio.to_thread(_reset_directory, PDF_DIR)
+        if replace:
+            await asyncio.to_thread(_reset_directory, PDF_DIR)
 
         for filename, content in staged_files:
             file_path = PDF_DIR / filename
@@ -203,10 +206,16 @@ async def upload_pdfs(
         vision_model=vision_model,
     )
 
+    count = len(staged_files)
+    file_label = f"{count} file{'s' if count != 1 else ''}"
+    if replace:
+        summary = f"Corpus replaced with {file_label}."
+    else:
+        summary = f"{file_label} added to library."
     return UploadResponse(
         success=True,
-        files_uploaded=len(staged_files),
-        message=f"Batch uploaded. Ingestion has started (mode={mode.value}).",
+        files_uploaded=count,
+        message=f"{summary} Ingestion has started (mode={mode.value}).",
         extraction_mode=mode.value,
     )
 

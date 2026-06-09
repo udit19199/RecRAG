@@ -12,7 +12,7 @@ import {
 	uploadPDFs,
 	waitForIngestionComplete,
 } from "@/lib/api";
-import type { ExtractionOptions } from "@/lib/api/types";
+import type { UploadOptions } from "@/lib/api/types";
 
 export function useChatSession() {
 	const [isReady, setIsReady] = useState(false);
@@ -178,7 +178,7 @@ export function useChatSession() {
 		}
 	};
 
-	const handleUpload = async (files: File[], options?: ExtractionOptions) => {
+	const handleUpload = async (files: File[], options?: UploadOptions) => {
 		setIsUploading(true);
 		setUploadProgress(0);
 		setUploadFeedback(null);
@@ -196,6 +196,7 @@ export function useChatSession() {
 				setIngestionStatus,
 			);
 			setIngestionStatus(finalStatus);
+			await fetchFiles();
 		} catch (err) {
 			setUploadFeedback({
 				type: "error",

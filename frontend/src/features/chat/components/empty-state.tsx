@@ -8,6 +8,7 @@ import {
 	EmptyTitle,
 } from "@/components/ui/empty";
 import { UploadDialog } from "@/features/ingestion/components/upload-dialog";
+import type { UploadOptions } from "@/lib/api/types";
 
 export function EmptyState({
 	isReady,
@@ -17,7 +18,10 @@ export function EmptyState({
 }: {
 	isReady: boolean;
 	error?: string | null;
-	onUpload: (files: File[]) => Promise<void>;
+	onUpload: (
+		files: File[],
+		options?: Pick<UploadOptions, "replace">,
+	) => Promise<void>;
 	isUploading: boolean;
 }) {
 	return (

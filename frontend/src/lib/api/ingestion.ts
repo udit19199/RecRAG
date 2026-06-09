@@ -8,6 +8,7 @@ import type {
 	AdapterConfig,
 	ExtractionOptions,
 	FileListResponse,
+	UploadOptions,
 	HealthResponse,
 	IndexStatusRequest,
 	IndexStatusResponse,
@@ -19,7 +20,7 @@ import type {
 
 export async function uploadPDFs(
 	files: File[],
-	options?: ExtractionOptions,
+	options?: UploadOptions,
 	onProgress?: (percent: number) => void,
 ): Promise<UploadResponse> {
 	const formData = new FormData();
@@ -28,7 +29,6 @@ export async function uploadPDFs(
 		formData.append("files", file);
 	}
 
-	// Add extraction options to form data
 	if (options) {
 		formData.append("extraction_mode", options.extraction_mode);
 		if (options.vision_provider) {
@@ -36,6 +36,9 @@ export async function uploadPDFs(
 		}
 		if (options.vision_model) {
 			formData.append("vision_model", options.vision_model);
+		}
+		if (options.replace) {
+			formData.append("replace", "true");
 		}
 	}
 
