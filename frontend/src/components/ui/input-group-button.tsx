@@ -5,14 +5,15 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const inputGroupButtonVariants = cva(
-	"flex items-center gap-2 text-xs shadow-none",
+	"flex items-center gap-2 text-sm shadow-none",
 	{
 		variants: {
 			size: {
-				xs: "h-6 gap-1 rounded-none px-1.5 [&>svg:not([class*='size-'])]:size-3.5",
-				sm: "gap-1",
-				"icon-xs": "size-6 rounded-none p-0 has-[>svg]:p-0",
-				"icon-sm": "size-7 p-0 has-[>svg]:p-0",
+				xs: "h-6 gap-1 rounded-[calc(var(--radius)-3px)] px-1.5 [&>svg:not([class*='size-'])]:size-3.5",
+				sm: "",
+				"icon-xs":
+					"size-6 rounded-[calc(var(--radius)-3px)] p-0 has-[>svg]:p-0",
+				"icon-sm": "size-8 p-0 has-[>svg]:p-0",
 			},
 		},
 		defaultVariants: {

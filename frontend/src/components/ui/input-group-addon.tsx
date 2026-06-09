@@ -6,7 +6,7 @@ import type * as React from "react";
 import { cn } from "@/lib/utils";
 
 const inputGroupAddonVariants = cva(
-	"flex h-auto cursor-text items-center justify-center gap-2 py-1.5 text-xs font-medium text-muted-foreground select-none group-data-[disabled=true]/input-group:opacity-50 [&>kbd]:rounded-none [&>svg:not([class*='size-'])]:size-4",
+	"flex h-auto cursor-text items-center justify-center gap-2 py-1.5 text-sm font-medium text-muted-foreground select-none group-data-[disabled=true]/input-group:opacity-50 [&>kbd]:rounded-[calc(var(--radius)-5px)] [&>svg:not([class*='size-'])]:size-4",
 	{
 		variants: {
 			align: {
@@ -32,26 +32,10 @@ function InputGroupAddon({
 	...props
 }: React.ComponentProps<"div"> & VariantProps<typeof inputGroupAddonVariants>) {
 	return (
-		// biome-ignore lint/a11y/noStaticElementInteractions: click-to-focus layout wrapper for input group
 		<div
 			data-slot="input-group-addon"
 			data-align={align}
 			className={cn(inputGroupAddonVariants({ align }), className)}
-			onClick={(event) => {
-				if ((event.target as HTMLElement).closest("button")) {
-					return;
-				}
-				event.currentTarget.parentElement?.querySelector("input")?.focus();
-			}}
-			onKeyDown={(event) => {
-				if (event.key === "Enter" || event.key === " ") {
-					event.preventDefault();
-					if ((event.target as HTMLElement).closest("button")) {
-						return;
-					}
-					event.currentTarget.parentElement?.querySelector("input")?.focus();
-				}
-			}}
 			{...props}
 		/>
 	);
