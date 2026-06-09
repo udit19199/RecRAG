@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "hooks": {
+    "beforeShellExecution": [
+      {
+        "command": ".cursor/hooks/react-doctor-before-commit.sh",
+        "matcher": "git commit",
+        "failClosed": false
+      }
+    ],
+    "stop": [
+      {
+        "command": ".cursor/hooks/react-doctor-on-stop.sh",
+        "timeout": 120
+      }
+    ]
+  }
+}

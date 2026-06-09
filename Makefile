@@ -28,6 +28,7 @@ install: ## One-time setup: install Python and Node dependencies
 	@npx --yes @llamaindex/liteparse --version 2>/dev/null || true
 
 setup: install ## Full setup: install dependencies and create .env
+	@chmod +x .cursor/hooks/*.sh 2>/dev/null || true
 	@if [ ! -f .env ]; then \
 		cp .env.example .env; \
 		echo ".env file created from .env.example. Please update it with your API keys."; \
