@@ -1,6 +1,5 @@
 import logging
-
-
+from typing import Any
 
 import asyncio
 import contextlib
@@ -94,6 +93,7 @@ def run_eval_job(
 
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s:     %(message)s")
+logger = logging.getLogger(__name__)
 
 app = FastAPI(
     title="RecRAG Retrieval API",
@@ -243,10 +243,10 @@ async def health(
     has_documents = False
     if runtime.is_loaded():
         try:
-            async with runtime.acquire(timeout_s=0.5) as pipeline:
+            async with runtime.acquire(timeout_s=2.0) as pipeline:
                 has_documents = pipeline.vector_store.count > 0
-        except Exception:
-            pass
+        except Exception as exc:
+            logger.warning("Health document check via pipeline failed: %s", exc)
 
     return HealthResponse(
         status="healthy" if runtime.is_loaded() else status,
@@ -295,6 +295,9 @@ async def get_providers(_: None = Depends(verify_api_key)) -> ProvidersResponse:
     ollama_llm_url = env_host
     ollama_vision_url = env_host
 
+    embed_cfg: dict[str, Any] = {}
+    llm_cfg: dict[str, Any] = {}
+    vision_cfg: dict[str, Any] = {}
     try:
         config_path = find_config_path()
         config = load_config(config_path)
@@ -322,12 +325,28 @@ async def get_providers(_: None = Depends(verify_api_key)) -> ProvidersResponse:
         _fetch_ollama_vision_models(ollama_vision_url) if ollama_available else []
     )
 
+    lmstudio_base_url = (
+        embed_cfg.get("base_url")
+        if embed_cfg.get("provider") == "lmstudio"
+        else os.environ.get("LM_STUDIO_BASE_URL", "http://127.0.0.1:1234/v1")
+    )
+    lmstudio_embed_models, _ = _fetch_openai_models(
+        "lm-studio", base_url=lmstudio_base_url
+    )
+    lmstudio_available = bool(lmstudio_embed_models)
+    lmstudio_reason = None if lmstudio_available else "LM Studio not reachable"
+
     openai_key = os.environ.get("OPENAI_API_KEY", "")
+    openai_llm_base_url = llm_cfg.get("base_url")
     if openai_key:
-        openai_embed_models, openai_llm_models = _fetch_openai_models(openai_key)
+        openai_embed_models, openai_llm_models = _fetch_openai_models(
+            openai_key, base_url=openai_llm_base_url
+        )
         openai_available = bool(openai_embed_models or openai_llm_models)
-        openai_reason = None
-        openai_vision_models = _fetch_openai_vision_models(openai_key)
+        openai_reason = None if openai_available else "OpenAI API not reachable"
+        openai_vision_models = _fetch_openai_vision_models(
+            openai_key, base_url=openai_llm_base_url
+        )
     else:
         openai_embed_models = []
         openai_llm_models = []
@@ -376,6 +395,11 @@ async def get_providers(_: None = Depends(verify_api_key)) -> ProvidersResponse:
                 available=openai_available,
                 models=openai_embed_models,
                 reason=openai_reason,
+            ),
+            "lmstudio": ProviderInfo(
+                available=lmstudio_available,
+                models=lmstudio_embed_models,
+                reason=lmstudio_reason,
             ),
             "nim": ProviderInfo(
                 available=nim_available,
@@ -432,6 +456,40 @@ async def get_providers(_: None = Depends(verify_api_key)) -> ProvidersResponse:
                 reason=gemini_reason if not gemini_available else None,
             ),
         },
+    )
+
+
+@app.post("/config/reload", response_model=SetConfigResponse)
+async def reload_config(
+    _: None = Depends(verify_api_key),
+) -> SetConfigResponse:
+    """Reload the retrieval pipeline from config.toml defaults."""
+    try:
+        config_path = find_config_path()
+        config = load_config(config_path)
+        runtime = app.state.retrieval_runtime
+        (
+            embed_provider,
+            embed_model,
+            llm_provider,
+            llm_model,
+            requires_reindex,
+        ) = await runtime.reload(
+            config=config,
+            config_path=config_path,
+            embedding=None,
+            llm=None,
+        )
+    except Exception as exc:
+        raise HTTPException(
+            status_code=500, detail=f"Failed to reload config: {exc}"
+        ) from exc
+
+    return SetConfigResponse(
+        applied=True,
+        requires_reindex=requires_reindex,
+        embedding=AdapterConfig(provider=embed_provider, model=embed_model),
+        llm=AdapterConfig(provider=llm_provider, model=llm_model),
     )
 
 

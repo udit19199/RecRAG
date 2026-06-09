@@ -63,6 +63,7 @@ type PendingEmbedChange = { provider: string; model: string } | null;
 const PROVIDER_LABELS: Record<string, string> = {
 	ollama: "Ollama",
 	openai: "OpenAI",
+	lmstudio: "LM Studio",
 	nim: "NVIDIA NIM",
 	gemini: "Google Gemini",
 };

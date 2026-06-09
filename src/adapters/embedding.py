@@ -12,10 +12,13 @@ EMBEDDING_DIMENSIONS = {
     "text-embedding-3-small": 1536,
     "text-embedding-3-large": 3072,
     "text-embedding-ada-002": 1536,
+    "text-embedding-nomic-embed-text-v1.5": 768,
+    "nomic-embed-text": 768,
 }
 
 DEFAULT_BATCH_SIZE = 500
 DEFAULT_OLLAMA_DIMENSION = 768
+DEFAULT_LM_STUDIO_BASE_URL = "http://127.0.0.1:1234/v1"
 
 
 class OpenAIEmbedder(BaseEmbedder):
@@ -24,8 +27,11 @@ class OpenAIEmbedder(BaseEmbedder):
     provider = "openai"
 
     def __init__(self, model: str = "text-embedding-3-small", **kwargs: Any):
-        api_key = kwargs.pop("api_key", None) or os.environ.get("OPENAI_API_KEY")
         base_url = kwargs.pop("base_url", None)
+        api_key = kwargs.pop("api_key", None) or os.environ.get("OPENAI_API_KEY")
+        if not api_key and base_url:
+            # LM Studio and other local OpenAI-compatible servers accept any key.
+            api_key = "lm-studio"
         dimensions = kwargs.pop("dimensions", None)
         self._timeout = kwargs.pop("timeout", None)
         super().__init__(model, **kwargs)
@@ -55,6 +61,24 @@ class OpenAIEmbedder(BaseEmbedder):
     def embed_batch(self, texts: list[str]) -> list[list[float]]:
         response = self.client.embeddings.create(**self._create_embedding_params(texts))
         return [item.embedding for item in response.data]
+
+
+class LMStudioEmbedder(OpenAIEmbedder):
+    """LM Studio local embedding server (OpenAI-compatible /v1 API)."""
+
+    provider = "lmstudio"
+
+    def __init__(
+        self,
+        model: str = "text-embedding-nomic-embed-text-v1.5",
+        **kwargs: Any,
+    ):
+        base_url = (
+            kwargs.pop("base_url", None)
+            or os.environ.get("LM_STUDIO_BASE_URL")
+            or DEFAULT_LM_STUDIO_BASE_URL
+        )
+        super().__init__(model=model, base_url=base_url, **kwargs)
 
 
 class OllamaEmbedder(BaseEmbedder):

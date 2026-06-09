@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { ChatInput } from "@/features/chat/components/chat-input";
 import { ChatMessageView } from "@/features/chat/components/chat-message";
@@ -26,8 +27,10 @@ export function ChatWorkbench() {
 		uploadFeedback,
 		messages,
 		isQuerying,
+		isReindexing,
 		handleQuery,
 		handleUpload,
+		handleReindex,
 		handleReindexStarted,
 	} = useChatSession();
 
@@ -38,7 +41,13 @@ export function ChatWorkbench() {
 		chatBottomRef.current?.scrollIntoView({ behavior: "smooth" });
 	});
 
-	const isIngesting = ingestionStatus?.status === "processing";
+	const isIngesting =
+		ingestionStatus?.status === "processing" || isReindexing;
+	const needsIndexing =
+		uploadedFiles.length > 0 &&
+		!hasDocuments &&
+		!isIngesting &&
+		ingestionStatus?.status !== "complete";
 	const isAwaitingIngestion =
 		isUploading &&
 		uploadProgress === null &&
@@ -47,6 +56,42 @@ export function ChatWorkbench() {
 		isReady &&
 		!isIngesting &&
 		(hasDocuments || ingestionStatus?.status === "complete");
+
+	// #region agent log
+	useEffect(() => {
+		fetch("http://127.0.0.1:7916/ingest/3188a69e-7db0-4d0f-b5ef-4e3827cb1095", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+				"X-Debug-Session-Id": "50063e",
+			},
+			body: JSON.stringify({
+				sessionId: "50063e",
+				location: "chat-workbench.tsx:canChat",
+				message: "chat gate evaluated",
+				data: {
+					canChat,
+					isReady,
+					isIngesting,
+					hasDocuments,
+					needsIndexing,
+					ingestionStatus: ingestionStatus?.status ?? null,
+					uploadedFileCount: uploadedFiles.length,
+				},
+				timestamp: Date.now(),
+				hypothesisId: "H3-H5",
+			}),
+		}).catch(() => {});
+	}, [
+		canChat,
+		isReady,
+		isIngesting,
+		hasDocuments,
+		needsIndexing,
+		ingestionStatus?.status,
+		uploadedFiles.length,
+	]);
+	// #endregion
 
 	// Build extraction options based on vision config
 	const getExtractionOptions = (): ExtractionOptions | undefined => {
@@ -58,6 +103,10 @@ export function ChatWorkbench() {
 			vision_provider: visionConfig.provider,
 			vision_model: visionConfig.model,
 		};
+	};
+
+	const handleReindexWithVision = async () => {
+		await handleReindex(getExtractionOptions());
 	};
 
 	const handleUploadWithVision = async (
@@ -100,9 +149,35 @@ export function ChatWorkbench() {
 								</div>
 							) : null}
 
+							{needsIndexing ? (
+								<div className="animate-in fade-in slide-in-from-top-2 duration-300 rounded-lg border border-amber-500/40 bg-amber-500/10 px-4 py-3">
+									<div className="flex flex-wrap items-center justify-between gap-3">
+										<div className="min-w-0">
+											<p className="text-sm font-medium text-foreground">
+												Documents uploaded but not indexed
+											</p>
+											<p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+												{uploadedFiles.length} file
+												{uploadedFiles.length === 1 ? "" : "s"} on disk, but
+												none are searchable yet. Re-index to enable chat.
+											</p>
+										</div>
+										<Button
+											type="button"
+											size="sm"
+											onClick={handleReindexWithVision}
+											disabled={isReindexing || isUploading}
+										>
+											{isReindexing ? "Re-indexing…" : "Re-index documents"}
+										</Button>
+									</div>
+								</div>
+							) : null}
+
 							{isIngesting ||
 							isAwaitingIngestion ||
 							ingestionStatus?.status === "complete" ||
+							ingestionStatus?.status === "error" ||
 							uploadFeedback?.type === "error" ? (
 								<div className="animate-in fade-in slide-in-from-top-2 duration-300">
 									<IngestionStatusDisplay
@@ -185,9 +260,11 @@ export function ChatWorkbench() {
 									? "Document indexing in progress…"
 									: !isReady
 										? "Waiting for retrieval pipeline…"
-										: !(hasDocuments || ingestionStatus?.status === "complete")
-											? "Upload and index your documents before chatting."
-											: undefined
+										: ingestionStatus?.status === "error" || needsIndexing
+											? "Documents need indexing. Use Re-index to enable chat."
+											: !(hasDocuments || ingestionStatus?.status === "complete")
+												? "Upload and index your documents before chatting."
+												: undefined
 							}
 						/>
 					</div>

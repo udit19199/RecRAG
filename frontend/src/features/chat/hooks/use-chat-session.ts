@@ -3,16 +3,19 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { ChatMessage } from "@/features/chat/types";
 import {
+	checkIndexStatus,
 	checkRetrievalHealth,
 	getEvalStatus,
 	getIngestionStatus,
 	getUploadedFiles,
 	type IngestionStatus,
 	queryRAG,
+	reloadRetrievalConfig,
+	triggerReindex,
 	uploadPDFs,
 	waitForIngestionComplete,
 } from "@/lib/api";
-import type { UploadOptions } from "@/lib/api/types";
+import type { ExtractionOptions, UploadOptions } from "@/lib/api/types";
 
 export function useChatSession() {
 	const [isReady, setIsReady] = useState(false);
@@ -30,6 +33,7 @@ export function useChatSession() {
 	const [uploadedFiles, setUploadedFiles] = useState<string[]>([]);
 	const [messages, setMessages] = useState<ChatMessage[]>([]);
 	const [isQuerying, setIsQuerying] = useState(false);
+	const [isReindexing, setIsReindexing] = useState(false);
 	const messageIdRef = useRef(0);
 
 	const nextId = () => {
@@ -40,25 +44,122 @@ export function useChatSession() {
 		try {
 			const res = await getUploadedFiles();
 			setUploadedFiles(res.files);
+			// #region agent log
+			fetch("http://127.0.0.1:7916/ingest/3188a69e-7db0-4d0f-b5ef-4e3827cb1095", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+					"X-Debug-Session-Id": "50063e",
+				},
+				body: JSON.stringify({
+					sessionId: "50063e",
+					location: "use-chat-session.ts:files",
+					message: "uploaded files fetched",
+					data: { fileCount: res.files.length, files: res.files },
+					timestamp: Date.now(),
+					hypothesisId: "H4",
+				}),
+			}).catch(() => {});
+			// #endregion
 		} catch (_err) {
 			// fail silently
 		}
 	}, []);
+
+	const refreshHealth = useCallback(async () => {
+		try {
+			const health = await checkRetrievalHealth();
+			let hasDocs = health.has_documents ?? false;
+			if (!hasDocs) {
+				try {
+					const indexStatus = await checkIndexStatus({});
+					hasDocs = indexStatus.has_documents;
+				} catch {
+					// Ignore index status errors; rely on retrieval health.
+				}
+			}
+			setIsReady(health.pipeline_loaded ?? false);
+			setHasDocuments(hasDocs);
+
+			if (!health.pipeline_loaded && health.error_message) {
+				setHealthError(health.error_message);
+			} else {
+				setHealthError(null);
+			}
+		} catch (err) {
+			setIsReady(false);
+			setHealthError(
+				err instanceof Error ? err.message : "Service unreachable",
+			);
+		}
+	}, []);
+
+	const syncRetrievalAfterIngestion = useCallback(async () => {
+		try {
+			const reloaded = await reloadRetrievalConfig();
+			// #region agent log
+			fetch("http://127.0.0.1:7916/ingest/3188a69e-7db0-4d0f-b5ef-4e3827cb1095", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+					"X-Debug-Session-Id": "50063e",
+				},
+				body: JSON.stringify({
+					sessionId: "50063e",
+					runId: "post-fix",
+					location: "use-chat-session.ts:reload",
+					message: "retrieval pipeline reloaded from config.toml",
+					data: {
+						embedding: reloaded.embedding,
+						has_documents_pending: true,
+					},
+					timestamp: Date.now(),
+					hypothesisId: "H6",
+				}),
+			}).catch(() => {});
+			// #endregion
+		} catch {
+			// Non-fatal: chat may still work via ingestion status gate.
+		}
+		await refreshHealth();
+	}, [refreshHealth]);
 
 	const fetchIngestionStatus = useCallback(async () => {
 		try {
 			const nextStatus = await getIngestionStatus();
 			setIngestionStatus(nextStatus);
 			setStatusError(null);
+			// #region agent log
+			fetch("http://127.0.0.1:7916/ingest/3188a69e-7db0-4d0f-b5ef-4e3827cb1095", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+					"X-Debug-Session-Id": "50063e",
+				},
+				body: JSON.stringify({
+					sessionId: "50063e",
+					location: "use-chat-session.ts:ingestion-status",
+					message: "ingestion status fetched",
+					data: {
+						status: nextStatus.status,
+						error_message: nextStatus.error_message,
+						files_processed: nextStatus.files_processed,
+					},
+					timestamp: Date.now(),
+					hypothesisId: "H2",
+				}),
+			}).catch(() => {});
+			// #endregion
 			if (nextStatus.status === "complete") {
 				void fetchFiles();
+				void syncRetrievalAfterIngestion();
 			}
 		} catch (err) {
 			setStatusError(
 				err instanceof Error ? err.message : "Failed to fetch status",
 			);
 		}
-	}, [fetchFiles]);
+	}, [fetchFiles, syncRetrievalAfterIngestion]);
 
 	useEffect(() => {
 		const checkHealth = async () => {
@@ -66,6 +167,27 @@ export function useChatSession() {
 				const health = await checkRetrievalHealth();
 				setIsReady(health.pipeline_loaded ?? false);
 				setHasDocuments(health.has_documents ?? false);
+				// #region agent log
+				fetch("http://127.0.0.1:7916/ingest/3188a69e-7db0-4d0f-b5ef-4e3827cb1095", {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+						"X-Debug-Session-Id": "50063e",
+					},
+					body: JSON.stringify({
+						sessionId: "50063e",
+						runId: "post-fix",
+						location: "use-chat-session.ts:health",
+						message: "retrieval health checked",
+						data: {
+							pipeline_loaded: health.pipeline_loaded,
+							has_documents: health.has_documents,
+						},
+						timestamp: Date.now(),
+						hypothesisId: "H1",
+					}),
+				}).catch(() => {});
+				// #endregion
 
 				if (!health.pipeline_loaded && health.error_message) {
 					setHealthError(health.error_message);
@@ -93,7 +215,32 @@ export function useChatSession() {
 	}, [fetchIngestionStatus, ingestionStatus?.status]);
 
 	const handleReindexStarted = () => {
-		fetchIngestionStatus();
+		void fetchIngestionStatus();
+	};
+
+	const handleReindex = async (options?: ExtractionOptions) => {
+		setIsReindexing(true);
+		setUploadFeedback(null);
+
+		try {
+			await triggerReindex(options);
+			void fetchIngestionStatus();
+			const finalStatus = await waitForIngestionComplete(
+				2000,
+				120000,
+				setIngestionStatus,
+			);
+			setIngestionStatus(finalStatus);
+			await fetchFiles();
+			await syncRetrievalAfterIngestion();
+		} catch (err) {
+			setUploadFeedback({
+				type: "error",
+				message: err instanceof Error ? err.message : "Re-index failed",
+			});
+		} finally {
+			setIsReindexing(false);
+		}
 	};
 
 	const handleQuery = async (query: string) => {
@@ -197,6 +344,7 @@ export function useChatSession() {
 			);
 			setIngestionStatus(finalStatus);
 			await fetchFiles();
+			await syncRetrievalAfterIngestion();
 		} catch (err) {
 			setUploadFeedback({
 				type: "error",
@@ -220,8 +368,10 @@ export function useChatSession() {
 		uploadFeedback,
 		messages,
 		isQuerying,
+		isReindexing,
 		handleQuery,
 		handleUpload,
+		handleReindex,
 		handleReindexStarted,
 	};
 }

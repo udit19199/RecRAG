@@ -3,7 +3,7 @@ from unittest.mock import MagicMock, patch
 import pytest
 import requests
 
-from adapters.embedding import OpenAIEmbedder, OllamaEmbedder
+from adapters.embedding import LMStudioEmbedder, OpenAIEmbedder, OllamaEmbedder
 
 
 class TestOpenAIEmbedder:
@@ -50,6 +50,15 @@ class TestOpenAIEmbedder:
             model="text-embedding-3-large", api_key="test-key"
         )
         assert embedder_large.dimension == 3072
+
+
+class TestLMStudioEmbedder:
+    def test_provider_is_lmstudio(self) -> None:
+        embedder = LMStudioEmbedder(
+            model="text-embedding-nomic-embed-text-v1.5",
+            base_url="http://127.0.0.1:1234/v1",
+        )
+        assert embedder.provider == "lmstudio"
 
 
 class TestOllamaEmbedder:

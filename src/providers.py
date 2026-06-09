@@ -107,6 +107,14 @@ def _sorted_unique(values: list[str]) -> list[str]:
     return sorted(set(values))
 
 
+def _openai_models_url(base_url: str | None) -> str:
+    """Build the /v1/models URL for OpenAI-compatible servers."""
+    root = (base_url or "https://api.openai.com").rstrip("/")
+    if root.endswith("/v1"):
+        return f"{root}/models"
+    return f"{root}/v1/models"
+
+
 def _fetch_json(
     url: str, headers: dict[str, str] | None = None, timeout: float = 10.0
 ) -> dict[str, Any] | None:
@@ -161,7 +169,7 @@ def _fetch_openai_models(
     Returns:
         (embed_models, llm_models)
     """
-    url = (base_url or "https://api.openai.com").rstrip("/") + "/v1/models"
+    url = _openai_models_url(base_url)
     headers = {"Authorization": f"Bearer {api_key}"}
     data = _fetch_json(url, headers=headers)
     if data is None:
@@ -169,12 +177,15 @@ def _fetch_openai_models(
 
     all_ids: list[str] = [m["id"] for m in data.get("data", [])]
 
-    embed_models = (
-        _sorted_unique(
+    embed_models = _sorted_unique(
+        [m for m in all_ids if _is_embedding_model(m)]
+    )
+    if not embed_models:
+        embed_models = _sorted_unique(
             [m for m in all_ids if "embed" in m.lower() or "embedding" in m.lower()]
         )
-        or OPENAI_EMBEDDING_MODELS
-    )
+    if not embed_models:
+        embed_models = OPENAI_EMBEDDING_MODELS
     llm_models = (
         _sorted_unique(
             [
@@ -261,7 +272,7 @@ def _fetch_openai_vision_models(api_key: str, base_url: str | None = None) -> li
     Returns:
         List of available vision model names.
     """
-    url = (base_url or "https://api.openai.com").rstrip("/") + "/v1/models"
+    url = _openai_models_url(base_url)
     headers = {"Authorization": f"Bearer {api_key}"}
     data = _fetch_json(url, headers=headers)
     if data is None:

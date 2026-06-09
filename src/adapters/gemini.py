@@ -28,6 +28,8 @@ EMBEDDING_MODELS = {
 # Defaults
 DEFAULT_LLM_MODEL = "gemini-2.0-flash"
 DEFAULT_EMBEDDING_MODEL = "gemini-embedding-001"
+# Gemini batchEmbedContents allows at most 100 requests per call.
+GEMINI_EMBED_BATCH_SIZE = 100
 DEFAULT_VISION_MODEL = "gemini-2.0-flash"
 
 
@@ -203,6 +205,19 @@ class GeminiEmbedder(BaseEmbedder):
         return data["embedding"]["values"]
 
     def embed_batch(self, texts: list[str]) -> list[list[float]]:
+        if not texts:
+            return []
+
+        if len(texts) <= GEMINI_EMBED_BATCH_SIZE:
+            return self._embed_batch_single(texts)
+
+        results: list[list[float]] = []
+        for i in range(0, len(texts), GEMINI_EMBED_BATCH_SIZE):
+            chunk = texts[i : i + GEMINI_EMBED_BATCH_SIZE]
+            results.extend(self._embed_batch_single(chunk))
+        return results
+
+    def _embed_batch_single(self, texts: list[str]) -> list[list[float]]:
         url = _build_url(self.model, "batchEmbedContents")
         payload: dict[str, Any] = {
             "requests": [

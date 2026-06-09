@@ -35,6 +35,7 @@ interface SlotPickerProps {
 const PROVIDER_LABELS: Record<string, string> = {
 	ollama: "Ollama",
 	openai: "OpenAI",
+	lmstudio: "LM Studio",
 	nim: "NVIDIA NIM",
 };
 

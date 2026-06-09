@@ -32,7 +32,7 @@ def create_llm(provider: str, **kwargs: Any) -> BaseLLM:
     return _LLM_REGISTRY[provider](**kwargs)
 
 
-from adapters.embedding import OpenAIEmbedder, OllamaEmbedder  # noqa: E402
+from adapters.embedding import LMStudioEmbedder, OpenAIEmbedder, OllamaEmbedder  # noqa: E402
 from adapters.llm import OpenAILLM, OllamaLLM  # noqa: E402
 from adapters.nim import NIMEmbedder, NIMLLM  # noqa: E402
 
@@ -45,6 +45,7 @@ except ImportError:
     pass
 
 register_embedder("openai", OpenAIEmbedder)
+register_embedder("lmstudio", LMStudioEmbedder)
 register_embedder("ollama", OllamaEmbedder)
 register_embedder("nim", NIMEmbedder)
 register_llm("openai", OpenAILLM)

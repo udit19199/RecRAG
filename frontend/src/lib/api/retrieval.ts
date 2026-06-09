@@ -57,3 +57,11 @@ export async function setConfig(
 
 	return handleResponse<SetConfigResponse>(res);
 }
+
+export async function reloadRetrievalConfig(): Promise<SetConfigResponse> {
+	const res = await authenticatedFetch(getRetrievalApiUrl("/config/reload"), {
+		method: "POST",
+	});
+
+	return handleResponse<SetConfigResponse>(res);
+}

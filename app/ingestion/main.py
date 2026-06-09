@@ -331,7 +331,7 @@ async def check_index_status(
     request: IndexStatusRequest,
     _: None = Depends(verify_api_key),
 ) -> IndexStatusResponse:
-    from pipelines.base import get_collection_name, get_milvus_uri
+    from pipelines.base import create_embedder_from_config, get_collection_name, get_milvus_uri
     from stores import VectorStore
 
     config_path = find_config_path(CONFIG_PATH if CONFIG_PATH.exists() else None)
@@ -346,10 +346,11 @@ async def check_index_status(
 
     collection_name = get_collection_name(config, embed_model, vision_model)
     uri = get_milvus_uri(config, config_path)
+    embedder = create_embedder_from_config(config)
 
     try:
         vs = VectorStore(
-            dimension=1,  # Dimension doesn't matter just to check count
+            dimension=embedder.dimension,
             collection_name=collection_name,
             uri=uri,
         )
