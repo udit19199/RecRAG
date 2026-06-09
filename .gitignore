@@ -62,6 +62,7 @@ security_best_practices_report.md
 
 # Local tool cache
 .api_quota.json
+.pnpm-store/
 
 # No-op Milvus config stubs (empty comments only)
 embedEtcd.yaml

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+hook_dir="$(CDPATH= cd "$(dirname "$0")" && pwd)"
+
+if ! "$hook_dir/react-doctor-check-staged.sh"; then
+	echo "Commit blocked by React Doctor." >&2
+	echo "Run: cd frontend && pnpm doctor --verbose" >&2
+	exit 1
+fi

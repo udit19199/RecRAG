@@ -1,8 +1,13 @@
 #!/usr/bin/env bash
-# Block git commit when staged frontend files fail React Doctor (--staged --blocking warning).
-# Replaces a non-blocking git pre-commit hook with agent-visible feedback.
+# Cursor beforeShellExecution: block git commit when staged frontend files fail React Doctor.
 
 set -euo pipefail
+
+hook_dir="$(CDPATH= cd "$(dirname "$0")" && pwd)"
+
+if [ "${1:-}" = "--git-hook" ]; then
+	exec "$hook_dir/react-doctor-check-staged.sh"
+fi
 
 input="$(cat)"
 command="$(
@@ -25,26 +30,19 @@ if ! printf '%s' "$command" | grep -qE 'git commit'; then
 	exit 0
 fi
 
-repo_root="$(git rev-parse --show-toplevel 2>/dev/null || pwd)"
-cd "$repo_root"
-
-if ! git diff --cached --name-only -- frontend/ | grep -q .; then
-	printf '%s\n' '{"permission":"allow"}'
-	exit 0
-fi
-
 output_file="$(mktemp "${TMPDIR:-/tmp}/react-doctor-commit.XXXXXX")"
 trap 'rm -f "$output_file"' EXIT
 
 set +e
-(cd frontend && npx react-doctor@latest --yes --staged --blocking warning >"$output_file" 2>&1)
+"$hook_dir/react-doctor-check-staged.sh" >"$output_file" 2>&1
 status=$?
 set -e
 
 if [ "$status" -ne 0 ]; then
-	node - "$output_file" <<'NODE'
+	output="$(cat "$output_file")"
+	node - "$output" <<'NODE'
 const fs = require("node:fs");
-const output = fs.readFileSync(process.argv[2], "utf8");
+const output = fs.readFileSync(0, "utf8");
 console.log(
 	JSON.stringify({
 		permission: "deny",

@@ -11,11 +11,17 @@ Use for `frontend/` only. Manual full scans: `cd frontend && pnpm doctor`.
 
 ## Before committing frontend changes
 
-Staged files are gated by the Cursor `beforeShellExecution` hook on `git commit`.
+Staged `frontend/` files are checked before commit:
+
+- **Git** (Source Control UI or terminal): `.cursor/hooks/pre-commit`
+- **Cursor agent shell**: `beforeShellExecution` on `git commit`
+
+The check is skipped when no staged files are under `frontend/`.
+
 If a commit is blocked, run:
 
 ```bash
-cd frontend && npx react-doctor@latest --yes --staged --blocking warning --verbose
+cd frontend && npx react-doctor@latest --yes --staged --no-dead-code --blocking warning --verbose
 ```
 
 Fix warnings and errors in staged files, then retry the commit.
@@ -39,6 +45,7 @@ Use for baseline score work or periodic audits. CI also runs diff-based checks o
 | Flag | Purpose |
 | --- | --- |
 | `--staged` | Scan git-staged files only |
+| `--no-dead-code` | Skip unused-file/dependency analysis (use with `--staged`) |
 | `--diff` | Scan files changed vs base branch |
 | `--verbose` | Show file paths and line numbers |
 | `--blocking warning` | Exit non-zero on warnings or errors |
