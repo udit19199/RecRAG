@@ -8,13 +8,13 @@ import type {
 	AdapterConfig,
 	ExtractionOptions,
 	FileListResponse,
-	UploadOptions,
 	HealthResponse,
 	IndexStatusRequest,
 	IndexStatusResponse,
 	IngestionStatus,
 	ReindexResponse,
 	TargetedIngestRequest,
+	UploadOptions,
 	UploadResponse,
 } from "@/lib/api/types";
 
