@@ -50,12 +50,9 @@ export default function LandingPage() {
 					RecRAG provides a high-performance pipeline to ingest, vectorize, and
 					query your unstructured data with millisecond latency.
 				</p>
-				<div className="flex items-center gap-4 pt-4">
+				<div className="flex flex-col items-start gap-3 pt-4">
 					<Button asChild size="lg">
-						<Link href="/onboarding">Initialize Workspace</Link>
-					</Button>
-					<Button asChild variant="outline" size="lg">
-						<Link href="/chat">Go to App</Link>
+						<Link href="/onboarding">Get started</Link>
 					</Button>
 				</div>
 			</section>

@@ -71,6 +71,9 @@ class TargetedIngestRequest(BaseModel):
     vision_model: str | None = None
     embedding_provider: str | None = None
     embedding_model: str | None = None
+    collection_name: str | None = None
+    chunk_size: int | None = None
+    chunk_overlap: int | None = None
 
 
 class ReindexRequest(BaseModel):
@@ -93,12 +96,16 @@ class QueryRequest(BaseModel):
     llm: AdapterConfig | None = None
     embedding: AdapterConfig | None = None
     vision: AdapterConfig | None = None
+    pipeline_type: str | None = None
+    top_k: int | None = None
+    collection_name: str | None = None
 
 
 class ContextItem(BaseModel):
     text: str
     source: str
     distance: float
+    metadata: dict[str, object] | None = None
 
 
 class QueryResponse(BaseModel):

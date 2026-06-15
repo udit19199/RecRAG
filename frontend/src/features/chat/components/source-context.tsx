@@ -81,6 +81,21 @@ export function SourceContext({
 							</CollapsibleTrigger>
 							<CollapsibleContent>
 								<div className="border-t bg-muted/40 px-4 py-3">
+									{item.metadata ? (
+										<p className="mb-2 text-[10px] text-muted-foreground">
+											{[
+												item.metadata.page_label != null &&
+													`p. ${String(item.metadata.page_label)}`,
+												item.metadata.paragraph_index != null &&
+													`¶ ${String(item.metadata.paragraph_index)}`,
+												item.metadata.char_start != null &&
+													item.metadata.char_end != null &&
+													`lines ${String(item.metadata.char_start)}–${String(item.metadata.char_end)}`,
+											]
+												.filter(Boolean)
+												.join(" · ")}
+										</p>
+									) : null}
 									<p className="whitespace-pre-wrap text-xs leading-relaxed text-muted-foreground">
 										{item.text}
 									</p>

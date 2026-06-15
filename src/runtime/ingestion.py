@@ -172,6 +172,9 @@ class IngestionRuntime:
             vision_model=vision_model,
             embedding_provider=None,
             embedding_model=None,
+            collection_name=None,
+            chunk_size=None,
+            chunk_overlap=None,
             force=True,
             log_name="Ingestion",
         )
@@ -185,6 +188,9 @@ class IngestionRuntime:
         vision_model: str | None = None,
         embedding_provider: str | None = None,
         embedding_model: str | None = None,
+        collection_name: str | None = None,
+        chunk_size: int | None = None,
+        chunk_overlap: int | None = None,
     ) -> None:
         """Run targeted ingest for a specific embedding/vision permutation."""
 
@@ -195,6 +201,9 @@ class IngestionRuntime:
             vision_model=vision_model,
             embedding_provider=embedding_provider,
             embedding_model=embedding_model,
+            collection_name=collection_name,
+            chunk_size=chunk_size,
+            chunk_overlap=chunk_overlap,
             force=True,
             log_name="Targeted ingestion",
         )
@@ -227,6 +236,9 @@ class IngestionRuntime:
         vision_model: str | None,
         embedding_provider: str | None,
         embedding_model: str | None,
+        collection_name: str | None = None,
+        chunk_size: int | None = None,
+        chunk_overlap: int | None = None,
         force: bool,
         log_name: str,
     ) -> None:
@@ -248,6 +260,9 @@ class IngestionRuntime:
                     vision_model,
                     embedding_provider,
                     embedding_model,
+                    collection_name,
+                    chunk_size,
+                    chunk_overlap,
                     force,
                 )
                 completed_at = now()
@@ -277,6 +292,9 @@ class IngestionRuntime:
         vision_model: str | None,
         embedding_provider: str | None,
         embedding_model: str | None,
+        collection_name: str | None,
+        chunk_size: int | None,
+        chunk_overlap: int | None,
         force: bool,
     ) -> dict[str, Any]:
         config_path = self._config_path
@@ -299,6 +317,9 @@ class IngestionRuntime:
             extraction_mode=extraction_mode,
             vision_provider=vision_provider,
             vision_model=vision_model,
+            collection_name=collection_name,
+            chunk_size=chunk_size,
+            chunk_overlap=chunk_overlap,
         )
 
         return pipeline.process_documents_streaming(force=force)

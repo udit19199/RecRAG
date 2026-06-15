@@ -3,7 +3,7 @@
 # Usage:
 #   make help       – Show this message
 
-.PHONY: install setup dev retrieval ingestion frontend ingest evaluate \
+.PHONY: install setup dev retrieval ingestion orchestrator frontend ingest evaluate \
         lint lint-backend lint-frontend format format-backend format-frontend \
         test typecheck check clean infra-up infra-down infra-logs \
         docker-up docker-down deploy smoke-test quickstart help \
@@ -39,10 +39,11 @@ setup: install ## Full setup: install dependencies and create .env
 
 # ── Development ───────────────────────────────────────────────────────────────
 
-dev: ## Start retrieval, ingestion, and frontend together locally
-	@echo "Starting retrieval API  → http://localhost:8000"
-	@echo "Starting ingestion API  → http://localhost:8001"
-	@echo "Starting Next.js        → http://localhost:3000"
+dev: ## Start retrieval, ingestion, orchestrator, and frontend together locally
+	@echo "Starting retrieval API    → http://localhost:8000"
+	@echo "Starting ingestion API    → http://localhost:8001"
+	@echo "Starting orchestrator API → http://localhost:8002"
+	@echo "Starting Next.js          → http://localhost:3000"
 	@echo "Press Ctrl-C to stop all services."
 	@trap 'kill 0' EXIT; \
 	$(PYTHON_ENV) uvicorn app.retrieval.main:app \
@@ -51,6 +52,9 @@ dev: ## Start retrieval, ingestion, and frontend together locally
 	$(PYTHON_ENV) uvicorn app.ingestion.main:app \
 	    --host 0.0.0.0 --port 8001 --reload \
 	    2>&1 | sed 's/^/[ingestion] /' & \
+	$(PYTHON_ENV) uvicorn app.orchestrator.main:app \
+	    --host 0.0.0.0 --port 8002 --reload \
+	    2>&1 | sed 's/^/[orchestrator] /' & \
 	cd $(FRONTEND_DIR) && pnpm dev 2>&1 | sed 's/^/[frontend]  /' & \
 	wait
 
@@ -59,6 +63,9 @@ retrieval: ## Start only the retrieval API
 
 ingestion: ## Start only the ingestion API
 	$(PYTHON_ENV) uvicorn app.ingestion.main:app --host 0.0.0.0 --port 8001 --reload
+
+orchestrator: ## Start only the orchestrator API
+	$(PYTHON_ENV) uvicorn app.orchestrator.main:app --host 0.0.0.0 --port 8002 --reload
 
 frontend: ## Start only the Next.js dev server
 	cd $(FRONTEND_DIR) && pnpm dev

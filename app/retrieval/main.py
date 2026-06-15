@@ -165,7 +165,11 @@ async def query(
             # Create vector store with specific collection name
             vision_model = request.vision.model if request.vision else None
             vector_store = create_vector_store_from_config(
-                config, config_path, embedder, vision_model
+                config,
+                config_path,
+                embedder,
+                vision_model,
+                collection_name=request.collection_name,
             )
 
             # Create LLM
@@ -178,10 +182,12 @@ async def query(
                     llm_to_use = active_pipeline.llm
 
             # Execute
+            top_k = request.top_k or config.get("retrieval", {}).get("top_k", 4)
             pipeline = RetrievalPipeline(
                 embedder=embedder,
                 llm=llm_to_use,
                 vector_store=vector_store,
+                top_k=top_k,
                 config=config,
                 config_path=config_path,
             )
@@ -205,7 +211,12 @@ async def query(
             result_context = raw_result["context"]
 
         context = [
-            ContextItem(text=doc.text, source=doc.source, distance=doc.distance)
+            ContextItem(
+                text=doc.text,
+                source=doc.source,
+                distance=doc.distance,
+                metadata=doc.metadata or None,
+            )
             for doc in result_context
         ]
 

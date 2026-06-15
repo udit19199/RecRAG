@@ -37,11 +37,19 @@ class SentenceTextSplitter(BaseTextSplitter):
         from models.chunk import Chunk
 
         chunks = []
+        offset = 0
+        paragraph_index = 0
         for node in self.splitter.get_nodes_from_documents(documents):
             metadata = dict(node.metadata) if node.metadata else {}
+            text = node.get_content()
+            metadata.setdefault("char_start", offset)
+            metadata.setdefault("char_end", offset + len(text))
+            metadata.setdefault("paragraph_index", paragraph_index)
+            paragraph_index += 1
+            offset += len(text)
             chunks.append(
                 Chunk(
-                    text=node.get_content(),
+                    text=text,
                     source=metadata.get("file_name", "unknown"),
                     metadata=metadata,
                 )

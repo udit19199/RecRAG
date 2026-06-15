@@ -383,6 +383,9 @@ async def targeted_ingest(
         vision_model=request.vision_model,
         embedding_provider=request.embedding_provider,
         embedding_model=request.embedding_model,
+        collection_name=request.collection_name,
+        chunk_size=request.chunk_size,
+        chunk_overlap=request.chunk_overlap,
     )
 
     return ReindexResponse(

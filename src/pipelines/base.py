@@ -134,9 +134,11 @@ def create_vector_store_from_config(
     config_path: Path,
     embedder: BaseEmbedder,
     vision_model: str | None = None,
+    collection_name: str | None = None,
 ) -> VectorStore:
     """Create a configured VectorStore instance using the common configuration."""
-    collection_name = get_collection_name(config, embedder.model, vision_model)
+    if not collection_name:
+        collection_name = get_collection_name(config, embedder.model, vision_model)
     uri = get_milvus_uri(config, config_path)
     return VectorStore(
         dimension=embedder.dimension,

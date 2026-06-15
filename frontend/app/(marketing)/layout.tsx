@@ -27,12 +27,6 @@ export default function MarketingLayout({ children }: { children: ReactNode }) {
 						>
 							GitHub
 						</Link>
-						<Link
-							href="/onboarding"
-							className="bg-foreground text-background px-4 py-1.5 rounded-md hover:bg-foreground/90 transition-colors"
-						>
-							Start Setup
-						</Link>
 					</nav>
 				</div>
 			</header>

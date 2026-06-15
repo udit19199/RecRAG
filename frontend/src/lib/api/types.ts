@@ -2,6 +2,7 @@ export interface ContextItem {
 	text: string;
 	source: string;
 	distance: number;
+	metadata?: Record<string, unknown> | null;
 }
 
 export interface QueryResponse {

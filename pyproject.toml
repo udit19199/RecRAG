@@ -22,6 +22,12 @@ dependencies = [
     "auth0-fastapi-api>=1.0.0b5",
     "prometheus-client>=0.21.0",
     "anyio>=4.0.0",
+    "sqlalchemy>=2.0.0",
+    "alembic>=1.14.0",
+    "psycopg2-binary>=2.9.9",
+    "httpx>=0.27.0",
+    "cryptography>=42.0.0",
+    "PyJWT[crypto]>=2.8.0",
 ]
 
 [tool.setuptools.packages.find]

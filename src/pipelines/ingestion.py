@@ -61,13 +61,22 @@ class IngestionPipeline:
         extraction_mode: ExtractionMode = ExtractionMode.TEXT_ONLY,
         vision_provider: str | None = None,
         vision_model: str | None = None,
+        collection_name: str | None = None,
+        chunk_size: int | None = None,
+        chunk_overlap: int | None = None,
     ) -> "IngestionPipeline":
         """Create pipeline from configuration dictionary."""
         embedder = create_embedder_from_config(config)
 
-        chunk_size = get_config_value(config, "ingestion.chunk_size", 1024)
-        chunk_overlap = get_config_value(config, "ingestion.chunk_overlap", 50)
-        splitter = TextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
+        resolved_chunk_size = chunk_size or get_config_value(
+            config, "ingestion.chunk_size", 1024
+        )
+        resolved_chunk_overlap = chunk_overlap or get_config_value(
+            config, "ingestion.chunk_overlap", 50
+        )
+        splitter = TextSplitter(
+            chunk_size=resolved_chunk_size, chunk_overlap=resolved_chunk_overlap
+        )
 
         # Get vision config from config or use provided overrides
         vision_cfg = config.get("vision", {})
@@ -79,6 +88,7 @@ class IngestionPipeline:
             config_path,
             embedder,
             model if extraction_mode == ExtractionMode.VISION_ASSISTED else None,
+            collection_name=collection_name,
         )
 
         ingestion_dir = get_ingestion_dir(config, config_path)
@@ -143,9 +153,10 @@ class IngestionPipeline:
         if not chunks:
             return 0
         embeddings = self.embedder.embed_batch([c.text for c in chunks])
-        self.vector_store.add(
-            embeddings, [c.text for c in chunks], [{"source": c.source} for c in chunks]
-        )
+        metadata_list = [
+            {"source": c.source, **c.metadata} for c in chunks
+        ]
+        self.vector_store.add(embeddings, [c.text for c in chunks], metadata_list)
         return len(embeddings)
 
     def _process_file_batch(self, batch: list[Path], batch_num: int) -> tuple[int, int]:

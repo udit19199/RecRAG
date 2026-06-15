@@ -1,0 +1,31 @@
+# Soft weights for recommendation engine (D16). Hard constraints live in constraints.py.
+
+[shortlist]
+min_candidates = 3
+max_candidates = 5
+
+[metric_weights.default]
+faithfulness = 0.25
+answer_relevancy = 0.25
+context_precision = 0.25
+context_recall = 0.25
+
+[metric_weights.citations_required]
+faithfulness = 0.35
+answer_relevancy = 0.15
+context_precision = 0.35
+context_recall = 0.15
+
+[metric_weights.latency_sensitive]
+faithfulness = 0.20
+answer_relevancy = 0.30
+context_precision = 0.25
+context_recall = 0.25
+
+[benchmark_suite]
+domain_query_count = 4
+architecture_probe_count = 2
+
+[customizer]
+default_provider = "gemini"
+default_model = "gemini-2.0-flash"
