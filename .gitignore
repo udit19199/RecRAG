@@ -38,6 +38,7 @@ state/
 
 # Docker
 ollama_data/
+frontend/volumes/
 
 # Testing
 .pytest_cache/
