@@ -92,46 +92,7 @@ class TestB6ApiKeyLeak:
             assert "api_key" not in llm.kwargs
 
 
-# ── B8: auth.py header mismatch ──────────────────────────────────────────────
-
-
-class TestB8AuthHeaderMismatch:
-    """Regression: verify_api_key must check the same header as APIKeyHeader."""
-
-    def test_api_key_header_name_matches(self) -> None:
-        """APIKeyHeader name must be 'RecRAG-API-Key'."""
-        import auth as auth_module
-
-        header_scheme = auth_module.API_KEY_HEADER
-        assert header_scheme.model.name == "RecRAG-API-Key"
-
-    def test_request_header_check_uses_correct_name(self) -> None:
-        """verify_api_key must check 'RecRAG-API-Key' header, not 'x-api-key'."""
-        import auth as auth_module
-        import inspect
-
-        source = inspect.getsource(auth_module.verify_api_key)
-        assert "RecRAG-API-Key" in source
-        assert "x-api-key" not in source
-
-    def test_public_paths_defined(self) -> None:
-        from auth import PUBLIC_PATHS
-
-        assert "/health" in PUBLIC_PATHS
-        assert "/docs" in PUBLIC_PATHS
-        assert "/openapi.json" in PUBLIC_PATHS
-
-    def test_get_api_key_returns_none_when_not_set(self) -> None:
-        from auth import get_api_key
-
-        with patch.dict("os.environ", {}, clear=True):
-            assert get_api_key() is None
-
-    def test_get_api_key_returns_value_when_set(self) -> None:
-        from auth import get_api_key
-
-        with patch.dict("os.environ", {"REC_RAG_API_KEY": "my-secret"}):
-            assert get_api_key() == "my-secret"
+# API Key header verification has been removed.
 
 
 # ── B1: Sync file I/O in ingestion upload ────────────────────────────────────
@@ -352,15 +313,4 @@ class TestB7DocumentDelete:
             assert result == 0
 
 
-# ── Additional auth safety checks ─────────────────────────────────────────────
-
-
-class TestAuthEnvSafety:
-    """Additional safety: auth module env handling."""
-
-    def test_auth_disabled_when_no_env_key(self) -> None:
-        """When REC_RAG_API_KEY is not set, functions should still work."""
-        with patch.dict(os.environ, {}, clear=True):
-            from auth import get_api_key
-
-            assert get_api_key() is None
+# API Key auth safety checks have been removed.

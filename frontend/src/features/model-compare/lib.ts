@@ -16,7 +16,7 @@ export function parseValue(value: string | null) {
 	return { provider, model };
 }
 
-export function uniqueModels(models: string[]) {
+function uniqueModels(models: string[]) {
 	return Array.from(new Set(models));
 }
 

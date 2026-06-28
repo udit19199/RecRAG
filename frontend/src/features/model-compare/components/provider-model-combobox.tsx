@@ -16,8 +16,8 @@ import {
 	TooltipTrigger,
 } from "@/components/ui/tooltip";
 import {
-	type ProviderModelGroup,
 	modelValueLabel,
+	type ProviderModelGroup,
 	parseValue,
 } from "@/features/model-compare/lib";
 

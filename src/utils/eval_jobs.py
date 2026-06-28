@@ -52,11 +52,6 @@ def _write_eval_jobs_unlocked(
     atomic_write_json(jobs_file, jobs)
 
 
-def write_eval_jobs(storage_dir: Path, jobs: dict[str, dict[str, Any]]) -> None:
-    with _LOCK:
-        _write_eval_jobs_unlocked(storage_dir, jobs)
-
-
 def create_eval_job(storage_dir: Path, job_id: str, query: str) -> dict[str, Any]:
     with _LOCK:
         jobs = _read_eval_jobs_unlocked(storage_dir)

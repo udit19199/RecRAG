@@ -51,12 +51,6 @@ spec:
               protocol: TCP
               name: http
           env:
-            - name: REC_RAG_API_KEY
-              valueFrom:
-                secretKeyRef:
-                  name: recrag-secrets
-                  key: rec-rag-api-key
-                  optional: true
             - name: OPENAI_API_KEY
               valueFrom:
                 secretKeyRef:

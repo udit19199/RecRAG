@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { ChatMessage } from "@/features/chat/types";
 import {
 	checkIndexStatus,
@@ -16,6 +16,31 @@ import {
 	waitForIngestionComplete,
 } from "@/lib/api";
 import type { ExtractionOptions, UploadOptions } from "@/lib/api/types";
+
+function sendAgentLog(
+	location: string,
+	message: string,
+	data?: Record<string, any>,
+	runId?: string,
+	hypothesisId?: string,
+) {
+	fetch("http://127.0.0.1:7916/ingest/3188a69e-7db0-4d0f-b5ef-4e3827cb1095", {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/json",
+			"X-Debug-Session-Id": "50063e",
+		},
+		body: JSON.stringify({
+			sessionId: "50063e",
+			runId,
+			location,
+			message,
+			data,
+			timestamp: Date.now(),
+			hypothesisId,
+		}),
+	}).catch(() => {});
+}
 
 export function useChatSession() {
 	const [isReady, setIsReady] = useState(false);
@@ -40,36 +65,23 @@ export function useChatSession() {
 		return messageIdRef.current++;
 	};
 
-	const fetchFiles = useCallback(async () => {
+	const fetchFiles = async () => {
 		try {
 			const res = await getUploadedFiles();
 			setUploadedFiles(res.files);
-			// #region agent log
-			fetch(
-				"http://127.0.0.1:7916/ingest/3188a69e-7db0-4d0f-b5ef-4e3827cb1095",
-				{
-					method: "POST",
-					headers: {
-						"Content-Type": "application/json",
-						"X-Debug-Session-Id": "50063e",
-					},
-					body: JSON.stringify({
-						sessionId: "50063e",
-						location: "use-chat-session.ts:files",
-						message: "uploaded files fetched",
-						data: { fileCount: res.files.length, files: res.files },
-						timestamp: Date.now(),
-						hypothesisId: "H4",
-					}),
-				},
-			).catch(() => {});
-			// #endregion
+			sendAgentLog(
+				"use-chat-session.ts:files",
+				"uploaded files fetched",
+				{ fileCount: res.files.length, files: res.files },
+				undefined,
+				"H4",
+			);
 		} catch (_err) {
 			// fail silently
 		}
-	}, []);
+	};
 
-	const refreshHealth = useCallback(async () => {
+	const refreshHealth = async () => {
 		try {
 			const health = await checkRetrievalHealth();
 			let hasDocs = health.has_documents ?? false;
@@ -95,70 +107,43 @@ export function useChatSession() {
 				err instanceof Error ? err.message : "Service unreachable",
 			);
 		}
-	}, []);
+	};
 
-	const syncRetrievalAfterIngestion = useCallback(async () => {
+	const syncRetrievalAfterIngestion = async () => {
 		try {
 			const reloaded = await reloadRetrievalConfig();
-			// #region agent log
-			fetch(
-				"http://127.0.0.1:7916/ingest/3188a69e-7db0-4d0f-b5ef-4e3827cb1095",
+			sendAgentLog(
+				"use-chat-session.ts:reload",
+				"retrieval pipeline reloaded from config.toml",
 				{
-					method: "POST",
-					headers: {
-						"Content-Type": "application/json",
-						"X-Debug-Session-Id": "50063e",
-					},
-					body: JSON.stringify({
-						sessionId: "50063e",
-						runId: "post-fix",
-						location: "use-chat-session.ts:reload",
-						message: "retrieval pipeline reloaded from config.toml",
-						data: {
-							embedding: reloaded.embedding,
-							has_documents_pending: true,
-						},
-						timestamp: Date.now(),
-						hypothesisId: "H6",
-					}),
+					embedding: reloaded.embedding,
+					has_documents_pending: true,
 				},
-			).catch(() => {});
-			// #endregion
+				"post-fix",
+				"H6",
+			);
 		} catch {
 			// Non-fatal: chat may still work via ingestion status gate.
 		}
 		await refreshHealth();
-	}, [refreshHealth]);
+	};
 
-	const fetchIngestionStatus = useCallback(async () => {
+	const fetchIngestionStatus = async () => {
 		try {
 			const nextStatus = await getIngestionStatus();
 			setIngestionStatus(nextStatus);
 			setStatusError(null);
-			// #region agent log
-			fetch(
-				"http://127.0.0.1:7916/ingest/3188a69e-7db0-4d0f-b5ef-4e3827cb1095",
+			sendAgentLog(
+				"use-chat-session.ts:ingestion-status",
+				"ingestion status fetched",
 				{
-					method: "POST",
-					headers: {
-						"Content-Type": "application/json",
-						"X-Debug-Session-Id": "50063e",
-					},
-					body: JSON.stringify({
-						sessionId: "50063e",
-						location: "use-chat-session.ts:ingestion-status",
-						message: "ingestion status fetched",
-						data: {
-							status: nextStatus.status,
-							error_message: nextStatus.error_message,
-							files_processed: nextStatus.files_processed,
-						},
-						timestamp: Date.now(),
-						hypothesisId: "H2",
-					}),
+					status: nextStatus.status,
+					error_message: nextStatus.error_message,
+					files_processed: nextStatus.files_processed,
 				},
-			).catch(() => {});
-			// #endregion
+				undefined,
+				"H2",
+			);
 			if (nextStatus.status === "complete") {
 				void fetchFiles();
 				void syncRetrievalAfterIngestion();
@@ -168,7 +153,7 @@ export function useChatSession() {
 				err instanceof Error ? err.message : "Failed to fetch status",
 			);
 		}
-	}, [fetchFiles, syncRetrievalAfterIngestion]);
+	};
 
 	useEffect(() => {
 		const checkHealth = async () => {
@@ -176,30 +161,16 @@ export function useChatSession() {
 				const health = await checkRetrievalHealth();
 				setIsReady(health.pipeline_loaded ?? false);
 				setHasDocuments(health.has_documents ?? false);
-				// #region agent log
-				fetch(
-					"http://127.0.0.1:7916/ingest/3188a69e-7db0-4d0f-b5ef-4e3827cb1095",
+				sendAgentLog(
+					"use-chat-session.ts:health",
+					"retrieval health checked",
 					{
-						method: "POST",
-						headers: {
-							"Content-Type": "application/json",
-							"X-Debug-Session-Id": "50063e",
-						},
-						body: JSON.stringify({
-							sessionId: "50063e",
-							runId: "post-fix",
-							location: "use-chat-session.ts:health",
-							message: "retrieval health checked",
-							data: {
-								pipeline_loaded: health.pipeline_loaded,
-								has_documents: health.has_documents,
-							},
-							timestamp: Date.now(),
-							hypothesisId: "H1",
-						}),
+						pipeline_loaded: health.pipeline_loaded,
+						has_documents: health.has_documents,
 					},
-				).catch(() => {});
-				// #endregion
+					"post-fix",
+					"H1",
+				);
 
 				if (!health.pipeline_loaded && health.error_message) {
 					setHealthError(health.error_message);
@@ -217,14 +188,15 @@ export function useChatSession() {
 		checkHealth();
 		fetchIngestionStatus();
 		fetchFiles();
-	}, [fetchIngestionStatus, fetchFiles]);
+	}, []);
 
 	useEffect(() => {
 		if (ingestionStatus?.status !== "processing") return;
 
 		const interval = setInterval(fetchIngestionStatus, 3000);
 		return () => clearInterval(interval);
-	}, [fetchIngestionStatus, ingestionStatus?.status]);
+		// biome-ignore lint/correctness/useExhaustiveDependencies: only restart interval when status changes
+	}, [ingestionStatus?.status]);
 
 	const handleReindexStarted = () => {
 		void fetchIngestionStatus();
@@ -282,44 +254,43 @@ export function useChatSession() {
 
 			if (result.eval_job_id) {
 				const jobId = result.eval_job_id;
-				void (async () => {
+				const poll = async () => {
 					try {
-						for (;;) {
-							const status = await getEvalStatus(jobId);
-							if (status.status === "complete") {
-								setMessages((prev) =>
-									prev.map((message) =>
-										message.role === "assistant" &&
-										message.eval_job_id === jobId
-											? {
-													...message,
-													...(status.scores ? { eval: status.scores } : {}),
-													eval_status: "complete",
-												}
-											: message,
-									),
-								);
-								break;
-							}
-
-							if (status.status === "error") {
-								setMessages((prev) =>
-									prev.map((message) =>
-										message.role === "assistant" &&
-										message.eval_job_id === jobId
-											? { ...message, eval_status: "error" }
-											: message,
-									),
-								);
-								break;
-							}
-
-							await new Promise((resolve) => setTimeout(resolve, 1500));
+						const status = await getEvalStatus(jobId);
+						if (status.status === "complete") {
+							setMessages((prev) =>
+								prev.map((message) =>
+									message.role === "assistant" && message.eval_job_id === jobId
+										? {
+												...message,
+												...(status.scores ? { eval: status.scores } : {}),
+												eval_status: "complete",
+											}
+										: message,
+								),
+							);
+							return;
 						}
+
+						if (status.status === "error") {
+							setMessages((prev) =>
+								prev.map((message) =>
+									message.role === "assistant" && message.eval_job_id === jobId
+										? { ...message, eval_status: "error" }
+										: message,
+								),
+							);
+							return;
+						}
+
+						setTimeout(() => {
+							void poll();
+						}, 1500);
 					} catch {
 						// Ignore polling errors.
 					}
-				})();
+				};
+				void poll();
 			}
 		} catch (err) {
 			setMessages((prev) => [

@@ -21,7 +21,6 @@ from fastapi import (
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import Response
 
-from auth import verify_api_key
 from config import find_config_path, get_frontend_origins, load_config
 from structured_logging import StructuredLoggingMiddleware
 from metrics import MetricsMiddleware, metrics_endpoint
@@ -131,7 +130,6 @@ async def upload_pdfs(
     vision_provider: str | None = Form(default=None),
     vision_model: str | None = Form(default=None),
     replace: bool = Form(default=False),
-    _: None = Depends(verify_api_key),
 ) -> UploadResponse:
     """Upload PDF files for ingestion.
 
@@ -258,7 +256,6 @@ async def list_files() -> FileListResponse:
 @app.delete("/documents/{filename}")
 async def delete_document(
     filename: str,
-    _: None = Depends(verify_api_key),
 ) -> dict[str, Any]:
     """Delete an uploaded PDF and remove its vectors from the store.
 
@@ -302,7 +299,6 @@ async def delete_document(
 @app.post("/config")
 async def set_config(
     patch: EmbeddingConfigPatch,
-    _: None = Depends(verify_api_key),
 ) -> dict[str, Any]:
     """Swap the default embedding used by future ingestion jobs."""
     try:
@@ -329,7 +325,6 @@ async def set_config(
 @app.post("/status/index", response_model=IndexStatusResponse)
 async def check_index_status(
     request: IndexStatusRequest,
-    _: None = Depends(verify_api_key),
 ) -> IndexStatusResponse:
     from pipelines.base import create_embedder_from_config, get_collection_name, get_milvus_uri
     from stores import VectorStore
@@ -365,7 +360,6 @@ async def targeted_ingest(
     background_tasks: BackgroundTasks,
     request: TargetedIngestRequest,
     runtime: IngestionRuntime = Depends(get_ingestion_runtime),
-    _: None = Depends(verify_api_key),
 ) -> ReindexResponse:
     """Trigger a targeted ingest for a specific permutation."""
     current = read_status(STATE_DIR)
@@ -400,7 +394,6 @@ async def reindex(
     background_tasks: BackgroundTasks,
     request: ReindexRequest | None = None,
     runtime: IngestionRuntime = Depends(get_ingestion_runtime),
-    _: None = Depends(verify_api_key),
 ) -> ReindexResponse:
     """Trigger a full re-index of all previously uploaded documents.
 

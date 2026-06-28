@@ -1,5 +1,6 @@
 "use client";
 
+import { Alert, AlertDescription } from "@/components/ui/alert";
 import {
 	AlertDialog,
 	AlertDialogAction,
@@ -10,7 +11,6 @@ import {
 	AlertDialogHeader,
 	AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import { Alert, AlertDescription } from "@/components/ui/alert";
 import type { VisionConfig } from "@/features/model-compare/components/model-picker-types";
 import { ProviderModelSelect } from "@/features/model-compare/components/provider-model-select";
 import { useModelPicker } from "@/features/model-compare/hooks/use-model-picker";

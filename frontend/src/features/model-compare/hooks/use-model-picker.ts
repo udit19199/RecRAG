@@ -85,9 +85,7 @@ export function useModelPicker({
 				dispatch({
 					type: "bootstrap_error",
 					error:
-						err instanceof Error
-							? err.message
-							: "Failed to load model options",
+						err instanceof Error ? err.message : "Failed to load model options",
 				});
 			}
 		}

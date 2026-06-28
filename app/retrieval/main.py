@@ -12,7 +12,6 @@ from fastapi import BackgroundTasks, Depends, FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import Response
 
-from auth import verify_api_key
 from config import find_config_path, get_frontend_origins, load_config
 from structured_logging import StructuredLoggingMiddleware
 from metrics import MetricsMiddleware, metrics_endpoint
@@ -128,7 +127,6 @@ async def query(
     request: QueryRequest,
     background_tasks: BackgroundTasks,
     runtime: RetrievalRuntime = Depends(get_retrieval_runtime),
-    _: None = Depends(verify_api_key),
 ) -> QueryResponse:
     """Query the retrieval pipeline. Evaluation is always performed asynchronously."""
     # Validate query input
@@ -138,7 +136,7 @@ async def query(
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
 
-    if not runtime.is_loaded():
+    if not request.embedding and not runtime.is_loaded():
         status = runtime.state.value
         error = runtime.error
         detail = error or "Retrieval pipeline is not ready"
@@ -146,7 +144,7 @@ async def query(
 
     try:
         if request.embedding:
-            # Stateless query mode
+            # Stateless query mode (benchmark / compare) — per-request embedder + collection.
             config_path = find_config_path()
             config = load_config(config_path)
 
@@ -177,9 +175,14 @@ async def query(
                 llm_to_use = create_llm_from_config(
                     config, request.llm.provider, request.llm.model
                 )
-            else:
+            elif runtime.is_loaded():
                 async with runtime.acquire() as active_pipeline:
                     llm_to_use = active_pipeline.llm
+            else:
+                raise HTTPException(
+                    status_code=503,
+                    detail="LLM override required when retrieval pipeline is not loaded",
+                )
 
             # Execute
             top_k = request.top_k or config.get("retrieval", {}).get("top_k", 4)
@@ -277,7 +280,6 @@ async def metrics() -> Response:
 @app.get("/config", response_model=ConfigResponse)
 async def get_config(
     runtime: RetrievalRuntime = Depends(get_retrieval_runtime),
-    _: None = Depends(verify_api_key),
 ) -> ConfigResponse:
     """Return the currently active embedding and LLM configuration."""
     try:
@@ -297,7 +299,7 @@ async def get_config(
 
 
 @app.get("/providers", response_model=ProvidersResponse)
-async def get_providers(_: None = Depends(verify_api_key)) -> ProvidersResponse:
+async def get_providers() -> ProvidersResponse:
     """Return available providers and their models, fetched live where possible."""
     # Priority: explicit config base_url > OLLAMA_HOST env var > localhost default.
     # This matches the resolution order in OllamaLLM and OllamaEmbedder.
@@ -471,9 +473,7 @@ async def get_providers(_: None = Depends(verify_api_key)) -> ProvidersResponse:
 
 
 @app.post("/config/reload", response_model=SetConfigResponse)
-async def reload_config(
-    _: None = Depends(verify_api_key),
-) -> SetConfigResponse:
+async def reload_config() -> SetConfigResponse:
     """Reload the retrieval pipeline from config.toml defaults."""
     try:
         config_path = find_config_path()
@@ -507,7 +507,6 @@ async def reload_config(
 @app.post("/config", response_model=SetConfigResponse)
 async def set_config(
     patch: ConfigUpdateRequest,
-    _: None = Depends(verify_api_key),
 ) -> SetConfigResponse:
     try:
         config_path = find_config_path()

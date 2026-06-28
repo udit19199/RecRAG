@@ -216,20 +216,6 @@ class IngestionPipeline:
             "extraction_mode": self.extraction_mode.value,
         }
 
-    def process_all_documents(self, force: bool = False) -> dict[str, Any]:
-        """Load all documents at once; for large corpora use process_documents_streaming."""
-        self._prepare_for_ingestion(force)
-        documents = self.loader.load()
-        chunks = self.splitter.split_documents(documents)
-        embeddings_count = self._embed_and_store(chunks)
-        return {
-            "documents": len(documents),
-            "chunks": len(chunks),
-            "embeddings": embeddings_count,
-            "total_vectors": self.vector_store.count,
-            "extraction_mode": self.extraction_mode.value,
-        }
-
 
 def run_ingestion(
     config_path: Path = Path("config.toml"),

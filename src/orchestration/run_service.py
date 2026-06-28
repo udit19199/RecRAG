@@ -2,12 +2,10 @@
 
 from __future__ import annotations
 
-import asyncio
 import logging
 import os
 import uuid
 from datetime import datetime, timedelta
-from typing import Any
 
 from sqlalchemy.orm import Session
 
@@ -21,20 +19,22 @@ from orchestration.clients import (
 from orchestration.db.models import RecommendationRunRow, WorkspaceRow
 from orchestration.engine import OrchestrationEngine
 from orchestration.models import (
-    BenchmarkSummary,
-    ConfidenceLevel,
     PipelineBlueprint,
     PipelineCandidate,
     Requirements,
     RetentionChoice,
     RetentionDuration,
     RunStatus,
-    ScoredCandidate,
 )
 from orchestration.resolver import build_provider_model_map
 from research.artifacts import write_experiment_artifact
 
 logger = logging.getLogger(__name__)
+
+NO_CORPUS_NOTE = (
+    "No documents in corpus. Showing a preliminary pick from your query only — "
+    "upload PDFs and start a new run to benchmark and export a blueprint."
+)
 
 
 class RunService:
@@ -49,6 +49,23 @@ class RunService:
         config_path = find_config_path()
         self.config = load_config(config_path)
         self.engine = OrchestrationEngine(self.config)
+
+    def _complete_preliminary(
+        self,
+        row: RecommendationRunRow,
+        requirements: Requirements,
+        candidates: list[PipelineCandidate],
+        *,
+        note: str | None = None,
+    ) -> None:
+        """D12 — fast path: complete with preliminary recommendation (no blueprint)."""
+        preliminary = self.engine.preliminary(requirements, candidates)
+        if note:
+            preliminary = preliminary.model_copy(update={"note": note})
+        row.preliminary = preliminary.model_dump(mode="json")
+        row.status = RunStatus.COMPLETE.value
+        row.error_message = None
+        self.db.commit()
 
     def create_run(self, workspace_id: uuid.UUID, requirements: Requirements) -> uuid.UUID:
         run_id = uuid.uuid4()
@@ -90,8 +107,9 @@ class RunService:
 
             files = await list_corpus_files(self.ingestion_url)
             if not files:
-                row.status = RunStatus.COMPLETE.value
-                self.db.commit()
+                self._complete_preliminary(
+                    row, requirements, candidates, note=NO_CORPUS_NOTE
+                )
                 return
 
             row.status = RunStatus.INDEXING.value
@@ -101,25 +119,38 @@ class RunService:
             )
             row.collection_names = [c.spec.collection_name for c in indexed]
             if len(indexed) < 1:
-                row.status = RunStatus.FAILED.value
-                row.error_message = "No candidates indexed successfully"
-                self.db.commit()
+                self._complete_preliminary(
+                    row,
+                    requirements,
+                    candidates,
+                    note=(
+                        "Could not index candidates on your corpus. "
+                        "Showing preliminary recommendation only — check ingestion logs, "
+                        "then upload PDFs and try again."
+                    ),
+                )
                 return
 
             row.status = RunStatus.BENCHMARKING.value
             self.db.commit()
             weights = self.engine.metric_weights(requirements)
-            scored = await run_benchmark(
+            scored, benchmark_failures = await run_benchmark(
                 requirements,
                 indexed,
                 weights,
                 self.retrieval_url,
-                os.environ.get("REC_RAG_API_KEY"),
             )
             if not scored:
-                row.status = RunStatus.FAILED.value
-                row.error_message = "Benchmark produced no scores"
-                self.db.commit()
+                detail = "; ".join(benchmark_failures[:3]) if benchmark_failures else ""
+                bench_note = (
+                    "Benchmark could not score any pipeline on your corpus. "
+                    "Showing preliminary recommendation only."
+                )
+                if detail:
+                    bench_note = f"{bench_note} ({detail})"
+                self._complete_preliminary(
+                    row, requirements, candidates, note=bench_note
+                )
                 return
 
             row.scored_candidates = [s.model_dump(mode="json") for s in scored]

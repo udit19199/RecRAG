@@ -8,7 +8,6 @@ import type {
 	AdapterConfig,
 	ExtractionOptions,
 	FileListResponse,
-	HealthResponse,
 	IndexStatusRequest,
 	IndexStatusResponse,
 	IngestionStatus,
@@ -54,11 +53,6 @@ export async function uploadPDFs(
 export async function getIngestionStatus(): Promise<IngestionStatus> {
 	const res = await authenticatedFetch(getIngestionApiUrl("/status"));
 	return handleResponse<IngestionStatus>(res);
-}
-
-async function checkIngestionHealth(): Promise<HealthResponse> {
-	const res = await fetch(getIngestionApiUrl("/health"));
-	return handleResponse<HealthResponse>(res);
 }
 
 export async function getUploadedFiles(): Promise<FileListResponse> {

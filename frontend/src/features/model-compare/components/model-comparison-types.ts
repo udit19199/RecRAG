@@ -11,7 +11,7 @@ export type SlotState = {
 	isChecking: boolean;
 };
 
-export const INITIAL_SLOT_STATE: SlotState = {
+const INITIAL_SLOT_STATE: SlotState = {
 	vision: null,
 	embedding: null,
 	llm: null,

@@ -6,7 +6,7 @@ import hashlib
 import re
 from typing import Any
 
-from orchestration.models import PipelineSpec, RagArchitecture
+from orchestration.models import PipelineSpec
 
 
 def _slug(value: str) -> str:

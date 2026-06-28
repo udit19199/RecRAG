@@ -8,9 +8,10 @@ from typing import Any
 
 import httpx
 
-from benchmark.scoring import build_summary, composite_score
+from benchmark.scoring import build_summary
 from benchmark.suite import build_benchmark_suite
 from orchestration.models import (
+    BenchmarkSuite,
     BenchmarkSummary,
     PipelineCandidate,
     Requirements,
@@ -20,16 +21,33 @@ from orchestration.models import (
 logger = logging.getLogger(__name__)
 
 
+def _queries_for_candidate(
+    suite: BenchmarkSuite,
+    architecture: str,
+    user_queries: list[str],
+) -> list[str]:
+    """Domain/user queries plus architecture-specific probes for one candidate."""
+    seen: set[str] = set()
+    ordered: list[str] = []
+    for q in suite.domain_queries + list(user_queries):
+        if q.strip() and q not in seen:
+            seen.add(q)
+            ordered.append(q)
+    for q in suite.architecture_probes.get(architecture, []):
+        if q.strip() and q not in seen:
+            seen.add(q)
+            ordered.append(q)
+    if not ordered:
+        return ["What information do these documents contain?"]
+    return ordered
+
+
 async def _query_retrieval(
     client: httpx.AsyncClient,
     query: str,
     spec: PipelineCandidate,
-    api_key: str | None,
 ) -> dict[str, Any]:
-    headers: dict[str, str] = {}
-    if api_key:
-        headers["RecRAG-API-Key"] = api_key
-    body = {
+    body: dict[str, Any] = {
         "query": query,
         "embedding": {
             "provider": spec.spec.ingestion.embedding.provider,
@@ -50,7 +68,7 @@ async def _query_retrieval(
     if spec.spec.retrieval.top_k:
         body["top_k"] = spec.spec.retrieval.top_k
     body["pipeline_type"] = spec.spec.architecture.value
-    resp = await client.post("/query", json=body, headers=headers, timeout=120.0)
+    resp = await client.post("/query", json=body, timeout=120.0)
     resp.raise_for_status()
     return resp.json()
 
@@ -60,8 +78,6 @@ async def _eval_query(
     contexts: list[str],
     response: str,
 ) -> dict[str, float]:
-    import asyncio
-
     from evaluation.ragas_eval import get_evaluator
 
     evaluator = get_evaluator()
@@ -75,8 +91,7 @@ async def benchmark_candidate(
     candidate: PipelineCandidate,
     queries: list[str],
     weights: dict[str, float],
-    api_key: str | None,
-) -> tuple[PipelineCandidate, BenchmarkSummary] | None:
+) -> tuple[tuple[PipelineCandidate, BenchmarkSummary] | None, str | None]:
     totals: dict[str, float] = {
         "faithfulness": 0.0,
         "answer_relevancy": 0.0,
@@ -84,28 +99,38 @@ async def benchmark_candidate(
         "context_recall": 0.0,
     }
     n = 0
+    last_error: str | None = None
     try:
         async with httpx.AsyncClient(base_url=retrieval_url) as client:
             for query in queries:
-                result = await _query_retrieval(client, query, candidate, api_key)
-                contexts = [c["text"] for c in result.get("context", [])]
-                scores = await _eval_query(
-                    query, contexts, result.get("response", "")
-                )
-                for k in totals:
-                    totals[k] += scores.get(k, 0.0)
-                n += 1
+                try:
+                    result = await _query_retrieval(client, query, candidate)
+                    contexts = [c["text"] for c in result.get("context", [])]
+                    scores = await _eval_query(
+                        query, contexts, result.get("response", "")
+                    )
+                    for k in totals:
+                        totals[k] += scores.get(k, 0.0)
+                    n += 1
+                except Exception as exc:
+                    last_error = str(exc)
+                    logger.warning(
+                        "Benchmark query failed for candidate %s: %s",
+                        candidate.spec.id,
+                        exc,
+                    )
     except Exception as exc:
+        last_error = str(exc)
         logger.warning(
             "Benchmark failed for candidate %s: %s", candidate.spec.id, exc
         )
-        return None
+        return None, last_error
 
     if n == 0:
-        return None
+        return None, last_error or "all benchmark queries failed"
     avg = {k: v / n for k, v in totals.items()}
     summary = build_summary(avg, weights, candidates_evaluated=1)
-    return candidate, summary
+    return (candidate, summary), None
 
 
 async def run_benchmark(
@@ -113,25 +138,32 @@ async def run_benchmark(
     candidates: list[PipelineCandidate],
     weights: dict[str, float],
     retrieval_url: str,
-    api_key: str | None = None,
-) -> list[ScoredCandidate]:
+) -> tuple[list[ScoredCandidate], list[str]]:
     """BM-5: parallel benchmark; BM-6: skip failed candidates."""
     suite = build_benchmark_suite(
         requirements, [c.spec.architecture for c in candidates]
     )
-    queries = suite.all_queries()
-    if not queries:
-        queries = ["What information do these documents contain?"]
 
     tasks = [
-        benchmark_candidate(retrieval_url, c, queries, weights, api_key)
+        benchmark_candidate(
+            retrieval_url,
+            c,
+            _queries_for_candidate(
+                suite,
+                c.spec.architecture.value,
+                requirements.user_queries,
+            ),
+            weights,
+        )
         for c in candidates
     ]
     results = await asyncio.gather(*tasks)
 
     scored: list[ScoredCandidate] = []
-    for item in results:
+    failures: list[str] = []
+    for candidate, (item, failure) in zip(candidates, results, strict=True):
         if item is None:
+            failures.append(f"{candidate.spec.id}: {failure or 'unknown error'}")
             continue
         candidate, summary = item
         scored.append(
@@ -154,4 +186,4 @@ async def run_benchmark(
         second = scored[1].benchmark_summary.composite_score or 0.0
         scored[0].benchmark_summary.margin_over_runner_up = round(top - second, 4)
 
-    return scored
+    return scored, failures

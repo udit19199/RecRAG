@@ -205,7 +205,7 @@ Notes:
 - `src/models/`: shared API and domain models
 - `src/auth.py`: API key auth for ingestion/retrieval (Orchestrator uses Clerk)
 - `state/`: runtime status and evaluation job JSON files
-- `frontend/app/onboarding/`: intake wizard (to align with recommendation flow)
+- `frontend/app/(main)/generate/`: recommendation generator form / intake wizard
 - `frontend/src/lib/api/`: API client and typed request/response helpers
 - `tests/`: pytest suite
 - `scripts/deploy.sh`: single-command deploy script

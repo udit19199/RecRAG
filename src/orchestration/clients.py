@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import asyncio
 import logging
-import os
 from typing import Any
 
 import httpx
@@ -15,25 +14,16 @@ from orchestration.models import PipelineCandidate
 logger = logging.getLogger(__name__)
 
 
-def _api_key() -> str | None:
-    return os.environ.get("REC_RAG_API_KEY") or None
-
-
-def _headers() -> dict[str, str]:
-    key = _api_key()
-    return {"RecRAG-API-Key": key} if key else {}
-
-
 async def fetch_providers(retrieval_url: str) -> dict[str, Any]:
     async with httpx.AsyncClient(base_url=retrieval_url, timeout=30.0) as client:
-        resp = await client.get("/providers", headers=_headers())
+        resp = await client.get("/providers")
         resp.raise_for_status()
         return resp.json()
 
 
 async def list_corpus_files(ingestion_url: str) -> list[str]:
     async with httpx.AsyncClient(base_url=ingestion_url, timeout=30.0) as client:
-        resp = await client.get("/files", headers=_headers())
+        resp = await client.get("/files")
         resp.raise_for_status()
         return resp.json().get("files", [])
 
@@ -58,7 +48,7 @@ async def trigger_targeted_ingest(
         body["extraction_mode"] = ExtractionMode.VISION_ASSISTED.value
 
     async with httpx.AsyncClient(base_url=ingestion_url, timeout=30.0) as client:
-        resp = await client.post("/ingest/target", json=body, headers=_headers())
+        resp = await client.post("/ingest/target", json=body)
         resp.raise_for_status()
 
 
@@ -66,7 +56,7 @@ async def wait_for_ingestion(ingestion_url: str, timeout_s: float = 600.0) -> bo
     deadline = asyncio.get_event_loop().time() + timeout_s
     async with httpx.AsyncClient(base_url=ingestion_url, timeout=30.0) as client:
         while asyncio.get_event_loop().time() < deadline:
-            resp = await client.get("/status", headers=_headers())
+            resp = await client.get("/status")
             resp.raise_for_status()
             data = resp.json()
             status = data.get("status")

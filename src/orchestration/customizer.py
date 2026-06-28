@@ -13,7 +13,6 @@ from adapters import create_llm
 from orchestration.models import (
     AdapterRef,
     IngestionSpec,
-    ModelTier,
     PipelineSpec,
     RagArchitecture,
     Requirements,

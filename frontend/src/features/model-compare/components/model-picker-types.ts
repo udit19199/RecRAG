@@ -1,4 +1,7 @@
-import { readStoredVisionConfig, type StoredVisionConfig } from "@/features/model-compare/lib";
+import {
+	readStoredVisionConfig,
+	type StoredVisionConfig,
+} from "@/features/model-compare/lib";
 import type { AdapterConfig, ProvidersResponse } from "@/lib/api";
 
 export type VisionConfig = StoredVisionConfig;

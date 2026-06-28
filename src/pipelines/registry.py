@@ -12,7 +12,3 @@ ACTIVE_ARCHITECTURES: frozenset[RagArchitecture] = frozenset(
         RagArchitecture.MULTIMODAL,
     }
 )
-
-
-def is_active(architecture: RagArchitecture) -> bool:
-    return architecture in ACTIVE_ARCHITECTURES

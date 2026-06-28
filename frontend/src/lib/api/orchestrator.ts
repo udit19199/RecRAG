@@ -17,9 +17,24 @@ export interface RunResponse {
 		architecture: string;
 		rationale: string;
 		estimated_monthly_usd?: number;
+		note?: string;
 	};
 	blueprint?: Record<string, unknown>;
 	error_message?: string;
+}
+
+export interface RunListItem {
+	run_id: string;
+	status: string;
+	architecture?: string | null;
+	created_at: string;
+}
+
+export async function listRuns(): Promise<RunListItem[]> {
+	const res = await fetch(`${ORCHESTRATOR_API}/runs`);
+	if (!res.ok) throw new Error(await res.text());
+	const data = (await res.json()) as { runs: RunListItem[] };
+	return data.runs;
 }
 
 export async function createRun(

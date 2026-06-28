@@ -186,6 +186,7 @@ class PreliminaryRecommendation(BaseModel):
     cons: list[str] = Field(default_factory=list)
     estimated_monthly_usd: float | None = None
     candidates_preview: list[PipelineCandidate] = Field(default_factory=list)
+    note: str | None = None
 
 
 class RunStatus(StrEnum):

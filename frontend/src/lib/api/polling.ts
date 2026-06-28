@@ -1,5 +1,4 @@
 import { getIngestionStatus } from "@/lib/api/ingestion";
-import { getEvalStatus } from "@/lib/api/retrieval";
 import type { IngestionStatus } from "@/lib/api/types";
 
 export async function waitForIngestionComplete(
@@ -9,7 +8,7 @@ export async function waitForIngestionComplete(
 ): Promise<IngestionStatus> {
 	const startTime = Date.now();
 
-	while (Date.now() - startTime < timeoutMs) {
+	const poll = async (): Promise<IngestionStatus> => {
 		const status = await getIngestionStatus();
 		onPoll?.(status);
 
@@ -21,32 +20,15 @@ export async function waitForIngestionComplete(
 			throw new Error(status.error_message || "Ingestion failed");
 		}
 
-		await new Promise((resolve) => setTimeout(resolve, intervalMs));
-	}
-
-	throw new Error(
-		"Ingestion timeout - still processing after maximum wait time",
-	);
-}
-
-async function waitForEvalComplete(
-	jobId: string,
-	intervalMs: number = 1500,
-	timeoutMs: number = 120000,
-): Promise<void> {
-	const startTime = Date.now();
-
-	while (Date.now() - startTime < timeoutMs) {
-		const status = await getEvalStatus(jobId);
-
-		if (status.status === "complete" || status.status === "error") {
-			return;
+		if (Date.now() - startTime >= timeoutMs) {
+			throw new Error(
+				"Ingestion timeout - still processing after maximum wait time",
+			);
 		}
 
 		await new Promise((resolve) => setTimeout(resolve, intervalMs));
-	}
+		return poll();
+	};
 
-	throw new Error(
-		"Evaluation timeout - still processing after maximum wait time",
-	);
+	return poll();
 }

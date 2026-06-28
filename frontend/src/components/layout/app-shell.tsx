@@ -1,15 +1,15 @@
 "use client";
 
 import { usePathname, useRouter } from "next/navigation";
+import { getPageTitle } from "@/components/layout/app-nav";
 import { AppSidebar } from "@/components/layout/app-sidebar";
-import { getPageMeta } from "@/components/layout/app-nav";
 import { Button } from "@/components/ui/button";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 
 export function AppShell({ children }: { children: React.ReactNode }) {
 	const router = useRouter();
 	const pathname = usePathname();
-	const { title, description } = getPageMeta(pathname);
+	const title = getPageTitle(pathname);
 
 	const signOut = async () => {
 		await fetch("/api/auth/logout", { method: "POST" });
@@ -26,9 +26,6 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 						<h1 className="truncate text-sm font-semibold text-foreground">
 							{title}
 						</h1>
-						<p className="truncate text-xs text-muted-foreground">
-							{description}
-						</p>
 					</div>
 					<Button
 						type="button"

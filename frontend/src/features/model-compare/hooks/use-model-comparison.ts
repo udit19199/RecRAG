@@ -142,6 +142,7 @@ export function useModelComparison() {
 		return () => {
 			cancelled = true;
 		};
+		// biome-ignore lint/correctness/useExhaustiveDependencies: only bootstrap on mount
 	}, []);
 
 	useEffect(() => {

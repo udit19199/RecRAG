@@ -41,7 +41,6 @@ services:
       - .env
     environment:
       - MILVUS_HOST=milvus
-      - REC_RAG_API_KEY=${REC_RAG_API_KEY:-}
     ports:
       - "8001:8001"
     command: uv run uvicorn app.ingestion.main:app --host 0.0.0.0 --port 8001 --timeout-graceful-shutdown 30
@@ -75,7 +74,6 @@ services:
       - .env
     environment:
       - MILVUS_HOST=milvus
-      - REC_RAG_API_KEY=${REC_RAG_API_KEY:-}
     ports:
       - "8000:8000"
     command: uv run uvicorn app.retrieval.main:app --host 0.0.0.0 --port 8000 --timeout-graceful-shutdown 30

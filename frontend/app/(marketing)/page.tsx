@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
 import { IconBolt, IconDatabase, IconSearch } from "@tabler/icons-react";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
 	title: "RecRAG — Enterprise Retrieval, Simplified",
 	description:
 		"High-performance pipeline to ingest, vectorize, and query unstructured data with millisecond latency.",
 };
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
@@ -52,7 +53,7 @@ export default function LandingPage() {
 				</p>
 				<div className="flex flex-col items-start gap-3 pt-4">
 					<Button asChild size="lg">
-						<Link href="/onboarding">Get started</Link>
+						<Link href="/generate">Get started</Link>
 					</Button>
 				</div>
 			</section>

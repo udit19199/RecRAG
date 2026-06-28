@@ -54,70 +54,7 @@ class TestIngestionAPI:
         response = client.post("/upload")
         assert response.status_code == 422  # validation error
 
-    def test_upload_without_auth_when_key_configured(self, client: TestClient) -> None:
-        with patch.dict("os.environ", {"REC_RAG_API_KEY": "test-key"}):
-            response = client.post(
-                "/upload",
-                files={
-                    "files": ("test.pdf", b"%PDF-1.4 test %%EOF", "application/pdf")
-                },
-            )
-            # Without API key header, should be 401
-            assert response.status_code == 401
 
-
-class TestIngestionAPIAuth:
-    """Tests for ingestion API with authentication enabled."""
-
-    @pytest.fixture
-    def client(self) -> TestClient:
-        with patch("app.ingestion.main.IngestionRuntime") as MockRuntime:
-            mock_runtime = MagicMock()
-            mock_runtime.warm = AsyncMock()
-            mock_runtime.shutdown = AsyncMock()
-            MockRuntime.return_value = mock_runtime
-
-            from app.ingestion.main import app
-
-            with TestClient(app) as tc:
-                yield tc
-
-    def test_upload_with_valid_key(self, client: TestClient) -> None:
-        with patch.dict("os.environ", {"REC_RAG_API_KEY": "valid-key"}):
-            response = client.post(
-                "/upload",
-                files={
-                    "files": (
-                        "test.pdf",
-                        b"%PDF-1.4 test content %%EOF",
-                        "application/pdf",
-                    )
-                },
-                headers={"RecRAG-API-Key": "valid-key"},
-            )
-            # Should get past auth, fail on something else (depends on runtime)
-            assert response.status_code != 401
-
-    def test_delete_requires_auth(self, client: TestClient) -> None:
-        """DELETE /documents requires authentication."""
-        with patch.dict("os.environ", {"REC_RAG_API_KEY": "test-key"}):
-            response = client.delete("/documents/test.pdf")
-            assert response.status_code == 401
-
-    def test_delete_with_valid_key(self, client: TestClient) -> None:
-        with patch.dict("os.environ", {"REC_RAG_API_KEY": "valid-key"}):
-            with patch("app.ingestion.main.PDF_DIR", Path("/tmp/nonexistent")):
-                response = client.delete(
-                    "/documents/test.pdf",
-                    headers={"RecRAG-API-Key": "valid-key"},
-                )
-                # File doesn't exist, should be 404
-                assert response.status_code == 404
-
-    def test_reindex_requires_auth(self, client: TestClient) -> None:
-        with patch.dict("os.environ", {"REC_RAG_API_KEY": "test-key"}):
-            response = client.post("/reindex")
-            assert response.status_code == 401
 
 
 class TestUploadCorpusModes:
@@ -142,7 +79,6 @@ class TestUploadCorpusModes:
         (pdf_dir / "existing.pdf").write_bytes(b"%PDF-1.4 existing %%EOF")
 
         with (
-            patch.dict("os.environ", {"REC_RAG_API_KEY": "valid-key"}),
             patch("app.ingestion.main.PDF_DIR", pdf_dir),
             patch("app.ingestion.main.read_status", return_value={"status": "idle"}),
             patch("app.ingestion.main.write_status"),
@@ -153,7 +89,6 @@ class TestUploadCorpusModes:
                 files={
                     "files": ("new.pdf", b"%PDF-1.4 new %%EOF", "application/pdf"),
                 },
-                headers={"RecRAG-API-Key": "valid-key"},
             )
 
         assert response.status_code == 200
@@ -168,7 +103,6 @@ class TestUploadCorpusModes:
         (pdf_dir / "existing.pdf").write_bytes(b"%PDF-1.4 existing %%EOF")
 
         with (
-            patch.dict("os.environ", {"REC_RAG_API_KEY": "valid-key"}),
             patch("app.ingestion.main.PDF_DIR", pdf_dir),
             patch("app.ingestion.main.read_status", return_value={"status": "idle"}),
             patch("app.ingestion.main.write_status"),
@@ -179,7 +113,6 @@ class TestUploadCorpusModes:
                 files={
                     "files": ("new.pdf", b"%PDF-1.4 new %%EOF", "application/pdf"),
                 },
-                headers={"RecRAG-API-Key": "valid-key"},
             )
 
         assert response.status_code == 200
@@ -224,26 +157,7 @@ class TestRetrievalAPI:
         response = client.get("/metrics")
         assert response.status_code == 200
 
-    def test_query_requires_auth_when_configured(self, client: TestClient) -> None:
-        with patch.dict("os.environ", {"REC_RAG_API_KEY": "test-key"}):
-            response = client.post(
-                "/query",
-                json={"query": "test query"},
-            )
-            assert response.status_code == 401
 
-    def test_query_without_auth_when_configured(self, client: TestClient) -> None:
-        with patch.dict("os.environ", {"REC_RAG_API_KEY": "test-key"}):
-            response = client.post(
-                "/query",
-                json={"query": "test"},
-            )
-            assert response.status_code == 401
-
-    def test_config_requires_auth(self, client: TestClient) -> None:
-        with patch.dict("os.environ", {"REC_RAG_API_KEY": "test-key"}):
-            response = client.get("/config")
-            assert response.status_code == 401
 
     def test_providers_returns_structure(self, client: TestClient) -> None:
         """Providers endpoint should return structured data."""

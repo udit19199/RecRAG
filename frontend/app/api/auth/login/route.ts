@@ -1,10 +1,10 @@
 import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 import {
-	COOKIE_NAME,
-	SESSION_MAX_AGE_SEC,
 	authEnabled,
+	COOKIE_NAME,
 	createSessionToken,
+	SESSION_MAX_AGE_SEC,
 	verifyCredentials,
 	verifySessionToken,
 } from "@/lib/auth/session";

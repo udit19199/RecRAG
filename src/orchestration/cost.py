@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from orchestration.models import PipelineSpec, Requirements, UsageAssumptions
+from orchestration.models import PipelineSpec, Requirements
 from orchestration.pricing import model_unit_price
 
 
@@ -24,7 +24,6 @@ def estimate_monthly_usd(
 
     # Rough token estimates: 500 tokens per page ingest, one-time amortized over 30 days
     ingest_tokens = pages * 500
-    daily_query_tokens = queries_day * (q_tokens + a_tokens + q_tokens)  # embed query + llm in/out
     monthly_tokens_in = (ingest_tokens / 30) + queries_day * (q_tokens + q_tokens) * 30
     monthly_tokens_out = queries_day * a_tokens * 30
 

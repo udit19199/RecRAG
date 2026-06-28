@@ -1,4 +1,4 @@
-import { SignJWT, jwtVerify } from "jose";
+import { jwtVerify, SignJWT } from "jose";
 
 const COOKIE_NAME = "recrag_session";
 const SESSION_MAX_AGE_SEC = 60 * 60 * 24 * 7; // 7 days
@@ -18,8 +18,11 @@ function secretKey(): Uint8Array {
 }
 
 export function verifyCredentials(username: string, password: string): boolean {
-	const expectedUser = process.env.RECRAG_AUTH_USERNAME ?? "research";
-	const expectedPass = process.env.RECRAG_AUTH_PASSWORD ?? "research";
+	const expectedUser = process.env.RECRAG_AUTH_USERNAME || "research";
+	const expectedPass = process.env.RECRAG_AUTH_PASSWORD;
+	if (!expectedPass) {
+		throw new Error("RECRAG_AUTH_PASSWORD is not configured");
+	}
 	return username === expectedUser && password === expectedPass;
 }
 
