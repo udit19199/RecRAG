@@ -134,3 +134,89 @@ export interface ReindexResponse {
 	message: string;
 	extraction_mode: ExtractionMode;
 }
+
+// --- FiNER-139 experiment (research-only) ---
+
+export type Finer139Method = "llm" | "nlp" | "ontology" | "hybrid" | "dynamic";
+
+export type Finer139RunStatus = "pending" | "running" | "complete" | "error";
+
+export interface Finer139Progress {
+	stage: string;
+	current: number;
+	total: number;
+	message: string;
+}
+
+export interface Finer139Metrics {
+	precision: number;
+	recall: number;
+	f1: number;
+	tp: number;
+	fp: number;
+	fn: number;
+}
+
+export interface Finer139MethodResult {
+	name: Finer139Method;
+	display_name: string;
+	uses_llm: boolean;
+	latency_s: number;
+	llm_calls: number;
+	error: string | null;
+	strict?: Finer139Metrics;
+	relaxed?: Finer139Metrics;
+	num_pred?: number;
+	num_gold?: number;
+}
+
+export interface Finer139Example {
+	index: number;
+	tokens: string[];
+	text: string;
+	gold: [number, number][];
+	predictions: Record<string, [number, number][]>;
+}
+
+export interface Finer139Results {
+	params: {
+		sample_size: number;
+		seed: number;
+		methods: Finer139Method[];
+		provider: string | null;
+		model: string | null;
+		spacy_model: string;
+	};
+	dataset: {
+		id: string;
+		split: string;
+		num_sentences: number;
+		num_gold_entities: number;
+	};
+	llm: {
+		provider: string | null;
+		model: string | null;
+		error: string | null;
+	};
+	methods: Finer139MethodResult[];
+	examples: Finer139Example[];
+}
+
+export interface Finer139RunResponse {
+	run_id: string;
+	status: Finer139RunStatus;
+	progress?: Finer139Progress | null;
+	params?: Finer139Results["params"] | null;
+	results?: Finer139Results | null;
+	error?: string | null;
+	created_at?: string | null;
+	updated_at?: string | null;
+}
+
+export interface Finer139StartRequest {
+	sample_size?: number;
+	seed?: number;
+	methods?: Finer139Method[];
+	provider?: string | null;
+	model?: string | null;
+}

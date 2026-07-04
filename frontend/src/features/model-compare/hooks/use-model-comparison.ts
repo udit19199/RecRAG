@@ -70,6 +70,7 @@ export function useModelComparison() {
 		}
 	};
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: one-time bootstrap of compare slots on mount
 	useEffect(() => {
 		let cancelled = false;
 
@@ -142,7 +143,6 @@ export function useModelComparison() {
 		return () => {
 			cancelled = true;
 		};
-		// biome-ignore lint/correctness/useExhaustiveDependencies: only bootstrap on mount
 	}, []);
 
 	useEffect(() => {

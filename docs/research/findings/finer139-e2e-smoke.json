@@ -1,0 +1,43 @@
+{
+  "run_at": "2026-07-04T19:11:00Z",
+  "environment": "cloud-agent e2e with Playwright screenshots",
+  "request": {
+    "sample_size": 100,
+    "seed": 42,
+    "methods": ["nlp", "ontology"]
+  },
+  "api_flow": "POST /experiments/finer139/runs -> poll GET until complete",
+  "results": {
+    "dataset": {
+      "num_sentences": 100,
+      "num_gold_entities": 160,
+      "split": "validation"
+    },
+    "methods": [
+      {
+        "name": "nlp",
+        "display_name": "NLP / OpenIE (spaCy)",
+        "strict": { "precision": 0.071, "recall": 0.156, "f1": 0.098 },
+        "relaxed": { "f1": 0.553 },
+        "latency_s": 0.9,
+        "error": null
+      },
+      {
+        "name": "ontology",
+        "display_name": "Ontology / Schema-Driven",
+        "strict": { "precision": 0.32, "recall": 0.919, "f1": 0.475 },
+        "relaxed": { "f1": 0.475 },
+        "latency_s": 0.0,
+        "error": null
+      }
+    ],
+    "examples_count": 15
+  },
+  "screenshots": [
+    "docs/research/findings/screenshots/01-finer139-config.png",
+    "docs/research/findings/screenshots/02-finer139-results.png",
+    "docs/research/findings/screenshots/03-finer139-examples.png",
+    "docs/research/findings/screenshots/04-finer139-nav.png"
+  ],
+  "notes": "LLM/Hybrid/Dynamic require GEMINI_API_KEY. CI fixed: Biome useExhaustiveDependencies in chat/compare hooks."
+}

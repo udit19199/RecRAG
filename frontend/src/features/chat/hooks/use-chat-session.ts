@@ -155,6 +155,7 @@ export function useChatSession() {
 		}
 	};
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: bootstrap health/status/files once on mount
 	useEffect(() => {
 		const checkHealth = async () => {
 			try {
@@ -190,12 +191,12 @@ export function useChatSession() {
 		fetchFiles();
 	}, []);
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: poll only while processing; avoid interval churn from callback identity
 	useEffect(() => {
 		if (ingestionStatus?.status !== "processing") return;
 
 		const interval = setInterval(fetchIngestionStatus, 3000);
 		return () => clearInterval(interval);
-		// biome-ignore lint/correctness/useExhaustiveDependencies: only restart interval when status changes
 	}, [ingestionStatus?.status]);
 
 	const handleReindexStarted = () => {
