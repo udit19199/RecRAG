@@ -1,0 +1,32 @@
+{
+  "run_at": "2026-07-04T18:55:00Z",
+  "environment": "cloud-agent e2e smoke",
+  "request": {
+    "sample_size": 5,
+    "seed": 42,
+    "methods": ["nlp", "ontology"]
+  },
+  "api_flow": "POST /experiments/finer139/runs -> poll GET until complete",
+  "results": {
+    "dataset": {
+      "num_sentences": 5,
+      "split": "validation"
+    },
+    "methods": [
+      {
+        "name": "nlp",
+        "display_name": "NLP / OpenIE (spaCy)",
+        "strict_f1": 0.0,
+        "error": null
+      },
+      {
+        "name": "ontology",
+        "display_name": "Ontology / Schema-Driven",
+        "strict_f1": 0.42857142857142855,
+        "error": null
+      }
+    ],
+    "examples_count": 5
+  },
+  "notes": "Offline methods only (no GEMINI_API_KEY). LLM/Hybrid/Dynamic require API key in .env."
+}

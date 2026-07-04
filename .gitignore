@@ -74,7 +74,10 @@ temp.md
 requirements.txt
 
 # Documentation (planning/deployment guides — out of date)
-docs/
+docs/*
+!docs/research/
+!docs/research/findings/
+!docs/research/findings/**
 
 # Test artifacts
 *.db
