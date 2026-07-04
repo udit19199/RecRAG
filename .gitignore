@@ -75,9 +75,17 @@ requirements.txt
 
 # Documentation (planning/deployment guides — out of date)
 docs/*
+# Research findings only (AGENTS.md: ideation under docs/research/findings/).
+# Scratch notes in docs/research/*.md stay local and are not committed.
 !docs/research/
+docs/research/*
 !docs/research/findings/
 !docs/research/findings/**
+docs/research/findings/.gitkeep
+
+# Ad-hoc local tooling at repo root (e.g. one-off Playwright/npm capture scripts)
+/node_modules/
+/package-lock.json
 
 # Test artifacts
 *.db
