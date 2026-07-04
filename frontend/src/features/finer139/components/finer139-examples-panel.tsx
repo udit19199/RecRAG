@@ -17,27 +17,38 @@ function spanClass(kind: "gold" | "pred") {
 		: "rounded bg-sky-200/80 px-0.5 text-sky-950 dark:bg-sky-900/50 dark:text-sky-100";
 }
 
-function renderTokens(
-	tokens: string[],
-	highlight: [number, number][],
-	className: string,
-	tokenOffsets?: [number, number][],
-) {
+interface HighlightedTokensProps {
+	tokens: string[];
+	highlight: [number, number][];
+	className: string;
+	tokenOffsets?: [number, number][];
+}
+
+function HighlightedTokens({
+	tokens,
+	highlight,
+	className,
+	tokenOffsets,
+}: HighlightedTokensProps) {
 	const marked = new Set<number>();
 	for (const [start, end] of highlight) {
 		for (let i = start; i < end; i++) marked.add(i);
 	}
-	return tokens.map((tok, i) => {
-		const key = tokenOffsets
-			? `${tokenOffsets[i]?.[0] ?? i}-${tok}`
-			: `${tok}-${i}`;
-		return (
-			<span key={key}>
-				{i > 0 ? " " : ""}
-				<span className={marked.has(i) ? className : undefined}>{tok}</span>
-			</span>
-		);
-	});
+	return (
+		<>
+			{tokens.map((tok, i) => {
+				const key = tokenOffsets
+					? `${tokenOffsets[i]?.[0] ?? i}-${tok}`
+					: `${tok}-${i}`;
+				return (
+					<span key={key}>
+						{i > 0 ? " " : ""}
+						<span className={marked.has(i) ? className : undefined}>{tok}</span>
+					</span>
+				);
+			})}
+		</>
+	);
 }
 
 interface Finer139ExamplesPanelProps {
@@ -82,7 +93,11 @@ export function Finer139ExamplesPanel({
 
 				<div className="rounded-md border bg-muted/30 p-3 text-sm leading-relaxed">
 					<p className="mb-2 text-xs font-medium text-muted-foreground">Gold</p>
-					{renderTokens(ex.tokens, ex.gold, spanClass("gold"))}
+					<HighlightedTokens
+						tokens={ex.tokens}
+						highlight={ex.gold}
+						className={spanClass("gold")}
+					/>
 				</div>
 
 				{methodNames.map((name) => (
@@ -95,11 +110,11 @@ export function Finer139ExamplesPanel({
 								{name}
 							</Badge>
 						</div>
-						{renderTokens(
-							ex.tokens,
-							ex.predictions[name] ?? [],
-							spanClass("pred"),
-						)}
+						<HighlightedTokens
+							tokens={ex.tokens}
+							highlight={ex.predictions[name] ?? []}
+							className={spanClass("pred")}
+						/>
 					</div>
 				))}
 			</CardContent>
