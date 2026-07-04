@@ -78,15 +78,21 @@ FiNER-139 dataset.
 
 ## E2E verification (2026-07-04)
 
-Offline smoke (`nlp` + `ontology`, sample_size=5, seed=42):
+Offline smoke (`nlp` + `ontology`, sample_size=100, seed=42) via live tab:
 
-| Method | F1 (strict) | Notes |
-|--------|-------------|-------|
-| NLP / OpenIE | 0.000 | spaCy general NER misses FiNER numeric XBRL spans on small sample |
-| Ontology / Schema | 0.429 | Keyword + numeric regex baseline |
+| Method | P (strict) | R (strict) | F1 (strict) | F1 (relaxed) | Latency |
+|--------|------------|------------|-------------|--------------|---------|
+| NLP / OpenIE (spaCy) | 7.1% | 15.6% | 9.8% | 55.3% | 0.9s |
+| Ontology / Schema-Driven | 32.0% | 91.9% | 47.5% | 47.5% | 0.0s |
 
-API smoke: `POST /experiments/finer139/runs` → poll `GET .../runs/{id}` until
-`complete`; results JSON includes per-method metrics and example spans.
+Screenshots (see `screenshots/` in this folder):
+
+- `01-finer139-config.png` — tab config panel
+- `02-finer139-results.png` — results table after live run
+- `03-finer139-examples.png` — gold vs predicted span examples
+- `04-finer139-nav.png` — sidebar with FiNER-139 nav item
+
+Capture locally: `node scripts/capture-finer139-screenshots.mjs` (requires orchestrator + frontend running).
 
 ## Results
 
