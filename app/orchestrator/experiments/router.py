@@ -35,6 +35,10 @@ _LOCK = threading.Lock()
 class StartRunRequest(BaseModel):
     sample_size: int = Field(default=100, ge=1, le=MAX_SAMPLE_SIZE)
     seed: int = Field(default=42, ge=0)
+    seeds: list[int] | None = Field(default=None, min_length=1, max_length=10)
+    split: str = Field(default="validation", pattern="^(train|validation|test)$")
+    stratified: bool = False
+    suite_path: str | None = None
     methods: list[str] = Field(default_factory=lambda: list(ALL_METHODS))
     # FiNER-139 defaults to OpenAI; UI may override per run.
     provider: str | None = "openai"
@@ -81,6 +85,10 @@ def _run_task(
     run_id: str,
     sample_size: int,
     seed: int,
+    seeds: list[int] | None,
+    split: str,
+    stratified: bool,
+    suite_path: str | None,
     methods: list[str],
     provider: str | None,
     model: str | None,
@@ -114,6 +122,10 @@ def _run_task(
         params = RunParams(
             sample_size=sample_size,
             seed=seed,
+            seeds=seeds,
+            split=split,
+            stratified=stratified,
+            suite_path=suite_path,
             methods=methods,
             provider=provider,
             model=model,
@@ -156,6 +168,10 @@ async def start_run(
             "params": {
                 "sample_size": body.sample_size,
                 "seed": body.seed,
+                "seeds": body.seeds,
+                "split": body.split,
+                "stratified": body.stratified,
+                "suite_path": body.suite_path,
                 "methods": methods,
                 "provider": body.provider,
                 "model": body.model,
@@ -170,6 +186,10 @@ async def start_run(
         run_id,
         body.sample_size,
         body.seed,
+        body.seeds,
+        body.split,
+        body.stratified,
+        body.suite_path,
         methods,
         body.provider,
         body.model,

@@ -210,6 +210,11 @@ export interface Finer139Results {
 	params: {
 		sample_size: number;
 		seed: number;
+		seeds?: number[];
+		split?: string;
+		stratified?: boolean;
+		suite_path?: string | null;
+		multi_seed?: boolean;
 		methods: Finer139Method[];
 		provider: string | null;
 		model: string | null;
@@ -220,6 +225,9 @@ export interface Finer139Results {
 		split: string;
 		num_sentences: number;
 		num_gold_entities: number;
+		stratified?: boolean;
+		frozen?: boolean;
+		suite_path?: string;
 	};
 	llm: {
 		provider: string | null;
@@ -232,11 +240,44 @@ export interface Finer139Results {
 		sentences_with_gold?: number;
 		ties?: number;
 	} | null;
+	paired_comparisons?: Array<{
+		method_a: string;
+		method_b: string;
+		delta_b_minus_a: {
+			delta_mean: number;
+			ci_low: number;
+			ci_high: number;
+			significant: boolean;
+		};
+		mcnemar: Record<string, number>;
+		interpretation: string;
+	}>;
+	multi_seed_aggregate?: {
+		seeds: number[];
+		n_runs: number;
+		by_method: Record<
+			string,
+			{
+				strict_f1_mean: number;
+				strict_f1_std: number;
+				strict_f1_min: number;
+				strict_f1_max: number;
+				n_seeds: number;
+				partial_f1_mean?: number;
+			}
+		>;
+		ranking: string[];
+	};
+	per_seed_runs?: Finer139Results[];
 	evaluation?: {
 		protocol_version?: number;
 		primary_metric?: string;
 		secondary_metrics?: string[];
 		partial_match_iou_threshold?: number;
+		split?: string;
+		stratified_sampling?: boolean;
+		multi_seed?: boolean;
+		n_seeds?: number;
 	} | null;
 	examples: Finer139Example[];
 }
@@ -255,6 +296,10 @@ export interface Finer139RunResponse {
 export interface Finer139StartRequest {
 	sample_size?: number;
 	seed?: number;
+	seeds?: number[];
+	split?: "train" | "validation" | "test";
+	stratified?: boolean;
+	suite_path?: string | null;
 	methods?: Finer139Method[];
 	provider?: string | null;
 	model?: string | null;

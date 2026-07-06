@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "split": "validation",
+  "source": "inline",
+  "description": "Frozen evaluation suite v1 — fixed sentences for reproducible benchmarks.",
+  "sentences": [
+    {
+      "id": 101,
+      "tokens": ["total", "assets", "were", "250", "billion"],
+      "ner_tags": ["O", "O", "O", "B-Assets", "O"]
+    },
+    {
+      "id": 102,
+      "tokens": ["operating", "expenses", "increased", "15", "percent"],
+      "ner_tags": ["O", "O", "O", "B-OperatingExpenses", "O"]
+    },
+    {
+      "id": 103,
+      "tokens": ["long-term", "debt", "matured", "at", "3.5", "percent"],
+      "ner_tags": ["O", "O", "O", "O", "B-DebtInstrumentInterestRateStatedPercentage", "O"]
+    },
+    {
+      "id": 104,
+      "tokens": ["dividends", "paid", "per", "share", "were", "2.50"],
+      "ner_tags": ["O", "O", "O", "O", "O", "B-CommonStockDividendsPerShareDeclared"]
+    },
+    {
+      "id": 105,
+      "tokens": ["goodwill", "impairment", "charge", "of", "75", "million"],
+      "ner_tags": ["O", "O", "O", "O", "B-GoodwillImpairmentLoss", "O"]
+    }
+  ]
+}

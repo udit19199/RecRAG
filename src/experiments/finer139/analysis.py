@@ -8,8 +8,9 @@ confidence intervals, concept-stratified recall, and cross-method head-to-head.
 from __future__ import annotations
 
 import random
-from collections import Counter
+from collections import Counter, defaultdict
 from dataclasses import asdict, dataclass
+from typing import Any
 
 from experiments.finer139.scoring import Metrics, _count, _metrics, numeric_filter, score
 from experiments.finer139.types import Sentence, Span
@@ -148,9 +149,12 @@ def bootstrap_f1_ci(
 
 
 def _concept_recall(
-    sentences: list[Sentence], predictions: list[list[Span]], top_k: int = 10
+    sentences: list[Sentence], predictions: list[list[Span]], top_k: int | None = 10
 ) -> list[dict[str, float | int | str]]:
-    """Per-XBRL-concept strict recall (gold labels only), top-k by frequency."""
+    """Per-XBRL-concept strict recall (gold labels only).
+
+    When ``top_k`` is None, return all concepts with gold counts.
+    """
     concept_gold: Counter[str] = Counter()
     concept_tp: Counter[str] = Counter()
 
@@ -171,7 +175,12 @@ def _concept_recall(
                     break
 
     rows: list[dict[str, float | int | str]] = []
-    for concept, count in concept_gold.most_common(top_k):
+    items = (
+        concept_gold.most_common(top_k)
+        if top_k is not None
+        else concept_gold.most_common()
+    )
+    for concept, count in items:
         tp = concept_tp[concept]
         rows.append(
             {
@@ -285,14 +294,172 @@ def extended_to_dict(ext: ExtendedScore) -> dict:
             "low": round(ext.bootstrap_strict_f1[0], 4),
             "high": round(ext.bootstrap_strict_f1[1], 4),
         },
-        "concept_recall_top10": ext.concept_recall,
+        "concept_recall": ext.concept_recall,
+    }
+
+
+def _sentence_has_strict_hit(preds: list[Span], gold: list[Span]) -> bool:
+    tp, _, _ = _count(preds, gold, relaxed=False)
+    return tp > 0
+
+
+def paired_bootstrap_delta(
+    sentences: list[Sentence],
+    preds_a: list[list[Span]],
+    preds_b: list[list[Span]],
+    *,
+    samples: int = DEFAULT_BOOTSTRAP_SAMPLES,
+    seed: int = 42,
+) -> dict[str, float | bool]:
+    """Bootstrap 95% CI for strict micro-F1 delta (B − A) on paired sentences."""
+    if not sentences:
+        return {"delta_mean": 0.0, "ci_low": 0.0, "ci_high": 0.0, "significant": False}
+
+    rng = random.Random(seed)
+    n = len(sentences)
+    deltas: list[float] = []
+    for _ in range(samples):
+        tp_a = fp_a = fn_a = 0
+        tp_b = fp_b = fn_b = 0
+        for _ in range(n):
+            i = rng.randrange(n)
+            gold = sentences[i].gold_spans
+            pa = _dedupe_preds(numeric_filter(preds_a[i], sentences[i]))
+            pb = _dedupe_preds(numeric_filter(preds_b[i], sentences[i]))
+            t, f, fn = _count(pa, gold, relaxed=False)
+            tp_a, fp_a, fn_a = tp_a + t, fp_a + f, fn_a + fn
+            t, f, fn = _count(pb, gold, relaxed=False)
+            tp_b, fp_b, fn_b = tp_b + t, fp_b + f, fn_b + fn
+        f1_a = _metrics(tp_a, fp_a, fn_a).f1
+        f1_b = _metrics(tp_b, fp_b, fn_b).f1
+        deltas.append(f1_b - f1_a)
+    deltas.sort()
+    lo = deltas[int(0.025 * len(deltas))]
+    hi = deltas[int(0.975 * len(deltas)) - 1]
+    return {
+        "delta_mean": round(sum(deltas) / len(deltas), 4),
+        "ci_low": round(lo, 4),
+        "ci_high": round(hi, 4),
+        "significant": lo > 0 or hi < 0,
+    }
+
+
+def mcnemar_sentence_hits(
+    sentences: list[Sentence],
+    preds_a: list[list[Span]],
+    preds_b: list[list[Span]],
+) -> dict[str, int]:
+    """McNemar-style discordant counts on per-sentence strict-hit (any TP)."""
+    a_only = b_only = both = neither = 0
+    for i, sentence in enumerate(sentences):
+        if not sentence.gold_spans:
+            continue
+        pa = _dedupe_preds(numeric_filter(preds_a[i], sentence))
+        pb = _dedupe_preds(numeric_filter(preds_b[i], sentence))
+        ha = _sentence_has_strict_hit(pa, sentence.gold_spans)
+        hb = _sentence_has_strict_hit(pb, sentence.gold_spans)
+        if ha and hb:
+            both += 1
+        elif ha:
+            a_only += 1
+        elif hb:
+            b_only += 1
+        else:
+            neither += 1
+    return {
+        "a_only": a_only,
+        "b_only": b_only,
+        "both": both,
+        "neither": neither,
+        "discordant": a_only + b_only,
+    }
+
+
+def compare_methods_paired(
+    sentences: list[Sentence],
+    all_preds: dict[str, list[list[Span]]],
+    *,
+    seed: int = 42,
+) -> list[dict[str, Any]]:
+    """Pairwise bootstrap + McNemar for every scored method pair."""
+    from itertools import combinations
+
+    names = sorted(all_preds.keys())
+    rows: list[dict[str, Any]] = []
+    for a, b in combinations(names, 2):
+        delta = paired_bootstrap_delta(
+            sentences, all_preds[a], all_preds[b], seed=seed
+        )
+        mcnemar = mcnemar_sentence_hits(sentences, all_preds[a], all_preds[b])
+        rows.append(
+            {
+                "method_a": a,
+                "method_b": b,
+                "delta_b_minus_a": delta,
+                "mcnemar": mcnemar,
+                "interpretation": (
+                    f"{b} significantly better than {a}"
+                    if delta["ci_low"] > 0
+                    else f"{a} significantly better than {b}"
+                    if delta["ci_high"] < 0
+                    else f"No significant difference between {a} and {b}"
+                ),
+            }
+        )
+    return rows
+
+
+def aggregate_multi_seed(per_seed_runs: list[dict[str, Any]]) -> dict[str, Any]:
+    """Summarize strict F1 mean ± std across multiple seeded runs."""
+    method_f1: dict[str, list[float]] = defaultdict(list)
+    method_partial: dict[str, list[float]] = defaultdict(list)
+    seeds: list[int] = []
+
+    for run in per_seed_runs:
+        seeds.append(run.get("params", {}).get("seed", -1))
+        for m in run.get("methods", []):
+            if m.get("error"):
+                continue
+            strict = m.get("strict")
+            if strict:
+                method_f1[m["name"]].append(float(strict["f1"]))
+            partial = m.get("partial")
+            if partial:
+                method_partial[m["name"]].append(float(partial["f1"]))
+
+    by_method: dict[str, dict[str, float | int]] = {}
+    for name, f1s in method_f1.items():
+        mean = sum(f1s) / len(f1s)
+        std = (sum((x - mean) ** 2 for x in f1s) / len(f1s)) ** 0.5 if len(f1s) > 1 else 0.0
+        by_method[name] = {
+            "strict_f1_mean": round(mean, 4),
+            "strict_f1_std": round(std, 4),
+            "strict_f1_min": round(min(f1s), 4),
+            "strict_f1_max": round(max(f1s), 4),
+            "n_seeds": len(f1s),
+        }
+        partials = method_partial.get(name, [])
+        if partials:
+            pmean = sum(partials) / len(partials)
+            by_method[name]["partial_f1_mean"] = round(pmean, 4)
+
+    ranking = sorted(
+        by_method.items(),
+        key=lambda x: float(x[1]["strict_f1_mean"]),
+        reverse=True,
+    )
+    return {
+        "seeds": seeds,
+        "n_runs": len(per_seed_runs),
+        "by_method": by_method,
+        "ranking": [name for name, _ in ranking],
     }
 
 
 def compare_methods_head_to_head(
     sentences: list[Sentence],
     all_preds: dict[str, list[list[Span]]],
-) -> dict[str, dict[str, int]]:
+) -> dict[str, Any]:
     """Per-method count of sentences where that method has the best strict F1."""
     methods = list(all_preds.keys())
     wins: Counter[str] = Counter()

@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "split": "validation",
+  "source": "inline",
+  "description": "Offline mini corpus for FiNER-139 CI (no HuggingFace download).",
+  "sentences": [
+    {
+      "id": 1,
+      "tokens": ["revenue", "was", "100", "million"],
+      "ner_tags": ["O", "O", "B-RevenueFromContractWithCustomerExcludingAssessedTax", "O"]
+    },
+    {
+      "id": 2,
+      "tokens": ["debt", "face", "amount", "of", "$", "500", "million"],
+      "ner_tags": [
+        "O",
+        "O",
+        "O",
+        "O",
+        "O",
+        "B-DebtInstrumentFaceAmount",
+        "O"
+      ]
+    },
+    {
+      "id": 3,
+      "tokens": ["net", "income", "rose", "to", "42", "percent"],
+      "ner_tags": ["O", "O", "O", "O", "B-NetIncomeLoss", "O"]
+    },
+    {
+      "id": 4,
+      "tokens": ["cash", "and", "equivalents", "totaled", "1.2", "billion"],
+      "ner_tags": ["O", "O", "O", "O", "B-CashAndCashEquivalentsAtCarryingValue", "O"]
+    }
+  ]
+}

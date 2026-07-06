@@ -42,6 +42,10 @@ export function useFiner139Run() {
 	const [providersLoading, setProvidersLoading] = useState(true);
 	const [sampleSize, setSampleSize] = useState(100);
 	const [seed, setSeed] = useState(42);
+	const [split, setSplit] = useState<"train" | "validation" | "test">(
+		"validation",
+	);
+	const [stratified, setStratified] = useState(false);
 	const [methods, setMethods] = useState<Finer139Method[]>(DEFAULT_METHODS);
 	const [llmValue, setLlmValue] = useState<string | undefined>(undefined);
 	const [run, setRun] = useState<Finer139RunResponse | null>(null);
@@ -93,6 +97,8 @@ export function useFiner139Run() {
 			const { run_id } = await startFiner139Run({
 				sample_size: sampleSize,
 				seed,
+				split,
+				stratified,
 				methods,
 				provider: parsed?.provider ?? null,
 				model: parsed?.model ?? null,
@@ -104,7 +110,7 @@ export function useFiner139Run() {
 		} finally {
 			setIsRunning(false);
 		}
-	}, [llmValue, methods, sampleSize, seed]);
+	}, [llmValue, methods, sampleSize, seed, split, stratified]);
 
 	const progressPct =
 		run?.progress && run.progress.total > 0
@@ -120,6 +126,10 @@ export function useFiner139Run() {
 		setSampleSize,
 		seed,
 		setSeed,
+		split,
+		setSplit,
+		stratified,
+		setStratified,
 		methods,
 		toggleMethod,
 		llmValue,
