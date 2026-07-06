@@ -99,7 +99,8 @@ Keys go in `.env` (copy from `.env.example`). [Read more about configuration](#c
 
 | Command | What it does |
 |---------|-------------|
-| `make deploy` | Build → k3s → deploy (single command) |
+| `make docker-up` | Run the app stack locally with Docker Compose |
+| `make deploy` | Build → k3s → deploy (legacy Kubernetes path) |
 | `make deploy-dev` | Same, dev overlay (smaller resources) |
 
 ---
@@ -147,7 +148,17 @@ Set `OLLAMA_HOST` in `.env` to override all Ollama base_urls at once.
 
 ## Deployment
 
-### Kubernetes (recommended)
+### EC2 with CI/CD (recommended for small teams)
+
+For a production setup with a single EC2 host and automated deploys:
+
+- use `docker-compose.ec2.yml`
+- publish images to ECR from GitHub Actions
+- deploy to EC2 over SSH with `scripts/ec2/deploy.sh`
+
+See [docs/AWS_EC2_CICD.md](docs/AWS_EC2_CICD.md) for the full setup.
+
+### Kubernetes
 
 ```bash
 cp .env.example .env   # add your API keys

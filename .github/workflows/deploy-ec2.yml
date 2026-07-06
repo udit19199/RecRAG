@@ -1,0 +1,128 @@
+name: Deploy to EC2
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  build-and-push:
+    name: Build and publish images
+    runs-on: ubuntu-latest
+    outputs:
+      api_image: ${{ steps.meta.outputs.api_image }}
+      frontend_image: ${{ steps.meta.outputs.frontend_image }}
+      aws_region: ${{ steps.meta.outputs.aws_region }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+          aws-region: ${{ vars.AWS_REGION }}
+
+      - name: Log in to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Prepare image metadata
+        id: meta
+        env:
+          REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          AWS_REGION: ${{ vars.AWS_REGION }}
+          API_REPOSITORY: ${{ vars.ECR_API_REPOSITORY }}
+          FRONTEND_REPOSITORY: ${{ vars.ECR_FRONTEND_REPOSITORY }}
+        run: |
+          echo "api_image=${REGISTRY}/${API_REPOSITORY}:${GITHUB_SHA}" >> "$GITHUB_OUTPUT"
+          echo "frontend_image=${REGISTRY}/${FRONTEND_REPOSITORY}:${GITHUB_SHA}" >> "$GITHUB_OUTPUT"
+          echo "aws_region=${AWS_REGION}" >> "$GITHUB_OUTPUT"
+
+      - name: Build API image
+        env:
+          API_IMAGE: ${{ steps.meta.outputs.api_image }}
+          API_REPOSITORY: ${{ vars.ECR_API_REPOSITORY }}
+          REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        run: |
+          docker build -t "$API_IMAGE" -t "${REGISTRY}/${API_REPOSITORY}:latest" -f Dockerfile --target api .
+
+      - name: Build frontend image
+        env:
+          FRONTEND_IMAGE: ${{ steps.meta.outputs.frontend_image }}
+          FRONTEND_REPOSITORY: ${{ vars.ECR_FRONTEND_REPOSITORY }}
+          REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          NEXT_PUBLIC_RETRIEVAL_API_URL: ${{ vars.PRODUCTION_RETRIEVAL_API_URL }}
+          NEXT_PUBLIC_INGESTION_API_URL: ${{ vars.PRODUCTION_INGESTION_API_URL }}
+        run: |
+          docker build \
+            -t "$FRONTEND_IMAGE" \
+            -t "${REGISTRY}/${FRONTEND_REPOSITORY}:latest" \
+            -f frontend/Dockerfile \
+            --build-arg NEXT_PUBLIC_RETRIEVAL_API_URL="$NEXT_PUBLIC_RETRIEVAL_API_URL" \
+            --build-arg NEXT_PUBLIC_INGESTION_API_URL="$NEXT_PUBLIC_INGESTION_API_URL" \
+            .
+
+      - name: Push API image
+        env:
+          API_IMAGE: ${{ steps.meta.outputs.api_image }}
+          API_REPOSITORY: ${{ vars.ECR_API_REPOSITORY }}
+          REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        run: |
+          docker push "$API_IMAGE"
+          docker push "${REGISTRY}/${API_REPOSITORY}:latest"
+
+      - name: Push frontend image
+        env:
+          FRONTEND_IMAGE: ${{ steps.meta.outputs.frontend_image }}
+          FRONTEND_REPOSITORY: ${{ vars.ECR_FRONTEND_REPOSITORY }}
+          REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        run: |
+          docker push "$FRONTEND_IMAGE"
+          docker push "${REGISTRY}/${FRONTEND_REPOSITORY}:latest"
+
+  deploy:
+    name: Deploy on EC2
+    runs-on: ubuntu-latest
+    needs: build-and-push
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Upload deployment files
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          target: ${{ vars.EC2_APP_DIR }}
+          source: "docker-compose.ec2.yml,config.toml,scripts/ec2/deploy.sh,scripts/ec2/bootstrap.sh,.env.example"
+          overwrite: true
+
+      - name: Restart the EC2 stack
+        uses: appleboy/ssh-action@v1.0.3
+        env:
+          API_IMAGE: ${{ needs.build-and-push.outputs.api_image }}
+          FRONTEND_IMAGE: ${{ needs.build-and-push.outputs.frontend_image }}
+          AWS_REGION: ${{ needs.build-and-push.outputs.aws_region }}
+          APP_DIR: ${{ vars.EC2_APP_DIR }}
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          envs: API_IMAGE,FRONTEND_IMAGE,AWS_REGION,APP_DIR
+          script: |
+            set -euo pipefail
+            chmod +x "${APP_DIR}/scripts/ec2/deploy.sh"
+            APP_DIR="$APP_DIR" \
+            API_IMAGE="$API_IMAGE" \
+            FRONTEND_IMAGE="$FRONTEND_IMAGE" \
+            AWS_REGION="$AWS_REGION" \
+            bash "${APP_DIR}/scripts/ec2/deploy.sh"

@@ -1,0 +1,149 @@
+services:
+  milvus:
+    image: milvusdb/milvus:latest
+    command: ["milvus", "run", "standalone"]
+    security_opt:
+      - seccomp:unconfined
+    environment:
+      ETCD_USE_EMBED: "true"
+      ETCD_DATA_DIR: /var/lib/milvus/etcd
+      COMMON_STORAGETYPE: local
+      DEPLOY_MODE: STANDALONE
+    volumes:
+      - milvus_data:/var/lib/milvus
+    ports:
+      - "19530:19530"
+      - "9091:9091"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9091/healthz"]
+      interval: 30s
+      timeout: 20s
+      start_period: 90s
+      retries: 3
+    restart: unless-stopped
+
+  api-ingestion:
+    image: ${API_IMAGE:?set API_IMAGE}
+    command:
+      [
+        "uv",
+        "run",
+        "uvicorn",
+        "app.ingestion.main:app",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "8001",
+        "--timeout-graceful-shutdown",
+        "30",
+      ]
+    env_file:
+      - .env
+    environment:
+      MILVUS_HOST: ${MILVUS_HOST:-milvus}
+    volumes:
+      - ./data:/app/data
+      - ./state:/app/state
+      - ./config.toml:/app/config.toml:ro
+    ports:
+      - "8001:8001"
+    depends_on:
+      milvus:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8001/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  api-retrieval:
+    image: ${API_IMAGE:?set API_IMAGE}
+    command:
+      [
+        "uv",
+        "run",
+        "uvicorn",
+        "app.retrieval.main:app",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "8000",
+        "--timeout-graceful-shutdown",
+        "30",
+      ]
+    env_file:
+      - .env
+    environment:
+      MILVUS_HOST: ${MILVUS_HOST:-milvus}
+    volumes:
+      - ./state:/app/state
+      - ./config.toml:/app/config.toml:ro
+    ports:
+      - "8000:8000"
+    depends_on:
+      milvus:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8000/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  orchestrator:
+    image: ${API_IMAGE:?set API_IMAGE}
+    command:
+      [
+        "uv",
+        "run",
+        "uvicorn",
+        "app.orchestrator.main:app",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "8002",
+        "--timeout-graceful-shutdown",
+        "30",
+      ]
+    env_file:
+      - .env
+    environment:
+      MILVUS_HOST: ${MILVUS_HOST:-milvus}
+      RETRIEVAL_API_URL: ${RETRIEVAL_API_URL:-http://api-retrieval:8000}
+      INGESTION_API_URL: ${INGESTION_API_URL:-http://api-ingestion:8001}
+    volumes:
+      - ./state:/app/state
+      - ./config.toml:/app/config.toml:ro
+    ports:
+      - "8002:8002"
+    depends_on:
+      api-retrieval:
+        condition: service_healthy
+      api-ingestion:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8002/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  frontend:
+    image: ${FRONTEND_IMAGE:?set FRONTEND_IMAGE}
+    environment:
+      ORCHESTRATOR_API_URL: ${ORCHESTRATOR_API_URL:-http://orchestrator:8002}
+      NEXT_PUBLIC_ORCHESTRATOR_API_URL: ${NEXT_PUBLIC_ORCHESTRATOR_API_URL:-http://orchestrator:8002}
+    ports:
+      - "3000:3000"
+    depends_on:
+      api-retrieval:
+        condition: service_healthy
+      api-ingestion:
+        condition: service_healthy
+      orchestrator:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  milvus_data:

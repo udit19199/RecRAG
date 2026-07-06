@@ -75,6 +75,7 @@ requirements.txt
 
 # Documentation (planning/deployment guides — out of date)
 docs/*
+!docs/AWS_EC2_CICD.md
 # Research findings only (AGENTS.md: ideation under docs/research/findings/).
 # Scratch notes in docs/research/*.md stay local and are not committed.
 !docs/research/
