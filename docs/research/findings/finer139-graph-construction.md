@@ -29,18 +29,29 @@ FiNER-139 dataset.
 
 | Method | Implementation | Notes |
 |--------|----------------|-------|
-| **LLM-Based** | Open-ended prompt → JSON entity list → span alignment | Uses configured LLM (`config.toml` or tab override) |
+| **LLM-Based** | Open-ended prompt → JSON entity list → span alignment | Defaults to OpenAI `gpt-4o-mini` (override in tab) |
 | **NLP / OpenIE** | spaCy `en_core_web_sm`, labels MONEY/PERCENT/CARDINAL/QUANTITY/DATE/ORDINAL | Deterministic, offline |
 | **Ontology / Schema** | XBRL keyword gazetteer (CamelCase-split concept names) + numeric regex when keywords co-occur in sentence | Deterministic |
 | **Hybrid** | LLM prompted with full 139 concept list + numeric post-filter | Schema-guided LLM |
 | **Dynamic / Incremental** | Memory-augmented wrapper over Hybrid; learns context words from base hits and flags nearby numerics | Reuses Hybrid LLM calls when both selected |
 
-## Metrics
+## Metrics (protocol v2)
 
-- Micro **precision**, **recall**, **F1** over the sample
-- **Strict** match: exact token span
-- **Relaxed** match: any token overlap
-- Per-method **latency** and **LLM call count**
+Primary ranking uses **strict micro-F1** (exact token span, numeric-only universe).
+Extended metrics (`src/experiments/finer139/analysis.py`) support richer technique comparison:
+
+| Tier | Metric | Purpose |
+|------|--------|---------|
+| **Primary** | Strict micro P/R/F1 | Exact span match, pooled over all entities |
+| **Boundary quality** | Partial micro F1 (IoU ≥ 0.5) | Rewards nearly-correct spans (NER standard) |
+| **Sentence-level** | Macro strict F1 | Average per-sentence F1 — penalizes methods that fail entire sentences |
+| **Coverage** | Sentence hit rate | % of gold sentences with ≥1 strict correct span |
+| **Calibration** | Bootstrap 95% CI (strict F1) | Uncertainty from sentence-level resampling |
+| **Diagnostics** | Error taxonomy | `boundary_fp` (overlap, wrong span) vs `spurious_fp` (no gold overlap) |
+| **Stratified** | Concept recall (top-10 XBRL types) | Which financial concepts each method misses |
+| **Head-to-head** | Sentence wins | Per-sentence strict-F1 winner across methods |
+
+Also reported: relaxed micro-F1, mean span IoU on matched pairs, latency, LLM calls.
 
 ## How to run
 
@@ -51,7 +62,7 @@ FiNER-139 dataset.
    python -m spacy download en_core_web_sm
    ```
 
-2. Set an LLM key in `.env` for LLM/Hybrid/Dynamic (e.g. `GEMINI_API_KEY`).
+2. Set an LLM key in `.env` for LLM/Hybrid/Dynamic (e.g. `OPENAI_API_KEY`).
 
 3. Start the stack (`make dev` or `make orchestrator` + `make frontend`).
 
@@ -65,6 +76,12 @@ FiNER-139 dataset.
 - **API:** `POST/GET /experiments/finer139/runs` on orchestrator `:8002`
 - **UI:** `frontend/app/(main)/finer139/` + `features/finer139/`
 - **Persistence:** in-memory only (results lost on orchestrator restart)
+
+## Related work
+
+- **Action item #1 (retrieval):** [graphrag-retrieval-patterns.md](./graphrag-retrieval-patterns.md) — hybrid, community graph, PathRAG vs neighborhood
+- **Action item #2 (ranking):** [finer139-method-ranking.md](./finer139-method-ranking.md) — which construction method wins on FiNER-139
+- Index: [README.md](./README.md)
 
 ## Caveats
 
@@ -96,8 +113,14 @@ Capture locally: `node scripts/capture-finer139-screenshots.mjs` (requires orche
 
 ## Results
 
-*(Fill in after running the tab with your chosen sample size and LLM.)*
+Live benchmark on validation sample (n=100, seed=42, 160 gold entities) — 2026-07-06:
 
 | Method | P (strict) | R (strict) | F1 (strict) | F1 (relaxed) | Latency |
 |--------|------------|------------|-------------|--------------|---------|
-| | | | | | |
+| Ontology / Schema-Driven | 32.0% | 91.9% | **47.5%** | 47.5% | 0.0s |
+| NLP / OpenIE (spaCy) | 7.1% | 15.6% | 9.8% | 55.3% | 0.9s |
+| LLM-Based | — | — | — | — | requires `OPENAI_API_KEY` |
+| Hybrid | — | — | — | — | requires `OPENAI_API_KEY` |
+| Dynamic | — | — | — | — | requires `OPENAI_API_KEY` |
+
+Stakeholder summary: [finer139-showcase-results.md](./finer139-showcase-results.md). Raw JSON: `finer139-e2e-offline.json`, `finer139-e2e-full.json`.

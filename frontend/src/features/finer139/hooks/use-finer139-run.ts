@@ -18,12 +18,34 @@ export const METHOD_OPTIONS: { id: Finer139Method; label: string }[] = [
 ];
 
 const DEFAULT_METHODS: Finer139Method[] = METHOD_OPTIONS.map((m) => m.id);
+const DEFAULT_LLM_PROVIDER = "openai";
+const DEFAULT_LLM_MODEL = "gpt-4o-mini";
+
+function pickDefaultLlmValue(prov: ProvidersResponse): string | undefined {
+	const openai = prov.llms.openai;
+	if (openai?.available && openai.models.length > 0) {
+		const preferred = openai.models.includes(DEFAULT_LLM_MODEL)
+			? DEFAULT_LLM_MODEL
+			: openai.models[0];
+		return `${DEFAULT_LLM_PROVIDER}::${preferred}`;
+	}
+	for (const [providerKey, info] of Object.entries(prov.llms)) {
+		if (info.available && info.models.length > 0) {
+			return `${providerKey}::${info.models[0]}`;
+		}
+	}
+	return undefined;
+}
 
 export function useFiner139Run() {
 	const [providers, setProviders] = useState<ProvidersResponse | null>(null);
 	const [providersLoading, setProvidersLoading] = useState(true);
 	const [sampleSize, setSampleSize] = useState(100);
 	const [seed, setSeed] = useState(42);
+	const [split, setSplit] = useState<"train" | "validation" | "test">(
+		"validation",
+	);
+	const [stratified, setStratified] = useState(false);
 	const [methods, setMethods] = useState<Finer139Method[]>(DEFAULT_METHODS);
 	const [llmValue, setLlmValue] = useState<string | undefined>(undefined);
 	const [run, setRun] = useState<Finer139RunResponse | null>(null);
@@ -37,10 +59,7 @@ export function useFiner139Run() {
 				const prov = await getProviders();
 				if (!cancelled) {
 					setProviders(prov);
-					const gemini = prov.llms.gemini;
-					if (gemini?.available && gemini.models.length > 0) {
-						setLlmValue(`gemini::${gemini.models[0]}`);
-					}
+					setLlmValue(pickDefaultLlmValue(prov));
 				}
 			} catch (err) {
 				if (!cancelled) {
@@ -78,6 +97,8 @@ export function useFiner139Run() {
 			const { run_id } = await startFiner139Run({
 				sample_size: sampleSize,
 				seed,
+				split,
+				stratified,
 				methods,
 				provider: parsed?.provider ?? null,
 				model: parsed?.model ?? null,
@@ -89,7 +110,7 @@ export function useFiner139Run() {
 		} finally {
 			setIsRunning(false);
 		}
-	}, [llmValue, methods, sampleSize, seed]);
+	}, [llmValue, methods, sampleSize, seed, split, stratified]);
 
 	const progressPct =
 		run?.progress && run.progress.total > 0
@@ -105,6 +126,10 @@ export function useFiner139Run() {
 		setSampleSize,
 		seed,
 		setSeed,
+		split,
+		setSplit,
+		stratified,
+		setStratified,
 		methods,
 		toggleMethod,
 		llmValue,

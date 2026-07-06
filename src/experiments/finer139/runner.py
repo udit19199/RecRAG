@@ -25,10 +25,16 @@ from experiments.finer139.methods import (
     SpacyExtractor,
     dedup_spans,
 )
+from experiments.finer139.analysis import (
+    aggregate_multi_seed,
+    analyze,
+    compare_methods_head_to_head,
+    compare_methods_paired,
+    extended_to_dict,
+)
 from experiments.finer139.scoring import (
     metrics_to_dict,
     numeric_filter,
-    score,
 )
 from experiments.finer139.types import Sentence, Span
 
@@ -37,18 +43,66 @@ logger = logging.getLogger(__name__)
 ProgressCb = Callable[[str, int, int, str], None] | None
 LLM_METHODS = {"llm", "hybrid", "dynamic"}
 DEFAULT_SPACY_MODEL = "en_core_web_sm"
+# FiNER-139 research default: OpenAI for all LLM-based extractors (D-agnostic).
+DEFAULT_LLM_PROVIDER = "openai"
+DEFAULT_LLM_MODEL = "gpt-4o-mini"
 
 
 @dataclass
 class RunParams:
     sample_size: int = 100
     seed: int = 42
+    seeds: list[int] | None = None
+    split: str = "validation"
+    stratified: bool = False
+    suite_path: str | None = None
     methods: list[str] = field(default_factory=lambda: list(ALL_METHODS))
-    provider: str | None = None
-    model: str | None = None
+    provider: str | None = DEFAULT_LLM_PROVIDER
+    model: str | None = DEFAULT_LLM_MODEL
     max_examples: int = 15
     concurrency: int = 6
     spacy_model: str = DEFAULT_SPACY_MODEL
+
+
+def _resolve_seeds(params: RunParams) -> list[int]:
+    if params.seeds:
+        return list(params.seeds)
+    return [params.seed]
+
+
+def _load_sentences(
+    params: RunParams,
+    ds_mod: Any,
+    seed: int,
+) -> tuple[list[Sentence], dict[str, Any]]:
+    if params.suite_path:
+        sentences, spec = ds_mod.load_frozen_suite(params.suite_path)
+        dataset_meta = {
+            "id": ds_mod.DATASET_ID,
+            "split": spec.get("split", params.split),
+            "suite_path": params.suite_path,
+            "suite_version": spec.get("version"),
+            "num_sentences": len(sentences),
+            "num_gold_entities": sum(len(s.gold_spans) for s in sentences),
+            "frozen": True,
+        }
+        return sentences, dataset_meta
+
+    sentences = ds_mod.load_sample(
+        params.sample_size,
+        seed,
+        split=params.split,
+        stratified=params.stratified,
+    )
+    dataset_meta = {
+        "id": ds_mod.DATASET_ID,
+        "split": params.split,
+        "num_sentences": len(sentences),
+        "num_gold_entities": sum(len(s.gold_spans) for s in sentences),
+        "stratified": params.stratified,
+        "frozen": False,
+    }
+    return sentences, dataset_meta
 
 
 def _noop(stage: str, current: int, total: int, message: str) -> None:
@@ -60,7 +114,11 @@ def _build_llm(provider: str | None, model: str | None) -> Any:
     from config import find_config_path, load_config
 
     config = load_config(find_config_path())
-    return create_llm_from_config(config, provider=provider or None, model=model or None)
+    return create_llm_from_config(
+        config,
+        provider=provider or DEFAULT_LLM_PROVIDER,
+        model=model or DEFAULT_LLM_MODEL,
+    )
 
 
 def _run_stateless(
@@ -111,13 +169,60 @@ def _run_stateless(
 
 
 def run_benchmark(params: RunParams, progress_cb: ProgressCb = None) -> dict[str, Any]:
+    seeds = _resolve_seeds(params)
+    if len(seeds) > 1:
+        return _run_multi_seed_benchmark(params, seeds, progress_cb)
+    return _run_single_benchmark(params, seeds[0], progress_cb)
+
+
+def _run_multi_seed_benchmark(
+    params: RunParams,
+    seeds: list[int],
+    progress_cb: ProgressCb,
+) -> dict[str, Any]:
+    report = progress_cb or _noop
+    per_seed_runs: list[dict[str, Any]] = []
+    for i, seed in enumerate(seeds):
+        report(
+            "running",
+            i,
+            len(seeds),
+            f"Multi-seed run {i + 1}/{len(seeds)} (seed={seed})",
+        )
+        per_seed_runs.append(_run_single_benchmark(params, seed, None))
+
+    aggregate = aggregate_multi_seed(per_seed_runs)
+    primary = per_seed_runs[0]
+    return {
+        "params": {
+            **primary["params"],
+            "seeds": seeds,
+            "multi_seed": True,
+        },
+        "dataset": primary["dataset"],
+        "llm": primary["llm"],
+        "multi_seed_aggregate": aggregate,
+        "per_seed_runs": per_seed_runs,
+        "evaluation": {
+            **primary["evaluation"],
+            "multi_seed": True,
+            "n_seeds": len(seeds),
+        },
+    }
+
+
+def _run_single_benchmark(
+    params: RunParams,
+    seed: int,
+    progress_cb: ProgressCb,
+) -> dict[str, Any]:
     report = progress_cb or _noop
 
-    report("loading", 0, 0, "Loading FiNER-139 validation sample...")
+    report("loading", 0, 0, "Loading FiNER-139 sample...")
     from experiments.finer139 import dataset as ds_mod
     from experiments.finer139.schema import build_gazetteer, build_gazetteer_regex
 
-    sentences = ds_mod.load_sample(params.sample_size, params.seed)
+    sentences, dataset_meta = _load_sentences(params, ds_mod, seed)
     label_names = ds_mod.get_label_names()
     concept_names = ds_mod.concept_names_from_labels(label_names)
     gazetteer_regex = build_gazetteer_regex(build_gazetteer(concept_names))
@@ -221,13 +326,17 @@ def run_benchmark(params: RunParams, progress_cb: ProgressCb = None) -> dict[str
         }
         if error is None:
             all_preds[name] = preds
-            sc = score(sentences, preds)
+            ext = analyze(sentences, preds, seed=seed)
             entry.update(
                 {
-                    "strict": metrics_to_dict(sc.strict),
-                    "relaxed": metrics_to_dict(sc.relaxed),
-                    "num_pred": sc.num_pred,
-                    "num_gold": sc.num_gold,
+                    "strict": metrics_to_dict(ext.strict),
+                    "relaxed": metrics_to_dict(ext.relaxed),
+                    "partial": metrics_to_dict(ext.partial),
+                    "macro_strict": metrics_to_dict(ext.macro_strict),
+                    "macro_partial": metrics_to_dict(ext.macro_partial),
+                    "num_pred": ext.strict.tp + ext.strict.fp,
+                    "num_gold": ext.strict.tp + ext.strict.fn,
+                    "diagnostics": extended_to_dict(ext),
                 }
             )
         method_results.append(entry)
@@ -235,30 +344,49 @@ def run_benchmark(params: RunParams, progress_cb: ProgressCb = None) -> dict[str
     report("scoring", total_methods, total_methods, "Building examples...")
     examples = _build_examples(sentences, all_preds, params.max_examples)
 
-    total_gold = sum(len(s.gold_spans) for s in sentences)
     report("complete", total_methods, total_methods, "Done")
+
+    comparison = compare_methods_head_to_head(sentences, all_preds) if all_preds else {}
+    paired = compare_methods_paired(sentences, all_preds, seed=seed) if len(all_preds) >= 2 else []
 
     return {
         "params": {
             "sample_size": params.sample_size,
-            "seed": params.seed,
+            "seed": seed,
+            "split": params.split,
+            "stratified": params.stratified,
+            "suite_path": params.suite_path,
             "methods": selected,
             "provider": params.provider,
             "model": params.model,
             "spacy_model": params.spacy_model,
         },
-        "dataset": {
-            "id": ds_mod.DATASET_ID,
-            "split": ds_mod.SPLIT,
-            "num_sentences": len(sentences),
-            "num_gold_entities": total_gold,
-        },
+        "dataset": dataset_meta,
         "llm": {
             "provider": params.provider,
             "model": params.model,
             "error": llm_error,
         },
         "methods": method_results,
+        "comparison": comparison,
+        "paired_comparisons": paired,
+        "evaluation": {
+            "protocol_version": 3,
+            "primary_metric": "strict_micro_f1",
+            "secondary_metrics": [
+                "partial_micro_f1",
+                "macro_strict_f1",
+                "bootstrap_strict_f1_ci",
+                "paired_bootstrap_delta",
+                "mcnemar_sentence_hits",
+                "sentence_hit_rate",
+                "error_taxonomy",
+                "concept_recall",
+            ],
+            "partial_match_iou_threshold": 0.5,
+            "split": params.split,
+            "stratified_sampling": params.stratified,
+        },
         "examples": examples,
     }
 

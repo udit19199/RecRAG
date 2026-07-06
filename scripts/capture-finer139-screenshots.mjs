@@ -8,7 +8,8 @@ import { mkdir } from "node:fs/promises";
 import path from "node:path";
 
 const OUT_DIR = path.resolve("docs/research/findings/screenshots");
-const BASE_URL = "http://127.0.0.1:3000";
+// Use localhost — 127.0.0.1 breaks Next.js dev HMR/hydration in headless runs.
+const BASE_URL = process.env.FINER139_BASE_URL ?? "http://localhost:3000";
 
 async function main() {
 	await mkdir(OUT_DIR, { recursive: true });
@@ -23,19 +24,22 @@ async function main() {
 	});
 
 	// Deselect LLM methods for faster offline run; keep ontology + nlp
-	const methodButtons = page.getByRole("button");
 	for (const label of ["LLM-Based", "Hybrid", "Dynamic"]) {
-		const btn = methodButtons.filter({ hasText: label });
+		const btn = page.getByRole("button", { name: new RegExp(label) });
 		if (await btn.count()) {
-			const cls = await btn.first().getAttribute("class");
-			if (cls?.includes("bg-primary") || cls?.includes("default")) {
+			const variant = await btn.first().getAttribute("data-variant");
+			if (variant === "default") {
 				await btn.first().click();
 			}
 		}
 	}
 
 	await page.getByRole("button", { name: /Run benchmark/i }).click();
-	await page.getByText(/Results/i).first().waitFor({ timeout: 120_000 });
+	// CardTitle renders as div, not a heading role — wait for run completion.
+	await page
+		.getByRole("button", { name: /^Run benchmark$/i })
+		.waitFor({ timeout: 120_000 });
+	await page.getByText("F1 (strict)").waitFor({ timeout: 10_000 });
 	await page.waitForTimeout(1000);
 	await page.screenshot({
 		path: path.join(OUT_DIR, "02-finer139-results.png"),

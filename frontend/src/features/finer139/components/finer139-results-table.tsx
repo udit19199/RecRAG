@@ -4,7 +4,6 @@ import {
 	CardContent,
 	CardDescription,
 	CardHeader,
-	CardTitle,
 } from "@/components/ui/card";
 import type { Finer139MethodResult } from "@/lib/api/types";
 
@@ -25,10 +24,12 @@ export function Finer139ResultsTable({ methods }: Finer139ResultsTableProps) {
 	return (
 		<Card>
 			<CardHeader>
-				<CardTitle className="text-lg">Results</CardTitle>
+				<h2 className="font-heading text-lg leading-snug font-medium">
+					Results
+				</h2>
 				<CardDescription>
-					Numeric-only evaluation universe; strict token-span match (primary)
-					and relaxed overlap. Higher F1 is better.
+					Primary: strict micro-F1. See extended evaluation below for partial
+					match (IoU ≥ 0.5), macro F1, bootstrap CI, and error breakdown.
 				</CardDescription>
 			</CardHeader>
 			<CardContent className="overflow-x-auto">

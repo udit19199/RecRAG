@@ -15,6 +15,7 @@ import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { Progress } from "@/components/ui/progress";
 import { Spinner } from "@/components/ui/spinner";
+import { Finer139DiagnosticsPanel } from "@/features/finer139/components/finer139-diagnostics-panel";
 import { Finer139ExamplesPanel } from "@/features/finer139/components/finer139-examples-panel";
 import { Finer139ResultsTable } from "@/features/finer139/components/finer139-results-table";
 import {
@@ -39,6 +40,10 @@ export function Finer139Workbench() {
 		setSampleSize,
 		seed,
 		setSeed,
+		split,
+		setSplit,
+		stratified,
+		setStratified,
 		methods,
 		toggleMethod,
 		llmValue,
@@ -68,7 +73,7 @@ export function Finer139Workbench() {
 						</CardDescription>
 					</CardHeader>
 					<CardContent className="space-y-6">
-						<FieldGroup className="grid gap-4 md:grid-cols-2">
+						<FieldGroup className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
 							<Field>
 								<FieldLabel htmlFor="sample-size">Sample size</FieldLabel>
 								<Input
@@ -95,6 +100,37 @@ export function Finer139Workbench() {
 									disabled={busy}
 									onChange={(e) => setSeed(Number(e.target.value) || 0)}
 								/>
+							</Field>
+							<Field>
+								<FieldLabel htmlFor="split">Data split</FieldLabel>
+								<select
+									id="split"
+									className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-xs"
+									value={split}
+									disabled={busy}
+									onChange={(e) =>
+										setSplit(
+											e.target.value as "train" | "validation" | "test",
+										)
+									}
+								>
+									<option value="validation">Validation</option>
+									<option value="test">Test (held-out)</option>
+									<option value="train">Train</option>
+								</select>
+							</Field>
+							<Field>
+								<FieldLabel htmlFor="stratified">Stratified sampling</FieldLabel>
+								<label className="flex h-9 items-center gap-2 text-sm">
+									<input
+										id="stratified"
+										type="checkbox"
+										checked={stratified}
+										disabled={busy}
+										onChange={(e) => setStratified(e.target.checked)}
+									/>
+									By primary XBRL concept
+								</label>
 							</Field>
 						</FieldGroup>
 
@@ -174,11 +210,19 @@ export function Finer139Workbench() {
 								<CardDescription>
 									{results.dataset.num_sentences} sentences,{" "}
 									{results.dataset.num_gold_entities} gold numeric entities (
-									{results.dataset.split} split)
+									{results.dataset.split} split
+									{results.evaluation?.protocol_version
+										? ` · protocol v${results.evaluation.protocol_version}`
+										: ""}
+									)
 								</CardDescription>
 							</CardHeader>
 						</Card>
 						<Finer139ResultsTable methods={results.methods} />
+						<Finer139DiagnosticsPanel
+							methods={results.methods}
+							comparison={results.comparison}
+						/>
 						<Finer139ExamplesPanel examples={results.examples} />
 					</>
 				)}
