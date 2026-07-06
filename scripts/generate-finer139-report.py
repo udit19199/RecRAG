@@ -56,13 +56,23 @@ def load_data(path: Path) -> dict:
         return json.load(f)
 
 
+def normalize_data(data: dict) -> tuple[dict, str]:
+    """Support both API wrapper and direct runner JSON shapes."""
+    if "response" in data:
+        response = data["response"]
+        results = response["results"]
+        run_at = data.get("run_at", response.get("updated_at", ""))
+    else:
+        results = data["results"]
+        run_at = data.get("run_at", "")
+    return results, str(run_at)
+
+
 def build_html(data: dict) -> str:
-    response = data["response"]
-    results = response["results"]
+    results, run_at = normalize_data(data)
     dataset = results["dataset"]
     methods = results["methods"]
     examples = results.get("examples", [])
-    run_at = data.get("run_at", response.get("updated_at", ""))
     params = results.get("params", {})
 
     scored = [m for m in methods if m.get("strict")]

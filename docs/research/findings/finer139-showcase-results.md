@@ -7,7 +7,14 @@
 
 ## Executive summary
 
-We compared five graph-construction entity-recognition approaches on real financial filing sentences. On this sample, **Ontology / Schema-Driven** detection achieves the best strict F1 (**47.5%**) with very high recall (**91.9%**). **NLP / OpenIE (spaCy)** finds many overlapping spans (relaxed F1 **55.3%**) but poor strict precision (**7.1%**). LLM-based methods require `OPENAI_API_KEY` to run (default provider: OpenAI `gpt-4o-mini`).
+We compared five graph-construction entity-recognition approaches on real financial filing sentences.
+
+**Winner (among methods scored): Ontology / Schema-Driven** — strict F1 **47.5%**, recall **91.9%**.
+
+Full ranking and recommendations: [finer139-method-ranking.md](./finer139-method-ranking.md).
+HTML report: [finer139-benchmark-report.html](./finer139-benchmark-report.html).
+
+**NLP / OpenIE (spaCy)** finds many overlapping spans (relaxed F1 **55.3%**) but poor strict precision (**7.1%**). LLM-based methods require `OPENAI_API_KEY` to complete the 5-way comparison (default: OpenAI `gpt-4o-mini`).
 
 ## Results table (live run, 2026-07-06)
 

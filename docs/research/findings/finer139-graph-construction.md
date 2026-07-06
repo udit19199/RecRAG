@@ -66,6 +66,12 @@ FiNER-139 dataset.
 - **UI:** `frontend/app/(main)/finer139/` + `features/finer139/`
 - **Persistence:** in-memory only (results lost on orchestrator restart)
 
+## Related work
+
+- **Action item #1 (retrieval):** [graphrag-retrieval-patterns.md](./graphrag-retrieval-patterns.md) — hybrid, community graph, PathRAG vs neighborhood
+- **Action item #2 (ranking):** [finer139-method-ranking.md](./finer139-method-ranking.md) — which construction method wins on FiNER-139
+- Index: [README.md](./README.md)
+
 ## Caveats
 
 - Results measure **numeric financial entity detection**, not general NER or
