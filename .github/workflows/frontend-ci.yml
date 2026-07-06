@@ -68,10 +68,12 @@ jobs:
 
       - name: Run React Doctor
         run: |
-          git fetch --no-tags --prune --depth=1 origin main
           base_ref="${{ github.event.before }}"
           if [ "${{ github.event_name }}" = "pull_request" ]; then
+            git fetch --no-tags --prune --depth=1 origin "${{ github.base_ref }}"
             base_ref="origin/${{ github.base_ref }}"
+          else
+            git fetch --no-tags --prune --depth=1 origin main
           fi
           if [ "$base_ref" = "0000000000000000000000000000000000000000" ]; then
             base_ref="origin/main"
