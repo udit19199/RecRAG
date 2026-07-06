@@ -49,6 +49,7 @@ orchestration, benchmark, intake, and schema work.
 
 - **Non-obvious implementation choice:** brief comment in code or module docstring
 - **Commits / PRs:** state the *why*, not only the *what*
+- **Research findings:** `docs/research/findings/` during ideation (archive before prod)
 
 Do not merge orchestration behavior changes without updating docs when the change
 reflects a new or clarified product decision.

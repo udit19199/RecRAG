@@ -67,6 +67,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Decoupled research experiments (kept out of the recommendation flow).
+from .experiments.router import router as experiments_router  # noqa: E402
+
+app.include_router(experiments_router)
+
+
 def _workspace_id(auth: AuthContext, db: Session) -> uuid.UUID:
     ws = get_or_create_workspace(db, auth.workspace_key, name=auth.username)
     return ws.id
