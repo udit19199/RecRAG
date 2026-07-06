@@ -169,6 +169,56 @@ def build_html(data: dict) -> str:
           (default model: {model_name}).
         </div>"""
 
+    diag_rows = []
+    for m in methods:
+        d = m.get("diagnostics")
+        if not d or m.get("error"):
+            continue
+        ci = d.get("bootstrap_strict_f1_ci", {})
+        err = d.get("errors", {})
+        diag_rows.append(
+            f"""<tr>
+              <td>{html.escape(m["display_name"])}</td>
+              <td class="num">{pct(m.get("partial", {}).get("f1"))}</td>
+              <td class="num">{pct(m.get("macro_strict", {}).get("f1"))}</td>
+              <td class="num">{pct(ci.get("low"))} – {pct(ci.get("high"))}</td>
+              <td class="num">{pct(d.get("sentence_hit_rate"))}</td>
+              <td class="num">{err.get("boundary_fp", "—")}</td>
+              <td class="num">{err.get("spurious_fp", "—")}</td>
+            </tr>"""
+        )
+    diag_section = ""
+    if diag_rows:
+        diag_section = f"""
+    <section>
+      <h2>Extended evaluation (protocol v2)</h2>
+      <p class="muted" style="margin-bottom:16px">Partial F1 uses IoU ≥ 0.5. Macro F1 averages per-sentence strict F1. Bootstrap CI resamples sentences.</p>
+      <div class="panel" style="padding:0">
+        <table>
+          <thead><tr>
+            <th>Method</th><th>Partial F1</th><th>Macro strict F1</th><th>95% CI</th>
+            <th>Sentence hit rate</th><th>Boundary FP</th><th>Spurious FP</th>
+          </tr></thead>
+          <tbody>{"".join(diag_rows)}</tbody>
+        </table>
+      </div>
+    </section>"""
+
+    comparison = results.get("comparison") or {}
+    h2h_section = ""
+    wins = comparison.get("sentence_wins") or {}
+    if wins:
+        chips = "".join(
+            f'<span class="pill"><strong>{html.escape(k)}</strong> {v} wins</span>'
+            for k, v in sorted(wins.items(), key=lambda x: -x[1])
+        )
+        h2h_section = f"""
+    <section>
+      <h2>Head-to-head (sentence-level)</h2>
+      <p class="muted" style="margin-bottom:12px">{comparison.get("sentences_with_gold", 0)} sentences with gold; {comparison.get("ties", 0)} ties.</p>
+      <div class="meta">{chips}</div>
+    </section>"""
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -387,6 +437,10 @@ def build_html(data: dict) -> str:
         </table>
       </div>
     </section>
+
+    {diag_section}
+
+    {h2h_section}
 
     <section>
       <h2>Example predictions</h2>

@@ -28,8 +28,8 @@ export function Finer139ResultsTable({ methods }: Finer139ResultsTableProps) {
 					Results
 				</h2>
 				<CardDescription>
-					Numeric-only evaluation universe; strict token-span match (primary)
-					and relaxed overlap. Higher F1 is better.
+					Primary: strict micro-F1. See extended evaluation below for partial
+					match (IoU ≥ 0.5), macro F1, bootstrap CI, and error breakdown.
 				</CardDescription>
 			</CardHeader>
 			<CardContent className="overflow-x-auto">

@@ -157,6 +157,30 @@ export interface Finer139Metrics {
 	fn: number;
 }
 
+export interface Finer139Diagnostics {
+	strict: Finer139Metrics;
+	relaxed: Finer139Metrics;
+	partial: Finer139Metrics;
+	macro_strict: Finer139Metrics;
+	macro_relaxed: Finer139Metrics;
+	macro_partial: Finer139Metrics;
+	span_iou_mean: number;
+	sentence_hit_rate: number;
+	errors: {
+		strict_tp?: number;
+		boundary_fp?: number;
+		spurious_fp?: number;
+		missed_fn?: number;
+	};
+	bootstrap_strict_f1_ci: { low: number; high: number };
+	concept_recall_top10: Array<{
+		concept: string;
+		gold_count: number;
+		tp: number;
+		recall: number;
+	}>;
+}
+
 export interface Finer139MethodResult {
 	name: Finer139Method;
 	display_name: string;
@@ -166,8 +190,12 @@ export interface Finer139MethodResult {
 	error: string | null;
 	strict?: Finer139Metrics;
 	relaxed?: Finer139Metrics;
+	partial?: Finer139Metrics;
+	macro_strict?: Finer139Metrics;
+	macro_partial?: Finer139Metrics;
 	num_pred?: number;
 	num_gold?: number;
+	diagnostics?: Finer139Diagnostics;
 }
 
 export interface Finer139Example {
@@ -199,6 +227,17 @@ export interface Finer139Results {
 		error: string | null;
 	};
 	methods: Finer139MethodResult[];
+	comparison?: {
+		sentence_wins?: Record<string, number>;
+		sentences_with_gold?: number;
+		ties?: number;
+	} | null;
+	evaluation?: {
+		protocol_version?: number;
+		primary_metric?: string;
+		secondary_metrics?: string[];
+		partial_match_iou_threshold?: number;
+	} | null;
 	examples: Finer139Example[];
 }
 

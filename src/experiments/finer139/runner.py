@@ -25,10 +25,14 @@ from experiments.finer139.methods import (
     SpacyExtractor,
     dedup_spans,
 )
+from experiments.finer139.analysis import (
+    analyze,
+    compare_methods_head_to_head,
+    extended_to_dict,
+)
 from experiments.finer139.scoring import (
     metrics_to_dict,
     numeric_filter,
-    score,
 )
 from experiments.finer139.types import Sentence, Span
 
@@ -228,13 +232,17 @@ def run_benchmark(params: RunParams, progress_cb: ProgressCb = None) -> dict[str
         }
         if error is None:
             all_preds[name] = preds
-            sc = score(sentences, preds)
+            ext = analyze(sentences, preds, seed=params.seed)
             entry.update(
                 {
-                    "strict": metrics_to_dict(sc.strict),
-                    "relaxed": metrics_to_dict(sc.relaxed),
-                    "num_pred": sc.num_pred,
-                    "num_gold": sc.num_gold,
+                    "strict": metrics_to_dict(ext.strict),
+                    "relaxed": metrics_to_dict(ext.relaxed),
+                    "partial": metrics_to_dict(ext.partial),
+                    "macro_strict": metrics_to_dict(ext.macro_strict),
+                    "macro_partial": metrics_to_dict(ext.macro_partial),
+                    "num_pred": ext.strict.tp + ext.strict.fp,
+                    "num_gold": ext.strict.tp + ext.strict.fn,
+                    "diagnostics": extended_to_dict(ext),
                 }
             )
         method_results.append(entry)
@@ -244,6 +252,8 @@ def run_benchmark(params: RunParams, progress_cb: ProgressCb = None) -> dict[str
 
     total_gold = sum(len(s.gold_spans) for s in sentences)
     report("complete", total_methods, total_methods, "Done")
+
+    comparison = compare_methods_head_to_head(sentences, all_preds) if all_preds else {}
 
     return {
         "params": {
@@ -266,6 +276,20 @@ def run_benchmark(params: RunParams, progress_cb: ProgressCb = None) -> dict[str
             "error": llm_error,
         },
         "methods": method_results,
+        "comparison": comparison,
+        "evaluation": {
+            "protocol_version": 2,
+            "primary_metric": "strict_micro_f1",
+            "secondary_metrics": [
+                "partial_micro_f1",
+                "macro_strict_f1",
+                "bootstrap_strict_f1_ci",
+                "sentence_hit_rate",
+                "error_taxonomy",
+                "concept_recall_top10",
+            ],
+            "partial_match_iou_threshold": 0.5,
+        },
         "examples": examples,
     }
 

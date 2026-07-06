@@ -15,8 +15,9 @@ Gold labels are **numeric tokens** tagged with XBRL concept types; we score
 |-----------|-------|
 | Dataset | `nlpaueb/finer-139`, validation split |
 | Sample | 100 sentences (seed 42), 160 gold numeric entities |
-| Primary metric | **Strict F1** (exact token-span match) |
-| Secondary | Relaxed F1 (any token overlap), latency, LLM call count |
+| Primary metric | **Strict micro-F1** (exact token-span match) |
+| Extended (v2) | Partial F1 (IoU≥0.5), macro F1, bootstrap CI, error taxonomy, head-to-head |
+| Secondary | Relaxed F1, concept-stratified recall, latency, LLM calls |
 | Engine | `src/experiments/finer139/runner.py` |
 | UI | `/finer139` tab on orchestrator `:8002` |
 | Latest artifact | `finer139-benchmark-latest.json` |
@@ -31,7 +32,16 @@ Gold labels are **numeric tokens** tagged with XBRL concept types; we score
 | Rank | Method | F1 (strict) | Recall | Precision | Verdict |
 |------|--------|-------------|--------|-----------|---------|
 | **1** | **Ontology / Schema-Driven** | **47.5%** | **91.9%** | 32.0% | **Best overall** — highest strict F1 and recall |
-| 2 | NLP / OpenIE (spaCy) | 9.8% | 15.6% | 7.1% | High relaxed F1 (55%) but many false-positive spans |
+| 2 | NLP / OpenIE (spaCy) | 9.8% | 15.6% | 7.1% | Partial F1 20.4%; high spurious FP count |
+
+### Head-to-head (sentence-level strict F1)
+
+| Method | Sentence wins | Ties |
+|--------|---------------|------|
+| **Ontology** | **74** | (15 total ties) |
+| NLP | 11 | |
+
+Ontology wins on **74%** of gold sentences outright; NLP only leads on 11.
 
 ### LLM methods (pending `OPENAI_API_KEY`)
 

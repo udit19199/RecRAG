@@ -35,12 +35,23 @@ FiNER-139 dataset.
 | **Hybrid** | LLM prompted with full 139 concept list + numeric post-filter | Schema-guided LLM |
 | **Dynamic / Incremental** | Memory-augmented wrapper over Hybrid; learns context words from base hits and flags nearby numerics | Reuses Hybrid LLM calls when both selected |
 
-## Metrics
+## Metrics (protocol v2)
 
-- Micro **precision**, **recall**, **F1** over the sample
-- **Strict** match: exact token span
-- **Relaxed** match: any token overlap
-- Per-method **latency** and **LLM call count**
+Primary ranking uses **strict micro-F1** (exact token span, numeric-only universe).
+Extended metrics (`src/experiments/finer139/analysis.py`) support richer technique comparison:
+
+| Tier | Metric | Purpose |
+|------|--------|---------|
+| **Primary** | Strict micro P/R/F1 | Exact span match, pooled over all entities |
+| **Boundary quality** | Partial micro F1 (IoU ≥ 0.5) | Rewards nearly-correct spans (NER standard) |
+| **Sentence-level** | Macro strict F1 | Average per-sentence F1 — penalizes methods that fail entire sentences |
+| **Coverage** | Sentence hit rate | % of gold sentences with ≥1 strict correct span |
+| **Calibration** | Bootstrap 95% CI (strict F1) | Uncertainty from sentence-level resampling |
+| **Diagnostics** | Error taxonomy | `boundary_fp` (overlap, wrong span) vs `spurious_fp` (no gold overlap) |
+| **Stratified** | Concept recall (top-10 XBRL types) | Which financial concepts each method misses |
+| **Head-to-head** | Sentence wins | Per-sentence strict-F1 winner across methods |
+
+Also reported: relaxed micro-F1, mean span IoU on matched pairs, latency, LLM calls.
 
 ## How to run
 

@@ -1,14 +1,11 @@
 {
-  "run_at": "2026-07-06T05:38:23.980718+00:00",
+  "run_at": "2026-07-06T06:03:37.755915+00:00",
   "request": {
     "sample_size": 100,
     "seed": 42,
     "methods": [
-      "llm",
       "nlp",
-      "ontology",
-      "hybrid",
-      "dynamic"
+      "ontology"
     ]
   },
   "results": {
@@ -16,11 +13,8 @@
       "sample_size": 100,
       "seed": 42,
       "methods": [
-        "llm",
         "nlp",
-        "ontology",
-        "hybrid",
-        "dynamic"
+        "ontology"
       ],
       "provider": "openai",
       "model": "gpt-4o-mini",
@@ -35,22 +29,14 @@
     "llm": {
       "provider": "openai",
       "model": "gpt-4o-mini",
-      "error": "The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable"
+      "error": null
     },
     "methods": [
-      {
-        "name": "llm",
-        "display_name": "LLM-Based (open-ended)",
-        "uses_llm": true,
-        "latency_s": 0.0,
-        "llm_calls": 0,
-        "error": "The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable"
-      },
       {
         "name": "nlp",
         "display_name": "NLP / OpenIE (spaCy)",
         "uses_llm": false,
-        "latency_s": 0.996,
+        "latency_s": 1.097,
         "llm_calls": 0,
         "error": null,
         "strict": {
@@ -69,8 +55,156 @@
           "fp": 209,
           "fn": 19
         },
+        "partial": {
+          "precision": 0.14857142857142858,
+          "recall": 0.325,
+          "f1": 0.20392156862745098,
+          "tp": 52,
+          "fp": 298,
+          "fn": 108
+        },
+        "macro_strict": {
+          "precision": 0.09530952380952382,
+          "recall": 0.09530952380952382,
+          "f1": 0.09530952380952382,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "macro_partial": {
+          "precision": 0.21566666666666667,
+          "recall": 0.21566666666666667,
+          "f1": 0.21566666666666667,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
         "num_pred": 350,
-        "num_gold": 160
+        "num_gold": 160,
+        "diagnostics": {
+          "strict": {
+            "precision": 0.07142857142857142,
+            "recall": 0.15625,
+            "f1": 0.0980392156862745,
+            "tp": 25,
+            "fp": 325,
+            "fn": 135
+          },
+          "relaxed": {
+            "precision": 0.40285714285714286,
+            "recall": 0.88125,
+            "f1": 0.5529411764705882,
+            "tp": 141,
+            "fp": 209,
+            "fn": 19
+          },
+          "partial": {
+            "precision": 0.14857142857142858,
+            "recall": 0.325,
+            "f1": 0.20392156862745098,
+            "tp": 52,
+            "fp": 298,
+            "fn": 108
+          },
+          "macro_strict": {
+            "precision": 0.09530952380952382,
+            "recall": 0.09530952380952382,
+            "f1": 0.09530952380952382,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "macro_relaxed": {
+            "precision": 0.5609235209235209,
+            "recall": 0.5609235209235209,
+            "f1": 0.5609235209235209,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "macro_partial": {
+            "precision": 0.21566666666666667,
+            "recall": 0.21566666666666667,
+            "f1": 0.21566666666666667,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "span_iou_mean": 0.4682,
+          "sentence_hit_rate": 0.2,
+          "errors": {
+            "strict_tp": 25,
+            "boundary_fp": 116,
+            "spurious_fp": 209,
+            "missed_fn": 135
+          },
+          "bootstrap_strict_f1_ci": {
+            "low": 0.0588,
+            "high": 0.1439
+          },
+          "concept_recall_top10": [
+            {
+              "concept": "DebtInstrumentBasisSpreadOnVariableRate1",
+              "gold_count": 18,
+              "tp": 0,
+              "recall": 0.0
+            },
+            {
+              "concept": "DebtInstrumentFaceAmount",
+              "gold_count": 9,
+              "tp": 1,
+              "recall": 0.1111111111111111
+            },
+            {
+              "concept": "LineOfCreditFacilityRemainingBorrowingCapacity",
+              "gold_count": 8,
+              "tp": 0,
+              "recall": 0.0
+            },
+            {
+              "concept": "NumberOfReportableSegments",
+              "gold_count": 6,
+              "tp": 0,
+              "recall": 0.0
+            },
+            {
+              "concept": "DerivativeNotionalAmount",
+              "gold_count": 6,
+              "tp": 2,
+              "recall": 0.3333333333333333
+            },
+            {
+              "concept": "LineOfCreditFacilityMaximumBorrowingCapacity",
+              "gold_count": 6,
+              "tp": 0,
+              "recall": 0.0
+            },
+            {
+              "concept": "EmployeeServiceShareBasedCompensationNonvestedAwardsTotalCompensationCostNotYetRecognized",
+              "gold_count": 5,
+              "tp": 2,
+              "recall": 0.4
+            },
+            {
+              "concept": "RestructuringCharges",
+              "gold_count": 5,
+              "tp": 1,
+              "recall": 0.2
+            },
+            {
+              "concept": "LineOfCredit",
+              "gold_count": 4,
+              "tp": 0,
+              "recall": 0.0
+            },
+            {
+              "concept": "CommonStockDividendsPerShareDeclared",
+              "gold_count": 4,
+              "tp": 4,
+              "recall": 1.0
+            }
+          ]
+        }
       },
       {
         "name": "ontology",
@@ -95,26 +229,179 @@
           "fp": 312,
           "fn": 13
         },
+        "partial": {
+          "precision": 0.3202614379084967,
+          "recall": 0.91875,
+          "f1": 0.4749596122778675,
+          "tp": 147,
+          "fp": 312,
+          "fn": 13
+        },
+        "macro_strict": {
+          "precision": 0.49253187455819036,
+          "recall": 0.49253187455819036,
+          "f1": 0.49253187455819036,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "macro_partial": {
+          "precision": 0.49253187455819036,
+          "recall": 0.49253187455819036,
+          "f1": 0.49253187455819036,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
         "num_pred": 459,
-        "num_gold": 160
-      },
-      {
-        "name": "hybrid",
-        "display_name": "Hybrid (Schema-Guided LLM)",
-        "uses_llm": true,
-        "latency_s": 0.0,
-        "llm_calls": 0,
-        "error": "The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable"
-      },
-      {
-        "name": "dynamic",
-        "display_name": "Dynamic / Incremental (memory-augmented)",
-        "uses_llm": true,
-        "latency_s": 0.0,
-        "llm_calls": 0,
-        "error": "The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable"
+        "num_gold": 160,
+        "diagnostics": {
+          "strict": {
+            "precision": 0.3202614379084967,
+            "recall": 0.91875,
+            "f1": 0.4749596122778675,
+            "tp": 147,
+            "fp": 312,
+            "fn": 13
+          },
+          "relaxed": {
+            "precision": 0.3202614379084967,
+            "recall": 0.91875,
+            "f1": 0.4749596122778675,
+            "tp": 147,
+            "fp": 312,
+            "fn": 13
+          },
+          "partial": {
+            "precision": 0.3202614379084967,
+            "recall": 0.91875,
+            "f1": 0.4749596122778675,
+            "tp": 147,
+            "fp": 312,
+            "fn": 13
+          },
+          "macro_strict": {
+            "precision": 0.49253187455819036,
+            "recall": 0.49253187455819036,
+            "f1": 0.49253187455819036,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "macro_relaxed": {
+            "precision": 0.49253187455819036,
+            "recall": 0.49253187455819036,
+            "f1": 0.49253187455819036,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "macro_partial": {
+            "precision": 0.49253187455819036,
+            "recall": 0.49253187455819036,
+            "f1": 0.49253187455819036,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "span_iou_mean": 1.0,
+          "sentence_hit_rate": 0.89,
+          "errors": {
+            "strict_tp": 147,
+            "boundary_fp": 0,
+            "spurious_fp": 312,
+            "missed_fn": 13
+          },
+          "bootstrap_strict_f1_ci": {
+            "low": 0.4183,
+            "high": 0.5284
+          },
+          "concept_recall_top10": [
+            {
+              "concept": "DebtInstrumentBasisSpreadOnVariableRate1",
+              "gold_count": 18,
+              "tp": 18,
+              "recall": 1.0
+            },
+            {
+              "concept": "DebtInstrumentFaceAmount",
+              "gold_count": 9,
+              "tp": 9,
+              "recall": 1.0
+            },
+            {
+              "concept": "LineOfCreditFacilityRemainingBorrowingCapacity",
+              "gold_count": 8,
+              "tp": 8,
+              "recall": 1.0
+            },
+            {
+              "concept": "NumberOfReportableSegments",
+              "gold_count": 6,
+              "tp": 0,
+              "recall": 0.0
+            },
+            {
+              "concept": "DerivativeNotionalAmount",
+              "gold_count": 6,
+              "tp": 6,
+              "recall": 1.0
+            },
+            {
+              "concept": "LineOfCreditFacilityMaximumBorrowingCapacity",
+              "gold_count": 6,
+              "tp": 6,
+              "recall": 1.0
+            },
+            {
+              "concept": "EmployeeServiceShareBasedCompensationNonvestedAwardsTotalCompensationCostNotYetRecognized",
+              "gold_count": 5,
+              "tp": 5,
+              "recall": 1.0
+            },
+            {
+              "concept": "RestructuringCharges",
+              "gold_count": 5,
+              "tp": 4,
+              "recall": 0.8
+            },
+            {
+              "concept": "LineOfCredit",
+              "gold_count": 4,
+              "tp": 2,
+              "recall": 0.5
+            },
+            {
+              "concept": "CommonStockDividendsPerShareDeclared",
+              "gold_count": 4,
+              "tp": 4,
+              "recall": 1.0
+            }
+          ]
+        }
       }
     ],
+    "comparison": {
+      "sentence_wins": {
+        "ontology": 74,
+        "nlp": 11
+      },
+      "sentences_with_gold": 100,
+      "ties": 15
+    },
+    "evaluation": {
+      "protocol_version": 2,
+      "primary_metric": "strict_micro_f1",
+      "secondary_metrics": [
+        "partial_micro_f1",
+        "macro_strict_f1",
+        "bootstrap_strict_f1_ci",
+        "sentence_hit_rate",
+        "error_taxonomy",
+        "concept_recall_top10"
+      ],
+      "partial_match_iou_threshold": 0.5
+    },
     "examples": [
       {
         "index": 910334,

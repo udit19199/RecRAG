@@ -15,6 +15,7 @@ import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { Progress } from "@/components/ui/progress";
 import { Spinner } from "@/components/ui/spinner";
+import { Finer139DiagnosticsPanel } from "@/features/finer139/components/finer139-diagnostics-panel";
 import { Finer139ExamplesPanel } from "@/features/finer139/components/finer139-examples-panel";
 import { Finer139ResultsTable } from "@/features/finer139/components/finer139-results-table";
 import {
@@ -179,6 +180,10 @@ export function Finer139Workbench() {
 							</CardHeader>
 						</Card>
 						<Finer139ResultsTable methods={results.methods} />
+						<Finer139DiagnosticsPanel
+							methods={results.methods}
+							comparison={results.comparison}
+						/>
 						<Finer139ExamplesPanel examples={results.examples} />
 					</>
 				)}

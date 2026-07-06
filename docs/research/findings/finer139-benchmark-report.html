@@ -143,16 +143,11 @@
         <span class="pill"><strong>160</strong> gold entities</span>
         <span class="pill">split: <strong>validation</strong></span>
         <span class="pill">seed: <strong>42</strong></span>
-        <span class="pill">run: <strong>2026-07-06T05:38:23</strong></span>
+        <span class="pill">run: <strong>2026-07-06T06:03:37</strong></span>
       </div>
     </header>
 
     
-        <div class="alert">
-          <strong>LLM methods pending:</strong> Set <code>OPENAI_API_KEY</code> in <code>.env</code>
-          and re-run to score LLM-Based, Hybrid, and Dynamic
-          (default model: gpt-4o-mini).
-        </div>
 
     <div class="grid">
       <div class="stat accent">
@@ -170,7 +165,7 @@
       </div>
       <div class="stat">
         <div class="stat-label">Methods scored</div>
-        <div class="stat-value">2<small> / 5</small></div>
+        <div class="stat-value">2<small> / 2</small></div>
       </div>
     </div>
 
@@ -178,7 +173,7 @@
       <div>
         <h2>Results — strict token-span F1</h2>
         <div class="panel">
-          <div class="chart-row muted"><span class="chart-label">LLM-Based (open-ended)</span><div class="chart-track"><div class="chart-fill" style="width:0;background:#6366f1"></div></div><span class="chart-val">—</span></div><div class="chart-row">
+          <div class="chart-row">
               <span class="chart-label">NLP / OpenIE (spaCy)</span>
               <div class="chart-track"><div class="chart-fill" style="width:20.6%;background:#0ea5e9"></div></div>
               <span class="chart-val">9.8%</span>
@@ -186,7 +181,7 @@
               <span class="chart-label">Ontology / Schema-Driven</span>
               <div class="chart-track"><div class="chart-fill" style="width:100.0%;background:#10b981"></div></div>
               <span class="chart-val">47.5%</span>
-            </div><div class="chart-row muted"><span class="chart-label">Hybrid (Schema-Guided LLM)</span><div class="chart-track"><div class="chart-fill" style="width:0;background:#f59e0b"></div></div><span class="chart-val">—</span></div><div class="chart-row muted"><span class="chart-label">Dynamic / Incremental (memor</span><div class="chart-track"><div class="chart-fill" style="width:0;background:#ec4899"></div></div><span class="chart-val">—</span></div>
+            </div>
         </div>
       </div>
       <div>
@@ -225,18 +220,6 @@
           </thead>
           <tbody>
             
-                <tr class="row-error">
-                  <td>
-                    <div class="method-name">
-                      <span class="dot" style="background:#6366f1"></span>
-                      LLM-Based (open-ended)
-                      
-                      <span class='badge badge-llm'>LLM</span>
-                    </div>
-                    <p class="error-note">The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environme…</p>
-                  </td>
-                  <td colspan="6" class="muted">Not run — API key required</td>
-                </tr>
             <tr>
               <td>
                 <div class="method-name">
@@ -250,7 +233,7 @@
               <td class="num">15.6%</td>
               <td class="num strong">9.8%</td>
               <td class="num">55.3%</td>
-              <td class="num">1.00s</td>
+              <td class="num">1.10s</td>
               <td class="num">—</td>
             </tr>
             <tr class='row-best'>
@@ -269,33 +252,47 @@
               <td class="num">0.00s</td>
               <td class="num">—</td>
             </tr>
-                <tr class="row-error">
-                  <td>
-                    <div class="method-name">
-                      <span class="dot" style="background:#f59e0b"></span>
-                      Hybrid (Schema-Guided LLM)
-                      
-                      <span class='badge badge-llm'>LLM</span>
-                    </div>
-                    <p class="error-note">The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environme…</p>
-                  </td>
-                  <td colspan="6" class="muted">Not run — API key required</td>
-                </tr>
-                <tr class="row-error">
-                  <td>
-                    <div class="method-name">
-                      <span class="dot" style="background:#ec4899"></span>
-                      Dynamic / Incremental (memory-augmented)
-                      
-                      <span class='badge badge-llm'>LLM</span>
-                    </div>
-                    <p class="error-note">The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environme…</p>
-                  </td>
-                  <td colspan="6" class="muted">Not run — API key required</td>
-                </tr>
           </tbody>
         </table>
       </div>
+    </section>
+
+    
+    <section>
+      <h2>Extended evaluation (protocol v2)</h2>
+      <p class="muted" style="margin-bottom:16px">Partial F1 uses IoU ≥ 0.5. Macro F1 averages per-sentence strict F1. Bootstrap CI resamples sentences.</p>
+      <div class="panel" style="padding:0">
+        <table>
+          <thead><tr>
+            <th>Method</th><th>Partial F1</th><th>Macro strict F1</th><th>95% CI</th>
+            <th>Sentence hit rate</th><th>Boundary FP</th><th>Spurious FP</th>
+          </tr></thead>
+          <tbody><tr>
+              <td>NLP / OpenIE (spaCy)</td>
+              <td class="num">20.4%</td>
+              <td class="num">9.5%</td>
+              <td class="num">5.9% – 14.4%</td>
+              <td class="num">20.0%</td>
+              <td class="num">116</td>
+              <td class="num">209</td>
+            </tr><tr>
+              <td>Ontology / Schema-Driven</td>
+              <td class="num">47.5%</td>
+              <td class="num">49.3%</td>
+              <td class="num">41.8% – 52.8%</td>
+              <td class="num">89.0%</td>
+              <td class="num">0</td>
+              <td class="num">312</td>
+            </tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    
+    <section>
+      <h2>Head-to-head (sentence-level)</h2>
+      <p class="muted" style="margin-bottom:12px">100 sentences with gold; 15 ties.</p>
+      <div class="meta"><span class="pill"><strong>ontology</strong> 74 wins</span><span class="pill"><strong>nlp</strong> 11 wins</span></div>
     </section>
 
     <section>
