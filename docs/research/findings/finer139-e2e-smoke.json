@@ -39,5 +39,5 @@
     "docs/research/findings/screenshots/03-finer139-examples.png",
     "docs/research/findings/screenshots/04-finer139-nav.png"
   ],
-  "notes": "LLM/Hybrid/Dynamic require GEMINI_API_KEY. CI fixed: Biome useExhaustiveDependencies in chat/compare hooks."
+  "notes": "LLM/Hybrid/Dynamic require OPENAI_API_KEY (default provider). CI fixed: Biome useExhaustiveDependencies in chat/compare hooks."
 }

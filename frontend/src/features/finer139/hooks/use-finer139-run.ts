@@ -18,6 +18,24 @@ export const METHOD_OPTIONS: { id: Finer139Method; label: string }[] = [
 ];
 
 const DEFAULT_METHODS: Finer139Method[] = METHOD_OPTIONS.map((m) => m.id);
+const DEFAULT_LLM_PROVIDER = "openai";
+const DEFAULT_LLM_MODEL = "gpt-4o-mini";
+
+function pickDefaultLlmValue(prov: ProvidersResponse): string | undefined {
+	const openai = prov.llms.openai;
+	if (openai?.available && openai.models.length > 0) {
+		const preferred = openai.models.includes(DEFAULT_LLM_MODEL)
+			? DEFAULT_LLM_MODEL
+			: openai.models[0];
+		return `${DEFAULT_LLM_PROVIDER}::${preferred}`;
+	}
+	for (const [providerKey, info] of Object.entries(prov.llms)) {
+		if (info.available && info.models.length > 0) {
+			return `${providerKey}::${info.models[0]}`;
+		}
+	}
+	return undefined;
+}
 
 export function useFiner139Run() {
 	const [providers, setProviders] = useState<ProvidersResponse | null>(null);
@@ -37,10 +55,7 @@ export function useFiner139Run() {
 				const prov = await getProviders();
 				if (!cancelled) {
 					setProviders(prov);
-					const gemini = prov.llms.gemini;
-					if (gemini?.available && gemini.models.length > 0) {
-						setLlmValue(`gemini::${gemini.models[0]}`);
-					}
+					setLlmValue(pickDefaultLlmValue(prov));
 				}
 			} catch (err) {
 				if (!cancelled) {

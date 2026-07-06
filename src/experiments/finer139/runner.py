@@ -37,6 +37,9 @@ logger = logging.getLogger(__name__)
 ProgressCb = Callable[[str, int, int, str], None] | None
 LLM_METHODS = {"llm", "hybrid", "dynamic"}
 DEFAULT_SPACY_MODEL = "en_core_web_sm"
+# FiNER-139 research default: OpenAI for all LLM-based extractors (D-agnostic).
+DEFAULT_LLM_PROVIDER = "openai"
+DEFAULT_LLM_MODEL = "gpt-4o-mini"
 
 
 @dataclass
@@ -44,8 +47,8 @@ class RunParams:
     sample_size: int = 100
     seed: int = 42
     methods: list[str] = field(default_factory=lambda: list(ALL_METHODS))
-    provider: str | None = None
-    model: str | None = None
+    provider: str | None = DEFAULT_LLM_PROVIDER
+    model: str | None = DEFAULT_LLM_MODEL
     max_examples: int = 15
     concurrency: int = 6
     spacy_model: str = DEFAULT_SPACY_MODEL
@@ -60,7 +63,11 @@ def _build_llm(provider: str | None, model: str | None) -> Any:
     from config import find_config_path, load_config
 
     config = load_config(find_config_path())
-    return create_llm_from_config(config, provider=provider or None, model=model or None)
+    return create_llm_from_config(
+        config,
+        provider=provider or DEFAULT_LLM_PROVIDER,
+        model=model or DEFAULT_LLM_MODEL,
+    )
 
 
 def _run_stateless(

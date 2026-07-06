@@ -36,8 +36,9 @@ class StartRunRequest(BaseModel):
     sample_size: int = Field(default=100, ge=1, le=MAX_SAMPLE_SIZE)
     seed: int = Field(default=42, ge=0)
     methods: list[str] = Field(default_factory=lambda: list(ALL_METHODS))
-    provider: str | None = None
-    model: str | None = None
+    # FiNER-139 defaults to OpenAI; UI may override per run.
+    provider: str | None = "openai"
+    model: str | None = "gpt-4o-mini"
 
 
 class StartRunResponse(BaseModel):

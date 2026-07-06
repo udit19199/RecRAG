@@ -29,7 +29,7 @@ FiNER-139 dataset.
 
 | Method | Implementation | Notes |
 |--------|----------------|-------|
-| **LLM-Based** | Open-ended prompt → JSON entity list → span alignment | Uses configured LLM (`config.toml` or tab override) |
+| **LLM-Based** | Open-ended prompt → JSON entity list → span alignment | Defaults to OpenAI `gpt-4o-mini` (override in tab) |
 | **NLP / OpenIE** | spaCy `en_core_web_sm`, labels MONEY/PERCENT/CARDINAL/QUANTITY/DATE/ORDINAL | Deterministic, offline |
 | **Ontology / Schema** | XBRL keyword gazetteer (CamelCase-split concept names) + numeric regex when keywords co-occur in sentence | Deterministic |
 | **Hybrid** | LLM prompted with full 139 concept list + numeric post-filter | Schema-guided LLM |
@@ -51,7 +51,7 @@ FiNER-139 dataset.
    python -m spacy download en_core_web_sm
    ```
 
-2. Set an LLM key in `.env` for LLM/Hybrid/Dynamic (e.g. `GEMINI_API_KEY`).
+2. Set an LLM key in `.env` for LLM/Hybrid/Dynamic (e.g. `OPENAI_API_KEY`).
 
 3. Start the stack (`make dev` or `make orchestrator` + `make frontend`).
 

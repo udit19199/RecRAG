@@ -49,3 +49,15 @@ def test_numeric_filter_drops_non_numeric_predictions() -> None:
     result = score([sentence], preds)
     assert result.strict.tp == 1
     assert result.strict.fp == 0
+
+
+def test_run_params_default_llm_is_openai() -> None:
+    from experiments.finer139.runner import (
+        DEFAULT_LLM_MODEL,
+        DEFAULT_LLM_PROVIDER,
+        RunParams,
+    )
+
+    params = RunParams()
+    assert params.provider == DEFAULT_LLM_PROVIDER == "openai"
+    assert params.model == DEFAULT_LLM_MODEL == "gpt-4o-mini"
