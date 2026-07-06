@@ -96,8 +96,14 @@ Capture locally: `node scripts/capture-finer139-screenshots.mjs` (requires orche
 
 ## Results
 
-*(Fill in after running the tab with your chosen sample size and LLM.)*
+Live benchmark on validation sample (n=100, seed=42, 160 gold entities) — 2026-07-06:
 
 | Method | P (strict) | R (strict) | F1 (strict) | F1 (relaxed) | Latency |
 |--------|------------|------------|-------------|--------------|---------|
-| | | | | | |
+| Ontology / Schema-Driven | 32.0% | 91.9% | **47.5%** | 47.5% | 0.0s |
+| NLP / OpenIE (spaCy) | 7.1% | 15.6% | 9.8% | 55.3% | 0.9s |
+| LLM-Based | — | — | — | — | requires `OPENAI_API_KEY` |
+| Hybrid | — | — | — | — | requires `OPENAI_API_KEY` |
+| Dynamic | — | — | — | — | requires `OPENAI_API_KEY` |
+
+Stakeholder summary: [finer139-showcase-results.md](./finer139-showcase-results.md). Raw JSON: `finer139-e2e-offline.json`, `finer139-e2e-full.json`.
