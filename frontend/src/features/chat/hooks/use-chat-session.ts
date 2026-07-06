@@ -17,31 +17,6 @@ import {
 } from "@/lib/api";
 import type { ExtractionOptions, UploadOptions } from "@/lib/api/types";
 
-function sendAgentLog(
-	location: string,
-	message: string,
-	data?: Record<string, any>,
-	runId?: string,
-	hypothesisId?: string,
-) {
-	fetch("http://127.0.0.1:7916/ingest/3188a69e-7db0-4d0f-b5ef-4e3827cb1095", {
-		method: "POST",
-		headers: {
-			"Content-Type": "application/json",
-			"X-Debug-Session-Id": "50063e",
-		},
-		body: JSON.stringify({
-			sessionId: "50063e",
-			runId,
-			location,
-			message,
-			data,
-			timestamp: Date.now(),
-			hypothesisId,
-		}),
-	}).catch(() => {});
-}
-
 export function useChatSession() {
 	const [isReady, setIsReady] = useState(false);
 	const [hasDocuments, setHasDocuments] = useState(false);
@@ -69,13 +44,6 @@ export function useChatSession() {
 		try {
 			const res = await getUploadedFiles();
 			setUploadedFiles(res.files);
-			sendAgentLog(
-				"use-chat-session.ts:files",
-				"uploaded files fetched",
-				{ fileCount: res.files.length, files: res.files },
-				undefined,
-				"H4",
-			);
 		} catch (_err) {
 			// fail silently
 		}
@@ -111,17 +79,7 @@ export function useChatSession() {
 
 	const syncRetrievalAfterIngestion = async () => {
 		try {
-			const reloaded = await reloadRetrievalConfig();
-			sendAgentLog(
-				"use-chat-session.ts:reload",
-				"retrieval pipeline reloaded from config.toml",
-				{
-					embedding: reloaded.embedding,
-					has_documents_pending: true,
-				},
-				"post-fix",
-				"H6",
-			);
+			await reloadRetrievalConfig();
 		} catch {
 			// Non-fatal: chat may still work via ingestion status gate.
 		}
@@ -133,17 +91,6 @@ export function useChatSession() {
 			const nextStatus = await getIngestionStatus();
 			setIngestionStatus(nextStatus);
 			setStatusError(null);
-			sendAgentLog(
-				"use-chat-session.ts:ingestion-status",
-				"ingestion status fetched",
-				{
-					status: nextStatus.status,
-					error_message: nextStatus.error_message,
-					files_processed: nextStatus.files_processed,
-				},
-				undefined,
-				"H2",
-			);
 			if (nextStatus.status === "complete") {
 				void fetchFiles();
 				void syncRetrievalAfterIngestion();
@@ -162,16 +109,6 @@ export function useChatSession() {
 				const health = await checkRetrievalHealth();
 				setIsReady(health.pipeline_loaded ?? false);
 				setHasDocuments(health.has_documents ?? false);
-				sendAgentLog(
-					"use-chat-session.ts:health",
-					"retrieval health checked",
-					{
-						pipeline_loaded: health.pipeline_loaded,
-						has_documents: health.has_documents,
-					},
-					"post-fix",
-					"H1",
-				);
 
 				if (!health.pipeline_loaded && health.error_message) {
 					setHealthError(health.error_message);

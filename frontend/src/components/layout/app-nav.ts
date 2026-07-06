@@ -1,6 +1,5 @@
 import {
 	IconArrowsLeftRight,
-	IconChartBar,
 	IconHistory,
 	IconSparkles,
 } from "@tabler/icons-react";
@@ -18,11 +17,6 @@ export const APP_NAV: NavItem[] = [
 		href: "/compare",
 		label: "Compare",
 		icon: IconArrowsLeftRight,
-	},
-	{
-		href: "/finer139",
-		label: "FiNER-139",
-		icon: IconChartBar,
 	},
 	{
 		href: "/generate",

@@ -54,14 +54,6 @@ typeCheckingMode = "basic"
 dev = [
     "llama-parse>=0.5.0",
 ]
-# Research-only extras for the FiNER-139 graph-construction experiment
-# (src/experiments/finer139). Kept out of core deps; imported lazily so the
-# orchestrator/retrieval services never pull these unless the experiment runs.
-# After installing, run: python -m spacy download en_core_web_sm
-experiments = [
-    "datasets>=3.0.0",
-    "spacy>=3.7.0",
-]
 
 [dependency-groups]
 dev = [

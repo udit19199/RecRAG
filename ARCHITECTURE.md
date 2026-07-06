@@ -1,37 +1,49 @@
-# RecRAG Architecture & Onboarding Course
+# RecRAG Architecture Guide
 
-Welcome to the **RecRAG Architecture Guide**!
+RecRAG is a multi-service RAG application with a recommendation orchestrator on top.
 
-Instead of a massive monolithic document, this guide is structured as a crash course to get you onboarded as quickly as possible. Whether you're here to fix a bug in the Retrieval API or completely revamp the Frontend, this guide will give you the context you need.
+## Services
 
-## 📖 Course Syllabus
+| Service | Port | Location | Responsibility |
+|---------|------|----------|----------------|
+| Retrieval API | `8000` | `app/retrieval/` | Query, config, providers, evaluation jobs |
+| Ingestion API | `8001` | `app/ingestion/` | Upload, status, reindex, delete |
+| Orchestrator API | `8002` | `app/orchestrator/` | Intake, recommendation runs, export |
+| Frontend | `3000` | `frontend/` | Chat, compare, generate, history |
 
-Work your way through these modules to develop a strong mental model of the codebase:
+## Backend layers
 
-- **[Module 1: Getting Started](docs/onboarding/01_getting_started.md)** - Run the app locally and explore the repository structure.
-- **[Module 2: Architecture Overview](docs/onboarding/02_architecture_overview.md)** - The 30-second summary and the 5-layer backend design.
-- **[Module 3: APIs & Runtime](docs/onboarding/03_api_and_runtime.md)** - Understanding FastAPI routes, state machines, and concurrency.
-- **[Module 4: Pipelines, Adapters & Vector Store](docs/onboarding/04_pipelines_and_adapters.md)** - The core RAG logic, the provider registry pattern, and Milvus integration.
-- **[Module 5: Tracing Flows](docs/onboarding/05_tracing_flows.md)** - End-to-end Mermaid sequence diagrams showing exact data flow.
+| Layer | Location | Notes |
+|-------|----------|-------|
+| API routes | `app/` | FastAPI handlers and request/response models |
+| Orchestration | `src/orchestration/` | Requirements, run lifecycle, benchmark orchestration |
+| Pipelines | `src/pipelines/` | Ingestion and retrieval flows |
+| Adapters | `src/adapters/` | LLM, embedding, and vision providers |
+| Storage | `src/stores.py`, `config.toml` | Milvus Lite by default; Docker Milvus optional |
 
----
-
-## 🎯 Quick Reference
-
-Need to jump straight into the code? Here is where to look:
+## Common tasks
 
 | "I want to..." | Look here |
 |----------------|-----------|
 | Add a new LLM provider | `src/adapters/` + register in `__init__.py` |
 | Change how chunks are created | `src/splitters.py` |
 | Change the RAG prompt template | `config.toml` → `[retrieval] context_template` |
-| Add a new API endpoint | `app/retrieval/main.py` or `app/ingestion/main.py` |
-| Change the query flow | `src/pipelines/retrieval.py` |
-| Change how PDFs are parsed | `src/loaders.py` |
-| Add a new eval metric | `src/evaluation/ragas_eval.py` |
+| Add a retrieval or ingestion route | `app/retrieval/main.py` or `app/ingestion/main.py` |
+| Change recommendation run behavior | `src/orchestration/run_service.py` |
 | Change Milvus connection settings | `config.toml` → `[storage]` |
 
-## 🛠 Useful Files
+## Local setup
 
-- **`AGENTS.md`**: Contains key repository commands, Python style guidelines, and testing expectations.
-- **`config.toml`**: The main configuration file (secrets go in `.env`).
+```bash
+make setup
+make dev
+```
+
+For Docker-based deployment:
+
+```bash
+cp .env.example .env
+make docker-up
+```
+
+See `README.md` for the full command list and `AGENTS.md` for contributor conventions.

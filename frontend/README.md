@@ -4,13 +4,27 @@ Next.js 16 (App Router) + React 19 + TypeScript + Tailwind CSS + Biome.
 
 ## Quick Start
 
+From the repo root, the easiest path is:
+
+```bash
+make setup
+make dev
+```
+
+Or run only the frontend:
+
 ```bash
 pnpm install
 pnpm dev
 ```
 
-The frontend expects the retrieval API on `:8000` and ingestion API on `:8001`.
-Override with environment variables:
+The frontend expects:
+
+- retrieval API on `:8000`
+- ingestion API on `:8001`
+- orchestrator API on `:8002` (proxied through `/api/orchestrator`)
+
+Override public API URLs with:
 
 ```bash
 NEXT_PUBLIC_RETRIEVAL_API_URL=http://localhost:8000 \
@@ -22,47 +36,20 @@ pnpm dev
 
 ```
 app/
-  page.tsx            Chat workbench (main page)
-  compare/page.tsx    A/B model comparison
-  layout.tsx          Root layout with sidebar + theme
-  globals.css         Tailwind base styles
-
+  (main)/             Chat, compare, generate, recommendations
+  api/orchestrator/   Server-side proxy to orchestrator API
 src/
-  components/ui/      Shared UI primitives (shadcn/ui)
-  features/
-    chat/             Chat workbench, messages, file upload
-    ingestion/        Ingestion status display, upload dialog
-    model-compare/    Model picker + A/B comparison workbench
-  lib/api/            API client with typed request/response helpers
-  hooks/              Shared React hooks
+  components/ui/      Shared UI primitives
+  features/           Feature modules (chat, ingestion, model-compare, ...)
+  lib/api/            Typed API client helpers
 ```
 
 ## Building
 
 ```bash
-pnpm build           # TypeScript check + production build
-pnpm lint            # Biome lint
-pnpm format          # Biome format
+pnpm build
+pnpm lint
+pnpm format
 ```
 
-## API Endpoints
-
-The API client in `src/lib/api/` calls these endpoints:
-
-| Method | Route | Service |
-|--------|-------|---------|
-| POST | `/query` | Retrieval API |
-| GET | `/health` | Retrieval API |
-| GET | `/config` | Retrieval API |
-| POST | `/config` | Retrieval API |
-| GET | `/providers` | Retrieval API |
-| GET | `/evaluate/{id}` | Retrieval API |
-| POST | `/upload` | Ingestion API |
-| GET | `/status` | Ingestion API |
-| GET | `/files` | Ingestion API |
-| POST | `/reindex` | Ingestion API |
-| POST | `/ingest/target` | Ingestion API |
-| POST | `/status/index` | Ingestion API |
-| DELETE | `/documents/{name}` | Ingestion API |
-
-See `src/lib/api/types.ts` for the full request/response type definitions.
+See the root `README.md` for the full local setup flow.

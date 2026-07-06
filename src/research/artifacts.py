@@ -1,4 +1,4 @@
-"""Research experiment artifacts (D9, phase 7 — archive before prod)."""
+"""Persist recommendation run artifacts for local inspection."""
 
 from __future__ import annotations
 
@@ -27,30 +27,3 @@ def write_experiment_artifact(
         "recorded_at": datetime.now(timezone.utc).isoformat(),
     }
     (state_dir / f"{run_id}.json").write_text(json.dumps(payload, indent=2))
-
-    findings_dir = Path("docs/research/findings")
-    findings_dir.mkdir(parents=True, exist_ok=True)
-    md = _markdown_summary(run_id, requirements, scored, blueprint)
-    (findings_dir / f"{run_id}.md").write_text(md)
-
-
-def _markdown_summary(
-    run_id: UUID,
-    requirements: Requirements,
-    scored: list[ScoredCandidate],
-    blueprint: PipelineBlueprint,
-) -> str:
-    lines = [
-        f"# Experiment {run_id}",
-        "",
-        f"**Use case:** {requirements.use_case}",
-        f"**Winner:** {blueprint.architecture.value}",
-        "",
-        "## Ranked candidates",
-        "",
-    ]
-    for s in scored:
-        score = s.benchmark_summary.composite_score
-        lines.append(f"- #{s.rank} `{s.spec.architecture.value}` — score {score}")
-    lines.extend(["", "## Rationale", "", blueprint.rationale, ""])
-    return "\n".join(lines)

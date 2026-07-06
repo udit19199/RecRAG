@@ -6,19 +6,18 @@ Upload PDFs, index them, and ask questions via an LLM-backed RAG pipeline. Suppo
 
 ## Try it
 
-**Prerequisites** (you probably have these): Python 3.12+, Node.js 20+, [uv](https://docs.astral.sh/uv/), pnpm (`npm install -g pnpm`), [Ollama](https://ollama.com/download).
+**Prerequisites:** Python 3.12+, Node.js 20+, [uv](https://docs.astral.sh/uv/), pnpm (`npm install -g pnpm`), [Ollama](https://ollama.com/download).
 
 ```bash
-# 1. Clone and install dependencies
 git clone https://github.com/udit19199/RecRAG.git
 cd RecRAG
 make setup
 
-# 2. Pull models (swap for your preferred models)
+# Pull models (swap for your preferred models)
 ollama pull nomic-embed-text
 ollama pull llama3.2
 
-# 3. Start everything — no API keys needed
+# Start everything — no API keys needed
 make dev
 ```
 
@@ -27,6 +26,7 @@ make dev
 | http://localhost:3000 | Chat UI |
 | http://localhost:8000 | Retrieval API docs |
 | http://localhost:8001 | Ingestion API docs |
+| http://localhost:8002 | Orchestrator API docs |
 
 Upload a PDF, wait for it to index, then start asking questions.
 
@@ -36,13 +36,14 @@ Upload a PDF, wait for it to index, then start asking questions.
 
 ## How it works
 
-Three services, all started by `make dev`:
+Four services, all started by `make dev`:
 
 | Service | Port | Does what? |
 |---------|------|------------|
 | **Retrieval API** | `:8000` | Answers questions, serves config, lists models |
 | **Ingestion API** | `:8001` | Accepts PDF uploads, reindexes, reports status |
-| **Frontend** | `:3000` | Chat UI + model comparison workbench |
+| **Orchestrator API** | `:8002` | Recommendation intake, runs, and export |
+| **Frontend** | `:3000` | Chat UI, model comparison, and recommendation flows |
 
 Documents are parsed, chunked, embedded, and stored in **Milvus**. By default it uses **Milvus Lite** — no Docker needed.
 
@@ -59,7 +60,7 @@ Edit `config.toml` to switch, or use the frontend model picker.
 | OpenAI | `OPENAI_API_KEY` | Cloud, fast |
 | NVIDIA NIM | `NVIDIA_API_KEY` | Cloud API |
 
-Keys go in `.env` (copy from `.env.example`). [Read more about configuration](#configuration).
+Keys go in `.env` (copy from `.env.example`).
 
 ---
 
@@ -69,21 +70,23 @@ Keys go in `.env` (copy from `.env.example`). [Read more about configuration](#c
 
 | Command | What it does |
 |---------|-------------|
-| `make dev` | Start all three services |
+| `make dev` | Start all four services |
 | `make retrieval` | Retrieval API only (`:8000`) |
 | `make ingestion` | Ingestion API only (`:8001`) |
+| `make orchestrator` | Orchestrator API only (`:8002`) |
 | `make frontend` | Frontend only (`:3000`) |
 | `make ingest` | One-shot ingestion of `data/pdfs/` |
 | `make evaluate` | Run batch evaluation |
 
-### Infra (optional — only if you need Docker-based Milvus)
+### Docker (optional)
 
 | Command | What it does |
 |---------|-------------|
-| `make infra-up` | Start local Milvus (Docker) |
-| `make infra-down` | Stop it |
-| `make docker-up` | Full stack in Docker |
-| `make docker-down` | Stop full stack |
+| `make docker-up` | Full stack in Docker Compose |
+| `make docker-down` | Stop the stack |
+| `make infra-up` | Start Docker-based Milvus only |
+| `make infra-down` | Stop Docker-based Milvus |
+| `make smoke-test` | End-to-end smoke test against running services |
 
 ### Quality
 
@@ -94,13 +97,6 @@ Keys go in `.env` (copy from `.env.example`). [Read more about configuration](#c
 | `make test` | Run pytest |
 | `make typecheck` | Run mypy |
 | `make check` | Lint + typecheck + test |
-
-### Deploy
-
-| Command | What it does |
-|---------|-------------|
-| `make deploy` | Build → k3s → deploy (single command) |
-| `make deploy-dev` | Same, dev overlay (smaller resources) |
 
 ---
 
@@ -122,58 +118,29 @@ Key `config.toml` sections:
 | `[retrieval]` | top_k, max context tokens, prompt template |
 | `[storage]` | Milvus mode (`lite` or `server`), collection prefix |
 
-To switch from Ollama to Gemini:
-
-```toml
-[embedding]
-provider = "gemini"
-model = "text-embedding-004"
-
-[llm]
-provider = "gemini"
-model = "gemini-2.0-flash"
-```
-
-To point Ollama at a different host:
-
-```toml
-[llm]
-base_url = "http://192.168.1.100:11434"
-```
-
-Set `OLLAMA_HOST` in `.env` to override all Ollama base_urls at once.
-
 ---
 
 ## Deployment
 
-### Kubernetes (recommended)
+For a single-server deployment, use Docker Compose:
 
 ```bash
 cp .env.example .env   # add your API keys
-make deploy            # builds images, installs k3s if needed, deploys
-```
-
-Variants: `make deploy-dev`, `DOMAIN=203.0.113.42.nip.io make deploy`
-
-### Docker Compose
-
-```bash
-cp .env.example .env
 make docker-up
 ```
+
+The Compose stack includes Milvus, both APIs, the orchestrator, and the frontend.
 
 ---
 
 ## Project structure
 
 ```
-src/           ← Backend Python (pipelines, adapters, stores, config)
-app/           ← FastAPI route handlers (retrieval + ingestion)
-frontend/      ← Next.js 16 app
-jobs/          ← One-shot scripts (ingest, evaluate)
-tests/         ← pytest suite
-k8s/           ← Kubernetes manifests (Kustomize)
+src/           Backend Python (pipelines, adapters, stores, orchestration)
+app/           FastAPI route handlers (retrieval, ingestion, orchestrator)
+frontend/      Next.js app
+jobs/          One-shot scripts (ingest, evaluate)
+tests/         pytest suite
 ```
 
 See `AGENTS.md` for contributor guidelines and `ARCHITECTURE.md` for system design.

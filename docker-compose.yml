@@ -94,22 +94,58 @@ services:
     networks:
       - recrag-network
 
+  # FastAPI service for recommendation orchestration
+  orchestrator:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: api
+    volumes:
+      - ./state:/app/state
+      - ./config.toml:/app/config.toml
+    env_file:
+      - .env
+    environment:
+      - MILVUS_HOST=milvus
+      - RETRIEVAL_API_URL=http://api-retrieval:8000
+      - INGESTION_API_URL=http://api-ingestion:8001
+    ports:
+      - "8002:8002"
+    command: uv run uvicorn app.orchestrator.main:app --host 0.0.0.0 --port 8002 --timeout-graceful-shutdown 30
+    container_name: recrag-orchestrator
+    depends_on:
+      api-retrieval:
+        condition: service_healthy
+      api-ingestion:
+        condition: service_healthy
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+          cpus: '1'
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8002/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - recrag-network
+
   # Next.js frontend
   frontend:
     build:
       context: .
       dockerfile: frontend/Dockerfile
       args:
-        NEXT_PUBLIC_RETRIEVAL_API_URL: http://api-retrieval:8000
-        NEXT_PUBLIC_INGESTION_API_URL: http://api-ingestion:8001
+        NEXT_PUBLIC_RETRIEVAL_API_URL: http://localhost:8000
+        NEXT_PUBLIC_INGESTION_API_URL: http://localhost:8001
     environment:
-      - NEXT_PUBLIC_RETRIEVAL_API_URL=http://api-retrieval:8000
-      - NEXT_PUBLIC_INGESTION_API_URL=http://api-ingestion:8001
+      - ORCHESTRATOR_API_URL=http://orchestrator:8002
     ports:
       - "3000:3000"
     depends_on:
-      - api-retrieval
-      - api-ingestion
+      orchestrator:
+        condition: service_healthy
     container_name: recrag-frontend
     networks:
       - recrag-network

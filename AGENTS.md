@@ -36,27 +36,19 @@ Example:
 Ingestion variance is **use-case-relative**: text-heavy + citations may have few ingest
 options (optimize retrieval); image-heavy or graph cases need more ingest choices.
 
-### Design documentation (read before implementing)
+### Design documentation
 
-| Document | Purpose |
-|----------|---------|
-| [docs/recommendation/DESIGN_DECISIONS.md](docs/recommendation/DESIGN_DECISIONS.md) | **Resolved** decisions (32+ entries) — authoritative |
-| [docs/recommendation/OPEN_QUESTIONS.md](docs/recommendation/OPEN_QUESTIONS.md) | **Unresolved** TBD items — check before guessing |
-| `.cursor/plans/rag_recommendation_system_3de486ca.plan.md` | Implementation phases and file map |
-
-**When DESIGN_DECISIONS and this file conflict, DESIGN_DECISIONS wins.** Update
-DESIGN_DECISIONS when closing an item from OPEN_QUESTIONS.
+Use `README.md`, `ARCHITECTURE.md`, and inline code comments for current setup and
+architecture guidance. If recommendation design docs are reintroduced, keep them under
+`docs/` and link them from here.
 
 ### Documentation requirement
 
 **Every meaningful code change must document why it was done.** This is mandatory for
 orchestration, benchmark, intake, and schema work.
 
-- **Closing a TBD:** add entry to DESIGN_DECISIONS; remove from OPEN_QUESTIONS
 - **Non-obvious implementation choice:** brief comment in code or module docstring
-  referencing the decision ID (e.g. `D22 — user-driven collection retention`)
 - **Commits / PRs:** state the *why*, not only the *what*
-- **Research findings:** `docs/research/findings/` during ideation (archive before prod)
 
 Do not merge orchestration behavior changes without updating docs when the change
 reflects a new or clarified product decision.
@@ -80,14 +72,11 @@ reflects a new or clarified product decision.
 | Area | Today | Target |
 |------|-------|--------|
 | Ingestion / retrieval | Working RAG, Milvus, multi-provider | Same; used internally for benchmark |
-| User intake | Generic onboarding shell | Dual intake → `Requirements` |
-| Recommendation | Not implemented | Orchestrator shortlist → benchmark → JSON export |
-| History | Not implemented | Postgres per `workspace_id`; lookup past runs |
+| User intake | Wizard + chat flows in orchestrator | Richer dual intake → `Requirements` |
+| Recommendation | Orchestrator shortlist + export path exists | Full benchmark-driven winner selection |
+| History | SQLite/Postgres-backed runs per workspace | Postgres in production |
 | Deploy winner to RecRAG | N/A | **Out of scope** — blueprint export only |
 | Evaluation | `src/evaluation/ragas_eval.py` | Constraint-weighted benchmark scoring |
-
-Research-only behaviors (experiment JSON, stretch backfill, markdown findings) are
-temporary — archive before prod.
 
 ## Repository Snapshot
 - Backend: Python 3.12, FastAPI, uv, pytest, Ruff, mypy, Milvus, Postgres (planned).
@@ -129,7 +118,7 @@ Run from the repository root unless noted otherwise.
 - `make ingest` — Run `jobs/ingest.py --force`
 - `make evaluate` — Run `jobs/evaluate.py`
 
-Orchestrator (`:8002`) — planned; see OPEN_QUESTIONS INF-1.
+Orchestrator (`:8002`) is part of `make dev` and the Docker Compose stack.
 
 ### Infra
 - `make infra-up` — Start local Milvus stack
@@ -138,14 +127,9 @@ Orchestrator (`:8002`) — planned; see OPEN_QUESTIONS INF-1.
 - `make docker-up` — Start full stack in Docker
 - `make docker-down` — Stop full stack
 
-### Deploy
-- `make deploy` — Build, import into k3s, and deploy
-- `make deploy-dev` — Deploy with dev overlay (lightweight)
-
 Notes:
-- `make dev` starts retrieval on `:8000`, ingestion on `:8001`, and frontend on `:3000`.
+- `make dev` starts retrieval on `:8000`, ingestion on `:8001`, orchestrator on `:8002`, and frontend on `:3000`.
 - `make test` runs backend tests only.
-- The deploy script at `scripts/deploy.sh` uses `--from-env-file` for secrets, validates env without sourcing, and runs smoke tests after deploy.
 
 ## Build, Lint, and Format
 ### Backend
@@ -189,13 +173,13 @@ Notes:
 - If a command fails, fix the smallest surface area possible before broadening the run.
 
 ## Key Paths
-- `docs/recommendation/DESIGN_DECISIONS.md` — resolved recommendation system decisions
-- `docs/recommendation/OPEN_QUESTIONS.md` — unresolved TBD items
-- `k8s/`: Kubernetes manifests (Kustomize base + overlays for dev/prod)
-- `docs/KUBERNETES_DEPLOYMENT.md`: K8s deployment guide
+- `README.md`, `ARCHITECTURE.md`: setup and architecture overview
 - `PRODUCT.md`, `DESIGN.md`: product voice and visual system (not pipeline logic)
+- `app/orchestrator/main.py`: intake, runs, benchmark orchestration, export
 - `app/ingestion/main.py`: upload, status, config, reindex, and delete routes
 - `app/retrieval/main.py`: query, config, provider, and health routes
+- `src/orchestration/`: recommendation engine (constraints, resolver, customizer, cost)
+- `src/benchmark/`: benchmark suite and runner
 - `src/runtime/`: pipeline lifecycle and warmup logic
 - `src/pipelines/`: ingestion and retrieval pipelines
 - `src/adapters/`: LLM, embedding, and vision adapters
@@ -203,20 +187,13 @@ Notes:
 - `src/providers.py`: provider model catalogs
 - `src/loaders.py`, `src/splitters.py`, `src/stores.py`: document → chunk → vector path
 - `src/models/`: shared API and domain models
-- `src/auth.py`: API key auth for ingestion/retrieval (Orchestrator uses Clerk)
+- `src/auth.py`: API key auth for ingestion/retrieval
 - `state/`: runtime status and evaluation job JSON files
 - `frontend/app/(main)/generate/`: recommendation generator form / intake wizard
 - `frontend/src/lib/api/`: API client and typed request/response helpers
 - `tests/`: pytest suite
-- `scripts/deploy.sh`: single-command deploy script
-
-### Planned / Not Yet Present
-- `app/orchestrator/` — Orchestrator API `:8002`
-- `src/orchestration/` — engine (constraints, resolver, customizer, cost)
-- `src/benchmark/` — suite, runner
-- `data/model_pricing.toml`, `data/recommendation_rules.toml`
-- `alembic/` — Postgres migrations
-- `frontend/src/features/intake/`, `frontend/src/features/recommendation/`
+- `docker-compose.yml`: full local/production Docker stack
+- `scripts/smoke-test.sh`: end-to-end smoke test helper
 
 ## Python Style Guidelines
 ### Imports
@@ -244,7 +221,7 @@ Notes:
 - classes: `PascalCase`
 - constants: `UPPER_SNAKE_CASE`
 - private helpers and attributes: leading underscore
-- Recommendation domain: `Requirements`, `PipelineSpec`, `RagArchitecture` (see DESIGN_DECISIONS glossary)
+- Recommendation domain: `Requirements`, `PipelineSpec`, `RagArchitecture`
 
 ### Error Handling
 - Raise specific exceptions where practical.
@@ -256,7 +233,7 @@ Notes:
 ### Docs and Comments
 - Public functions and classes should have concise docstrings.
 - Describe behavior and constraints, not line-by-line implementation.
-- Reference DESIGN_DECISIONS IDs when implementing non-obvious orchestration behavior.
+- Reference non-obvious orchestration behavior in comments when helpful.
 
 ## Backend Patterns
 - Keep route schemas near the route code.
@@ -296,8 +273,7 @@ Before finishing:
 - imports are grouped correctly
 - types are updated where contracts changed
 - backend and frontend API shapes still match
-- DESIGN_DECISIONS / OPEN_QUESTIONS updated if a decision was made or closed
-- meaningful changes document **why** (comment, commit, or decision entry)
+- meaningful changes document **why** (comment, commit, or doc update)
 - the smallest relevant lint/test/build commands have run
 - local-only files were not staged by accident
 

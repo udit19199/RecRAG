@@ -6,7 +6,7 @@
 .PHONY: install setup dev retrieval ingestion orchestrator frontend ingest evaluate \
         lint lint-backend lint-frontend format format-backend format-frontend \
         test typecheck check clean infra-up infra-down infra-logs \
-        docker-up docker-down deploy smoke-test quickstart help \
+        docker-up docker-down smoke-test help \
         version bump-major bump-minor bump-patch
 
 # ── Variables ─────────────────────────────────────────────────────────────────
@@ -81,20 +81,11 @@ infra-down: ## Stop optional local Milvus stack
 infra-logs: ## Show logs for optional local Milvus stack
 	$(DOCKER_COMPOSE) -f docker-compose.dev.yml logs -f
 
-quickstart: ## Fresh VM → running app in one command
-	bash scripts/quickstart.sh
-
 docker-up: ## Start the full stack (including apps) in Docker
 	$(DOCKER_COMPOSE) up -d
 
 docker-down: ## Stop the full stack
 	$(DOCKER_COMPOSE) down
-
-deploy: ## Build, import into k3s, and deploy RecRAG (single command)
-	bash scripts/deploy.sh
-
-deploy-dev: ## Deploy with dev overlay (lightweight)
-	OVERLAY=dev bash scripts/deploy.sh
 
 smoke-test: ## Run smoke tests against running services
 	bash scripts/smoke-test.sh

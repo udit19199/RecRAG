@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: recrag
-  labels:
-    app.kubernetes.io/name: recrag
-    app.kubernetes.io/part-of: recrag
