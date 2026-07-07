@@ -56,7 +56,7 @@ orchestration, benchmark, intake, and schema work.
 - **Non-obvious implementation choice:** brief comment in code or module docstring
   referencing the decision ID (e.g. `D22 — user-driven collection retention`)
 - **Commits / PRs:** state the *why*, not only the *what*
-- **Research findings:** `docs/research/findings/` during ideation (archive before prod)
+- **Research findings:** `docs/research/graphrag/` during ideation (archive before prod)
 
 Do not merge orchestration behavior changes without updating docs when the change
 reflects a new or clarified product decision.
@@ -192,7 +192,7 @@ Notes:
 - `docs/recommendation/DESIGN_DECISIONS.md` — resolved recommendation system decisions
 - `docs/recommendation/OPEN_QUESTIONS.md` — unresolved TBD items
 - `k8s/`: Kubernetes manifests (Kustomize base + overlays for dev/prod)
-- `docs/KUBERNETES_DEPLOYMENT.md`: K8s deployment guide
+- `scripts/deploy.sh`: single-command deploy script
 - `PRODUCT.md`, `DESIGN.md`: product voice and visual system (not pipeline logic)
 - `app/ingestion/main.py`: upload, status, config, reindex, and delete routes
 - `app/retrieval/main.py`: query, config, provider, and health routes

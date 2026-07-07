@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FiNER-139 Benchmark — RecRAG Research</title>
+  <style>
+    :root {
+      --canvas: #f8fafc;
+      --surface: #ffffff;
+      --ink: #0f172a;
+      --muted: #475569;
+      --border: #e2e8f0;
+      --accent: #2563eb;
+      --accent-soft: #eff6ff;
+      --success: #059669;
+      --success-soft: #ecfdf5;
+      --warning-soft: #fffbeb;
+      --warning-ink: #92400e;
+      --radius: 10px;
+      --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      --mono: ui-monospace, "JetBrains Mono", "SF Mono", Consolas, monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--ink);
+      background: var(--canvas);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .compare-fill, .h2h-fill { transition: none !important; }
+    }
+
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    .doc-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding-bottom: 1.75rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2rem;
+    }
+
+    .doc-kicker {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--muted);
+      margin: 0 0 0.35rem;
+    }
+
+    h1 {
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      text-wrap: balance;
+      margin: 0;
+    }
+
+    .doc-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      margin-top: 0.85rem;
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+
+    .doc-meta span { white-space: nowrap; }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+    }
+
+    .nav a {
+      color: var(--muted);
+      text-decoration: none;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--surface);
+    }
+
+    .nav a:hover { color: var(--accent); border-color: #bfdbfe; }
+
+    .notice {
+      background: var(--warning-soft);
+      border: 1px solid #fde68a;
+      border-radius: var(--radius);
+      padding: 1rem 1.15rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .notice-title { font-weight: 600; color: var(--warning-ink); margin: 0 0 0.25rem; }
+    .notice-body { margin: 0; color: #78350f; font-size: 0.9375rem; }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 820px) {
+      .summary-grid { grid-template-columns: 1fr; }
+    }
+
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.35rem;
+    }
+
+    .recommendation {
+      background: var(--success-soft);
+      border-color: #a7f3d0;
+    }
+
+    .recommendation-label {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--success);
+      margin: 0 0 0.35rem;
+    }
+
+    .recommendation-title {
+      font-size: 1.125rem;
+      font-weight: 700;
+      margin: 0 0 0.5rem;
+      text-wrap: balance;
+    }
+
+    .recommendation-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      margin-top: 0.75rem;
+      font-size: 0.9375rem;
+    }
+
+    .recommendation-stats dt {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .recommendation-stats dd {
+      margin: 0.1rem 0 0;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .takeaway-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .takeaway-title {
+      font-weight: 600;
+      margin: 0 0 0.2rem;
+      font-size: 0.9375rem;
+    }
+
+    .takeaway-body {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.875rem;
+      text-wrap: pretty;
+    }
+
+    .section { margin-bottom: 2.25rem; }
+
+    .section-head { margin-bottom: 0.85rem; }
+
+    h2 {
+      font-size: 1.125rem;
+      font-weight: 700;
+      margin: 0 0 0.25rem;
+      letter-spacing: -0.01em;
+    }
+
+    .section-lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.9375rem;
+      max-width: 65ch;
+      text-wrap: pretty;
+    }
+
+    .compare-row {
+      display: grid;
+      grid-template-columns: minmax(180px, 1fr) 2fr auto;
+      gap: 0.75rem 1rem;
+      align-items: center;
+      padding: 0.65rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .compare-row:last-child { border-bottom: none; }
+    .compare-row--best { background: var(--success-soft); margin: 0 -1.35rem; padding-left: 1.35rem; padding-right: 1.35rem; }
+    .compare-row--pending { opacity: 0.72; }
+
+    @media (max-width: 640px) {
+      .compare-row { grid-template-columns: 1fr; }
+    }
+
+    .compare-meta { display: flex; align-items: center; gap: 0.5rem; min-width: 0; }
+    .compare-name { font-size: 0.9375rem; font-weight: 500; }
+    .compare-track {
+      height: 0.65rem;
+      background: #f1f5f9;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .compare-fill {
+      height: 100%;
+      border-radius: 999px;
+      transition: width 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .compare-value {
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      font-size: 0.9375rem;
+      min-width: 3.5rem;
+      text-align: right;
+    }
+
+    .swatch {
+      width: 0.55rem;
+      height: 0.55rem;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      padding: 0.1rem 0.45rem;
+      border-radius: 999px;
+      margin-left: 0.35rem;
+    }
+
+    .tag-best { background: #fef3c7; color: #92400e; }
+    .tag-llm { background: var(--accent-soft); color: var(--accent); }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+    }
+
+    th {
+      text-align: left;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--muted);
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border);
+      background: #f8fafc;
+      white-space: nowrap;
+    }
+
+    th:not(:first-child), td.num { text-align: right; }
+
+    td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    tr:last-child td { border-bottom: none; }
+    tr.row-best { background: var(--success-soft); }
+    tr.row-pending { background: #fafafa; }
+
+    .method-cell { display: flex; gap: 0.65rem; align-items: flex-start; }
+    .method-title { font-weight: 600; }
+    .method-note { font-size: 0.8125rem; color: #b45309; margin-top: 0.15rem; }
+    .num { font-variant-numeric: tabular-nums; }
+    .num-highlight { font-weight: 700; color: var(--success); }
+    .muted { color: var(--muted); }
+
+    .h2h-panel { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+    .h2h-row {
+      display: grid;
+      grid-template-columns: 7rem 1fr 2.5rem;
+      gap: 0.75rem;
+      align-items: center;
+      padding: 0.45rem 0;
+    }
+    .h2h-label { font-size: 0.875rem; font-weight: 500; text-transform: capitalize; }
+    .h2h-track { height: 0.5rem; background: #f1f5f9; border-radius: 999px; overflow: hidden; }
+    .h2h-fill { height: 100%; background: var(--accent); border-radius: 999px; }
+    .h2h-value { font-weight: 700; font-variant-numeric: tabular-nums; text-align: right; }
+
+    .examples { display: grid; gap: 1rem; }
+
+    .example {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.15rem;
+    }
+
+    .example-id { font-size: 0.8125rem; font-weight: 600; color: var(--muted); margin: 0 0 0.65rem; }
+    .example-label, .example-pred-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin: 0 0 0.35rem;
+    }
+    .example-pred { margin-top: 0.85rem; padding-top: 0.85rem; border-top: 1px dashed var(--border); }
+    .example-text {
+      font-family: var(--mono);
+      font-size: 0.8125rem;
+      line-height: 1.65;
+      margin: 0;
+      word-break: break-word;
+      text-wrap: pretty;
+    }
+
+    mark {
+      border-radius: 3px;
+      padding: 0 0.15em;
+      font: inherit;
+      color: inherit;
+    }
+    .mark-gold { background: #fef3c7; }
+    .mark-pred { background: #d1fae5; }
+
+    .details-block {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      padding: 0.75rem 1rem 1rem;
+    }
+
+    .details-block summary {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      padding: 0.35rem 0;
+    }
+
+    .details-note {
+      margin: 0.75rem 0 0;
+      font-size: 0.8125rem;
+      color: var(--muted);
+    }
+
+    .context-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+
+    .context-item h3 {
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin: 0 0 0.35rem;
+    }
+
+    .context-item p {
+      margin: 0;
+      font-size: 0.875rem;
+      color: var(--muted);
+      text-wrap: pretty;
+    }
+
+    code {
+      font-family: var(--mono);
+      font-size: 0.85em;
+      background: #f1f5f9;
+      padding: 0.1em 0.35em;
+      border-radius: 4px;
+    }
+
+    .doc-footer {
+      margin-top: 3rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.8125rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .doc-footer a { color: var(--accent); }
+
+    @media print {
+      body { background: #fff; }
+      .nav, .notice { display: none; }
+      .page { max-width: none; padding: 0; }
+      .section { break-inside: avoid; }
+      .compare-fill, .h2h-fill { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="doc-header">
+      <div>
+        <p class="doc-kicker">RecRAG research · Graph construction benchmark</p>
+        <h1>Which extraction method finds financial numerics best?</h1>
+        <div class="doc-meta">
+          <span>Run date: <strong>2026-07-07</strong></span>
+          <span>Dataset: <strong>FiNER-139 (validation)</strong></span>
+          <span>Sample: <strong>100 sentences</strong></span>
+          <span>Gold entities: <strong>160</strong></span>
+          <span>Seed: <strong>42</strong></span>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Report sections">
+        <a href="#summary">Summary</a>
+        <a href="#results">Results</a>
+        <a href="#metrics">Metrics</a>
+        <a href="#examples">Examples</a>
+        <a href="#context">Context</a>
+      </nav>
+    </header>
+
+    
+
+    <section class="summary-grid" id="summary">
+      <div class="panel recommendation">
+        <p class="recommendation-label">Current leader (strict F1)</p>
+        <p class="recommendation-title">Hybrid (Schema-Guided LLM)</p>
+        <p class="section-lead">
+          Five graph-construction extractors were compared on numeric span detection
+          in SEC-style filing sentences. Strict F1 requires an exact token-boundary match.
+        </p>
+        <dl class="recommendation-stats">
+          <div><dt>Strict F1</dt><dd>66.9%</dd></div>
+          <div><dt>Recall</dt><dd>73.8%</dd></div>
+          <div><dt>Methods scored</dt><dd>5 / 5</dd></div>
+        </dl>
+      </div>
+      <div class="panel">
+        <h2 style="margin-bottom:0.75rem">Talking points</h2>
+        <ul class="takeaway-list"><li class="takeaway">
+          <p class="takeaway-title">Hybrid (Schema-Guided LLM) leads on strict F1 (66.9%)</p>
+          <p class="takeaway-body">Recall 73.8%, precision 61.1%. Uses an LLM.</p>
+        </li><li class="takeaway">
+          <p class="takeaway-title">Generic spaCy NER misses exact span boundaries</p>
+          <p class="takeaway-body">Relaxed F1 55.3% vs strict F1 9.8%. Many numeric tokens are found, but token boundaries rarely match FiNER gold.</p>
+        </li><li class="takeaway">
+          <p class="takeaway-title">hybrid wins 49 of 100 sentences head-to-head</p>
+          <p class="takeaway-body">34 sentences tied on strict F1.</p>
+        </li></ul>
+      </div>
+    </section>
+
+    <section class="section" id="results">
+      <div class="section-head">
+        <h2>Strict F1 by method</h2>
+        <p class="section-lead">Primary ranking metric. Higher is better; exact span match required.</p>
+      </div>
+      <div class="panel"><div class="compare-row">
+              <div class="compare-meta">
+                <span class="swatch" style="background:#6366f1"></span>
+                <span class="compare-name">LLM-Based (open-ended)</span>
+                
+              </div>
+              <div class="compare-track">
+                <div class="compare-fill" style="width:4.6%;background:#6366f1"></div>
+              </div>
+              <span class="compare-value">3.0%</span>
+            </div><div class="compare-row">
+              <div class="compare-meta">
+                <span class="swatch" style="background:#0284c7"></span>
+                <span class="compare-name">NLP / OpenIE (spaCy)</span>
+                
+              </div>
+              <div class="compare-track">
+                <div class="compare-fill" style="width:14.7%;background:#0284c7"></div>
+              </div>
+              <span class="compare-value">9.8%</span>
+            </div><div class="compare-row">
+              <div class="compare-meta">
+                <span class="swatch" style="background:#059669"></span>
+                <span class="compare-name">Ontology / Schema-Driven</span>
+                
+              </div>
+              <div class="compare-track">
+                <div class="compare-fill" style="width:71.0%;background:#059669"></div>
+              </div>
+              <span class="compare-value">47.5%</span>
+            </div><div class="compare-row compare-row--best">
+              <div class="compare-meta">
+                <span class="swatch" style="background:#d97706"></span>
+                <span class="compare-name">Hybrid (Schema-Guided LLM)</span>
+                <span class='tag tag-best'>Leader</span>
+              </div>
+              <div class="compare-track">
+                <div class="compare-fill" style="width:100.0%;background:#d97706"></div>
+              </div>
+              <span class="compare-value">66.9%</span>
+            </div><div class="compare-row">
+              <div class="compare-meta">
+                <span class="swatch" style="background:#db2777"></span>
+                <span class="compare-name">Dynamic / Incremental (memory-augmented)</span>
+                
+              </div>
+              <div class="compare-track">
+                <div class="compare-fill" style="width:71.9%;background:#db2777"></div>
+              </div>
+              <span class="compare-value">48.0%</span>
+            </div></div>
+    </section>
+
+    <section class="section" id="metrics">
+      <div class="section-head">
+        <h2>Full comparison</h2>
+        <p class="section-lead">Precision, recall, relaxed F1 (any token overlap), latency, and LLM usage.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th>Precision</th>
+              <th>Recall</th>
+              <th>F1 strict</th>
+              <th>F1 relaxed</th>
+              <th>Latency</th>
+              <th>LLM calls</th>
+            </tr>
+          </thead>
+          <tbody><tr>
+              <td>
+                <div class="method-cell">
+                  <span class="swatch" style="background:#6366f1"></span>
+                  <div>
+                    <div class="method-title">LLM-Based (open-ended)</div>
+                    
+                    <span class='tag tag-llm'>LLM</span>
+                  </div>
+                </div>
+              </td>
+              <td class="num">2.3%</td>
+              <td class="num">4.4%</td>
+              <td class="num num-highlight">3.0%</td>
+              <td class="num">62.6%</td>
+              <td class="num">31.26s</td>
+              <td class="num">100</td>
+            </tr><tr>
+              <td>
+                <div class="method-cell">
+                  <span class="swatch" style="background:#0284c7"></span>
+                  <div>
+                    <div class="method-title">NLP / OpenIE (spaCy)</div>
+                    
+                    
+                  </div>
+                </div>
+              </td>
+              <td class="num">7.1%</td>
+              <td class="num">15.6%</td>
+              <td class="num num-highlight">9.8%</td>
+              <td class="num">55.3%</td>
+              <td class="num">0.96s</td>
+              <td class="num">—</td>
+            </tr><tr>
+              <td>
+                <div class="method-cell">
+                  <span class="swatch" style="background:#059669"></span>
+                  <div>
+                    <div class="method-title">Ontology / Schema-Driven</div>
+                    
+                    
+                  </div>
+                </div>
+              </td>
+              <td class="num">32.0%</td>
+              <td class="num">91.9%</td>
+              <td class="num num-highlight">47.5%</td>
+              <td class="num">47.5%</td>
+              <td class="num">0.00s</td>
+              <td class="num">—</td>
+            </tr><tr class='row-best'>
+              <td>
+                <div class="method-cell">
+                  <span class="swatch" style="background:#d97706"></span>
+                  <div>
+                    <div class="method-title">Hybrid (Schema-Guided LLM)</div>
+                    <span class='tag tag-best'>Leader</span>
+                    <span class='tag tag-llm'>LLM</span>
+                  </div>
+                </div>
+              </td>
+              <td class="num">61.1%</td>
+              <td class="num">73.8%</td>
+              <td class="num num-highlight">66.9%</td>
+              <td class="num">77.1%</td>
+              <td class="num">20.44s</td>
+              <td class="num">100</td>
+            </tr><tr>
+              <td>
+                <div class="method-cell">
+                  <span class="swatch" style="background:#db2777"></span>
+                  <div>
+                    <div class="method-title">Dynamic / Incremental (memory-augmented)</div>
+                    
+                    <span class='tag tag-llm'>LLM</span>
+                  </div>
+                </div>
+              </td>
+              <td class="num">32.5%</td>
+              <td class="num">91.9%</td>
+              <td class="num num-highlight">48.0%</td>
+              <td class="num">48.0%</td>
+              <td class="num">0.00s</td>
+              <td class="num">—</td>
+            </tr></tbody>
+        </table>
+      </div>
+      
+        <details class="details-block">
+          <summary>Extended metrics (protocol v2)</summary>
+          <div class="table-wrap">
+            <table>
+              <thead><tr>
+                <th>Method</th><th>Partial F1</th><th>Macro strict F1</th><th>95% CI</th>
+                <th>Sentence hit rate</th><th>Boundary FP</th><th>Spurious FP</th>
+              </tr></thead>
+              <tbody><tr>
+              <td>LLM-Based (open-ended)</td>
+              <td class="num">29.6%</td>
+              <td class="num">4.7%</td>
+              <td class="num">0.9% – 5.4%</td>
+              <td class="num">7.0%</td>
+              <td class="num">137</td>
+              <td class="num">156</td>
+            </tr><tr>
+              <td>NLP / OpenIE (spaCy)</td>
+              <td class="num">20.4%</td>
+              <td class="num">9.5%</td>
+              <td class="num">5.9% – 14.4%</td>
+              <td class="num">20.0%</td>
+              <td class="num">116</td>
+              <td class="num">209</td>
+            </tr><tr>
+              <td>Ontology / Schema-Driven</td>
+              <td class="num">47.5%</td>
+              <td class="num">49.3%</td>
+              <td class="num">41.8% – 52.8%</td>
+              <td class="num">89.0%</td>
+              <td class="num">0</td>
+              <td class="num">312</td>
+            </tr><tr>
+              <td>Hybrid (Schema-Guided LLM)</td>
+              <td class="num">76.5%</td>
+              <td class="num">59.5%</td>
+              <td class="num">57.9% – 74.4%</td>
+              <td class="num">69.0%</td>
+              <td class="num">18</td>
+              <td class="num">57</td>
+            </tr><tr>
+              <td>Dynamic / Incremental (memory-augmented)</td>
+              <td class="num">48.0%</td>
+              <td class="num">51.2%</td>
+              <td class="num">42.0% – 53.8%</td>
+              <td class="num">89.0%</td>
+              <td class="num">18</td>
+              <td class="num">287</td>
+            </tr></tbody>
+            </table>
+          </div>
+          <p class="details-note">
+            Partial F1 uses IoU ≥ 0.5. Macro F1 averages per-sentence strict F1.
+            Bootstrap CI resamples sentences.
+          </p>
+        </details>
+    </section>
+
+    
+        <section class="section" id="head-to-head">
+          <div class="section-head">
+            <h2>Sentence-level wins</h2>
+            <p class="section-lead">
+              100 sentences with gold entities;
+              34 ties on strict F1.
+            </p>
+          </div>
+          <div class="panel h2h-panel"><div class="h2h-row">
+              <span class="h2h-label">hybrid</span>
+              <div class="h2h-track">
+                <div class="h2h-fill" style="width:100.0%"></div>
+              </div>
+              <span class="h2h-value">49</span>
+            </div><div class="h2h-row">
+              <span class="h2h-label">ontology</span>
+              <div class="h2h-track">
+                <div class="h2h-fill" style="width:24.5%"></div>
+              </div>
+              <span class="h2h-value">12</span>
+            </div><div class="h2h-row">
+              <span class="h2h-label">nlp</span>
+              <div class="h2h-track">
+                <div class="h2h-fill" style="width:8.2%"></div>
+              </div>
+              <span class="h2h-value">4</span>
+            </div><div class="h2h-row">
+              <span class="h2h-label">llm</span>
+              <div class="h2h-track">
+                <div class="h2h-fill" style="width:2.0%"></div>
+              </div>
+              <span class="h2h-value">1</span>
+            </div></div>
+        </section>
+
+    <section class="section" id="examples">
+      <div class="section-head">
+        <h2>Sample predictions</h2>
+        <p class="section-lead">
+          Gold numeric spans (amber) vs method predictions (green). Useful for explaining
+          boundary errors in the meeting.
+        </p>
+      </div>
+      <div class="examples"><article class="example">
+              <p class="example-id">Sentence 910334</p>
+              <p class="example-label">Gold numeric spans</p>
+              <p class="example-text">20 Table of Contents We recorded stock - based compensation expense in the consolidated statements of operations as follows ( in thousands ) : As of March 31 , 2020 , total unrecognized compensation cost related to share - based compensation grants under the OSI Plans were estimated at $ <mark class="mark-gold">0.5</mark> million for stock options and $ <mark class="mark-gold">18.9</mark> million for RSUs .</p>
+              <div class="example-pred">
+                  <p class="example-pred-label">ontology</p>
+                  <p class="example-text"><mark class="mark-pred">20</mark> Table of Contents We recorded stock - based compensation expense in the consolidated statements of operations as follows ( in thousands ) : As of March <mark class="mark-pred">31</mark> , <mark class="mark-pred">2020</mark> , total unrecognized compensation cost related to share - based compensation grants under the OSI Plans were estimated at $ <mark class="mark-pred">0.5</mark> million for stock options and $ <mark class="mark-pred">18.9</mark> million for RSUs .</p>
+                </div><div class="example-pred">
+                  <p class="example-pred-label">nlp</p>
+                  <p class="example-text"><mark class="mark-pred">20</mark> Table of Contents We recorded stock - based compensation expense in the consolidated statements of operations as follows ( in thousands ) : As of <mark class="mark-pred">March</mark> <mark class="mark-pred">31</mark> <mark class="mark-pred">,</mark> <mark class="mark-pred">2020</mark> , total unrecognized compensation cost related to share - based compensation grants under the OSI Plans were estimated at <mark class="mark-pred">$</mark> <mark class="mark-pred">0.5</mark> <mark class="mark-pred">million</mark> for stock options and <mark class="mark-pred">$</mark> <mark class="mark-pred">18.9</mark> <mark class="mark-pred">million</mark> for RSUs .</p>
+                </div>
+            </article><article class="example">
+              <p class="example-id">Sentence 961929</p>
+              <p class="example-label">Gold numeric spans</p>
+              <p class="example-text">Contracts with the U.S. government for work on various military installations expire between 2051 and 2070 and have RPOs of $ <mark class="mark-gold">5.4</mark> billion as of March 31 , 2020 , as measured by estimated remaining contract revenue .</p>
+              <div class="example-pred">
+                  <p class="example-pred-label">ontology</p>
+                  <p class="example-text">Contracts with the U.S. government for work on various military installations expire between <mark class="mark-pred">2051</mark> and <mark class="mark-pred">2070</mark> and have RPOs of $ <mark class="mark-pred">5.4</mark> billion as of March <mark class="mark-pred">31</mark> , <mark class="mark-pred">2020</mark> , as measured by estimated remaining contract revenue .</p>
+                </div><div class="example-pred">
+                  <p class="example-pred-label">nlp</p>
+                  <p class="example-text">Contracts with the U.S. government for work on various military installations expire <mark class="mark-pred">between</mark> <mark class="mark-pred">2051</mark> <mark class="mark-pred">and</mark> <mark class="mark-pred">2070</mark> and have RPOs of <mark class="mark-pred">$</mark> <mark class="mark-pred">5.4</mark> <mark class="mark-pred">billion</mark> as of <mark class="mark-pred">March</mark> <mark class="mark-pred">31</mark> <mark class="mark-pred">,</mark> <mark class="mark-pred">2020</mark> , as measured by estimated remaining contract revenue .</p>
+                </div>
+            </article><article class="example">
+              <p class="example-id">Sentence 956819</p>
+              <p class="example-label">Gold numeric spans</p>
+              <p class="example-text">- 5 - PARKER - HANNIFIN CORPORATION BUSINESS SEGMENT INFORMATION ( Dollars in thousands ) ( Unaudited ) The Company operates in <mark class="mark-gold">two</mark> reportable business segments : Diversified Industrial and Aerospace Systems .</p>
+              <div class="example-pred">
+                  <p class="example-pred-label">ontology</p>
+                  <p class="example-text">- <mark class="mark-pred">5</mark> - PARKER - HANNIFIN CORPORATION BUSINESS SEGMENT INFORMATION ( Dollars in thousands ) ( Unaudited ) The Company operates in two reportable business segments : Diversified Industrial and Aerospace Systems .</p>
+                </div>
+            </article></div>
+    </section>
+
+    <section class="section" id="context">
+      <div class="section-head">
+        <h2>What we measured</h2>
+      </div>
+      <div class="context-grid">
+        <div class="context-item panel">
+          <h3>Task</h3>
+          <p>Detect numeric entity spans in financial filing sentences. We score span location only, not the 139 XBRL type labels.</p>
+        </div>
+        <div class="context-item panel">
+          <h3>Fair comparison</h3>
+          <p>All methods are filtered to numeric predictions before scoring, so open-ended extractors are not penalized for non-numeric entities FiNER never annotates.</p>
+        </div>
+        <div class="context-item panel">
+          <h3>Next step</h3>
+          <p>Run all five methods with an LLM API key to see whether schema-guided Hybrid beats the ontology baseline on precision while keeping recall.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="doc-footer">
+      RecRAG FiNER-139 experiment ·
+      <a href="https://huggingface.co/datasets/nlpaueb/finer-139">nlpaueb/finer-139</a>
+    </footer>
+  </main>
+</body>
+</html>

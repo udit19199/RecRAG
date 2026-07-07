@@ -1,20 +1,30 @@
 {
-  "run_at": "2026-07-06T06:03:37.755915+00:00",
+  "run_at": "2026-07-07T18:46:31.710560+00:00",
   "request": {
     "sample_size": 100,
     "seed": 42,
+    "split": "validation",
     "methods": [
+      "llm",
       "nlp",
-      "ontology"
+      "ontology",
+      "hybrid",
+      "dynamic"
     ]
   },
   "results": {
     "params": {
       "sample_size": 100,
       "seed": 42,
+      "split": "validation",
+      "stratified": false,
+      "suite_path": null,
       "methods": [
+        "llm",
         "nlp",
-        "ontology"
+        "ontology",
+        "hybrid",
+        "dynamic"
       ],
       "provider": "openai",
       "model": "gpt-4o-mini",
@@ -24,7 +34,9 @@
       "id": "nlpaueb/finer-139",
       "split": "validation",
       "num_sentences": 100,
-      "num_gold_entities": 160
+      "num_gold_entities": 160,
+      "stratified": false,
+      "frozen": false
     },
     "llm": {
       "provider": "openai",
@@ -33,10 +45,184 @@
     },
     "methods": [
       {
+        "name": "llm",
+        "display_name": "LLM-Based (open-ended)",
+        "uses_llm": true,
+        "latency_s": 31.264,
+        "llm_calls": 100,
+        "error": null,
+        "strict": {
+          "precision": 0.023333333333333334,
+          "recall": 0.04375,
+          "f1": 0.03043478260869565,
+          "tp": 7,
+          "fp": 293,
+          "fn": 153
+        },
+        "relaxed": {
+          "precision": 0.48,
+          "recall": 0.9,
+          "f1": 0.6260869565217392,
+          "tp": 144,
+          "fp": 156,
+          "fn": 16
+        },
+        "partial": {
+          "precision": 0.22666666666666666,
+          "recall": 0.425,
+          "f1": 0.2956521739130435,
+          "tp": 68,
+          "fp": 232,
+          "fn": 92
+        },
+        "macro_strict": {
+          "precision": 0.04733333333333333,
+          "recall": 0.04733333333333333,
+          "f1": 0.04733333333333333,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "macro_partial": {
+          "precision": 0.28505844155844157,
+          "recall": 0.28505844155844157,
+          "f1": 0.28505844155844157,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "num_pred": 300,
+        "num_gold": 160,
+        "diagnostics": {
+          "strict": {
+            "precision": 0.023333333333333334,
+            "recall": 0.04375,
+            "f1": 0.03043478260869565,
+            "tp": 7,
+            "fp": 293,
+            "fn": 153
+          },
+          "relaxed": {
+            "precision": 0.48,
+            "recall": 0.9,
+            "f1": 0.6260869565217392,
+            "tp": 144,
+            "fp": 156,
+            "fn": 16
+          },
+          "partial": {
+            "precision": 0.22666666666666666,
+            "recall": 0.425,
+            "f1": 0.2956521739130435,
+            "tp": 68,
+            "fp": 232,
+            "fn": 92
+          },
+          "macro_strict": {
+            "precision": 0.04733333333333333,
+            "recall": 0.04733333333333333,
+            "f1": 0.04733333333333333,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "macro_relaxed": {
+            "precision": 0.6289393939393939,
+            "recall": 0.6289393939393939,
+            "f1": 0.6289393939393939,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "macro_partial": {
+            "precision": 0.28505844155844157,
+            "recall": 0.28505844155844157,
+            "f1": 0.28505844155844157,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "span_iou_mean": 0.4333,
+          "sentence_hit_rate": 0.07,
+          "errors": {
+            "strict_tp": 7,
+            "boundary_fp": 137,
+            "spurious_fp": 156,
+            "missed_fn": 153
+          },
+          "bootstrap_strict_f1_ci": {
+            "low": 0.0086,
+            "high": 0.0544
+          },
+          "concept_recall": [
+            {
+              "concept": "DebtInstrumentBasisSpreadOnVariableRate1",
+              "gold_count": 18,
+              "tp": 0,
+              "recall": 0.0
+            },
+            {
+              "concept": "DebtInstrumentFaceAmount",
+              "gold_count": 9,
+              "tp": 0,
+              "recall": 0.0
+            },
+            {
+              "concept": "LineOfCreditFacilityRemainingBorrowingCapacity",
+              "gold_count": 8,
+              "tp": 0,
+              "recall": 0.0
+            },
+            {
+              "concept": "NumberOfReportableSegments",
+              "gold_count": 6,
+              "tp": 0,
+              "recall": 0.0
+            },
+            {
+              "concept": "DerivativeNotionalAmount",
+              "gold_count": 6,
+              "tp": 0,
+              "recall": 0.0
+            },
+            {
+              "concept": "LineOfCreditFacilityMaximumBorrowingCapacity",
+              "gold_count": 6,
+              "tp": 0,
+              "recall": 0.0
+            },
+            {
+              "concept": "EmployeeServiceShareBasedCompensationNonvestedAwardsTotalCompensationCostNotYetRecognized",
+              "gold_count": 5,
+              "tp": 0,
+              "recall": 0.0
+            },
+            {
+              "concept": "RestructuringCharges",
+              "gold_count": 5,
+              "tp": 0,
+              "recall": 0.0
+            },
+            {
+              "concept": "LineOfCredit",
+              "gold_count": 4,
+              "tp": 0,
+              "recall": 0.0
+            },
+            {
+              "concept": "CommonStockDividendsPerShareDeclared",
+              "gold_count": 4,
+              "tp": 0,
+              "recall": 0.0
+            }
+          ]
+        }
+      },
+      {
         "name": "nlp",
         "display_name": "NLP / OpenIE (spaCy)",
         "uses_llm": false,
-        "latency_s": 1.097,
+        "latency_s": 0.965,
         "llm_calls": 0,
         "error": null,
         "strict": {
@@ -142,7 +328,7 @@
             "low": 0.0588,
             "high": 0.1439
           },
-          "concept_recall_top10": [
+          "concept_recall": [
             {
               "concept": "DebtInstrumentBasisSpreadOnVariableRate1",
               "gold_count": 18,
@@ -316,7 +502,7 @@
             "low": 0.4183,
             "high": 0.5284
           },
-          "concept_recall_top10": [
+          "concept_recall": [
             {
               "concept": "DebtInstrumentBasisSpreadOnVariableRate1",
               "gold_count": 18,
@@ -379,28 +565,564 @@
             }
           ]
         }
+      },
+      {
+        "name": "hybrid",
+        "display_name": "Hybrid (Schema-Guided LLM)",
+        "uses_llm": true,
+        "latency_s": 20.441,
+        "llm_calls": 100,
+        "error": null,
+        "strict": {
+          "precision": 0.6113989637305699,
+          "recall": 0.7375,
+          "f1": 0.668555240793201,
+          "tp": 118,
+          "fp": 75,
+          "fn": 42
+        },
+        "relaxed": {
+          "precision": 0.7046632124352331,
+          "recall": 0.85,
+          "f1": 0.7705382436260623,
+          "tp": 136,
+          "fp": 57,
+          "fn": 24
+        },
+        "partial": {
+          "precision": 0.6994818652849741,
+          "recall": 0.84375,
+          "f1": 0.7648725212464589,
+          "tp": 135,
+          "fp": 58,
+          "fn": 25
+        },
+        "macro_strict": {
+          "precision": 0.5949463051568314,
+          "recall": 0.5949463051568314,
+          "f1": 0.5949463051568314,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "macro_partial": {
+          "precision": 0.7199463051568314,
+          "recall": 0.7199463051568314,
+          "f1": 0.7199463051568314,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "num_pred": 193,
+        "num_gold": 160,
+        "diagnostics": {
+          "strict": {
+            "precision": 0.6113989637305699,
+            "recall": 0.7375,
+            "f1": 0.668555240793201,
+            "tp": 118,
+            "fp": 75,
+            "fn": 42
+          },
+          "relaxed": {
+            "precision": 0.7046632124352331,
+            "recall": 0.85,
+            "f1": 0.7705382436260623,
+            "tp": 136,
+            "fp": 57,
+            "fn": 24
+          },
+          "partial": {
+            "precision": 0.6994818652849741,
+            "recall": 0.84375,
+            "f1": 0.7648725212464589,
+            "tp": 135,
+            "fp": 58,
+            "fn": 25
+          },
+          "macro_strict": {
+            "precision": 0.5949463051568314,
+            "recall": 0.5949463051568314,
+            "f1": 0.5949463051568314,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "macro_relaxed": {
+            "precision": 0.7249463051568314,
+            "recall": 0.7249463051568314,
+            "f1": 0.7249463051568314,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "macro_partial": {
+            "precision": 0.7199463051568314,
+            "recall": 0.7199463051568314,
+            "f1": 0.7199463051568314,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "span_iou_mean": 0.9326,
+          "sentence_hit_rate": 0.69,
+          "errors": {
+            "strict_tp": 118,
+            "boundary_fp": 18,
+            "spurious_fp": 57,
+            "missed_fn": 42
+          },
+          "bootstrap_strict_f1_ci": {
+            "low": 0.5789,
+            "high": 0.7439
+          },
+          "concept_recall": [
+            {
+              "concept": "DebtInstrumentBasisSpreadOnVariableRate1",
+              "gold_count": 18,
+              "tp": 18,
+              "recall": 1.0
+            },
+            {
+              "concept": "DebtInstrumentFaceAmount",
+              "gold_count": 9,
+              "tp": 9,
+              "recall": 1.0
+            },
+            {
+              "concept": "LineOfCreditFacilityRemainingBorrowingCapacity",
+              "gold_count": 8,
+              "tp": 4,
+              "recall": 0.5
+            },
+            {
+              "concept": "NumberOfReportableSegments",
+              "gold_count": 6,
+              "tp": 0,
+              "recall": 0.0
+            },
+            {
+              "concept": "DerivativeNotionalAmount",
+              "gold_count": 6,
+              "tp": 2,
+              "recall": 0.3333333333333333
+            },
+            {
+              "concept": "LineOfCreditFacilityMaximumBorrowingCapacity",
+              "gold_count": 6,
+              "tp": 5,
+              "recall": 0.8333333333333334
+            },
+            {
+              "concept": "EmployeeServiceShareBasedCompensationNonvestedAwardsTotalCompensationCostNotYetRecognized",
+              "gold_count": 5,
+              "tp": 5,
+              "recall": 1.0
+            },
+            {
+              "concept": "RestructuringCharges",
+              "gold_count": 5,
+              "tp": 2,
+              "recall": 0.4
+            },
+            {
+              "concept": "LineOfCredit",
+              "gold_count": 4,
+              "tp": 3,
+              "recall": 0.75
+            },
+            {
+              "concept": "CommonStockDividendsPerShareDeclared",
+              "gold_count": 4,
+              "tp": 4,
+              "recall": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "name": "dynamic",
+        "display_name": "Dynamic / Incremental (memory-augmented)",
+        "uses_llm": true,
+        "latency_s": 0.002,
+        "llm_calls": 0,
+        "error": null,
+        "strict": {
+          "precision": 0.3252212389380531,
+          "recall": 0.91875,
+          "f1": 0.4803921568627451,
+          "tp": 147,
+          "fp": 305,
+          "fn": 13
+        },
+        "relaxed": {
+          "precision": 0.3252212389380531,
+          "recall": 0.91875,
+          "f1": 0.4803921568627451,
+          "tp": 147,
+          "fp": 305,
+          "fn": 13
+        },
+        "partial": {
+          "precision": 0.3252212389380531,
+          "recall": 0.91875,
+          "f1": 0.4803921568627451,
+          "tp": 147,
+          "fp": 305,
+          "fn": 13
+        },
+        "macro_strict": {
+          "precision": 0.5117859649122807,
+          "recall": 0.5117859649122807,
+          "f1": 0.5117859649122807,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "macro_partial": {
+          "precision": 0.5117859649122807,
+          "recall": 0.5117859649122807,
+          "f1": 0.5117859649122807,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "num_pred": 452,
+        "num_gold": 160,
+        "diagnostics": {
+          "strict": {
+            "precision": 0.3252212389380531,
+            "recall": 0.91875,
+            "f1": 0.4803921568627451,
+            "tp": 147,
+            "fp": 305,
+            "fn": 13
+          },
+          "relaxed": {
+            "precision": 0.3252212389380531,
+            "recall": 0.91875,
+            "f1": 0.4803921568627451,
+            "tp": 147,
+            "fp": 305,
+            "fn": 13
+          },
+          "partial": {
+            "precision": 0.3252212389380531,
+            "recall": 0.91875,
+            "f1": 0.4803921568627451,
+            "tp": 147,
+            "fp": 305,
+            "fn": 13
+          },
+          "macro_strict": {
+            "precision": 0.5117859649122807,
+            "recall": 0.5117859649122807,
+            "f1": 0.5117859649122807,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "macro_relaxed": {
+            "precision": 0.5117859649122807,
+            "recall": 0.5117859649122807,
+            "f1": 0.5117859649122807,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "macro_partial": {
+            "precision": 0.5117859649122807,
+            "recall": 0.5117859649122807,
+            "f1": 0.5117859649122807,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "span_iou_mean": 0.9381,
+          "sentence_hit_rate": 0.89,
+          "errors": {
+            "strict_tp": 147,
+            "boundary_fp": 18,
+            "spurious_fp": 287,
+            "missed_fn": 13
+          },
+          "bootstrap_strict_f1_ci": {
+            "low": 0.4205,
+            "high": 0.5378
+          },
+          "concept_recall": [
+            {
+              "concept": "DebtInstrumentBasisSpreadOnVariableRate1",
+              "gold_count": 18,
+              "tp": 18,
+              "recall": 1.0
+            },
+            {
+              "concept": "DebtInstrumentFaceAmount",
+              "gold_count": 9,
+              "tp": 9,
+              "recall": 1.0
+            },
+            {
+              "concept": "LineOfCreditFacilityRemainingBorrowingCapacity",
+              "gold_count": 8,
+              "tp": 8,
+              "recall": 1.0
+            },
+            {
+              "concept": "NumberOfReportableSegments",
+              "gold_count": 6,
+              "tp": 0,
+              "recall": 0.0
+            },
+            {
+              "concept": "DerivativeNotionalAmount",
+              "gold_count": 6,
+              "tp": 6,
+              "recall": 1.0
+            },
+            {
+              "concept": "LineOfCreditFacilityMaximumBorrowingCapacity",
+              "gold_count": 6,
+              "tp": 6,
+              "recall": 1.0
+            },
+            {
+              "concept": "EmployeeServiceShareBasedCompensationNonvestedAwardsTotalCompensationCostNotYetRecognized",
+              "gold_count": 5,
+              "tp": 5,
+              "recall": 1.0
+            },
+            {
+              "concept": "RestructuringCharges",
+              "gold_count": 5,
+              "tp": 4,
+              "recall": 0.8
+            },
+            {
+              "concept": "LineOfCredit",
+              "gold_count": 4,
+              "tp": 3,
+              "recall": 0.75
+            },
+            {
+              "concept": "CommonStockDividendsPerShareDeclared",
+              "gold_count": 4,
+              "tp": 4,
+              "recall": 1.0
+            }
+          ]
+        }
       }
     ],
     "comparison": {
       "sentence_wins": {
-        "ontology": 74,
-        "nlp": 11
+        "ontology": 12,
+        "hybrid": 49,
+        "nlp": 4,
+        "llm": 1
       },
       "sentences_with_gold": 100,
-      "ties": 15
+      "ties": 34
     },
+    "paired_comparisons": [
+      {
+        "method_a": "dynamic",
+        "method_b": "hybrid",
+        "delta_b_minus_a": {
+          "delta_mean": 0.1853,
+          "ci_low": 0.1202,
+          "ci_high": 0.2452,
+          "significant": true
+        },
+        "mcnemar": {
+          "a_only": 20,
+          "b_only": 0,
+          "both": 69,
+          "neither": 11,
+          "discordant": 20
+        },
+        "interpretation": "hybrid significantly better than dynamic"
+      },
+      {
+        "method_a": "dynamic",
+        "method_b": "llm",
+        "delta_b_minus_a": {
+          "delta_mean": -0.4498,
+          "ci_low": -0.5112,
+          "ci_high": -0.3871,
+          "significant": true
+        },
+        "mcnemar": {
+          "a_only": 83,
+          "b_only": 1,
+          "both": 6,
+          "neither": 10,
+          "discordant": 84
+        },
+        "interpretation": "dynamic significantly better than llm"
+      },
+      {
+        "method_a": "dynamic",
+        "method_b": "nlp",
+        "delta_b_minus_a": {
+          "delta_mean": -0.3823,
+          "ci_low": -0.4531,
+          "ci_high": -0.3117,
+          "significant": true
+        },
+        "mcnemar": {
+          "a_only": 70,
+          "b_only": 1,
+          "both": 19,
+          "neither": 10,
+          "discordant": 71
+        },
+        "interpretation": "dynamic significantly better than nlp"
+      },
+      {
+        "method_a": "dynamic",
+        "method_b": "ontology",
+        "delta_b_minus_a": {
+          "delta_mean": -0.005,
+          "ci_low": -0.025,
+          "ci_high": 0.0129,
+          "significant": false
+        },
+        "mcnemar": {
+          "a_only": 2,
+          "b_only": 2,
+          "both": 87,
+          "neither": 9,
+          "discordant": 4
+        },
+        "interpretation": "No significant difference between dynamic and ontology"
+      },
+      {
+        "method_a": "hybrid",
+        "method_b": "llm",
+        "delta_b_minus_a": {
+          "delta_mean": -0.635,
+          "ci_low": -0.7148,
+          "ci_high": -0.5456,
+          "significant": true
+        },
+        "mcnemar": {
+          "a_only": 65,
+          "b_only": 3,
+          "both": 4,
+          "neither": 28,
+          "discordant": 68
+        },
+        "interpretation": "hybrid significantly better than llm"
+      },
+      {
+        "method_a": "hybrid",
+        "method_b": "nlp",
+        "delta_b_minus_a": {
+          "delta_mean": -0.5676,
+          "ci_low": -0.6603,
+          "ci_high": -0.4728,
+          "significant": true
+        },
+        "mcnemar": {
+          "a_only": 55,
+          "b_only": 6,
+          "both": 14,
+          "neither": 25,
+          "discordant": 61
+        },
+        "interpretation": "hybrid significantly better than nlp"
+      },
+      {
+        "method_a": "hybrid",
+        "method_b": "ontology",
+        "delta_b_minus_a": {
+          "delta_mean": -0.1903,
+          "ci_low": -0.2586,
+          "ci_high": -0.1175,
+          "significant": true
+        },
+        "mcnemar": {
+          "a_only": 2,
+          "b_only": 22,
+          "both": 67,
+          "neither": 9,
+          "discordant": 24
+        },
+        "interpretation": "hybrid significantly better than ontology"
+      },
+      {
+        "method_a": "llm",
+        "method_b": "nlp",
+        "delta_b_minus_a": {
+          "delta_mean": 0.0675,
+          "ci_low": 0.0274,
+          "ci_high": 0.1124,
+          "significant": true
+        },
+        "mcnemar": {
+          "a_only": 3,
+          "b_only": 16,
+          "both": 4,
+          "neither": 77,
+          "discordant": 19
+        },
+        "interpretation": "nlp significantly better than llm"
+      },
+      {
+        "method_a": "llm",
+        "method_b": "ontology",
+        "delta_b_minus_a": {
+          "delta_mean": 0.4448,
+          "ci_low": 0.3856,
+          "ci_high": 0.5035,
+          "significant": true
+        },
+        "mcnemar": {
+          "a_only": 0,
+          "b_only": 82,
+          "both": 7,
+          "neither": 11,
+          "discordant": 82
+        },
+        "interpretation": "ontology significantly better than llm"
+      },
+      {
+        "method_a": "nlp",
+        "method_b": "ontology",
+        "delta_b_minus_a": {
+          "delta_mean": 0.3773,
+          "ci_low": 0.3042,
+          "ci_high": 0.4484,
+          "significant": true
+        },
+        "mcnemar": {
+          "a_only": 0,
+          "b_only": 69,
+          "both": 20,
+          "neither": 11,
+          "discordant": 69
+        },
+        "interpretation": "ontology significantly better than nlp"
+      }
+    ],
     "evaluation": {
-      "protocol_version": 2,
+      "protocol_version": 3,
       "primary_metric": "strict_micro_f1",
       "secondary_metrics": [
         "partial_micro_f1",
         "macro_strict_f1",
         "bootstrap_strict_f1_ci",
+        "paired_bootstrap_delta",
+        "mcnemar_sentence_hits",
         "sentence_hit_rate",
         "error_taxonomy",
-        "concept_recall_top10"
+        "concept_recall"
       ],
-      "partial_match_iou_threshold": 0.5
+      "partial_match_iou_threshold": 0.5,
+      "split": "validation",
+      "stratified_sampling": false
     },
     "examples": [
       {
@@ -481,6 +1203,20 @@
           ]
         ],
         "predictions": {
+          "llm": [
+            [
+              0,
+              1
+            ],
+            [
+              49,
+              52
+            ],
+            [
+              56,
+              59
+            ]
+          ],
           "nlp": [
             [
               0,
@@ -512,6 +1248,26 @@
               29,
               30
             ],
+            [
+              50,
+              51
+            ],
+            [
+              57,
+              58
+            ]
+          ],
+          "hybrid": [
+            [
+              50,
+              51
+            ],
+            [
+              57,
+              58
+            ]
+          ],
+          "dynamic": [
             [
               50,
               51
@@ -573,6 +1329,28 @@
           ]
         ],
         "predictions": {
+          "llm": [
+            [
+              13,
+              14
+            ],
+            [
+              15,
+              16
+            ],
+            [
+              20,
+              23
+            ],
+            [
+              25,
+              27
+            ],
+            [
+              28,
+              29
+            ]
+          ],
           "nlp": [
             [
               12,
@@ -588,6 +1366,38 @@
             ]
           ],
           "ontology": [
+            [
+              13,
+              14
+            ],
+            [
+              15,
+              16
+            ],
+            [
+              21,
+              22
+            ],
+            [
+              26,
+              27
+            ],
+            [
+              28,
+              29
+            ]
+          ],
+          "hybrid": [
+            [
+              21,
+              23
+            ]
+          ],
+          "dynamic": [
+            [
+              21,
+              23
+            ],
             [
               13,
               14
@@ -656,13 +1466,21 @@
           ]
         ],
         "predictions": {
+          "llm": [
+            [
+              1,
+              2
+            ]
+          ],
           "nlp": [],
           "ontology": [
             [
               1,
               2
             ]
-          ]
+          ],
+          "hybrid": [],
+          "dynamic": []
         }
       },
       {
@@ -722,6 +1540,24 @@
           ]
         ],
         "predictions": {
+          "llm": [
+            [
+              1,
+              2
+            ],
+            [
+              20,
+              22
+            ],
+            [
+              30,
+              32
+            ],
+            [
+              36,
+              37
+            ]
+          ],
           "nlp": [
             [
               1,
@@ -756,6 +1592,22 @@
             [
               36,
               37
+            ]
+          ],
+          "hybrid": [
+            [
+              1,
+              2
+            ]
+          ],
+          "dynamic": [
+            [
+              1,
+              2
+            ],
+            [
+              21,
+              22
             ]
           ]
         }
@@ -823,6 +1675,28 @@
           ]
         ],
         "predictions": {
+          "llm": [
+            [
+              1,
+              5
+            ],
+            [
+              9,
+              12
+            ],
+            [
+              23,
+              25
+            ],
+            [
+              27,
+              30
+            ],
+            [
+              38,
+              40
+            ]
+          ],
           "nlp": [
             [
               1,
@@ -869,6 +1743,46 @@
             [
               38,
               39
+            ]
+          ],
+          "hybrid": [
+            [
+              10,
+              11
+            ],
+            [
+              28,
+              29
+            ],
+            [
+              23,
+              24
+            ],
+            [
+              38,
+              39
+            ]
+          ],
+          "dynamic": [
+            [
+              10,
+              11
+            ],
+            [
+              28,
+              29
+            ],
+            [
+              23,
+              24
+            ],
+            [
+              38,
+              39
+            ],
+            [
+              4,
+              5
             ]
           ]
         }
@@ -937,6 +1851,20 @@
           ]
         ],
         "predictions": {
+          "llm": [
+            [
+              10,
+              13
+            ],
+            [
+              24,
+              27
+            ],
+            [
+              35,
+              38
+            ]
+          ],
           "nlp": [
             [
               2,
@@ -975,6 +1903,42 @@
             [
               36,
               37
+            ]
+          ],
+          "hybrid": [
+            [
+              11,
+              12
+            ],
+            [
+              25,
+              26
+            ],
+            [
+              36,
+              37
+            ]
+          ],
+          "dynamic": [
+            [
+              11,
+              12
+            ],
+            [
+              25,
+              26
+            ],
+            [
+              36,
+              37
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              5,
+              6
             ]
           ]
         }
@@ -1045,6 +2009,16 @@
           ]
         ],
         "predictions": {
+          "llm": [
+            [
+              7,
+              9
+            ],
+            [
+              37,
+              40
+            ]
+          ],
           "nlp": [
             [
               2,
@@ -1096,6 +2070,50 @@
               38,
               39
             ]
+          ],
+          "hybrid": [
+            [
+              7,
+              8
+            ],
+            [
+              37,
+              39
+            ]
+          ],
+          "dynamic": [
+            [
+              7,
+              8
+            ],
+            [
+              37,
+              39
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              26,
+              27
+            ],
+            [
+              28,
+              29
+            ],
+            [
+              30,
+              31
+            ],
+            [
+              38,
+              39
+            ]
           ]
         }
       },
@@ -1128,6 +2146,20 @@
           ]
         ],
         "predictions": {
+          "llm": [
+            [
+              4,
+              7
+            ],
+            [
+              12,
+              14
+            ],
+            [
+              15,
+              16
+            ]
+          ],
           "nlp": [
             [
               4,
@@ -1138,7 +2170,27 @@
               16
             ]
           ],
-          "ontology": []
+          "ontology": [],
+          "hybrid": [
+            [
+              5,
+              6
+            ]
+          ],
+          "dynamic": [
+            [
+              5,
+              6
+            ],
+            [
+              13,
+              14
+            ],
+            [
+              15,
+              16
+            ]
+          ]
         }
       },
       {
@@ -1187,6 +2239,28 @@
           ]
         ],
         "predictions": {
+          "llm": [
+            [
+              1,
+              2
+            ],
+            [
+              13,
+              16
+            ],
+            [
+              22,
+              24
+            ],
+            [
+              29,
+              31
+            ],
+            [
+              32,
+              33
+            ]
+          ],
           "nlp": [
             [
               1,
@@ -1225,6 +2299,34 @@
             [
               32,
               33
+            ]
+          ],
+          "hybrid": [
+            [
+              1,
+              2
+            ],
+            [
+              32,
+              33
+            ]
+          ],
+          "dynamic": [
+            [
+              1,
+              2
+            ],
+            [
+              32,
+              33
+            ],
+            [
+              23,
+              24
+            ],
+            [
+              30,
+              31
             ]
           ]
         }
@@ -1270,6 +2372,12 @@
           ]
         ],
         "predictions": {
+          "llm": [
+            [
+              15,
+              17
+            ]
+          ],
           "nlp": [
             [
               1,
@@ -1304,6 +2412,30 @@
             [
               16,
               17
+            ]
+          ],
+          "hybrid": [
+            [
+              4,
+              5
+            ]
+          ],
+          "dynamic": [
+            [
+              4,
+              5
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              7,
+              8
+            ],
+            [
+              9,
+              10
             ]
           ]
         }
@@ -1403,6 +2535,16 @@
           ]
         ],
         "predictions": {
+          "llm": [
+            [
+              41,
+              43
+            ],
+            [
+              44,
+              46
+            ]
+          ],
           "nlp": [
             [
               40,
@@ -1422,6 +2564,50 @@
             ]
           ],
           "ontology": [
+            [
+              41,
+              42
+            ],
+            [
+              44,
+              45
+            ],
+            [
+              64,
+              65
+            ],
+            [
+              66,
+              67
+            ],
+            [
+              68,
+              69
+            ]
+          ],
+          "hybrid": [
+            [
+              41,
+              42
+            ],
+            [
+              44,
+              45
+            ],
+            [
+              64,
+              65
+            ],
+            [
+              66,
+              67
+            ],
+            [
+              68,
+              69
+            ]
+          ],
+          "dynamic": [
             [
               41,
               42
@@ -1490,6 +2676,20 @@
           ]
         ],
         "predictions": {
+          "llm": [
+            [
+              2,
+              6
+            ],
+            [
+              9,
+              12
+            ],
+            [
+              16,
+              19
+            ]
+          ],
           "nlp": [
             [
               1,
@@ -1516,6 +2716,30 @@
             [
               17,
               18
+            ]
+          ],
+          "hybrid": [
+            [
+              9,
+              10
+            ],
+            [
+              17,
+              18
+            ]
+          ],
+          "dynamic": [
+            [
+              9,
+              10
+            ],
+            [
+              17,
+              18
+            ],
+            [
+              5,
+              6
             ]
           ]
         }
@@ -1572,6 +2796,20 @@
           ]
         ],
         "predictions": {
+          "llm": [
+            [
+              18,
+              22
+            ],
+            [
+              25,
+              28
+            ],
+            [
+              30,
+              33
+            ]
+          ],
           "nlp": [
             [
               14,
@@ -1610,6 +2848,38 @@
             [
               31,
               32
+            ]
+          ],
+          "hybrid": [
+            [
+              26,
+              27
+            ],
+            [
+              31,
+              32
+            ]
+          ],
+          "dynamic": [
+            [
+              26,
+              27
+            ],
+            [
+              31,
+              32
+            ],
+            [
+              19,
+              20
+            ],
+            [
+              21,
+              22
+            ],
+            [
+              23,
+              24
             ]
           ]
         }
@@ -1654,6 +2924,24 @@
           ]
         ],
         "predictions": {
+          "llm": [
+            [
+              1,
+              3
+            ],
+            [
+              11,
+              14
+            ],
+            [
+              15,
+              17
+            ],
+            [
+              22,
+              23
+            ]
+          ],
           "nlp": [
             [
               1,
@@ -1688,6 +2976,30 @@
             [
               22,
               23
+            ]
+          ],
+          "hybrid": [
+            [
+              12,
+              13
+            ],
+            [
+              15,
+              16
+            ]
+          ],
+          "dynamic": [
+            [
+              12,
+              13
+            ],
+            [
+              15,
+              16
+            ],
+            [
+              2,
+              3
             ]
           ]
         }
@@ -1778,6 +3090,24 @@
           ]
         ],
         "predictions": {
+          "llm": [
+            [
+              8,
+              9
+            ],
+            [
+              46,
+              48
+            ],
+            [
+              61,
+              64
+            ],
+            [
+              71,
+              73
+            ]
+          ],
           "nlp": [
             [
               8,
@@ -1812,6 +3142,30 @@
             [
               72,
               73
+            ]
+          ],
+          "hybrid": [
+            [
+              8,
+              9
+            ],
+            [
+              62,
+              63
+            ]
+          ],
+          "dynamic": [
+            [
+              8,
+              9
+            ],
+            [
+              62,
+              63
+            ],
+            [
+              47,
+              48
             ]
           ]
         }

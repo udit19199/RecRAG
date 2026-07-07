@@ -28,10 +28,10 @@ def write_experiment_artifact(
     }
     (state_dir / f"{run_id}.json").write_text(json.dumps(payload, indent=2))
 
-    findings_dir = Path("docs/research/findings")
-    findings_dir.mkdir(parents=True, exist_ok=True)
+    generated_dir = Path("docs/research/generated")
+    generated_dir.mkdir(parents=True, exist_ok=True)
     md = _markdown_summary(run_id, requirements, scored, blueprint)
-    (findings_dir / f"{run_id}.md").write_text(md)
+    (generated_dir / f"{run_id}.md").write_text(md)
 
 
 def _markdown_summary(

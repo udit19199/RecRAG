@@ -199,7 +199,7 @@ Prompt contains **2 hops on-topic**, not 45 triples.
 **Hybrid** here means combining **vector (semantic) retrieval** with **graph
 (structural) retrieval** — not to be confused with FiNER-139’s **Hybrid Construction**
 graph-construction method (schema-guided LLM extraction). See `/graphrag` UI and
-[finer139-graph-construction.md](./finer139-graph-construction.md).
+[finer139/methodology.md](./finer139/methodology.md).
 
 ### Two practical strategies (RAG vs GraphRAG survey, 2025)
 
@@ -262,7 +262,7 @@ these patterns per use case — today only naive vector is implemented.
 
 **FiNER-139 action item #2** benchmarks which **graph construction** method best
 recognizes entities — the prerequisite for any retrieval pattern above. See
-[finer139-method-ranking.md](./finer139-method-ranking.md).
+[finer139/README.md](./finer139/README.md).
 
 ---
 

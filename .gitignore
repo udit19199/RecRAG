@@ -75,13 +75,23 @@ requirements.txt
 
 # Documentation (planning/deployment guides — out of date)
 docs/*
-# Research findings only (AGENTS.md: ideation under docs/research/findings/).
+# Authoritative recommendation docs (AGENTS.md)
+!docs/recommendation/
+!docs/recommendation/**
+# Onboarding curriculum (ARCHITECTURE.md)
+!docs/onboarding/
+!docs/onboarding/**
+# Research docs (AGENTS.md: ideation under docs/research/graphrag/).
 # Scratch notes in docs/research/*.md stay local and are not committed.
 !docs/research/
 docs/research/*
-!docs/research/findings/
-!docs/research/findings/**
-docs/research/findings/.gitkeep
+!docs/research/README.md
+!docs/research/graphrag/
+!docs/research/graphrag/**
+# Auto-generated orchestration experiment summaries (src/research/artifacts.py)
+docs/research/generated/
+# Local scratch (personal notes, not team artifacts)
+docs/research/_scratch/
 
 # Ad-hoc local tooling at repo root (e.g. one-off Playwright/npm capture scripts)
 /node_modules/
