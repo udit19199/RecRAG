@@ -118,6 +118,7 @@ def _build_llm(provider: str | None, model: str | None) -> Any:
         config,
         provider=provider or DEFAULT_LLM_PROVIDER,
         model=model or DEFAULT_LLM_MODEL,
+        temperature=0,
     )
 
 

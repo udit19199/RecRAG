@@ -34,11 +34,11 @@ ALL_METHODS: list[str] = ["llm", "nlp", "ontology", "hybrid", "dynamic"]
 OPEN_PROMPT = (
     "You are an information-extraction system building a knowledge graph from "
     "financial filings.\n"
-    "Extract every entity and value from the sentence below: monetary amounts, "
-    "percentages, rates, share counts, dates, financial metrics, organizations, "
-    "and instruments.\n"
-    "Return ONLY a JSON array of the exact substrings as they appear in the "
-    "sentence, with no extra commentary.\n\n"
+    "Extract every NUMERIC value from the sentence below: monetary amounts, "
+    "percentages, rates, share counts, and other numeric facts.\n"
+    "Return ONLY a JSON array of the exact minimal numeric substrings as they "
+    "appear in the sentence (e.g. \"100\", \"$1.5\", \"7.00%\"), not surrounding "
+    "words or phrases, with no extra commentary.\n\n"
     "Sentence:\n{sentence}"
 )
 
@@ -73,30 +73,52 @@ def align_char_span_to_tokens(
     return Span(first, last + 1)
 
 
+def snap_char_range_to_numeric_spans(
+    char_start: int, char_end: int, sentence: Sentence
+) -> list[Span]:
+    """Within a character range, extract minimal NUMERIC_REGEX matches as spans."""
+    spans: list[Span] = []
+    for match in NUMERIC_REGEX.finditer(sentence.text, char_start, char_end):
+        span = align_char_span_to_tokens(
+            match.start(), match.end(), sentence.token_offsets
+        )
+        if span is not None:
+            spans.append(Span(span.start, span.end, None, match.group(0)))
+    return spans
+
+
 def align_surface_string_to_tokens(
     surface: str, sentence: Sentence, used: list[tuple[int, int]]
-) -> Span | None:
-    """Locate ``surface`` in the sentence text and map it to a token span.
+) -> list[Span]:
+    """Locate ``surface`` in the sentence and snap to minimal numeric token spans.
 
     Prefers occurrences whose character range does not overlap one already
     consumed (tracked in ``used``) so repeated values map to distinct spans.
+    When the LLM returns a phrase (e.g. ``100 million``), only the minimal
+    numeric substring is aligned to tokens.
     """
     surface = surface.strip()
     if not surface:
-        return None
+        return []
     text_low = sentence.text.lower()
     needle = surface.lower()
     start = 0
     while True:
         pos = text_low.find(needle, start)
         if pos == -1:
-            return None
+            return []
         cs, ce = pos, pos + len(needle)
         if not any(cs < ue and us < ce for us, ue in used):
-            span = align_char_span_to_tokens(cs, ce, sentence.token_offsets)
-            if span is not None:
-                used.append((cs, ce))
-                return Span(span.start, span.end, None, surface)
+            snapped = snap_char_range_to_numeric_spans(cs, ce, sentence)
+            out: list[Span] = []
+            for span in snapped:
+                ts = sentence.token_offsets[span.start][0]
+                te = sentence.token_offsets[span.end - 1][1]
+                if not any(ts < ue and us < te for us, ue in used):
+                    used.append((ts, te))
+                    out.append(span)
+            if out:
+                return out
         start = pos + 1
 
 
@@ -154,9 +176,7 @@ def _align_surfaces(surfaces: list[str], sentence: Sentence) -> list[Span]:
     used: list[tuple[int, int]] = []
     spans: list[Span] = []
     for surface in surfaces:
-        span = align_surface_string_to_tokens(surface, sentence, used)
-        if span is not None:
-            spans.append(span)
+        spans.extend(align_surface_string_to_tokens(surface, sentence, used))
     return spans
 
 
@@ -191,7 +211,9 @@ class LLMExtractor(BaseExtractor):
     def predict(self, sentence: Sentence) -> list[Span]:
         raw = self.llm.generate(OPEN_PROMPT.format(sentence=sentence.text))
         self.call_count += 1
-        surfaces = surfaces_from_items(parse_json_list(raw))
+        surfaces = [
+            s for s in surfaces_from_items(parse_json_list(raw)) if is_numeric(s)
+        ]
         return dedup_spans(_align_surfaces(surfaces, sentence))
 
 
