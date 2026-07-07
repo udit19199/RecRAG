@@ -7,7 +7,7 @@ import { chromium } from "playwright";
 import { mkdir } from "node:fs/promises";
 import path from "node:path";
 
-const OUT_DIR = path.resolve("docs/research/findings/screenshots");
+const OUT_DIR = path.resolve("docs/research/graphrag/finer139/screenshots");
 // Use localhost — 127.0.0.1 breaks Next.js dev HMR/hydration in headless runs.
 const BASE_URL = process.env.FINER139_BASE_URL ?? "http://localhost:3000";
 

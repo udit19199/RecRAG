@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate a standalone HTML report from FiNER-139 benchmark JSON."""
+"""Generate a meeting-ready HTML report from FiNER-139 benchmark JSON."""
 
 from __future__ import annotations
 
@@ -9,15 +9,15 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_INPUT = ROOT / "docs/research/findings/finer139-benchmark-latest.json"
-DEFAULT_OUTPUT = ROOT / "docs/research/findings/finer139-benchmark-report.html"
+DEFAULT_INPUT = ROOT / "docs/research/graphrag/finer139/latest.json"
+DEFAULT_OUTPUT = ROOT / "docs/research/graphrag/finer139/report.html"
 
 METHOD_COLORS = {
     "llm": "#6366f1",
-    "nlp": "#0ea5e9",
-    "ontology": "#10b981",
-    "hybrid": "#f59e0b",
-    "dynamic": "#ec4899",
+    "nlp": "#0284c7",
+    "ontology": "#059669",
+    "hybrid": "#d97706",
+    "dynamic": "#db2777",
 }
 
 
@@ -45,7 +45,7 @@ def render_tokens(tokens: list[str], spans: set[tuple[int, int]], css_class: str
         label = html.escape(tok)
         in_span = any(start <= i < end for start, end in spans)
         if in_span:
-            parts.append(f'<span class="{css_class}">{label}</span>')
+            parts.append(f'<mark class="{css_class}">{label}</mark>')
         else:
             parts.append(label)
     return "".join(parts)
@@ -68,108 +68,196 @@ def normalize_data(data: dict) -> tuple[dict, str]:
     return results, str(run_at)
 
 
+def _method_by_name(methods: list[dict], name: str) -> dict | None:
+    return next((m for m in methods if m.get("name") == name), None)
+
+
+def build_takeaways(
+    methods: list[dict],
+    best: dict | None,
+    comparison: dict,
+    llm_info: dict,
+) -> list[tuple[str, str]]:
+    """Data-driven talking points for the meeting summary."""
+    points: list[tuple[str, str]] = []
+
+    if best and best.get("strict"):
+        strict = best["strict"]
+        points.append(
+            (
+                f"{best['display_name']} leads on strict F1 ({pct(strict['f1'])})",
+                f"Recall {pct(strict['recall'])}, precision {pct(strict['precision'])}. "
+                f"{'Uses an LLM.' if best.get('uses_llm') else 'Runs offline with no LLM cost.'}",
+            )
+        )
+
+    nlp = _method_by_name(methods, "nlp")
+    if nlp and nlp.get("strict") and nlp.get("relaxed"):
+        points.append(
+            (
+                "Generic spaCy NER misses exact span boundaries",
+                f"Relaxed F1 {pct(nlp['relaxed']['f1'])} vs strict F1 {pct(nlp['strict']['f1'])}. "
+                "Many numeric tokens are found, but token boundaries rarely match FiNER gold.",
+            )
+        )
+
+    wins = comparison.get("sentence_wins") or {}
+    if wins:
+        leader = max(wins.items(), key=lambda x: x[1])
+        total = comparison.get("sentences_with_gold") or 0
+        points.append(
+            (
+                f"{leader[0]} wins {leader[1]} of {total} sentences head-to-head",
+                f"{comparison.get('ties', 0)} sentences tied on strict F1.",
+            )
+        )
+
+    pending = [m for m in methods if m.get("error")]
+    if pending:
+        model = llm_info.get("model", "gpt-4o-mini")
+        names = ", ".join(m["display_name"] for m in pending[:3])
+        suffix = f" and {len(pending) - 3} more" if len(pending) > 3 else ""
+        points.append(
+            (
+                f"{len(pending)} method(s) still need an API key",
+                f"{names}{suffix} were not scored. Re-run with OPENAI_API_KEY to compare "
+                f"schema-guided LLM methods (default model: {model}).",
+            )
+        )
+
+    if not points:
+        points.append(
+            (
+                "No scored methods in this run",
+                "Select at least one extraction method and re-run the benchmark.",
+            )
+        )
+
+    return points[:4]
+
+
 def build_html(data: dict) -> str:
     results, run_at = normalize_data(data)
     dataset = results["dataset"]
     methods = results["methods"]
     examples = results.get("examples", [])
     params = results.get("params", {})
+    llm_info = results.get("llm", {})
+    comparison = results.get("comparison") or {}
 
     scored = [m for m in methods if m.get("strict")]
     best = max(scored, key=lambda m: m["strict"]["f1"]) if scored else None
     max_f1 = max((m["strict"]["f1"] for m in scored), default=1.0)
+    takeaways = build_takeaways(methods, best, comparison, llm_info)
 
-    method_rows = []
-    chart_bars = []
+    run_date = html.escape(str(run_at)[:10] if run_at else "—")
+    split = html.escape(str(dataset.get("split", "validation")))
+    seed = params.get("seed", 42)
+    num_sentences = dataset.get("num_sentences", 0)
+    num_gold = dataset.get("num_gold_entities", 0)
+
+    # Horizontal F1 comparison (primary meeting visual)
+    chart_rows: list[str] = []
     for m in methods:
-        name = m["name"]
-        color = METHOD_COLORS.get(name, "#94a3b8")
+        color = METHOD_COLORS.get(m["name"], "#64748b")
+        strict = m.get("strict")
+        err = m.get("error")
+        if err:
+            chart_rows.append(
+                f"""<div class="compare-row compare-row--pending">
+                  <div class="compare-meta">
+                    <span class="swatch" style="background:{color}"></span>
+                    <span class="compare-name">{html.escape(m["display_name"])}</span>
+                  </div>
+                  <div class="compare-track"><div class="compare-fill" style="width:0"></div></div>
+                  <span class="compare-value muted">Not scored</span>
+                </div>"""
+            )
+            continue
+        f1 = strict["f1"] if strict else 0
+        is_best = best and m["name"] == best["name"]
+        chart_rows.append(
+            f"""<div class="compare-row{" compare-row--best" if is_best else ""}">
+              <div class="compare-meta">
+                <span class="swatch" style="background:{color}"></span>
+                <span class="compare-name">{html.escape(m["display_name"])}</span>
+                {"<span class='tag tag-best'>Leader</span>" if is_best else ""}
+              </div>
+              <div class="compare-track">
+                <div class="compare-fill" style="width:{bar_width(f1, max_f1):.1f}%;background:{color}"></div>
+              </div>
+              <span class="compare-value">{pct(f1)}</span>
+            </div>"""
+        )
+
+    method_rows: list[str] = []
+    for m in methods:
+        color = METHOD_COLORS.get(m["name"], "#64748b")
         strict = m.get("strict")
         relaxed = m.get("relaxed")
         is_best = best and m["name"] == best["name"]
         err = m.get("error")
         if err:
             method_rows.append(
-                f"""
-                <tr class="row-error">
+                f"""<tr class="row-pending">
                   <td>
-                    <div class="method-name">
-                      <span class="dot" style="background:{color}"></span>
-                      {html.escape(m["display_name"])}
-                      {"<span class='badge badge-winner'>Best F1</span>" if is_best else ""}
-                      {"<span class='badge badge-llm'>LLM</span>" if m.get("uses_llm") else ""}
+                    <div class="method-cell">
+                      <span class="swatch" style="background:{color}"></span>
+                      <div>
+                        <div class="method-title">{html.escape(m["display_name"])}</div>
+                        <div class="method-note">{html.escape(err[:100])}</div>
+                      </div>
                     </div>
-                    <p class="error-note">{html.escape(err[:120])}…</p>
                   </td>
-                  <td colspan="6" class="muted">Not run — API key required</td>
+                  <td colspan="6" class="muted">Pending</td>
                 </tr>"""
             )
-            chart_bars.append(
-                f'<div class="chart-row muted"><span class="chart-label">{html.escape(m["display_name"][:28])}</span><div class="chart-track"><div class="chart-fill" style="width:0;background:{color}"></div></div><span class="chart-val">—</span></div>'
-            )
             continue
-
-        f1 = strict["f1"] if strict else 0
         method_rows.append(
-            f"""
-            <tr{" class='row-best'" if is_best else ""}>
+            f"""<tr{" class='row-best'" if is_best else ""}>
               <td>
-                <div class="method-name">
-                  <span class="dot" style="background:{color}"></span>
-                  {html.escape(m["display_name"])}
-                  {"<span class='badge badge-winner'>Best F1</span>" if is_best else ""}
-                  {"<span class='badge badge-llm'>LLM</span>" if m.get("uses_llm") else ""}
+                <div class="method-cell">
+                  <span class="swatch" style="background:{color}"></span>
+                  <div>
+                    <div class="method-title">{html.escape(m["display_name"])}</div>
+                    {"<span class='tag tag-best'>Leader</span>" if is_best else ""}
+                    {"<span class='tag tag-llm'>LLM</span>" if m.get("uses_llm") else ""}
+                  </div>
                 </div>
               </td>
               <td class="num">{pct(strict["precision"] if strict else None)}</td>
               <td class="num">{pct(strict["recall"] if strict else None)}</td>
-              <td class="num strong">{pct(strict["f1"] if strict else None)}</td>
+              <td class="num num-highlight">{pct(strict["f1"] if strict else None)}</td>
               <td class="num">{pct(relaxed["f1"] if relaxed else None)}</td>
               <td class="num">{m.get("latency_s", 0):.2f}s</td>
-              <td class="num">{m.get("llm_calls") or "—"}</td>
+              <td class="num">{m.get("llm_calls") if m.get("llm_calls") else "—"}</td>
             </tr>"""
         )
-        chart_bars.append(
-            f"""<div class="chart-row">
-              <span class="chart-label">{html.escape(m["display_name"][:28])}</span>
-              <div class="chart-track"><div class="chart-fill" style="width:{bar_width(f1, max_f1):.1f}%;background:{color}"></div></div>
-              <span class="chart-val">{pct(f1)}</span>
+
+    takeaway_html = "".join(
+        f"""<li class="takeaway">
+          <p class="takeaway-title">{html.escape(title)}</p>
+          <p class="takeaway-body">{html.escape(body)}</p>
+        </li>"""
+        for title, body in takeaways
+    )
+
+    wins = comparison.get("sentence_wins") or {}
+    h2h_bars = ""
+    if wins:
+        max_wins = max(wins.values()) if wins else 1
+        h2h_bars = "".join(
+            f"""<div class="h2h-row">
+              <span class="h2h-label">{html.escape(k)}</span>
+              <div class="h2h-track">
+                <div class="h2h-fill" style="width:{bar_width(v, max_wins):.1f}%"></div>
+              </div>
+              <span class="h2h-value">{v}</span>
             </div>"""
+            for k, v in sorted(wins.items(), key=lambda x: -x[1])
         )
 
-    example_cards = []
-    for ex in examples[:6]:
-        gold = span_set(ex.get("gold", []))
-        preds = ex.get("predictions", {})
-        pred_keys = [k for k in ("ontology", "nlp", "llm", "hybrid", "dynamic") if k in preds]
-        pred_html = ""
-        for key in pred_keys[:2]:
-            if preds.get(key):
-                pred_html += f"""<div class="pred-block"><span class="pred-label">{html.escape(key)}</span>
-                  <p class="sentence">{render_tokens(ex["tokens"], span_set(preds[key]), "span-pred")}</p></div>"""
-
-        example_cards.append(
-            f"""
-            <article class="example-card">
-              <header>Sentence #{ex["index"]}</header>
-              <p class="sentence gold-line">{render_tokens(ex["tokens"], gold, "span-gold")}</p>
-              <div class="legend"><span class="legend-gold">Gold entities</span></div>
-              {pred_html or '<p class="muted">No predictions for this example.</p>'}
-            </article>"""
-        )
-
-    llm_note = ""
-    llm_info = results.get("llm", {})
-    if llm_info.get("error"):
-        model_name = html.escape(str(llm_info.get("model", "gpt-4o-mini")))
-        llm_note = f"""
-        <div class="alert">
-          <strong>LLM methods pending:</strong> Set <code>OPENAI_API_KEY</code> in <code>.env</code>
-          and re-run to score LLM-Based, Hybrid, and Dynamic
-          (default model: {model_name}).
-        </div>"""
-
-    diag_rows = []
+    diag_rows: list[str] = []
     for m in methods:
         d = m.get("diagnostics")
         if not d or m.get("error"):
@@ -187,274 +275,621 @@ def build_html(data: dict) -> str:
               <td class="num">{err.get("spurious_fp", "—")}</td>
             </tr>"""
         )
+
+    example_cards: list[str] = []
+    for ex in examples[:3]:
+        gold = span_set(ex.get("gold", []))
+        preds = ex.get("predictions", {})
+        pred_keys = [k for k in ("ontology", "nlp", "llm", "hybrid", "dynamic") if k in preds]
+        pred_html = ""
+        for key in pred_keys[:2]:
+            if preds.get(key):
+                pred_html += f"""<div class="example-pred">
+                  <p class="example-pred-label">{html.escape(key)}</p>
+                  <p class="example-text">{render_tokens(ex["tokens"], span_set(preds[key]), "mark-pred")}</p>
+                </div>"""
+
+        example_cards.append(
+            f"""<article class="example">
+              <p class="example-id">Sentence {ex["index"]}</p>
+              <p class="example-label">Gold numeric spans</p>
+              <p class="example-text">{render_tokens(ex["tokens"], gold, "mark-gold")}</p>
+              {pred_html or '<p class="muted">No predictions recorded.</p>'}
+            </article>"""
+        )
+
+    best_name = html.escape(best["display_name"]) if best else "—"
+    best_f1 = pct(best["strict"]["f1"]) if best and best.get("strict") else "—"
+    best_recall = pct(best["strict"]["recall"]) if best and best.get("strict") else "—"
+
+    llm_alert = ""
+    pending_count = sum(1 for m in methods if m.get("error"))
+    if pending_count:
+        model_name = html.escape(str(llm_info.get("model", "gpt-4o-mini")))
+        llm_alert = f"""
+        <aside class="notice" role="note">
+          <p class="notice-title">{pending_count} method(s) not scored in this run</p>
+          <p class="notice-body">
+            Configure <code>OPENAI_API_KEY</code> in <code>.env</code> and re-run the benchmark
+            to score LLM-based extractors (default model: {model_name}).
+          </p>
+        </aside>"""
+
     diag_section = ""
     if diag_rows:
         diag_section = f"""
-    <section>
-      <h2>Extended evaluation (protocol v2)</h2>
-      <p class="muted" style="margin-bottom:16px">Partial F1 uses IoU ≥ 0.5. Macro F1 averages per-sentence strict F1. Bootstrap CI resamples sentences.</p>
-      <div class="panel" style="padding:0">
-        <table>
-          <thead><tr>
-            <th>Method</th><th>Partial F1</th><th>Macro strict F1</th><th>95% CI</th>
-            <th>Sentence hit rate</th><th>Boundary FP</th><th>Spurious FP</th>
-          </tr></thead>
-          <tbody>{"".join(diag_rows)}</tbody>
-        </table>
-      </div>
-    </section>"""
+        <details class="details-block">
+          <summary>Extended metrics (protocol v2)</summary>
+          <div class="table-wrap">
+            <table>
+              <thead><tr>
+                <th>Method</th><th>Partial F1</th><th>Macro strict F1</th><th>95% CI</th>
+                <th>Sentence hit rate</th><th>Boundary FP</th><th>Spurious FP</th>
+              </tr></thead>
+              <tbody>{"".join(diag_rows)}</tbody>
+            </table>
+          </div>
+          <p class="details-note">
+            Partial F1 uses IoU ≥ 0.5. Macro F1 averages per-sentence strict F1.
+            Bootstrap CI resamples sentences.
+          </p>
+        </details>"""
 
-    comparison = results.get("comparison") or {}
     h2h_section = ""
-    wins = comparison.get("sentence_wins") or {}
-    if wins:
-        chips = "".join(
-            f'<span class="pill"><strong>{html.escape(k)}</strong> {v} wins</span>'
-            for k, v in sorted(wins.items(), key=lambda x: -x[1])
-        )
+    if h2h_bars:
         h2h_section = f"""
-    <section>
-      <h2>Head-to-head (sentence-level)</h2>
-      <p class="muted" style="margin-bottom:12px">{comparison.get("sentences_with_gold", 0)} sentences with gold; {comparison.get("ties", 0)} ties.</p>
-      <div class="meta">{chips}</div>
-    </section>"""
+        <section class="section" id="head-to-head">
+          <div class="section-head">
+            <h2>Sentence-level wins</h2>
+            <p class="section-lead">
+              {comparison.get("sentences_with_gold", 0)} sentences with gold entities;
+              {comparison.get("ties", 0)} ties on strict F1.
+            </p>
+          </div>
+          <div class="panel h2h-panel">{h2h_bars}</div>
+        </section>"""
 
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FiNER-139 Benchmark Report — RecRAG</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <title>FiNER-139 Benchmark — RecRAG Research</title>
   <style>
     :root {{
-      --bg: #0b0f1a;
-      --surface: #121826;
-      --surface2: #1a2234;
-      --border: rgba(148, 163, 184, 0.14);
-      --text: #e8edf7;
-      --muted: #94a3b8;
-      --accent: #38bdf8;
-      --gold: #fbbf24;
-      --green: #34d399;
-      --pink: #f472b6;
-      --radius: 14px;
-      --shadow: 0 24px 80px rgba(0,0,0,.45);
+      --canvas: #f8fafc;
+      --surface: #ffffff;
+      --ink: #0f172a;
+      --muted: #475569;
+      --border: #e2e8f0;
+      --accent: #2563eb;
+      --accent-soft: #eff6ff;
+      --success: #059669;
+      --success-soft: #ecfdf5;
+      --warning-soft: #fffbeb;
+      --warning-ink: #92400e;
+      --radius: 10px;
+      --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      --mono: ui-monospace, "JetBrains Mono", "SF Mono", Consolas, monospace;
     }}
-    * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+
+    *, *::before, *::after {{ box-sizing: border-box; }}
+    html {{ scroll-behavior: smooth; }}
     body {{
-      font-family: "DM Sans", system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.55;
-      min-height: 100vh;
+      margin: 0;
+      font-family: var(--font);
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--ink);
+      background: var(--canvas);
     }}
-    .bg-grid {{
-      position: fixed; inset: 0; z-index: 0; pointer-events: none;
-      background-image:
-        linear-gradient(rgba(56,189,248,.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(56,189,248,.04) 1px, transparent 1px);
-      background-size: 48px 48px;
-      mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black, transparent);
+
+    @media (prefers-reduced-motion: reduce) {{
+      html {{ scroll-behavior: auto; }}
+      .compare-fill, .h2h-fill {{ transition: none !important; }}
     }}
-    .wrap {{ position: relative; z-index: 1; max-width: 1120px; margin: 0 auto; padding: 48px 24px 80px; }}
-    header.hero {{
-      padding: 40px;
-      border-radius: calc(var(--radius) + 4px);
-      background: linear-gradient(135deg, #162033 0%, #0f172a 55%, #1e1b4b 100%);
+
+    .page {{
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }}
+
+    .doc-header {{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding-bottom: 1.75rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2rem;
+    }}
+
+    .doc-kicker {{
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--muted);
+      margin: 0 0 0.35rem;
+    }}
+
+    h1 {{
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      text-wrap: balance;
+      margin: 0;
+    }}
+
+    .doc-meta {{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      margin-top: 0.85rem;
+      font-size: 0.875rem;
+      color: var(--muted);
+    }}
+
+    .doc-meta span {{ white-space: nowrap; }}
+
+    .nav {{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+    }}
+
+    .nav a {{
+      color: var(--muted);
+      text-decoration: none;
+      padding: 0.35rem 0.75rem;
       border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-      margin-bottom: 32px;
+      border-radius: 999px;
+      background: var(--surface);
     }}
-    .eyebrow {{
-      font-size: .75rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
-      color: var(--accent); margin-bottom: 12px;
+
+    .nav a:hover {{ color: var(--accent); border-color: #bfdbfe; }}
+
+    .notice {{
+      background: var(--warning-soft);
+      border: 1px solid #fde68a;
+      border-radius: var(--radius);
+      padding: 1rem 1.15rem;
+      margin-bottom: 1.5rem;
     }}
-    h1 {{ font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 700; letter-spacing: -.03em; line-height: 1.15; }}
-    .subtitle {{ margin-top: 14px; color: var(--muted); font-size: 1.05rem; max-width: 62ch; }}
-    .meta {{ display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }}
-    .pill {{
-      font-size: .8rem; padding: 6px 12px; border-radius: 999px;
-      background: rgba(255,255,255,.06); border: 1px solid var(--border); color: #cbd5e1;
+
+    .notice-title {{ font-weight: 600; color: var(--warning-ink); margin: 0 0 0.25rem; }}
+    .notice-body {{ margin: 0; color: #78350f; font-size: 0.9375rem; }}
+
+    .summary-grid {{
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 1.25rem;
+      margin-bottom: 2rem;
     }}
-    .pill strong {{ color: #fff; font-weight: 600; }}
-    .grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 32px; }}
-    .stat {{
-      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
-      padding: 22px 20px;
+
+    @media (max-width: 820px) {{
+      .summary-grid {{ grid-template-columns: 1fr; }}
     }}
-    .stat-label {{ font-size: .78rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }}
-    .stat-value {{ font-size: 2rem; font-weight: 700; margin-top: 6px; letter-spacing: -.03em; }}
-    .stat-value small {{ font-size: 1rem; color: var(--muted); font-weight: 500; }}
-    .stat.accent {{ border-color: rgba(52,211,153,.35); background: linear-gradient(180deg, rgba(16,185,129,.12), var(--surface)); }}
-    section {{ margin-bottom: 36px; }}
-    h2 {{ font-size: 1.25rem; font-weight: 600; margin-bottom: 16px; letter-spacing: -.02em; }}
+
     .panel {{
-      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
-      padding: 24px; overflow: hidden;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.35rem;
     }}
-    table {{ width: 100%; border-collapse: collapse; font-size: .92rem; }}
+
+    .recommendation {{
+      background: var(--success-soft);
+      border-color: #a7f3d0;
+    }}
+
+    .recommendation-label {{
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--success);
+      margin: 0 0 0.35rem;
+    }}
+
+    .recommendation-title {{
+      font-size: 1.125rem;
+      font-weight: 700;
+      margin: 0 0 0.5rem;
+      text-wrap: balance;
+    }}
+
+    .recommendation-stats {{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      margin-top: 0.75rem;
+      font-size: 0.9375rem;
+    }}
+
+    .recommendation-stats dt {{
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin: 0;
+    }}
+
+    .recommendation-stats dd {{
+      margin: 0.1rem 0 0;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }}
+
+    .takeaway-list {{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 1rem;
+    }}
+
+    .takeaway-title {{
+      font-weight: 600;
+      margin: 0 0 0.2rem;
+      font-size: 0.9375rem;
+    }}
+
+    .takeaway-body {{
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.875rem;
+      text-wrap: pretty;
+    }}
+
+    .section {{ margin-bottom: 2.25rem; }}
+
+    .section-head {{ margin-bottom: 0.85rem; }}
+
+    h2 {{
+      font-size: 1.125rem;
+      font-weight: 700;
+      margin: 0 0 0.25rem;
+      letter-spacing: -0.01em;
+    }}
+
+    .section-lead {{
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.9375rem;
+      max-width: 65ch;
+      text-wrap: pretty;
+    }}
+
+    .compare-row {{
+      display: grid;
+      grid-template-columns: minmax(180px, 1fr) 2fr auto;
+      gap: 0.75rem 1rem;
+      align-items: center;
+      padding: 0.65rem 0;
+      border-bottom: 1px solid var(--border);
+    }}
+
+    .compare-row:last-child {{ border-bottom: none; }}
+    .compare-row--best {{ background: var(--success-soft); margin: 0 -1.35rem; padding-left: 1.35rem; padding-right: 1.35rem; }}
+    .compare-row--pending {{ opacity: 0.72; }}
+
+    @media (max-width: 640px) {{
+      .compare-row {{ grid-template-columns: 1fr; }}
+    }}
+
+    .compare-meta {{ display: flex; align-items: center; gap: 0.5rem; min-width: 0; }}
+    .compare-name {{ font-size: 0.9375rem; font-weight: 500; }}
+    .compare-track {{
+      height: 0.65rem;
+      background: #f1f5f9;
+      border-radius: 999px;
+      overflow: hidden;
+    }}
+    .compare-fill {{
+      height: 100%;
+      border-radius: 999px;
+      transition: width 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }}
+    .compare-value {{
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      font-size: 0.9375rem;
+      min-width: 3.5rem;
+      text-align: right;
+    }}
+
+    .swatch {{
+      width: 0.55rem;
+      height: 0.55rem;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }}
+
+    .tag {{
+      display: inline-block;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      padding: 0.1rem 0.45rem;
+      border-radius: 999px;
+      margin-left: 0.35rem;
+    }}
+
+    .tag-best {{ background: #fef3c7; color: #92400e; }}
+    .tag-llm {{ background: var(--accent-soft); color: var(--accent); }}
+
+    .table-wrap {{
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }}
+
+    table {{
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+    }}
+
     th {{
-      text-align: left; font-size: .72rem; text-transform: uppercase; letter-spacing: .08em;
-      color: var(--muted); padding: 12px 14px; border-bottom: 1px solid var(--border);
+      text-align: left;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--muted);
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border);
+      background: #f8fafc;
+      white-space: nowrap;
     }}
-    td {{ padding: 16px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }}
+
+    th:not(:first-child), td.num {{ text-align: right; }}
+
+    td {{
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }}
+
     tr:last-child td {{ border-bottom: none; }}
-    tr.row-best {{ background: rgba(52,211,153,.06); }}
-    tr.row-error {{ background: rgba(244,114,182,.04); }}
-    .method-name {{ display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-weight: 600; }}
-    .dot {{ width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }}
-    .badge {{
-      font-size: .65rem; font-weight: 600; padding: 2px 8px; border-radius: 999px; text-transform: uppercase; letter-spacing: .06em;
-    }}
-    .badge-winner {{ background: rgba(251,191,36,.18); color: var(--gold); border: 1px solid rgba(251,191,36,.35); }}
-    .badge-llm {{ background: rgba(99,102,241,.15); color: #a5b4fc; border: 1px solid rgba(99,102,241,.3); }}
-    .num {{ font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }}
-    .num.strong {{ color: var(--green); font-weight: 700; }}
+    tr.row-best {{ background: var(--success-soft); }}
+    tr.row-pending {{ background: #fafafa; }}
+
+    .method-cell {{ display: flex; gap: 0.65rem; align-items: flex-start; }}
+    .method-title {{ font-weight: 600; }}
+    .method-note {{ font-size: 0.8125rem; color: #b45309; margin-top: 0.15rem; }}
+    .num {{ font-variant-numeric: tabular-nums; }}
+    .num-highlight {{ font-weight: 700; color: var(--success); }}
     .muted {{ color: var(--muted); }}
-    .error-note {{ font-size: .78rem; color: #fda4af; margin-top: 6px; font-weight: 400; }}
-    .chart-row {{ display: grid; grid-template-columns: 180px 1fr 56px; gap: 12px; align-items: center; margin-bottom: 12px; }}
-    .chart-label {{ font-size: .85rem; color: #cbd5e1; }}
-    .chart-track {{ height: 10px; background: var(--surface2); border-radius: 999px; overflow: hidden; }}
-    .chart-fill {{ height: 100%; border-radius: 999px; transition: width .6s ease; }}
-    .chart-val {{ font-size: .85rem; font-weight: 600; text-align: right; font-variant-numeric: tabular-nums; }}
-    .two-col {{ display: grid; grid-template-columns: 1.1fr .9fr; gap: 20px; }}
-    @media (max-width: 860px) {{ .two-col {{ grid-template-columns: 1fr; }} .chart-row {{ grid-template-columns: 1fr; }} }}
-    .findings {{ display: grid; gap: 12px; }}
-    .finding {{
-      padding: 16px 18px; border-radius: 12px; background: var(--surface2);
-      border-left: 3px solid var(--accent);
+
+    .h2h-panel {{ padding-top: 0.5rem; padding-bottom: 0.5rem; }}
+    .h2h-row {{
+      display: grid;
+      grid-template-columns: 7rem 1fr 2.5rem;
+      gap: 0.75rem;
+      align-items: center;
+      padding: 0.45rem 0;
     }}
-    .finding strong {{ display: block; margin-bottom: 4px; }}
-    .finding p {{ color: var(--muted); font-size: .92rem; }}
-    .alert {{
-      padding: 14px 18px; border-radius: 12px; margin-bottom: 24px;
-      background: rgba(251,191,36,.08); border: 1px solid rgba(251,191,36,.25); color: #fde68a; font-size: .92rem;
+    .h2h-label {{ font-size: 0.875rem; font-weight: 500; text-transform: capitalize; }}
+    .h2h-track {{ height: 0.5rem; background: #f1f5f9; border-radius: 999px; overflow: hidden; }}
+    .h2h-fill {{ height: 100%; background: var(--accent); border-radius: 999px; }}
+    .h2h-value {{ font-weight: 700; font-variant-numeric: tabular-nums; text-align: right; }}
+
+    .examples {{ display: grid; gap: 1rem; }}
+
+    .example {{
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.15rem;
     }}
-    code {{ font-family: "JetBrains Mono", monospace; font-size: .85em; background: rgba(0,0,0,.25); padding: 2px 6px; border-radius: 4px; }}
-    .examples {{ display: grid; gap: 16px; }}
-    .example-card {{
-      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px;
+
+    .example-id {{ font-size: 0.8125rem; font-weight: 600; color: var(--muted); margin: 0 0 0.65rem; }}
+    .example-label, .example-pred-label {{
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin: 0 0 0.35rem;
     }}
-    .example-card header {{ font-size: .75rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 10px; }}
-    .sentence {{ font-family: "JetBrains Mono", monospace; font-size: .78rem; line-height: 1.7; word-break: break-word; }}
-    .span-gold {{ background: rgba(251,191,36,.22); color: #fde68a; padding: 1px 3px; border-radius: 4px; }}
-    .span-pred {{ background: rgba(52,211,153,.18); color: #6ee7b7; padding: 1px 3px; border-radius: 4px; }}
-    .legend {{ margin: 8px 0 14px; font-size: .75rem; }}
-    .legend-gold::before {{ content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 3px; background: rgba(251,191,36,.5); margin-right: 6px; vertical-align: middle; }}
-    .pred-block {{ margin-top: 10px; }}
-    .pred-label {{ font-size: .7rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }}
-    footer {{ margin-top: 48px; text-align: center; color: var(--muted); font-size: .82rem; }}
+    .example-pred {{ margin-top: 0.85rem; padding-top: 0.85rem; border-top: 1px dashed var(--border); }}
+    .example-text {{
+      font-family: var(--mono);
+      font-size: 0.8125rem;
+      line-height: 1.65;
+      margin: 0;
+      word-break: break-word;
+      text-wrap: pretty;
+    }}
+
+    mark {{
+      border-radius: 3px;
+      padding: 0 0.15em;
+      font: inherit;
+      color: inherit;
+    }}
+    .mark-gold {{ background: #fef3c7; }}
+    .mark-pred {{ background: #d1fae5; }}
+
+    .details-block {{
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      padding: 0.75rem 1rem 1rem;
+    }}
+
+    .details-block summary {{
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      padding: 0.35rem 0;
+    }}
+
+    .details-note {{
+      margin: 0.75rem 0 0;
+      font-size: 0.8125rem;
+      color: var(--muted);
+    }}
+
+    .context-grid {{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }}
+
+    .context-item h3 {{
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin: 0 0 0.35rem;
+    }}
+
+    .context-item p {{
+      margin: 0;
+      font-size: 0.875rem;
+      color: var(--muted);
+      text-wrap: pretty;
+    }}
+
+    code {{
+      font-family: var(--mono);
+      font-size: 0.85em;
+      background: #f1f5f9;
+      padding: 0.1em 0.35em;
+      border-radius: 4px;
+    }}
+
+    .doc-footer {{
+      margin-top: 3rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.8125rem;
+      color: var(--muted);
+      text-align: center;
+    }}
+
+    .doc-footer a {{ color: var(--accent); }}
+
+    @media print {{
+      body {{ background: #fff; }}
+      .nav, .notice {{ display: none; }}
+      .page {{ max-width: none; padding: 0; }}
+      .section {{ break-inside: avoid; }}
+      .compare-fill, .h2h-fill {{ print-color-adjust: exact; -webkit-print-color-adjust: exact; }}
+    }}
   </style>
 </head>
 <body>
-  <div class="bg-grid"></div>
-  <div class="wrap">
-    <header class="hero">
-      <div class="eyebrow">RecRAG Research · Graph Construction</div>
-      <h1>FiNER-139 Entity Recognition Benchmark</h1>
-      <p class="subtitle">
-        Comparing five graph-construction methods on numeric financial entity detection
-        in SEC-style filings. Type-agnostic span matching on the validation split.
-      </p>
-      <div class="meta">
-        <span class="pill"><strong>{dataset["num_sentences"]}</strong> sentences</span>
-        <span class="pill"><strong>{dataset["num_gold_entities"]}</strong> gold entities</span>
-        <span class="pill">split: <strong>{html.escape(dataset["split"])}</strong></span>
-        <span class="pill">seed: <strong>{params.get("seed", 42)}</strong></span>
-        <span class="pill">run: <strong>{html.escape(str(run_at)[:19])}</strong></span>
+  <main class="page">
+    <header class="doc-header">
+      <div>
+        <p class="doc-kicker">RecRAG research · Graph construction benchmark</p>
+        <h1>Which extraction method finds financial numerics best?</h1>
+        <div class="doc-meta">
+          <span>Run date: <strong>{run_date}</strong></span>
+          <span>Dataset: <strong>FiNER-139 ({split})</strong></span>
+          <span>Sample: <strong>{num_sentences} sentences</strong></span>
+          <span>Gold entities: <strong>{num_gold}</strong></span>
+          <span>Seed: <strong>{seed}</strong></span>
+        </div>
       </div>
+      <nav class="nav" aria-label="Report sections">
+        <a href="#summary">Summary</a>
+        <a href="#results">Results</a>
+        <a href="#metrics">Metrics</a>
+        <a href="#examples">Examples</a>
+        <a href="#context">Context</a>
+      </nav>
     </header>
 
-    {llm_note}
+    {llm_alert}
 
-    <div class="grid">
-      <div class="stat accent">
-        <div class="stat-label">Best strict F1</div>
-        <div class="stat-value">{pct(best["strict"]["f1"] if best else None)}</div>
-        <div class="stat-label" style="margin-top:8px;text-transform:none;letter-spacing:0">{html.escape(best["display_name"] if best else "—")}</div>
+    <section class="summary-grid" id="summary">
+      <div class="panel recommendation">
+        <p class="recommendation-label">Current leader (strict F1)</p>
+        <p class="recommendation-title">{best_name}</p>
+        <p class="section-lead">
+          Five graph-construction extractors were compared on numeric span detection
+          in SEC-style filing sentences. Strict F1 requires an exact token-boundary match.
+        </p>
+        <dl class="recommendation-stats">
+          <div><dt>Strict F1</dt><dd>{best_f1}</dd></div>
+          <div><dt>Recall</dt><dd>{best_recall}</dd></div>
+          <div><dt>Methods scored</dt><dd>{len(scored)} / {len(methods)}</dd></div>
+        </dl>
       </div>
-      <div class="stat">
-        <div class="stat-label">Top recall</div>
-        <div class="stat-value">{pct(best["strict"]["recall"] if best else None)}</div>
-      </div>
-      <div class="stat">
-        <div class="stat-label">Dataset</div>
-        <div class="stat-value" style="font-size:1.1rem">{html.escape(dataset["id"].split("/")[-1])}</div>
-      </div>
-      <div class="stat">
-        <div class="stat-label">Methods scored</div>
-        <div class="stat-value">{len(scored)}<small> / {len(methods)}</small></div>
-      </div>
-    </div>
-
-    <section class="two-col">
-      <div>
-        <h2>Results — strict token-span F1</h2>
-        <div class="panel">
-          {"".join(chart_bars)}
-        </div>
-      </div>
-      <div>
-        <h2>Key findings</h2>
-        <div class="findings">
-          <div class="finding" style="border-color: var(--green)">
-            <strong>Ontology leads on strict F1 ({pct(best["strict"]["f1"] if best else None)})</strong>
-            <p>Schema-driven gazetteer + numeric regex achieves {pct(best["strict"]["recall"] if best else None)} recall with no LLM cost — strong baseline for graph construction.</p>
-          </div>
-          <div class="finding">
-            <strong>spaCy over-predicts numerics</strong>
-            <p>Relaxed F1 (55%) ≫ strict F1 (9.8%): generic NER finds many numeric spans but with poor boundary precision on financial text.</p>
-          </div>
-          <div class="finding" style="border-color: var(--pink)">
-            <strong>LLM methods await API key</strong>
-            <p>Hybrid and Dynamic are designed to combine schema guidance with LLM flexibility — re-run with OpenAI to complete the comparison.</p>
-          </div>
-        </div>
+      <div class="panel">
+        <h2 style="margin-bottom:0.75rem">Talking points</h2>
+        <ul class="takeaway-list">{takeaway_html}</ul>
       </div>
     </section>
 
-    <section>
-      <h2>Full metrics</h2>
-      <div class="panel" style="padding:0">
+    <section class="section" id="results">
+      <div class="section-head">
+        <h2>Strict F1 by method</h2>
+        <p class="section-lead">Primary ranking metric. Higher is better; exact span match required.</p>
+      </div>
+      <div class="panel">{"".join(chart_rows)}</div>
+    </section>
+
+    <section class="section" id="metrics">
+      <div class="section-head">
+        <h2>Full comparison</h2>
+        <p class="section-lead">Precision, recall, relaxed F1 (any token overlap), latency, and LLM usage.</p>
+      </div>
+      <div class="table-wrap">
         <table>
           <thead>
             <tr>
               <th>Method</th>
-              <th style="text-align:right">Precision</th>
-              <th style="text-align:right">Recall</th>
-              <th style="text-align:right">F1 strict</th>
-              <th style="text-align:right">F1 relaxed</th>
-              <th style="text-align:right">Latency</th>
-              <th style="text-align:right">LLM calls</th>
+              <th>Precision</th>
+              <th>Recall</th>
+              <th>F1 strict</th>
+              <th>F1 relaxed</th>
+              <th>Latency</th>
+              <th>LLM calls</th>
             </tr>
           </thead>
-          <tbody>
-            {"".join(method_rows)}
-          </tbody>
+          <tbody>{"".join(method_rows)}</tbody>
         </table>
       </div>
+      {diag_section}
     </section>
-
-    {diag_section}
 
     {h2h_section}
 
-    <section>
-      <h2>Example predictions</h2>
-      <p class="muted" style="margin-bottom:16px">Gold numeric spans vs top method predictions on sample sentences.</p>
-      <div class="examples">
-        {"".join(example_cards)}
+    <section class="section" id="examples">
+      <div class="section-head">
+        <h2>Sample predictions</h2>
+        <p class="section-lead">
+          Gold numeric spans (amber) vs method predictions (green). Useful for explaining
+          boundary errors in the meeting.
+        </p>
+      </div>
+      <div class="examples">{"".join(example_cards)}</div>
+    </section>
+
+    <section class="section" id="context">
+      <div class="section-head">
+        <h2>What we measured</h2>
+      </div>
+      <div class="context-grid">
+        <div class="context-item panel">
+          <h3>Task</h3>
+          <p>Detect numeric entity spans in financial filing sentences. We score span location only, not the 139 XBRL type labels.</p>
+        </div>
+        <div class="context-item panel">
+          <h3>Fair comparison</h3>
+          <p>All methods are filtered to numeric predictions before scoring, so open-ended extractors are not penalized for non-numeric entities FiNER never annotates.</p>
+        </div>
+        <div class="context-item panel">
+          <h3>Next step</h3>
+          <p>Run all five methods with an LLM API key to see whether schema-guided Hybrid beats the ontology baseline on precision while keeping recall.</p>
+        </div>
       </div>
     </section>
 
-    <footer>
-      Generated by RecRAG · FiNER-139 graph-construction experiment ·
-      <a href="https://huggingface.co/datasets/nlpaueb/finer-139" style="color:var(--accent)">nlpaueb/finer-139</a>
+    <footer class="doc-footer">
+      RecRAG FiNER-139 experiment ·
+      <a href="https://huggingface.co/datasets/nlpaueb/finer-139">nlpaueb/finer-139</a>
     </footer>
-  </div>
+  </main>
 </body>
 </html>"""
 

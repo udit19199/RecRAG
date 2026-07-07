@@ -3,7 +3,7 @@
 Live-runs the benchmark as a background task with in-memory run tracking and
 polling. No DB or disk persistence (results reset on restart) - acceptable for
 the small internal research audience. See src/experiments/finer139 for compute
-and docs/research/findings/finer139-graph-construction.md for methodology.
+and docs/research/graphrag/finer139/methodology.md for protocol.
 """
 
 from __future__ import annotations
