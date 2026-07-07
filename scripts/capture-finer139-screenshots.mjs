@@ -16,7 +16,7 @@ async function main() {
 	const browser = await chromium.launch({ headless: true });
 	const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
 
-	await page.goto(`${BASE_URL}/finer139`, { waitUntil: "networkidle" });
+	await page.goto(`${BASE_URL}/graphrag?tab=benchmark`, { waitUntil: "networkidle" });
 	await page.waitForTimeout(1500);
 	await page.screenshot({
 		path: path.join(OUT_DIR, "01-finer139-config.png"),
@@ -57,9 +57,9 @@ async function main() {
 		});
 	}
 
-	// Sidebar nav showing FiNER-139 tab
+	// Sidebar nav showing GraphRAG tab
 	await page.setViewportSize({ width: 1440, height: 900 });
-	await page.goto(`${BASE_URL}/finer139`, { waitUntil: "networkidle" });
+	await page.goto(`${BASE_URL}/graphrag?tab=benchmark`, { waitUntil: "networkidle" });
 	await page.waitForTimeout(500);
 	await page.screenshot({
 		path: path.join(OUT_DIR, "04-finer139-nav.png"),

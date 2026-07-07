@@ -32,7 +32,7 @@ FiNER-139 dataset.
 | **LLM-Based** | Open-ended prompt → JSON entity list → span alignment | Defaults to OpenAI `gpt-4o-mini` (override in tab) |
 | **NLP / OpenIE** | spaCy `en_core_web_sm`, labels MONEY/PERCENT/CARDINAL/QUANTITY/DATE/ORDINAL | Deterministic, offline |
 | **Ontology / Schema** | XBRL keyword gazetteer (CamelCase-split concept names) + numeric regex when keywords co-occur in sentence | Deterministic |
-| **Hybrid** | LLM prompted with full 139 concept list + numeric post-filter | Schema-guided LLM |
+| **Hybrid Construction** | LLM prompted with full 139 concept list + numeric post-filter | Schema-guided LLM (not retrieval hybrid — see [graphrag-retrieval-patterns.md](./graphrag-retrieval-patterns.md)) |
 | **Dynamic / Incremental** | Memory-augmented wrapper over Hybrid; learns context words from base hits and flags nearby numerics | Reuses Hybrid LLM calls when both selected |
 
 ## Metrics (protocol v2)
@@ -74,7 +74,7 @@ Also reported: relaxed micro-F1, mean span IoU on matched pairs, latency, LLM ca
 
 - **Engine:** `src/experiments/finer139/` (pure functions, lazy heavy imports)
 - **API:** `POST/GET /experiments/finer139/runs` on orchestrator `:8002`
-- **UI:** `frontend/app/(main)/finer139/` + `features/finer139/`
+- **UI:** `frontend/app/(main)/graphrag/` (`?tab=benchmark`) + `features/finer139/`
 - **Persistence:** in-memory only (results lost on orchestrator restart)
 
 ## Related work
@@ -119,8 +119,8 @@ Live benchmark on validation sample (n=100, seed=42, 160 gold entities) — 2026
 |--------|------------|------------|-------------|--------------|---------|
 | Ontology / Schema-Driven | 32.0% | 91.9% | **47.5%** | 47.5% | 0.0s |
 | NLP / OpenIE (spaCy) | 7.1% | 15.6% | 9.8% | 55.3% | 0.9s |
-| LLM-Based | — | — | — | — | requires `OPENAI_API_KEY` |
-| Hybrid | — | — | — | — | requires `OPENAI_API_KEY` |
-| Dynamic | — | — | — | — | requires `OPENAI_API_KEY` |
+| LLM-Based | — | — | — | — | requires provider key |
+| Hybrid Construction | — | — | — | — | requires provider key |
+| Dynamic | — | — | — | — | requires provider key |
 
 Stakeholder summary: [finer139-showcase-results.md](./finer139-showcase-results.md). Raw JSON: `finer139-e2e-offline.json`, `finer139-e2e-full.json`.

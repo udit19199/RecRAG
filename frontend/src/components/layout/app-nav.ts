@@ -1,8 +1,8 @@
 import {
 	IconArrowsLeftRight,
-	IconChartBar,
 	IconHistory,
 	IconSparkles,
+	IconTopologyStar3,
 } from "@tabler/icons-react";
 import type { ComponentType } from "react";
 
@@ -20,9 +20,9 @@ export const APP_NAV: NavItem[] = [
 		icon: IconArrowsLeftRight,
 	},
 	{
-		href: "/finer139",
-		label: "FiNER-139",
-		icon: IconChartBar,
+		href: "/graphrag",
+		label: "GraphRAG",
+		icon: IconTopologyStar3,
 	},
 	{
 		href: "/generate",

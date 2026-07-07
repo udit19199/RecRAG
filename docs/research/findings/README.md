@@ -4,10 +4,10 @@ Artifacts from the GraphRAG analysis follow-up work in RecRAG.
 
 ## Action items
 
-| # | Item | Status | Document |
-|---|------|--------|----------|
-| 1 | Retrieval details: hybrid + community graph; PathRAG vs neighborhood | **Done** | [graphrag-retrieval-patterns.md](./graphrag-retrieval-patterns.md) |
-| 2 | FiNER-139 dataset: best graph-construction method for entity recognition | **Done** (2/5 methods scored; LLM pending API key) | [finer139-method-ranking.md](./finer139-method-ranking.md) |
+| # | Item | Status | Document / UI |
+|---|------|--------|---------------|
+| 1 | Retrieval details: hybrid + community graph; PathRAG vs neighborhood | **Done** | [graphrag-retrieval-patterns.md](./graphrag-retrieval-patterns.md) · UI: `/graphrag` |
+| 2 | FiNER-139 dataset: best graph-construction method for entity recognition | **Done** (offline methods scored; LLM methods runnable with provider key) | [finer139-method-ranking.md](./finer139-method-ranking.md) · UI: `/graphrag?tab=benchmark` |
 
 ## FiNER-139 experiment
 
@@ -20,6 +20,7 @@ Artifacts from the GraphRAG analysis follow-up work in RecRAG.
 
 ## Code & UI
 
+- GraphRAG research hub: `frontend/app/(main)/graphrag/` (`/graphrag` — retrieval tab; `/graphrag?tab=benchmark` — FiNER-139)
+- `/finer139` redirects to the benchmark tab
 - Engine: `src/experiments/finer139/`
 - API: `app/orchestrator/experiments/router.py`
-- UI: `frontend/app/(main)/finer139/`

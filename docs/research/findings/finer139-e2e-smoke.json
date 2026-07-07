@@ -7,7 +7,7 @@
     "methods": ["nlp", "ontology"]
   },
   "api_flow": "POST /experiments/finer139/runs -> poll GET until complete",
-  "ui_flow": "Playwright on localhost:3000/finer139 — method toggles, run, results table",
+  "ui_flow": "Playwright on localhost:3000/graphrag?tab=benchmark — method toggles, run, results table",
   "results": {
     "dataset": {
       "num_sentences": 100,

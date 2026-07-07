@@ -6,6 +6,8 @@ explains how graph-based retrieval differs from flat vector RAG, with emphasis o
 between **PathRAG** and **neighborhood retrieval** — including worked examples in
 the financial-filing domain (aligned with FiNER-139).
 
+**Interactive UI:** `/graphrag` in the frontend (nav: GraphRAG).
+
 > **Scope:** Design reference for future `RagArchitecture.GRAPH` work (D15). RecRAG
 > production retrieval today is dense vector search only (`src/pipelines/retrieval.py`).
 
@@ -195,8 +197,9 @@ Prompt contains **2 hops on-topic**, not 45 triples.
 ## 5. Hybrid retrieval
 
 **Hybrid** here means combining **vector (semantic) retrieval** with **graph
-(structural) retrieval** — not to be confused with FiNER-139’s “Hybrid” graph-
-**construction** method (schema-guided LLM extraction).
+(structural) retrieval** — not to be confused with FiNER-139’s **Hybrid Construction**
+graph-construction method (schema-guided LLM extraction). See `/graphrag` UI and
+[finer139-graph-construction.md](./finer139-graph-construction.md).
 
 ### Two practical strategies (RAG vs GraphRAG survey, 2025)
 

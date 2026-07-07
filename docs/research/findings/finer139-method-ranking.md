@@ -19,7 +19,7 @@ Gold labels are **numeric tokens** tagged with XBRL concept types; we score
 | Extended (v2) | Partial F1 (IoU≥0.5), macro F1, bootstrap CI, error taxonomy, head-to-head |
 | Secondary | Relaxed F1, concept-stratified recall, latency, LLM calls |
 | Engine | `src/experiments/finer139/runner.py` |
-| UI | `/finer139` tab on orchestrator `:8002` |
+| UI | `/graphrag?tab=benchmark` on orchestrator `:8002` |
 | Latest artifact | `finer139-benchmark-latest.json` |
 | HTML report | [finer139-benchmark-report.html](./finer139-benchmark-report.html) |
 
@@ -43,17 +43,16 @@ Gold labels are **numeric tokens** tagged with XBRL concept types; we score
 
 Ontology wins on **74%** of gold sentences outright; NLP only leads on 11.
 
-### LLM methods (pending `OPENAI_API_KEY`)
+### LLM methods (not scored in 2026-07-06 offline run)
 
 | Method | Status | Expected role |
 |--------|--------|---------------|
 | LLM-Based (open-ended) | Not scored | Flexible but may over-extract non-numeric entities |
-| Hybrid (Schema-Guided LLM) | Not scored | Combines 139-concept schema + LLM — candidate to beat ontology on precision |
+| Hybrid Construction (Schema-Guided LLM) | Not scored | Combines 139-concept schema + LLM — candidate to beat ontology on precision |
 | Dynamic / Incremental | Not scored | Memory-augmented Hybrid — may improve recall on streaming filings |
 
 **Provisional winner:** **Ontology / Schema-Driven** is the best method **among all
-methods run to date**. Final ranking across all five requires re-running with
-`OPENAI_API_KEY` set (default: OpenAI `gpt-4o-mini`).
+methods run to date**. Final ranking across all five requires re-running the benchmark at `/graphrag?tab=benchmark` with a provider API key configured (default: OpenAI `gpt-4o-mini`).
 
 ---
 

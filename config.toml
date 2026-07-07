@@ -4,15 +4,14 @@
 # Environment variable substitution: ${VAR:-default}
 
 [embedding]
-provider = "lmstudio"
-model = "text-embedding-nomic-embed-text-v1.5"
-base_url = "http://127.0.0.1:1234/v1"
-dimensions = 768
+provider = "openai"
+model = "text-embedding-3-small"
+dimensions = 1536
 timeout = 120
 
 [llm]
-provider = "gemini"
-model = "gemini-2.0-flash"
+provider = "openai"
+model = "gpt-4o-mini"
 timeout = 120
 
 [ingestion]
@@ -21,8 +20,8 @@ chunk_size = 1024
 chunk_overlap = 50
 
 [vision]
-provider = "gemini"
-model = "gemini-2.0-flash"
+provider = "openai"
+model = "gpt-4o-mini"
 timeout = 180
 
 [retrieval]

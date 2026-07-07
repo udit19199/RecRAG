@@ -80,7 +80,7 @@ def _workspace_id(auth: AuthContext, db: Session) -> uuid.UUID:
 
 @app.get("/health")
 async def health() -> dict[str, str]:
-    return {"status": "ok", "service": "orchestrator", "auth": auth_enabled()}
+    return {"status": "ok", "service": "orchestrator", "auth": str(auth_enabled()).lower()}
 
 
 @app.post("/auth/login", response_model=LoginResponse)

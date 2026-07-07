@@ -40,7 +40,6 @@ class TestOpenAILLM:
             model="gpt-4o-mini",
             messages=messages,
             temperature=0.7,
-            max_tokens=None,
         )
 
     def test_supports_streaming_true(self) -> None:

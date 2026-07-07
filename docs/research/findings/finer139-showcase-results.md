@@ -14,7 +14,7 @@ We compared five graph-construction entity-recognition approaches on real financ
 Full ranking and recommendations: [finer139-method-ranking.md](./finer139-method-ranking.md).
 HTML report: [finer139-benchmark-report.html](./finer139-benchmark-report.html).
 
-**NLP / OpenIE (spaCy)** finds many overlapping spans (relaxed F1 **55.3%**) but poor strict precision (**7.1%**). LLM-based methods require `OPENAI_API_KEY` to complete the 5-way comparison (default: OpenAI `gpt-4o-mini`).
+**NLP / OpenIE (spaCy)** finds many overlapping spans (relaxed F1 **55.3%**) but poor strict precision (**7.1%**). LLM-based methods (LLM, Hybrid Construction, Dynamic) run when a provider API key is configured in `.env` (default: OpenAI `gpt-4o-mini`).
 
 ## Results table (live run, 2026-07-06)
 
@@ -22,22 +22,22 @@ HTML report: [finer139-benchmark-report.html](./finer139-benchmark-report.html).
 |--------|------------|------------|-------------|--------------|---------|-----------|
 | **Ontology / Schema-Driven** | **32.0%** | **91.9%** | **47.5%** | 47.5% | 0.0s | — |
 | NLP / OpenIE (spaCy) | 7.1% | 15.6% | 9.8% | **55.3%** | 0.9s | — |
-| LLM-Based (open-ended) | — | — | — | — | — | needs `OPENAI_API_KEY` |
-| Hybrid (Schema-Guided LLM) | — | — | — | — | — | needs `OPENAI_API_KEY` |
-| Dynamic / Incremental | — | — | — | — | — | needs `OPENAI_API_KEY` |
+| LLM-Based (open-ended) | — | — | — | — | — | requires provider key |
+| Hybrid Construction (Schema-Guided LLM) | — | — | — | — | — | requires provider key |
+| Dynamic / Incremental | — | — | — | — | — | requires provider key |
 
 ### How to read this
 
 - **Strict F1** — exact token-span match against FiNER-139 gold numeric entities (primary metric).
 - **Relaxed F1** — any token overlap; spaCy over-predicts non-gold spans, inflating relaxed scores.
 - **Ontology** — keyword gazetteer + numeric regex when XBRL concepts co-occur; fast and high-recall but moderate precision.
-- **LLM methods** — blocked in this environment without `OPENAI_API_KEY`; re-run the tab with the key set to complete the comparison.
+- **LLM methods** — not scored in the 2026-07-06 offline run; re-run the FiNER-139 tab with a provider key configured to complete the 5-way comparison. (Prior `max_tokens` adapter bug is fixed.)
 
 ## Key findings for stakeholders
 
 1. **Schema-driven rules are strong baselines** for numeric financial entity detection in filings — 92% recall without any LLM cost.
 2. **Generic NLP (spaCy) is not sufficient alone** for precise span detection (9.8% strict F1) though it surfaces many candidate numerics.
-3. **LLM comparison is the open question** — Hybrid and Dynamic are designed to combine schema guidance + LLM flexibility; results pending API key.
+3. **LLM comparison is the open question** — Hybrid Construction and Dynamic combine schema guidance + LLM flexibility; run with a provider key to score them.
 4. **Reproducible** — same seed/sample yields identical offline numbers; artifacts in `finer139-e2e-offline.json`.
 
 ## How to reproduce

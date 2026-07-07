@@ -36,12 +36,15 @@ class OpenAILLM(BaseLLM):
     def _get_completion_params(
         self, messages: list[dict[str, str]], **kwargs: Any
     ) -> dict[str, Any]:
-        return {
+        params: dict[str, Any] = {
             "model": self.model,
             "messages": messages,
             "temperature": kwargs.get("temperature", self.temperature),
-            "max_tokens": kwargs.get("max_tokens", self.max_tokens),
         }
+        max_tokens = kwargs.get("max_tokens", self.max_tokens)
+        if max_tokens is not None:
+            params["max_tokens"] = max_tokens
+        return params
 
     def generate(self, prompt: str, **kwargs: Any) -> str:
         params = self._get_completion_params(

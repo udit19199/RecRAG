@@ -13,7 +13,7 @@ export const METHOD_OPTIONS: { id: Finer139Method; label: string }[] = [
 	{ id: "llm", label: "LLM-Based (open-ended)" },
 	{ id: "nlp", label: "NLP / OpenIE (spaCy)" },
 	{ id: "ontology", label: "Ontology / Schema-Driven" },
-	{ id: "hybrid", label: "Hybrid (Schema-Guided LLM)" },
+	{ id: "hybrid", label: "Hybrid Construction (Schema-Guided LLM)" },
 	{ id: "dynamic", label: "Dynamic / Incremental" },
 ];
 
