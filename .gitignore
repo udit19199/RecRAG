@@ -1,0 +1,94 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+wheels/
+*.egg-info/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Environment
+.env
+.env.local
+
+# Streamlit
+.streamlit/secrets.toml
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+.fallow/
+
+# Project specific
+# Local dataset downloads.
+datasets/*
+!datasets/hannon/
+!datasets/hannon/**
+!datasets/finer139/
+datasets/finer139/*
+!datasets/finer139/finer139_frozen_suite_v1.json
+!datasets/refind/
+datasets/refind/*
+!datasets/refind/README.md
+runs/
+state/
+.deepeval/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Gemini CLI
+.gemini/
+
+# Agents / skills / local IDE tooling
+.agents/
+.claude/
+skills-lock.json
+.agent-reviews/
+.codex/
+.cursor/
+.impeccable/
+.github/hooks/
+.github/skills/
+.herenow/
+.lavish/
+tmp/
+
+# Security Reports
+security_best_practices_report.md
+
+# Local Milvus config stub
+user.yaml
+
+# Generated or local-only documentation
+docs/research/generated/
+docs/research/_scratch/
+
+# Test artifacts
+*.db
+/test_*/
+
+# Command Code
+.commandcode/
+
+# REFinD raw data is CC-BY-NC and must stay local. See the dataset README.
+datasets/refind/*.json
+datasets/refind/*.jsonl
+
+# Riptide artifacts (cloud-synced)
+.humanlayer/tasks/

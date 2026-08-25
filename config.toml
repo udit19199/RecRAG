@@ -1,0 +1,21 @@
+# Non-sensitive settings for local research runs.
+
+[embedding]
+model = "text-embedding-3-small"
+dimensions = 1536
+timeout = 120
+
+[llm]
+model = "gpt-5.6-terra"
+reasoning_effort = "xhigh"
+timeout = 120
+
+[hybridrag]
+namespace = "hybridrag"
+timeout = 30
+
+[hybridrag.graph]
+uri = "neo4j://localhost:7687"
+
+[hybridrag.retrieval]
+timeout = 10
