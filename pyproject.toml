@@ -1,0 +1,32 @@
+[project]
+name = "recrag"
+version = "0.1.0"
+description = "Hybrid graph retrieval research"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic>=2.9.0",
+    "langchain>=1.0",
+    "langchain-openai>=0.3.26",
+    "langchain-neo4j>=0.1",
+    "neo4j-graphrag>=1.19,<2",
+    "python-dotenv>=1.2.1",
+    "streamlit>=1.63.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["hybridrag*"]
+namespaces = true
+
+[tool.pyright]
+include = ["hybridrag"]
+extraPaths = ["."]
+typeCheckingMode = "basic"
+
+[project.optional-dependencies]
+# Optional dependencies for evaluation and the NLP method.
+experiments = [
+    "deepeval>=4.2",
+    "spacy>=3.7.0",
+]
