@@ -1,0 +1,1125 @@
+{
+  "stamp": "20260902_000347_f793",
+  "dataset_id": "hotpotqa",
+  "split": "dev_distractor",
+  "limit": 20,
+  "model": "gpt-5.6-luna",
+  "construction_method": "llm",
+  "retrieval_methods": [
+    "node",
+    "neighborhood",
+    "path",
+    "community",
+    "subgraph",
+    "hybrid",
+    "agentic"
+  ],
+  "deterministic": {
+    "llm": [
+      {
+        "method": "node",
+        "em": 0.0,
+        "f1": 0.026590909090909092,
+        "ev_p": 0.0,
+        "ev_r": 0.0,
+        "ev_f1": 0.0
+      },
+      {
+        "method": "neighborhood",
+        "em": 0.0,
+        "f1": 0.10500948171354903,
+        "ev_p": 0.2841666666666667,
+        "ev_r": 0.325,
+        "ev_f1": 0.29178571428571426
+      },
+      {
+        "method": "path",
+        "em": 0.05,
+        "f1": 0.12628066378066377,
+        "ev_p": 0.125,
+        "ev_r": 0.05833333333333333,
+        "ev_f1": 0.07833333333333334
+      },
+      {
+        "method": "community",
+        "em": 0.0,
+        "f1": 0.0671113769271664,
+        "ev_p": 0.0,
+        "ev_r": 0.0,
+        "ev_f1": 0.0
+      },
+      {
+        "method": "subgraph",
+        "em": 0.0,
+        "f1": 0.061475428729485526,
+        "ev_p": 0.1,
+        "ev_r": 0.03333333333333333,
+        "ev_f1": 0.05
+      },
+      {
+        "method": "hybrid",
+        "em": 0.0,
+        "f1": 0.12029318862439067,
+        "ev_p": 0.1640079365079365,
+        "ev_r": 0.6016666666666667,
+        "ev_f1": 0.2557678432678433
+      },
+      {
+        "method": "agentic",
+        "em": 0.0,
+        "f1": 0.08998492248492249,
+        "ev_p": 0.034999999999999996,
+        "ev_r": 0.075,
+        "ev_f1": 0.047619047619047616
+      }
+    ]
+  },
+  "judge_per_method": {
+    "node": {
+      "avg": 0.2285,
+      "verdicts": {
+        "wrong": 18,
+        "related": 1,
+        "equivalent": 1
+      },
+      "support": 20
+    },
+    "neighborhood": {
+      "avg": 0.3665,
+      "verdicts": {
+        "wrong": 14,
+        "related": 3,
+        "equivalent": 3
+      },
+      "support": 20
+    },
+    "path": {
+      "avg": 0.1795,
+      "verdicts": {
+        "wrong": 17,
+        "equivalent": 2,
+        "related": 1
+      },
+      "support": 20
+    },
+    "community": {
+      "avg": 0.2435,
+      "verdicts": {
+        "wrong": 15,
+        "related": 3,
+        "equivalent": 2
+      },
+      "support": 20
+    },
+    "subgraph": {
+      "avg": 0.22749999999999998,
+      "verdicts": {
+        "wrong": 18,
+        "equivalent": 1,
+        "related": 1
+      },
+      "support": 20
+    },
+    "hybrid": {
+      "avg": 0.5425,
+      "verdicts": {
+        "wrong": 9,
+        "equivalent": 9,
+        "related": 2
+      },
+      "support": 20
+    },
+    "agentic": {
+      "avg": 0.5205,
+      "verdicts": {
+        "wrong": 13,
+        "equivalent": 4,
+        "related": 3
+      },
+      "support": 20
+    }
+  },
+  "judged": [
+    {
+      "method_id": "node",
+      "question_id": "5a8b57f25542995d1e6f1371",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer denies sufficient information, while the gold answer confirms that they were of the same nationality."
+    },
+    {
+      "method_id": "neighborhood",
+      "question_id": "5a8b57f25542995d1e6f1371",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The prediction says the answer cannot be determined, whereas the gold answer confirms that both were American."
+    },
+    {
+      "method_id": "path",
+      "question_id": "5a8b57f25542995d1e6f1371",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer says nationality cannot be determined, while the gold answer is yes."
+    },
+    {
+      "method_id": "community",
+      "question_id": "5a8b57f25542995d1e6f1371",
+      "verdict": "wrong",
+      "score": 0.99,
+      "reason": "The prediction says nationality cannot be determined, while the gold answer is definitively yes."
+    },
+    {
+      "method_id": "subgraph",
+      "question_id": "5a8b57f25542995d1e6f1371",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The prediction says nationality cannot be determined, while the gold answer confirms they were of the same nationality."
+    },
+    {
+      "method_id": "hybrid",
+      "question_id": "5a8b57f25542995d1e6f1371",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The prediction says the answer cannot be determined, whereas the gold answer is yes."
+    },
+    {
+      "method_id": "agentic",
+      "question_id": "5a8b57f25542995d1e6f1371",
+      "verdict": "wrong",
+      "score": 0.99,
+      "reason": "The prediction says the comparison cannot be determined, contradicting the correct answer that both were American."
+    },
+    {
+      "method_id": "node",
+      "question_id": "5a8c7595554299585d9e36b6",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer does not identify the correct position, Chief of Protocol."
+    },
+    {
+      "method_id": "neighborhood",
+      "question_id": "5a8c7595554299585d9e36b6",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer fails to identify the government position, which was Chief of Protocol."
+    },
+    {
+      "method_id": "path",
+      "question_id": "5a8c7595554299585d9e36b6",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer fails to identify the position, which was Chief of Protocol."
+    },
+    {
+      "method_id": "community",
+      "question_id": "5a8c7595554299585d9e36b6",
+      "verdict": "related",
+      "score": 0.5,
+      "reason": "The answer identifies another government position held by Shirley Temple Black, but not the requested position of Chief of Protocol."
+    },
+    {
+      "method_id": "subgraph",
+      "question_id": "5a8c7595554299585d9e36b6",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer fails to identify the government position, which was Chief of Protocol."
+    },
+    {
+      "method_id": "hybrid",
+      "question_id": "5a8c7595554299585d9e36b6",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "It identifies Shirley Temple but does not provide the government position, Chief of Protocol."
+    },
+    {
+      "method_id": "agentic",
+      "question_id": "5a8c7595554299585d9e36b6",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer fails to identify the government position, which was Chief of Protocol."
+    },
+    {
+      "method_id": "node",
+      "question_id": "5a85ea095542994775f606a8",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer does not identify Animorphs, which is the correct series."
+    },
+    {
+      "method_id": "neighborhood",
+      "question_id": "5a85ea095542994775f606a8",
+      "verdict": "related",
+      "score": 0.5,
+      "reason": "The response mentions The Andalite Chronicles, a companion book to Animorphs, but does not identify Animorphs as the answer."
+    },
+    {
+      "method_id": "path",
+      "question_id": "5a85ea095542994775f606a8",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer does not identify Animorphs and instead refers to an unrelated science fiction label."
+    },
+    {
+      "method_id": "community",
+      "question_id": "5a85ea095542994775f606a8",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The prediction does not identify Animorphs, which is the correct series."
+    },
+    {
+      "method_id": "subgraph",
+      "question_id": "5a85ea095542994775f606a8",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer does not identify Animorphs and incorrectly claims the series cannot be determined."
+    },
+    {
+      "method_id": "hybrid",
+      "question_id": "5a85ea095542994775f606a8",
+      "verdict": "equivalent",
+      "score": 1.0,
+      "reason": "The predicted answer correctly identifies the series as Animorphs, matching the gold answer."
+    },
+    {
+      "method_id": "agentic",
+      "question_id": "5a85ea095542994775f606a8",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer does not identify Animorphs, which is the series described by the question."
+    },
+    {
+      "method_id": "node",
+      "question_id": "5adbf0a255429947ff17385a",
+      "verdict": "wrong",
+      "score": 0.98,
+      "reason": "The prediction says the answer is undetermined, whereas the gold answer explicitly says the locations are not in the same neighborhood."
+    },
+    {
+      "method_id": "neighborhood",
+      "question_id": "5adbf0a255429947ff17385a",
+      "verdict": "wrong",
+      "score": 0.95,
+      "reason": "The prediction says the answer cannot be determined, whereas the gold answer definitively says they are not in the same neighborhood."
+    },
+    {
+      "method_id": "path",
+      "question_id": "5adbf0a255429947ff17385a",
+      "verdict": "wrong",
+      "score": 0.1,
+      "reason": "The prediction does not conclude that the two locations are in different neighborhoods, instead claiming the answer cannot be determined."
+    },
+    {
+      "method_id": "community",
+      "question_id": "5adbf0a255429947ff17385a",
+      "verdict": "equivalent",
+      "score": 0.98,
+      "reason": "It concludes they are in different neighborhoods, matching the gold answer that they are not in the same neighborhood."
+    },
+    {
+      "method_id": "subgraph",
+      "question_id": "5adbf0a255429947ff17385a",
+      "verdict": "wrong",
+      "score": 0.98,
+      "reason": "The prediction expresses uncertainty instead of giving the gold answer that they are not in the same neighborhood."
+    },
+    {
+      "method_id": "hybrid",
+      "question_id": "5adbf0a255429947ff17385a",
+      "verdict": "equivalent",
+      "score": 1.0,
+      "reason": "The prediction correctly answers no and identifies the landmarks as being in different neighborhoods."
+    },
+    {
+      "method_id": "agentic",
+      "question_id": "5adbf0a255429947ff17385a",
+      "verdict": "equivalent",
+      "score": 1.0,
+      "reason": "The predicted answer clearly states that the two landmarks are not in the same neighborhood, matching the gold answer."
+    },
+    {
+      "method_id": "node",
+      "question_id": "5a8e3ea95542995a26add48d",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer does not provide the location, whereas the gold answer is Greenwich Village, New York City."
+    },
+    {
+      "method_id": "neighborhood",
+      "question_id": "5a8e3ea95542995a26add48d",
+      "verdict": "wrong",
+      "score": 0.99,
+      "reason": "The predicted answer says the location cannot be determined, while the gold answer identifies Greenwich Village in New York City."
+    },
+    {
+      "method_id": "path",
+      "question_id": "5a8e3ea95542995a26add48d",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer says the location cannot be determined, while the gold answer identifies Greenwich Village, New York City."
+    },
+    {
+      "method_id": "community",
+      "question_id": "5a8e3ea95542995a26add48d",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer says the location cannot be determined, while the gold answer identifies Greenwich Village, New York City."
+    },
+    {
+      "method_id": "subgraph",
+      "question_id": "5a8e3ea95542995a26add48d",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer says the location is unspecified, while the gold answer identifies Greenwich Village, New York City."
+    },
+    {
+      "method_id": "hybrid",
+      "question_id": "5a8e3ea95542995a26add48d",
+      "verdict": "equivalent",
+      "score": 1.0,
+      "reason": "The predicted answer identifies Greenwich Village in New York City, matching the gold answer."
+    },
+    {
+      "method_id": "agentic",
+      "question_id": "5a8e3ea95542995a26add48d",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer fails to identify Greenwich Village, New York City, which is the requested location."
+    },
+    {
+      "method_id": "node",
+      "question_id": "5abd94525542992ac4f382d2",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer fails to identify YG Entertainment as the group\u2019s founder."
+    },
+    {
+      "method_id": "neighborhood",
+      "question_id": "5abd94525542992ac4f382d2",
+      "verdict": "equivalent",
+      "score": 1.0,
+      "reason": "The predicted answer correctly states that WINNER was formed by YG Entertainment."
+    },
+    {
+      "method_id": "path",
+      "question_id": "5abd94525542992ac4f382d2",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer fails to identify YG Entertainment as the group\u2019s founder."
+    },
+    {
+      "method_id": "community",
+      "question_id": "5abd94525542992ac4f382d2",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer does not identify YG Entertainment as the group\u2019s founder."
+    },
+    {
+      "method_id": "subgraph",
+      "question_id": "5abd94525542992ac4f382d2",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer does not identify YG Entertainment as the group\u2019s founder."
+    },
+    {
+      "method_id": "hybrid",
+      "question_id": "5abd94525542992ac4f382d2",
+      "verdict": "equivalent",
+      "score": 1.0,
+      "reason": "The predicted answer states that WINNER was formed by YG Entertainment, matching the gold answer."
+    },
+    {
+      "method_id": "agentic",
+      "question_id": "5abd94525542992ac4f382d2",
+      "verdict": "wrong",
+      "score": 0.95,
+      "reason": "It does not identify YG Entertainment as the group\u2019s founder, instead explicitly saying the evidence does not state who formed it."
+    },
+    {
+      "method_id": "node",
+      "question_id": "5a85b2d95542997b5ce40028",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The prediction says the identity is indeterminate, while the gold answer identifies him as Eenasul Fateh."
+    },
+    {
+      "method_id": "neighborhood",
+      "question_id": "5a85b2d95542997b5ce40028",
+      "verdict": "equivalent",
+      "score": 1.0,
+      "reason": "The predicted answer identifies Eenasul Fateh, matching the gold answer, and accurately includes the consulting role."
+    },
+    {
+      "method_id": "path",
+      "question_id": "5a85b2d95542997b5ce40028",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer does not identify Eenasul Fateh, the person known by the stage name Aladin."
+    },
+    {
+      "method_id": "community",
+      "question_id": "5a85b2d95542997b5ce40028",
+      "verdict": "related",
+      "score": 0.6,
+      "reason": "It correctly identifies Eenasul Fateh but does not affirm his role as a consultant."
+    },
+    {
+      "method_id": "subgraph",
+      "question_id": "5a85b2d95542997b5ce40028",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer does not identify Eenasul Fateh, the person known by the stage name Aladin."
+    },
+    {
+      "method_id": "hybrid",
+      "question_id": "5a85b2d95542997b5ce40028",
+      "verdict": "equivalent",
+      "score": 1.0,
+      "reason": "The predicted answer identifies Eenasul Fateh and correctly states that he was known by the stage name Aladin and worked as a management consultant."
+    },
+    {
+      "method_id": "agentic",
+      "question_id": "5a85b2d95542997b5ce40028",
+      "verdict": "equivalent",
+      "score": 1.0,
+      "reason": "The predicted answer identifies Eenasul Fateh and accurately states that he was known as Aladin and helped organizations improve performance as a consultant."
+    },
+    {
+      "method_id": "node",
+      "question_id": "5a87ab905542996e4f3088c1",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted capacity of 1,800 is substantially different from the gold capacity of 3,677 seated."
+    },
+    {
+      "method_id": "neighborhood",
+      "question_id": "5a87ab905542996e4f3088c1",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted seating capacity of 1,800 is incorrect; the arena could seat 3,677 people."
+    },
+    {
+      "method_id": "path",
+      "question_id": "5a87ab905542996e4f3088c1",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer declines to provide the capacity, while the gold answer specifies 3,677 seated."
+    },
+    {
+      "method_id": "community",
+      "question_id": "5a87ab905542996e4f3088c1",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted capacity of 1,800 people does not match the gold answer of 3,677 seated."
+    },
+    {
+      "method_id": "subgraph",
+      "question_id": "5a87ab905542996e4f3088c1",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted seating capacity of 1,800 does not match the gold answer of 3,677."
+    },
+    {
+      "method_id": "hybrid",
+      "question_id": "5a87ab905542996e4f3088c1",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted capacity of 1,800 differs substantially from the gold answer of 3,677 seated."
+    },
+    {
+      "method_id": "agentic",
+      "question_id": "5a87ab905542996e4f3088c1",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer says the capacity cannot be determined, while the gold answer specifies 3,677 seats."
+    },
+    {
+      "method_id": "node",
+      "question_id": "5a7bbb64554299042af8f7cc",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The prediction says the ages cannot be determined, while the gold answer identifies Terry Richardson as older."
+    },
+    {
+      "method_id": "neighborhood",
+      "question_id": "5a7bbb64554299042af8f7cc",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The prediction says the ages cannot be determined, while the gold answer identifies Terry Richardson as older."
+    },
+    {
+      "method_id": "path",
+      "question_id": "5a7bbb64554299042af8f7cc",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The prediction says the comparison cannot be determined, while the gold answer identifies Terry Richardson as older."
+    },
+    {
+      "method_id": "community",
+      "question_id": "5a7bbb64554299042af8f7cc",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The prediction fails to identify Terry Richardson as older and instead claims the answer is indeterminate."
+    },
+    {
+      "method_id": "subgraph",
+      "question_id": "5a7bbb64554299042af8f7cc",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The prediction says the comparison cannot be determined, while the gold answer identifies Terry Richardson as older."
+    },
+    {
+      "method_id": "hybrid",
+      "question_id": "5a7bbb64554299042af8f7cc",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The prediction does not identify Terry Richardson as older and instead claims the comparison cannot be determined."
+    },
+    {
+      "method_id": "agentic",
+      "question_id": "5a7bbb64554299042af8f7cc",
+      "verdict": "wrong",
+      "score": 0.98,
+      "reason": "The response does not identify Terry Richardson as older and instead incorrectly claims the comparison cannot be determined."
+    },
+    {
+      "method_id": "node",
+      "question_id": "5a8db19d5542994ba4e3dd00",
+      "verdict": "related",
+      "score": 0.5,
+      "reason": "It correctly identifies For Against as being from the United States but fails to affirm that Local H is also from the United States."
+    },
+    {
+      "method_id": "neighborhood",
+      "question_id": "5a8db19d5542994ba4e3dd00",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The prediction denies that it can be established that both are from the United States, contradicting the gold answer."
+    },
+    {
+      "method_id": "path",
+      "question_id": "5a8db19d5542994ba4e3dd00",
+      "verdict": "wrong",
+      "score": 0.99,
+      "reason": "The prediction denies that both are from the United States, contradicting the gold answer of yes."
+    },
+    {
+      "method_id": "community",
+      "question_id": "5a8db19d5542994ba4e3dd00",
+      "verdict": "related",
+      "score": 0.5,
+      "reason": "It correctly identifies For Against as American but does not establish that Local H is from the United States."
+    },
+    {
+      "method_id": "subgraph",
+      "question_id": "5a8db19d5542994ba4e3dd00",
+      "verdict": "wrong",
+      "score": 0.99,
+      "reason": "The predicted answer contradicts the gold answer by denying that both bands are from the United States."
+    },
+    {
+      "method_id": "hybrid",
+      "question_id": "5a8db19d5542994ba4e3dd00",
+      "verdict": "wrong",
+      "score": 1.0,
+      "reason": "The prediction contradicts the gold answer by denying that both are from the United States."
+    },
+    {
+      "method_id": "agentic",
+      "question_id": "5a8db19d5542994ba4e3dd00",
+      "verdict": "related",
+      "score": 0.65,
+      "reason": "It correctly identifies For Against as being from the United States but withholds confirmation that Local H is, so it does not fully match the affirmative answer."
+    },
+    {
+      "method_id": "node",
+      "question_id": "5a7166395542994082a3e814",
+      "verdict": "equivalent",
+      "score": 1.0,
+      "reason": "The predicted answer exactly matches the gold answer, Kansas Song."
+    },
+    {
+      "method_id": "neighborhood",
+      "question_id": "5a7166395542994082a3e814",
+      "verdict": "equivalent",
+      "score": 1.0,
+      "reason": "The predicted answer identifies the fight song as \u201cKansas Song,\u201d with its alternate lyric title in parentheses."
+    },
+    {
+      "method_id": "path",
+      "question_id": "5a7166395542994082a3e814",
+      "verdict": "equivalent",
+      "score": 1.0,
+      "reason": "The predicted answer exactly matches the gold answer, Kansas Song."
+    },
+    {
+      "method_id": "community",
+      "question_id": "5a7166395542994082a3e814",
+      "verdict": "equivalent",
+      "score": 1.0,
+      "reason": "The predicted answer exactly matches the gold answer, Kansas Song."
+    },
+    {
+      "method_id": "subgraph",
+      "question_id": "5a7166395542994082a3e814",
+      "verdict": "equivalent",
+      "score": 1.0,
+      "reason": "The predicted answer exactly matches the gold answer, Kansas Song."
+    },
+    {
+      "method_id": "hybrid",
+      "question_id": "5a7166395542994082a3e814",
+      "verdict": "equivalent",
+      "score": 1.0,
+      "reason": "The predicted answer exactly matches the gold answer, Kansas Song."
+    },
+    {
+      "method_id": "agentic",
+      "question_id": "5a7166395542994082a3e814",
+      "verdict": "equivalent",
+      "score": 1.0,
+      "reason": "The predicted answer exactly matches the gold answer, Kansas Song."
+    },
+    {
+      "method_id": "node",
+      "question_id": "5a877e5d5542993e715abf7d",
+      "verdict": "wrong",
+      "score": 0.99,
+      "reason": "The predicted answer fails to identify David Weissman, which is the correct screenwriter."
+    },
+    {
+      "method_id": "neighborhood",
+      "question_id": "5a877e5d5542993e715abf7d",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer incorrectly claims the connection cannot be determined, whereas David Weissman is the linked screenwriter."
+    },
+    {
+      "method_id": "path",
+      "question_id": "5a877e5d5542993e715abf7d",
+      "verdict": "equivalent",
+      "score": 1.0,
+      "reason": "The predicted answer exactly matches the gold answer, David Weissman."
+    },
+    {
+      "method_id": "community",
+      "question_id": "5a877e5d5542993e715abf7d",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer does not identify David Weissman, the screenwriter matching the described credits."
+    },
+    {
+      "method_id": "subgraph",
+      "question_id": "5a877e5d5542993e715abf7d",
+      "verdict": "related",
+      "score": 0.6,
+      "reason": "The response identifies David Weissman as a co-writer but incorrectly claims the evidence cannot determine that he is the screenwriter with Evolution credits."
+    },
+    {
+      "method_id": "hybrid",
+      "question_id": "5a877e5d5542993e715abf7d",
+      "verdict": "related",
+      "score": 0.5,
+      "reason": "The response names David Weissman as a co-writer but incorrectly claims the specific screenwriter cannot be determined."
+    },
+    {
+      "method_id": "agentic",
+      "question_id": "5a877e5d5542993e715abf7d",
+      "verdict": "equivalent",
+      "score": 1.0,
+      "reason": "The prediction identifies David Weissman and correctly states his credits for Evolution and The Family Man starring Nicolas Cage and T\u00e9a Leoni."
+    },
+    {
+      "method_id": "node",
+      "question_id": "5ab3b0bf5542992ade7c6e39",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer does not provide the year, while the gold answer is 1999."
+    },
+    {
+      "method_id": "neighborhood",
+      "question_id": "5ab3b0bf5542992ade7c6e39",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer says the year cannot be determined, while the correct year is 1999."
+    },
+    {
+      "method_id": "path",
+      "question_id": "5ab3b0bf5542992ade7c6e39",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer says the year cannot be determined, while the correct year is 1999."
+    },
+    {
+      "method_id": "community",
+      "question_id": "5ab3b0bf5542992ade7c6e39",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted year 1987 does not match the gold answer 1999."
+    },
+    {
+      "method_id": "subgraph",
+      "question_id": "5ab3b0bf5542992ade7c6e39",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer says the year cannot be determined, but the correct year is 1999."
+    },
+    {
+      "method_id": "hybrid",
+      "question_id": "5ab3b0bf5542992ade7c6e39",
+      "verdict": "equivalent",
+      "score": 1.0,
+      "reason": "The predicted answer gives the same year, 1999, and identifies the related soundtrack promotion."
+    },
+    {
+      "method_id": "agentic",
+      "question_id": "5ab3b0bf5542992ade7c6e39",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer does not provide the correct year, which is 1999."
+    },
+    {
+      "method_id": "node",
+      "question_id": "5ab56e32554299637185c594",
+      "verdict": "wrong",
+      "score": 0.1,
+      "reason": "The gold answer says no, while the prediction claims the evidence is insufficient to determine the answer."
+    },
+    {
+      "method_id": "neighborhood",
+      "question_id": "5ab56e32554299637185c594",
+      "verdict": "related",
+      "score": 0.6,
+      "reason": "The response recognizes insufficient evidence about one property but does not reach the gold answer that the statement is false."
+    },
+    {
+      "method_id": "path",
+      "question_id": "5ab56e32554299637185c594",
+      "verdict": "related",
+      "score": 0.5,
+      "reason": "The response expresses uncertainty rather than directly stating that the answer is no, though it notes the lack of evidence for real-estate use."
+    },
+    {
+      "method_id": "community",
+      "question_id": "5ab56e32554299637185c594",
+      "verdict": "wrong",
+      "score": 0.1,
+      "reason": "The prediction expresses uncertainty rather than the definitive negative answer that the two are not both used for real estate."
+    },
+    {
+      "method_id": "subgraph",
+      "question_id": "5ab56e32554299637185c594",
+      "verdict": "wrong",
+      "score": 0.98,
+      "reason": "The gold answer states that both are not used for real estate, while the prediction claims the answer cannot be determined."
+    },
+    {
+      "method_id": "hybrid",
+      "question_id": "5ab56e32554299637185c594",
+      "verdict": "equivalent",
+      "score": 0.95,
+      "reason": "The response indicates that only Random House Tower is explicitly used for real estate, so both are not."
+    },
+    {
+      "method_id": "agentic",
+      "question_id": "5ab56e32554299637185c594",
+      "verdict": "wrong",
+      "score": 0.95,
+      "reason": "The prediction says the answer cannot be determined, whereas the gold answer explicitly says no."
+    },
+    {
+      "method_id": "node",
+      "question_id": "5ab6d09255429954757d337d",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer says the timeframe cannot be determined, while the gold answer specifies 1986 to 2013."
+    },
+    {
+      "method_id": "neighborhood",
+      "question_id": "5ab6d09255429954757d337d",
+      "verdict": "wrong",
+      "score": 0.99,
+      "reason": "The predicted answer incorrectly claims the timeframe cannot be determined, whereas the correct timeframe is 1986 to 2013."
+    },
+    {
+      "method_id": "path",
+      "question_id": "5ab6d09255429954757d337d",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer says the timeframe cannot be determined, whereas the gold answer gives 1986 to 2013."
+    },
+    {
+      "method_id": "community",
+      "question_id": "5ab6d09255429954757d337d",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer says the timeframe cannot be determined, while the gold answer gives 1986 to 2013."
+    },
+    {
+      "method_id": "subgraph",
+      "question_id": "5ab6d09255429954757d337d",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer says the timeframe cannot be determined, while the gold answer specifies 1986 to 2013."
+    },
+    {
+      "method_id": "hybrid",
+      "question_id": "5ab6d09255429954757d337d",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer fails to identify Alex Ferguson or provide the correct management timeframe of 1986 to 2013."
+    },
+    {
+      "method_id": "agentic",
+      "question_id": "5ab6d09255429954757d337d",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer says the timeframe cannot be determined, while the gold answer specifies 1986 to 2013."
+    },
+    {
+      "method_id": "node",
+      "question_id": "5a75e05c55429976ec32bc5f",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer does not provide the population, while the gold answer is 9,984."
+    },
+    {
+      "method_id": "neighborhood",
+      "question_id": "5a75e05c55429976ec32bc5f",
+      "verdict": "related",
+      "score": 0.2,
+      "reason": "It identifies the United States but fails to provide the requested population of 9,984 inhabitants."
+    },
+    {
+      "method_id": "path",
+      "question_id": "5a75e05c55429976ec32bc5f",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer does not provide the country\u2019s population, while the gold answer is 9,984 inhabitants."
+    },
+    {
+      "method_id": "community",
+      "question_id": "5a75e05c55429976ec32bc5f",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The prediction does not provide the population, while the gold answer is 9,984 inhabitants."
+    },
+    {
+      "method_id": "subgraph",
+      "question_id": "5a75e05c55429976ec32bc5f",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer does not provide the population, while the gold answer is 9,984 inhabitants."
+    },
+    {
+      "method_id": "hybrid",
+      "question_id": "5a75e05c55429976ec32bc5f",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer does not provide the gold population figure of 9,984 and incorrectly identifies the location as being in the United States."
+    },
+    {
+      "method_id": "agentic",
+      "question_id": "5a75e05c55429976ec32bc5f",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer declines to provide a population, while the gold answer specifies 9,984 inhabitants."
+    },
+    {
+      "method_id": "node",
+      "question_id": "5ab3e45655429976abd1bcd4",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer does not identify the North Atlantic Conference and instead claims the information cannot be determined."
+    },
+    {
+      "method_id": "neighborhood",
+      "question_id": "5ab3e45655429976abd1bcd4",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The prediction does not provide the correct former name, which was the North Atlantic Conference."
+    },
+    {
+      "method_id": "path",
+      "question_id": "5ab3e45655429976abd1bcd4",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer refuses to identify the conference, while the gold answer is the North Atlantic Conference."
+    },
+    {
+      "method_id": "community",
+      "question_id": "5ab3e45655429976abd1bcd4",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The response does not provide the former name, North Atlantic Conference."
+    },
+    {
+      "method_id": "subgraph",
+      "question_id": "5ab3e45655429976abd1bcd4",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer declines to identify the former conference, while the gold answer is the North Atlantic Conference."
+    },
+    {
+      "method_id": "hybrid",
+      "question_id": "5ab3e45655429976abd1bcd4",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The response does not identify the former name, which was the North Atlantic Conference."
+    },
+    {
+      "method_id": "agentic",
+      "question_id": "5ab3e45655429976abd1bcd4",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer declines to identify the former conference name, while the gold answer is the North Atlantic Conference."
+    },
+    {
+      "method_id": "node",
+      "question_id": "5ab29c24554299449642c932",
+      "verdict": "wrong",
+      "score": 1.0,
+      "reason": "The prediction says the answer cannot be determined, whereas the correct answer is yes."
+    },
+    {
+      "method_id": "neighborhood",
+      "question_id": "5ab29c24554299449642c932",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The prediction fails to affirm that both Giuseppe Verdi and Ambroise Thomas were opera composers."
+    },
+    {
+      "method_id": "path",
+      "question_id": "5ab29c24554299449642c932",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The prediction says the answer cannot be determined, whereas the gold answer is yes."
+    },
+    {
+      "method_id": "community",
+      "question_id": "5ab29c24554299449642c932",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer says the fact cannot be determined, while the gold answer confirms that both are opera composers."
+    },
+    {
+      "method_id": "subgraph",
+      "question_id": "5ab29c24554299449642c932",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The prediction says the answer cannot be determined, while the gold answer is yes."
+    },
+    {
+      "method_id": "hybrid",
+      "question_id": "5ab29c24554299449642c932",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The prediction denies that the evidence establishes both as opera composers, while the correct answer is yes."
+    },
+    {
+      "method_id": "agentic",
+      "question_id": "5ab29c24554299449642c932",
+      "verdict": "wrong",
+      "score": 0.99,
+      "reason": "The prediction fails to affirm that Ambroise Thomas was also an opera composer, contrary to the gold answer."
+    },
+    {
+      "method_id": "node",
+      "question_id": "5ae0d4c9554299603e418468",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer fails to identify the president's years in office, which the gold answer gives as 1969 until 1974."
+    },
+    {
+      "method_id": "neighborhood",
+      "question_id": "5ae0d4c9554299603e418468",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer identifies Nixon but fails to provide the requested service years, 1969\u20131974."
+    },
+    {
+      "method_id": "path",
+      "question_id": "5ae0d4c9554299603e418468",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer does not provide the requested years, which are 1969 to 1974."
+    },
+    {
+      "method_id": "community",
+      "question_id": "5ae0d4c9554299603e418468",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer does not provide the requested years, which are 1969 to 1974."
+    },
+    {
+      "method_id": "subgraph",
+      "question_id": "5ae0d4c9554299603e418468",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer provides no years, whereas the gold answer identifies the period as 1969 to 1974."
+    },
+    {
+      "method_id": "hybrid",
+      "question_id": "5ae0d4c9554299603e418468",
+      "verdict": "related",
+      "score": 0.4,
+      "reason": "It correctly identifies the Nixon administration but fails to provide its presidency years, 1969\u20131974."
+    },
+    {
+      "method_id": "agentic",
+      "question_id": "5ae0d4c9554299603e418468",
+      "verdict": "related",
+      "score": 0.6,
+      "reason": "It correctly identifies the Nixon administration but does not provide the requested years, 1969 through 1974."
+    },
+    {
+      "method_id": "node",
+      "question_id": "5a8133725542995ce29dcbdb",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The prediction does not identify Robert Erskine Childers, the writer from England."
+    },
+    {
+      "method_id": "neighborhood",
+      "question_id": "5a8133725542995ce29dcbdb",
+      "verdict": "wrong",
+      "score": 0.1,
+      "reason": "It fails to identify Robert Erskine Childers as the writer from England and instead claims the answer cannot be determined."
+    },
+    {
+      "method_id": "path",
+      "question_id": "5a8133725542995ce29dcbdb",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The prediction says the answer cannot be determined, while the gold answer identifies Robert Erskine Childers."
+    },
+    {
+      "method_id": "community",
+      "question_id": "5a8133725542995ce29dcbdb",
+      "verdict": "wrong",
+      "score": 0.2,
+      "reason": "The response does not identify Robert Erskine Childers as the writer from England and instead incorrectly claims the answer cannot be determined."
+    },
+    {
+      "method_id": "subgraph",
+      "question_id": "5a8133725542995ce29dcbdb",
+      "verdict": "wrong",
+      "score": 0.0,
+      "reason": "The predicted answer claims the information is indeterminate, while the gold answer identifies Robert Erskine Childers as being from England."
+    },
+    {
+      "method_id": "hybrid",
+      "question_id": "5a8133725542995ce29dcbdb",
+      "verdict": "equivalent",
+      "score": 1.0,
+      "reason": "The prediction identifies Robert Erskine Childers as the writer from England, matching the gold answer."
+    },
+    {
+      "method_id": "agentic",
+      "question_id": "5a8133725542995ce29dcbdb",
+      "verdict": "related",
+      "score": 0.3,
+      "reason": "The prediction identifies Robert Erskine Childers as British but incorrectly concludes that it cannot be determined whether he was from England."
+    }
+  ],
+  "errors": {}
+}
