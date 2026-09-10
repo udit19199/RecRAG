@@ -25,8 +25,8 @@ from pydantic import BaseModel
 from .construction.construction import ConstructionMethod, SourcePage, rebuild_graph
 from .retrieval.answering import RetrievalMethod, answer_question
 
-DEFAULT_LLM_MODEL = "gpt-5.6-terra"
-DEFAULT_REASONING_EFFORT = "xhigh"
+DEFAULT_LLM_MODEL = "gpt-5.6-luna"
+DEFAULT_REASONING_EFFORT = "medium"
 
 
 class GraphRAGChatLLM(LLMBase):
@@ -107,7 +107,7 @@ class GraphRAGChatLLM(LLMBase):
         return await asyncio.to_thread(self.invoke_with_tools, input, tools, message_history, system_instruction)
 
 
-class HybridRAG:
+class GraphRAG:
     def __init__(
         self,
         *,
@@ -124,7 +124,7 @@ class HybridRAG:
         self._embedding_dimensions = embedding_dimensions
 
     @classmethod
-    def from_config(cls, config_path: Path | None = None) -> HybridRAG:
+    def from_config(cls, config_path: Path | None = None) -> GraphRAG:
         project_root = Path(__file__).resolve().parents[1]
         load_dotenv(dotenv_path=project_root / ".env", override=True)
         path = config_path or project_root / "config.toml"
@@ -201,5 +201,5 @@ __all__ = [
     "DEFAULT_LLM_MODEL",
     "DEFAULT_REASONING_EFFORT",
     "GraphRAGChatLLM",
-    "HybridRAG",
+    "GraphRAG",
 ]

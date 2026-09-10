@@ -1,7 +1,7 @@
 [project]
 name = "recrag"
 version = "0.1.0"
-description = "Hybrid graph retrieval research"
+description = "Graph retrieval research"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
@@ -16,11 +16,11 @@ dependencies = [
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["hybridrag*"]
+include = ["graphrag*"]
 namespaces = true
 
 [tool.pyright]
-include = ["hybridrag"]
+include = ["graphrag"]
 extraPaths = ["."]
 typeCheckingMode = "basic"
 

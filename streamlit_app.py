@@ -4,10 +4,10 @@ from time import perf_counter
 
 import streamlit as st
 
-from hybridrag.construction.construction import ConstructionMethod
-from hybridrag.dataset_records.two_wiki_multihopqa import load_records
-from hybridrag.hybrid_rag import HybridRAG
-from hybridrag.retrieval.answering import RETRIEVAL_METHODS
+from graphrag.construction.construction import ConstructionMethod
+from graphrag.dataset_records.two_wiki_multihopqa import load_records
+from graphrag.graph_rag import GraphRAG
+from graphrag.retrieval.answering import RETRIEVAL_METHODS
 
 st.set_page_config(page_title="GraphRAG Demo", page_icon=":material/account_tree:")
 st.title("GraphRAG Demo")
@@ -127,19 +127,19 @@ if run_clicked:
     else:
         if score_with_deepeval:
             try:
-                from hybridrag.evals.construction import (
+                from graphrag.evals.construction import (
                     evaluate_answer,
                     evaluate_construction,
                     read_graph_statistics,
                     read_entity_triples,
                 )
-                from hybridrag.evals.retrieval import evaluate_retrieval
+                from graphrag.evals.retrieval import evaluate_retrieval
             except ImportError:
                 st.error("DeepEval scoring requires `uv sync --extra experiments`.")
                 st.stop()
 
         try:
-            rag = HybridRAG.from_config()
+            rag = GraphRAG.from_config()
             try:
                 for record_number, record in enumerate(loaded_records, start=1):
                     construction_evaluations = []

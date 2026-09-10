@@ -43,7 +43,6 @@ datasets/finer139/*
 !datasets/refind/
 datasets/refind/*
 !datasets/refind/README.md
-runs/
 state/
 .deepeval/
 
