@@ -17,7 +17,7 @@ from neo4j import Driver
 from neo4j_graphrag.generation.types import RagResultModel
 
 from ..dataset_records.two_wiki_multihopqa import TwoWikiRecord, answer_aliases
-from ..hybrid_rag import DEFAULT_LLM_MODEL, DEFAULT_REASONING_EFFORT
+from ..graph_rag import DEFAULT_LLM_MODEL, DEFAULT_REASONING_EFFORT
 
 
 class ResponsesOpenAIModel(DeepEvalBaseLLM):

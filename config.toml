@@ -6,16 +6,16 @@ dimensions = 1536
 timeout = 120
 
 [llm]
-model = "gpt-5.6-terra"
-reasoning_effort = "xhigh"
+model = "gpt-5.6-luna"
+reasoning_effort = "medium"
 timeout = 120
 
-[hybridrag]
-namespace = "hybridrag"
+[graphrag]
+namespace = "graphrag"
 timeout = 30
 
-[hybridrag.graph]
+[graphrag.graph]
 uri = "neo4j://localhost:7687"
 
-[hybridrag.retrieval]
+[graphrag.retrieval]
 timeout = 10

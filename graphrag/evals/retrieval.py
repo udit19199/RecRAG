@@ -11,7 +11,7 @@ from deepeval.test_case import LLMTestCase
 from neo4j_graphrag.generation.types import RagResultModel
 
 from ..dataset_records.two_wiki_multihopqa import TwoWikiRecord
-from ..hybrid_rag import DEFAULT_LLM_MODEL
+from ..graph_rag import DEFAULT_LLM_MODEL
 from .construction import ResponsesOpenAIModel, _metric_result
 
 

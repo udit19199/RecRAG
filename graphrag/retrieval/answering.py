@@ -4,7 +4,7 @@ from typing import Literal
 
 from neo4j import Driver
 from neo4j_graphrag.embeddings.base import Embedder
-from neo4j_graphrag.generation import GraphRAG
+from neo4j_graphrag.generation import GraphRAG as Neo4jGraphRAG
 from neo4j_graphrag.llm import LLMBase
 from neo4j_graphrag.schema import get_schema
 
@@ -69,7 +69,7 @@ def answer_question(
         else:
             raise ValueError(f"Unknown retrieval method: {method}")
         results.append(
-            GraphRAG(retriever, llm).search(
+            Neo4jGraphRAG(retriever, llm).search(
                 question, return_context=True, response_fallback=NO_CONTEXT
             )
         )
