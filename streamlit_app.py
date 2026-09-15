@@ -13,9 +13,7 @@ st.set_page_config(page_title="GraphRAG Demo", page_icon=":material/account_tree
 st.title("GraphRAG Demo")
 
 
-@st.cache_data
-def load_records_for_ui(limit: int):
-    return load_records(limit)
+load_records_cached = st.cache_data(load_records)
 
 
 def render_metric_group(title, metrics, names):
@@ -33,13 +31,9 @@ def render_metric_group(title, metrics, names):
             score = metric.get("score")
             value = "Not scored" if score is None else f"{float(score):.0%}"
             with st.container(border=True):
-                st.metric(name.replace("_", " ").capitalize(), value)
+                st.metric(name, value)
                 if metric.get("reason"):
                     st.caption(str(metric["reason"]))
-
-
-def display_method(method):
-    return str(method).replace("_", " ").title()
 
 
 def render_construction_evaluation(evaluation):
@@ -101,21 +95,19 @@ selected_construction_methods = st.pills(
     list(ConstructionMethod),
     default=list(ConstructionMethod),
     selection_mode="multi",
-    format_func=display_method,
 ) or []
 selected_retrieval_methods = st.pills(
     "Retrieval methods",
     RETRIEVAL_METHODS,
     default=RETRIEVAL_METHODS,
     selection_mode="multi",
-    format_func=display_method,
 ) or []
 score_with_deepeval = st.checkbox(
     "Score with DeepEval",
     value=True,
     help="Scores graph construction, retrieval, and answers with LLM judges.",
 )
-loaded_records = load_records_for_ui(record_count)
+loaded_records = load_records_cached(record_count)
 
 run_clicked = st.button("Run", type="primary", icon=":material/account_tree:")
 
@@ -149,7 +141,7 @@ if run_clicked:
                     for method in selected_construction_methods:
                         database = method.database_name(record.id)
                         construction_status.write(
-                            f"Building {display_method(method)} graph for record {record_number}"
+                            f"Building {method} graph for record {record_number}"
                         )
                         construction_started = perf_counter()
                         rag.construct(
@@ -176,7 +168,7 @@ if run_clicked:
                                 }
                         construction_evaluations.append(evaluation)
                         construction_status.write(
-                            f"Graph complete: {display_method(method)}, record {record_number}"
+                            f"Graph complete: {method}, record {record_number}"
                         )
                     construction_status.update(
                         label="Construction complete", state="complete"
@@ -188,7 +180,7 @@ if run_clicked:
                         selected_construction_methods, construction_evaluations
                     ):
                         with st.container(border=True):
-                            st.markdown(f"#### {display_method(method)}")
+                            st.markdown(f"#### {method}")
                             render_construction_evaluation(evaluation)
 
                     st.markdown("### Retrieval and answer")
@@ -197,14 +189,14 @@ if run_clicked:
                     )
                     for method in selected_construction_methods:
                         retrieval_status.write(
-                            f"Answering record {record_number} with {display_method(method)} graph"
+                            f"Answering record {record_number} with {method} graph"
                         )
                         results = rag.answer(
                             record.question,
                             database=method.database_name(record.id),
                             retrieval_methods=selected_retrieval_methods,
                         )
-                        st.markdown(f"#### {display_method(method)}")
+                        st.markdown(f"#### {method}")
                         for retrieval_method, result in zip(
                             selected_retrieval_methods, results
                         ):
@@ -219,7 +211,7 @@ if run_clicked:
                                 else None
                             )
                             with st.container(border=True):
-                                st.markdown(f"**{display_method(retrieval_method)}**")
+                                st.markdown(f"**{retrieval_method}**")
                                 if retrieval_evaluation is not None:
                                     retrieval = retrieval_evaluation
                                     st.markdown("**Retrieval evaluation**")
