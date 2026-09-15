@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Agentic retrieval</title>
+  <desc id="desc">The retrieval agent chooses vector or Cypher search, checks the returned evidence, and either answers or refines the query and searches again.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1e1e1e"/></marker>
+    <marker id="green-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#40c057"/></marker>
+    <marker id="orange-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#fd7e14"/></marker>
+  </defs>
+  <rect width="800" height="1100" fill="#ffffff"/>
+  <text x="28" y="32" font-family="Comic Sans MS, Segoe Print, cursive" font-size="22" font-weight="700" fill="#1e1e1e">Agentic retrieval</text>
+  <g font-family="Comic Sans MS, Segoe Print, cursive" font-size="16" text-anchor="middle">
+    <rect x="300" y="70" width="200" height="72" rx="16" fill="#e3fafc" stroke="#15aabf" stroke-width="2"/><text x="400" y="113">Question</text>
+    <rect x="280" y="180" width="240" height="72" rx="16" fill="#e7f5ff" stroke="#228be6" stroke-width="2"/><text x="400" y="223">Retrieval agent</text>
+    <polygon points="400,285 555,355 400,425 245,355" fill="#fff9db" stroke="#fab005" stroke-width="2"/><text x="400" y="361">Choose a search tool</text>
+    <rect x="80" y="470" width="210" height="72" rx="16" fill="#e7f5ff" stroke="#228be6" stroke-width="2"/><text x="185" y="513">Vector search</text>
+    <rect x="510" y="470" width="210" height="72" rx="16" fill="#e7f5ff" stroke="#228be6" stroke-width="2"/><text x="615" y="513">Cypher search</text>
+    <rect x="280" y="590" width="240" height="72" rx="16" fill="#f8f9fa" stroke="#868e96" stroke-width="2"/><text x="400" y="633">Returned evidence</text>
+    <polygon points="400,710 555,780 400,850 245,780" fill="#fff9db" stroke="#fab005" stroke-width="2"/><text x="400" y="786">Enough evidence?</text>
+    <rect x="500" y="910" width="190" height="72" rx="16" fill="#e7f5ff" stroke="#228be6" stroke-width="2"/><text x="595" y="953">Answer model</text>
+    <ellipse cx="595" cy="1040" rx="105" ry="42" fill="#f3f0ff" stroke="#7950f2" stroke-width="2"/><text x="595" y="1046">Final answer</text>
+  </g>
+  <g fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#arrow)" stroke-linecap="round"><path d="M400 142 V180"/><path d="M400 252 V285"/><path d="M305 390 V470"/><path d="M495 390 V470"/><path d="M185 542 V590 H280"/><path d="M615 542 V590 H520"/></g>
+  <path d="M400 662 V710" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M555 780 H660 V216 H520" fill="none" stroke="#fd7e14" stroke-width="2" marker-end="url(#orange-arrow)" stroke-linecap="round"/>
+  <path d="M555 780 H595 V910" fill="none" stroke="#40c057" stroke-width="2" marker-end="url(#green-arrow)" stroke-linecap="round"/>
+  <path d="M595 982 V998" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#arrow)"/>
+  <g font-family="Comic Sans MS, Segoe Print, cursive" font-size="13" text-anchor="middle"><text x="205" y="414">vector</text><text x="595" y="414">Cypher</text><text x="400" y="682">results</text><text x="615" y="767" fill="#40c057">yes</text><text x="635" y="205" fill="#fd7e14">no, refine</text></g>
+</svg>

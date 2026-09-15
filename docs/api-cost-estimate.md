@@ -1,4 +1,25 @@
-## API cost estimate
+# Cost and model estimates
+
+This page explains why the full experiment costs more than one answer request.
+The figures are planning estimates, not usage logs from the app.
+
+The current code uses `gpt-5.6-luna` for all LLM calls. The DeepSeek column is a
+comparison scenario for a future model study. It is not the current app setup.
+
+One record in the full matrix creates this work:
+
+```text
+2 graph builds
+8 retrieval and answer runs
+2 graph evaluations
+8 retrieval evaluations
+8 answer evaluations
+```
+
+That is why cost grows with both the number of records and the number of method
+combinations. Evaluation adds many model calls after the answers are already
+generated. Agentic retrieval also uses more model calls than vector or hybrid
+retrieval.
 
 Pricing:
 
@@ -9,7 +30,8 @@ Pricing:
 
 Prices: [Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna), [DeepSeek on Fireworks](https://fireworks.ai/models/deepseek-ai/deepseek-v4p1-flash).
 
-Input tokens are the same for both models. High-effort output/reasoning is estimated at 3x the earlier output estimate. DeepSeek output/reasoning is estimated at 1.5x Luna.
+Input tokens are the same for both scenarios. The output assumptions are
+described in the tables below.
 
 ### Tokens and cost per record
 
@@ -46,13 +68,30 @@ This includes both construction methods, all four retrieval methods, answer gene
 
 ## Cost reduction plan
 
-Savings are shown as Luna input/output tokens saved per record. DeepSeek output savings are 1.5x higher.
+Savings are shown as Luna input/output tokens saved per record. DeepSeek output
+savings are 1.5x higher under the assumptions above.
 
 | Plan | Saved per record | Luna total tokens/record | DeepSeek total tokens/record | 4k Luna / DeepSeek | 5k Luna / DeepSeek |
 |---|---:|---:|---:|---:|---:|
-| Current full setup | — | 292.35k | 343.59k | $643.80 / $572.91 | $804.75 / $716.13 |
+| Current full setup | none | 292.35k | 343.59k | $643.80 / $572.91 | $804.75 / $716.13 |
 | Remove agentic retrieval | 48.00k / 22.20k | 222.15k | 262.29k | $498.84 / $442.75 | $623.55 / $553.44 |
 | Precompute standard schema | 2.30k / 1.50k | 218.35k | 257.74k | $489.80 / $434.79 | $612.25 / $543.49 |
 | Deterministic retrieval and answer scoring | 97.20k / 58.14k | 63.01k | 73.33k | $132.97 / $119.02 | $166.21 / $148.78 |
 | LLM evaluation on 10% sample | 10.98k / 3.24k | 48.79k | 57.49k | $108.63 / $96.53 | $135.79 / $120.66 |
 | Keep one construction and retrieval method | 19.68k / 8.90k | **20.21k** | **24.46k** | **$50.16 / $43.96** | **$62.70 / $54.95** |
+
+## How to compare models
+
+Model choice should be tested separately from construction and retrieval. Keep
+the record sample, prompts, construction method, retrieval method, answer
+settings, and eval rules fixed. Change only the model.
+
+Compare each model on:
+
+- graph quality;
+- retrieved-context quality;
+- final-answer quality;
+- token use and cost.
+
+The current 2Wiki study keeps `gpt-5.6-luna` fixed. This makes differences in
+the eight construction and retrieval combinations easier to explain.

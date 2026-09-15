@@ -1,163 +1,156 @@
-# System overview
+# System architecture
 
-The main user flow lives in `streamlit_app.py`. The `GraphRAG` class connects
-the app to Neo4j, the language model, and the embedding model. The code keeps
-construction, retrieval, and evaluation in separate modules so the experiment
-can change one part at a time.
+RecRAG runs each 2WikiMultiHopQA record through five steps:
 
-## What happens when you click Run
+```text
+load record -> build graph -> create indexes -> retrieve context -> answer
+```
 
-The app lets you choose the number of records, construction methods, retrieval
-methods, and whether to run DeepEval scoring. The record slider allows 1 to 20
-records and starts at 2. Both construction methods and all four retrieval
-methods are selected by default.
+The app is in `streamlit_app.py`. `GraphRAG` connects the app to Neo4j, the
+language model, and the embedding model.
 
-For each selected record, the app builds one graph for each selected construction
-method. It then runs each selected retrieval method against each graph and shows
-the answer and returned context. With the default choices, two records produce
-four graph builds and sixteen answer attempts.
+## Example record
 
-## The four stages
+The example question is:
 
-### 1. Load a record
+> Who is the mother of the director of film Polish-Russian War (Film)?
 
-The app calls `load_records(record_count)` from
-`graphrag/dataset_records/two_wiki_multihopqa.py`.
+Two source pages contain the answer:
 
-The loader reads `datasets/2wikimultihopqa/dev.json`. For each record, it keeps:
+```text
+Polish-Russian War (film): a 2009 film directed by Xawery Żuławski.
+Xawery Żuławski: he is the son of actress Małgorzata Braunek.
+```
 
-- the question;
-- the source pages and their passages;
-- the expected answer and answer ID;
-- the supporting page and passage indexes;
-- the dataset's evidence triples and evidence IDs.
+The expected answer is `Małgorzata Braunek`.
 
-When evaluation checks an answer, the loader also reads aliases and demonyms
-from `id_aliases.json`. This lets the evaluator accept names that mean the same
-thing as the expected answer.
+## 1. Load the record
 
-### 2. Build a graph
+`load_records()` reads the question, source pages, supporting passages, and
+expected answer from `datasets/2wikimultihopqa/dev.json`.
 
-The app calls `GraphRAG.construct(...)` once for each selected construction
-method. That method calls `rebuild_graph(...)` in
+For this record, it loads the pages named `Polish-Russian War (film)` and
+`Xawery Żuławski` along with other source pages.
+
+## 2. Build the graph
+
+`GraphRAG.construct()` calls `rebuild_graph()` in
 `graphrag/construction/construction.py`.
 
-The builder joins each page title and its passages into text. It sends that text
-to `SimpleKGPipeline` from `neo4j-graphrag`. The pipeline splits the text into
-1,000-character chunks with 100 characters of overlap. It asks the LLM to find
-entities and relationships, then writes the graph to Neo4j.
+The pipeline splits the pages into 1,000-character chunks with 100 characters
+of overlap. It asks the LLM to extract entities and relationships, then writes
+the chunks and graph to Neo4j.
 
-The app uses a separate Neo4j database for each record and construction method.
-For example, a record ID becomes a database name such as
-`recrag-standard-<record-id>` or `recrag-ontology-guided-<record-id>`. This keeps
-the two graph versions separate while the app compares them.
+For the example, the graph should contain links like these:
 
-The two construction choices are:
+```text
+Polish-Russian War --directed by--> Xawery Żuławski
+Xawery Żuławski --mother--> Małgorzata Braunek
+```
 
-| Method | Code behavior | Reason for the comparison |
-| --- | --- | --- |
-| `standard` | Uses the default extraction schema and prompt. | Measures open-ended extraction. |
-| `ontology_guided` | Supplies fixed top-level node and relationship types, while allowing additional types. | Measures whether a small set of named kinds improves the graph. |
+The two construction methods change only the extraction rules:
 
-The ontology-guided prompt also tells the extractor to give every node a name,
-fill fields only when the text states them, use `Thing` as a fallback, use short
-upper-snake-case relationship names, and avoid facts outside the text.
+| Method | Extraction rules |
+| --- | --- |
+| `standard` | Uses the default schema and prompt. |
+| `ontology_guided` | Uses fixed top-level kinds and allows extra kinds and relationships. It fills fields only when the text states them. |
 
-### 3. Create search indexes
+## 3. Create search indexes
 
-After graph construction, the builder creates two indexes on the `Chunk` nodes:
+The builder stores two indexes on the chunks before retrieval starts:
+
+```text
+question -> meaning search -> chunk_embeddings
+question -> exact-word search -> chunk_fulltext
+```
+
+For the example, meaning search can find the sentence about the film and its
+director. Exact-word search can find the words `Polish-Russian War` and
+`Xawery Żuławski`.
 
 - `chunk_embeddings` supports meaning-based search.
-- `chunk_fulltext` supports exact-word search on chunk text.
+- `chunk_fulltext` supports exact-word search.
 
-The code waits for both indexes before retrieval starts. The graph, chunks, and
-indexes all stay in Neo4j.
+## 4. Retrieve context
 
-### 4. Search and answer
+Each method searches the same graph and returns context to the answer model.
+For the example, useful context contains both facts:
 
-The app calls `GraphRAG.answer(...)`. For each selected retrieval method, the
-code creates a retriever and passes it to Neo4j's `GraphRAG.search(...)`.
+```text
+Polish-Russian War -> Xawery Żuławski
+Xawery Żuławski -> Małgorzata Braunek
+```
 
-The search returns both an answer and the context used to produce that answer.
-If no context is found, the answer falls back to:
+### `text2cypher`
+
+The LLM reads the schema and writes a read-only query that follows:
+
+```text
+film -> director -> mother
+```
+
+Neo4j returns the matching graph records.
+
+![Text to Cypher retrieval](retrieval-text2cypher.svg)
+
+### `vector`
+
+The retriever embeds the question, finds similar chunks, and adds the chunk's
+entities and graph paths up to two edges away.
+
+![Vector retrieval](retrieval-vector.svg)
+
+### `hybrid`
+
+The retriever searches both indexes, merges the results, and adds the same graph
+context as `vector`.
+
+![Hybrid retrieval](retrieval-hybrid.svg)
+
+### `agentic`
+
+The agent chooses vector search or Cypher search. It can search again if the
+first result does not contain both facts. The code allows up to five model
+calls.
+
+![Agentic retrieval](retrieval-agentic.svg)
+
+## 5. Answer the question
+
+The answer model receives the question and the retrieved context:
+
+```text
+Question: Who is the mother of the director of film Polish-Russian War (Film)?
+Context: Polish-Russian War -> Xawery Żuławski -> Małgorzata Braunek
+Answer: Małgorzata Braunek
+```
+
+If retrieval returns no context, the answer is:
 
 ```text
 I could not find supporting context for this question.
 ```
 
-The four retrieval methods work as follows:
+## Evaluation
 
-- `text2cypher` reads the Neo4j schema and lets an LLM generate a Cypher query.
-  Neo4j runs the query and returns matching graph records.
-- `vector` embeds the question and searches `chunk_embeddings`. Its retrieval
-  query adds entity names from each chunk and graph paths of up to two edges.
-- `hybrid` searches both `chunk_embeddings` and `chunk_fulltext`. It adds the
-  same entity names and graph paths as `vector`.
-- `agentic` gives an agent both a vector-search tool and a Cypher-search tool.
-  The agent must use one tool before it can answer. After it sees evidence, it
-  can refine the search or stop. The code limits the agent to five model calls.
+The optional DeepEval run scores the graph, retrieved context, and final answer
+separately. See the [evaluation reference](evaluation.md) for the full
+contract.
 
-The answer model receives the question and the retrieved context. It writes the
-final answer. The app shows the answer and lets the reader open every returned
-context item.
+## Configuration
 
-## How evaluation works
+`GraphRAG.from_config()` reads settings from `config.toml` and credentials from
+`.env`.
 
-Evaluation is optional in the app. The `Score with DeepEval` checkbox controls
-whether the app runs the evaluation functions.
-
-### Graph evaluation
-
-`evaluate_construction(...)` compares the graph's entity relationships with two
-contexts:
-
-- all source passages for the record;
-- only the dataset's supporting passages.
-
-It asks an LLM judge to score groundedness, completeness, and supporting
-evidence coverage. The code also reads graph counts such as entities,
-relationships, relation types, duplicate names, isolated entities, and
-self-loops.
-
-### Retrieval evaluation
-
-`evaluate_retrieval(...)` keeps the first five returned items by default. It
-compares them with the record's supporting sentences and scores contextual
-precision, contextual recall, and contextual relevancy.
-
-### Answer evaluation
-
-`evaluate_answer(...)` checks the generated answer against the expected answer
-and its aliases. It also scores answer relevancy and correctness. The code gives
-the metric the dataset's supporting sentences as `context` and the returned
-items as `retrieval_context`. Faithfulness therefore checks the answer against
-the gold supporting sentences. When no returned context exists, it reports that
-faithfulness was not scored.
-
-The exact alias check is stricter than the answer judge. It requires the full
-normalized answer to equal the expected answer or an alias. A correct answer
-with extra explanation can fail the exact check and still receive a good judge
-score.
-
-## Configuration used by the code
-
-`GraphRAG.from_config()` reads non-sensitive settings from `config.toml` and
-loads credentials from `.env`.
-
-- The chat model is `gpt-5.6-luna` with medium reasoning effort.
-- The embedding model is `text-embedding-3-small`.
-- Neo4j connection details come from `NEO4J_URI` and `NEO4J_AUTH`.
-- Model and embedding timeouts come from `config.toml`.
+- Chat model: `gpt-5.6-luna`, with medium reasoning effort.
+- Embedding model: `text-embedding-3-small`.
+- Neo4j connection: `NEO4J_URI` and `NEO4J_AUTH`.
+- Timeouts: `config.toml`.
 
 ## Code map
 
-- [`streamlit_app.py`](../streamlit_app.py) provides the controls and displays the run.
-- [`graphrag/graph_rag.py`](../graphrag/graph_rag.py) creates the clients and exposes `construct` and `answer`.
-- [`graphrag/construction/construction.py`](../graphrag/construction/construction.py) builds graphs and search indexes.
-- [`graphrag/construction/default_extraction.py`](../graphrag/construction/default_extraction.py) selects open-ended extraction.
-- [`graphrag/construction/ontology_guided.py`](../graphrag/construction/ontology_guided.py) defines the guided schema and rules.
-- [`graphrag/retrieval/answering.py`](../graphrag/retrieval/answering.py) selects retrievers and generates answers.
-- [`graphrag/retrieval/retrievers.py`](../graphrag/retrieval/retrievers.py) defines vector, hybrid, and Cypher retrieval.
-- [`graphrag/retrieval/agentic.py`](../graphrag/retrieval/agentic.py) defines the agent that chooses search tools.
-- [`graphrag/evals/construction.py`](../graphrag/evals/construction.py) evaluates graphs and answers.
-- [`graphrag/evals/retrieval.py`](../graphrag/evals/retrieval.py) evaluates retrieved context.
+- [`streamlit_app.py`](../streamlit_app.py) runs the app.
+- [`graphrag/graph_rag.py`](../graphrag/graph_rag.py) exposes construction and answering.
+- [`graphrag/construction/`](../graphrag/construction/) builds graphs and indexes.
+- [`graphrag/retrieval/`](../graphrag/retrieval/) selects retrievers and answers questions.
+- [`graphrag/evals/`](../graphrag/evals/) scores graphs, context, and answers.

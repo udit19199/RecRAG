@@ -1,14 +1,19 @@
 # 2WikiMultiHopQA experiment
 
+This note records the five-record study. See [Findings](findings.md) for the
+current interpretation and [Experimental methodology](methodology.md) for the
+comparison rules.
+
 2WikiMultiHopQA tests questions that need more than one step of reasoning. The
 answer may require a fact about one page and a second fact about a related page.
-The current dataset module reads the `dev.json` file and keeps the source pages,
-supporting facts, evidence triples, and expected answer. During evaluation, the
-module also resolves answer aliases from `id_aliases.json`.
+The dataset module reads source pages, supporting facts, evidence triples, and
+the expected answer from `dev.json`. It also resolves answer aliases from
+`id_aliases.json`.
 
-The scores in this document came from the supplied experiment notes. The
-repository contains the loader and evaluation code, but I did not find a
-committed 2Wiki result report.
+The scores in this document came from the saved five-record report at
+[`results/recrag/2026090905_report.pdf`](../results/recrag/2026090905_report.pdf).
+The repository also contains the loader and evaluation code used by the active
+GraphRAG path.
 
 ## Example question
 
@@ -24,31 +29,33 @@ steps needed to reach it:
 
 ![2WikiMultiHopQA example record](2wikimultihopqa-example-record.png)
 
-## What the experiment changes
+## Methods
 
-The experiment changes two parts of the system separately.
+### Construction
 
-Construction changes how source text becomes a graph. Retrieval changes how the
-system searches that graph for context.
-
-### Construction methods
+```text
+source pages -> [standard | ontology_guided] -> Neo4j graph
+```
 
 - **Standard** uses the default `neo4j-graphrag` extraction schema and prompt.
 - **Ontology-guided** gives the extractor fixed top-level kinds such as Person,
   Organization, Place, CreativeWork, Event, Concept, and Thing. It still allows
   additional kinds and relationships.
 
-The comparison asks whether naming common entity kinds and extraction rules
-helps the graph capture the source facts.
+The comparison asks whether the guided rules improve the graph.
 
-### Retrieval methods
+### Retrieval
 
-| Method | What the code does | Why it exists |
-| --- | --- | --- |
-| `text2cypher` | Gives the graph schema to an LLM. The retriever generates a Cypher query and runs it against Neo4j. | Tests direct graph queries for relationship-heavy questions. |
-| `agentic` | Gives an agent a vector-search tool and a Cypher-search tool. The agent can review results and refine the search. | Tests whether the agent can choose the useful search type. |
-| `vector` | Searches the `chunk_embeddings` index for text with similar meaning. It adds linked entities and graph paths to each result. | Tests semantic search with graph context. |
-| `hybrid` | Searches both the vector index and the `chunk_fulltext` index. It adds the same graph context as vector search. | Tests semantic search together with exact-word search. |
+```text
+question -> [text2cypher | agentic | vector | hybrid] -> context -> answer
+```
+
+| Method | What the code does |
+| --- | --- |
+| `text2cypher` | Gives the schema to an LLM. The LLM writes a read-only Cypher query. |
+| `agentic` | Lets an agent choose vector search or Cypher search and refine the query. |
+| `vector` | Searches `chunk_embeddings` and adds entities and graph paths. |
+| `hybrid` | Searches `chunk_embeddings` and `chunk_fulltext`, then adds graph context. |
 
 ![2WikiMultiHopQA retrieval methods](2wikimultihopqa-retrieval-methods.png)
 
@@ -97,9 +104,10 @@ whether the answer matches the expected answer or an alias.
 ## Faithfulness and exact matching
 
 The answer evaluator gives DeepEval the dataset's supporting sentences as
-`context` and the returned items as `retrieval_context`. The faithfulness metric
-therefore checks the answer against the gold supporting sentences. The
-experiment did not score faithfulness when retrieval returned no context.
+`context` and the returned items as `retrieval_context`. DeepEval's faithfulness
+metric checks the answer against `retrieval_context`, so it uses the passages
+returned by retrieval. The experiment did not score faithfulness when retrieval
+returned no context.
 
 The recorded faithfulness scores were:
 

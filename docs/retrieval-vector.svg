@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1900 210" role="img" aria-labelledby="title desc">
+  <title id="title">Vector retrieval</title>
+  <desc id="desc">The question is embedded and searched in chunk_embeddings. Matching chunks receive entity names and two-hop graph paths before the answer model writes the final answer.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1e1e1e"/></marker>
+    <marker id="blue-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#228be6"/></marker>
+  </defs>
+  <rect width="1900" height="210" fill="#ffffff"/>
+  <text x="28" y="30" font-family="Comic Sans MS, Segoe Print, cursive" font-size="22" font-weight="700" fill="#1e1e1e">Vector retrieval</text>
+  <g font-family="Comic Sans MS, Segoe Print, cursive" font-size="16" text-anchor="middle">
+    <rect x="30" y="76" width="160" height="74" rx="16" fill="#e3fafc" stroke="#15aabf" stroke-width="2"/><text x="110" y="120">Question</text>
+    <rect x="260" y="76" width="210" height="74" rx="16" fill="#e7f5ff" stroke="#228be6" stroke-width="2"/><text x="365" y="120">Embed question</text>
+    <rect x="540" y="76" width="240" height="74" rx="16" fill="#ebfbee" stroke="#40c057" stroke-width="2"/><text x="660" y="120">chunk_embeddings</text>
+    <rect x="850" y="76" width="210" height="74" rx="16" fill="#f8f9fa" stroke="#868e96" stroke-width="2"/><text x="955" y="120">Matching chunks</text>
+    <rect x="1130" y="76" width="280" height="74" rx="16" fill="#e7f5ff" stroke="#228be6" stroke-width="2"/><text x="1270" y="112">Entities and 2-hop</text><text x="1270" y="132">paths</text>
+    <rect x="1480" y="76" width="190" height="74" rx="16" fill="#e7f5ff" stroke="#228be6" stroke-width="2"/><text x="1575" y="120">Answer model</text>
+  </g>
+  <ellipse cx="1790" cy="113" rx="80" ry="40" fill="#f3f0ff" stroke="#7950f2" stroke-width="2"/><text x="1790" y="119" text-anchor="middle" font-family="Comic Sans MS, Segoe Print, cursive" font-size="15">Final answer</text>
+  <g fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#arrow)" stroke-linecap="round"><path d="M190 113 H260"/><path d="M470 113 H540"/><path d="M780 113 H850"/><path d="M1060 113 H1130"/><path d="M1410 113 H1480"/><path d="M1670 113 H1710"/></g>
+  <g font-family="Comic Sans MS, Segoe Print, cursive" font-size="13" fill="#1e1e1e" text-anchor="middle"><text x="225" y="103">query</text><text x="505" y="103" fill="#228be6">similarity</text><text x="815" y="103">top chunks</text><text x="1095" y="103">add graph context</text><text x="1445" y="103">context</text></g>
+</svg>

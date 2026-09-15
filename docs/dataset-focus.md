@@ -1,5 +1,9 @@
 # Dataset focus
 
+This page preserves the dataset comparison table. It is not the project
+roadmap. See [Research roadmap](roadmap.md) for the active sequence and the
+current decision point.
+
 The project notes name six datasets for the next phase. They cover different
 document types and different kinds of answers. This matters because a method
 that works on short Wikipedia passages may not work on tables or legal text.
