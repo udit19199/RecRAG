@@ -1,4 +1,4 @@
-# RecRAG meeting brief
+# RecRAG research
 
 RecRAG is a collaboration between HPE and JECRC University. We are testing
 which GraphRAG setup gives the best answers to questions that need facts from
