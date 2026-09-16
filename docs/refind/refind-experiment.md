@@ -1,7 +1,6 @@
 # REFinD experiment notes
 
-This page is a preserved historical source note. The project history and its
-lessons are summarized in [Research history](history.md).
+This page is a preserved historical source note.
 
 REFinD is a historical experiment. The current code has no REFinD loader or
 REFinD run path. The notes below preserve what the supplied experiment material
