@@ -124,6 +124,3 @@ this strict check.
 
 These results cover five records. They compare the eight combinations inside
 this run. They do not establish a ranking for every 2WikiMultiHopQA question.
-The [findings page](findings.md) records the current provisional
-interpretation, and the [experiment registry](experiment-registry.md) lists the
-saved runs.

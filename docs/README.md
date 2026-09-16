@@ -198,5 +198,3 @@ a larger 2WikiMultiHopQA sample.
 - [2WikiMultiHopQA results](2wikimultihop.md) preserves the saved five-record
   result tables.
 - [Cost and model estimates](api-cost-estimate.md) explains the token and cost breakdown.
-- [Findings](findings.md) records the saved results.
-- [Experimental methodology](methodology.md) defines the controls and completion rules.
