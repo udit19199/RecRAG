@@ -42,8 +42,8 @@ Supporting facts:
 | --- | --- |
 | `text2cypher` | The AI reads the graph structure and writes a Neo4j query. Neo4j runs that query and returns the matching graph records. Example: For "Who founded the company acquired by X?", the AI follows the founder and acquisition relationships. |
 | `agentic` | The AI chooses between two tools: vector search or a graph query. It can review the first result and run another search with a better question. Example: It may find related text first, then use a graph query to confirm the relationship. |
-| `vector` | The system turns the question into a number-based meaning pattern. It compares that pattern with stored text chunks and returns the chunks with the closest meaning. Example: "How did the company grow?" can find "The company expanded into new markets." |
-| `hybrid` | It runs two searches together: one by meaning and one by exact words. It combines both result sets, then adds related entities and graph facts from Neo4j. Example: For "What did HPE acquire in 2022?", it searches both related content and the exact terms `HPE` and `2022`. |
+| [`vector_cypher`](https://neo4j.com/docs/neo4j-graphrag-python/current/user_guide_rag.html#vector-cypher-retriever) | The system turns the question into a number-based meaning pattern. It compares that pattern with stored text chunks and uses a Cypher query to add graph context. Example: "How did the company grow?" can find "The company expanded into new markets." |
+| [`hybrid_cypher`](https://neo4j.com/docs/neo4j-graphrag-python/current/user_guide_rag.html#hybrid-cypher-retrievers) | It runs two searches together: one by meaning and one by exact words. It combines both result sets, then uses a Cypher query to add related entities and graph facts from Neo4j. Example: For "What did HPE acquire in 2022?", it searches both related content and the exact terms `HPE` and `2022`. |
 
 ## Construction results
 
@@ -86,12 +86,12 @@ five returned items.
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | Standard | `text2cypher` | 0.60 | 0.30 | 0.60 | 1.00 | 0.60 | 0.67 | 1/5 |
 | Standard | `agentic` | 0.87 | 1.00 | 0.13 | 1.00 | 1.00 | 1.00 | 0/5 |
-| Standard | `vector` | 0.94 | 1.00 | 0.15 | 1.00 | 1.00 | 1.00 | 1/5 |
-| Standard | `hybrid` | 0.92 | 1.00 | 0.13 | 1.00 | 1.00 | 1.00 | 1/5 |
+| Standard | `vector_cypher` | 0.94 | 1.00 | 0.15 | 1.00 | 1.00 | 1.00 | 1/5 |
+| Standard | `hybrid_cypher` | 0.92 | 1.00 | 0.13 | 1.00 | 1.00 | 1.00 | 1/5 |
 | Ontology-guided | `text2cypher` | 0.20 | 0.00 | 0.20 | 0.20 | 0.20 | 1.00 | 0/5 |
 | Ontology-guided | `agentic` | 0.91 | 0.80 | 0.21 | 1.00 | 0.98 | 0.80 | 0/5 |
-| Ontology-guided | `vector` | 0.86 | 1.00 | 0.19 | 1.00 | 0.98 | 1.00 | 0/5 |
-| Ontology-guided | `hybrid` | 0.94 | 1.00 | 0.12 | 1.00 | 0.98 | 1.00 | 1/5 |
+| Ontology-guided | `vector_cypher` | 0.86 | 1.00 | 0.19 | 1.00 | 0.98 | 1.00 | 0/5 |
+| Ontology-guided | `hybrid_cypher` | 0.94 | 1.00 | 0.12 | 1.00 | 0.98 | 1.00 | 1/5 |
 
 - Contextual precision: Relevant results appear higher in the ranked context.
 - Contextual recall: How much required supporting information was retrieved.
@@ -103,11 +103,11 @@ five returned items.
 
 - Standard:
   - `text2cypher` faithfulness: `0.67` on 3 cases with context.
-  - `agentic`, `vector`, and `hybrid`: `1.00`.
+  - `agentic`, `vector_cypher`, and `hybrid_cypher`: `1.00`.
 - Ontology-guided:
   - `text2cypher` faithfulness: `1.00` on 1 case with context.
   - `agentic`: `0.80`.
-  - `vector` and `hybrid`: `1.00`.
+  - `vector_cypher` and `hybrid_cypher`: `1.00`.
 
 Faithfulness is not scored when retrieval returns no context. Exact normalized
 answer matches were low because this check requires the full answer to equal the
@@ -117,8 +117,8 @@ this strict check.
 ## What this run shows
 
 - Ontology-guided construction scored higher on all three construction checks.
-- Standard vector and hybrid retrieval had 1.00 contextual recall and 1.00 answer correctness on average.
-- Standard vector and ontology-guided hybrid tied for the highest average contextual precision at 0.94.
+- Standard `vector_cypher` and `hybrid_cypher` retrieval had 1.00 contextual recall and 1.00 answer correctness on average.
+- Standard `vector_cypher` and ontology-guided `hybrid_cypher` tied for the highest average contextual precision at 0.94.
 - `text2cypher` was the weakest retrieval method in this run.
 - The alias check is strict. Longer correct answers can fail the full-answer match.
 

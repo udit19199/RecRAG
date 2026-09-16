@@ -3,14 +3,17 @@
 Retrieval selects context from the Neo4j graph for one question. The public
 `GraphRAG.answer()` method calls `answer_question()` in
 [`graphrag/retrieval/answering.py`](../../graphrag/retrieval/answering.py).
+This page calls the two graph-aware methods `vector_cypher` and
+`hybrid_cypher`, following Neo4j's [`VectorCypherRetriever`](https://neo4j.com/docs/neo4j-graphrag-python/current/user_guide_rag.html#vector-cypher-retriever)
+and [`HybridCypherRetriever`](https://neo4j.com/docs/neo4j-graphrag-python/current/user_guide_rag.html#hybrid-cypher-retrievers) names.
 
 ```mermaid
 flowchart TD
     A[Question] --> B{Selected retrieval methods}
     B --> C[text2cypher]
     B --> D[agentic]
-    B --> E[vector]
-    B --> F[hybrid]
+    B --> E[vector_cypher]
+    B --> F[hybrid_cypher]
     C --> G[Neo4j context]
     D --> G
     E --> G
@@ -49,8 +52,8 @@ Responses API is enabled in `GraphRAG.from_config()`.
 | --- | --- | --- |
 | `text2cypher` | `Text2CypherRetriever` | Gives the schema to an LLM, which writes and runs a read-only Cypher query. |
 | `agentic` | `ToolsRetriever` with a LangChain agent | Lets an agent choose vector search or Text2Cypher search and refine the question after reading results. |
-| `vector` | `VectorCypherRetriever` | Searches the `chunk_embeddings` index by embedding similarity and adds graph context. |
-| `hybrid` | `HybridCypherRetriever` | Searches both `chunk_embeddings` and `chunk_fulltext`, then adds graph context. |
+| `vector_cypher` | [`VectorCypherRetriever`](../../graphrag/retrieval/retrievers.py#L74-L82) | Searches the `chunk_embeddings` index by embedding similarity and adds graph context. See the [Neo4j Vector Cypher Retriever guide](https://neo4j.com/docs/neo4j-graphrag-python/current/user_guide_rag.html#vector-cypher-retriever). |
+| `hybrid_cypher` | [`HybridCypherRetriever`](../../graphrag/retrieval/retrievers.py#L86-L95) | Searches both `chunk_embeddings` and `chunk_fulltext`, then adds graph context. See the [Neo4j Hybrid Cypher Retrievers guide](https://neo4j.com/docs/neo4j-graphrag-python/current/user_guide_rag.html#hybrid-cypher-retrievers). |
 
 ## Text2Cypher retrieval
 
@@ -72,7 +75,7 @@ result, it can call the other tool with a refined question or stop. The
 `ModelCallLimitMiddleware` allows up to five model calls for one retrieval.
 The retriever returns the artifacts from tool messages as Neo4j records.
 
-## Vector and hybrid retrieval
+## Vector Cypher and hybrid Cypher retrieval
 
 Both methods use a Cypher retrieval query that returns four values for each
 matching chunk:
@@ -88,9 +91,9 @@ The graph query follows entity paths up to two relationships. It excludes the
 internal `FROM_CHUNK`, `NEXT_CHUNK`, and `FROM_DOCUMENT` relationships. It
 limits the graph context to 25 paths for each chunk.
 
-The vector method uses `chunk_embeddings`. The hybrid method combines that
-index with `chunk_fulltext`. Both methods use the configured embedder for their
-vector search.
+The `vector_cypher` method uses `chunk_embeddings`. The `hybrid_cypher` method
+combines that index with `chunk_fulltext`. Both methods use the configured
+embedder for vector search.
 
 ## Storage and boundaries
 
