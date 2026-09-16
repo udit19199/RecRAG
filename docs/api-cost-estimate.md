@@ -15,6 +15,10 @@ Prices: [Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna),
 The estimate uses the current average of 4.66 chunks per record. Costs below are
 planning estimates, not provider usage logs.
 
+The rows below are the per-graph and per-result inputs for one record run. The
+current full setup combines them across both construction methods and all four
+retrieval methods.
+
 | Process | Luna input / output / total | DeepSeek input / output / total | Luna cost | DeepSeek cost |
 | --- | --- | --- | ---: | ---: |
 | Standard construction | 9.99k / 8.49k / **18.48k** | 9.99k / 12.74k / **22.73k** | $0.0122 | $0.0106 |
@@ -57,11 +61,11 @@ Each alternative starts from the current full setup. Do not combine rows. Saving
 are shown as Luna input/output tokens saved per record. DeepSeek output savings
 are 1.5x higher.
 
-The three-method scenario keeps agentic, vector, and hybrid retrieval. It drops
-Text2Cypher because it was the weakest method in the result images.
+The three-method scenario keeps Text2Cypher, agentic, and vector retrieval. It
+drops hybrid.
 
 | Plan | Saved per record, Luna input / output | Luna total tokens / record | DeepSeek total tokens / record | 4k Luna / DeepSeek | 5k Luna / DeepSeek |
 | --- | --- | ---: | ---: | ---: | ---: |
 | Current full setup | — | 292.35k | 343.59k | $643.80 / $572.91 | $804.75 / $716.13 |
 | LLM evaluation on 10% sample | 127.62k / 73.01k | 91.72k | 106.46k | $191.27 / $171.49 | $239.08 / $214.36 |
-| Two constructions and 3 retrieval methods only | 40.00k / 21.00k | **231.35k** | **272.09k** | **$511.00 / $454.55** | **$638.75 / $568.18** |
+| Two constructions and 3 retrieval methods only | 36.00k / 20.10k | **236.25k** | **277.44k** | **$518.52 / $461.63** | **$648.15 / $577.04** |
