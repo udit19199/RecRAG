@@ -18,23 +18,6 @@ flowchart LR
     E --> F[Saved scores]
 ```
 
-## Run at a glance
-
-| Item | Value |
-| --- | --- |
-| Data | `2wikimultihopqa/dev.json` |
-| Records | 5 |
-| Questions per record | 1 |
-| Source pages per record | 10 |
-| Graph construction methods | Standard, ontology-guided |
-| Retrieval methods | Text2Cypher, agentic, vector, hybrid |
-| Graphs built | 10 |
-| Retrieval and answer cases | 40 |
-| Run errors | 0 |
-| Chat and judge model | `gpt-5.6-terra`, reasoning effort `xhigh` |
-| Embedding model | `text-embedding-3-small`, 1,536 dimensions |
-| Retrieved items scored | Top 5 |
-
 ## Example record
 
 - Record ID: `8813f87c0bdd11eba7f7acde48001122`
