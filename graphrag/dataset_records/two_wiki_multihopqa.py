@@ -32,9 +32,7 @@ def _aliases_by_id() -> dict[str, tuple[str, ...]]:
     with aliases_path.open() as lines:
         for line in lines:
             entry = json.loads(line)
-            aliases[entry["Q_id"]] = tuple(
-                entry["aliases"] + entry["demonyms"]
-            )
+            aliases[entry["Q_id"]] = tuple(entry["aliases"] + entry["demonyms"])
     return aliases
 
 
@@ -60,12 +58,8 @@ def load_records(limit: int) -> list[TwoWikiRecord]:
             supporting_facts=tuple(
                 (title, int(index)) for title, index in record["supporting_facts"]
             ),
-            evidence_triples=tuple(
-                tuple(triple) for triple in record["evidences"]
-            ),
-            evidence_ids=tuple(
-                tuple(triple) for triple in record["evidences_id"]
-            ),
+            evidence_triples=tuple(tuple(triple) for triple in record["evidences"]),
+            evidence_ids=tuple(tuple(triple) for triple in record["evidences_id"]),
         )
         for record in records[:limit]
     ]

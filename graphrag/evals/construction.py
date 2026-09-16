@@ -35,11 +35,21 @@ class ResponsesOpenAIModel(DeepEvalBaseLLM):
         return self._model
 
     def generate(self, prompt: str, schema=None):
-        response = self._model.with_structured_output(schema, method="function_calling").invoke(prompt) if schema else self._model.invoke(prompt)
+        response = (
+            self._model.with_structured_output(
+                schema, method="function_calling"
+            ).invoke(prompt)
+            if schema
+            else self._model.invoke(prompt)
+        )
         return (response if schema else response.content), None
 
     async def a_generate(self, prompt: str, schema=None):
-        model = self._model.with_structured_output(schema, method="function_calling") if schema else self._model
+        model = (
+            self._model.with_structured_output(schema, method="function_calling")
+            if schema
+            else self._model
+        )
         response = await model.ainvoke(prompt)
         return (response if schema else response.content), None
 
@@ -294,7 +304,7 @@ def evaluate_answer(
                     SingleTurnParams.ACTUAL_OUTPUT,
                     SingleTurnParams.EXPECTED_OUTPUT,
                 ],
-                    model=judge,
+                model=judge,
                 threshold=None,
             ),
             LLMTestCase(

@@ -10,20 +10,18 @@ from neo4j_graphrag.schema import get_schema
 
 from .agentic import build_agentic_retriever
 from .retrievers import (
-    build_hybrid_retriever,
+    build_entity_vector_retriever,
     build_text2cypher_retriever,
     build_vector_retriever,
 )
 
 NO_CONTEXT = "I could not find supporting context for this question."
-RetrievalMethod = Literal[
-    "text2cypher", "agentic", "vector", "hybrid"
-]
+RetrievalMethod = Literal["text2cypher", "agentic", "vector", "entity_vector"]
 RETRIEVAL_METHODS: list[RetrievalMethod] = [
     "text2cypher",
     "agentic",
     "vector",
-    "hybrid",
+    "entity_vector",
 ]
 
 
@@ -53,8 +51,8 @@ def answer_question(
             retriever = build_vector_retriever(
                 driver=driver, embedder=embedder, database=database
             )
-        elif method == "hybrid":
-            retriever = build_hybrid_retriever(
+        elif method == "entity_vector":
+            retriever = build_entity_vector_retriever(
                 driver=driver, embedder=embedder, database=database
             )
         elif method == "agentic":
