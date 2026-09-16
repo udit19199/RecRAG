@@ -6,7 +6,7 @@ The next study is a larger 2WikiMultiHopQA run. It will repeat the complete
 2 × 4 matrix:
 
 - `standard` and `ontology_guided` construction;
-- `text2cypher`, `agentic`, `vector`, and `hybrid` retrieval;
+- `text2cypher`, `agentic`, `vector`, and `entity_vector` retrieval;
 - the same answer model, embedding model, Neo4j setup, and evaluation rules.
 
 The sample must be larger than the completed five-record run. The exact sample

@@ -80,7 +80,7 @@ flowchart LR
     A[Question] --> B{text2cypher}
     A --> C[agentic]
     A --> D[vector]
-    A --> E[hybrid]
+    A --> E[entity_vector]
     B --> F[Retrieved context]
     C --> F
     D --> F
@@ -93,7 +93,7 @@ flowchart LR
 | `text2cypher` | Writes a read-only graph query that follows `film -> director -> mother`. |
 | `agentic` | Chooses vector search or Cypher search and can search again. |
 | `vector` | Finds chunks with similar meaning, then adds nearby graph facts. |
-| `hybrid` | Combines meaning search with exact-word search, then adds graph facts. |
+| `entity_vector` | Searches entity embeddings and returns their linked context. |
 
 The construction and retrieval details are in the [construction reference](graphrag/construction.md)
 and [retrieval reference](graphrag/retrieval.md).
@@ -102,7 +102,7 @@ and [retrieval reference](graphrag/retrieval.md).
 
 The current study runs all eight combinations:
 
-| | `text2cypher` | `agentic` | `vector` | `hybrid` |
+| | `text2cypher` | `agentic` | `vector` | `entity_vector` |
 | --- | --- | --- | --- | --- |
 | `standard` | run | run | run | run |
 | `ontology_guided` | run | run | run | run |
@@ -161,7 +161,7 @@ grows with the number of records and the number of combinations.
 
 The expensive part is often evaluation. It asks a model to judge each graph,
 retrieved result, and answer. Agentic retrieval also uses more model calls than
-vector or hybrid retrieval.
+vector or entity-vector retrieval.
 
 See [cost and model estimates](api-cost-estimate.md) for the breakdown.
 

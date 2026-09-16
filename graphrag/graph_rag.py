@@ -27,6 +27,8 @@ from .retrieval.answering import RetrievalMethod, answer_question
 
 DEFAULT_LLM_MODEL = "gpt-5.6-luna"
 DEFAULT_REASONING_EFFORT = "medium"
+LLMInput = str | list[LLMMessage]
+LLMHistory = list[LLMMessage] | MessageHistory | None
 
 
 class GraphRAGChatLLM(LLMBase):
@@ -38,16 +40,22 @@ class GraphRAGChatLLM(LLMBase):
 
     @staticmethod
     def _messages(
-        input: str | list[LLMMessage],
-        history: list[LLMMessage] | MessageHistory | None,
+        input: LLMInput,
+        history: LLMHistory,
         system_instruction: str | None,
-    ) -> list[dict[str, Any]]:
+    ) -> list[LLMMessage]:
         if isinstance(input, list):
             messages = list(input)
         else:
-            previous = history.messages if isinstance(history, MessageHistory) else history or []
-            messages = [*previous, {"role": "user", "content": input}]
-        return ([{"role": "system", "content": system_instruction}] if system_instruction else []) + messages
+            previous = (
+                history.messages
+                if isinstance(history, MessageHistory)
+                else history or []
+            )
+            messages = [*previous, LLMMessage(role="user", content=input)]
+        if system_instruction:
+            messages.insert(0, LLMMessage(role="system", content=system_instruction))
+        return messages
 
     @staticmethod
     def _content(response: Any) -> str:
@@ -71,40 +79,96 @@ class GraphRAGChatLLM(LLMBase):
             },
         }
 
-    def _invoke(self, input: str | list[LLMMessage], history, system_instruction, response_format, **kwargs):
-        model = self._model.with_structured_output(response_format, method="function_calling") if response_format else self._model
-        return model.invoke(self._messages(input, history, system_instruction), **kwargs)
-
-    async def _ainvoke(self, input, history, system_instruction, response_format, **kwargs):
-        return await asyncio.to_thread(self._invoke, input, history, system_instruction, response_format, **kwargs)
-
-    def invoke(self, input, message_history=None, system_instruction=None, response_format=None, **kwargs):
-        try:
-            return LLMResponse(content=self._content(self._invoke(input, message_history, system_instruction, response_format, **kwargs)))
-        except Exception as exc:
-            raise LLMGenerationError(exc) from exc
-
-    async def ainvoke(self, input, message_history=None, system_instruction=None, response_format=None, **kwargs):
-        try:
-            response = await self._ainvoke(input, message_history, system_instruction, response_format, **kwargs)
-            return LLMResponse(content=self._content(response))
-        except Exception as exc:
-            raise LLMGenerationError(exc) from exc
-
-    def invoke_with_tools(self, input, tools, message_history=None, system_instruction=None):
-        try:
-            response = self._model.bind_tools([self._tool_schema(tool) for tool in tools]).invoke(
-                self._messages(input, message_history, system_instruction)
+    def _invoke(
+        self,
+        input: LLMInput,
+        history: LLMHistory,
+        system_instruction,
+        response_format,
+        **kwargs,
+    ):
+        model = (
+            self._model.with_structured_output(
+                response_format, method="function_calling"
             )
+            if response_format
+            else self._model
+        )
+        return model.invoke(
+            self._messages(input, history, system_instruction), **kwargs
+        )
+
+    def invoke(
+        self,
+        input: LLMInput,
+        message_history: LLMHistory = None,
+        system_instruction=None,
+        response_format=None,
+        **kwargs,
+    ):
+        try:
+            return LLMResponse(
+                content=self._content(
+                    self._invoke(
+                        input,
+                        message_history,
+                        system_instruction,
+                        response_format,
+                        **kwargs,
+                    )
+                )
+            )
+        except Exception as exc:
+            raise LLMGenerationError(exc) from exc
+
+    async def ainvoke(
+        self,
+        input: LLMInput,
+        message_history: LLMHistory = None,
+        system_instruction=None,
+        response_format=None,
+        **kwargs,
+    ):
+        return await asyncio.to_thread(
+            self.invoke,
+            input,
+            message_history,
+            system_instruction,
+            response_format,
+            **kwargs,
+        )
+
+    def invoke_with_tools(
+        self,
+        input: str,
+        tools: Sequence[Tool],
+        message_history: LLMHistory = None,
+        system_instruction=None,
+    ):
+        try:
+            response = self._model.bind_tools(
+                [self._tool_schema(tool) for tool in tools]
+            ).invoke(self._messages(input, message_history, system_instruction))
             return ToolCallResponse(
-                tool_calls=[ToolCall(name=call["name"], arguments=call["args"]) for call in response.tool_calls],
+                tool_calls=[
+                    ToolCall(name=call["name"], arguments=call["args"])
+                    for call in response.tool_calls
+                ],
                 content=self._content(response) or None,
             )
         except Exception as exc:
             raise LLMGenerationError(exc) from exc
 
-    async def ainvoke_with_tools(self, input, tools, message_history=None, system_instruction=None):
-        return await asyncio.to_thread(self.invoke_with_tools, input, tools, message_history, system_instruction)
+    async def ainvoke_with_tools(
+        self,
+        input: str,
+        tools: Sequence[Tool],
+        message_history: LLMHistory = None,
+        system_instruction=None,
+    ):
+        return await asyncio.to_thread(
+            self.invoke_with_tools, input, tools, message_history, system_instruction
+        )
 
 
 class GraphRAG:
@@ -135,7 +199,7 @@ class GraphRAG:
             auth=(username, password),
         )
         try:
-            answer_llm = ChatOpenAI(
+            chat_model = ChatOpenAI(
                 model=config["llm"].get("model", DEFAULT_LLM_MODEL),
                 timeout=config["llm"]["timeout"],
                 use_responses_api=True,
@@ -147,12 +211,12 @@ class GraphRAG:
             )
             return cls(
                 driver=driver,
-                llm=GraphRAGChatLLM(answer_llm),
+                llm=GraphRAGChatLLM(chat_model),
                 embedder=OpenAIEmbeddings(
                     model=config["embedding"]["model"],
                     timeout=config["embedding"]["timeout"],
                 ),
-                answer_llm=answer_llm,
+                answer_llm=chat_model,
                 embedding_dimensions=config["embedding"]["dimensions"],
             )
         except Exception:

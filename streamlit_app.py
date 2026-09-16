@@ -90,18 +90,24 @@ def render_construction_evaluation(evaluation):
 
 
 record_count = st.slider("Records to load", 1, 20, 2)
-selected_construction_methods = st.pills(
-    "Construction methods",
-    list(ConstructionMethod),
-    default=list(ConstructionMethod),
-    selection_mode="multi",
-) or []
-selected_retrieval_methods = st.pills(
-    "Retrieval methods",
-    RETRIEVAL_METHODS,
-    default=RETRIEVAL_METHODS,
-    selection_mode="multi",
-) or []
+selected_construction_methods = (
+    st.pills(
+        "Construction methods",
+        list(ConstructionMethod),
+        default=list(ConstructionMethod),
+        selection_mode="multi",
+    )
+    or []
+)
+selected_retrieval_methods = (
+    st.pills(
+        "Retrieval methods",
+        RETRIEVAL_METHODS,
+        default=RETRIEVAL_METHODS,
+        selection_mode="multi",
+    )
+    or []
+)
 score_with_deepeval = st.checkbox(
     "Score with DeepEval",
     value=True,
@@ -122,8 +128,8 @@ if run_clicked:
                 from graphrag.evals.construction import (
                     evaluate_answer,
                     evaluate_construction,
-                    read_graph_statistics,
                     read_entity_triples,
+                    read_graph_statistics,
                 )
                 from graphrag.evals.retrieval import evaluate_retrieval
             except ImportError:
@@ -215,7 +221,9 @@ if run_clicked:
                                 if retrieval_evaluation is not None:
                                     retrieval = retrieval_evaluation
                                     st.markdown("**Retrieval evaluation**")
-                                    st.caption(f"DeepEval on top {retrieval['top_k']} results")
+                                    st.caption(
+                                        f"DeepEval on top {retrieval['top_k']} results"
+                                    )
                                     render_metric_group(
                                         "Retrieval judge",
                                         retrieval["deepeval"],

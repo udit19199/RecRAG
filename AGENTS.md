@@ -35,7 +35,7 @@ There is no Makefile. Run from repository root:
 
 No tests are allowed in this repo. Do not add test files, test suites, or test
 frameworks. Use direct inspection for verification.
-This repo does not need lint or formatting checks.
+Run `uv run ruff format --check .` and `uv run ruff check .` for Python checks.
 
 ## Key Service Ports
 
@@ -74,7 +74,7 @@ the normal GraphRAG path.
 | Text to Cypher | `text2cypher` | Generates and runs a read-only Cypher query |
 | Agentic | `agentic` | Chooses between vector and Cypher search tools |
 | Vector | `vector` | Vector search with graph context |
-| Hybrid | `hybrid` | Vector and full-text search with graph context |
+| Entity vector | `entity_vector` | Searches entity embeddings with graph context |
 
 The deep GraphRAG interface is `graphrag/graph_rag.py`. Construction code
 lives in `graphrag/construction/`, retrieval code in

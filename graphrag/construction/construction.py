@@ -6,10 +6,12 @@ from dataclasses import dataclass
 from enum import StrEnum
 
 from neo4j import Driver
-from neo4j_graphrag.components.text_splitters.fixed_size_splitter import FixedSizeSplitter
+from neo4j_graphrag.components.text_splitters.fixed_size_splitter import (
+    FixedSizeSplitter,
+)
 from neo4j_graphrag.embeddings.base import Embedder
 from neo4j_graphrag.experimental.pipeline.kg_builder import SimpleKGPipeline
-from neo4j_graphrag.indexes import create_fulltext_index, create_vector_index
+from neo4j_graphrag.indexes import create_vector_index
 from neo4j_graphrag.llm import LLMBase
 
 from . import default_extraction, ontology_guided
@@ -53,6 +55,7 @@ def rebuild_graph(
         page_texts.append(f"Page: {page.title}\n{passages_text}")
     text = "\n\n".join(page_texts)
 
+    # Keep each entity-to-chunk embedding independently searchable.
     driver.execute_query(
         "CREATE DATABASE $name IF NOT EXISTS WAIT", name=database, database_="system"
     )
@@ -68,6 +71,18 @@ def rebuild_graph(
     )
     asyncio.run(pipeline.run_async(text=text))
 
+    driver.execute_query(
+        """
+        MATCH (entity:__Entity__)-[:FROM_CHUNK]->(chunk:Chunk)
+        WHERE chunk.embedding IS NOT NULL
+        CREATE (entity)-[:HAS_EMBEDDING]->(:EntityEmbedding {
+            text: chunk.text,
+            embedding: chunk.embedding
+        })
+        """,
+        database_=database,
+    )
+
     create_vector_index(
         driver,
         "chunk_embeddings",
@@ -78,11 +93,13 @@ def rebuild_graph(
         neo4j_database=database,
     )
 
-    create_fulltext_index(
+    create_vector_index(
         driver,
-        "chunk_fulltext",
-        label="Chunk",
-        node_properties=["text"],
+        "entity_embeddings",
+        label="EntityEmbedding",
+        embedding_property="embedding",
+        dimensions=embedding_dimensions,
+        similarity_fn="cosine",
         neo4j_database=database,
     )
 
