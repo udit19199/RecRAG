@@ -95,8 +95,8 @@ flowchart LR
 | `vector` | Finds chunks with similar meaning, then adds nearby graph facts. |
 | `hybrid` | Combines meaning search with exact-word search, then adds graph facts. |
 
-The full construction and retrieval diagrams are in the
-[system architecture](architecture.md).
+The construction and retrieval details are in the [construction reference](graphrag/construction.md)
+and [retrieval reference](graphrag/retrieval.md).
 
 ### The comparison matrix
 
@@ -141,7 +141,7 @@ Retrieval:  both supporting passages are returned.
 Answer:     Małgorzata Braunek.
 ```
 
-The [evaluation reference](evaluation.md) explains each metric and its limits.
+The [evaluation reference](graphrag/evals.md) explains each metric and its limits.
 
 ## Why cost is the bottleneck
 
@@ -189,8 +189,14 @@ a larger 2WikiMultiHopQA sample.
 
 ## Read next
 
-- [System architecture](architecture.md) shows each step with the film example.
-- [Evaluation reference](evaluation.md) explains the checks in detail.
+- [Graph construction reference](graphrag/construction.md) describes the two
+  graph-building methods and Neo4j indexes.
+- [Retrieval reference](graphrag/retrieval.md) describes the four retrieval
+  methods and answer flow.
+- [Evaluation reference](graphrag/evals.md) describes the graph, retrieval, and
+  answer checks.
+- [2WikiMultiHopQA results](2wikimultihop.md) preserves the saved five-record
+  result tables.
 - [Cost and model estimates](api-cost-estimate.md) explains the token and cost breakdown.
 - [Findings](findings.md) records the saved results.
 - [Experimental methodology](methodology.md) defines the controls and completion rules.

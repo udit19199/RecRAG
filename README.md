@@ -25,6 +25,7 @@ construction and retrieval methods on 2WikiMultiHopQA.
 
 - [Research overview](docs/README.md)
 - [Cost and model estimates](docs/api-cost-estimate.md)
-- [System architecture](docs/architecture.md)
-- [Evaluation reference](docs/evaluation.md)
-- [2WikiMultiHopQA experiment](docs/2wikimultihopqa-experiment.md)
+- [Graph construction](docs/graphrag/construction.md)
+- [Graph retrieval](docs/graphrag/retrieval.md)
+- [GraphRAG evaluations](docs/graphrag/evals.md)
+- [2WikiMultiHopQA results](docs/2wikimultihop.md)

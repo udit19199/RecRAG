@@ -55,7 +55,7 @@ These metrics are not one universal score. A graph can score well on source
 coverage while a retriever misses the path needed by the question. A retriever
 can return useful context while the answer model still makes a mistake.
 
-The detailed evaluator contract is in [Evaluation reference](evaluation.md).
+The detailed evaluator contract is in [Evaluation reference](graphrag/evals.md).
 
 ## Why the full run costs more
 
