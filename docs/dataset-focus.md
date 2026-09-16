@@ -37,8 +37,6 @@ current code for HotpotQA, FinQA, TAT-QA, LegalBench-RAG, or BioASQ.
 | LegalBench-RAG | Legal | Raw legal and contract text files | Yes | Not primarily generation QA | Exact relevant character spans | Retrieval-focused |
 | BioASQ | Biomedical | PubMed titles plus abstracts | Yes | Exact answer plus long-form ideal answer | Gold PubMed documents plus snippets | Concepts or RDF triples in some releases |
 
-![Dataset focus list](dataset-focus-list.png)
-
 ## What the columns mean
 
 - **Question** means the dataset provides a question for each example.
