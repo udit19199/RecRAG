@@ -44,5 +44,5 @@ current code for HotpotQA, FinQA, TAT-QA, LegalBench-RAG, or BioASQ.
 - **Gold evidence** means the dataset identifies text that supports the answer.
 - **Extra supervision** means the dataset provides more labels, such as a reasoning chain, table location, or answer type.
 
-REFinD is documented in [the historical experiment note](refind-experiment.md).
+REFinD is documented in [the historical experiment note](refind/refind-experiment.md).
 The repository guide also lists Hannon and FiNER-139 as historical datasets.

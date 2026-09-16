@@ -26,7 +26,7 @@ multi-record synthesis questions. The retrieval path was not fully preserved in
 the supplied material, so the experiment is evidence about an earlier idea,
 not a description of the active system.
 
-The original detailed note is [REFinD experiment](refind-experiment.md).
+The original detailed note is [REFinD experiment](refind/refind-experiment.md).
 
 ## FiNER-139
 
