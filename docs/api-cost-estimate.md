@@ -10,42 +10,65 @@
 Prices: [Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna),
 [DeepSeek on Fireworks](https://fireworks.ai/models/deepseek-ai/deepseek-v4p1-flash).
 
-| Assumption | Value |
+## Run at a glance
+
+The image-based 2Wiki run uses five records, two construction methods, and four
+retrieval methods. That produces 10 graphs and 40 retrieval-and-answer cases.
+
+| Item | Value |
 | --- | --- |
-| Input tokens | Same for both models |
-| Luna output and reasoning | 3x the earlier output estimate |
-| DeepSeek output and reasoning | 1.5x Luna |
+| Data | `2wikimultihopqa/dev.json` |
+| Records | 5 |
+| Questions per record | 1 |
+| Source pages per record | 10 |
+| Graph construction methods | Standard, ontology-guided |
+| Graphs built | 10 |
+| Retrieval methods | Text2Cypher, agentic, vector, hybrid |
+| Retrieval and answer cases | 40 |
+| Run errors | 0 |
+| Chat and judge model | `gpt-5.6-terra`, reasoning effort `xhigh` |
+| Embedding model | `text-embedding-3-small`, 1,536 dimensions |
+| Retrieved items scored | Top 5 |
 
-### Tokens and cost per record
+The estimate uses the current average of 4.66 chunks per record. Costs below are
+planning estimates, not provider usage logs.
 
-The estimate uses the current average of 4.66 chunks per record.
+## Construction results
 
-| Process | Luna input / output / total | DeepSeek input / output / total | Luna cost | DeepSeek cost |
-| --- | --- | --- | ---: | ---: |
-| Standard construction | 9.99k / 8.49k / **18.48k** | 9.99k / 12.74k / **22.73k** | $0.0122 | $0.0106 |
-| Ontology-guided construction | 7.68k / 6.99k / **14.67k** | 7.68k / 10.49k / **18.17k** | $0.0099 | $0.0086 |
-| Text-to-Cypher retrieval, per graph | 3.80k / 0.81k / **4.61k** | 3.80k / 1.22k / **5.02k** | $0.0017 | $0.0016 |
-| Agentic retrieval, per graph | 7.80k / 1.41k / **9.21k** | 7.80k / 2.12k / **9.92k** | $0.0033 | $0.0031 |
-| Vector retrieval, per graph | 1.80k / 0.36k / **2.16k** | 1.80k / 0.54k / **2.34k** | $0.0008 | $0.0008 |
-| Hybrid retrieval, per graph | 1.80k / 0.36k / **2.16k** | 1.80k / 0.54k / **2.34k** | $0.0008 | $0.0008 |
-| Construction evaluation, per graph | 6.10k / 1.80k / **7.90k** | 6.10k / 2.70k / **8.80k** | $0.0034 | $0.0031 |
-| Retrieval evaluation, per result | 10.40k / 5.25k / **15.65k** | 10.40k / 7.88k / **18.28k** | $0.0084 | $0.0075 |
-| Answer evaluation, per result | 5.80k / 4.44k / **10.24k** | 5.80k / 6.66k / **12.46k** | $0.0065 | $0.0057 |
+| Process | Units in five-record run | Luna input / output / total | DeepSeek input / output / total | Luna cost / unit | DeepSeek cost / unit |
+| --- | ---: | --- | --- | ---: | ---: |
+| Standard construction | 5 graphs | 9.99k / 8.49k / **18.48k** | 9.99k / 12.74k / **22.73k** | $0.0122 | $0.0106 |
+| Ontology-guided construction | 5 graphs | 7.68k / 6.99k / **14.67k** | 7.68k / 10.49k / **18.17k** | $0.0099 | $0.0086 |
+| Construction evaluation | 10 graph evaluations | 6.10k / 1.80k / **7.90k** | 6.10k / 2.70k / **8.80k** | $0.0034 | $0.0031 |
+
+## Retrieval and answer results
+
+| Process | Units in five-record run | Luna input / output / total | DeepSeek input / output / total | Luna cost / unit | DeepSeek cost / unit |
+| --- | ---: | --- | --- | ---: | ---: |
+| Text-to-Cypher retrieval and answer | 10 graph paths | 3.80k / 0.81k / **4.61k** | 3.80k / 1.22k / **5.02k** | $0.0017 | $0.0016 |
+| Agentic retrieval and answer | 10 graph paths | 7.80k / 1.41k / **9.21k** | 7.80k / 2.12k / **9.92k** | $0.0033 | $0.0031 |
+| Vector retrieval and answer | 10 graph paths | 1.80k / 0.36k / **2.16k** | 1.80k / 0.54k / **2.34k** | $0.0008 | $0.0008 |
+| Hybrid retrieval and answer | 10 graph paths | 1.80k / 0.36k / **2.16k** | 1.80k / 0.54k / **2.34k** | $0.0008 | $0.0008 |
+| Retrieval evaluation | 40 results | 10.40k / 5.25k / **15.65k** | 10.40k / 7.88k / **18.28k** | $0.0084 | $0.0075 |
+| Answer evaluation | 40 results | 5.80k / 4.44k / **10.24k** | 5.80k / 6.66k / **12.46k** | $0.0065 | $0.0057 |
 
 Evaluation costs more because it runs for every graph or result and sends the
 graph, source passages, retrieved context, or answer to the judge. A metric can
 also use several judge requests to return one score and reason.
 
-### Current full setup
+## Current full setup
 
 This includes both construction methods, all four retrieval methods, answer
 generation, and all evaluations.
 
 | Records | Luna tokens total | DeepSeek tokens total | Luna cost | DeepSeek cost |
 | ---: | ---: | ---: | ---: | ---: |
+| 5 | 1.46M | 1.72M | **$0.80** | **$0.72** |
 | 3,000 | 877.05M | 1,030.77M | **$482.85** | **$429.68** |
 | 4,000 | 1,169.40M | 1,374.36M | **$643.80** | **$572.91** |
 | 5,000 | 1,461.75M | 1,717.95M | **$804.75** | **$716.13** |
+
+The 5-record row is the run shown in the images. Larger rows are projections.
 
 Per record:
 
@@ -56,14 +79,15 @@ Per record:
 
 ## Cost reduction plan
 
-Each row includes the changes in the rows above it. Savings are shown as Luna
-input/output tokens saved per record. DeepSeek output savings are 1.5x higher.
+Each alternative starts from the current full setup. Do not combine rows. Savings
+are shown as Luna input/output tokens saved per record. DeepSeek output savings
+are 1.5x higher.
+
+The three-method scenario keeps agentic, vector, and hybrid retrieval. It drops
+Text2Cypher because it was the weakest method in the result images.
 
 | Plan | Saved per record, Luna input / output | Luna total tokens / record | DeepSeek total tokens / record | 4k Luna / DeepSeek | 5k Luna / DeepSeek |
 | --- | --- | ---: | ---: | ---: | ---: |
 | Current full setup | — | 292.35k | 343.59k | $643.80 / $572.91 | $804.75 / $716.13 |
-| Remove agentic retrieval | 48.00k / 22.20k | 222.15k | 262.29k | $498.84 / $442.75 | $623.55 / $553.44 |
-| Precompute standard schema | 2.30k / 1.50k | 218.35k | 257.74k | $489.80 / $434.79 | $612.25 / $543.49 |
-| Deterministic retrieval and answer scoring | 97.20k / 58.14k | 63.01k | 73.33k | $132.97 / $119.02 | $166.21 / $148.78 |
-| LLM evaluation on 10% sample | 10.98k / 3.24k | 48.79k | 57.49k | $108.63 / $96.53 | $135.79 / $120.66 |
-| Keep one construction and retrieval method | 19.68k / 8.90k | **20.21k** | **24.46k** | **$50.16 / $43.96** | **$62.70 / $54.95** |
+| LLM evaluation on 10% sample | 127.62k / 73.01k | 91.72k | 106.46k | $191.27 / $171.49 | $239.08 / $214.36 |
+| Two constructions and 3 retrieval methods only | 40.00k / 21.00k | **231.35k** | **272.09k** | **$511.00 / $454.55** | **$638.75 / $568.18** |
