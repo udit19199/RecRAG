@@ -35,16 +35,49 @@ flowchart LR
 | Embedding model | `text-embedding-3-small`, 1,536 dimensions |
 | Retrieved items scored | Top 5 |
 
+## Example record
+
+- Record ID: `8813f87c0bdd11eba7f7acde48001122`
+- Question: Who is the mother of the director of film *Polish-Russian War (Film)*?
+- Expected answer: Małgorzata Braunek
+
+Supporting facts:
+
+1. Page: `Polish-Russian War (film)`
+   Passage 1:
+
+   > Polish-Russian War (Wojna polsko-ruska) is a 2009 Polish film directed by Xawery Żuławski based on the novel Polish-Russian War under the white-red flag by Dorota Masłowska.
+
+2. Page: `Xawery Żuławski`
+   Passage 2:
+
+   > He is the son of actress Małgorzata Braunek and director Andrzej Żuławski.
+
+## Retrieval methods
+
+| Method | How it searches |
+| --- | --- |
+| `text2cypher` | The AI reads the graph structure and writes a Neo4j query. Neo4j runs that query and returns the matching graph records. Example: For "Who founded the company acquired by X?", the AI follows the founder and acquisition relationships. |
+| `agentic` | The AI chooses between two tools: vector search or a graph query. It can review the first result and run another search with a better question. Example: It may find related text first, then use a graph query to confirm the relationship. |
+| `vector` | The system turns the question into a number-based meaning pattern. It compares that pattern with stored text chunks and returns the chunks with the closest meaning. Example: "How did the company grow?" can find "The company expanded into new markets." |
+| `hybrid` | It runs two searches together: one by meaning and one by exact words. It combines both result sets, then adds related entities and graph facts from Neo4j. Example: For "What did HPE acquire in 2022?", it searches both related content and the exact terms `HPE` and `2022`. |
+
 ## Construction results
 
-These are average scores over the five records. Each judge score runs from 0 to
-1. G, C, and S in the per-record table mean groundedness, completeness, and
-supporting evidence coverage, in that order.
+Scores are averages over 5 records. Each judge score runs from 0 to 1. G, C,
+and S in the per-record table mean groundedness, completeness, and supporting
+evidence coverage, in that order.
 
 | Construction | Groundedness | Completeness | Supporting evidence coverage |
 | --- | ---: | ---: | ---: |
 | Standard | 0.56 | 0.44 | 0.34 |
 | Ontology-guided | 0.78 | 0.58 | 0.64 |
+
+- Groundedness: Are graph facts supported by the source text?
+- Completeness: How much source information did the graph capture?
+- Supporting evidence coverage: How much information from the dataset's supporting passages did the graph capture?
+
+Ontology-guided construction scored higher on all three metrics.
 
 | Record | Standard G / C / S | Ontology-guided G / C / S |
 | ---: | --- | --- |
@@ -63,23 +96,40 @@ The report also recorded these average graph size and quality checks:
 
 ## Retrieval and answer results
 
-These are average scores over the five records. Retrieval scores use the top
+All scores are averages over 5 records. Retrieval uses `top_k=5`, or the top
 five returned items.
 
 | Construction | Retrieval | Contextual precision | Contextual recall | Contextual relevancy | Answer relevancy | Correctness | Faithfulness | Alias match |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | Standard | `text2cypher` | 0.60 | 0.30 | 0.60 | 1.00 | 0.60 | 0.67 | 1/5 |
 | Standard | `agentic` | 0.87 | 1.00 | 0.13 | 1.00 | 1.00 | 1.00 | 0/5 |
-| Standard | `vector` | 0.94 | 1.00 | 0.14 | 1.00 | 1.00 | 1.00 | 1/5 |
+| Standard | `vector` | 0.94 | 1.00 | 0.15 | 1.00 | 1.00 | 1.00 | 1/5 |
 | Standard | `hybrid` | 0.92 | 1.00 | 0.13 | 1.00 | 1.00 | 1.00 | 1/5 |
 | Ontology-guided | `text2cypher` | 0.20 | 0.00 | 0.20 | 0.20 | 0.20 | 1.00 | 0/5 |
 | Ontology-guided | `agentic` | 0.91 | 0.80 | 0.21 | 1.00 | 0.98 | 0.80 | 0/5 |
 | Ontology-guided | `vector` | 0.86 | 1.00 | 0.19 | 1.00 | 0.98 | 1.00 | 0/5 |
 | Ontology-guided | `hybrid` | 0.94 | 1.00 | 0.12 | 1.00 | 0.98 | 1.00 | 1/5 |
 
-Faithfulness uses only cases with retrieved context. The report notes that a
-dash means no case in that row had a faithfulness score. The average table
-contains `1.00` for ontology-guided `text2cypher` because one case had context.
+- Contextual precision: Relevant results appear higher in the ranked context.
+- Contextual recall: How much required supporting information was retrieved.
+- Contextual relevancy: How relevant the retrieved context is to the question.
+- Answer relevancy: Whether the answer addresses the question.
+- Answer correctness: Whether the answer matches the expected answer and aliases.
+
+### Faithfulness and exact answer match
+
+- Standard:
+  - `text2cypher` faithfulness: `0.67` on 3 cases with context.
+  - `agentic`, `vector`, and `hybrid`: `1.00`.
+- Ontology-guided:
+  - `text2cypher` faithfulness: `1.00` on 1 case with context.
+  - `agentic`: `0.80`.
+  - `vector` and `hybrid`: `1.00`.
+
+Faithfulness is not scored when retrieval returns no context. Exact normalized
+answer matches were low because this check requires the full answer to equal the
+expected answer or an alias. Explanatory answers can be correct while failing
+this strict check.
 
 ## What this run shows
 
