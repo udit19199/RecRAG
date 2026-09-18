@@ -1,8 +1,7 @@
 # RecRAG documentation
 
-RecRAG compares retrieval architectures on multi-hop questions. The current
-implementation studies GraphRAG. The router study compares that family with
-Classical RAG and Agentic RAG.
+RecRAG compares retrieval architectures on multi-hop questions. The current implementation studies GraphRAG.
+The router study compares that family with Classical RAG and Agentic RAG.
 
 ## Research areas
 
@@ -24,6 +23,5 @@ Classical RAG and Agentic RAG.
 ## Research references
 
 - [Cost and model estimates](api-cost-estimate.md)
-- [Dataset focus](dataset-focus.md)
 - [RAG dataset papers](rag-dataset-papers.md)
 - [REFinD experiment](refind/refind-experiment.md)

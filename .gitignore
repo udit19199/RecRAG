@@ -73,6 +73,7 @@ security_best_practices_report.md
 
 # Local Milvus config stub
 user.yaml
+volumes/
 
 # Generated or local-only documentation
 docs/research/generated/
