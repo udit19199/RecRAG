@@ -1,24 +1,21 @@
 # Graph construction
 
-Graph construction turns [`SourcePage`](../../graphrag/construction/construction.py#L28-L31)
-values into Neo4j data. It has two separate choices:
+Graph construction turns source text into saved graph data.
+Source text means the page titles and passages for one test question.
+Saved graph data means the people, places, facts, and text slices stored in Neo4j for later search.
 
-- storage form, which is fixed for every run;
-- construction approach, which changes the extracted graph.
+There are two separate choices:
 
-For each record and construction approach, RecRAG creates one database and
-writes both storage forms. The public
-[`GraphRAG.construct()`](../../graphrag/graph_rag.py#L226-L241) method calls
-[`rebuild_graph()`](../../graphrag/construction/construction.py#L34-L106).
+- construction approach, which changes which facts get pulled out;
+- storage form, which is the same shape every time.
 
-The flow is the same for every dataset. Only the `SourcePage` values change.
-
-RecRAG uses that pipeline for both construction approaches.
+For each test question and each approach, RecRAG creates one Neo4j database and writes both storage forms into it.
+A database is one isolated store, so the two approaches never mix.
 
 ```mermaid
 flowchart LR
-    A[SourcePage title and passages] --> B[Join page text]
-    B --> C{ConstructionMethod}
+    A[Page titles and passages] --> B[Join into one text]
+    B --> C{Construction approach}
     C -->|standard| D["recrag-standard-{record-id}"]
     C -->|ontology_guided| E["recrag-ontology-guided-{record-id}"]
     D --> F[Graph structure]
@@ -29,9 +26,21 @@ flowchart LR
 
 ## Inputs and database isolation
 
-`SourcePage` has a `title` and a list of `passages`. The construction code joins
-the passages for each page with blank lines and prefixes the page with
-`Page: {title}`. It then joins all pages into one input string.
+A source page is one page with a title plus a list of text pieces.
+For example, title `Marie Curie` with two passages about her birth and her Nobel prize.
+
+Construction joins the input in two steps.
+First it adds a `Page: {title}` header to each page and joins that page's passages with blank lines.
+Then it joins all pages into one long text string.
+Small example:
+
+```text
+Page: Marie Curie
+
+She was born in Warsaw.
+
+She won the Nobel Prize in Physics.
+```
 
 In code, that transformation is:
 
@@ -42,28 +51,33 @@ page_texts.append(f"Page: {page.title}\n{passages_text}")
 text = "\n\n".join(page_texts)
 ```
 
-Each record and construction method uses a separate Neo4j database. The
-`database_name()` method creates names in this form:
+Each test question and construction approach gets its own database.
+The name has this form:
 
 ```text
 recrag-{construction-method}-{record-id}
 ```
 
 For example, `ontology_guided` becomes `ontology-guided` in the database name.
-The retrieval methods later query the database built for the selected
-construction method.
+Retrieval later reads from the database built for the selected approach.
+
+Code map: `SourcePage` holds the title and passages.
+`database_name()` builds the name above, and `GraphRAG.construct()` calls `rebuild_graph()`.
 
 ## Storage forms
 
-Each record and construction method uses a separate Neo4j database. Both
-storage forms below are stored in that same database.
+Every database holds the same two storage forms below.
+Storage form means how the data is saved, not which facts were found.
 
 ### Graph structure
 
-The pipeline stores one `Document` node for the combined input, one `Chunk`
-node per text chunk, and `__Entity__` nodes for extracted entities. It stores
-the source page titles and passages in `Chunk.text`; it does not create a node
-for each `SourcePage`.
+The graph has three node kinds.
+A `Document` node holds the whole combined input.
+A `Chunk` node holds one small text slice, about 1,000 characters with 100 characters of overlap.
+An `__Entity__` node holds one thing found in the text, such as a person or a place, with a name and properties.
+
+It stores the page titles and passages inside `Chunk.text`.
+It does not make one node per source page, because chunks are slices of the joined text, not whole pages.
 
 ```mermaid
 flowchart LR
@@ -80,17 +94,24 @@ flowchart LR
     E1 -->|extracted relationship| E2
 ```
 
-The `FROM_CHUNK`, `FROM_DOCUMENT`, and `NEXT_CHUNK` edges preserve source
-structure. The entity-to-entity edge stores an extracted fact, such as
-`BORN_IN`.
+The edges keep source order and meaning.
+`FROM_CHUNK` links an entity to the chunk where it was found.
+`FROM_DOCUMENT` links a chunk to the whole input.
+`NEXT_CHUNK` links one chunk to the next chunk.
+An extracted edge, such as `BORN_IN`, stores one fact between two entities.
+
+Code map: `SimpleKGPipeline` writes the `Document`, `Chunk`, `__Entity__`, and extracted-fact data.
 
 ### Search structures
 
-The construction code stores chunk embeddings on `Chunk` nodes and indexes them
-with `chunk_embeddings`. It also creates one `EntityEmbedding` node for each
-entity-to-chunk link that has a chunk embedding. It copies the linked chunk's
-text and embedding into that node, connects it to the entity with
-`HAS_EMBEDDING`, and indexes it with `entity_embeddings`.
+Search needs numbers, not just words.
+An embedding is a list of numbers that captures meaning, so similar texts get similar numbers.
+A vector index is a fast lookup over those numbers by cosine similarity, which is a closeness score between two embeddings.
+
+There are two search structures.
+Chunk search stores the embedding on each `Chunk` node and indexes it as `chunk_embeddings`.
+Entity search copies each linked chunk's text and embedding into a new `EntityEmbedding` node, links it to its entity with `HAS_EMBEDDING`, and indexes it as `entity_embeddings`.
+The copy exists so entity search can match entities directly without scanning all chunks.
 
 ```mermaid
 flowchart LR
@@ -109,78 +130,79 @@ flowchart LR
     end
 ```
 
-The solid arrow is a Neo4j relationship. The dotted arrows point to Neo4j
-indexes; indexes are database structures, not graph nodes.
+The solid arrow is a Neo4j relationship.
+The dotted arrows point to Neo4j indexes; indexes are database helpers, not graph nodes.
+
+Code map: the copy step runs one Cypher query after the pipeline.
+Then `create_vector_index()` builds both indexes.
 
 ## Construction approaches
 
-[`ConstructionMethod`](../../graphrag/construction/construction.py#L20-L25) has
-two values. Each approach writes the same two storage forms. `rebuild_graph()`
-selects the matching module and uses its `SCHEMA` and `EXTRACTION_PROMPT` to
-decide which nodes, properties, and relationships to write.
+A schema is the allowed list of node kinds, link kinds, and fields.
+Each approach below writes the same two storage forms.
+It only changes the schema and prompt used to decide which nodes, fields, and links to write.
 
 ```mermaid
 flowchart LR
-    A[One text input] --> B{ConstructionMethod}
+    A[One text input] --> B{Construction approach}
     B -->|standard| C[Infer one schema from the input]
-    B -->|ontology_guided| D[Use GraphSchema and extraction rules]
+    B -->|ontology_guided| D[Use fixed list plus extraction rules]
     C --> E[Write both storage forms]
     D --> E
 ```
 
 ### Standard extraction
 
-The [`standard` implementation](../../graphrag/construction/default_extraction.py#L1-L6)
-sets `SCHEMA = None` and uses
-`ERExtractionTemplate.DEFAULT_TEMPLATE` without local changes.
+Standard means no fixed list.
+The model reads the input, invents one guiding schema, and reuses it across all chunks.
+The schema sets the node labels, relationship types, and properties for that run.
+Use this when the kinds are not known ahead of time.
 
-In this approach, `SimpleKGPipeline` infers one guiding schema from the input
-text and uses it for extraction across all chunks. The schema determines the
-node labels, relationship types, and properties. See
-Neo4j's [schema parameter behavior](https://neo4j.com/docs/neo4j-graphrag-python/current/user_guide_kg_builder.html#schema-parameter-behavior).
+It uses the default entity-relationship extraction prompt with no local changes.
+
+Code map: the standard module sets `SCHEMA = None` and passes `ERExtractionTemplate.DEFAULT_TEMPLATE`.
+See Neo4j's [schema parameter behavior](https://neo4j.com/docs/neo4j-graphrag-python/current/user_guide_kg_builder.html#schema-parameter-behavior).
 
 ### Ontology-guided extraction
 
-The [`ontology_guided` implementation](../../graphrag/construction/ontology_guided.py#L11-L169)
-passes a `GraphSchema` with named node labels, relationship types, and node
-properties to the pipeline.
+Ontology-guided means a fixed starting list.
+An ontology is a fixed list of allowed kinds.
+The run passes named node labels, relationship types, and node fields to the pipeline, but it may still add new labels and link types when the text needs them.
 
-The schema lists these node labels:
-`Person`, `Organization`, `Place`, `CreativeWork`, `Event`, `Concept`, and
-`Thing`. It lists these relationship types:
-`BORN_IN`, `DIED_IN`, `LOCATED_IN`, `PART_OF`, `MEMBER_OF`, `CREATED_BY`,
-`SPOUSE_OF`, `CHILD_OF`, `AWARDED`, and `HAS_NATIONALITY`.
+The node labels are: `Person`, `Organization`, `Place`, `CreativeWork`, `Event`, `Concept`, and `Thing`.
+The relationship types are: `BORN_IN`, `DIED_IN`, `LOCATED_IN`, `PART_OF`, `MEMBER_OF`, `CREATED_BY`, `SPOUSE_OF`, `CHILD_OF`, `AWARDED`, and `HAS_NATIONALITY`.
 
-The schema allows additional node labels and relationship types. The prompt
-also requires every node to have a name, keeps properties grounded in the
-source text, uses `Thing` only as a fallback, and writes short uppercase
-snake-case relationship names. It tells the extractor to put one fact in each
-relationship and not add facts that the source does not state.
+The prompt adds these rules.
+Every node needs a name.
+Fill a field only when the text states it.
+Use `Thing` only when no narrower kind fits.
+Keep link names short and uppercase with underscores.
+Put one fact in each link, and add no facts outside the text.
+
+Code map: the ontology-guided module passes a `GraphSchema` plus an extended prompt.
 See Neo4j's [`GraphSchema` reference](https://neo4j.com/docs/neo4j-graphrag-python/current/types.html#graphschema).
 
 ## Write order and indexes
 
-[`rebuild_graph()`](../../graphrag/construction/construction.py#L34-L106) writes
-both storage forms in this order:
+Both storage forms are written in this order:
 
-1. It creates the Neo4j database for the record and construction approach.
-2. `SimpleKGPipeline` writes the `Document`, `Chunk`, `__Entity__`, and
-   extracted relationship data.
-3. The construction code copies each linked chunk's text and embedding into
-   `EntityEmbedding` nodes and connects them with `HAS_EMBEDDING`.
-4. It creates these indexes:
+1. Create the Neo4j database for the test question and approach.
+2. Write the `Document`, `Chunk`, `__Entity__`, and extracted-fact data.
+3. Copy each linked chunk's text and embedding into `EntityEmbedding` nodes and link them with `HAS_EMBEDDING`.
+4. Build these indexes:
 
 | Index | Neo4j label | Indexed property | Search type |
 | --- | --- | --- | --- |
 | `chunk_embeddings` | `Chunk` | `embedding` | Cosine vector search with the configured embedding dimensions. |
 | `entity_embeddings` | `EntityEmbedding` | `embedding` | Cosine vector search for linked entities. |
 
-The code waits for both indexes with `CALL db.awaitIndexes(60)` before the
-database is ready for retrieval.
+The code then waits for both indexes with `CALL db.awaitIndexes(60)`.
+That call blocks up to 60 seconds until the indexes are ready, so the database is ready for retrieval after it returns.
 
-See the [retrieval reference](retrieval.md) for how the graph and indexes are
-queried. See the [evaluation reference](evals.md) for the checks that run after
-construction.
+Code map: `rebuild_graph()` does all four steps in order.
+
+See the [retrieval reference](retrieval.md) for how the graph and indexes are queried.
+See the [evaluation reference](evals.md) for the checks that run after construction.
 
 ## Neo4j documentation
 

@@ -1,17 +1,14 @@
 # Router study
 
-The router is a research subject. It reads a use-case profile and recommends a
-candidate architecture that RecRAG can run. It does not build an application,
-provision a database, or export a deployment plan.
+The router is a research subject. It reads a use-case profile and recommends a candidate architecture that RecRAG can run.
+It does not build an application, provision a database, or export a deployment plan.
 
 ## Shared research record
 
-Keep architecture definitions, candidate descriptions, routing questions,
-thresholds, measured results, and experiment runs in this repository. The docs
-are the shared record for the study.
+Keep architecture definitions, candidate descriptions, routing questions, thresholds, measured results, and experiment runs in this repository.
+The docs are the shared record for the study.
 
-Start with one narrow decision: choose one of the three architecture families
-for a use-case profile. Keep the final filters and side effects in code.
+Start with one narrow decision: choose one of the three architecture families for a use-case profile. Keep the final filters and side effects in code.
 
 ## Architecture families
 
@@ -23,16 +20,14 @@ The study compares three families:
 | GraphRAG | Use entities and relationships to retrieve connected evidence. | Graph construction; chunk, entity, or Cypher retrieval; graph context. |
 | Agentic RAG | Let a model choose tools and search steps while answering. | Tool set; planning; number of steps; retries; stop rules. |
 
-The current GraphRAG candidate set has two construction methods and three
-retrieval methods:
+The current GraphRAG candidate set has two construction methods and three retrieval methods:
 
 | Construction | Retrieval |
 | --- | --- |
 | `standard` | `agentic`, `vector`, `entity_vector` |
 | `ontology_guided` | `agentic`, `vector`, `entity_vector` |
 
-Classical RAG and the wider Agentic RAG comparison are research scope. They are
-not current implementations.
+Classical RAG and the wider Agentic RAG comparison are research scope. They are not current implementations.
 
 ## Use-case profiles
 
@@ -46,8 +41,7 @@ Each profile describes the conditions that can change the recommendation:
 - budget and latency target;
 - data and deployment constraints.
 
-Keep the profile separate from the questions asked of a model. The profile is
-the state. The questions define the judgments made about that state.
+Keep the profile separate from the questions asked of a model. The profile is the state. The questions define the judgments made about that state.
 
 ## Candidate selection
 
@@ -58,8 +52,7 @@ The router applies requirements in this order:
 3. Return a trade-off when several candidates remain close.
 4. Record missing information and uncertainty instead of guessing.
 
-A cost limit or citation requirement must not disappear inside an average score.
-The router must apply those requirements before it ranks preferences.
+A cost limit or citation requirement must not disappear inside an average score. The router must apply those requirements before it ranks preferences.
 
 The study will compare three ranking rules:
 
@@ -78,25 +71,20 @@ Run every baseline on the same profiles and candidate descriptions:
 - **GPT choice:** asks `gpt-5.6-luna` for a structured candidate choice.
 - **Jev choice:** asks Jev typed questions and applies the filters in code.
 
-The GPT and Jev calls must see the same profile and candidate facts. The
-answer model used by the GraphRAG candidate runs stays fixed.
+The GPT and Jev calls must see the same profile and candidate facts. The answer model used by the GraphRAG candidate runs stays fixed.
 
 ## Jev
 
-[Jev](https://docs.typesafe.ai/introduction) is TypeSafe's System One model. It
-evaluates a state against typed questions and returns structured answers. It
-does not generate an explanation or a reply.
+[Jev](https://docs.typesafe.ai/introduction) is TypeSafe's System One model. It evaluates a state against typed questions and returns structured answers.
+It does not generate an explanation or a reply.
 
-TypeSafe's speed, price, and reliability claims are vendor claims. Measure them
-in the same experiment as the GPT baseline instead of treating them as results.
+TypeSafe's speed, price, and reliability claims are vendor claims. Measure them in the same experiment as the GPT baseline instead of treating them as results.
 
-This makes Jev a candidate for narrow decisions inside the router. Code keeps
-control of filtering, ranking, thresholds, and side effects.
+This makes Jev a candidate for narrow decisions inside the router. Code keeps control of filtering, ranking, thresholds, and side effects.
 
 ### State and questions
 
-Use a structured state object when the decision needs named fields. Include the
-profile, candidate descriptions, measured candidate results, and constraints.
+Use a structured state object when the decision needs named fields. Include the profile, candidate descriptions, measured candidate results, and constraints.
 
 Jev provides three question types:
 
@@ -107,18 +95,15 @@ Jev provides three question types:
 | `Noul` | Estimate whether a must-have condition is satisfied. |
 
 Ask independent questions in one request. TypeSafe evaluates them in parallel.
-For example, one request can select a candidate, score latency, and check
-citation support. Code decides which answers affect the final recommendation.
+For example, one request can select a candidate, score latency, and check citation support. Code decides which answers affect the final recommendation.
 
-Jev returns the full probability distribution for `Choice` and `Score`, plus
-confidence. A `Noul` returns a value from zero to one and does not include a
-confidence field.
+Jev returns the full probability distribution for `Choice` and `Score`, plus confidence.
+A `Noul` returns a value from zero to one and does not include a confidence field.
 
 ### Confidence
 
-Confidence describes how concentrated a `Choice` or `Score` distribution is. It
-does not prove that one answer is correct. Keep the probabilities in the saved
-record so the study can use another measure later.
+Confidence describes how concentrated a `Choice` or `Score` distribution is. It does not prove that one answer is correct.
+Keep the probabilities in the saved record so the study can use another measure later.
 
 Use confidence as a second axis:
 
@@ -126,16 +111,13 @@ Use confidence as a second axis:
 - medium confidence can trigger a review or a confirmation;
 - low confidence can trigger a fallback or an information request.
 
-Set thresholds by risk and measure them on data that was not used to choose the
-thresholds. Do not compare Jev confidence directly with a GPT score.
+Set thresholds by risk and measure them on data that was not used to choose the thresholds. Do not compare Jev confidence directly with a GPT score.
 
 ## First Jev and GPT demo
 
-The first demo is a standalone router comparison. Use four to six use-case
-profiles and the same current GraphRAG candidate descriptions for both models.
+The first demo is a standalone router comparison. Use four to six use-case profiles and the same current GraphRAG candidate descriptions for both models.
 
-Jev will use typed `Choice`, `Score`, and `Noul` questions. The GPT baseline
-will use `gpt-5.6-luna` and the Responses API with structured output.
+Jev will use typed `Choice`, `Score`, and `Noul` questions. The GPT baseline will use `gpt-5.6-luna` and the Responses API with structured output.
 
 Record these values for every call:
 
@@ -148,8 +130,7 @@ Record these values for every call:
 - Jev probabilities and confidence;
 - repeated-call agreement.
 
-The primary comparison is valid requirement satisfaction. A recommendation is
-not better because it has a higher model score if it fails a must-have rule.
+The primary comparison is valid requirement satisfaction. A recommendation is not better because it has a higher model score if it fails a must-have rule.
 
 ## Router evaluation
 
@@ -160,41 +141,33 @@ The router evaluation asks four questions:
 3. Did the router give a reason supported by the profile and candidate data?
 4. Does it make the same choice when the profile is repeated?
 
-The gap between the chosen candidate and the best valid candidate is router
-regret. Keep the raw candidate measurements so the study can explain the gap.
+The gap between the chosen candidate and the best valid candidate is router regret. Keep the raw candidate measurements so the study can explain the gap.
 
-Do not use one global score to hide a failed must-have requirement. Report
-missing measures as `N/A`, not zero. Keep GraphRAG construction, retrieval, and
-answer scores separate from router scores.
+Do not use one global score to hide a failed must-have requirement. Report missing measures as `N/A`, not zero.
+Keep GraphRAG construction, retrieval, and answer scores separate from router scores.
 
-The [GraphRAG evaluation reference](../graphrag/evals.md) covers graph facts,
-retrieved context, and generated answers. The router evaluation covers the
-choice of candidate before those runs.
+The [GraphRAG evaluation reference](../graphrag/evals.md) covers graph facts, retrieved context, and generated answers.
+The router evaluation covers the choice of candidate before those runs.
 
-The current five-record [2WikiMultiHopQA result](../graphrag/2wikimultihop.md)
-is a candidate-measurement source. It does not establish a universal ranking.
+The current five-record [2WikiMultiHopQA result](../graphrag/2wikimultihop.md) is a candidate-measurement source. It does not establish a universal ranking.
 
 ## Jev as a retrieval gate
 
-Jev can also score retrieved passages before `gpt-5.6-luna` answers. The state
-contains the question and one retrieved passage. Code routes the passage after
-Jev returns its scores.
+Jev can also score retrieved passages before `gpt-5.6-luna` answers. The state contains the question and one retrieved passage.
+Code routes the passage after Jev returns its scores.
 
-The [RAG passage classification cookbook](https://docs.typesafe.ai/cookbooks/classifying_rag_passages.md)
-uses four `Noul` questions:
+The [RAG passage classification cookbook](https://docs.typesafe.ai/cookbooks/classifying_rag_passages.md) uses four `Noul` questions:
 
 - Is the passage relevant to the question?
 - Does it contain usable answer evidence?
 - Does it contradict a factual premise in the question?
 - Does it contain a prompt injection?
 
-Keep the route policy in code. A safe order checks prompt injection first, then
-contradictions, relevance, and usable evidence. The cookbook's thresholds are
-starting points for its corpus, not RecRAG defaults.
+Keep the route policy in code. A safe order checks prompt injection first, then contradictions, relevance, and usable evidence.
+The cookbook's thresholds are starting points for its corpus, not RecRAG defaults.
 
-Compare the Jev gate with a GPT judge on the same retrieved passages. Measure
-evidence recall, evidence precision, discarded useful passages, unsafe passages
-that pass the gate, latency, and token cost.
+Compare the Jev gate with a GPT judge on the same retrieved passages.
+Measure evidence recall, evidence precision, discarded useful passages, unsafe passages that pass the gate, latency, and token cost.
 
 ## Experiment records
 
@@ -209,8 +182,7 @@ Save enough data to reproduce the recommendation:
 - requirement results, regret, and repeatability;
 - evaluation errors and missing measures.
 
-Keep thresholds and question text in one reviewed location. A change to either
-one changes the experiment protocol.
+Keep thresholds and question text in one reviewed location. A change to either one changes the experiment protocol.
 
 ## Local setup status
 

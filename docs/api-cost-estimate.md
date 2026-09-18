@@ -7,16 +7,15 @@
 | GPT-5.6 Luna | $0.20 | $1.20 |
 | DeepSeek V4.1 Flash on Fireworks | $0.22 | $0.66 |
 
-Prices: [Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna),
-[DeepSeek on Fireworks](https://fireworks.ai/models/deepseek-ai/deepseek-v4p1-flash).
+Prices:
+[Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna), [DeepSeek on Fireworks](https://fireworks.ai/models/deepseek-ai/deepseek-v4p1-flash).
 
 ## Tokens and cost per record
 
-The estimate uses the current average of 4.66 chunks per record. Costs below are
-planning estimates, not provider usage logs.
+The estimate uses the current average of 4.66 chunks per record. Costs below are planning estimates, not provider usage logs.
 
-The rows below are the per-graph and per-result inputs for one earlier run. That
-run combined both construction methods and the three benchmark retrieval methods.
+The rows below are the per-graph and per-result inputs for one earlier run.
+That run combined both construction methods and the three benchmark retrieval methods.
 
 | Process | Luna input / output / total | DeepSeek input / output / total | Luna cost | DeepSeek cost |
 | --- | --- | --- | ---: | ---: |
@@ -29,16 +28,13 @@ run combined both construction methods and the three benchmark retrieval methods
 | Retrieval evaluation, per result | 10.40k / 5.25k / **15.65k** | 10.40k / 7.88k / **18.28k** | $0.0084 | $0.0075 |
 | Answer evaluation, per result | 5.80k / 4.44k / **10.24k** | 5.80k / 6.66k / **12.46k** | $0.0065 | $0.0057 |
 
-Evaluation costs more because it runs for every graph or result and sends the
-graph, source passages, retrieved context, or answer to the judge. A metric can
-also use several judge requests to return one score and reason.
+Evaluation costs more because it runs for every graph or result and sends the graph, source passages, retrieved context, or answer to the judge.
+A metric can also use several judge requests to return one score and reason.
 
 ## Earlier three-method estimate
 
-This describes an earlier run with both construction methods, standalone
-Text-to-Cypher retrieval, agentic retrieval, vector retrieval, answer generation,
-and all evaluations. Text-to-Cypher is no longer an independent runtime method;
-agentic retrieval still uses the same Cypher retriever internally.
+This describes an earlier run with both construction methods, standalone Text-to-Cypher retrieval, agentic retrieval, vector retrieval, answer generation, and all evaluations.
+Text-to-Cypher is no longer an independent runtime method; agentic retrieval still uses the same Cypher retriever internally.
 
 | Records | Luna tokens total | DeepSeek tokens total | Luna cost | DeepSeek cost |
 | ---: | ---: | ---: | ---: | ---: |
@@ -57,9 +53,8 @@ Per record:
 
 ## Cost reduction plan
 
-Each alternative starts from the earlier three-method estimate. Do not combine rows. Savings
-are shown as Luna input/output tokens saved per record. DeepSeek output savings
-are 1.5x higher.
+Each alternative starts from the earlier three-method estimate. Do not combine rows. Savings are shown as Luna input/output tokens saved per record.
+DeepSeek output savings are 1.5x higher.
 
 The earlier three-method setup kept Text2Cypher, agentic, and vector retrieval.
 
