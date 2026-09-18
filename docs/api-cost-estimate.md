@@ -15,9 +15,8 @@ Prices: [Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna),
 The estimate uses the current average of 4.66 chunks per record. Costs below are
 planning estimates, not provider usage logs.
 
-The rows below are the per-graph and per-result inputs for one record run. The
-current full setup combines them across both construction methods and the three
-benchmark retrieval methods.
+The rows below are the per-graph and per-result inputs for one earlier run. That
+run combined both construction methods and the three benchmark retrieval methods.
 
 | Process | Luna input / output / total | DeepSeek input / output / total | Luna cost | DeepSeek cost |
 | --- | --- | --- | ---: | ---: |
@@ -34,10 +33,12 @@ Evaluation costs more because it runs for every graph or result and sends the
 graph, source passages, retrieved context, or answer to the judge. A metric can
 also use several judge requests to return one score and reason.
 
-## Current full setup
+## Earlier three-method estimate
 
-This includes both construction methods, the three benchmark retrieval methods, answer
-generation, and all evaluations.
+This describes an earlier run with both construction methods, standalone
+Text-to-Cypher retrieval, agentic retrieval, vector retrieval, answer generation,
+and all evaluations. Text-to-Cypher is no longer an independent runtime method;
+agentic retrieval still uses the same Cypher retriever internally.
 
 | Records | Luna tokens total | DeepSeek tokens total | Luna cost | DeepSeek cost |
 | ---: | ---: | ---: | ---: | ---: |
@@ -56,13 +57,13 @@ Per record:
 
 ## Cost reduction plan
 
-Each alternative starts from the current full setup. Do not combine rows. Savings
+Each alternative starts from the earlier three-method estimate. Do not combine rows. Savings
 are shown as Luna input/output tokens saved per record. DeepSeek output savings
 are 1.5x higher.
 
-The current three-method setup keeps Text2Cypher, agentic, and vector retrieval.
+The earlier three-method setup kept Text2Cypher, agentic, and vector retrieval.
 
 | Plan | Saved per record, Luna input / output | Luna total tokens / record | DeepSeek total tokens / record | 4k Luna / DeepSeek | 5k Luna / DeepSeek |
 | --- | --- | ---: | ---: | ---: | ---: |
-| Current full setup | — | 236.25k | 277.44k | $518.52 / $461.63 | $648.15 / $577.04 |
+| Earlier three-method setup | — | 236.25k | 277.44k | $518.52 / $461.63 | $648.15 / $577.04 |
 | LLM evaluation on 10% sample | 127.62k / 73.01k | 91.72k | 106.46k | $191.27 / $171.49 | $239.08 / $214.36 |

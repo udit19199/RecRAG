@@ -1,15 +1,11 @@
 # Dataset focus
 
-This page preserves the dataset comparison table. It is not the project
-roadmap. See [Research roadmap](roadmap.md) for the active sequence and the
-current decision point.
+This page records the dataset comparison and the choice of the next dataset.
+It is not a list of loaders that already exist in the code.
 
 The project notes name six datasets for the next phase. They cover different
 document types and different kinds of answers. This matters because a method
 that works on short Wikipedia passages may not work on tables or legal text.
-
-The focus list is a research plan. It is not a list of loaders that already
-exist in the code.
 
 ## Current code status
 
@@ -46,3 +42,14 @@ current code for HotpotQA, FinQA, TAT-QA, LegalBench-RAG, or BioASQ.
 
 REFinD is documented in [the historical experiment note](refind/refind-experiment.md).
 The repository guide also lists Hannon and FiNER-139 as historical datasets.
+
+## Choosing the next dataset
+
+HotpotQA, FinQA, TAT-QA, LegalBench-RAG, and BioASQ remain candidates. No
+order has been chosen. They test whether a configuration selected on
+multi-hop Wikipedia questions transfers to different document structures and
+answer types.
+
+Choose the next dataset after the larger 2WikiMultiHopQA run, based on what
+the result leaves unclear. Dataset choice is a research decision, not a fixed
+implementation backlog.

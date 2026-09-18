@@ -114,7 +114,7 @@ The app does not combine graph, retrieval, and answer scores into one number.
 The current evaluators also do not measure exact graph triple recall, exact
 multi-hop path accuracy, latency, token cost, or agent tool choice.
 
-See the [2WikiMultiHopQA results](../2wikimultihop.md) for saved experiment
+See the [2WikiMultiHopQA results](2wikimultihop.md) for saved experiment
 tables. See the [construction reference](construction.md) and
 [retrieval reference](retrieval.md) for the code paths that produce the values
 being evaluated.

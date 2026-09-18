@@ -1,7 +1,8 @@
 # RecRAG
 
 RecRAG is a research project by HPE and JECRC University. It compares graph
-construction and retrieval methods on 2WikiMultiHopQA.
+construction and retrieval methods on 2WikiMultiHopQA, and studies a router
+that maps a natural-language RAG use case to a suitable combination.
 
 ## Run the app
 
@@ -23,9 +24,12 @@ construction and retrieval methods on 2WikiMultiHopQA.
 
 ## Read the docs
 
-- [Research overview](docs/README.md)
+- [Documentation index](docs/index.md)
+- [Router study](docs/router/router-study.md)
+- [Classical RAG](docs/rag/classical-rag.md)
 - [Cost and model estimates](docs/api-cost-estimate.md)
 - [Graph construction](docs/graphrag/construction.md)
 - [Graph retrieval](docs/graphrag/retrieval.md)
 - [GraphRAG evaluations](docs/graphrag/evals.md)
-- [2WikiMultiHopQA results](docs/2wikimultihop.md)
+- [2WikiMultiHopQA results](docs/graphrag/2wikimultihop.md)
+- [Agentic RAG](docs/agenticrag/agentic-rag.md)
