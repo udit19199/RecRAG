@@ -2,11 +2,7 @@ from __future__ import annotations
 
 from neo4j import Driver
 from neo4j_graphrag.embeddings.base import Embedder
-from neo4j_graphrag.llm import LLMBase
-from neo4j_graphrag.retrievers import (
-    Text2CypherRetriever,
-    VectorCypherRetriever,
-)
+from neo4j_graphrag.retrievers import VectorCypherRetriever
 
 VECTOR_RETRIEVAL_QUERY = """
 CALL {
@@ -65,20 +61,5 @@ def build_entity_vector_retriever(
         index_name="entity_embeddings",
         retrieval_query=ENTITY_VECTOR_RETRIEVAL_QUERY,
         embedder=embedder,
-        neo4j_database=database,
-    )
-
-
-def build_text2cypher_retriever(
-    *,
-    driver: Driver,
-    llm: LLMBase,
-    database: str,
-    neo4j_schema: str | None = None,
-) -> Text2CypherRetriever:
-    return Text2CypherRetriever(
-        driver=driver,
-        llm=llm,
-        neo4j_schema=neo4j_schema,
         neo4j_database=database,
     )

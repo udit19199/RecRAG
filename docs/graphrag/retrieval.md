@@ -10,22 +10,20 @@ name.
 ```mermaid
 flowchart TD
     A[Question] --> B{Selected retrieval methods}
-    B --> C[text2cypher]
-    B --> D[agentic]
-    B --> E[vector_cypher]
-    B --> F[entity_vector]
-    C --> G[Neo4j context]
-    D --> G
-    E --> G
-    F --> G
-    G --> H[neo4j-graphrag GraphRAG]
-    H --> I[Answer model]
+    B --> C[agentic]
+    B --> D[vector_cypher]
+    B --> E[entity_vector]
+    C --> F[Neo4j context]
+    D --> F
+    E --> F
+    F --> G[neo4j-graphrag GraphRAG]
+    G --> H[Answer model]
 ```
 
 ## Answer flow
 
 `answer_question()` keeps the requested method order. If the request includes
-`text2cypher` or `agentic`, it reads the current Neo4j schema first. It then
+`agentic`, it reads the current Neo4j schema first. It then
 builds one retriever for each selected method and runs:
 
 ```python
@@ -50,18 +48,9 @@ Responses API is enabled in `GraphRAG.from_config()`.
 
 | Method | Implementation | Search behavior |
 | --- | --- | --- |
-| `text2cypher` | `Text2CypherRetriever` | Gives the schema to an LLM, which writes and runs a read-only Cypher query. |
 | `agentic` | `ToolsRetriever` with a LangChain agent | Lets an agent choose vector search or Text2Cypher search and refine the question after reading results. |
-| `vector_cypher` | [`VectorCypherRetriever`](../../graphrag/retrieval/retrievers.py#L74-L82) | Searches the `chunk_embeddings` index by embedding similarity and adds graph context. See the [Neo4j Vector Cypher Retriever guide](https://neo4j.com/docs/neo4j-graphrag-python/current/user_guide_rag.html#vector-cypher-retriever). |
-| `entity_vector` | [`VectorCypherRetriever`](../../graphrag/retrieval/retrievers.py#L60-L68) | Searches the `entity_embeddings` index for linked entities. |
-
-## Text2Cypher retrieval
-
-`build_text2cypher_retriever()` creates a `Text2CypherRetriever` with the
-current Neo4j schema when one is available. The retriever turns the question
-into a Cypher query and runs it against the selected database. This method
-depends on the generated query matching the graph's entity and relationship
-names.
+| `vector_cypher` | [`VectorCypherRetriever`](../../graphrag/retrieval/retrievers.py#L48-L56) | Searches the `chunk_embeddings` index by embedding similarity and adds graph context. See the [Neo4j Vector Cypher Retriever guide](https://neo4j.com/docs/neo4j-graphrag-python/current/user_guide_rag.html#vector-cypher-retriever). |
+| `entity_vector` | [`VectorCypherRetriever`](../../graphrag/retrieval/retrievers.py#L56-L64) | Searches the `entity_embeddings` index for linked entities. |
 
 ## Agentic retrieval
 

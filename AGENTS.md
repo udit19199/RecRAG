@@ -59,7 +59,7 @@ Run `uv run ruff format --check .` and `uv run ruff check .` for Python checks.
 ## GraphRAG (active)
 
 The active GraphRAG module supports **2 graph-construction approaches** and
-**4 retrieval approaches**. Both construction methods use the same input,
+**3 retrieval approaches**. Both construction methods use the same input,
 Neo4j database, chunk indexes, retrieval, and answering flow. Only extraction
 or retrieval behavior differs. Benchmark scoring is optional and sits outside
 the normal GraphRAG path.
@@ -71,7 +71,6 @@ the normal GraphRAG path.
 
 | Retrieval approach | Method ID | Notes |
 |-------------------|-----------|-------|
-| Text to Cypher | `text2cypher` | Generates and runs a read-only Cypher query |
 | Agentic | `agentic` | Chooses between vector and Cypher search tools |
 | Vector | `vector` | Vector search with graph context |
 | Entity vector | `entity_vector` | Searches entity embeddings with graph context |
