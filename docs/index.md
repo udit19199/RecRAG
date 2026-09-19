@@ -23,5 +23,5 @@ The router study compares that family with Classical RAG and Agentic RAG.
 ## Research references
 
 - [Cost and model estimates](api-cost-estimate.md)
-- [RAG dataset papers](rag-dataset-papers.md)
+- [RAG datasets and papers](datasets.md)
 - [REFinD experiment](refind/refind-experiment.md)

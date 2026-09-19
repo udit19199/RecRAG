@@ -15,13 +15,12 @@ Prices:
 The estimate uses the current average of 4.66 chunks per record. Costs below are planning estimates, not provider usage logs.
 
 The rows below are the per-graph and per-result inputs for one earlier run.
-That run combined both construction methods and the three benchmark retrieval methods.
+That run combined both construction methods and the benchmark retrieval methods.
 
 | Process | Luna input / output / total | DeepSeek input / output / total | Luna cost | DeepSeek cost |
 | --- | --- | --- | ---: | ---: |
 | Standard construction | 9.99k / 8.49k / **18.48k** | 9.99k / 12.74k / **22.73k** | $0.0122 | $0.0106 |
 | Ontology-guided construction | 7.68k / 6.99k / **14.67k** | 7.68k / 10.49k / **18.17k** | $0.0099 | $0.0086 |
-| Text-to-Cypher retrieval, per graph | 3.80k / 0.81k / **4.61k** | 3.80k / 1.22k / **5.02k** | $0.0017 | $0.0016 |
 | Agentic retrieval, per graph | 7.80k / 1.41k / **9.21k** | 7.80k / 2.12k / **9.92k** | $0.0033 | $0.0031 |
 | Vector retrieval, per graph | 1.80k / 0.36k / **2.16k** | 1.80k / 0.54k / **2.34k** | $0.0008 | $0.0008 |
 | Construction evaluation, per graph | 6.10k / 1.80k / **7.90k** | 6.10k / 2.70k / **8.80k** | $0.0034 | $0.0031 |
@@ -31,18 +30,16 @@ That run combined both construction methods and the three benchmark retrieval me
 Evaluation costs more because it runs for every graph or result and sends the graph, source passages, retrieved context, or answer to the judge.
 A metric can also use several judge requests to return one score and reason.
 
-## Earlier three-method estimate
+## Earlier estimate
 
-This describes an earlier run with both construction methods, standalone Text-to-Cypher retrieval, agentic retrieval, vector retrieval, answer generation, and all evaluations.
-Text-to-Cypher is no longer an independent runtime method; agentic retrieval still uses the same Cypher retriever internally.
+This describes an earlier run with both construction methods, agentic retrieval, vector retrieval, answer generation, and all evaluations.
 
 | Records | Luna tokens total | DeepSeek tokens total | Luna cost | DeepSeek cost |
 | ---: | ---: | ---: | ---: | ---: |
-| 3,000 | 708.75M | 832.32M | **$388.89** | **$346.22** |
-| 4,000 | 945.00M | 1,109.76M | **$518.52** | **$461.63** |
-| 5,000 | 1,181.25M | 1,387.20M | **$648.15** | **$577.04** |
+| 500 | 118.13M | 138.72M | **$64.82** | **$57.70** |
+| 1,000 | 236.25M | 277.44M | **$129.63** | **$115.41** |
 
-The rows above are projections for larger record counts.
+The rows above are projections for the two requested record counts.
 
 Per record:
 
@@ -53,12 +50,12 @@ Per record:
 
 ## Cost reduction plan
 
-Each alternative starts from the earlier three-method estimate. Do not combine rows. Savings are shown as Luna input/output tokens saved per record.
+Each alternative starts from the earlier estimate. Do not combine rows. Savings are shown as Luna input/output tokens saved per record.
 DeepSeek output savings are 1.5x higher.
 
-The earlier three-method setup kept Text2Cypher, agentic, and vector retrieval.
+The estimate covers agentic and vector retrieval.
 
-| Plan | Saved per record, Luna input / output | Luna total tokens / record | DeepSeek total tokens / record | 4k Luna / DeepSeek | 5k Luna / DeepSeek |
+| Plan | Saved per record, Luna input / output | Luna total tokens / record | DeepSeek total tokens / record | 500 Luna / DeepSeek | 1,000 Luna / DeepSeek |
 | --- | --- | ---: | ---: | ---: | ---: |
-| Earlier three-method setup | — | 236.25k | 277.44k | $518.52 / $461.63 | $648.15 / $577.04 |
-| LLM evaluation on 10% sample | 127.62k / 73.01k | 91.72k | 106.46k | $191.27 / $171.49 | $239.08 / $214.36 |
+| Earlier three-method setup | — | 236.25k | 277.44k | $64.82 / $57.70 | $129.63 / $115.41 |
+| LLM evaluation on 10% sample | 127.62k / 73.01k | 91.72k | 106.46k | $23.91 / $21.44 | $47.82 / $42.87 |
