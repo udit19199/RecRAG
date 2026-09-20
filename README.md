@@ -25,11 +25,3 @@ that maps a natural-language RAG use case to a suitable combination.
 ## Read the docs
 
 - [Documentation index](docs/index.md)
-- [Router study](docs/router/router-study.md)
-- [Classical RAG](docs/rag/classical-rag.md)
-- [Cost and model estimates](docs/api-cost-estimate.md)
-- [Graph construction](docs/graphrag/construction.md)
-- [Graph retrieval](docs/graphrag/retrieval.md)
-- [GraphRAG evaluations](docs/graphrag/evals.md)
-- [2WikiMultiHopQA results](docs/graphrag/2wikimultihop.md)
-- [Agentic RAG](docs/agenticrag/agentic-rag.md)
