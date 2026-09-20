@@ -32,6 +32,31 @@ flowchart LR
     E --> I[Search structures]
 ```
 
+## Public entry point
+
+The application uses `GraphRAG` for the full construction and answer flow:
+
+```python
+from graphrag.construction.construction import ConstructionMethod
+from graphrag.graph_rag import GraphRAG
+
+rag = GraphRAG.from_config()
+try:
+    method = ConstructionMethod.STANDARD
+    database = method.database_name(record.id)
+    rag.construct(record.pages, method=method, database=database)
+    results = rag.answer(
+        record.question,
+        database=database,
+        retrieval_methods=["vector"],
+    )
+finally:
+    rag.close()
+```
+
+`record.pages` contains `SourcePage` values. The construction method selects
+the extraction approach. The retrieval method selects how the graph is searched.
+
 ## Inputs and database isolation
 
 A source page is one page with a title plus a list of text pieces.
@@ -222,7 +247,7 @@ That call blocks up to 60 seconds until the indexes are ready, so the database i
 Code map: `rebuild_graph()` does all four steps in order.
 
 See the [retrieval reference](retrieval.md) for how the graph and indexes are queried.
-See the [evaluation reference](evals.md) for the checks that run after construction.
+See the [evaluation reference](evaluation.md) for the checks that run after construction.
 
 ## Neo4j documentation
 
