@@ -16,7 +16,7 @@ from langchain_openai import ChatOpenAI
 from neo4j import Driver
 from neo4j_graphrag.generation.types import RagResultModel
 
-from ..dataset_records.base import DatasetRecord
+from ..dataset_adapters.registry import DatasetRecord
 from ..graph_rag import DEFAULT_LLM_MODEL, DEFAULT_REASONING_EFFORT
 
 
@@ -67,7 +67,7 @@ GraphTriple = tuple[str, str, str]
 def read_entity_triples(
     driver: Driver,
     *,
-    database: str | None = None,
+    database: str,
 ) -> list[GraphTriple]:
     result = driver.execute_query(
         """
@@ -88,7 +88,7 @@ def read_entity_triples(
 def read_graph_statistics(
     driver: Driver,
     *,
-    database: str | None = None,
+    database: str,
 ) -> dict[str, int]:
     result = driver.execute_query(
         """
@@ -126,7 +126,7 @@ def read_graph_statistics(
     )
     row = result.records[0]
     return {
-        key: int(row[key] or 0)
+        key: int(row[key])
         for key in (
             "entity_count",
             "isolated_entity_count",
@@ -171,8 +171,8 @@ def evaluate_construction(
     graph_triples: Sequence[GraphTriple],
     *,
     judge_model: str = DEFAULT_LLM_MODEL,
-    construction_seconds: float | None = None,
-    graph_statistics: dict[str, int] | None = None,
+    construction_seconds: float,
+    graph_statistics: dict[str, int],
 ) -> dict[str, Any]:
     source_context = [
         f"Page: {page.title}\n{paragraph}"
@@ -234,7 +234,7 @@ def evaluate_construction(
     }
     return {
         "deepeval": metrics,
-        "graph_statistics": graph_statistics or {},
+        "graph_statistics": graph_statistics,
         "construction_seconds": construction_seconds,
     }
 
@@ -255,12 +255,7 @@ def evaluate_answer(
     judge_model: str = DEFAULT_LLM_MODEL,
 ) -> dict[str, Any]:
     """Score one dataset answer after retrieval."""
-    retriever_result = result.retriever_result
-    retrieved_context = (
-        [str(item.content) for item in retriever_result.items]
-        if retriever_result is not None
-        else []
-    )
+    retrieved_context = [str(item.content) for item in result.retriever_result.items]
     gold_context = record.supporting_sentences()
     test_case = LLMTestCase(
         input=record.question,
