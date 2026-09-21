@@ -81,7 +81,8 @@ lives in `graphrag/construction/`, retrieval code in
 handling live directly under `graphrag/`. There is no separate research layer;
 the entire package exists for research and experimentation.
 Use `GraphRAG` directly from Python. Construction execution lives in
-`graphrag/construction/construction.py`; retrieval and answering execution
+`graphrag/construction/__init__.py`, with the ontology schema in
+`graphrag/construction/ontology.py`; retrieval and answering execution
 lives in `graphrag/retrieval/answering.py`. Evaluation helpers live in
 `graphrag/evals/`. Preserve saved experiment results under `runs/`.
 

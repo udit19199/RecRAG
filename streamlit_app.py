@@ -8,8 +8,8 @@ from time import perf_counter
 import streamlit as st
 from langchain_core.callbacks import get_usage_metadata_callback
 
-from graphrag.construction.construction import ConstructionMethod
-from graphrag.dataset_records.registry import DATASET_ADAPTERS, get_adapter
+from graphrag.construction import ConstructionMethod
+from graphrag.dataset_adapters.registry import DATASET_SOURCES, get_source
 from graphrag.graph_rag import GraphRAG
 from graphrag.retrieval.answering import RETRIEVAL_METHODS
 
@@ -17,11 +17,11 @@ st.set_page_config(page_title="GraphRAG Demo", page_icon=":material/account_tree
 st.title("GraphRAG Demo")
 
 
-def load_dataset_records(dataset_name: str, limit: int):
-    return get_adapter(dataset_name).load_records(limit)
+def load_dataset_record(dataset_name: str, index: int):
+    return get_source(dataset_name).load_record(index)
 
 
-load_records_cached = st.cache_data(load_dataset_records)
+load_record_cached = st.cache_data(load_dataset_record)
 
 
 def render_metric_group(title, metrics, names):
@@ -116,8 +116,8 @@ def render_construction_evaluation(evaluation):
 
 selected_dataset = st.selectbox(
     "Dataset",
-    DATASET_ADAPTERS,
-    format_func=lambda adapter: adapter.display_name,
+    DATASET_SOURCES,
+    format_func=lambda source: source.display_name,
 )
 record_count = st.slider("Records to load", 1, 20, 2)
 selected_construction_methods = (
@@ -144,7 +144,10 @@ score_with_deepeval = st.checkbox(
     help="Scores graph construction, retrieval, and answers with LLM judges.",
 )
 try:
-    loaded_records = load_records_cached(selected_dataset.name, record_count)
+    loaded_records = [
+        load_record_cached(selected_dataset.name, index)
+        for index in range(record_count)
+    ]
 except FileNotFoundError as exc:
     st.error(str(exc))
     st.stop()

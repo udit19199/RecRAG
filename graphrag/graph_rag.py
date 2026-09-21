@@ -22,7 +22,7 @@ from neo4j_graphrag.tool import Tool
 from neo4j_graphrag.types import LLMMessage
 from pydantic import BaseModel
 
-from .construction.construction import ConstructionMethod, SourcePage, rebuild_graph
+from .construction import ConstructionMethod, SourcePage, rebuild_graph
 from .retrieval.answering import RetrievalMethod, answer_question
 
 DEFAULT_LLM_MODEL = "gpt-5.6-luna"

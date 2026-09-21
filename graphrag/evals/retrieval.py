@@ -10,7 +10,7 @@ from deepeval.metrics import (
 from deepeval.test_case import LLMTestCase
 from neo4j_graphrag.generation.types import RagResultModel
 
-from ..dataset_records.base import DatasetRecord
+from ..dataset_adapters.registry import DatasetRecord
 from ..graph_rag import DEFAULT_LLM_MODEL
 from .construction import ResponsesOpenAIModel, _metric_result
 
