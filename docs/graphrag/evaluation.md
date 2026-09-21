@@ -1,119 +1,445 @@
 # GraphRAG evaluation
 
-The evaluation code scores three points in the GraphRAG flow: the constructed
-graph, the context returned for a question, and the final answer.
+GraphRAG has three stages:
+
+1. **Construction** turns the source pages into a graph and search indexes.
+2. **Retrieval** selects context for a question from that graph.
+3. **Answering** uses the question and retrieved context to produce an answer.
+
+The same record runs through all three stages:
 
 ```mermaid
 flowchart LR
-    A[2WikiRecord] --> B[Graph triples]
-    B --> C[Construction evaluation]
-    A --> D[Question and supporting passages]
-    D --> E[Retrieval result]
-    E --> F[Retrieval evaluation]
-    D --> G[Answer evaluation]
-    E --> G
-    G --> H[Answer scores]
+    A[HotpotQA record] --> B[Construction]
+    B --> C[Graph and search indexes]
+    C --> D[Retrieval]
+    A --> D
+    D --> E[Retrieved context]
+    A --> F[Answering]
+    E --> F
+    F --> G[Answer]
 ```
 
-## Evaluation inputs
+This page uses one complete HotpotQA record to show the input, output, and
+evaluation for each stage.
 
-The dataset loader creates a `TwoWikiRecord` from `dev.json`. The record keeps
-the question, source pages, expected answer, answer ID, supporting facts, and
-dataset evidence fields.
+## Example record
 
-| Input | Used by |
-| --- | --- |
-| All source page passages | Construction groundedness and completeness. |
-| Supporting passages | Construction evidence coverage and answer evaluation context. |
-| Question | Retrieval and answer evaluation. |
-| Expected answer and aliases | Answer correctness and deterministic alias matching. |
+- Dataset: HotpotQA
+- File: `datasets/hotpotqa/distractor-validation.parquet`
+- Record ID: `5a8b57f25542995d1e6f1371`
+- Question: `Were Scott Derrickson and Ed Wood of the same nationality?`
+- Answer: `yes`
+- Type: `comparison`
+- Level: `hard`
+- Supporting facts: `Scott Derrickson`, sentence `0`; `Ed Wood`, sentence `0`
 
-`supporting_sentences()` resolves supporting page names and passage indexes into
-the original source text. The construction evaluator does not use the dataset's
-gold evidence triples.
+The complete record is below. The `context.title` and `context.sentences`
+arrays use matching positions. The first title owns the first sentence array.
+
+```json
+{
+  "id": "5a8b57f25542995d1e6f1371",
+  "question": "Were Scott Derrickson and Ed Wood of the same nationality?",
+  "answer": "yes",
+  "type": "comparison",
+  "level": "hard",
+  "context": {
+    "title": [
+      "Ed Wood (film)",
+      "Scott Derrickson",
+      "Woodson, Arkansas",
+      "Tyler Bates",
+      "Ed Wood",
+      "Deliver Us from Evil (2014 film)",
+      "Adam Collis",
+      "Sinister (film)",
+      "Conrad Brooks",
+      "Doctor Strange (2016 film)"
+    ],
+    "sentences": [
+      [
+        "Ed Wood is a 1994 American biographical period comedy-drama film directed and produced by Tim Burton, and starring Johnny Depp as cult filmmaker Ed Wood.",
+        " The film concerns the period in Wood's life when he made his best-known films as well as his relationship with actor Bela Lugosi, played by Martin Landau.",
+        " Sarah Jessica Parker, Patricia Arquette, Jeffrey Jones, Lisa Marie, and Bill Murray are among the supporting cast."
+      ],
+      [
+        "Scott Derrickson (born July 16, 1966) is an American director, screenwriter and producer.",
+        " He lives in Los Angeles, California.",
+        " He is best known for directing horror films such as \"Sinister\", \"The Exorcism of Emily Rose\", and \"Deliver Us From Evil\", as well as the 2016 Marvel Cinematic Universe installment, \"Doctor Strange.\""
+      ],
+      [
+        "Woodson is a census-designated place (CDP) in Pulaski County, Arkansas, in the United States.",
+        " Its population was 403 at the 2010 census.",
+        " It is part of the Little Rock–North Little Rock–Conway Metropolitan Statistical Area.",
+        " Woodson and its accompanying Woodson Lake and Wood Hollow are the namesake for Ed Wood Sr., a prominent plantation owner, trader, and businessman at the turn of the 20th century.",
+        " Woodson is adjacent to the Wood Plantation, the largest of the plantations own by Ed Wood Sr."
+      ],
+      [
+        "Tyler Bates (born June 5, 1965) is an American musician, music producer, and composer for films, television, and video games.",
+        " Much of his work is in the action and horror film genres, with films like \"Dawn of the Dead, 300, Sucker Punch,\" and \"John Wick.\"",
+        " He has collaborated with directors like Zack Snyder, Rob Zombie, Neil Marshall, William Friedkin, Scott Derrickson, and James Gunn.",
+        " With Gunn, he has scored every one of the director's films; including \"Guardians of the Galaxy\", which became one of the highest grossing domestic movies of 2014, and its 2017 sequel.",
+        " In addition, he is also the lead guitarist of the American rock band Marilyn Manson, and produced its albums \"The Pale Emperor\" and \"Heaven Upside Down\"."
+      ],
+      [
+        "Edward Davis Wood Jr. (October 10, 1924 – December 10, 1978) was an American filmmaker, actor, writer, producer, and director."
+      ],
+      [
+        "Deliver Us from Evil is a 2014 American supernatural horror film directed by Scott Derrickson and produced by Jerry Bruckheimer.",
+        " The film is officially based on a 2001 non-fiction book entitled \"Beware the Night\" by Ralph Sarchie and Lisa Collier Cool, and its marketing campaign highlighted that it was \"inspired by actual accounts\".",
+        " The film stars Eric Bana, Édgar Ramírez, Sean Harris, Olivia Munn, and Joel McHale in the main roles and was released on July 2, 2014."
+      ],
+      [
+        "Adam Collis is an American filmmaker and actor.",
+        " He attended the Duke University from 1986 to 1990 and the University of California, Los Angeles from 2007 to 2010.",
+        " He also studied cinema at the University of Southern California from 1991 to 1997.",
+        " Collis first work was the assistant director for the Scott Derrickson's short \"Love in the Ruins\" (1995).",
+        " In 1998, he played \"Crankshaft\" in Eric Koyanagi's \"Hundred Percent\"."
+      ],
+      [
+        "Sinister is a 2012 supernatural horror film directed by Scott Derrickson and written by Derrickson and C. Robert Cargill.",
+        " It stars Ethan Hawke as fictional true-crime writer Ellison Oswalt who discovers a box of home movies in his attic that puts his family in danger."
+      ],
+      [
+        "Conrad Brooks (born Conrad Biedrzycki on January 3, 1931 in Baltimore, Maryland) is an American actor.",
+        " He moved to Hollywood, California in 1948 to pursue a career in acting.",
+        " He got his start in movies appearing in Ed Wood films such as \"Plan 9 from Outer Space\", \"Glen or Glenda\", and \"Jail Bait.\"",
+        " He took a break from acting during the 1960s and 1970s but due to the ongoing interest in the films of Ed Wood, he reemerged in the 1980s and has become a prolific actor.",
+        " He also has since gone on to write, produce and direct several films."
+      ],
+      [
+        "Doctor Strange is a 2016 American superhero film based on the Marvel Comics character of the same name, produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures.",
+        " It is the fourteenth film of the Marvel Cinematic Universe (MCU).",
+        " The film was directed by Scott Derrickson, who wrote it with Jon Spaihts and C. Robert Cargill, and stars Benedict Cumberbatch as Stephen Strange, along with Chiwetel Ejiofor, Rachel McAdams, Benedict Wong, Michael Stuhlbarg, Benjamin Bratt, Scott Adkins, Mads Mikkelsen, and Tilda Swinton.",
+        " In \"Doctor Strange\", surgeon Strange learns the mystic arts after a career-ending car accident."
+      ]
+    ]
+  },
+  "supporting_facts": {
+    "title": [
+      "Scott Derrickson",
+      "Ed Wood"
+    ],
+    "sent_id": [
+      0,
+      0
+    ]
+  }
+}
+```
 
 ## Construction evaluation
 
-`read_entity_triples()` reads every relationship between `__Entity__` nodes and
-represents each relationship as:
+Construction receives all ten pages in `context`. It joins their passages,
+extracts entities and relationships, and stores the graph and search indexes.
 
-```text
-(subject, relationship, object)
+The useful facts for this question can look like this in the graph:
+
+```mermaid
+flowchart LR
+    Scott[Scott Derrickson] -->|is American| American[American]
+    Ed[Ed Wood] -->|is American| American
+    Doctor[Doctor Strange] -->|directed by| Scott
+    Sinister[Sinister] -->|directed by| Scott
+    Deliver[Deliver Us from Evil] -->|directed by| Scott
+    Film[Ed Wood film] -->|about| Ed
 ```
 
-`evaluate_construction()` sends the graph and source context to three DeepEval
-`GEval` metrics:
+The two facts needed for this record are the two nationality relationships. The
+other pages supply distractors and test whether construction keeps useful facts
+without adding unsupported ones.
 
-| Metric | Checks |
+### What the construction evaluator reads
+
+When DeepEval scoring is enabled, the Streamlit run calls
+`read_entity_triples()` and `read_graph_statistics()` after construction
+finishes. Both functions query the database for the current record and
+construction method. They do not inspect the source extractor's intermediate
+response.
+
+`read_entity_triples()` returns only direct relationships between
+`__Entity__` nodes. It sorts each triple by subject, relationship type, and
+object before returning it:
+
+```text
+(subject.name, type(relation), object.name)
+```
+
+It does not include `FROM_CHUNK`, `NEXT_CHUNK`, `FROM_DOCUMENT`, or
+`HAS_EMBEDDING` because those relationships do not connect two `__Entity__`
+nodes.
+
+`read_graph_statistics()` returns these counts:
+
+| Field | Query meaning |
 | --- | --- |
-| `groundedness` | Whether graph facts are supported by the source pages, including entity identity, relationship meaning, and direction. |
-| `completeness` | How much factual information from all source pages the graph represents. |
-| `supporting_evidence_coverage` | How much information from supporting passages the graph represents. |
+| `entity_count` | All `__Entity__` nodes. |
+| `isolated_entity_count` | Entity nodes with no relationship. |
+| `duplicate_entity_name_groups` | Names used by more than one entity node. |
+| `duplicate_entity_nodes` | Total entity nodes in those duplicate-name groups. |
+| `relationship_count` | Relationships whose endpoints are both `__Entity__` nodes. |
+| `relation_type_count` | Distinct relationship types in those entity relationships. |
+| `self_loop_count` | Entity relationships whose start and end node are the same node. |
 
-The evaluator also records graph statistics when the app supplies them:
+These counts describe graph shape. They do not prove that a graph fact is true.
 
-- entity count;
-- relationship count;
-- relationship type count;
-- isolated entity count;
-- duplicate entity name groups;
-- duplicate entity nodes;
-- self-loop count.
+### How the judge cases are built
 
-These counts describe graph shape. They do not change the three construction
-scores.
+`evaluate_construction()` in
+[`graphrag/evals/construction.py`](../../graphrag/evals/construction.py#L178-L249)
+creates two `LLMTestCase` values from the same graph output:
+
+```python
+source_context = [
+    f"Page: {page.title}\n{paragraph}"
+    for page in record.pages
+    for paragraph in page.passages
+]
+graph_output = json.dumps(graph_triples, ensure_ascii=False)
+```
+
+The full-context case uses every source passage. The supporting-context case uses
+only `record.supporting_sentences()`. Both cases set `actual_output` to the
+serialized graph triples.
+
+The evaluator creates one `ResponsesOpenAIModel` judge and uses it for three
+`GEval` metrics. Each metric receives its evaluation instruction, the graph
+output, and its selected context. The metrics use `threshold=None`, so the code
+stores a score and reason without turning the result into pass or fail.
+
+### Construction measures
+
+| Measure | Context | Judge checks |
+| --- | --- | --- |
+| `groundedness` | All source passages | Whether the graph facts are supported. The judge considers entity identity, relationship meaning, and relationship direction. |
+| `completeness` | All source passages | How much factual information across the supplied pages appears in the graph. The question and answer do not select which facts count. |
+| `supporting_evidence_coverage` | The dataset's marked supporting passages | How much factual information needed for this record appears in the graph. |
+
+Each result has `description`, `score`, and `reason`. The description is fixed
+in code. The score and reason come from the judge.
+
+The function returns this shape:
+
+```json
+{
+  "deepeval": {
+    "groundedness": {"description": "...", "score": 0.0, "reason": "..."},
+    "completeness": {"description": "...", "score": 0.0, "reason": "..."},
+    "supporting_evidence_coverage": {"description": "...", "score": 0.0, "reason": "..."}
+  },
+  "graph_statistics": {},
+  "construction_seconds": 0.0
+}
+```
+
+`graph_statistics` defaults to an empty object when the caller does not pass
+counts. `construction_seconds` is measured around `rag.construct()` in the
+Streamlit app. If scoring raises an exception, the app keeps the build time and
+shows the exception instead of showing partial metric data.
 
 ## Retrieval evaluation
 
-`evaluate_retrieval()` checks the first five returned items by default. It puts
-the question in `input`, the supporting sentences in `expected_output`, and
-the selected items in `retrieval_context`.
+Retrieval receives the same question:
 
-| Metric | Checks |
+```text
+Were Scott Derrickson and Ed Wood of the same nationality?
+```
+
+It searches the graph and returns ranked context. A useful result for this
+record might contain the two supporting sentences and a related distractor:
+
+```mermaid
+flowchart TD
+    Q[Were Scott Derrickson and Ed Wood of the same nationality?] --> R[Retrieval]
+    R --> S1[Scott Derrickson<br/>is an American director]
+    R --> S2[Ed Wood<br/>was an American filmmaker]
+    R --> S3[Tyler Bates<br/>is an American musician]
+    S1 --> C[Retrieved context]
+    S2 --> C
+    S3 --> C
+```
+
+The first two items are the record's supporting sentences. The Tyler Bates item
+comes from the same record but does not answer the question.
+
+### How the retrieval case is built
+
+`evaluate_retrieval()` in
+[`graphrag/evals/retrieval.py`](../../graphrag/evals/retrieval.py#L19-L50)
+reads the items from `result.retriever_result`. If the result has no retriever
+result, it uses an empty list. It then applies `top_k` while preparing the
+judge input:
+
+```python
+items = result.retriever_result.items if result.retriever_result else []
+retrieved_context = [str(item.content) for item in items[:top_k]]
+```
+
+The default `top_k` is 5. This slice controls the evaluation context. It does
+not change how many records the retriever ran, and it does not change the answer
+that `Neo4jGraphRAG.search()` already generated.
+
+The test case contains:
+
+| Field | Value |
 | --- | --- |
-| `contextual_precision` | Whether useful items appear near the top of the ranked context. |
-| `contextual_recall` | Whether returned context contains the required supporting information. |
-| `contextual_relevancy` | Whether returned context relates to the question. |
+| `input` | `record.question` |
+| `expected_output` | The supporting sentences joined with newlines. |
+| `retrieval_context` | The first `top_k` item contents. |
 
-The `top_k` value is recorded in each retrieval evaluation result.
+The evaluator uses one `ResponsesOpenAIModel` judge for three DeepEval metrics.
+Each metric uses `threshold=None` and returns a `score` and `reason`.
+
+### Retrieval measures
+
+| Measure | What it checks in this example |
+| --- | --- |
+| `contextual_precision` | Whether the Scott Derrickson and Ed Wood evidence ranks above unrelated context. |
+| `contextual_recall` | Whether the returned context contains both supporting sentences. |
+| `contextual_relevancy` | Whether the returned items relate to the nationality question. |
+
+The result includes the record ID, the fixed `top_k` value, the exact context
+strings sent to DeepEval, and the three metric results:
+
+```json
+{
+  "record_id": "5a8b57f25542995d1e6f1371",
+  "top_k": 5,
+  "retrieved_context": ["..."],
+  "deepeval": {
+    "contextual_precision": {"score": 0.0, "reason": "..."},
+    "contextual_recall": {"score": 0.0, "reason": "..."},
+    "contextual_relevancy": {"score": 0.0, "reason": "..."}
+  }
+}
+```
+
+Use the same `top_k` when comparing methods. A larger slice gives a method more
+chance to include supporting evidence, so changing it changes the comparison.
 
 ## Answer evaluation
 
-`evaluate_answer()` passes every item returned by the retriever to the answer
-evaluator. It also passes the dataset's supporting sentences as the reference
-context.
+Answering receives the question and every item returned by retrieval. For this
+record, the reference answer is `yes` and a concise correct answer is:
 
-The evaluator records the expected answer, answer ID, generated answer, and a
-deterministic alias check. The alias check normalizes case and punctuation, then
-requires the full generated answer to equal the expected answer or an accepted
-alias. A longer answer can be correct and still fail this check.
+```text
+Yes.
+```
 
-DeepEval adds these checks:
+The answer evaluator is `evaluate_answer()` in
+[`graphrag/evals/construction.py`](../../graphrag/evals/construction.py#L261-L329).
+The function keeps two kinds of context separate:
 
-| Metric or check | Checks |
+```python
+retriever_result = result.retriever_result
+retrieved_context = (
+    [str(item.content) for item in retriever_result.items]
+    if retriever_result is not None
+    else []
+)
+gold_context = record.supporting_sentences()
+```
+
+The gold supporting passages go in `LLMTestCase.context`. The actual retrieved
+items go in `LLMTestCase.retrieval_context`. Faithfulness uses the retrieved
+items, so it checks the evidence that the answer actually saw.
+
+The test case also contains the question, generated answer, and expected answer:
+
+| Field | Value |
 | --- | --- |
-| `faithfulness` | Whether answer claims follow the context returned by retrieval. The evaluator skips the score when retrieval returns no items. |
-| `relevancy` | Whether the answer addresses the question. |
-| `correctness` | Whether the answer matches the expected answer or an accepted alias and has no contradiction or missing part. |
-| `alias_match` | The deterministic full-answer match described above. |
+| `input` | `record.question` |
+| `actual_output` | `result.answer` |
+| `expected_output` | `record.answer` |
+| `context` | `record.supporting_sentences()` |
+| `retrieval_context` | Every retrieved item content, without a `top_k` slice. |
 
-Answer faithfulness uses the runtime `retrieval_context`. It does not replace
-that context with the dataset's supporting passages.
+### Answer checks
 
-## Judge model and score rules
+The evaluator first performs a deterministic alias check. `_normalise()`
+case-folds the text, replaces non-word characters with spaces, and collapses
+whitespace. `alias_match` is true only when the normalized full generated
+answer equals one of `record.answer_aliases()`.
 
-`ResponsesOpenAIModel` wraps LangChain's `ChatOpenAI` with
-`use_responses_api=True`. The current configuration uses `gpt-5.6-luna` with
-medium reasoning effort for evaluation judges.
+The returned answer section has these fields:
 
-All DeepEval metrics use `threshold=None`. The app records scores and reasons
-without applying a pass or fail threshold. It does not combine graph,
-retrieval, and answer scores into one number.
+| Field | Meaning |
+| --- | --- |
+| `expected` | The dataset answer. |
+| `expected_id` | `answer_id` when the dataset record provides it. |
+| `actual` | The generated answer. |
+| `alias_match` | The deterministic full-answer comparison. |
+| `faithfulness` | A DeepEval score and reason, or `{"reason": "No retrieved context."}` when retrieval returned no items. |
+| `deepeval.relevancy` | Whether the answer addresses the question. |
+| `deepeval.correctness` | A judge check against the answer and its aliases. |
 
-The current evaluators do not measure exact graph triple recall, exact
-multi-hop path accuracy, latency, token cost, or agent tool choice.
+`correctness` uses a separate test case whose expected output is this JSON value:
+
+```json
+{"answer": "yes", "aliases": ["yes"]}
+```
+
+It asks the judge to answer the question, accept the listed aliases, and reject
+contradictory or incomplete answers. It does not use the supporting passages.
+
+`faithfulness` runs only when retrieved context is present. `relevancy` and
+`correctness` still run when retrieval returns no items. This lets the result
+show an answer-quality score while making the missing evidence explicit.
+
+## Judge model and usage accounting
+
+`ResponsesOpenAIModel` in
+[`graphrag/evals/construction.py`](../../graphrag/evals/construction.py#L24-L71)
+adapts LangChain's `ChatOpenAI` to DeepEval. It configures:
+
+| Setting | Current value |
+| --- | --- |
+| Model | `gpt-5.6-luna` |
+| API | OpenAI Responses API, enabled with `use_responses_api=True` |
+| Reasoning effort | `medium` |
+| Structured output | Function calling when DeepEval supplies a schema |
+| Callback | The shared `TokenLedger` when the app passes one |
+
+`GraphRAG.from_config()` creates one `TokenLedger` for the run and attaches it
+to the main model. The Streamlit app passes the same ledger to construction,
+retrieval, and answer judges. The ledger counts model calls when the response
+contains token usage metadata. It reports input tokens, output tokens, call
+count, and estimated cost using the `[cost]` values in `config.toml`.
+
+The ledger does not score quality, measure Neo4j query time, or count embedding
+calls as LLM calls. Build time is measured separately around `rag.construct()`.
+
+## Full Streamlit run
+
+When DeepEval scoring is enabled, the app runs each loaded record in this order:
+
+```mermaid
+flowchart TD
+    A[Load record] --> B[Construct every selected method]
+    B --> C[Read triples and graph statistics for each database]
+    C --> D[Score construction]
+    D --> E[For each construction database]
+    E --> F[Run every selected retrieval method]
+    F --> G[Score retrieval and answer]
+    G --> H[Display context, scores, and usage]
+```
+
+The app repeats retrieval for each construction database. This keeps a
+construction method's graph separate from the other method while holding the
+question and selected retrieval methods constant.
+
+## What this page does not score
+
+- exact graph-triple or multi-hop path accuracy;
+- latency for each provider call;
+- agent tool choice;
+- embedding quality as a separate measure;
+- Neo4j graph statistics as a quality score.
 
 See the [2WikiMultiHopQA results](2wikimultihopqa-results.md) for saved
-experiment tables. See [graph construction](construction.md) and [graph
-retrieval](retrieval.md) for the code paths that produce the values being
-evaluated.
+experiment results. See [graph construction](construction.md) and [graph
+retrieval](retrieval.md) for the code behind the three stages.
+
+The [router measurement guide](../router.md#measure-candidates) covers resource
+measurements outside these stage scores.
