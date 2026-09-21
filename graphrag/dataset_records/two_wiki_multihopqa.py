@@ -20,9 +20,18 @@ class TwoWikiRecord:
     evidence_triples: tuple[tuple[str, str, str], ...]
     evidence_ids: tuple[tuple[str, str, str], ...]
 
+    def answer_aliases(self) -> tuple[str, ...]:
+        if self.answer_id is None:
+            return (self.answer,)
+        return (self.answer, *_aliases_by_id().get(self.answer_id, ()))
+
     def supporting_sentences(self) -> list[str]:
         pages = {page.title: page for page in self.pages}
-        return [pages[title].passages[index] for title, index in self.supporting_facts]
+        return [
+            pages[title].passages[index]
+            for title, index in self.supporting_facts
+            if title in pages and index < len(pages[title].passages)
+        ]
 
 
 @cache
@@ -37,9 +46,7 @@ def _aliases_by_id() -> dict[str, tuple[str, ...]]:
 
 
 def answer_aliases(record: TwoWikiRecord) -> tuple[str, ...]:
-    if record.answer_id is None:
-        return (record.answer,)
-    return (record.answer, *_aliases_by_id().get(record.answer_id, ()))
+    return record.answer_aliases()
 
 
 def load_records(limit: int) -> list[TwoWikiRecord]:
@@ -63,3 +70,14 @@ def load_records(limit: int) -> list[TwoWikiRecord]:
         )
         for record in records[:limit]
     ]
+
+
+class TwoWikiMultiHopQAAdapter:
+    name = "2wikimultihopqa"
+    display_name = "2WikiMultiHopQA"
+
+    def load_records(self, limit: int) -> list[TwoWikiRecord]:
+        return load_records(limit)
+
+
+adapter = TwoWikiMultiHopQAAdapter()

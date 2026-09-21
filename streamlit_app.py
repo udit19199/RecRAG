@@ -5,7 +5,7 @@ from time import perf_counter
 import streamlit as st
 
 from graphrag.construction.construction import ConstructionMethod
-from graphrag.dataset_records.two_wiki_multihopqa import load_records
+from graphrag.dataset_records.registry import DATASET_ADAPTERS, get_adapter
 from graphrag.graph_rag import GraphRAG
 from graphrag.retrieval.answering import RETRIEVAL_METHODS
 
@@ -13,7 +13,11 @@ st.set_page_config(page_title="GraphRAG Demo", page_icon=":material/account_tree
 st.title("GraphRAG Demo")
 
 
-load_records_cached = st.cache_data(load_records)
+def load_dataset_records(dataset_name: str, limit: int):
+    return get_adapter(dataset_name).load_records(limit)
+
+
+load_records_cached = st.cache_data(load_dataset_records)
 
 
 def render_metric_group(title, metrics, names):
@@ -89,6 +93,11 @@ def render_construction_evaluation(evaluation):
         st.warning(str(evaluation["error"]))
 
 
+selected_dataset = st.selectbox(
+    "Dataset",
+    DATASET_ADAPTERS,
+    format_func=lambda adapter: adapter.display_name,
+)
 record_count = st.slider("Records to load", 1, 20, 2)
 selected_construction_methods = (
     st.pills(
@@ -113,7 +122,11 @@ score_with_deepeval = st.checkbox(
     value=True,
     help="Scores graph construction, retrieval, and answers with LLM judges.",
 )
-loaded_records = load_records_cached(record_count)
+try:
+    loaded_records = load_records_cached(selected_dataset.name, record_count)
+except FileNotFoundError as exc:
+    st.error(str(exc))
+    st.stop()
 
 run_clicked = st.button("Run", type="primary", icon=":material/account_tree:")
 
@@ -166,6 +179,7 @@ if run_clicked:
                                         rag._driver, database=database
                                     ),
                                     construction_seconds=construction_seconds,
+                                    usage=rag.usage,
                                 )
                             except Exception as exc:
                                 evaluation = {
@@ -207,12 +221,12 @@ if run_clicked:
                             selected_retrieval_methods, results
                         ):
                             retrieval_evaluation = (
-                                evaluate_retrieval(record, result)
+                                evaluate_retrieval(record, result, usage=rag.usage)
                                 if score_with_deepeval
                                 else None
                             )
                             answer_evaluation = (
-                                evaluate_answer(record, result)
+                                evaluate_answer(record, result, usage=rag.usage)
                                 if score_with_deepeval
                                 else None
                             )
@@ -266,6 +280,20 @@ if run_clicked:
                                         st.write(item.content)
                     retrieval_status.update(
                         label="Retrieval complete", state="complete"
+                    )
+                st.markdown("### API usage")
+                with st.container(horizontal=True):
+                    st.metric("Model calls", rag.usage.calls, border=True)
+                    st.metric(
+                        "Input tokens", f"{rag.usage.input_tokens:,}", border=True
+                    )
+                    st.metric(
+                        "Output tokens", f"{rag.usage.output_tokens:,}", border=True
+                    )
+                    st.metric(
+                        "Estimated cost",
+                        f"${rag.usage.estimated_cost_usd:.2f}",
+                        border=True,
                     )
             finally:
                 rag.close()

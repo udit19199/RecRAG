@@ -1,258 +1,215 @@
 # Graph construction
 
-Graph construction turns source text into saved graph data.
-Source text means the page titles and passages for one test question.
-Saved graph data means the people, places, facts, and text slices stored in Neo4j for later search.
+Graph construction turns source pages into extracted entities, relationships,
+text chunks, and embeddings.
 
-Neo4j does not split raw text or extract entities by itself.
-The Neo4j GraphRAG package provides a text splitter, an embedder, an entity and relationship extractor, and a graph writer.
-Neo4j stores the nodes, relationships, and embedding properties that those components produce.
+## The whole flow
 
-A `Chunk` is a normal Neo4j node with text, an index, and, when enabled, an embedding.
-If a paragraph is shorter than the splitter limit, it can remain one `Chunk`.
-Chunking does not mean that Neo4j breaks every paragraph into smaller pieces.
-
-There are two separate choices:
-
-- construction approach, which changes which facts get pulled out;
-- storage form, which is the same shape every time.
-
-For each test question and each approach, RecRAG creates one Neo4j database and writes both storage forms into it.
-A database is one isolated store, so the two approaches never mix.
+Both methods receive source pages. They differ in the prompt and schema passed
+to the extractor.
 
 ```mermaid
 flowchart LR
-    A[Page titles and passages] --> B[Join into one text]
-    B --> C{Construction approach}
-    C -->|standard| D["recrag-standard-{record-id}"]
-    C -->|ontology_guided| E["recrag-ontology-guided-{record-id}"]
-    D --> F[Graph structure]
-    D --> G[Search structures]
-    E --> H[Graph structure]
-    E --> I[Search structures]
+    input["Source pages"] --> method{"Extraction method"}
+    method --> standard["Standard<br/>extract with no schema"]
+    method --> guided["Ontology-guided<br/>extract with suggested types"]
+    standard --> extracted["Extraction JSON<br/>nodes + relationships"]
+    guided --> extracted
+    extracted --> pipeline["SimpleKGPipeline<br/>builds the graph"]
+    pipeline --> graph["Graph + chunks<br/>and embeddings"]
+    graph --> storage{"Storage"}
+    storage --> neo4j["Neo4j<br/>graph + embeddings"]
+    storage --> split["Neo4j graph<br/>Milvus embeddings"]
 ```
 
-## Public entry point
+## One example
 
-The application uses `GraphRAG` for the full construction and answer flow:
-
-```python
-from graphrag.construction.construction import ConstructionMethod
-from graphrag.graph_rag import GraphRAG
-
-rag = GraphRAG.from_config()
-try:
-    method = ConstructionMethod.STANDARD
-    database = method.database_name(record.id)
-    rag.construct(record.pages, method=method, database=database)
-    results = rag.answer(
-        record.question,
-        database=database,
-        retrieval_methods=["vector"],
-    )
-finally:
-    rag.close()
-```
-
-`record.pages` contains `SourcePage` values. The construction method selects
-the extraction approach. The retrieval method selects how the graph is searched.
-
-## Inputs and database isolation
-
-A source page is one page with a title plus a list of text pieces.
-For example, title `Marie Curie` with two passages about her birth and her Nobel prize.
-
-Construction joins the input in two steps.
-First it adds a `Page: {title}` header to each page and joins that page's passages with blank lines.
-Then it joins all pages into one long text string.
-Small example:
+The question is used later for retrieval and evaluation. Construction receives
+only the source pages.
 
 ```text
-Page: Marie Curie
+Question (not construction input):
+Were Scott Derrickson and Ed Wood of the same nationality?
 
-She was born in Warsaw.
-
-She won the Nobel Prize in Physics.
+Source pages:
+Scott Derrickson was an American director, screenwriter, and producer.
+Ed Wood was an American filmmaker, actor, writer, producer, and director.
 ```
 
-In code, that transformation is:
+### Approach 1: Standard
 
-```python
-page_texts = []
-passages_text = "\n\n".join(page.passages)
-page_texts.append(f"Page: {page.title}\n{passages_text}")
-text = "\n\n".join(page_texts)
+Standard passes `SCHEMA = None` and the default extraction prompt.
+
+```mermaid
+graph LR
+    text["Source text"] --> extract["Default prompt<br/>schema = None"]
+    extract --> output["JSON nodes + relationships"]
+    output --> entities["Example entities<br/>Scott Derrickson<br/>Ed Wood<br/>American"]
 ```
 
-Each test question and construction approach gets its own database.
-The name has this form:
+### Approach 2: Ontology-guided
+
+Ontology-guided passes suggested node and relationship types. It can return
+additional types.
+
+```mermaid
+graph LR
+    text["Source text"] --> extract["Same prompt<br/>suggested types"]
+    extract --> output["JSON nodes + relationships"]
+    output --> entities["Example entities<br/>Person: Scott Derrickson<br/>Person: Ed Wood<br/>American"]
+```
+
+The diagrams show the extraction stage, not the exact output for every run.
+
+## Prompts sent to the extractor
+
+Both methods use this prompt. `SimpleKGPipeline` fills `{schema}`, `{examples}`,
+and `{text}`.
 
 ```text
-recrag-{construction-method}-{record-id}
+You are a top-tier algorithm designed for extracting
+information in structured formats to build a knowledge graph.
+
+Extract the entities (nodes) and specify their type from the following text.
+Also extract the relationships between these nodes.
+
+Return result as JSON using the following format:
+{{"nodes": [ {{"id": "0", "label": "Person", "properties": {{"name": "John"}} }}],
+"relationships": [{{"type": "KNOWS", "start_node_id": "0", "end_node_id": "1", "properties": {{"since": "2024-08-01"}} }}] }}
+
+Use only the following node and relationship types (if provided):
+{schema}
+
+Assign a unique ID (string) to each node, and reuse it to define relationships.
+Do respect the source and target node types for relationship and
+the relationship direction.
+
+Make sure you adhere to the following rules to produce valid JSON objects:
+- Do not return any additional information other than the JSON in it.
+- Omit any backticks around the JSON - simply output the JSON on its own.
+- The JSON object must not wrapped into a list - it is its own JSON object.
+- Property names must be enclosed in double quotes
+
+Examples:
+{examples}
+
+Input text:
+
+{text}
 ```
 
-For example, `ontology_guided` becomes `ontology-guided` in the database name.
-Retrieval later reads from the database built for the selected approach.
+The Standard method passes `SCHEMA = None`. The Ontology-guided method passes
+these suggested types through `{schema}`:
 
-Code map: `SourcePage` holds the title and passages.
-`database_name()` builds the name above, and `GraphRAG.construct()` calls `rebuild_graph()`.
+```text
+Node types:
+Person, Organization, Place, CreativeWork, Event, Concept, Thing
 
-## Storage forms
+Relationship types:
+BORN_IN, DIED_IN, LOCATED_IN, PART_OF, MEMBER_OF, CREATED_BY,
+SPOUSE_OF, CHILD_OF, AWARDED, HAS_NATIONALITY
 
-Every database holds the same two storage forms below.
-Storage form means how the data is saved, not which facts were found.
+Additional node and relationship types: allowed
+```
 
-### Graph structure
+The Ontology-guided method appends these rules to the shared prompt:
 
-The graph has three main node kinds.
-A `Document` node holds the whole combined input.
-A `Chunk` node holds one text slice, about 1,000 characters with 100 characters of overlap in this project.
-Short input can produce one chunk containing the whole input.
-An `__Entity__` node holds one thing found in the text, such as a person or a place, with a name and properties.
+```text
+Rules:
+- Every node needs a name.
+- Fill a field only when text states it. Omit it when not stated.
+- Use Thing only when no narrower kind fits.
+- Link name is UPPER_SNAKE, short, from text.
+- One fact per link. No facts outside text.
+```
 
-It stores the page titles and passages inside `Chunk.text`.
-It does not make one node per source page, because chunks are slices of the joined text, not whole pages.
+## Build the graph
 
 ```mermaid
 flowchart LR
-    E1["__Entity__\nname, properties"]
-    E2["__Entity__\nname, properties"]
-    C1["Chunk 0\ntext, index, embedding"]
-    C2["Chunk 1\ntext, index, embedding"]
-    DOC["Document\ncombined input"]
-
-    E1 -->|FROM_CHUNK| C1
-    E2 -->|FROM_CHUNK| C2
-    C1 -->|FROM_DOCUMENT| DOC
-    C1 -->|NEXT_CHUNK| C2
-    E1 -->|extracted relationship| E2
+    extracted["Extraction JSON<br/>nodes + relationships"] --> pipeline["SimpleKGPipeline"]
+    pipeline --> nodes["Neo4j nodes"]
+    pipeline --> relationships["Neo4j relationships"]
+    pipeline --> chunks["Chunk nodes"]
+    pipeline --> embeddings["Chunk embeddings"]
 ```
 
-The edges keep source order, source links, and meaning.
-`FROM_CHUNK` links an entity to the chunk where it was found.
-`FROM_DOCUMENT` links a chunk to the whole input.
-`NEXT_CHUNK` links one chunk to the next chunk.
-An extracted edge, such as `BORN_IN`, stores one fact between two entities.
-`FROM_CHUNK` and `BORN_IN` are different: the first points to the source text, while the second states a fact.
+## Storage option 1: Neo4j for the graph and embeddings
 
-Code map: `SimpleKGPipeline` writes the `Document`, `Chunk`, `__Entity__`, and extracted-fact data.
-
-### Search structures
-
-Search needs numbers, not just words.
-An embedding is a list of numbers that captures meaning, so similar texts get similar numbers.
-A vector index is a fast lookup over those numbers by cosine similarity, which is a closeness score between two embeddings.
-
-Neo4j's vector index indexes an embedding property on a node or relationship.
-A vector index does not return related entities. It returns the nodes or relationships covered by that index.
-
-Chunk search stores the embedding on each `Chunk` node and indexes it as `chunk_embeddings`.
-The index returns matching chunks first.
-A retrieval query can then follow `FROM_CHUNK` links to add the entities and facts connected to those chunks.
-
-This project also has an optional entity-search path.
-It copies a linked chunk's text and embedding into an `EntityEmbedding` node, links it to the entity with `HAS_EMBEDDING`, and indexes it as `entity_embeddings`.
-Neo4j does not require this extra node, and the Neo4j GraphRAG documentation does not use it as the default model.
-The copied embedding represents the chunk text, not the entity by itself.
+Neo4j can store the extracted graph and the vectors used to search its chunks.
+The vectors below are shortened examples.
 
 ```mermaid
-flowchart LR
-    subgraph CHUNK["Chunk search"]
-        C["Chunk.embedding"]
-        CI[["chunk_embeddings\nindexes Chunk.embedding"]]
-        C -.-> CI
-    end
+graph TD
+    subgraph NEO4J["Neo4j"]
+        chunk1["Chunk<br/>Scott Derrickson is American<br/>embedding: [0.12, -0.04, 0.88]"]
+        chunk2["Chunk<br/>Ed Wood was American<br/>embedding: [-0.21, 0.77, 0.35]"]
+        scott["__Entity__<br/>Scott Derrickson"]
+        ed["__Entity__<br/>Ed Wood"]
+        american["__Entity__<br/>American"]
+        scott_embedding["EntityEmbedding<br/>[0.12, -0.04, 0.88]"]
+        ed_embedding["EntityEmbedding<br/>[-0.21, 0.77, 0.35]"]
+        chunk_index[["chunk_embeddings<br/>indexes Chunk.embedding"]]
+        entity_index[["entity_embeddings<br/>indexes EntityEmbedding.embedding"]]
 
-    subgraph ENTITY["Entity search"]
-        E["__Entity__"]
-        EE["EntityEmbedding\ntext = Chunk.text\nembedding = Chunk.embedding"]
-        EI[["entity_embeddings\nindexes EntityEmbedding.embedding"]]
-        E -->|HAS_EMBEDDING| EE
-        EE -.-> EI
+        scott -->|HAS_NATIONALITY| american
+        ed -->|HAS_NATIONALITY| american
+        scott -->|FROM_CHUNK| chunk1
+        ed -->|FROM_CHUNK| chunk2
+        scott -->|HAS_EMBEDDING| scott_embedding
+        ed -->|HAS_EMBEDDING| ed_embedding
+        chunk1 -->|NEXT_CHUNK| chunk2
+        chunk1 -.-> chunk_index
+        scott_embedding -.-> entity_index
+        ed_embedding -.-> entity_index
     end
 ```
 
-The solid arrow is a Neo4j relationship.
-The dotted arrows point to Neo4j indexes; indexes are database helpers, not graph nodes.
+The active construction code creates the graph, copies chunk embeddings for
+entity search, and builds both Neo4j vector indexes.
 
-For chunk retrieval, the path is: question, question embedding, `chunk_embeddings`, matching `Chunk`, then graph links to entities and facts.
-The vector index finds the text. The graph links add structure.
+## Storage option 2: Milvus for embeddings, Neo4j for the graph
 
-Code map: the copy step runs one Cypher query after the pipeline.
-Then `create_vector_index()` builds both indexes.
-
-## Construction approaches
-
-A schema is the allowed list of node kinds, link kinds, and fields.
-Each approach below writes the same two storage forms.
-It only changes the schema and prompt used to decide which nodes, fields, and links to write.
+Keep the same `chunk_key` in both systems. Milvus returns that key after a
+vector search. The key lets the application fetch the matching chunk and its
+connected entities from Neo4j.
 
 ```mermaid
-flowchart LR
-    A[One text input] --> B{Construction approach}
-    B -->|standard| C[Infer one schema from the input]
-    B -->|ontology_guided| D[Use fixed list plus extraction rules]
-    C --> E[Write both storage forms]
-    D --> E
+graph TD
+    subgraph MILVUS["Milvus"]
+        milvus_index["Index"]
+        milvus_embeddings[("Embeddings<br/>vector + chunk_key")]
+        milvus_index -. indexes .-> milvus_embeddings
+    end
+
+    subgraph NEO4J["Neo4j"]
+        scott(["Entity<br/>Name: Scott Derrickson<br/>Nationality: American"])
+        ed(["Entity<br/>Name: Ed Wood<br/>Nationality: American"])
+        american(["Entity<br/>Name: American"])
+        scott_chunk["Chunk<br/>chunk_key: scott"]
+        ed_chunk["Chunk<br/>chunk_key: ed"]
+
+        scott -->|HAS_NATIONALITY| american
+        ed -->|HAS_NATIONALITY| american
+        scott -->|FROM_CHUNK| scott_chunk
+        ed -->|FROM_CHUNK| ed_chunk
+    end
+
+    milvus_embeddings -. chunk_key .-> scott_chunk
+    milvus_embeddings -. chunk_key .-> ed_chunk
 ```
 
-### Standard extraction
+The link between Milvus and Neo4j is the shared `chunk_key`. Milvus does not
+store the graph.
 
-Standard means no fixed list.
-The model reads the input, invents one guiding schema, and reuses it across all chunks.
-The schema sets the node labels, relationship types, and properties for that run.
-Use this when the kinds are not known ahead of time.
+The current `ClassicalRAG` path uses Milvus as a separate vector store and does
+not perform this Neo4j lookup. The diagram shows the connection needed for a
+split-storage comparison.
 
-It uses the default entity-relationship extraction prompt with no local changes.
+## Related docs
 
-Code map: the standard module sets `SCHEMA = None` and passes `ERExtractionTemplate.DEFAULT_TEMPLATE`.
-See Neo4j's [schema parameter behavior](https://neo4j.com/docs/neo4j-graphrag-python/current/user_guide_kg_builder.html#schema-parameter-behavior).
-
-### Ontology-guided extraction
-
-Ontology-guided means a fixed starting list.
-An ontology is a fixed list of allowed kinds.
-The run passes named node labels, relationship types, and node fields to the pipeline, but it may still add new labels and link types when the text needs them.
-
-The node labels are: `Person`, `Organization`, `Place`, `CreativeWork`, `Event`, `Concept`, and `Thing`.
-The relationship types are: `BORN_IN`, `DIED_IN`, `LOCATED_IN`, `PART_OF`, `MEMBER_OF`, `CREATED_BY`, `SPOUSE_OF`, `CHILD_OF`, `AWARDED`, and `HAS_NATIONALITY`.
-
-The prompt adds these rules.
-Every node needs a name.
-Fill a field only when the text states it.
-Use `Thing` only when no narrower kind fits.
-Keep link names short and uppercase with underscores.
-Put one fact in each link, and add no facts outside the text.
-
-Code map: the ontology-guided module passes a `GraphSchema` plus an extended prompt.
-See Neo4j's [`GraphSchema` reference](https://neo4j.com/docs/neo4j-graphrag-python/current/types.html#graphschema).
-
-## Write order and indexes
-
-Both storage forms are written in this order:
-
-1. Create the Neo4j database for the test question and approach.
-2. Write the `Document`, `Chunk`, `__Entity__`, and extracted-fact data.
-3. Copy each linked chunk's text and embedding into `EntityEmbedding` nodes and link them with `HAS_EMBEDDING`.
-4. Build these indexes:
-
-| Index | Neo4j label | Indexed property | Search type |
-| --- | --- | --- | --- |
-| `chunk_embeddings` | `Chunk` | `embedding` | Cosine vector search with the configured embedding dimensions. |
-| `entity_embeddings` | `EntityEmbedding` | `embedding` | Cosine vector search over chunk text copied for an entity link. |
-
-The code then waits for both indexes with `CALL db.awaitIndexes(60)`.
-That call blocks up to 60 seconds until the indexes are ready, so the database is ready for retrieval after it returns.
-
-Code map: `rebuild_graph()` does all four steps in order.
-
-See the [retrieval reference](retrieval.md) for how the graph and indexes are queried.
-See the [evaluation reference](evaluation.md) for the checks that run after construction.
-
-## Neo4j documentation
-
-- [Knowledge Graph Builder guide](https://neo4j.com/docs/neo4j-graphrag-python/current/user_guide_kg_builder.html)
-- [`SimpleKGPipeline` API reference](https://neo4j.com/docs/neo4j-graphrag-python/current/api.html#neo4j_graphrag.experimental.pipeline.kg_builder.SimpleKGPipeline)
-- [`GraphSchema`, `NodeType`, and `RelationshipType` types](https://neo4j.com/docs/neo4j-graphrag-python/current/types.html)
-- [Vector indexes](https://neo4j.com/docs/cypher-manual/current/indexes/semantic-indexes/vector-indexes/)
-- [Embeddings and vector indexes tutorial](https://neo4j.com/docs/genai/tutorials/current/embeddings-vector-indexes/)
+- [Graph retrieval](retrieval.md)
+- [GraphRAG evaluation](evaluation.md)
+- [Dataset records](../datasets.md)
+- [Neo4j knowledge graph builder guide](https://neo4j.com/docs/neo4j-graphrag-python/current/user_guide_kg_builder.html)
+- [Neo4j vector indexes](https://neo4j.com/docs/cypher-manual/current/indexes/semantic-indexes/vector-indexes/)

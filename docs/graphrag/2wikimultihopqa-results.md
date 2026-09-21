@@ -3,8 +3,8 @@
 > Ontology-guided graphs held more facts. Standard graphs gave better answers.
 > Five records is too few to pick a winner.
 
-This run asks which candidate answers multi-hop questions best. A candidate is
-one construction choice plus one retrieval choice, such as standard
+This run compares candidate answer quality for multi-hop questions. A candidate
+combines one construction choice and one retrieval choice, such as standard
 construction with vector retrieval.
 
 ```mermaid
@@ -37,9 +37,9 @@ the answer model once.
 - Saved report: [`2026090905_report.pdf`](../../results/recrag/2026090905_report.pdf).
 - Tables below are transcribed from that report.
 
-The report uses old retrieval names. `vector_cypher` in the tables is today's
-`vector`. Standalone `text2cypher` no longer exists in the current retrieval
-method list. `entity_vector` was not in this run.
+The report uses old retrieval names. In the tables, `vector_cypher` means
+today's `vector`. Standalone `text2cypher` is not in the current retrieval
+method list. This run did not include `entity_vector`.
 
 ## Example record
 
@@ -69,9 +69,9 @@ and S mean groundedness, completeness, and supporting evidence coverage.
 | Standard | 0.56 | 0.44 | 0.34 |
 | Ontology-guided | 0.78 | 0.58 | 0.64 |
 
-Ontology-guided scored higher on all three checks. It also built bigger graphs:
-70.80 triples on average versus 46.40 for standard, at 41.45 build seconds
-versus 30.74.
+Ontology-guided scored higher on all three checks. It also built bigger graphs.
+It produced 70.80 triples on average versus 46.40 for standard. Its mean build
+time was 41.45 seconds versus 30.74 seconds.
 
 | Record | Standard G / C / S | Ontology-guided G / C / S |
 | ---: | --- | --- |
@@ -94,8 +94,9 @@ All scores are averages over 5 records.
 | Ontology-guided | `agentic` | 0.91 | 0.80 | 0.21 | 1.00 | 0.98 | 0.80 | 0/5 |
 | Ontology-guided | `vector_cypher` | 0.86 | 1.00 | 0.19 | 1.00 | 0.98 | 1.00 | 0/5 |
 
-Standard with vector had the best mix: 0.94 precision, 1.00 recall, and 1.00
-correctness. Standalone `text2cypher` was weakest on both graph choices.
+Standard construction with vector retrieval had the best mix: 0.94 precision,
+1.00 recall, and 1.00 correctness. Standalone `text2cypher` was weakest for
+both construction choices.
 
 Faithfulness averages hide missing cases. Standard `text2cypher` scored 0.67
 on only 3 cases with context. Ontology-guided `text2cypher` scored 1.00 on
@@ -109,5 +110,5 @@ only 1 case. Faithfulness is skipped when retrieval returns no context.
 - The alias check is strict. A longer correct answer can fail it.
 - This run did not test `entity_vector`, latency, or token cost.
 
-Repeat the full 2 × 3 matrix on more records. Record the sample size, split,
-and selection rule. Compare evidence-backed correct answers first.
+Repeat the full 2 × 3 matrix on more records. Record the sample size, split, and
+selection rule. Compare evidence-backed correct answers first.
