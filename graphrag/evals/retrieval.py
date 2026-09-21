@@ -10,17 +10,19 @@ from deepeval.metrics import (
 from deepeval.test_case import LLMTestCase
 from neo4j_graphrag.generation.types import RagResultModel
 
-from ..dataset_records.two_wiki_multihopqa import TwoWikiRecord
+from ..cost import TokenLedger
+from ..dataset_records.base import DatasetRecord
 from ..graph_rag import DEFAULT_LLM_MODEL
 from .construction import ResponsesOpenAIModel, _metric_result
 
 
 def evaluate_retrieval(
-    record: TwoWikiRecord,
+    record: DatasetRecord,
     result: RagResultModel,
     *,
     judge_model: str = DEFAULT_LLM_MODEL,
     top_k: int = 5,
+    usage: TokenLedger | None = None,
 ) -> dict[str, Any]:
     items = result.retriever_result.items if result.retriever_result else []
     retrieved_context = [str(item.content) for item in items[:top_k]]
@@ -29,7 +31,7 @@ def evaluate_retrieval(
         expected_output="\n".join(record.supporting_sentences()),
         retrieval_context=retrieved_context,
     )
-    judge = ResponsesOpenAIModel(model=judge_model)
+    judge = ResponsesOpenAIModel(model=judge_model, usage=usage)
     return {
         "record_id": record.id,
         "top_k": top_k,

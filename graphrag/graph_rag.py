@@ -23,6 +23,7 @@ from neo4j_graphrag.types import LLMMessage
 from pydantic import BaseModel
 
 from .construction.construction import ConstructionMethod, SourcePage, rebuild_graph
+from .cost import TokenLedger
 from .retrieval.answering import RetrievalMethod, answer_question
 
 DEFAULT_LLM_MODEL = "gpt-5.6-luna"
@@ -180,12 +181,14 @@ class GraphRAG:
         embedder: Embedder,
         answer_llm,
         embedding_dimensions: int,
+        usage: TokenLedger | None = None,
     ) -> None:
         self._driver = driver
         self._llm = llm
         self._embedder = embedder
         self._answer_llm = answer_llm
         self._embedding_dimensions = embedding_dimensions
+        self._usage = usage or TokenLedger()
 
     @classmethod
     def from_config(cls, config_path: Path | None = None) -> GraphRAG:
@@ -199,6 +202,14 @@ class GraphRAG:
             auth=(username, password),
         )
         try:
+            usage = TokenLedger(
+                input_price_per_million=config.get("cost", {}).get(
+                    "input_price_per_million", 0.20
+                ),
+                output_price_per_million=config.get("cost", {}).get(
+                    "output_price_per_million", 1.20
+                ),
+            )
             chat_model = ChatOpenAI(
                 model=config["llm"].get("model", DEFAULT_LLM_MODEL),
                 timeout=config["llm"]["timeout"],
@@ -208,6 +219,7 @@ class GraphRAG:
                         "reasoning_effort", DEFAULT_REASONING_EFFORT
                     )
                 },
+                callbacks=[usage],
             )
             return cls(
                 driver=driver,
@@ -218,6 +230,7 @@ class GraphRAG:
                 ),
                 answer_llm=chat_model,
                 embedding_dimensions=config["embedding"]["dimensions"],
+                usage=usage,
             )
         except Exception:
             driver.close()
@@ -259,6 +272,10 @@ class GraphRAG:
 
     def close(self) -> None:
         self._driver.close()
+
+    @property
+    def usage(self) -> TokenLedger:
+        return self._usage
 
 
 __all__ = [

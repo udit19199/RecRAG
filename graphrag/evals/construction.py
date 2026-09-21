@@ -16,18 +16,25 @@ from langchain_openai import ChatOpenAI
 from neo4j import Driver
 from neo4j_graphrag.generation.types import RagResultModel
 
-from ..dataset_records.two_wiki_multihopqa import TwoWikiRecord, answer_aliases
+from ..cost import TokenLedger
+from ..dataset_records.base import DatasetRecord
 from ..graph_rag import DEFAULT_LLM_MODEL, DEFAULT_REASONING_EFFORT
 
 
 class ResponsesOpenAIModel(DeepEvalBaseLLM):
     """Use LangChain's Responses model for DeepEval judges."""
 
-    def __init__(self, model: str, reasoning_effort: str = DEFAULT_REASONING_EFFORT):
+    def __init__(
+        self,
+        model: str,
+        reasoning_effort: str = DEFAULT_REASONING_EFFORT,
+        usage: TokenLedger | None = None,
+    ):
         self._model = ChatOpenAI(
             model=model,
             use_responses_api=True,
             reasoning={"effort": reasoning_effort},
+            callbacks=[usage] if usage else None,
         )
         super().__init__(model)
 
@@ -169,12 +176,13 @@ def _construction_metric(
 
 
 def evaluate_construction(
-    record: TwoWikiRecord,
+    record: DatasetRecord,
     graph_triples: Sequence[GraphTriple],
     *,
     judge_model: str = DEFAULT_LLM_MODEL,
     construction_seconds: float | None = None,
     graph_statistics: dict[str, int] | None = None,
+    usage: TokenLedger | None = None,
 ) -> dict[str, Any]:
     source_context = [
         f"Page: {page.title}\n{paragraph}"
@@ -192,7 +200,7 @@ def evaluate_construction(
         actual_output=graph_output,
         context=record.supporting_sentences(),
     )
-    judge = ResponsesOpenAIModel(model=judge_model)
+    judge = ResponsesOpenAIModel(model=judge_model, usage=usage)
     metrics = {
         "groundedness": _construction_metric(
             name="Graph groundedness",
@@ -251,12 +259,13 @@ def _metric_result(metric, test_case: LLMTestCase) -> dict[str, Any]:
 
 
 def evaluate_answer(
-    record: TwoWikiRecord,
+    record: DatasetRecord,
     result: RagResultModel,
     *,
     judge_model: str = DEFAULT_LLM_MODEL,
+    usage: TokenLedger | None = None,
 ) -> dict[str, Any]:
-    """Score one 2Wiki answer after retrieval."""
+    """Score one dataset answer after retrieval."""
     retriever_result = result.retriever_result
     retrieved_context = (
         [str(item.content) for item in retriever_result.items]
@@ -272,15 +281,15 @@ def evaluate_answer(
         retrieval_context=retrieved_context,
     )
     answer_alias_match = _normalise(result.answer) in {
-        _normalise(alias) for alias in answer_aliases(record)
+        _normalise(alias) for alias in record.answer_aliases()
     }
     answer = {
         "expected": record.answer,
-        "expected_id": record.answer_id,
+        "expected_id": getattr(record, "answer_id", None),
         "actual": result.answer,
         "alias_match": answer_alias_match,
     }
-    judge = ResponsesOpenAIModel(model=judge_model)
+    judge = ResponsesOpenAIModel(model=judge_model, usage=usage)
     if retrieved_context:
         answer["faithfulness"] = _metric_result(
             FaithfulnessMetric(model=judge, threshold=None), test_case
@@ -311,7 +320,7 @@ def evaluate_answer(
                 input=record.question,
                 actual_output=result.answer,
                 expected_output=json.dumps(
-                    {"answer": record.answer, "aliases": answer_aliases(record)},
+                    {"answer": record.answer, "aliases": record.answer_aliases()},
                     ensure_ascii=False,
                 ),
             ),
