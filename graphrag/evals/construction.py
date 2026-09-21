@@ -12,7 +12,6 @@ from deepeval.metrics import (
 )
 from deepeval.models import DeepEvalBaseLLM
 from deepeval.test_case import LLMTestCase, SingleTurnParams
-from langchain_core.callbacks import UsageMetadataCallbackHandler
 from langchain_openai import ChatOpenAI
 from neo4j import Driver
 from neo4j_graphrag.generation.types import RagResultModel
@@ -28,13 +27,11 @@ class ResponsesOpenAIModel(DeepEvalBaseLLM):
         self,
         model: str,
         reasoning_effort: str = DEFAULT_REASONING_EFFORT,
-        usage: UsageMetadataCallbackHandler | None = None,
     ):
         self._model = ChatOpenAI(
             model=model,
             use_responses_api=True,
             reasoning={"effort": reasoning_effort},
-            callbacks=[usage] if usage else None,
         )
         super().__init__(model)
 
@@ -62,12 +59,6 @@ class ResponsesOpenAIModel(DeepEvalBaseLLM):
 
     def get_model_name(self) -> str:
         return self.name
-
-    def supports_structured_outputs(self) -> bool:
-        return True
-
-    def supports_json_mode(self) -> bool:
-        return True
 
 
 GraphTriple = tuple[str, str, str]
@@ -182,7 +173,6 @@ def evaluate_construction(
     judge_model: str = DEFAULT_LLM_MODEL,
     construction_seconds: float | None = None,
     graph_statistics: dict[str, int] | None = None,
-    usage: UsageMetadataCallbackHandler | None = None,
 ) -> dict[str, Any]:
     source_context = [
         f"Page: {page.title}\n{paragraph}"
@@ -200,7 +190,7 @@ def evaluate_construction(
         actual_output=graph_output,
         context=record.supporting_sentences(),
     )
-    judge = ResponsesOpenAIModel(model=judge_model, usage=usage)
+    judge = ResponsesOpenAIModel(model=judge_model)
     metrics = {
         "groundedness": _construction_metric(
             name="Graph groundedness",
@@ -263,7 +253,6 @@ def evaluate_answer(
     result: RagResultModel,
     *,
     judge_model: str = DEFAULT_LLM_MODEL,
-    usage: UsageMetadataCallbackHandler | None = None,
 ) -> dict[str, Any]:
     """Score one dataset answer after retrieval."""
     retriever_result = result.retriever_result
@@ -289,7 +278,7 @@ def evaluate_answer(
         "actual": result.answer,
         "alias_match": answer_alias_match,
     }
-    judge = ResponsesOpenAIModel(model=judge_model, usage=usage)
+    judge = ResponsesOpenAIModel(model=judge_model)
     if retrieved_context:
         answer["faithfulness"] = _metric_result(
             FaithfulnessMetric(model=judge, threshold=None), test_case

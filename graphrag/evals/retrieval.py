@@ -8,7 +8,6 @@ from deepeval.metrics import (
     ContextualRelevancyMetric,
 )
 from deepeval.test_case import LLMTestCase
-from langchain_core.callbacks import UsageMetadataCallbackHandler
 from neo4j_graphrag.generation.types import RagResultModel
 
 from ..dataset_records.base import DatasetRecord
@@ -22,7 +21,6 @@ def evaluate_retrieval(
     *,
     judge_model: str = DEFAULT_LLM_MODEL,
     top_k: int = 5,
-    usage: UsageMetadataCallbackHandler | None = None,
 ) -> dict[str, Any]:
     items = result.retriever_result.items if result.retriever_result else []
     retrieved_context = [str(item.content) for item in items[:top_k]]
@@ -31,7 +29,7 @@ def evaluate_retrieval(
         expected_output="\n".join(record.supporting_sentences()),
         retrieval_context=retrieved_context,
     )
-    judge = ResponsesOpenAIModel(model=judge_model, usage=usage)
+    judge = ResponsesOpenAIModel(model=judge_model)
     return {
         "record_id": record.id,
         "top_k": top_k,
