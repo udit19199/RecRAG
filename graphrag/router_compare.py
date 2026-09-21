@@ -34,7 +34,8 @@ def _gpt_choice(profile: UseCaseProfile, model: ChatOpenAI) -> RouterChoice:
 
 
 def run_gpt_router(
-    profiles: list[UseCaseProfile], model: ChatOpenAI
+    profiles: list[UseCaseProfile],
+    model: ChatOpenAI,
 ) -> list[dict[str, object]]:
     results = []
     for profile in profiles:
@@ -53,7 +54,8 @@ def run_gpt_router(
 
 
 def run_jev_router(
-    profiles: list[UseCaseProfile], client: TypeSafeClient | None = None
+    profiles: list[UseCaseProfile],
+    client: TypeSafeClient | None = None,
 ) -> list[dict[str, object]]:
     client = client or TypeSafeClient(api_key=os.environ.get("TYPESAFE_API_KEY"))
     results = []
@@ -72,7 +74,11 @@ def run_jev_router(
                 ),
                 "multi_hop": Score(
                     instructions="How multi-hop is the question pattern",
-                    criteria=["Single fact", "Two linked facts", "Many linked facts"],
+                    criteria=[
+                        "Single fact",
+                        "Two linked facts",
+                        "Many linked facts",
+                    ],
                 ),
                 "citations_required": Noul(
                     instructions="The profile requires evidence or citations"

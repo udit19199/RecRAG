@@ -7,8 +7,7 @@ import tomllib
 from pathlib import Path
 
 from dotenv import load_dotenv
-from langchain_classic.chains.combine_documents import create_stuff_documents_chain
-from langchain_classic.chains.retrieval import create_retrieval_chain
+from langchain_core.callbacks import UsageMetadataCallbackHandler
 from langchain_core.documents import Document
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_milvus import Milvus
@@ -37,26 +36,35 @@ class ClassicalRAG:
         answer_llm: ChatOpenAI,
         milvus_uri: str,
         collection_name: str,
+        usage: UsageMetadataCallbackHandler,
     ) -> None:
         self._embeddings = embeddings
         self._answer_llm = answer_llm
         self._milvus_uri = milvus_uri
         self._collection_name = collection_name
+        self._usage = usage
 
     @classmethod
     def from_config(
-        cls, config_path: Path | None = None, *, collection_name: str
+        cls,
+        config_path: Path | None = None,
+        *,
+        collection_name: str,
+        usage: UsageMetadataCallbackHandler | None = None,
     ) -> ClassicalRAG:
         project_root = Path(__file__).resolve().parents[1]
         load_dotenv(dotenv_path=project_root / ".env", override=True)
         path = config_path or project_root / "config.toml"
         config = tomllib.loads(path.read_text())
+        embedding_model = config["embedding"]["model"]
+        answer_model = config["llm"].get("model", DEFAULT_LLM_MODEL)
+        usage = usage or UsageMetadataCallbackHandler()
         embeddings = OpenAIEmbeddings(
-            model=config["embedding"]["model"],
+            model=embedding_model,
             timeout=config["embedding"]["timeout"],
         )
         answer_llm = ChatOpenAI(
-            model=config["llm"].get("model", DEFAULT_LLM_MODEL),
+            model=answer_model,
             timeout=config["llm"]["timeout"],
             use_responses_api=True,
             reasoning={
@@ -64,12 +72,14 @@ class ClassicalRAG:
                     "reasoning_effort", DEFAULT_REASONING_EFFORT
                 )
             },
+            callbacks=[usage],
         )
         return cls(
             embeddings=embeddings,
             answer_llm=answer_llm,
             milvus_uri=os.environ.get("MILVUS_URI", DEFAULT_MILVUS_URI),
             collection_name=collection_name,
+            usage=usage,
         )
 
     @staticmethod
@@ -84,7 +94,10 @@ class ClassicalRAG:
                 )
         return documents
 
-    def index(self, pages: list[SourcePage]) -> None:
+    def index(
+        self,
+        pages: list[SourcePage],
+    ) -> None:
         Milvus.from_documents(
             self._documents(pages),
             self._embeddings,
@@ -93,27 +106,35 @@ class ClassicalRAG:
             drop_old=True,
         )
 
-    def _chain(self):
-        store = Milvus(
+    def _store(self):
+        return Milvus(
             self._embeddings,
             collection_name=self._collection_name,
             connection_args={"uri": self._milvus_uri},
         )
-        combine = create_stuff_documents_chain(self._answer_llm, ANSWER_PROMPT)
-        return create_retrieval_chain(store.as_retriever(), combine)
 
-    def answer(self, question: str) -> RagResultModel:
-        chain = self._chain()
-        output = chain.invoke({"input": question})
-        contexts = [doc.page_content for doc in output.get("context", [])]
+    def answer(
+        self,
+        question: str,
+    ) -> RagResultModel:
+        documents = self._store().similarity_search(question)
+        contexts = [document.page_content for document in documents]
+        prompt = ANSWER_PROMPT.invoke(
+            {"context": "\n\n".join(contexts), "input": question}
+        )
+        output = self._answer_llm.invoke(prompt.to_messages())
         return RagResultModel(
-            answer=str(output.get("answer", "")),
+            answer=str(output.content),
             retriever_result=None
             if not contexts
             else RetrieverResult(
                 items=[RetrieverResultItem(content=text) for text in contexts]
             ),
         )
+
+    @property
+    def usage(self) -> UsageMetadataCallbackHandler:
+        return self._usage
 
 
 __all__ = ["ClassicalRAG", "DEFAULT_MILVUS_URI"]
