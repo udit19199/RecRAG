@@ -399,16 +399,16 @@ adapts LangChain's `ChatOpenAI` to DeepEval. It configures:
 | API | OpenAI Responses API, enabled with `use_responses_api=True` |
 | Reasoning effort | `medium` |
 | Structured output | Function calling when DeepEval supplies a schema |
-| Callback | The shared `TokenLedger` when the app passes one |
+| Callback | LangChain's `get_usage_metadata_callback()` |
 
-`GraphRAG.from_config()` creates one `TokenLedger` for the run and attaches it
-to the main model. The Streamlit app passes the same ledger to construction,
-retrieval, and answer judges. The ledger counts model calls when the response
-contains token usage metadata. It reports input tokens, output tokens, call
-count, and estimated cost using the `[cost]` values in `config.toml`.
+The Streamlit app wraps each model-using stage in LangChain's
+`get_usage_metadata_callback()` context manager. It appends the native
+`usage_metadata` value to `runs/usage-*.jsonl` and displays the same value. No
+custom token callback or model ledger is needed.
 
-The ledger does not score quality, measure Neo4j query time, or count embedding
-calls as LLM calls. Build time is measured separately around `rag.construct()`.
+The callback does not score quality, measure Neo4j query time, or count
+embedding calls as LLM calls. Build time is measured separately around
+`rag.construct()`.
 
 ## Full Streamlit run
 

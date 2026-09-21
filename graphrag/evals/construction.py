@@ -12,11 +12,11 @@ from deepeval.metrics import (
 )
 from deepeval.models import DeepEvalBaseLLM
 from deepeval.test_case import LLMTestCase, SingleTurnParams
+from langchain_core.callbacks import UsageMetadataCallbackHandler
 from langchain_openai import ChatOpenAI
 from neo4j import Driver
 from neo4j_graphrag.generation.types import RagResultModel
 
-from ..cost import TokenLedger
 from ..dataset_records.base import DatasetRecord
 from ..graph_rag import DEFAULT_LLM_MODEL, DEFAULT_REASONING_EFFORT
 
@@ -28,7 +28,7 @@ class ResponsesOpenAIModel(DeepEvalBaseLLM):
         self,
         model: str,
         reasoning_effort: str = DEFAULT_REASONING_EFFORT,
-        usage: TokenLedger | None = None,
+        usage: UsageMetadataCallbackHandler | None = None,
     ):
         self._model = ChatOpenAI(
             model=model,
@@ -182,7 +182,7 @@ def evaluate_construction(
     judge_model: str = DEFAULT_LLM_MODEL,
     construction_seconds: float | None = None,
     graph_statistics: dict[str, int] | None = None,
-    usage: TokenLedger | None = None,
+    usage: UsageMetadataCallbackHandler | None = None,
 ) -> dict[str, Any]:
     source_context = [
         f"Page: {page.title}\n{paragraph}"
@@ -263,7 +263,7 @@ def evaluate_answer(
     result: RagResultModel,
     *,
     judge_model: str = DEFAULT_LLM_MODEL,
-    usage: TokenLedger | None = None,
+    usage: UsageMetadataCallbackHandler | None = None,
 ) -> dict[str, Any]:
     """Score one dataset answer after retrieval."""
     retriever_result = result.retriever_result
