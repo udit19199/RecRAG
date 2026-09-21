@@ -3,12 +3,10 @@ from __future__ import annotations
 from .base import DatasetAdapter
 from .hotpotqa import adapter as hotpotqa
 from .natural_questions import adapter as natural_questions
-from .triviaqa import adapter as triviaqa
 from .two_wiki_multihopqa import adapter as two_wiki_multihopqa
 
 DATASET_ADAPTERS: list[DatasetAdapter] = [
     hotpotqa,
-    triviaqa,
     two_wiki_multihopqa,
     natural_questions,
 ]

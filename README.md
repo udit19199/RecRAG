@@ -1,7 +1,7 @@
 # RecRAG
 
 RecRAG is a research project by HPE and JECRC University. It compares graph
-construction and retrieval methods on four QA datasets, and studies a router
+construction and retrieval methods on three QA datasets, and studies a router
 that maps a natural-language RAG use case to a suitable combination.
 
 ## Run the app

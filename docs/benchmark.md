@@ -1,3 +1,99 @@
+# Dataset choices and source records
+
+RecRAG uses three question-answer datasets. A **record** is one dataset item. It
+contains one question, its answer, and text from one or more Wikipedia pages.
+
+The datasets store that text in different shapes:
+
+| Dataset | Text stored in each record |
+| --- | --- |
+| HotpotQA | Sentences grouped under page titles |
+| 2WikiMultiHopQA | Paragraphs grouped under page titles |
+| Natural Questions | A complete Wikipedia page as HTML and tokens |
+
+The examples below show the same records in a readable form.
+
+## HotpotQA
+
+**Record ID:** `5a8b57f25542995d1e6f1371`
+
+**Question:** Were Scott Derrickson and Ed Wood of the same nationality?
+
+**Answer:** Yes.
+
+**Text stored in the record:**
+
+**Scott Derrickson**
+
+> Scott Derrickson (born July 16, 1966) is an American director, screenwriter,
+> and producer.
+>
+> He lives in Los Angeles, California.
+>
+> He is best known for directing horror films such as "Sinister", "The Exorcism
+> of Emily Rose", and "Deliver Us From Evil", as well as the 2016 Marvel
+> Cinematic Universe installment, "Doctor Strange."
+
+**Ed Wood**
+
+> Edward Davis Wood Jr. (October 10, 1924 – December 10, 1978) was an American
+> filmmaker, actor, writer, producer, and director.
+
+The record marks the first sentence for both pages as supporting evidence. Both
+people are described as American, so the answer is "yes".
+
+## 2WikiMultiHopQA
+
+**Record ID:** `8813f87c0bdd11eba7f7acde48001122`
+
+**Question:** Who is the mother of the director of the film *Polish-Russian War*?
+
+**Answer:** Małgorzata Braunek.
+
+**Text stored in the record:**
+
+**Polish-Russian War (film)**
+
+> Polish-Russian War (Wojna polsko-ruska) is a 2009 Polish film directed by
+> Xawery Żuławski based on the novel Polish-Russian War under the white-red flag
+> by Dorota Masłowska.
+
+**Xawery Żuławski**
+
+> Xawery Żuławski (born 22 December 1971 in Warsaw) is a Polish film director.
+> He is the son of actress Małgorzata Braunek and director Andrzej Żuławski.
+
+**How the answer is found:**
+
+1. The film's director is Xawery Żuławski.
+2. Xawery Żuławski's mother is Małgorzata Braunek.
+
+Here, `context` only groups the text by page. The `evidences` field stores the
+same two links in a compact form: film → director, then director → mother.
+
+## Natural Questions
+
+**Example ID:** `4549465242785278785`
+
+**Question:** When is the last episode of season 8 of *The Walking Dead*?
+
+**Answer:** March 18, 2018.
+
+**Page:** *The Walking Dead (season 8)*
+
+**Text around the answer:**
+
+| Episode | Title | Date |
+| ---: | --- | --- |
+| 12 | "The Key" | March 18, 2018 |
+
+The raw record stores the complete Wikipedia page in `document_html`. It also
+stores a token list and the answer's location in that page. The `document_url`
+identifies the Wikipedia revision used for the record. The page text is already
+local, so the URL does not need to be fetched to read this example.
+
+See the [Natural Questions data format](https://github.com/google-research-datasets/natural-questions#data-format).
+
 # API cost estimate
 
 This page gives the cost table for one record from each dataset. It covers graph
@@ -51,21 +147,6 @@ generation, so those calls are recorded together. Splitting them would require
 reimplementing that package flow.
 
 ## HotpotQA
-
-| Stage | Luna tokens | DeepSeek tokens | Jev tokens | Luna price | DeepSeek price | Jev price |
-| --- | --- | --- | --- | ---: | ---: | ---: |
-| 1a. Standard construction, Neo4j only | `Lstd_in + Lstd_out` | `Dstd_in + Dstd_out` | — | `Lstd_cost` | `Dstd_cost` | — |
-| 1a. Standard construction, Neo4j and Milvus | `Lstd_in + Lstd_out` | `Dstd_in + Dstd_out` | — | `Lstd_cost` | `Dstd_cost` | — |
-| 1b. Ontology-guided construction, Neo4j only | `Log_in + Log_out` | `Dog_in + Dog_out` | — | `Log_cost` | `Dog_cost` | — |
-| 1b. Ontology-guided construction, Neo4j and Milvus | `Log_in + Log_out` | `Dog_in + Dog_out` | — | `Log_cost` | `Dog_cost` | — |
-| 1c. Construction evaluation | `Lce_in + Lce_out` | `Dce_in + Dce_out` | `Jce_in` | `Lce_cost` | `Dce_cost` | `0.042 × Jce_in / M` |
-| 2a. Agentic retrieval | `Lar_in + Lar_out` | `Dar_in + Dar_out` | — | `Lar_cost` | `Dar_cost` | — |
-| 2b. Vector DB only, no graph | `Lv_in + Lv_out` | `Dv_in + Dv_out` | — | `Lv_cost` | `Dv_cost` | — |
-| 2c. Vector plus Cypher and graph | `Lvg_in + Lvg_out` | `Dvg_in + Dvg_out` | — | `Lvg_cost` | `Dvg_cost` | — |
-| 2d. Retrieval evaluation | `Lre_in + Lre_out` | `Dre_in + Dre_out` | `Jre_in` | `Lre_cost` | `Dre_cost` | `0.042 × Jre_in / M` |
-| 3. Answer generation | `La_in + La_out` | `Da_in + Da_out` | — | `La_cost` | `Da_cost` | — |
-
-## TriviaQA
 
 | Stage | Luna tokens | DeepSeek tokens | Jev tokens | Luna price | DeepSeek price | Jev price |
 | --- | --- | --- | --- | ---: | ---: | ---: |
