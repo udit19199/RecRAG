@@ -1,7 +1,9 @@
 # Dataset choices and source records
 
-RecRAG uses three question-answer datasets. A **record** is one dataset item. It
-contains one question, its answer, and text from one or more Wikipedia pages.
+RecRAG uses four question-answer datasets. A **record** is one dataset item. It
+contains one question, its answer, and the text supplied with that item. The
+completed measured run uses one record from three datasets. The BrowseComp-Plus
+run is pending.
 
 The datasets store that text in different shapes:
 
@@ -10,8 +12,10 @@ The datasets store that text in different shapes:
 | HotpotQA | Sentences grouped under page titles |
 | 2WikiMultiHopQA | Paragraphs grouped under page titles |
 | Natural Questions | A complete Wikipedia page as HTML and tokens |
+| BrowseComp-Plus | Evidence, gold, and hard-negative documents grouped under one query |
 
-The examples below show the same records in a readable form.
+The examples below show the dataset formats in a readable form. The exact
+records used for the measured run are listed later.
 
 ## HotpotQA
 
@@ -94,119 +98,104 @@ local, so the URL does not need to be fetched to read this example.
 
 See the [Natural Questions data format](https://github.com/google-research-datasets/natural-questions#data-format).
 
-# API cost estimate
+# API cost and construction results
 
-This page gives the cost table for one record from each dataset. It covers graph
-construction, retrieval, evaluation, and answer generation.
+This section reports one-record construction experiments. Each completed
+dataset used both graph-construction methods and then evaluated both graphs.
+Construction did not receive the dataset question or answer. Only
+`gpt-5.6-luna` was used for chat and evaluation, with Neo4j as the store.
 
-These are planning estimates. The datasets do not have a fixed record size. A
-HotpotQA record can have a different number of passages from the next record,
-and a Natural Questions record contains a full Wikipedia page. Replace the
-variables in a table with the token counts returned by the provider for the
-record under study.
+Retrieval, retrieval evaluation, and answer generation were not run. Embedding
+usage from `text-embedding-3-small` is not included in the LLM token totals
+below.
 
-## Prices
+## Price calculation
 
 Prices are in US dollars per one million tokens. `M` means one million.
 
-| Provider | Input price | Output price | Price basis |
+| Model | Input price | Output price | Source |
 | --- | ---: | ---: | --- |
 | `gpt-5.6-luna` | $0.20/M | $1.20/M | The `[cost]` section in `config.toml`. |
-| DeepSeek Flash | $0.15/M | $0.60/M | DeepSeek V4.1 Flash off-peak, cache miss. Peak rates are $0.30/M and $1.20/M. |
-| Jev from TypeSafe AI | $0.042/M | Free | Jev bills input tokens only. |
-
-Sources: [DeepSeek model pricing](https://api-docs.deepseek.com/quick_start/pricing/)
-and [TypeSafe AI's Jev announcement](https://typesafe.ai/blog/introducing-system-one-models-and-jev).
-
-For every row:
 
 ```text
-Luna price = 0.20 × Luna input tokens / M + 1.20 × Luna output tokens / M
-DeepSeek price = 0.15 × DeepSeek input tokens / M + 0.60 × DeepSeek output tokens / M
-Jev price = 0.042 × Jev input tokens / M
+cost = 0.20 × input tokens / M + 1.20 × output tokens / M
 ```
 
-## How to read the tables
+The token counts come from LangChain's `get_usage_metadata_callback()`. Costs
+are rounded to six decimal places.
 
-- `Luna tokens` and `DeepSeek tokens` use `input + output = total`.
-- `Jev tokens` lists input tokens only because Jev output is free.
-- Variables such as `Lstd_in` and `Dstd_out` are record-dependent. The adapter
-  must supply their values for the record under study.
-- The Neo4j and Milvus rows have the same model-token estimate. Milvus adds
-  vector-storage and embedding costs, which are outside these LLM columns.
-- The `vector DB only` and `Neo4j + Milvus` rows describe the planned split-store
-  comparison. The current GraphRAG path stores graph data and vectors in Neo4j.
-- Jev is an evaluation alternative in this table. The current DeepEval code uses
-  `gpt-5.6-luna`; it does not call Jev.
+## Measured records
 
-The Streamlit run wraps each model-using stage with LangChain's native
-`get_usage_metadata_callback()`. It appends the returned `usage_metadata` to
-`runs/usage-*.jsonl` and displays the same values.
-The current `neo4j-graphrag` search call combines retrieval and answer
-generation, so those calls are recorded together. Splitting them would require
-reimplementing that package flow.
+| Dataset | Record used | Pages or documents | Source characters | Status |
+| --- | --- | ---: | ---: | --- |
+| HotpotQA | `5a8b57f25542995d1e6f1371` | 10 | 4,430 | Complete |
+| 2WikiMultiHopQA | `8813f87c0bdd11eba7f7acde48001122` | 10 | 3,578 | Complete |
+| Natural Questions | `5225754983651766092` | 1 | 13,390 | Complete |
+| BrowseComp-Plus | `query_id=775` | 78 | 710,164 | Pending: full-record construction did not complete |
 
-## HotpotQA
+The BrowseComp-Plus record contains six evidence documents, one gold document,
+and 72 negative documents. Its full-record run did not produce a completed
+usage measurement, so it is excluded from the totals below.
 
-| Stage | Luna tokens | DeepSeek tokens | Jev tokens | Luna price | DeepSeek price | Jev price |
-| --- | --- | --- | --- | ---: | ---: | ---: |
-| 1a. Standard construction, Neo4j only | `Lstd_in + Lstd_out` | `Dstd_in + Dstd_out` | — | `Lstd_cost` | `Dstd_cost` | — |
-| 1a. Standard construction, Neo4j and Milvus | `Lstd_in + Lstd_out` | `Dstd_in + Dstd_out` | — | `Lstd_cost` | `Dstd_cost` | — |
-| 1b. Ontology-guided construction, Neo4j only | `Log_in + Log_out` | `Dog_in + Dog_out` | — | `Log_cost` | `Dog_cost` | — |
-| 1b. Ontology-guided construction, Neo4j and Milvus | `Log_in + Log_out` | `Dog_in + Dog_out` | — | `Log_cost` | `Dog_cost` | — |
-| 1c. Construction evaluation | `Lce_in + Lce_out` | `Dce_in + Dce_out` | `Jce_in` | `Lce_cost` | `Dce_cost` | `0.042 × Jce_in / M` |
-| 2a. Agentic retrieval | `Lar_in + Lar_out` | `Dar_in + Dar_out` | — | `Lar_cost` | `Dar_cost` | — |
-| 2b. Vector DB only, no graph | `Lv_in + Lv_out` | `Dv_in + Dv_out` | — | `Lv_cost` | `Dv_cost` | — |
-| 2c. Vector plus Cypher and graph | `Lvg_in + Lvg_out` | `Dvg_in + Dvg_out` | — | `Lvg_cost` | `Dvg_cost` | — |
-| 2d. Retrieval evaluation | `Lre_in + Lre_out` | `Dre_in + Dre_out` | `Jre_in` | `Lre_cost` | `Dre_cost` | `0.042 × Jre_in / M` |
-| 3. Answer generation | `La_in + La_out` | `Da_in + Da_out` | — | `La_cost` | `Da_cost` | — |
+## Token usage and cost
 
-## 2WikiMultiHopQA
+| Dataset | Stage | Input tokens | Output tokens | Total tokens | Cost |
+| --- | --- | ---: | ---: | ---: | ---: |
+| HotpotQA | Standard construction | 17,536 | 6,082 | 23,618 | $0.010806 |
+| HotpotQA | Ontology-guided construction | 13,471 | 5,032 | 18,503 | $0.008733 |
+| HotpotQA | Standard construction evaluation | 6,568 | 459 | 7,027 | $0.001864 |
+| HotpotQA | Ontology-guided construction evaluation | 5,506 | 482 | 5,988 | $0.001680 |
+| 2WikiMultiHopQA | Standard construction | 18,124 | 5,514 | 23,638 | $0.010242 |
+| 2WikiMultiHopQA | Ontology-guided construction | 11,263 | 5,684 | 16,947 | $0.009073 |
+| 2WikiMultiHopQA | Standard construction evaluation | 5,969 | 743 | 6,712 | $0.002085 |
+| 2WikiMultiHopQA | Ontology-guided construction evaluation | 5,918 | 530 | 6,448 | $0.001820 |
+| Natural Questions | Standard construction | 42,025 | 8,632 | 50,657 | $0.018763 |
+| Natural Questions | Ontology-guided construction | 34,083 | 12,386 | 46,469 | $0.021680 |
+| Natural Questions | Standard construction evaluation | 10,524 | 402 | 10,926 | $0.002587 |
+| Natural Questions | Ontology-guided construction evaluation | 12,213 | 382 | 12,595 | $0.002901 |
 
-| Stage | Luna tokens | DeepSeek tokens | Jev tokens | Luna price | DeepSeek price | Jev price |
-| --- | --- | --- | --- | ---: | ---: | ---: |
-| 1a. Standard construction, Neo4j only | `Lstd_in + Lstd_out` | `Dstd_in + Dstd_out` | — | `Lstd_cost` | `Dstd_cost` | — |
-| 1a. Standard construction, Neo4j and Milvus | `Lstd_in + Lstd_out` | `Dstd_in + Dstd_out` | — | `Lstd_cost` | `Dstd_cost` | — |
-| 1b. Ontology-guided construction, Neo4j only | `Log_in + Log_out` | `Dog_in + Dog_out` | — | `Log_cost` | `Dog_cost` | — |
-| 1b. Ontology-guided construction, Neo4j and Milvus | `Log_in + Log_out` | `Dog_in + Dog_out` | — | `Log_cost` | `Dog_cost` | — |
-| 1c. Construction evaluation | `Lce_in + Lce_out` | `Dce_in + Dce_out` | `Jce_in` | `Lce_cost` | `Dce_cost` | `0.042 × Jce_in / M` |
-| 2a. Agentic retrieval | `Lar_in + Lar_out` | `Dar_in + Dar_out` | — | `Lar_cost` | `Dar_cost` | — |
-| 2b. Vector DB only, no graph | `Lv_in + Lv_out` | `Dv_in + Dv_out` | — | `Lv_cost` | `Dv_cost` | — |
-| 2c. Vector plus Cypher and graph | `Lvg_in + Lvg_out` | `Dvg_in + Dvg_out` | — | `Lvg_cost` | `Dvg_cost` | — |
-| 2d. Retrieval evaluation | `Lre_in + Lre_out` | `Dre_in + Dre_out` | `Jre_in` | `Lre_cost` | `Dre_cost` | `0.042 × Jre_in / M` |
-| 3. Answer generation | `La_in + La_out` | `Da_in + Da_out` | — | `La_cost` | `Da_cost` | — |
+## Dataset totals
 
-## Natural Questions
+| Dataset | Input tokens | Output tokens | Total tokens | Cost |
+| --- | ---: | ---: | ---: | ---: |
+| HotpotQA | 43,081 | 12,055 | 55,136 | $0.023082 |
+| 2WikiMultiHopQA | 41,274 | 12,471 | 53,745 | $0.023220 |
+| Natural Questions | 98,845 | 21,802 | 120,647 | $0.045931 |
+| All three completed datasets | 183,200 | 46,328 | 229,528 | $0.092234 |
 
-| Stage | Luna tokens | DeepSeek tokens | Jev tokens | Luna price | DeepSeek price | Jev price |
-| --- | --- | --- | --- | ---: | ---: | ---: |
-| 1a. Standard construction, Neo4j only | `Lstd_in + Lstd_out` | `Dstd_in + Dstd_out` | — | `Lstd_cost` | `Dstd_cost` | — |
-| 1a. Standard construction, Neo4j and Milvus | `Lstd_in + Lstd_out` | `Dstd_in + Dstd_out` | — | `Lstd_cost` | `Dstd_cost` | — |
-| 1b. Ontology-guided construction, Neo4j only | `Log_in + Log_out` | `Dog_in + Dog_out` | — | `Log_cost` | `Dog_cost` | — |
-| 1b. Ontology-guided construction, Neo4j and Milvus | `Log_in + Log_out` | `Dog_in + Dog_out` | — | `Log_cost` | `Dog_cost` | — |
-| 1c. Construction evaluation | `Lce_in + Lce_out` | `Dce_in + Dce_out` | `Jce_in` | `Lce_cost` | `Dce_cost` | `0.042 × Jce_in / M` |
-| 2a. Agentic retrieval | `Lar_in + Lar_out` | `Dar_in + Dar_out` | — | `Lar_cost` | `Dar_cost` | — |
-| 2b. Vector DB only, no graph | `Lv_in + Lv_out` | `Dv_in + Dv_out` | — | `Lv_cost` | `Dv_cost` | — |
-| 2c. Vector plus Cypher and graph | `Lvg_in + Lvg_out` | `Dvg_in + Dvg_out` | — | `Lvg_cost` | `Dvg_cost` | — |
-| 2d. Retrieval evaluation | `Lre_in + Lre_out` | `Dre_in + Dre_out` | `Jre_in` | `Lre_cost` | `Dre_cost` | `0.042 × Jre_in / M` |
-| 3. Answer generation | `La_in + La_out` | `Da_in + Da_out` | — | `La_cost` | `Da_cost` | — |
+## Construction metrics
 
-## Variable names
+These metrics are for the constructed Neo4j graph. Duplicate counts are
+reported separately from the entity count because they show repeated names or
+nodes that may need graph consolidation.
 
-The price cells use the same suffix as the token cells. For example,
-`Lstd_cost` is `0.20 × Lstd_in / M + 1.20 × Lstd_out / M`.
+| Dataset | Method | Time (s) | Entities | Relationships | Relation types | Duplicate name groups | Duplicate nodes | Isolated entities | Self-loops |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| HotpotQA | Standard | 31.646 | 77 | 62 | 12 | 0 | 19 | 0 | 0 |
+| HotpotQA | Ontology-guided | 16.393 | 78 | 33 | 5 | 1 | 2 | 0 | 0 |
+| 2WikiMultiHopQA | Standard | 36.812 | 59 | 46 | 18 | 0 | 16 | 0 | 0 |
+| 2WikiMultiHopQA | Ontology-guided | 23.560 | 69 | 38 | 8 | 2 | 4 | 0 | 0 |
+| Natural Questions | Standard | 31.923 | 98 | 70 | 7 | 2 | 36 | 0 | 0 |
+| Natural Questions | Ontology-guided | 60.722 | 202 | 90 | 3 | 12 | 25 | 0 | 1 |
 
-| Variable | Meaning |
-| --- | --- |
-| `std` | Standard graph extraction for one record. |
-| `og` | Ontology-guided graph extraction for one record. |
-| `ce` | Construction evaluation for one graph. |
-| `ar` | Agentic retrieval and its tool decisions. |
-| `v` | Vector-only retrieval. |
-| `vg` | Vector retrieval with Cypher and graph context. |
-| `re` | Retrieval evaluation for one retrieved result. |
-| `a` | Final answer generation for one question. |
-| `L`, `D`, `J` | Luna, DeepSeek, and Jev. The suffix `_in` means input tokens and `_out` means output tokens. |
+## Construction evaluation scores
 
-The answer output is small for these datasets. Record it for completeness, but
-expect construction and evaluation to dominate the total.
+Scores range from 0 to 1 and come from the construction evaluation run.
+These are LLM-judged proxies. The datasets do not provide gold entity-relation
+triple sets, so exact graph precision, recall, and F1 are not computed.
+
+| Dataset | Method | Groundedness | Completeness | Supporting-evidence coverage |
+| --- | --- | ---: | ---: | ---: |
+| HotpotQA | Standard | 0.5 | 0.5 | 0.3 |
+| HotpotQA | Ontology-guided | 0.7 | 0.6 | 0.4 |
+| 2WikiMultiHopQA | Standard | 0.5 | 0.6 | 0.7 |
+| 2WikiMultiHopQA | Ontology-guided | 0.5 | 0.7 | 0.6 |
+| Natural Questions | Standard | 0.2 | 0.3 | 0.6 |
+| Natural Questions | Ontology-guided | 0.5 | 0.6 | 0.4 |
+
+## Not yet measured
+
+- Agentic retrieval, vector retrieval, and entity-vector retrieval.
+- Retrieval evaluation and final answer generation.
+- Embedding token usage and vector-storage cost.
+- A completed BrowseComp-Plus construction and evaluation run.

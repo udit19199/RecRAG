@@ -165,8 +165,9 @@ graph TD
     end
 ```
 
-The active construction code creates the graph, copies chunk embeddings for
-entity search, and builds both Neo4j vector indexes.
+The active construction code creates a database for each run, record, and
+construction method. It stops if extraction or graph writing fails. Successful
+runs copy chunk embeddings for entity search and build both vector indexes.
 
 ## Storage option 2: Milvus for embeddings, Neo4j for the graph
 
@@ -202,9 +203,8 @@ graph TD
 The link between Milvus and Neo4j is the shared `chunk_key`. Milvus does not
 store the graph.
 
-The current `ClassicalRAG` path uses Milvus as a separate vector store and does
-not perform this Neo4j lookup. The diagram shows the connection needed for a
-split-storage comparison.
+The repository does not currently implement this ClassicalRAG path. The
+diagram shows the planned split-storage comparison.
 
 ## Related docs
 

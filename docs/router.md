@@ -21,13 +21,12 @@ keeps these choices separate:
 | Retrieval | Fixed vector, entity vector, agentic | What search behavior does the question need? |
 | Operations | Freshness, latency, tokens, storage, database limits | Can the customer run and update the candidate? |
 
-The [documentation index](index.md) lists the active GraphRAG methods. The
-router applies these choices to a candidate and may compare them with
-ClassicalRAG.
+The GraphRAG pages describe the active methods. The router applies these choices
+to a candidate and may compare them with ClassicalRAG.
 
-The repository also contains a `ClassicalRAG` module. The current Streamlit
-flow does not run it with the GraphRAG matrix. The router treats it as a
-comparison candidate, not as part of the active GraphRAG path.
+The router can compare ClassicalRAG as a candidate, but this repository does
+not currently implement a ClassicalRAG module. The current Streamlit flow runs
+the active GraphRAG matrix only.
 
 ### Make a recommendation
 
@@ -172,7 +171,7 @@ differences.
 For graph questions, also measure exact entity, relationship, and path accuracy.
 An LLM judge score cannot prove that a graph path is correct.
 
-For GraphRAG runs, use the [evaluation token ledger](graphrag/evaluation.md#token-and-call-measurement)
+For GraphRAG runs, use the [evaluation usage accounting](graphrag/evaluation.md#judge-model-and-usage-accounting)
 for per-call tokens, model turns, tool calls, retries, and judge usage. Keep
 evaluation judge tokens separate from production query tokens.
 

@@ -1,8 +1,12 @@
 from __future__ import annotations
 
+import json
+
+import neo4j
 from neo4j import Driver
 from neo4j_graphrag.embeddings.base import Embedder
 from neo4j_graphrag.retrievers import VectorCypherRetriever
+from neo4j_graphrag.types import RetrieverResultItem
 
 VECTOR_RETRIEVAL_QUERY = """
 CALL {
@@ -41,6 +45,12 @@ RETURN node.text AS text, [entity.name] AS entities, [] AS graph_facts, score
 """
 
 
+def format_retrieval_record(record: neo4j.Record) -> RetrieverResultItem:
+    return RetrieverResultItem(
+        content=json.dumps(record.data(), ensure_ascii=False, default=str)
+    )
+
+
 def build_vector_retriever(
     *, driver: Driver, embedder: Embedder, database: str
 ) -> VectorCypherRetriever:
@@ -48,6 +58,7 @@ def build_vector_retriever(
         driver=driver,
         index_name="chunk_embeddings",
         retrieval_query=VECTOR_RETRIEVAL_QUERY,
+        result_formatter=format_retrieval_record,
         embedder=embedder,
         neo4j_database=database,
     )
@@ -60,6 +71,7 @@ def build_entity_vector_retriever(
         driver=driver,
         index_name="entity_embeddings",
         retrieval_query=ENTITY_VECTOR_RETRIEVAL_QUERY,
+        result_formatter=format_retrieval_record,
         embedder=embedder,
         neo4j_database=database,
     )

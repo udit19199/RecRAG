@@ -153,22 +153,18 @@ without adding unsupported ones.
 ### What the construction evaluator reads
 
 When DeepEval scoring is enabled, the Streamlit run calls
-`read_entity_triples()` and `read_graph_statistics()` after construction
+`read_graph()` and `read_graph_statistics()` after construction
 finishes. Both functions query the database for the current record and
 construction method. They do not inspect the source extractor's intermediate
 response.
 
-`read_entity_triples()` returns only direct relationships between
-`__Entity__` nodes. It sorts each triple by subject, relationship type, and
-object before returning it:
+`read_graph()` returns one JSON value with every `__Entity__` node and every
+direct relationship between entity nodes. Node entries include their labels
+and properties. Relationship entries include their type, properties, source,
+and target.
 
-```text
-(subject.name, type(relation), object.name)
-```
-
-It does not include `FROM_CHUNK`, `NEXT_CHUNK`, `FROM_DOCUMENT`, or
-`HAS_EMBEDDING` because those relationships do not connect two `__Entity__`
-nodes.
+It excludes `FROM_CHUNK`, `NEXT_CHUNK`, `FROM_DOCUMENT`, and `HAS_EMBEDDING`
+because those relationships do not connect two `__Entity__` nodes.
 
 `read_graph_statistics()` returns these counts:
 
@@ -187,7 +183,7 @@ These counts describe graph shape. They do not prove that a graph fact is true.
 ### How the judge cases are built
 
 `evaluate_construction()` in
-[`graphrag/evals/construction.py`](../../graphrag/evals/construction.py#L178-L249)
+[`graphrag/evals/construction.py`](../../graphrag/evals/construction.py#L175-L248)
 creates two `LLMTestCase` values from the same graph output:
 
 ```python
@@ -196,12 +192,16 @@ source_context = [
     for page in record.pages
     for paragraph in page.passages
 ]
-graph_output = json.dumps(graph_triples, ensure_ascii=False)
+graph_output = read_graph(driver, database=database)
 ```
 
 The full-context case uses every source passage. The supporting-context case uses
 only `record.supporting_sentences()`. Both cases set `actual_output` to the
-serialized graph triples.
+serialized graph.
+
+HotpotQA and 2WikiMultiHopQA use their marked supporting sentences. Natural
+Questions uses its deduplicated long-answer passages. BrowseComp-Plus uses its
+evidence documents.
 
 The evaluator creates one `ResponsesOpenAIModel` judge and uses it for three
 `GEval` metrics. Each metric receives its evaluation instruction, the graph
@@ -219,6 +219,12 @@ stores a score and reason without turning the result into pass or fail.
 Each result has `description`, `score`, and `reason`. The description is fixed
 in code. The score and reason come from the judge.
 
+The construction evaluator does not compute exact graph precision, recall, or
+F1. The dataset adapters provide source and supporting passages, but no gold
+entity-relation triple set with canonical names, relation types, and direction.
+The three construction scores are LLM-judged proxies and must not be read as
+exact precision or recall values. Each result records this in `limitations`.
+
 The function returns this shape:
 
 ```json
@@ -228,15 +234,15 @@ The function returns this shape:
     "completeness": {"description": "...", "score": 0.0, "reason": "..."},
     "supporting_evidence_coverage": {"description": "...", "score": 0.0, "reason": "..."}
   },
+  "limitations": ["No gold entity-relation triple set is available..."],
   "graph_statistics": {},
   "construction_seconds": 0.0
 }
 ```
 
-`graph_statistics` defaults to an empty object when the caller does not pass
-counts. `construction_seconds` is measured around `rag.construct()` in the
-Streamlit app. If scoring raises an exception, the app keeps the build time and
-shows the exception instead of showing partial metric data.
+The caller must pass `graph_statistics`. The Streamlit app measures
+`construction_seconds` around `rag.construct()`. If scoring raises an exception,
+the app keeps the build time and shows the exception instead of partial metrics.
 
 ## Retrieval evaluation
 
@@ -328,7 +334,7 @@ Yes.
 ```
 
 The answer evaluator is `evaluate_answer()` in
-[`graphrag/evals/construction.py`](../../graphrag/evals/construction.py#L261-L329).
+[`graphrag/evals/construction.py`](../../graphrag/evals/construction.py#L260-L322).
 The function keeps two kinds of context separate:
 
 ```python
@@ -390,7 +396,7 @@ show an answer-quality score while making the missing evidence explicit.
 ## Judge model and usage accounting
 
 `ResponsesOpenAIModel` in
-[`graphrag/evals/construction.py`](../../graphrag/evals/construction.py#L24-L71)
+[`graphrag/evals/construction.py`](../../graphrag/evals/construction.py#L22-L60)
 adapts LangChain's `ChatOpenAI` to DeepEval. It configures:
 
 | Setting | Current value |

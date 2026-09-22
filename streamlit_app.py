@@ -81,6 +81,12 @@ def render_construction_evaluation(evaluation):
                     with st.expander("Why this score?"):
                         st.write(str(metric["reason"]))
 
+    limitations = evaluation.get("limitations", [])
+    if limitations:
+        st.caption("Construction evaluation limits")
+        for limitation in limitations:
+            st.write(f"- {limitation}")
+
     render_token_usage("Construction judge tokens", evaluation.get("token_usage"))
 
     statistics = evaluation.get("graph_statistics", {})
@@ -119,7 +125,6 @@ selected_dataset = st.selectbox(
     DATASET_SOURCES,
     format_func=lambda source: source.display_name,
 )
-record_count = st.slider("Records to load", 1, 20, 2)
 selected_construction_methods = (
     st.pills(
         "Construction methods",
@@ -144,10 +149,7 @@ score_with_deepeval = st.checkbox(
     help="Scores graph construction, retrieval, and answers with LLM judges.",
 )
 try:
-    loaded_records = [
-        load_record_cached(selected_dataset.name, index)
-        for index in range(record_count)
-    ]
+    loaded_records = [load_record_cached(selected_dataset.name, 0)]
 except FileNotFoundError as exc:
     st.error(str(exc))
     st.stop()
@@ -157,15 +159,13 @@ run_clicked = st.button("Run", type="primary", icon=":material/account_tree:")
 if run_clicked:
     if not selected_construction_methods:
         st.warning("Select at least one construction method.")
-    elif not selected_retrieval_methods:
-        st.warning("Select at least one retrieval method.")
     else:
         if score_with_deepeval:
             try:
                 from graphrag.evals.construction import (
                     evaluate_answer,
                     evaluate_construction,
-                    read_entity_triples,
+                    read_graph,
                     read_graph_statistics,
                 )
                 from graphrag.evals.retrieval import evaluate_retrieval
@@ -175,11 +175,8 @@ if run_clicked:
 
         try:
             project_root = Path(__file__).resolve().parent
-            usage_path = (
-                project_root
-                / "runs"
-                / (f"usage-{datetime.now(UTC):%Y%m%dT%H%M%S%fZ}.jsonl")
-            )
+            run_id = f"{datetime.now(UTC):%Y%m%d%H%M%S%f}"
+            usage_path = project_root / "runs" / f"usage-{run_id}Z.jsonl"
             usage_path.parent.mkdir(exist_ok=True)
             st.caption(f"Token usage saved to `{usage_path.relative_to(project_root)}`")
             rag = GraphRAG.from_config()
@@ -191,7 +188,7 @@ if run_clicked:
                         f"Record {record_number}: constructing graphs", expanded=False
                     )
                     for method in selected_construction_methods:
-                        database = method.database_name(record.id)
+                        database = method.database_name(record.id, run_id)
                         construction_status.write(
                             f"Building {method} graph for record {record_number}"
                         )
@@ -216,9 +213,7 @@ if run_clicked:
                                 with get_usage_metadata_callback() as evaluation_usage:
                                     evaluation = evaluate_construction(
                                         record,
-                                        read_entity_triples(
-                                            rag._driver, database=database
-                                        ),
+                                        read_graph(rag._driver, database=database),
                                         graph_statistics=read_graph_statistics(
                                             rag._driver, database=database
                                         ),
@@ -261,6 +256,8 @@ if run_clicked:
                                 "Construction tokens", construction_usage
                             )
 
+                    if not selected_retrieval_methods:
+                        continue
                     st.markdown("### Retrieval and answer")
                     retrieval_status = st.status(
                         f"Record {record_number}: retrieving answers", expanded=False
@@ -274,7 +271,7 @@ if run_clicked:
                             with get_usage_metadata_callback() as retrieval_usage:
                                 result = rag.answer(
                                     record.question,
-                                    database=method.database_name(record.id),
+                                    database=method.database_name(record.id, run_id),
                                     retrieval_methods=[retrieval_method],
                                 )[0]
                             store_token_usage(
