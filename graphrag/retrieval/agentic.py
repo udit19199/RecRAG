@@ -15,9 +15,13 @@ from neo4j_graphrag.retrievers import (
     VectorCypherRetriever,
 )
 from neo4j_graphrag.tool import Tool
-from neo4j_graphrag.types import LLMMessage, RawSearchResult
+from neo4j_graphrag.types import LLMMessage, RawSearchResult, RetrieverResultItem
 
-from .retrievers import VECTOR_RETRIEVAL_QUERY
+from .retrievers import VECTOR_RETRIEVAL_QUERY, format_retrieval_record
+
+
+def _format_tool_record(record: neo4j.Record) -> RetrieverResultItem:
+    return RetrieverResultItem(content=record["content"], metadata=record["metadata"])
 
 
 def _langchain_tool(tool: Tool) -> StructuredTool:
@@ -47,6 +51,7 @@ def _langchain_tool(tool: Tool) -> StructuredTool:
 class AgenticToolsRetriever(ToolsRetriever):
     def __init__(self, *, agent_llm: BaseChatModel, **kwargs: Any) -> None:
         super().__init__(**kwargs)
+        self.result_formatter = _format_tool_record
         self._agent = create_agent(
             model=agent_llm,
             tools=[_langchain_tool(tool) for tool in self._tools],
@@ -83,12 +88,14 @@ def build_agentic_retriever(
         llm=llm,
         neo4j_schema=neo4j_schema,
         neo4j_database=database,
+        result_formatter=format_retrieval_record,
     )
     vector = VectorCypherRetriever(
         driver=driver,
         index_name=vector_index,
         retrieval_query=VECTOR_RETRIEVAL_QUERY,
         embedder=embedder,
+        result_formatter=format_retrieval_record,
         neo4j_database=database,
     )
     return AgenticToolsRetriever(

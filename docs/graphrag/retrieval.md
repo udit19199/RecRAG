@@ -2,7 +2,7 @@
 
 Retrieval selects Neo4j records for one question, then passes those records to
 the answer model. The public entry point is `GraphRAG.answer()` in
-[`graphrag/graph_rag.py`](../../graphrag/graph_rag.py#L256-L271). It delegates to
+[`graphrag/graph_rag.py`](../../graphrag/graph_rag.py#L243-L258). It delegates to
 `answer_question()` in
 [`graphrag/retrieval/answering.py`](../../graphrag/retrieval/answering.py#L26-L65).
 
@@ -32,7 +32,7 @@ flowchart TD
 | Input | Source | Use |
 | --- | --- | --- |
 | `question` | The dataset record | The vector query, Cypher prompt, and answer prompt. |
-| `database` | `ConstructionMethod.database_name(record.id)` | The Neo4j database read by every retriever in this call. |
+| `database` | `ConstructionMethod.database_name(record.id, run_id)` | The run-specific Neo4j database read by every retriever in this call. |
 | `retrieval_methods` | The Streamlit method selection | The methods to build and run, in the given order. |
 The `GraphRAG` instance keeps the configured models and passes them to the
 retrievers. `GraphRAG.from_config()` creates these model objects:
@@ -51,6 +51,10 @@ list order matches `retrieval_methods`. Each result has:
 | `answer` | The answer model's text, or the no-context fallback. |
 | `retriever_result.items` | The evidence items used to build the answer prompt. Each item has `content` and optional `metadata`. |
 | `retriever_result.metadata` | Retriever-specific metadata when the retriever supplies it. |
+
+Neo4j records become JSON before they enter `retriever_result.items`. This
+keeps text, entities, graph facts, scores, and arbitrary Cypher columns in one
+stable format for answering and evaluation.
 
 The call always sets `return_context=True`, so the app can display the items and
 the evaluators can score them. The vector retrievers use their default `top_k`
@@ -86,9 +90,6 @@ model and returns this text:
 I could not find supporting context for this question.
 ```
 
-The [documentation index](../index.md) lists the shared model, API, and
-configuration rules.
-
 ## What each retriever reads
 
 Construction creates two vector indexes in the target database:
@@ -113,7 +114,7 @@ rejects a generated query unless Neo4j reports it as read-only.
 
 `build_vector_retriever()` creates a `VectorCypherRetriever` with the
 `chunk_embeddings` index and `VECTOR_RETRIEVAL_QUERY` from
-[`graphrag/retrieval/retrievers.py`](../../graphrag/retrieval/retrievers.py#L7-L53).
+[`graphrag/retrieval/retrievers.py`](../../graphrag/retrieval/retrievers.py#L11-L64).
 The retriever embeds the question, finds similar `Chunk` nodes, and runs the
 retrieval query for each match.
 
@@ -150,13 +151,11 @@ flowchart LR
     C --> R
 ```
 
-![Vector retrieval flow](retrieval-vector.svg)
-
 ## Entity-vector retrieval
 
 `build_entity_vector_retriever()` uses the `entity_embeddings` index and
 `ENTITY_VECTOR_RETRIEVAL_QUERY` from
-[`graphrag/retrieval/retrievers.py`](../../graphrag/retrieval/retrievers.py#L38-L65).
+[`graphrag/retrieval/retrievers.py`](../../graphrag/retrieval/retrievers.py#L42-L77).
 The query is deliberately smaller than the chunk-vector query:
 
 ```cypher
@@ -195,7 +194,7 @@ Do not repeat a search that returned no new evidence.
 The agent can call the second tool after it sees the first tool's result.
 
 The wrapper in
-[`graphrag/retrieval/agentic.py`](../../graphrag/retrieval/agentic.py#L23-L69)
+[`graphrag/retrieval/agentic.py`](../../graphrag/retrieval/agentic.py#L27-L74)
 converts each tool result into a `neo4j.Record` with these fields:
 
 | Field | Meaning |
@@ -207,8 +206,6 @@ converts each tool result into a `neo4j.Record` with these fields:
 `AgenticToolsRetriever` collects the artifacts from every `ToolMessage`. It
 returns those records as the retrieval result. It does not return the agent's
 final prose as an evidence item.
-
-![Agentic retrieval flow](retrieval-agentic.svg)
 
 ## Failure and boundary cases
 

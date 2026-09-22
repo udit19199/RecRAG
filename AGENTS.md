@@ -28,7 +28,8 @@ There is no Makefile. Run from repository root:
 
 - `uv sync --extra experiments` — install Python and research dependencies
 - `cp .env.example .env` — create `.env`
-- Start Neo4j Desktop Enterprise with APOC and the database named in `.env`.
+- Start Neo4j Desktop Enterprise with APOC. The app creates one database per
+  record and construction method.
 - `uv run streamlit run streamlit_app.py` — run the app against Desktop.
 
 ## Quality Checks
@@ -50,11 +51,13 @@ Run `uv run ruff format --check .` and `uv run ruff check .` for Python checks.
 - Adapter timeouts come from `config.toml`, not hardcoded.
 - Dicts, `TypedDict`s, and tuples are strongly prohibited.
 - Retries use `urllib3.util.Retry` with idempotent-method-only.
-- GraphRAG uses LangChain's `Neo4jVector`, so its record vectors and graph stay in Neo4j.
-- Neo4j is the only store. Use LangChain's Neo4j integration directly.
+- GraphRAG retrieval uses `neo4j-graphrag`'s `VectorCypherRetriever`, so its
+  record vectors and graph stay in Neo4j.
+- Neo4j is the only store. Use the official Neo4j integration directly.
   Do not hand-roll database clients when those integrations support the need.
 - GraphRAG uses the official `neo4j-graphrag` package for the retrieve-to-answer
-  flow and passes its LangChain chat model directly to that package.
+  flow and passes its `GraphRAGChatLLM` adapter around the configured LangChain
+  chat model to that package.
 
 ## GraphRAG (active)
 

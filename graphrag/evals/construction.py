@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import json
 import re
-from collections.abc import Sequence
 from typing import Any
 
 from deepeval.metrics import (
@@ -61,28 +60,35 @@ class ResponsesOpenAIModel(DeepEvalBaseLLM):
         return self.name
 
 
-GraphTriple = tuple[str, str, str]
-
-
-def read_entity_triples(
+def read_graph(
     driver: Driver,
     *,
     database: str,
-) -> list[GraphTriple]:
+) -> str:
     result = driver.execute_query(
         """
-        MATCH (subject:__Entity__)-[relation]->(object:__Entity__)
-        RETURN subject.name AS subject,
-               type(relation) AS relation,
-               object.name AS object
-        ORDER BY subject, relation, object
+        CALL () {
+            MATCH (entity:__Entity__)
+            RETURN collect({
+                labels: labels(entity), properties: properties(entity)
+            }) AS entities
+        }
+        CALL () {
+            MATCH (subject:__Entity__)-[relation]->(object:__Entity__)
+            RETURN collect({
+                source: subject.name,
+                type: type(relation),
+                properties: properties(relation),
+                target: object.name
+            }) AS relationships
+        }
+        RETURN apoc.convert.toJson({
+            entities: entities, relationships: relationships
+        }) AS graph
         """,
         database_=database,
     )
-    return [
-        (str(row["subject"]), str(row["relation"]), str(row["object"]))
-        for row in result.records
-    ]
+    return str(result.records[0]["graph"])
 
 
 def read_graph_statistics(
@@ -168,7 +174,7 @@ def _construction_metric(
 
 def evaluate_construction(
     record: DatasetRecord,
-    graph_triples: Sequence[GraphTriple],
+    graph_output: str,
     *,
     judge_model: str = DEFAULT_LLM_MODEL,
     construction_seconds: float,
@@ -179,7 +185,6 @@ def evaluate_construction(
         for page in record.pages
         for paragraph in page.passages
     ]
-    graph_output = json.dumps(graph_triples, ensure_ascii=False)
     full_context_case = LLMTestCase(
         input="Evaluate this graph against the supplied source context.",
         actual_output=graph_output,
@@ -234,6 +239,10 @@ def evaluate_construction(
     }
     return {
         "deepeval": metrics,
+        "limitations": [
+            "No gold entity-relation triple set is available, so exact graph precision, recall, and F1 are not computed.",
+            "The construction scores are LLM-judged proxies, not exact precision or recall scores.",
+        ],
         "graph_statistics": graph_statistics,
         "construction_seconds": construction_seconds,
     }
