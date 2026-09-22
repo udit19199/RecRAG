@@ -16,7 +16,19 @@ that maps a natural-language RAG use case to a suitable combination.
 
 3. Start Neo4j Desktop Enterprise with APOC enabled.
 
-4. Run the app:
+4. Install Git LFS, then fetch the dataset files with `git lfs pull`.
+
+5. Prepare the local Natural Questions and BrowseComp-Plus files:
+
+   ```sh
+   uv run python scripts/setup_datasets.py
+   ```
+
+   The Natural Questions shards were reserialized from the [full validation split](https://huggingface.co/datasets/rongzhangibm/NaturalQuestionsV2).
+   BrowseComp-Plus stays obfuscated in Git. The command creates its plaintext
+   loader file locally, and `.gitignore` keeps that file out of commits.
+
+6. Run the app:
 
    ```sh
    uv run streamlit run streamlit_app.py
