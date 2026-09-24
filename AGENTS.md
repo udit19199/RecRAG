@@ -46,15 +46,15 @@ Run `uv run ruff format --check .` and `uv run ruff check .` for Python checks.
 
 ## Critical Constraints
 
-- **Do not move API keys into `config.toml`** — `OPENAI_API_KEY` and `LLAMA_CLOUD_API_KEY` live in `.env`. Pass LangChain OpenAI chat and embedding models directly; `config.toml` `[llm]`/`[embedding]` `model` is a plain OpenAI model id (for chat, use `gpt-5.6-luna`). There is no provider switch. Future PDF approaches must use LlamaCloud's LlamaParse exclusively.
-- **Only `gpt-5.6-luna` may be used as the GPT model** — use it for extraction, retrieval, answers, evaluation judges, fallbacks, CLI flags, and benchmark scripts, with the configured `medium` reasoning effort. Do not use any other GPT model. Use the Responses API for every OpenAI generation call.
+- **Do not move API keys into `config.toml`** — `OPENAI_API_KEY` and `LLAMA_CLOUD_API_KEY` live in `.env`. Pass LangChain OpenAI chat and embedding models directly; `config.toml` `[llm]`/`[embedding]` `model` is a plain OpenAI model id (for chat, use `gpt-6-luna`). There is no provider switch. Future PDF approaches must use LlamaCloud's LlamaParse exclusively.
+- **Only `gpt-6-luna` may be used as the GPT model** — use it for extraction, retrieval, answers, evaluation judges, fallbacks, CLI flags, and benchmark scripts, with the configured `medium` reasoning effort. Do not use any other GPT model. Use the Responses API for every OpenAI generation call.
 - Adapter timeouts come from `config.toml`, not hardcoded.
 - Dicts, `TypedDict`s, and tuples are strongly prohibited.
 - Retries use `urllib3.util.Retry` with idempotent-method-only.
-- GraphRAG retrieval uses `neo4j-graphrag`'s `VectorCypherRetriever`, so its
-  record vectors and graph stay in Neo4j.
-- Neo4j is the only store. Use the official Neo4j integration directly.
-  Do not hand-roll database clients when those integrations support the need.
+- GraphRAG writes chunk embeddings to Neo4j and Milvus. Neo4j stores the graph;
+  Milvus indexes a copy of each chunk vector, keyed by its Neo4j element ID.
+- Neo4j vector retrieval uses `neo4j-graphrag`'s `VectorCypherRetriever`.
+  Milvus retrieval fetches the matched chunk and graph context from Neo4j.
 - GraphRAG uses the official `neo4j-graphrag` package for the retrieve-to-answer
   flow and passes its `GraphRAGChatLLM` adapter around the configured LangChain
   chat model to that package.
@@ -62,10 +62,10 @@ Run `uv run ruff format --check .` and `uv run ruff check .` for Python checks.
 ## GraphRAG (active)
 
 The active GraphRAG module supports **2 graph-construction approaches** and
-**3 retrieval approaches**. Both construction methods use the same input,
-Neo4j database, chunk indexes, retrieval, and answering flow. Only extraction
-or retrieval behavior differs. Benchmark scoring is optional and sits outside
-the normal GraphRAG path.
+**4 retrieval approaches**. Both construction methods use the same input,
+Neo4j database, Neo4j and Milvus vector writes, retrieval, and answering flow.
+Only extraction or retrieval behavior differs. Benchmark scoring is optional
+and sits outside the normal GraphRAG path.
 
 | Construction approach | Method ID | Notes |
 |-----------------------|-----------|-------|
@@ -77,6 +77,7 @@ the normal GraphRAG path.
 | Agentic | `agentic` | Chooses between vector and Cypher search tools |
 | Vector | `vector` | Vector search with graph context |
 | Entity vector | `entity_vector` | Searches entity embeddings with graph context |
+| Milvus vector | `milvus_vector` | Searches Milvus chunk vectors and fetches graph context from Neo4j |
 
 The deep GraphRAG interface is `graphrag/graph_rag.py`. Construction code
 lives in `graphrag/construction/`, retrieval code in

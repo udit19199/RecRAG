@@ -68,7 +68,7 @@ be correct. The experiment must measure this property. It must not assume the
 vendor's claim that Jev is calibrated.
 
 Jev does not write the final answer in this study. It judges or filters the
-evidence. `gpt-5.6-luna` remains the final answer model.
+evidence. `gpt-6-luna` remains the final answer model.
 
 See the [TypeSafe announcement](https://typesafe.ai/blog/introducing-system-one-models-and-jev)
 and the [Jev developer guide](https://www.jevtypesafe.org/docs/jev-sdk/).
@@ -93,7 +93,7 @@ approach with Jev's fixed decision schema.
   use.
 - Use Jev `Noul` questions for yes-or-no checks and `Score` questions for
   evidence sufficiency or path completeness.
-- Compare Jev with `gpt-5.6-luna` as a judge and with fixed retrieval rules.
+- Compare Jev with `gpt-6-luna` as a judge and with fixed retrieval rules.
 - Keep the final answer model and prompt fixed across all judges.
 - Measure evidence precision and recall, answer correctness, unsupported
   answers, calibration, repeated-run agreement, latency, and token cost.
@@ -101,6 +101,27 @@ approach with Jev's fixed decision schema.
 Evidence precision is the share of selected evidence that supports the answer.
 Evidence recall is the share of the required evidence that the system finds.
 An unsupported answer makes a claim that the selected evidence does not support.
+
+### Possible study framings
+
+These are distinct ways to study Jev; each should be treated as a separate
+experiment rather than combined into one broad claim:
+
+- **Retrieval reranking or filtering:** Use Jev's relevance probabilities to
+  reorder or filter retrieved chunks. Compare with the existing ranking rules
+  and an LLM judge. If Jev only scores individual chunks for relevance, this is
+  a reranking study and should be evaluated against reranking baselines.
+- **Graph-evidence decisions:** Ask whether specific evidence supports or
+  contradicts an answer claim, and whether a path or evidence bundle is
+  sufficient. Label individual items and multi-hop bundles separately so that
+  filtering one item does not discard a useful chain.
+- **Answer evaluation:** After generation, have Jev judge answer correctness,
+  faithfulness to the source evidence, and completeness. Compare its judgments
+  with human labels and an LLM judge; this tests Jev as an evaluator without
+  letting it change retrieval or the answer.
+
+For each framing, evaluate Jev's probabilities against human-reviewed labels.
+Calibration is a property to measure, not an assumption about Jev.
 
 The paper should not claim that Jev is the first small model used in RAG.
 [Adaptive-RAG](https://aclanthology.org/2024.naacl-long.389/) and

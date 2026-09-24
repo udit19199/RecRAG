@@ -1,9 +1,9 @@
 # Dataset choices and source records
 
-RecRAG uses four question-answer datasets. A **record** is one dataset item. It
-contains one question, its answer, and the text supplied with that item. The
-completed measured run uses one record from three datasets. The BrowseComp-Plus
-run is pending.
+RecRAG currently loads two question-answer datasets. A **record** is one
+dataset item. It contains one question, its answer, and the text supplied with
+that item. A previous BrowseComp-Plus trial is retained below as historical
+measurement context; it is no longer an active dataset adapter.
 
 The datasets store that text in different shapes:
 
@@ -11,8 +11,9 @@ The datasets store that text in different shapes:
 | --- | --- |
 | HotpotQA | Sentences grouped under page titles |
 | 2WikiMultiHopQA | Paragraphs grouped under page titles |
-| Natural Questions | A complete Wikipedia page as HTML and tokens |
-| BrowseComp-Plus | Evidence, gold, and hard-negative documents grouped under one query |
+
+**Comparison caveat:** HotpotQA and 2WikiMultiHopQA provide question-specific
+text, so their results should be compared within each dataset.
 
 The examples below show the dataset formats in a readable form. The exact
 records used for the measured run are listed later.
@@ -75,54 +76,41 @@ people are described as American, so the answer is "yes".
 Here, `context` only groups the text by page. The `evidences` field stores the
 same two links in a compact form: film → director, then director → mother.
 
-## Natural Questions
+# API cost and benchmark results
 
-**Example ID:** `4549465242785278785`
+The two completed datasets each use one record in this pilot. The run was
+intended to estimate token use and cost, not to select a benchmark or rank
+methods. All measured calls used `gpt-5.6-luna`; future runs will use
+`gpt-6-luna`.
 
-**Question:** When is the last episode of season 8 of *The Walking Dead*?
-
-**Answer:** March 18, 2018.
-
-**Page:** *The Walking Dead (season 8)*
-
-**Text around the answer:**
-
-| Episode | Title | Date |
-| ---: | --- | --- |
-| 12 | "The Key" | March 18, 2018 |
-
-The raw record stores the complete Wikipedia page in `document_html`. It also
-stores a token list and the answer's location in that page. The `document_url`
-identifies the Wikipedia revision used for the record. The page text is already
-local, so the URL does not need to be fetched to read this example.
-
-See the [Natural Questions data format](https://github.com/google-research-datasets/natural-questions#data-format).
-
-# API cost and construction results
-
-This section reports one-record construction experiments. Each completed
-dataset used both graph-construction methods and then evaluated both graphs.
-Construction did not receive the dataset question or answer. Only
-`gpt-5.6-luna` was used for chat and evaluation, with Neo4j as the store.
-
-Retrieval, retrieval evaluation, and answer generation were not run. Embedding
-usage from `text-embedding-3-small` is not included in the LLM token totals
-below.
+Construction usage comes from run `20260922T120012971066Z`; retrieval and answer
+usage comes from `20260922224208763174`. The retrieval graphs were rebuilt, but
+their construction usage was not captured. Token counts below are observed
+`gpt-5.6-luna` counts; dollar values are projections using current `gpt-6-luna`
+rates, not actual GPT-6 charges. Embedding and storage costs are excluded.
 
 ## Price calculation
 
-Prices are in US dollars per one million tokens. `M` means one million.
+OpenAI Standard short-context prices (up to 272K input tokens), in US dollars
+per one million tokens. The last column applies each model's rates to the same
+recorded token and cache counts from this pilot.
 
-| Model | Input price | Output price | Source |
-| --- | ---: | ---: | --- |
-| `gpt-5.6-luna` | $0.20/M | $1.20/M | The `[cost]` section in `config.toml`. |
+| Model | Uncached input | Cached input | Cache write | Output | Same-usage estimate | Source |
+| --- | ---: | ---: | ---: | ---: | ---: | --- |
+| `gpt-5.6-luna` | $0.20/M | $0.02/M | $0.25/M | $1.20/M | $0.466927 | [OpenAI model pricing](https://developers.openai.com/api/docs/models/gpt-5.6-luna) |
+| `gpt-6-luna` | $0.10/M | $0.01/M | $0.125/M | $0.50/M | $0.219268 | [OpenAI model pricing](https://developers.openai.com/api/docs/models/gpt-6-luna) |
 
 ```text
-cost = 0.20 × input tokens / M + 1.20 × output tokens / M
+uncached input = input - cached input - cache writes
+cost = (0.10 × uncached input + 0.01 × cached input
+      + 0.125 × cache writes + 0.50 × output) / M
 ```
 
-The token counts come from LangChain's `get_usage_metadata_callback()`. Costs
-are rounded to six decimal places.
+Cache-read and cache-creation counts come from saved usage metadata. Cost
+estimates are rounded to six decimal places. At the same usage, GPT-6 Luna is
+about 53% cheaper ($0.247659 less) than GPT-5.6 Luna. This lower GPT cost also
+applies to the GPT calls in the RLCD comparison; the absolute amount is small
+for this pilot.
 
 ## Measured records
 
@@ -130,8 +118,7 @@ are rounded to six decimal places.
 | --- | --- | ---: | ---: | --- |
 | HotpotQA | `5a8b57f25542995d1e6f1371` | 10 | 4,430 | Complete |
 | 2WikiMultiHopQA | `8813f87c0bdd11eba7f7acde48001122` | 10 | 3,578 | Complete |
-| Natural Questions | `5225754983651766092` | 1 | 13,390 | Complete |
-| BrowseComp-Plus | `query_id=775` | 78 | 710,164 | Pending: full-record construction did not complete |
+| Historical BrowseComp-Plus attempt | `query_id=775` | 78 | 710,164 | Full-record construction did not complete |
 
 The BrowseComp-Plus record contains six evidence documents, one gold document,
 and 72 negative documents. Its full-record run did not produce a completed
@@ -141,27 +128,58 @@ usage measurement, so it is excluded from the totals below.
 
 | Dataset | Stage | Input tokens | Output tokens | Total tokens | Cost |
 | --- | --- | ---: | ---: | ---: | ---: |
-| HotpotQA | Standard construction | 17,536 | 6,082 | 23,618 | $0.010806 |
-| HotpotQA | Ontology-guided construction | 13,471 | 5,032 | 18,503 | $0.008733 |
-| HotpotQA | Standard construction evaluation | 6,568 | 459 | 7,027 | $0.001864 |
-| HotpotQA | Ontology-guided construction evaluation | 5,506 | 482 | 5,988 | $0.001680 |
-| 2WikiMultiHopQA | Standard construction | 18,124 | 5,514 | 23,638 | $0.010242 |
-| 2WikiMultiHopQA | Ontology-guided construction | 11,263 | 5,684 | 16,947 | $0.009073 |
-| 2WikiMultiHopQA | Standard construction evaluation | 5,969 | 743 | 6,712 | $0.002085 |
-| 2WikiMultiHopQA | Ontology-guided construction evaluation | 5,918 | 530 | 6,448 | $0.001820 |
-| Natural Questions | Standard construction | 42,025 | 8,632 | 50,657 | $0.018763 |
-| Natural Questions | Ontology-guided construction | 34,083 | 12,386 | 46,469 | $0.021680 |
-| Natural Questions | Standard construction evaluation | 10,524 | 402 | 10,926 | $0.002587 |
-| Natural Questions | Ontology-guided construction evaluation | 12,213 | 382 | 12,595 | $0.002901 |
+| HotpotQA | Standard construction | 17,536 | 6,082 | 23,618 | $0.004877 |
+| HotpotQA | Ontology-guided construction | 13,471 | 5,032 | 18,503 | $0.004180 |
+| HotpotQA | Standard construction evaluation | 6,568 | 459 | 7,027 | $0.001041 |
+| HotpotQA | Ontology-guided construction evaluation | 5,506 | 482 | 5,988 | $0.000899 |
+| HotpotQA | Retrieval and answer (8 runs) | 68,455 | 490 | 68,945 | $0.008789 |
+| HotpotQA | Retrieval evaluation (8 runs) | 202,699 | 19,109 | 221,808 | $0.034116 |
+| HotpotQA | Answer evaluation (8 runs) | 83,816 | 10,107 | 93,923 | $0.014976 |
+| 2WikiMultiHopQA | Standard construction | 18,124 | 5,514 | 23,638 | $0.005003 |
+| 2WikiMultiHopQA | Ontology-guided construction | 11,263 | 5,684 | 16,947 | $0.004233 |
+| 2WikiMultiHopQA | Standard construction evaluation | 5,969 | 743 | 6,712 | $0.001108 |
+| 2WikiMultiHopQA | Ontology-guided construction evaluation | 5,918 | 530 | 6,448 | $0.000995 |
+| 2WikiMultiHopQA | Retrieval and answer (8 runs) | 72,970 | 1,032 | 74,002 | $0.009624 |
+| 2WikiMultiHopQA | Retrieval evaluation (8 runs) | 216,323 | 25,439 | 241,762 | $0.039040 |
+| 2WikiMultiHopQA | Answer evaluation (8 runs) | 87,686 | 10,230 | 97,916 | $0.015504 |
 
 ## Dataset totals
 
 | Dataset | Input tokens | Output tokens | Total tokens | Cost |
 | --- | ---: | ---: | ---: | ---: |
-| HotpotQA | 43,081 | 12,055 | 55,136 | $0.023082 |
-| 2WikiMultiHopQA | 41,274 | 12,471 | 53,745 | $0.023220 |
-| Natural Questions | 98,845 | 21,802 | 120,647 | $0.045931 |
-| All three completed datasets | 183,200 | 46,328 | 229,528 | $0.092234 |
+| HotpotQA | 398,051 | 41,761 | 439,812 | $0.068878 |
+| 2WikiMultiHopQA | 418,253 | 49,172 | 467,425 | $0.075506 |
+| Both completed datasets | 816,304 | 90,933 | 907,237 | $0.144384 |
+
+## Exploratory retrieval and answer scores
+
+These are raw scores already saved from run `20260922224208763174`, generated
+with `gpt-5.6-luna`; values are shown per record and rounded to three decimals.
+This was a one-record-per-dataset cost pilot, not a decided benchmark. The
+benchmark protocol has not been selected, so these values are not aggregated
+or treated as final findings. No new judge calls were made to prepare this
+table; defer further scoring until the benchmark is agreed. Every saved result
+in this pilot has five items, so the new shared top-five cap does not change
+these saved scores.
+
+| Dataset | Construction | Retrieval | Context precision | Context recall | Context relevancy | Answer relevancy | Correctness | Faithfulness | Exact alias |
+| --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| hotpotqa | standard | vector | 1.000 | 1.000 | 0.241 | 1.000 | 1.000 | 1.000 | No |
+| hotpotqa | standard | entity_vector | 1.000 | 0.500 | 0.375 | 1.000 | 1.000 | 1.000 | No |
+| hotpotqa | standard | milvus_vector | 1.000 | 1.000 | 0.258 | 1.000 | 1.000 | 1.000 | No |
+| hotpotqa | ontology_guided | vector | 1.000 | 1.000 | 0.290 | 1.000 | 1.000 | 1.000 | No |
+| hotpotqa | ontology_guided | entity_vector | 1.000 | 0.500 | 0.280 | 1.000 | 1.000 | 1.000 | No |
+| hotpotqa | ontology_guided | milvus_vector | 1.000 | 1.000 | 0.375 | 1.000 | 1.000 | 1.000 | No |
+| 2wikimultihopqa | standard | vector | 0.639 | 1.000 | 0.308 | 1.000 | 1.000 | 1.000 | Yes |
+| 2wikimultihopqa | standard | entity_vector | 0.000 | 0.333 | 0.156 | 1.000 | 1.000 | 1.000 | No |
+| 2wikimultihopqa | standard | milvus_vector | 1.000 | 1.000 | 0.231 | 1.000 | 1.000 | 1.000 | Yes |
+| 2wikimultihopqa | ontology_guided | vector | 0.639 | 1.000 | 0.175 | 0.667 | 1.000 | 1.000 | No |
+| 2wikimultihopqa | ontology_guided | entity_vector | 1.000 | 0.000 | 0.139 | 1.000 | 1.000 | 1.000 | No |
+| 2wikimultihopqa | ontology_guided | milvus_vector | 0.639 | 1.000 | 0.250 | 0.667 | 1.000 | 1.000 | No |
+| hotpotqa | standard | agentic | 1.000 | 1.000 | 0.258 | 1.000 | 1.000 | 1.000 | No |
+| hotpotqa | ontology_guided | agentic | 1.000 | 1.000 | 0.345 | 1.000 | 1.000 | 1.000 | No |
+| 2wikimultihopqa | standard | agentic | 1.000 | 1.000 | 0.250 | 1.000 | 1.000 | 1.000 | Yes |
+| 2wikimultihopqa | ontology_guided | agentic | 1.000 | 1.000 | 0.250 | 1.000 | 1.000 | 1.000 | No |
 
 ## Construction metrics
 
@@ -175,8 +193,6 @@ nodes that may need graph consolidation.
 | HotpotQA | Ontology-guided | 16.393 | 78 | 33 | 5 | 1 | 2 | 0 | 0 |
 | 2WikiMultiHopQA | Standard | 36.812 | 59 | 46 | 18 | 0 | 16 | 0 | 0 |
 | 2WikiMultiHopQA | Ontology-guided | 23.560 | 69 | 38 | 8 | 2 | 4 | 0 | 0 |
-| Natural Questions | Standard | 31.923 | 98 | 70 | 7 | 2 | 36 | 0 | 0 |
-| Natural Questions | Ontology-guided | 60.722 | 202 | 90 | 3 | 12 | 25 | 0 | 1 |
 
 ## Construction evaluation scores
 
@@ -190,12 +206,14 @@ triple sets, so exact graph precision, recall, and F1 are not computed.
 | HotpotQA | Ontology-guided | 0.7 | 0.6 | 0.4 |
 | 2WikiMultiHopQA | Standard | 0.5 | 0.6 | 0.7 |
 | 2WikiMultiHopQA | Ontology-guided | 0.5 | 0.7 | 0.6 |
-| Natural Questions | Standard | 0.2 | 0.3 | 0.6 |
-| Natural Questions | Ontology-guided | 0.5 | 0.6 | 0.4 |
 
 ## Not yet measured
 
-- Agentic retrieval, vector retrieval, and entity-vector retrieval.
-- Retrieval evaluation and final answer generation.
+- Retrieval and end-to-end latency.
 - Embedding token usage and vector-storage cost.
-- A completed BrowseComp-Plus construction and evaluation run.
+- GPT-6-Luna usage and results; current GPT-6 costs are projections on earlier token counts.
+
+Retrieval, retrieval evaluation, answer generation, and answer evaluation are
+complete for all four retrieval methods on the four graphs. The retrieval run
+contains eight results per dataset: four retrieval methods on each of two
+construction methods.

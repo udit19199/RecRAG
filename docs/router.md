@@ -18,15 +18,15 @@ keeps these choices separate:
 | --- | --- | --- |
 | Architecture | Classical RAG, GraphRAG | Does the answer need graph joins or paths? |
 | Construction | None, `standard`, `ontology_guided` | Is a graph worth building, and how fixed is the domain schema? |
-| Retrieval | Fixed vector, entity vector, agentic | What search behavior does the question need? |
+| Retrieval | Vector, Milvus vector, entity vector, agentic | What search behavior and vector store does the question need? |
 | Operations | Freshness, latency, tokens, storage, database limits | Can the customer run and update the candidate? |
 
 The GraphRAG pages describe the active methods. The router applies these choices
 to a candidate and may compare them with ClassicalRAG.
 
-The router can compare ClassicalRAG as a candidate, but this repository does
-not currently implement a ClassicalRAG module. The current Streamlit flow runs
-the active GraphRAG matrix only.
+This document describes a proposed router; it is not implemented in the app.
+The current Streamlit flow asks a person to select GraphRAG methods. ClassicalRAG
+is also a comparison candidate in the proposal, but has no module here.
 
 ### Make a recommendation
 
@@ -224,7 +224,7 @@ Run every baseline on the same profiles and candidate facts:
 
 - **Fixed choice:** always returns the same candidate.
 - **Rule-based choice:** applies the written filters and comparison table.
-- **GPT choice:** asks `gpt-5.6-luna` for a structured profile or candidate choice.
+- **GPT choice:** asks `gpt-6-luna` for a structured profile or candidate choice.
 - **Jev choice:** asks Jev typed questions and applies the filters in code.
 
 Give the GPT and Jev calls the same profile and candidate measurements. Keep the
@@ -379,7 +379,7 @@ Do not compare Jev confidence directly with a GPT score.
 
 ### Jev as a retrieval gate
 
-Jev can score retrieved passages before `gpt-5.6-luna` answers. The state
+Jev can score retrieved passages before `gpt-6-luna` answers. The state
 contains the question and one retrieved passage. Code routes the passage after
 Jev returns its scores.
 
