@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 from datetime import UTC, datetime
+from hashlib import sha256
 from pathlib import Path
 from time import perf_counter
 
@@ -57,6 +58,13 @@ def store_token_usage(path: Path, *, record_id, stage, usage, **context):
     with path.open("a", encoding="utf-8") as file:
         json.dump(event, file)
         file.write("\n")
+
+
+def source_key(pages):
+    content = "\n".join(
+        f"{page.title}\n{chr(10).join(page.passages)}" for page in pages
+    )
+    return sha256(content.encode()).hexdigest()
 
 
 def render_construction_evaluation(evaluation):
@@ -125,6 +133,9 @@ selected_dataset = st.selectbox(
     DATASET_SOURCES,
     format_func=lambda source: source.display_name,
 )
+sample_count = st.number_input(
+    "Records to compare", min_value=1, max_value=20, value=10, step=1
+)
 selected_construction_methods = (
     st.pills(
         "Construction methods",
@@ -149,7 +160,10 @@ score_with_deepeval = st.checkbox(
     help="Scores graph construction, retrieval, and answers with LLM judges.",
 )
 try:
-    loaded_records = [load_record_cached(selected_dataset.name, 0)]
+    loaded_records = [
+        load_record_cached(selected_dataset.name, index)
+        for index in range(sample_count)
+    ]
 except FileNotFoundError as exc:
     st.error(str(exc))
     st.stop()
@@ -180,6 +194,7 @@ if run_clicked:
             usage_path.parent.mkdir(exist_ok=True)
             st.caption(f"Token usage saved to `{usage_path.relative_to(project_root)}`")
             rag = GraphRAG.from_config()
+            constructed_databases = set()
             try:
                 for record_number, record in enumerate(loaded_records, start=1):
                     construction_evaluations = []
@@ -188,25 +203,38 @@ if run_clicked:
                         f"Record {record_number}: constructing graphs", expanded=False
                     )
                     for method in selected_construction_methods:
-                        database = method.database_name(record.id, run_id)
-                        construction_status.write(
-                            f"Building {method} graph for record {record_number}"
+                        database = method.database_name(
+                            source_key(record.pages), run_id
                         )
-                        construction_started = perf_counter()
-                        with get_usage_metadata_callback() as construction_usage:
-                            rag.construct(
-                                record.pages,
-                                method=method,
-                                database=database,
+                        if database in constructed_databases:
+                            construction_usage = None
+                            construction_seconds = 0.0
+                            construction_status.write(
+                                f"Reusing {method} graph for record {record_number}"
                             )
-                        store_token_usage(
-                            usage_path,
-                            record_id=record.id,
-                            stage="construction",
-                            usage=construction_usage,
-                            construction_method=method.value,
-                        )
-                        construction_seconds = perf_counter() - construction_started
+                        else:
+                            construction_status.write(
+                                f"Building {method} graph for record {record_number}"
+                            )
+                            construction_started = perf_counter()
+                            with get_usage_metadata_callback() as construction_usage:
+                                rag.construct(
+                                    record.pages,
+                                    method=method,
+                                    database=database,
+                                )
+                            construction_seconds = perf_counter() - construction_started
+                            constructed_databases.add(database)
+                            store_token_usage(
+                                usage_path,
+                                record_id=record.id,
+                                stage="construction",
+                                usage=construction_usage,
+                                dataset=selected_dataset.name,
+                                question_type=getattr(record, "question_type", None),
+                                construction_method=method.value,
+                                elapsed_seconds=construction_seconds,
+                            )
                         evaluation = None
                         if score_with_deepeval:
                             try:
@@ -231,6 +259,8 @@ if run_clicked:
                                 record_id=record.id,
                                 stage="construction_evaluation",
                                 usage=evaluation_usage,
+                                dataset=selected_dataset.name,
+                                question_type=getattr(record, "question_type", None),
                                 construction_method=method.value,
                             )
                         construction_evaluations.append(evaluation)
@@ -268,19 +298,28 @@ if run_clicked:
                         )
                         st.markdown(f"#### {method}")
                         for retrieval_method in selected_retrieval_methods:
+                            retrieval_started = perf_counter()
                             with get_usage_metadata_callback() as retrieval_usage:
                                 result = rag.answer(
                                     record.question,
-                                    database=method.database_name(record.id, run_id),
+                                    database=method.database_name(
+                                        source_key(record.pages), run_id
+                                    ),
                                     retrieval_methods=[retrieval_method],
                                 )[0]
+                            retrieval_and_answer_seconds = (
+                                perf_counter() - retrieval_started
+                            )
                             store_token_usage(
                                 usage_path,
                                 record_id=record.id,
                                 stage="retrieval_and_answer",
                                 usage=retrieval_usage,
+                                dataset=selected_dataset.name,
+                                question_type=getattr(record, "question_type", None),
                                 construction_method=method.value,
                                 retrieval_method=retrieval_method,
+                                elapsed_seconds=retrieval_and_answer_seconds,
                             )
                             retrieval_evaluation = None
                             if score_with_deepeval:
@@ -294,8 +333,13 @@ if run_clicked:
                                     record_id=record.id,
                                     stage="retrieval_evaluation",
                                     usage=evaluation_usage,
+                                    dataset=selected_dataset.name,
+                                    question_type=getattr(
+                                        record, "question_type", None
+                                    ),
                                     construction_method=method.value,
                                     retrieval_method=retrieval_method,
+                                    metrics=retrieval_evaluation["deepeval"],
                                 )
                             answer_evaluation = None
                             if score_with_deepeval:
@@ -307,8 +351,13 @@ if run_clicked:
                                     record_id=record.id,
                                     stage="answer_evaluation",
                                     usage=evaluation_usage,
+                                    dataset=selected_dataset.name,
+                                    question_type=getattr(
+                                        record, "question_type", None
+                                    ),
                                     construction_method=method.value,
                                     retrieval_method=retrieval_method,
+                                    metrics=answer_evaluation["answer"],
                                 )
                             with st.container(border=True):
                                 st.markdown(f"**{retrieval_method}**")
@@ -333,6 +382,10 @@ if run_clicked:
                                     )
                                 st.markdown("**Answer**")
                                 st.write(result.answer)
+                                st.metric(
+                                    "Retrieval and answer time",
+                                    f"{retrieval_and_answer_seconds:.2f}s",
+                                )
                                 render_token_usage(
                                     "Retrieval and answer tokens", retrieval_usage
                                 )

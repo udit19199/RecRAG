@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import re
+from collections import Counter
 from typing import Any
 
 from deepeval.metrics import (
@@ -252,6 +253,19 @@ def _normalise(text: str) -> str:
     return " ".join(re.sub(r"[^\w]+", " ", text.casefold()).split())
 
 
+def _token_f1(actual: str, expected: str) -> float:
+    actual_tokens = Counter(_normalise(actual).split())
+    expected_tokens = Counter(_normalise(expected).split())
+    overlap = sum((actual_tokens & expected_tokens).values())
+    if not actual_tokens and not expected_tokens:
+        return 1.0
+    if not overlap:
+        return 0.0
+    precision = overlap / sum(actual_tokens.values())
+    recall = overlap / sum(expected_tokens.values())
+    return 2 * precision * recall / (precision + recall)
+
+
 def _metric_result(metric, test_case: LLMTestCase) -> dict[str, Any]:
     metric.measure(test_case)
     return {"score": metric.score, "reason": metric.reason}
@@ -281,6 +295,9 @@ def evaluate_answer(
         "expected_id": getattr(record, "answer_id", None),
         "actual": result.answer,
         "alias_match": answer_alias_match,
+        "token_f1": max(
+            _token_f1(result.answer, alias) for alias in record.answer_aliases()
+        ),
     }
     judge = ResponsesOpenAIModel(model=judge_model)
     if retrieved_context:
