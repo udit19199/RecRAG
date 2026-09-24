@@ -12,6 +12,7 @@ from neo4j_graphrag.generation.types import RagResultModel
 
 from ..dataset_adapters.registry import DatasetRecord
 from ..graph_rag import DEFAULT_LLM_MODEL
+from ..retrieval.retrievers import RETRIEVAL_TOP_K
 from .construction import ResponsesOpenAIModel, _metric_result
 
 
@@ -20,7 +21,7 @@ def evaluate_retrieval(
     result: RagResultModel,
     *,
     judge_model: str = DEFAULT_LLM_MODEL,
-    top_k: int = 5,
+    top_k: int = RETRIEVAL_TOP_K,
 ) -> dict[str, Any]:
     items = result.retriever_result.items if result.retriever_result else []
     retrieved_context = [str(item.content) for item in items[:top_k]]

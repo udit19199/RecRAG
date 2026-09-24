@@ -18,6 +18,7 @@ from neo4j_graphrag.generation.prompts import ERExtractionTemplate
 from neo4j_graphrag.indexes import create_vector_index
 from neo4j_graphrag.llm import LLMBase
 
+from ..milvus_store import MilvusStore
 from .ontology import ONTOLOGY_EXTRACTION_PROMPT, ONTOLOGY_SCHEMA
 
 
@@ -55,6 +56,7 @@ def rebuild_graph(
     embedder: Embedder,
     database: str,
     embedding_dimensions: int,
+    milvus: MilvusStore,
 ) -> None:
     match method:
         case ConstructionMethod.STANDARD:
@@ -86,6 +88,7 @@ def rebuild_graph(
         from_file=False,
         kg_writer=_RaisingNeo4jWriter(driver, neo4j_database=database),
         text_splitter=FixedSizeSplitter(chunk_size=1000, chunk_overlap=100),
+        lexical_graph_config=LexicalGraphConfig(),
         neo4j_database=database,
     )
     asyncio.run(pipeline.run_async(text=text))
@@ -123,3 +126,15 @@ def rebuild_graph(
     )
 
     driver.execute_query("CALL db.awaitIndexes(60)", database_=database)
+
+    chunks = driver.execute_query(
+        "MATCH (chunk:Chunk) WHERE chunk.embedding IS NOT NULL "
+        "RETURN collect(elementId(chunk)) AS ids, collect(chunk.embedding) AS vectors",
+        database_=database,
+    ).records[0]
+    milvus.write(
+        database.replace("-", "_"),
+        embedding_dimensions,
+        chunks["ids"],
+        chunks["vectors"],
+    )

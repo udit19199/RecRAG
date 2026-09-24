@@ -17,9 +17,8 @@ flowchart LR
     guided --> extracted
     extracted --> pipeline["SimpleKGPipeline<br/>builds the graph"]
     pipeline --> graph["Graph + chunks<br/>and embeddings"]
-    graph --> storage{"Storage"}
-    storage --> neo4j["Neo4j<br/>graph + embeddings"]
-    storage --> split["Neo4j graph<br/>Milvus embeddings"]
+    graph --> neo4j["Neo4j<br/>graph + vectors"]
+    graph --> milvus["Milvus<br/>copy of chunk vectors"]
 ```
 
 ## One example
@@ -134,7 +133,7 @@ flowchart LR
     pipeline --> embeddings["Chunk embeddings"]
 ```
 
-## Storage option 1: Neo4j for the graph and embeddings
+## Neo4j graph and vector storage
 
 Neo4j can store the extracted graph and the vectors used to search its chunks.
 The vectors below are shortened examples.
@@ -165,21 +164,23 @@ graph TD
     end
 ```
 
-The active construction code creates a database for each run, record, and
-construction method. It stops if extraction or graph writing fails. Successful
-runs copy chunk embeddings for entity search and build both vector indexes.
+The active construction code creates a Neo4j database for each run, record, and
+construction method. Every build writes chunk vectors to Neo4j and to a matching
+Milvus collection; the Milvus copy is part of the active setup, not an optional
+storage choice. It also copies chunk embeddings for entity search and builds
+both Neo4j vector indexes.
 
-## Storage option 2: Milvus for embeddings, Neo4j for the graph
+## Dual-write storage
 
-Keep the same `chunk_key` in both systems. Milvus returns that key after a
-vector search. The key lets the application fetch the matching chunk and its
-connected entities from Neo4j.
+Each Neo4j chunk keeps its vector in Neo4j and gets a copy in a run-specific
+Milvus collection. Milvus uses Neo4j's `elementId` as the chunk key. Search
+returns matching keys, and Neo4j uses them to fetch the chunk and graph facts.
 
 ```mermaid
 graph TD
     subgraph MILVUS["Milvus"]
         milvus_index["Index"]
-        milvus_embeddings[("Embeddings<br/>vector + chunk_key")]
+        milvus_embeddings[("Embeddings<br/>vector + Neo4j elementId")]
         milvus_index -. indexes .-> milvus_embeddings
     end
 
@@ -187,8 +188,8 @@ graph TD
         scott(["Entity<br/>Name: Scott Derrickson<br/>Nationality: American"])
         ed(["Entity<br/>Name: Ed Wood<br/>Nationality: American"])
         american(["Entity<br/>Name: American"])
-        scott_chunk["Chunk<br/>chunk_key: scott"]
-        ed_chunk["Chunk<br/>chunk_key: ed"]
+        scott_chunk["Chunk<br/>Neo4j elementId: scott"]
+        ed_chunk["Chunk<br/>Neo4j elementId: ed"]
 
         scott -->|HAS_NATIONALITY| american
         ed -->|HAS_NATIONALITY| american
@@ -196,15 +197,13 @@ graph TD
         ed -->|FROM_CHUNK| ed_chunk
     end
 
-    milvus_embeddings -. chunk_key .-> scott_chunk
-    milvus_embeddings -. chunk_key .-> ed_chunk
+    milvus_embeddings -. elementId .-> scott_chunk
+    milvus_embeddings -. elementId .-> ed_chunk
 ```
 
-The link between Milvus and Neo4j is the shared `chunk_key`. Milvus does not
-store the graph.
-
-The repository does not currently implement this ClassicalRAG path. The
-diagram shows the planned split-storage comparison.
+Neo4j remains the source for graph context. The `vector` and `milvus_vector`
+retrieval methods let you compare the Neo4j and Milvus indexes for the same
+graph. Both retrieval methods pass Neo4j context to the answer model.
 
 ## Related docs
 

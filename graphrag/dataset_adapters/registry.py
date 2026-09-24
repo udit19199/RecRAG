@@ -5,7 +5,7 @@ from dataclasses import dataclass
 from typing import Protocol
 
 from ..construction import SourcePage
-from . import browsecomp_plus, hotpotqa, natural_questions, two_wiki_multihopqa
+from . import hotpotqa, multihop_rag, natural_questions
 
 
 class DatasetRecord(Protocol):
@@ -33,19 +33,14 @@ DATASET_SOURCES: list[DatasetSource] = [
         load_record=hotpotqa.load_record,
     ),
     DatasetSource(
-        name="2wikimultihopqa",
-        display_name="2WikiMultiHopQA",
-        load_record=two_wiki_multihopqa.load_record,
+        name="multihop_rag",
+        display_name="MultiHop-RAG",
+        load_record=multihop_rag.load_record,
     ),
     DatasetSource(
         name="natural_questions",
         display_name="Natural Questions",
         load_record=natural_questions.load_record,
-    ),
-    DatasetSource(
-        name="browsecomp_plus",
-        display_name="BrowseComp-Plus",
-        load_record=browsecomp_plus.load_record,
     ),
 ]
 

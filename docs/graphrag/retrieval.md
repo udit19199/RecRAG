@@ -1,14 +1,26 @@
 # Graph retrieval
 
-Retrieval selects Neo4j records for one question, then passes those records to
-the answer model. The public entry point is `GraphRAG.answer()` in
+Retrieval selects evidence for one question from Neo4j, or searches Milvus and
+resolves its chunk IDs back to Neo4j, then passes that evidence to the answer
+model. The public entry point is `GraphRAG.answer()` in
 [`graphrag/graph_rag.py`](../../graphrag/graph_rag.py#L243-L258). It delegates to
 `answer_question()` in
 [`graphrag/retrieval/answering.py`](../../graphrag/retrieval/answering.py#L26-L65).
 
-The active implementation has three methods. All three read one Neo4j database
-created for the record and construction method. The methods differ in the
-index or query used to find evidence.
+The four methods use different search logic or vector stores, then return
+evidence to the same answer flow:
+
+| Method | Search behavior | Vector store / index | Returned graph context |
+| --- | --- | --- | --- |
+| `agentic` | An LLM chooses vector search, Cypher search, or both. | Neo4j `chunk_embeddings` and Neo4j graph/schema. | Results from the tool calls, capped at five items. |
+| `vector` | Embed the question and find similar chunks. | Neo4j `chunk_embeddings` index. | Chunk text, linked entities, and nearby graph paths. |
+| `entity_vector` | Search chunk vectors copied onto entity-linked records. | Neo4j `entity_embeddings` index. | Chunk text and its linked entity; no graph paths. |
+| `milvus_vector` | Embed the question and find similar chunks. | Milvus copy of chunk vectors, `FLAT` index with cosine similarity. | The same chunk and graph-context query as `vector`, fetched from Neo4j by chunk ID. |
+
+All methods use the same final-answer flow. `milvus_vector` changes the vector
+search index, not the graph store or graph-context query. `entity_vector` does
+not embed entity names or descriptions: construction copies each associated
+chunk vector to an entity-linked record.
 
 ```mermaid
 flowchart TD
@@ -18,16 +30,18 @@ flowchart TD
     D --> E[agentic]
     D --> F[vector]
     D --> G[entity_vector]
+    D --> K[milvus_vector]
     E --> H[RetrieverResult]
     F --> H
     G --> H
+    K --> H
     H --> I[neo4j-graphrag GraphRAG]
     I --> J[Answer and retriever context]
 ```
 
 ## Inputs and outputs
 
-`GraphRAG.answer()` receives the question and two keyword arguments:
+`GraphRAG.answer()` receives the question and these keyword arguments:
 
 | Input | Source | Use |
 | --- | --- | --- |
@@ -41,7 +55,8 @@ retrievers. `GraphRAG.from_config()` creates these model objects:
 | --- | --- |
 | `GraphRAGChatLLM` around the configured `ChatOpenAI` | The Neo4j GraphRAG answer call and `Text2CypherRetriever`. |
 | The configured `ChatOpenAI` instance | The LangChain agent in `agentic`. |
-| `OpenAIEmbeddings` | The `vector` and `entity_vector` searches. |
+| `OpenAIEmbeddings` | The `vector`, `entity_vector`, and `milvus_vector` searches. |
+| `MilvusStore` | The Milvus chunk collection used by construction and `milvus_vector`. |
 
 `answer_question()` returns one `RagResultModel` for each selected method. The
 list order matches `retrieval_methods`. Each result has:
@@ -56,9 +71,8 @@ Neo4j records become JSON before they enter `retriever_result.items`. This
 keeps text, entities, graph facts, scores, and arbitrary Cypher columns in one
 stable format for answering and evaluation.
 
-The call always sets `return_context=True`, so the app can display the items and
-the evaluators can score them. The vector retrievers use their default `top_k`
-of 5 because `answer_question()` does not pass a `retriever_config` value.
+The call sets `return_context=True` and `top_k=5`. The answer model receives at
+most five items, and retrieval evaluation scores those same items.
 
 ## The shared answer flow
 
@@ -75,6 +89,7 @@ The call uses this code:
 ```python
 Neo4jGraphRAG(retriever, llm).search(
     question,
+    retriever_config={"top_k": 5},
     return_context=True,
     response_fallback=NO_CONTEXT,
 )
@@ -100,14 +115,18 @@ Construction creates two vector indexes in the target database:
 | `entity_embeddings` | `EntityEmbedding` | `embedding` | `entity_vector` |
 
 The embedding model turns the question into a vector before a vector search.
-The construction step copies each chunk embedding to an `EntityEmbedding` node
-linked from its entity. See [Graph construction](construction.md#build-the-graph)
-for the write path and [storage option 1](construction.md#storage-option-1-neo4j-for-the-graph-and-embeddings)
-for the resulting shape.
+Both Neo4j indexes use cosine similarity and are managed inside their target
+Neo4j database through native vector indexes.
+For `entity_vector`, construction copies a chunk embedding and its text onto a
+new `EntityEmbedding` node linked from one entity. This is a chunk vector
+associated with an entity, not an embedding of the entity name or description.
+See [Graph construction](construction.md#dual-write-storage) for the storage
+write path.
 
-All retrievers use Neo4j reads. The vector retrievers call
-`VectorCypherRetriever`; the agentic Cypher tool uses
-`Text2CypherRetriever`. The Text2Cypher retriever runs `EXPLAIN` first and
+`vector` and `entity_vector` use Neo4j vector indexes through
+`VectorCypherRetriever`. `milvus_vector` searches Milvus and uses returned Neo4j
+element IDs to fetch chunks and graph context.
+The agentic Cypher tool uses `Text2CypherRetriever`; it runs `EXPLAIN` first and
 rejects a generated query unless Neo4j reports it as read-only.
 
 ## Vector retrieval
@@ -163,13 +182,31 @@ MATCH (entity:__Entity__)-[:HAS_EMBEDDING]->(node)
 RETURN node.text AS text, [entity.name] AS entities, [] AS graph_facts, score
 ```
 
-This method searches the copied chunk embedding through an entity-linked node.
-It returns the copied chunk text and the one linked entity name. It does not
+Each `EntityEmbedding` node contains a copy of a chunk's vector and text, linked
+to one entity. Search returns the chunk text and linked entity name. It does not
 traverse the graph. Its `graph_facts` value is always an empty list.
 
 That difference matters when comparing methods. `entity_vector` can find an
 entity-associated chunk, but it does not add the two-hop graph context that
 the `vector` method adds.
+
+## Milvus vector retrieval
+
+Construction writes every chunk vector to both its Neo4j `Chunk` and a
+run-specific Milvus collection. Milvus stores the vector plus the Neo4j
+`elementId` as the primary key; its configured index is `FLAT` with cosine
+similarity. `FLAT` compares the query against the stored vectors directly.
+Neo4j's native index is managed inside its graph database; this code does not
+select its internal index algorithm. Milvus does not store graph nodes,
+relationships, or chunk text. It is a separate collection and index, not a
+Neo4j index.
+
+At query time, `milvus_vector` embeds the question, searches that Milvus index,
+then looks up the matching chunks in Neo4j and runs the same graph-context query
+as `vector`. So the comparison is Neo4j's native vector index versus Milvus's
+`FLAT` vector index for chunk search; the graph and returned context are still
+from Neo4j. `entity_vector` remains Neo4j-only. This design difference does not
+show which index is faster; retrieval latency has not been measured.
 
 ## Agentic retrieval
 
@@ -178,7 +215,7 @@ the `vector` method adds.
 | Tool | Retriever | Input and read path |
 | --- | --- | --- |
 | `vector_search` | `VectorCypherRetriever` | Embeds the tool query and searches `chunk_embeddings` with the same graph-context query as `vector`. |
-| `cypher_search` | `Text2CypherRetriever` | Sends the tool query and the current Neo4j schema to `gpt-5.6-luna`, then checks and runs the generated read-only Cypher. |
+| `cypher_search` | `Text2CypherRetriever` | Sends the tool query and the current Neo4j schema to `gpt-6-luna`, then checks and runs the generated read-only Cypher. |
 
 The agent uses the configured answer `ChatOpenAI` model. Its system instruction
 sets this sequence:
@@ -203,13 +240,13 @@ converts each tool result into a `neo4j.Record` with these fields:
 | `tool_name` | The tool that returned the item. |
 | `metadata` | The underlying metadata plus the tool name. |
 
-`AgenticToolsRetriever` collects the artifacts from every `ToolMessage`. It
-returns those records as the retrieval result. It does not return the agent's
-final prose as an evidence item.
+`AgenticToolsRetriever` collects the artifacts from every `ToolMessage`, then keeps
+at most five items. The answer model and retrieval evaluator use that same list.
+It does not return the agent's final prose as an evidence item.
 
 ## Failure and boundary cases
 
-- If a selected method is not one of `agentic`, `vector`, or `entity_vector`, `answer_question()` raises `ValueError`.
+- If a selected method is not one of `agentic`, `vector`, `entity_vector`, or `milvus_vector`, `answer_question()` raises `ValueError`.
 - If `agentic` is selected and schema loading fails, no agentic retriever is built.
 - If a vector index is missing, `VectorCypherRetriever` fails while it is built. Construction must create and await the indexes first.
 - If a retriever returns no items, the answer is the fallback text and `retriever_result.items` is empty.

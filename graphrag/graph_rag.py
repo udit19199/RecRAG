@@ -23,9 +23,10 @@ from neo4j_graphrag.types import LLMMessage
 from pydantic import BaseModel
 
 from .construction import ConstructionMethod, SourcePage, rebuild_graph
+from .milvus_store import MilvusStore
 from .retrieval.answering import RetrievalMethod, answer_question
 
-DEFAULT_LLM_MODEL = "gpt-5.6-luna"
+DEFAULT_LLM_MODEL = "gpt-6-luna"
 DEFAULT_REASONING_EFFORT = "medium"
 LLMInput = str | list[LLMMessage]
 LLMHistory = list[LLMMessage] | MessageHistory | None
@@ -180,12 +181,14 @@ class GraphRAG:
         embedder: Embedder,
         answer_llm,
         embedding_dimensions: int,
+        milvus: MilvusStore,
     ) -> None:
         self._driver = driver
         self._llm = llm
         self._embedder = embedder
         self._answer_llm = answer_llm
         self._embedding_dimensions = embedding_dimensions
+        self._milvus = milvus
 
     @classmethod
     def from_config(cls, config_path: Path | None = None) -> GraphRAG:
@@ -218,6 +221,9 @@ class GraphRAG:
                 ),
                 answer_llm=chat_model,
                 embedding_dimensions=config["embedding"]["dimensions"],
+                milvus=MilvusStore(
+                    config["milvus"]["uri"], config["milvus"]["timeout"]
+                ),
             )
         except Exception:
             driver.close()
@@ -238,6 +244,7 @@ class GraphRAG:
             embedder=self._embedder,
             database=database,
             embedding_dimensions=self._embedding_dimensions,
+            milvus=self._milvus,
         )
 
     def answer(
@@ -255,10 +262,13 @@ class GraphRAG:
             embedder=self._embedder,
             answer_llm=self._answer_llm,
             retrieval_methods=retrieval_methods,
+            milvus=self._milvus,
+            embedding_dimensions=self._embedding_dimensions,
         )
 
     def close(self) -> None:
         self._driver.close()
+        self._milvus.close()
 
 
 __all__ = [

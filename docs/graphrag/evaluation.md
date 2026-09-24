@@ -200,8 +200,7 @@ only `record.supporting_sentences()`. Both cases set `actual_output` to the
 serialized graph.
 
 HotpotQA and 2WikiMultiHopQA use their marked supporting sentences. Natural
-Questions uses its deduplicated long-answer passages. BrowseComp-Plus uses its
-evidence documents.
+Questions uses its deduplicated long-answer passages.
 
 The evaluator creates one `ResponsesOpenAIModel` judge and uses it for three
 `GEval` metrics. Each metric receives its evaluation instruction, the graph
@@ -282,9 +281,9 @@ items = result.retriever_result.items if result.retriever_result else []
 retrieved_context = [str(item.content) for item in items[:top_k]]
 ```
 
-The default `top_k` is 5. This slice controls the evaluation context. It does
-not change how many records the retriever ran, and it does not change the answer
-that `Neo4jGraphRAG.search()` already generated.
+The shared retrieval limit is five items. Retrievers are capped before answer
+generation, and the evaluator scores those same items. This keeps the answer
+context and retrieval-evaluation context aligned.
 
 The test case contains:
 
@@ -359,7 +358,7 @@ The test case also contains the question, generated answer, and expected answer:
 | `actual_output` | `result.answer` |
 | `expected_output` | `record.answer` |
 | `context` | `record.supporting_sentences()` |
-| `retrieval_context` | Every retrieved item content, without a `top_k` slice. |
+| `retrieval_context` | Every item passed to the answer model; at most five. |
 
 ### Answer checks
 
@@ -401,7 +400,7 @@ adapts LangChain's `ChatOpenAI` to DeepEval. It configures:
 
 | Setting | Current value |
 | --- | --- |
-| Model | `gpt-5.6-luna` |
+| Model | `gpt-6-luna` |
 | API | OpenAI Responses API, enabled with `use_responses_api=True` |
 | Reasoning effort | `medium` |
 | Structured output | Function calling when DeepEval supplies a schema |

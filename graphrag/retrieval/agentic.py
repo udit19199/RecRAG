@@ -17,7 +17,11 @@ from neo4j_graphrag.retrievers import (
 from neo4j_graphrag.tool import Tool
 from neo4j_graphrag.types import LLMMessage, RawSearchResult, RetrieverResultItem
 
-from .retrievers import VECTOR_RETRIEVAL_QUERY, format_retrieval_record
+from .retrievers import (
+    RETRIEVAL_TOP_K,
+    VECTOR_RETRIEVAL_QUERY,
+    format_retrieval_record,
+)
 
 
 def _format_tool_record(record: neo4j.Record) -> RetrieverResultItem:
@@ -60,7 +64,11 @@ class AgenticToolsRetriever(ToolsRetriever):
         )
 
     def get_search_results(
-        self, query_text: str, message_history: list[LLMMessage] | None = None, **kwargs
+        self,
+        query_text: str,
+        message_history: list[LLMMessage] | None = None,
+        top_k: int = RETRIEVAL_TOP_K,
+        **kwargs,
     ) -> RawSearchResult:
         """Run the LangChain agent and return its Neo4j tool artifacts."""
         messages = [*(message_history or []), {"role": "user", "content": query_text}]
@@ -71,7 +79,7 @@ class AgenticToolsRetriever(ToolsRetriever):
             if isinstance(message, ToolMessage)
             for record in (message.artifact or [])
         ]
-        return RawSearchResult(records=records)
+        return RawSearchResult(records=records[:top_k])
 
 
 def build_agentic_retriever(

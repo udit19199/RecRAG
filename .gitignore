@@ -33,17 +33,12 @@ Thumbs.db
 .fallow/
 
 # Project specific
-# Active GraphRAG inputs are tracked. Large raw files use Git LFS.
+# Dataset inputs are fetched on demand; tracked exceptions below are archives.
 datasets/*
-!datasets/hotpotqa/
-!datasets/hotpotqa/**
 !datasets/2wikimultihopqa/
 !datasets/2wikimultihopqa/**
-!datasets/natural_questions/
-!datasets/natural_questions/**
 !datasets/browsecomp_plus/
 !datasets/browsecomp_plus/**
-datasets/natural_questions/dev.jsonl
 datasets/browsecomp_plus/test.jsonl
 !datasets/hannon/
 !datasets/hannon/**
