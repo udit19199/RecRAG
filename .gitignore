@@ -11,6 +11,7 @@ wheels/
 
 # Virtual environments
 .venv/
+.venv-hipporag/
 venv/
 ENV/
 
@@ -33,6 +34,9 @@ Thumbs.db
 .fallow/
 
 # Project specific
+# Experiment outputs (local-only; see docs for findings)
+results/
+runs/
 # Dataset inputs are fetched on demand; tracked exceptions below are archives.
 datasets/*
 !datasets/2wikimultihopqa/
@@ -53,6 +57,7 @@ state/
 
 # Testing
 .pytest_cache/
+.ruff_cache/
 .coverage
 htmlcov/
 
@@ -60,6 +65,7 @@ htmlcov/
 .gemini/
 
 # Agents / skills / local IDE tooling
+.harness/
 .agents/
 .claude/
 skills-lock.json

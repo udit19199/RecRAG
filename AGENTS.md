@@ -18,9 +18,10 @@ remodel — do not resurrect that pattern (per-candidate indexing, benchmark
 suites, blueprint export) without confirming it's back in scope.
 
 This is **research-first**: the value is in what we learn and document, not a
-scalable product. People are curious about findings, so preserve experiment runs
-and results, and record learnings where they can be found (docs, benchmark
-artifacts). Keep architecture work simple and reversible.
+scalable product. People are curious about findings, so keep experiment runs
+and results local-only (`runs/` and `results/` are gitignored), and record
+learnings where they can be found (docs, benchmark artifacts). Keep
+architecture work simple and reversible.
 
 ## Setup
 
@@ -88,7 +89,8 @@ Use `GraphRAG` directly from Python. Construction execution lives in
 `graphrag/construction/__init__.py`, with the ontology schema in
 `graphrag/construction/ontology.py`; retrieval and answering execution
 lives in `graphrag/retrieval/answering.py`. Evaluation helpers live in
-`graphrag/evals/`. Preserve saved experiment results under `runs/`.
+`graphrag/evals/`. Saved experiment results go under local-only `runs/`
+(gitignored).
 
 ## Older datasets (archived)
 
