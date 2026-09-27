@@ -22,8 +22,10 @@ from neo4j_graphrag.tool import Tool
 from neo4j_graphrag.types import LLMMessage
 from pydantic import BaseModel
 
-from .answering import RetrievalMethod, answer_question
-from .construction import ConstructionMethod, SourcePage, rebuild_graph
+from dataset import SourcePage
+
+from .construction import ConstructionMethod, rebuild_graph
+from .retrieval import RetrievalMethod, answer_question
 
 DEFAULT_LLM_MODEL = "gpt-6-luna"
 DEFAULT_REASONING_EFFORT = "medium"
