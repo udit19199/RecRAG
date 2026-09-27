@@ -16,8 +16,8 @@ from langchain_openai import ChatOpenAI
 from neo4j import Driver
 from neo4j_graphrag.generation.types import RagResultModel
 
-from ..dataset_adapters.registry import DatasetRecord
-from ..graph_rag import DEFAULT_LLM_MODEL, DEFAULT_REASONING_EFFORT
+from graphrag.datasets import DatasetRecord
+from graphrag.graph_rag import DEFAULT_LLM_MODEL, DEFAULT_REASONING_EFFORT
 
 
 class ResponsesOpenAIModel(DeepEvalBaseLLM):
