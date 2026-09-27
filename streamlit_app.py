@@ -9,10 +9,10 @@ from time import perf_counter
 import streamlit as st
 from langchain_core.callbacks import get_usage_metadata_callback
 
+from graphrag.answering import RETRIEVAL_METHODS
 from graphrag.construction import ConstructionMethod
-from graphrag.dataset_adapters.registry import DATASET_SOURCES, get_source
+from graphrag.datasets import DATASET_SOURCES, get_source
 from graphrag.graph_rag import GraphRAG
-from graphrag.retrieval.answering import RETRIEVAL_METHODS
 
 st.set_page_config(page_title="GraphRAG Demo", page_icon=":material/account_tree:")
 st.title("GraphRAG Demo")
@@ -176,13 +176,13 @@ if run_clicked:
     else:
         if score_with_deepeval:
             try:
-                from graphrag.evals.construction import (
+                from evals.construction import (
                     evaluate_answer,
                     evaluate_construction,
                     read_graph,
                     read_graph_statistics,
                 )
-                from graphrag.evals.retrieval import evaluate_retrieval
+                from evals.retrieval import evaluate_retrieval
             except ImportError:
                 st.error("DeepEval scoring requires `uv sync --extra experiments`.")
                 st.stop()

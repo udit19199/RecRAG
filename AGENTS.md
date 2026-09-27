@@ -52,45 +52,34 @@ Run `uv run ruff format --check .` and `uv run ruff check .` for Python checks.
 - Adapter timeouts come from `config.toml`, not hardcoded.
 - Dicts, `TypedDict`s, and tuples are strongly prohibited.
 - Retries use `urllib3.util.Retry` with idempotent-method-only.
-- GraphRAG writes chunk embeddings to Neo4j and Milvus. Neo4j stores the graph;
-  Milvus indexes a copy of each chunk vector, keyed by its Neo4j element ID.
+- GraphRAG writes chunk embeddings and the graph to Neo4j.
 - Neo4j vector retrieval uses `neo4j-graphrag`'s `VectorCypherRetriever`.
-  Milvus retrieval fetches the matched chunk and graph context from Neo4j.
+  Agentic retrieval uses Neo4j vector and text-to-Cypher tools.
 - GraphRAG uses the official `neo4j-graphrag` package for the retrieve-to-answer
   flow and passes its `GraphRAGChatLLM` adapter around the configured LangChain
   chat model to that package.
 
 ## GraphRAG (active)
 
-The active GraphRAG module supports **2 graph-construction approaches** and
-**4 retrieval approaches**. Both construction methods use the same input,
-Neo4j database, Neo4j and Milvus vector writes, retrieval, and answering flow.
-Only extraction or retrieval behavior differs. Benchmark scoring is optional
-and sits outside the normal GraphRAG path.
+The active GraphRAG path uses ontology-guided construction (`ontology_guided`)
+and agentic retrieval (`agentic`). The ontology suggests top-level node and
+relationship types and allows additional types. Vector and text-to-Cypher
+search remain internal tools for agentic retrieval. Construction writes chunk
+vectors to Neo4j; agentic retrieval searches Neo4j.
+Benchmark scoring is optional and sits outside the normal GraphRAG path.
 
-| Construction approach | Method ID | Notes |
-|-----------------------|-----------|-------|
-| Standard | `standard` | Open-ended LLM extraction |
-| Ontology-guided | `ontology_guided` | Fixed top-level node and relationship types, with additional types allowed |
+HippoRAG is an independent upstream checkout under `hipporag/`,
+ignored by this repository. `hipporag_baseline.py` runs its native pipeline
+with RecRAG dataset loaders and Responses/embedding adapters. Use
+`.venv-hipporag`, because upstream dependency pins conflict with Neo4j GraphRAG.
+Shared `SourcePage` inputs live in `graphrag/__init__.py` so dataset loaders
+can run without construction dependencies. Keep upstream code unchanged.
 
-| Retrieval approach | Method ID | Notes |
-|-------------------|-----------|-------|
-| Agentic | `agentic` | Chooses between vector and Cypher search tools |
-| Vector | `vector` | Vector search with graph context |
-| Entity vector | `entity_vector` | Searches entity embeddings with graph context |
-| Milvus vector | `milvus_vector` | Searches Milvus chunk vectors and fetches graph context from Neo4j |
-
-The deep GraphRAG interface is `graphrag/graph_rag.py`. Construction code
-lives in `graphrag/construction/`, retrieval code in
-`graphrag/retrieval/`. Shared models, validation, Neo4j storage, and saved-run
-handling live directly under `graphrag/`. There is no separate research layer;
-the entire package exists for research and experimentation.
-Use `GraphRAG` directly from Python. Construction execution lives in
-`graphrag/construction/__init__.py`, with the ontology schema in
-`graphrag/construction/ontology.py`; retrieval and answering execution
-lives in `graphrag/retrieval/answering.py`. Evaluation helpers live in
-`graphrag/evals/`. Saved experiment results go under local-only `runs/`
-(gitignored).
+Use `GraphRAG` from `graphrag/graph_rag.py` directly from Python.
+`graphrag/construction.py` builds the graph using `graphrag/ontology.py`.
+`graphrag/agentic.py` provides the retrieval tools; `graphrag/answering.py`
+runs retrieval and answering. Evaluation helpers live in the top-level
+`evals/` package. Save experiment results under local-only `runs/` (gitignored).
 
 ## Older datasets (archived)
 
