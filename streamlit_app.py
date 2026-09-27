@@ -9,10 +9,16 @@ from time import perf_counter
 import streamlit as st
 from langchain_core.callbacks import get_usage_metadata_callback
 
-from graphrag.answering import RETRIEVAL_METHODS
+from dataset import DATASET_SOURCES, get_source
+from evals.qa_metrics import (
+    GraphRAGRecordResult,
+    benchmark_prompt,
+    score_qa_answer,
+    summarize_qa_results,
+)
 from graphrag.construction import ConstructionMethod
-from graphrag.datasets import DATASET_SOURCES, get_source
 from graphrag.graph_rag import GraphRAG
+from graphrag.retrieval import RETRIEVAL_METHODS
 
 st.set_page_config(page_title="GraphRAG Demo", page_icon=":material/account_tree:")
 st.title("GraphRAG Demo")
@@ -191,14 +197,21 @@ if run_clicked:
             project_root = Path(__file__).resolve().parent
             run_id = f"{datetime.now(UTC):%Y%m%d%H%M%S%f}"
             usage_path = project_root / "runs" / f"usage-{run_id}Z.jsonl"
+            results_path = project_root / "runs" / f"graphrag-{run_id}Z.jsonl"
+            summary_path = project_root / "runs" / f"graphrag-summary-{run_id}Z.json"
             usage_path.parent.mkdir(exist_ok=True)
             st.caption(f"Token usage saved to `{usage_path.relative_to(project_root)}`")
+            st.caption(
+                f"Baseline scores saved to `{results_path.relative_to(project_root)}`"
+            )
             rag = GraphRAG.from_config()
             constructed_databases = set()
+            baseline_results: list[GraphRAGRecordResult] = []
             try:
                 for record_number, record in enumerate(loaded_records, start=1):
                     construction_evaluations = []
                     construction_usages = []
+                    construction_durations = []
                     construction_status = st.status(
                         f"Record {record_number}: constructing graphs", expanded=False
                     )
@@ -235,6 +248,7 @@ if run_clicked:
                                 construction_method=method.value,
                                 elapsed_seconds=construction_seconds,
                             )
+                        construction_durations.append(construction_seconds)
                         evaluation = None
                         if score_with_deepeval:
                             try:
@@ -262,6 +276,10 @@ if run_clicked:
                                 dataset=selected_dataset.name,
                                 question_type=getattr(record, "question_type", None),
                                 construction_method=method.value,
+                                metrics=evaluation.get("deepeval", {}),
+                                graph_statistics=evaluation.get("graph_statistics", {}),
+                                construction_seconds=construction_seconds,
+                                error=evaluation.get("error"),
                             )
                         construction_evaluations.append(evaluation)
                         construction_usages.append(construction_usage)
@@ -292,7 +310,9 @@ if run_clicked:
                     retrieval_status = st.status(
                         f"Record {record_number}: retrieving answers", expanded=False
                     )
-                    for method in selected_construction_methods:
+                    for construction_index, method in enumerate(
+                        selected_construction_methods
+                    ):
                         retrieval_status.write(
                             f"Answering record {record_number} with {method} graph"
                         )
@@ -310,6 +330,43 @@ if run_clicked:
                             retrieval_and_answer_seconds = (
                                 perf_counter() - retrieval_started
                             )
+                            items = (
+                                result.retriever_result.items
+                                if result.retriever_result is not None
+                                else []
+                            )
+                            retrieved_context = [str(item.content) for item in items]
+                            prompt = benchmark_prompt(
+                                "\n\n".join(retrieved_context), record.question
+                            )
+                            baseline_result = GraphRAGRecordResult(
+                                run_id=run_id,
+                                dataset=selected_dataset.name,
+                                record_id=record.id,
+                                question_type=getattr(record, "question_type", None),
+                                construction_method=method.value,
+                                retrieval_method=retrieval_method,
+                                question=record.question,
+                                expected_answers=list(record.answer_aliases()),
+                                answer=result.answer,
+                                retrieved_context=retrieved_context,
+                                metrics=score_qa_answer(
+                                    result.answer,
+                                    record.answer_aliases(),
+                                    record.answer,
+                                    prompt,
+                                ),
+                                construction_seconds=construction_durations[
+                                    construction_index
+                                ],
+                                retrieval_and_answer_seconds=(
+                                    retrieval_and_answer_seconds
+                                ),
+                            )
+                            baseline_results.append(baseline_result)
+                            with results_path.open("a", encoding="utf-8") as file:
+                                file.write(baseline_result.model_dump_json())
+                                file.write("\n")
                             store_token_usage(
                                 usage_path,
                                 record_id=record.id,
@@ -340,6 +397,8 @@ if run_clicked:
                                     construction_method=method.value,
                                     retrieval_method=retrieval_method,
                                     metrics=retrieval_evaluation["deepeval"],
+                                    retrieved_context=retrieved_context,
+                                    top_k=retrieval_evaluation["top_k"],
                                 )
                             answer_evaluation = None
                             if score_with_deepeval:
@@ -382,6 +441,23 @@ if run_clicked:
                                     )
                                 st.markdown("**Answer**")
                                 st.write(result.answer)
+                                st.markdown("**Baseline QA metrics**")
+                                metrics = baseline_result.metrics
+                                with st.container(horizontal=True):
+                                    st.metric(
+                                        "Exact match", f"{metrics.exact_match:.0%}"
+                                    )
+                                    st.metric("Precision", f"{metrics.precision:.0%}")
+                                    st.metric("Recall", f"{metrics.recall:.0%}")
+                                    st.metric("F1", f"{metrics.f1:.0%}")
+                                    st.metric(
+                                        "Paper overlap accuracy",
+                                        f"{metrics.overlap_accuracy:.0%}",
+                                    )
+                                    st.metric(
+                                        "Gold answer in prompt",
+                                        f"{metrics.retrieval_accuracy:.0%}",
+                                    )
                                 st.metric(
                                     "Retrieval and answer time",
                                     f"{retrieval_and_answer_seconds:.2f}s",
@@ -392,13 +468,8 @@ if run_clicked:
                                 if answer_evaluation is not None:
                                     answer = answer_evaluation["answer"]
                                     st.markdown("**Answer evaluation**")
-                                    with st.container(border=True):
-                                        st.markdown("**Expected answer**")
-                                        st.write(answer["expected"])
-                                        st.metric(
-                                            "Exact answer or alias match",
-                                            "Yes" if answer["alias_match"] else "No",
-                                        )
+                                    st.markdown("**Expected answer**")
+                                    st.write(answer["expected"])
                                     render_metric_group(
                                         "Answer judge", answer, ["faithfulness"]
                                     )
@@ -411,11 +482,6 @@ if run_clicked:
                                         "Answer judge tokens",
                                         answer_evaluation["token_usage"],
                                     )
-                                items = (
-                                    result.retriever_result.items
-                                    if result.retriever_result is not None
-                                    else []
-                                )
                                 with st.expander(
                                     f"Retrieved context ({len(items)} items)"
                                 ):
@@ -427,5 +493,12 @@ if run_clicked:
                     )
             finally:
                 rag.close()
+            summary = summarize_qa_results(
+                run_id, selected_dataset.name, baseline_results
+            )
+            summary_path.write_text(summary.model_dump_json(indent=2), encoding="utf-8")
+            st.caption(
+                f"Baseline summary saved to `{summary_path.relative_to(project_root)}`"
+            )
         except Exception as exc:
             st.error(f"{type(exc).__name__}: {exc}")

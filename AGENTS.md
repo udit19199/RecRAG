@@ -68,18 +68,19 @@ search remain internal tools for agentic retrieval. Construction writes chunk
 vectors to Neo4j; agentic retrieval searches Neo4j.
 Benchmark scoring is optional and sits outside the normal GraphRAG path.
 
-HippoRAG is an independent upstream checkout under `hipporag/`,
-ignored by this repository. `hipporag_baseline.py` runs its native pipeline
-with RecRAG dataset loaders and Responses/embedding adapters. Use
+HippoRAG is an independent upstream checkout under `hipporag/`, ignored by this
+repository. `baselines/hipporag.py` runs its native retrieval and
+`baselines/rag.py` runs dense Normal RAG. Both share the benchmark loop in
+`baselines/runner.py` and dataset adapters in `dataset.py`. Use
 `.venv-hipporag`, because upstream dependency pins conflict with Neo4j GraphRAG.
-Shared `SourcePage` inputs live in `graphrag/__init__.py` so dataset loaders
-can run without construction dependencies. Keep upstream code unchanged.
+Keep upstream code unchanged.
 
 Use `GraphRAG` from `graphrag/graph_rag.py` directly from Python.
 `graphrag/construction.py` builds the graph using `graphrag/ontology.py`.
-`graphrag/agentic.py` provides the retrieval tools; `graphrag/answering.py`
-runs retrieval and answering. Evaluation helpers live in the top-level
-`evals/` package. Save experiment results under local-only `runs/` (gitignored).
+`graphrag/retrieval.py` provides the agentic retrieval tools and runs retrieval
+and answering. Dataset inputs shared by all methods live in `dataset.py`;
+evaluation helpers live in `evals/`. Save experiment results under local-only
+`runs/` (gitignored).
 
 ## Older datasets (archived)
 

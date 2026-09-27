@@ -392,6 +392,30 @@ contradictory or incomplete answers. It does not use the supporting passages.
 `correctness` still run when retrieval returns no items. This lets the result
 show an answer-quality score while making the missing evidence explicit.
 
+## Comparable QA baseline metrics
+
+Every GraphRAG answer also records the deterministic QA metrics used by the
+RAG and HippoRAG baseline runner, whether or not DeepEval scoring is enabled:
+
+| Metric | Meaning |
+| --- | --- |
+| `exact_match` | Normalized answer exactly matches one of the dataset aliases. |
+| `precision`, `recall`, `f1` | Token-overlap scores against the best-matching answer alias. |
+| `overlap_accuracy` | The paper's permissive score: the answer and canonical gold answer share any word. |
+| `retrieval_accuracy` | The canonical gold answer appears in the benchmark prompt built from the retrieved context and question. |
+
+The retrieval accuracy value is a string-presence proxy, not supporting-passage
+recall. DeepEval's contextual precision and recall remain the evidence-aware
+retrieval measures.
+
+Each app run saves one record per dataset item and method combination to
+`runs/graphrag-<run-id>Z.jsonl`. It also writes a `graphrag-summary-<run-id>Z.json`
+with averages per construction and retrieval method, including question-type
+breakdowns when the dataset provides question types. These baseline scores are
+always computed; the DeepEval checkbox controls only the LLM-judged scores.
+Summarization metrics are not included because the active datasets provide QA
+answers rather than reference summaries.
+
 ## Judge model and usage accounting
 
 `ResponsesOpenAIModel` in

@@ -10,9 +10,9 @@ from deepeval.metrics import (
 from deepeval.test_case import LLMTestCase
 from neo4j_graphrag.generation.types import RagResultModel
 
-from graphrag.datasets import DatasetRecord
+from dataset import DatasetRecord
 from graphrag.graph_rag import DEFAULT_LLM_MODEL
-from graphrag.retrievers import RETRIEVAL_TOP_K
+from graphrag.retrieval import RETRIEVAL_TOP_K
 
 from .construction import ResponsesOpenAIModel, _metric_result
 
