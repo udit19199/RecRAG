@@ -15,9 +15,12 @@ dependencies = [
     "typesafe-sdk>=0.6.0",
 ]
 
+[tool.setuptools]
+py-modules = ["dataset"]
+
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["graphrag*", "evals*"]
+include = ["baselines*", "graphrag*", "evals*"]
 namespaces = true
 
 [dependency-groups]
@@ -33,7 +36,7 @@ line-length = 88
 select = ["E4", "E7", "E9", "F", "I"]
 
 [tool.pyright]
-include = ["graphrag", "evals"]
+include = ["baselines", "dataset.py", "graphrag", "evals"]
 extraPaths = ["."]
 typeCheckingMode = "basic"
 

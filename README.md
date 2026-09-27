@@ -68,14 +68,15 @@ The official HippoRAG repository is a separate, gitignored checkout at
 gh repo clone OSU-NLP-Group/HippoRAG hipporag
 ```
 
-Run both retrieval methods through [hipporag_baseline.py](hipporag_baseline.py).
-Its dependencies conflict with Neo4j GraphRAG, so install them separately:
+Normal RAG and HippoRAG share the benchmark runner and metrics, with their
+retrieval implementations separated under `baselines/`. HippoRAG's dependencies
+conflict with Neo4j GraphRAG, so install them separately:
 
 ```sh
 uv venv --python 3.12 .venv-hipporag
 uv pip install --python .venv-hipporag/bin/python -e ./hipporag datasets huggingface-hub python-dotenv 'llama-index-core==0.14.23'
-HF_HOME="$PWD/runs/hipporag-cache" .venv-hipporag/bin/python hipporag_baseline.py --method rag --dataset hotpotqa --records 1
-HF_HOME="$PWD/runs/hipporag-cache" .venv-hipporag/bin/python hipporag_baseline.py --method hipporag --dataset hotpotqa --records 1
+HF_HOME="$PWD/runs/hipporag-cache" .venv-hipporag/bin/python -m baselines.rag --dataset hotpotqa --records 1
+HF_HOME="$PWD/runs/hipporag-cache" .venv-hipporag/bin/python -m baselines.hipporag --dataset hotpotqa --records 1
 ```
 
 The runner reads `.env` and `config.toml`. Both methods use the configured
@@ -85,8 +86,11 @@ through the Responses API. Both baselines store their indexes locally and need
 neither Neo4j nor Milvus.
 
 Choose `hotpotqa`, `multihop_rag`, or `natural_questions` with `--dataset`.
-Use `--start` and `--records` to select records. Both methods use the same
-source pages, including the full MultiHop-RAG corpus. LlamaIndex's
+Use `--start` and `--records` to select questions. For HotpotQA, the runner
+combines context pages attached to every selected question into one corpus,
+then searches that same corpus for each selected question. For other datasets,
+the existing corpus behavior is retained. Both methods use equivalent inputs
+for a given selection. LlamaIndex's
 `SentenceSplitter` makes 256-token chunks with 20-token overlap; each chunk
 retains its page title. Both retrievers return ten chunks to the same answer
 prompt. Dense RAG uses LlamaIndex's vector index; HippoRAG uses its native
@@ -107,9 +111,12 @@ scoring helper prevents exact score parity. Retrieved-token counts use
 
 The paper's HotpotQA results use an unpublished random sample of 1,000 hard
 bridge questions. This runner uses the official validation split in record
-order, so its HotpotQA sample is different. The authors' processed document
-reader and extraction helpers are also unavailable; both local methods use
-the same titled source pages instead.
+order, with the requested `--start` and `--records` range, so its sample is
+different and does not specifically select hard bridge questions. Its shared
+corpus contains all page entries attached to that range (including repeated
+pages); each query searches the full selected corpus. The run's `corpus.json`
+records the range, page-entry count, chunk count, and corpus hash. The exact
+paper sample and its processed document files remain unavailable.
 
 The upstream checkout stays unchanged. The paper used `text-embedding-ada-002`,
 GPT-4o-mini for HippoRAG construction, and Llama-3.1-8B-Instruct for answers.

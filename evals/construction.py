@@ -1,8 +1,6 @@
 from __future__ import annotations
 
 import json
-import re
-from collections import Counter
 from typing import Any
 
 from deepeval.metrics import (
@@ -16,8 +14,10 @@ from langchain_openai import ChatOpenAI
 from neo4j import Driver
 from neo4j_graphrag.generation.types import RagResultModel
 
-from graphrag.datasets import DatasetRecord
+from dataset import DatasetRecord
 from graphrag.graph_rag import DEFAULT_LLM_MODEL, DEFAULT_REASONING_EFFORT
+
+from .qa_metrics import benchmark_prompt, normalize_answer, score_qa_answer
 
 
 class ResponsesOpenAIModel(DeepEvalBaseLLM):
@@ -249,23 +249,6 @@ def evaluate_construction(
     }
 
 
-def _normalise(text: str) -> str:
-    return " ".join(re.sub(r"[^\w]+", " ", text.casefold()).split())
-
-
-def _token_f1(actual: str, expected: str) -> float:
-    actual_tokens = Counter(_normalise(actual).split())
-    expected_tokens = Counter(_normalise(expected).split())
-    overlap = sum((actual_tokens & expected_tokens).values())
-    if not actual_tokens and not expected_tokens:
-        return 1.0
-    if not overlap:
-        return 0.0
-    precision = overlap / sum(actual_tokens.values())
-    recall = overlap / sum(expected_tokens.values())
-    return 2 * precision * recall / (precision + recall)
-
-
 def _metric_result(metric, test_case: LLMTestCase) -> dict[str, Any]:
     metric.measure(test_case)
     return {"score": metric.score, "reason": metric.reason}
@@ -287,18 +270,23 @@ def evaluate_answer(
         context=gold_context,
         retrieval_context=retrieved_context,
     )
-    answer_alias_match = _normalise(result.answer) in {
-        _normalise(alias) for alias in record.answer_aliases()
+    baseline_metrics = score_qa_answer(
+        result.answer,
+        record.answer_aliases(),
+        record.answer,
+        benchmark_prompt("\n\n".join(retrieved_context), record.question),
+    )
+    answer_alias_match = normalize_answer(result.answer) in {
+        normalize_answer(alias) for alias in record.answer_aliases()
     }
     answer = {
         "expected": record.answer,
         "expected_id": getattr(record, "answer_id", None),
         "actual": result.answer,
         "alias_match": answer_alias_match,
-        "token_f1": max(
-            _token_f1(result.answer, alias) for alias in record.answer_aliases()
-        ),
+        "token_f1": baseline_metrics.f1,
     }
+    answer.update(baseline_metrics.model_dump())
     judge = ResponsesOpenAIModel(model=judge_model)
     if retrieved_context:
         answer["faithfulness"] = _metric_result(
