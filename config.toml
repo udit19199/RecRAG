@@ -26,6 +26,6 @@ uri = "neo4j://localhost:7687"
 [graphrag.retrieval]
 timeout = 10
 
-[milvus]
-uri = "http://localhost:19530"
-timeout = 30
+[hipporag]
+# Includes reasoning tokens, unlike upstream's small text-only budgets.
+max_output_tokens = 16384

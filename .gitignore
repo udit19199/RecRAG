@@ -103,3 +103,6 @@ datasets/refind/*.jsonl
 
 # Riptide artifacts (cloud-synced)
 .humanlayer/tasks/
+
+# Independent upstream checkout
+/hipporag/

@@ -183,7 +183,7 @@ These counts describe graph shape. They do not prove that a graph fact is true.
 ### How the judge cases are built
 
 `evaluate_construction()` in
-[`graphrag/evals/construction.py`](../../graphrag/evals/construction.py#L175-L248)
+[`evals/construction.py`](../../evals/construction.py#L175-L248)
 creates two `LLMTestCase` values from the same graph output:
 
 ```python
@@ -271,7 +271,7 @@ comes from the same record but does not answer the question.
 ### How the retrieval case is built
 
 `evaluate_retrieval()` in
-[`graphrag/evals/retrieval.py`](../../graphrag/evals/retrieval.py#L19-L50)
+[`evals/retrieval.py`](../../evals/retrieval.py#L19-L50)
 reads the items from `result.retriever_result`. If the result has no retriever
 result, it uses an empty list. It then applies `top_k` while preparing the
 judge input:
@@ -333,7 +333,7 @@ Yes.
 ```
 
 The answer evaluator is `evaluate_answer()` in
-[`graphrag/evals/construction.py`](../../graphrag/evals/construction.py#L260-L322).
+[`evals/construction.py`](../../evals/construction.py#L260-L322).
 The function keeps two kinds of context separate:
 
 ```python
@@ -395,7 +395,7 @@ show an answer-quality score while making the missing evidence explicit.
 ## Judge model and usage accounting
 
 `ResponsesOpenAIModel` in
-[`graphrag/evals/construction.py`](../../graphrag/evals/construction.py#L22-L60)
+[`evals/construction.py`](../../evals/construction.py#L22-L60)
 adapts LangChain's `ChatOpenAI` to DeepEval. It configures:
 
 | Setting | Current value |

@@ -5,20 +5,16 @@ text chunks, and embeddings.
 
 ## The whole flow
 
-Both methods receive source pages. They differ in the prompt and schema passed
-to the extractor.
+Ontology-guided construction receives source pages and passes the ontology
+schema and prompt to the extractor.
 
 ```mermaid
 flowchart LR
-    input["Source pages"] --> method{"Extraction method"}
-    method --> standard["Standard<br/>extract with no schema"]
-    method --> guided["Ontology-guided<br/>extract with suggested types"]
-    standard --> extracted["Extraction JSON<br/>nodes + relationships"]
-    guided --> extracted
+    input["Source pages"] --> guided["Ontology-guided<br/>extract with suggested types"]
+    guided --> extracted["Extraction JSON<br/>nodes + relationships"]
     extracted --> pipeline["SimpleKGPipeline<br/>builds the graph"]
     pipeline --> graph["Graph + chunks<br/>and embeddings"]
     graph --> neo4j["Neo4j<br/>graph + vectors"]
-    graph --> milvus["Milvus<br/>copy of chunk vectors"]
 ```
 
 ## One example
@@ -35,18 +31,7 @@ Scott Derrickson was an American director, screenwriter, and producer.
 Ed Wood was an American filmmaker, actor, writer, producer, and director.
 ```
 
-### Approach 1: Standard
-
-Standard passes `SCHEMA = None` and the default extraction prompt.
-
-```mermaid
-graph LR
-    text["Source text"] --> extract["Default prompt<br/>schema = None"]
-    extract --> output["JSON nodes + relationships"]
-    output --> entities["Example entities<br/>Scott Derrickson<br/>Ed Wood<br/>American"]
-```
-
-### Approach 2: Ontology-guided
+### Ontology-guided extraction
 
 Ontology-guided passes suggested node and relationship types. It can return
 additional types.
@@ -62,7 +47,7 @@ The diagrams show the extraction stage, not the exact output for every run.
 
 ## Prompts sent to the extractor
 
-Both methods use this prompt. `SimpleKGPipeline` fills `{schema}`, `{examples}`,
+Ontology-guided extraction starts with this prompt. `SimpleKGPipeline` fills `{schema}`, `{examples}`,
 and `{text}`.
 
 ```text
@@ -97,8 +82,7 @@ Input text:
 {text}
 ```
 
-The Standard method passes `SCHEMA = None`. The Ontology-guided method passes
-these suggested types through `{schema}`:
+The ontology passes these suggested types through `{schema}`:
 
 ```text
 Node types:
@@ -146,64 +130,22 @@ graph TD
         scott["__Entity__<br/>Scott Derrickson"]
         ed["__Entity__<br/>Ed Wood"]
         american["__Entity__<br/>American"]
-        scott_embedding["EntityEmbedding<br/>[0.12, -0.04, 0.88]"]
-        ed_embedding["EntityEmbedding<br/>[-0.21, 0.77, 0.35]"]
         chunk_index[["chunk_embeddings<br/>indexes Chunk.embedding"]]
-        entity_index[["entity_embeddings<br/>indexes EntityEmbedding.embedding"]]
 
         scott -->|HAS_NATIONALITY| american
         ed -->|HAS_NATIONALITY| american
         scott -->|FROM_CHUNK| chunk1
         ed -->|FROM_CHUNK| chunk2
-        scott -->|HAS_EMBEDDING| scott_embedding
-        ed -->|HAS_EMBEDDING| ed_embedding
         chunk1 -->|NEXT_CHUNK| chunk2
         chunk1 -.-> chunk_index
-        scott_embedding -.-> entity_index
-        ed_embedding -.-> entity_index
     end
 ```
 
 The active construction code creates a Neo4j database for each run, record, and
-construction method. Every build writes chunk vectors to Neo4j and to a matching
-Milvus collection; the Milvus copy is part of the active setup, not an optional
-storage choice. It also copies chunk embeddings for entity search and builds
-both Neo4j vector indexes.
+construction method. Each build stores chunk vectors in Neo4j. The
+`chunk_embeddings` index supports the agent's vector tool.
 
-## Dual-write storage
-
-Each Neo4j chunk keeps its vector in Neo4j and gets a copy in a run-specific
-Milvus collection. Milvus uses Neo4j's `elementId` as the chunk key. Search
-returns matching keys, and Neo4j uses them to fetch the chunk and graph facts.
-
-```mermaid
-graph TD
-    subgraph MILVUS["Milvus"]
-        milvus_index["Index"]
-        milvus_embeddings[("Embeddings<br/>vector + Neo4j elementId")]
-        milvus_index -. indexes .-> milvus_embeddings
-    end
-
-    subgraph NEO4J["Neo4j"]
-        scott(["Entity<br/>Name: Scott Derrickson<br/>Nationality: American"])
-        ed(["Entity<br/>Name: Ed Wood<br/>Nationality: American"])
-        american(["Entity<br/>Name: American"])
-        scott_chunk["Chunk<br/>Neo4j elementId: scott"]
-        ed_chunk["Chunk<br/>Neo4j elementId: ed"]
-
-        scott -->|HAS_NATIONALITY| american
-        ed -->|HAS_NATIONALITY| american
-        scott -->|FROM_CHUNK| scott_chunk
-        ed -->|FROM_CHUNK| ed_chunk
-    end
-
-    milvus_embeddings -. elementId .-> scott_chunk
-    milvus_embeddings -. elementId .-> ed_chunk
-```
-
-Neo4j remains the source for graph context. The `vector` and `milvus_vector`
-retrieval methods let you compare the Neo4j and Milvus indexes for the same
-graph. Both retrieval methods pass Neo4j context to the answer model.
+Neo4j provides both vector search and graph context for agentic retrieval.
 
 ## Related docs
 
