@@ -4,8 +4,12 @@ from collections.abc import Callable, Sequence
 from dataclasses import dataclass
 from typing import Protocol
 
-from ..construction import SourcePage
-from . import hotpotqa, multihop_rag, natural_questions
+from . import (
+    SourcePage,
+    dataset_hotpotqa,
+    dataset_multihop_rag,
+    dataset_natural_questions,
+)
 
 
 class DatasetRecord(Protocol):
@@ -30,17 +34,17 @@ DATASET_SOURCES: list[DatasetSource] = [
     DatasetSource(
         name="hotpotqa",
         display_name="HotpotQA",
-        load_record=hotpotqa.load_record,
+        load_record=dataset_hotpotqa.load_record,
     ),
     DatasetSource(
         name="multihop_rag",
         display_name="MultiHop-RAG",
-        load_record=multihop_rag.load_record,
+        load_record=dataset_multihop_rag.load_record,
     ),
     DatasetSource(
         name="natural_questions",
         display_name="Natural Questions",
-        load_record=natural_questions.load_record,
+        load_record=dataset_natural_questions.load_record,
     ),
 ]
 

@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from functools import cache
 
-from ..construction import SourcePage
+from . import SourcePage
 
 
 @dataclass(slots=True, frozen=True)

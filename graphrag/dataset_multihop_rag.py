@@ -5,7 +5,7 @@ from dataclasses import dataclass
 from functools import cache
 from pathlib import Path
 
-from ..construction import SourcePage
+from . import SourcePage
 
 
 @dataclass(slots=True, frozen=True)

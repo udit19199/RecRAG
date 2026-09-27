@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import asyncio
 from collections.abc import Sequence
-from dataclasses import dataclass
 from enum import StrEnum
 from hashlib import sha256
 
@@ -14,27 +13,19 @@ from neo4j_graphrag.components.text_splitters.fixed_size_splitter import (
 from neo4j_graphrag.components.types import LexicalGraphConfig, Neo4jGraph
 from neo4j_graphrag.embeddings.base import Embedder
 from neo4j_graphrag.experimental.pipeline.kg_builder import SimpleKGPipeline
-from neo4j_graphrag.generation.prompts import ERExtractionTemplate
 from neo4j_graphrag.indexes import create_vector_index
 from neo4j_graphrag.llm import LLMBase
 
-from ..milvus_store import MilvusStore
+from . import SourcePage
 from .ontology import ONTOLOGY_EXTRACTION_PROMPT, ONTOLOGY_SCHEMA
 
 
 class ConstructionMethod(StrEnum):
-    STANDARD = "standard"
     ONTOLOGY_GUIDED = "ontology_guided"
 
     def database_name(self, record_id: str, run_id: str) -> str:
         record_key = sha256(record_id.encode()).hexdigest()[:8]
         return f"recrag-{self.value.replace('_', '-')}-{record_key}-{run_id}"
-
-
-@dataclass(slots=True)
-class SourcePage:
-    title: str
-    passages: list[str]
 
 
 class _RaisingNeo4jWriter(Neo4jWriter):
@@ -56,17 +47,9 @@ def rebuild_graph(
     embedder: Embedder,
     database: str,
     embedding_dimensions: int,
-    milvus: MilvusStore,
 ) -> None:
-    match method:
-        case ConstructionMethod.STANDARD:
-            schema = None
-            prompt_template = ERExtractionTemplate.DEFAULT_TEMPLATE
-        case ConstructionMethod.ONTOLOGY_GUIDED:
-            schema = ONTOLOGY_SCHEMA
-            prompt_template = ONTOLOGY_EXTRACTION_PROMPT
-        case _:
-            raise ValueError(f"Unsupported construction method: {method}")
+    if method != ConstructionMethod.ONTOLOGY_GUIDED:
+        raise ValueError(f"Unsupported construction method: {method}")
 
     page_texts = []
     for page in pages:
@@ -74,7 +57,6 @@ def rebuild_graph(
         page_texts.append(f"Page: {page.title}\n{passages_text}")
     text = "\n\n".join(page_texts)
 
-    # Keep each entity-to-chunk embedding independently searchable.
     driver.execute_query(
         "CREATE DATABASE $name IF NOT EXISTS WAIT", name=database, database_="system"
     )
@@ -82,8 +64,8 @@ def rebuild_graph(
         llm=llm,
         driver=driver,
         embedder=embedder,
-        schema=schema,
-        prompt_template=prompt_template,
+        schema=ONTOLOGY_SCHEMA,
+        prompt_template=ONTOLOGY_EXTRACTION_PROMPT,
         on_error="RAISE",
         from_file=False,
         kg_writer=_RaisingNeo4jWriter(driver, neo4j_database=database),
@@ -92,18 +74,6 @@ def rebuild_graph(
         neo4j_database=database,
     )
     asyncio.run(pipeline.run_async(text=text))
-
-    driver.execute_query(
-        """
-        MATCH (entity:__Entity__)-[:FROM_CHUNK]->(chunk:Chunk)
-        WHERE chunk.embedding IS NOT NULL
-        CREATE (entity)-[:HAS_EMBEDDING]->(:EntityEmbedding {
-            text: chunk.text,
-            embedding: chunk.embedding
-        })
-        """,
-        database_=database,
-    )
 
     create_vector_index(
         driver,
@@ -115,26 +85,4 @@ def rebuild_graph(
         neo4j_database=database,
     )
 
-    create_vector_index(
-        driver,
-        "entity_embeddings",
-        label="EntityEmbedding",
-        embedding_property="embedding",
-        dimensions=embedding_dimensions,
-        similarity_fn="cosine",
-        neo4j_database=database,
-    )
-
     driver.execute_query("CALL db.awaitIndexes(60)", database_=database)
-
-    chunks = driver.execute_query(
-        "MATCH (chunk:Chunk) WHERE chunk.embedding IS NOT NULL "
-        "RETURN collect(elementId(chunk)) AS ids, collect(chunk.embedding) AS vectors",
-        database_=database,
-    ).records[0]
-    milvus.write(
-        database.replace("-", "_"),
-        embedding_dimensions,
-        chunks["ids"],
-        chunks["vectors"],
-    )
