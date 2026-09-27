@@ -1,4 +1,10 @@
-from typing import Any
+"""Agentic Neo4j retrieval and answer generation for GraphRAG."""
+
+from __future__ import annotations
+
+import json
+from collections.abc import Sequence
+from typing import Any, Literal
 
 import neo4j
 from langchain.agents import create_agent
@@ -8,20 +14,57 @@ from langchain_core.messages import ToolMessage
 from langchain_core.tools import StructuredTool
 from neo4j import Driver
 from neo4j_graphrag.embeddings.base import Embedder
+from neo4j_graphrag.generation import GraphRAG as Neo4jGraphRAG
 from neo4j_graphrag.llm import LLMBase
 from neo4j_graphrag.retrievers import (
     Text2CypherRetriever,
     ToolsRetriever,
     VectorCypherRetriever,
 )
+from neo4j_graphrag.schema import get_schema
 from neo4j_graphrag.tool import Tool
 from neo4j_graphrag.types import LLMMessage, RawSearchResult, RetrieverResultItem
 
-from .retrievers import (
-    RETRIEVAL_TOP_K,
-    VECTOR_RETRIEVAL_QUERY,
-    format_retrieval_record,
-)
+RETRIEVAL_TOP_K = 5
+VECTOR_RETRIEVAL_QUERY = """
+CALL {
+    WITH node
+    MATCH (entity:__Entity__)-[:FROM_CHUNK]->(node)
+    RETURN collect(DISTINCT entity.name) AS entities
+}
+CALL {
+    WITH node
+    MATCH (first:__Entity__)-[:FROM_CHUNK]->(node)
+    MATCH path=(first)-[*1..2]-(last:__Entity__)
+    WHERE all(
+        relationship IN relationships(path)
+        WHERE NOT (type(relationship) IN ["FROM_CHUNK", "NEXT_CHUNK", "FROM_DOCUMENT"])
+    )
+    WITH path
+    LIMIT 25
+    RETURN collect(DISTINCT {
+        nodes: [item IN nodes(path) | item.name],
+        relationships: [
+            relationship IN relationships(path) |
+            {
+                source: startNode(relationship).name,
+                type: type(relationship),
+                target: endNode(relationship).name
+            }
+        ]
+    }) AS graph_facts
+}
+RETURN node.text AS text, entities, graph_facts, score
+"""
+NO_CONTEXT = "I could not find supporting context for this question."
+RetrievalMethod = Literal["agentic"]
+RETRIEVAL_METHODS: list[RetrievalMethod] = ["agentic"]
+
+
+def format_retrieval_record(record: neo4j.Record) -> RetrieverResultItem:
+    return RetrieverResultItem(
+        content=json.dumps(record.data(), ensure_ascii=False, default=str)
+    )
 
 
 def _format_tool_record(record: neo4j.Record) -> RetrieverResultItem:
@@ -128,3 +171,37 @@ def build_agentic_retriever(
             "a search that returned no new evidence."
         ),
     )
+
+
+def answer_question(
+    question: str,
+    *,
+    driver: Driver,
+    database: str,
+    llm: LLMBase,
+    embedder: Embedder,
+    answer_llm: BaseChatModel,
+    retrieval_methods: Sequence[RetrievalMethod],
+):
+    if any(method != "agentic" for method in retrieval_methods):
+        raise ValueError("Only agentic retrieval is supported.")
+    if not retrieval_methods:
+        return []
+    neo4j_schema = get_schema(driver, database=database)
+    retriever = build_agentic_retriever(
+        driver=driver,
+        llm=llm,
+        embedder=embedder,
+        database=database,
+        agent_llm=answer_llm,
+        neo4j_schema=neo4j_schema,
+    )
+    return [
+        Neo4jGraphRAG(retriever, llm).search(
+            question,
+            retriever_config={"top_k": RETRIEVAL_TOP_K},
+            return_context=True,
+            response_fallback=NO_CONTEXT,
+        )
+        for _method in retrieval_methods
+    ]

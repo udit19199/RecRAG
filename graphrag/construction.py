@@ -16,7 +16,8 @@ from neo4j_graphrag.experimental.pipeline.kg_builder import SimpleKGPipeline
 from neo4j_graphrag.indexes import create_vector_index
 from neo4j_graphrag.llm import LLMBase
 
-from . import SourcePage
+from dataset import SourcePage
+
 from .ontology import ONTOLOGY_EXTRACTION_PROMPT, ONTOLOGY_SCHEMA
 
 
