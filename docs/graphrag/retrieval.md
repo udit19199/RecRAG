@@ -31,10 +31,7 @@ that model for text-to-Cypher generation and the final answer. Generation uses
 
 ## Inputs and results
 
-`GraphRAG.answer(question, database=..., retrieval_methods=["agentic"])`
-returns a list containing one `RagResultModel`. The list result shape is kept
-for existing callers. An empty method list returns no results; any method
-other than `agentic` raises `ValueError` before retrieval starts.
+`GraphRAG.answer(question, database=...)` returns one `RagResultModel`.
 
 Each result contains `answer` and `retriever_result`. Evidence items contain
 serialized Neo4j records and tool metadata. Answer generation and retrieval
@@ -46,8 +43,6 @@ When no context is found, the answer fallback is:
 
 ## Code and related docs
 
-- [Agent and tools](../../graphrag/agentic.py)
-- [Vector context query and record formatting](../../graphrag/retrievers.py)
-- [Answer flow](../../graphrag/answering.py)
+- [GraphRAG adapter, agent, tools, and answer flow](../../graphrag_retrieval.py)
 - [Graph construction](construction.md)
 - [Evaluation](evaluation.md)

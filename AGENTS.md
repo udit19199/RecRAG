@@ -27,17 +27,17 @@ architecture work simple and reversible.
 
 There is no Makefile. Run from repository root:
 
-- `uv sync --extra experiments` — install Python and research dependencies
+- `uv sync` — install Python dependencies
 - `cp .env.example .env` — create `.env`
-- Start Neo4j Desktop Enterprise with APOC. The app creates one database per
-  record and construction method.
+- Start Neo4j Desktop Enterprise with APOC. For each HotpotQA run, the app
+  creates one database per construction method from the shared validation
+  corpus. Other datasets use one database per record and construction method.
 - `uv run streamlit run streamlit_app.py` — run the app against Desktop.
 
 ## Quality Checks
 
 No tests are allowed in this repo. Do not add test files, test suites, or test
 frameworks. Use direct inspection for verification.
-Run `uv run ruff format --check .` and `uv run ruff check .` for Python checks.
 
 ## Key Service Ports
 
@@ -48,7 +48,7 @@ Run `uv run ruff format --check .` and `uv run ruff check .` for Python checks.
 ## Critical Constraints
 
 - **Do not move API keys into `config.toml`** — `OPENAI_API_KEY` and `LLAMA_CLOUD_API_KEY` live in `.env`. Pass LangChain OpenAI chat and embedding models directly; `config.toml` `[llm]`/`[embedding]` `model` is a plain OpenAI model id (for chat, use `gpt-6-luna`). There is no provider switch. Future PDF approaches must use LlamaCloud's LlamaParse exclusively.
-- **Only `gpt-6-luna` may be used as the GPT model** — use it for extraction, retrieval, answers, evaluation judges, fallbacks, CLI flags, and benchmark scripts, with the configured `medium` reasoning effort. Do not use any other GPT model. Use the Responses API for every OpenAI generation call.
+- **Only `gpt-6-luna` may be used as the GPT model** — use it for extraction, retrieval, answers, fallbacks, CLI flags, and benchmark scripts, with the configured `medium` reasoning effort. Do not use any other GPT model. Use the Responses API for every OpenAI generation call.
 - Adapter timeouts come from `config.toml`, not hardcoded.
 - Dicts, `TypedDict`s, and tuples are strongly prohibited.
 - Retries use `urllib3.util.Retry` with idempotent-method-only.
@@ -68,16 +68,16 @@ search remain internal tools for agentic retrieval. Construction writes chunk
 vectors to Neo4j; agentic retrieval searches Neo4j.
 Benchmark scoring is optional and sits outside the normal GraphRAG path.
 
-HippoRAG is an independent upstream checkout under `hipporag/`, ignored by this
-repository. `baselines/hipporag.py` runs its native retrieval and
-`baselines/rag.py` runs dense Normal RAG. Both share the benchmark loop in
-`baselines/runner.py` and dataset adapters in `dataset.py`. Use
-`.venv-hipporag`, because upstream dependency pins conflict with Neo4j GraphRAG.
-Keep upstream code unchanged.
+HippoRAG installs from a pinned upstream Git commit into `.venv-hipporag`; its
+source files are not in this working tree. `hipporag_retrieval.py` runs its
+native retrieval and `rag_retrieval.py` runs dense Normal RAG. Both share the
+benchmark loop in `benchmark.py` and dataset adapters in `dataset.py`.
+Keep using the separate environment because HippoRAG's dependency pins conflict
+with the main GraphRAG environment. See `README.md` for the install command.
 
-Use `GraphRAG` from `graphrag/graph_rag.py` directly from Python.
-`graphrag/construction.py` builds the graph using `graphrag/ontology.py`.
-`graphrag/retrieval.py` provides the agentic retrieval tools and runs retrieval
+Use `GraphRAG` from `graphrag_retrieval.py` directly from Python.
+`graphrag_construction.py` holds the ontology and builds the graph.
+`graphrag_retrieval.py` provides the agentic retrieval tools and runs retrieval
 and answering. Dataset inputs shared by all methods live in `dataset.py`;
 evaluation helpers live in `evals/`. Save experiment results under local-only
 `runs/` (gitignored).

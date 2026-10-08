@@ -53,13 +53,7 @@ datasets/finer139/*
 datasets/refind/*
 !datasets/refind/README.md
 state/
-.deepeval/
 
-# Testing
-.pytest_cache/
-.ruff_cache/
-.coverage
-htmlcov/
 
 # Gemini CLI
 .gemini/
@@ -82,17 +76,9 @@ tmp/
 # Security Reports
 security_best_practices_report.md
 
-# Local Milvus config stub
-user.yaml
-volumes/
-
 # Generated or local-only documentation
 docs/research/generated/
 docs/research/_scratch/
-
-# Test artifacts
-*.db
-/test_*/
 
 # Command Code
 .commandcode/
@@ -103,6 +89,3 @@ datasets/refind/*.jsonl
 
 # Riptide artifacts (cloud-synced)
 .humanlayer/tasks/
-
-# Independent upstream checkout
-/hipporag/

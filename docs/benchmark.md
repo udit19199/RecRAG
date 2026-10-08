@@ -1,19 +1,104 @@
+# Paper comparison protocol
+
+The implementation reference is [RAGvsGraphRAG at commit
+`d2a0c0c0deb0903d60338d3c416ccd6f9544267c`](https://github.com/haoyuhan1/RAGvsGraphRAG/tree/d2a0c0c0deb0903d60338d3c416ccd6f9544267c).
+The ACM PDF returned HTTP 403 during this implementation. The authors'
+[public paper, arXiv v3](https://arxiv.org/html/2502.11371v3), provides the
+method and dataset protocol.
+
+| Dataset | Index scope | Answers and scores |
+| --- | --- | --- |
+| MultiHop-RAG | One index over the complete news corpus for every question | Short answers, binary answers, temporal answers, and insufficient-information answers. Preserve `inference_query`, `comparison_query`, `temporal_query`, and `null_query`; report overlap accuracy for each type. |
+| Natural Questions | One index for each source Wikipedia document, reused by its questions | Answer aliases with precision, recall, F1, and exact match. |
+| NovelQA | One index for each novel, reused by its questions | Multiple-choice letters. Report exact letter accuracy when gold labels are supplied. Preserve aspect and complexity. |
+
+These scopes apply to dense RAG, HippoRAG2, RAPTOR, and RecRAG's ontology
+agentic GraphRAG comparison. The official-source loaders remain the default.
+Indexes are keyed by source chunks, method, model settings, and algorithm
+version, so later question ranges reuse an index without mixing models.
+
+The authors' repository does not publish `dataset/NQ.json`,
+`dataset/NovelQA_contexts.json`, `dataset/NovelQA_qa.json`, `utils.JSONReader`,
+or its metadata extractors. Their precise sample and undocumented context
+serialization cannot be recovered from that repository. RecRAG's default NQ
+validation records and NovelQA public-domain novels are therefore alternative
+inputs, not the authors' exact processed collection. Full NovelQA labels
+remain unavailable from the public full-set inputs.
+
+If you obtain the processed files, keep them inside the repository under an
+ignored dataset directory and pass `--paper-data datasets/paper`:
+
+```sh
+.venv/bin/python -m benchmark --method raptor --dataset natural_questions \
+  --paper-data datasets/paper --records 10
+```
+
+The adapter accepts these explicit formats:
+
+- `corpus.json` and `MultiHopRAG.json` use the official MultiHop-RAG fields.
+- `NQ.json` is a list of documents with `questions` and `answer` arrays of equal
+  length, and source text under `context`, `content`, or `text`. Each answer can
+  be a string or a list of aliases. Context can be text or a list of passages.
+- `NovelQA_contexts.json` maps book IDs or book filenames to text or passage
+  lists. `NovelQA_qa.json` maps book IDs to question IDs, each with `Question`,
+  `Options`, optional `Gold`, `Aspect`, and `Complexity`. Gold letters enable
+  scores. Unsupported context shapes fail with a message rather than silently
+  indexing an empty or wrong document.
+
+The NQ and NovelQA context formats above are RecRAG's documented import
+contract. They cannot be asserted to match the missing upstream reader until
+real processed inputs are available. Gold labels and question options are
+never used for indexing.
+
+MultiHop-RAG reads the official raw `MultiHopRAG.json` and `corpus.json`
+files directly, preserving query order and the complete shared news corpus.
+The reference uses these filenames too. Its unpublished `JSONReader` and
+`NewsExtractor` still prevent verification of exact text and metadata formatting.
+RecRAG includes title, source, and publication date in each news page title.
+
+MultiHop-RAG query types stay attached to each record and result. The loader
+rejects labels outside the dataset's four published values so per-type results
+cannot silently drop or misclassify a query.
+
+RAPTOR's algorithm comes from [raptor.py](https://github.com/haoyuhan1/RAGvsGraphRAG/blob/d2a0c0c0deb0903d60338d3c416ccd6f9544267c/raptor.py).
+Reranking and IRCoT follow the [retrieval scripts](https://github.com/haoyuhan1/RAGvsGraphRAG/blob/d2a0c0c0deb0903d60338d3c416ccd6f9544267c/retrieval.py).
+See the [run instructions](../README.md#raptor-reranking-ircot-and-question-cost)
+for algorithm limits and known deviations. All methods use the configured
+GPT-6 Luna and embedding model, so compare their results within RecRAG.
+The paper's model choices and missing evaluation helper prevent exact score
+reproduction. NovelQA exact match follows the upstream first-letter rule. The summary also
+groups accuracy by aspect and complexity, and preserves both on every record.
+
+The runner records retrieval and answer time and estimates question API cost
+from API-reported usage. [Official OpenAI prices](https://developers.openai.com/api/docs/pricing)
+were checked on 2026-10-04 and stored in `config.toml`. Indexing, evaluation,
+and local machine costs are excluded. Both cached and cold indexes use the same
+question-only cost boundary. The HippoRAG Responses adapter requests JSON
+objects for extraction because the upstream NER list instruction conflicts with
+its object parser. Its cache identity includes this adapter version. No new dataset benchmark results are claimed by
+this implementation. Method routing remains a separate research comparison.
+
 # Dataset choices and source records
 
-RecRAG currently loads two question-answer datasets. A **record** is one
-dataset item. It contains one question, its answer, and the text supplied with
-that item. A previous BrowseComp-Plus trial is retained below as historical
-measurement context; it is no longer an active dataset adapter.
+RecRAG currently supports HotpotQA, MultiHop-RAG, Natural Questions, and
+NovelQA. A **record** is one dataset item. It contains one question and the text
+supplied with that item. Public NovelQA files do not include gold answers, so
+its full-set runs have no answer scores. The publisher provides a separate
+labeled demonstration and requires a request for full labels. A previous
+BrowseComp-Plus trial is retained below as historical measurement context; it
+is no longer an active adapter.
 
 The datasets store that text in different shapes:
 
 | Dataset | Text stored in each record |
 | --- | --- |
 | HotpotQA | Sentences grouped under page titles |
-| 2WikiMultiHopQA | Paragraphs grouped under page titles |
+| MultiHop-RAG | News documents from a shared 609-document corpus |
+| Natural Questions | The full Wikipedia article attached to the question |
+| NovelQA | The public-domain novel attached to its questions |
 
-**Comparison caveat:** HotpotQA and 2WikiMultiHopQA provide question-specific
-text, so their results should be compared within each dataset.
+Compare results within each dataset. The sources use different document
+collection sizes and answer formats.
 
 The examples below show the dataset formats in a readable form. The exact
 records used for the measured run are listed later.
@@ -76,7 +161,7 @@ people are described as American, so the answer is "yes".
 Here, `context` only groups the text by page. The `evidences` field stores the
 same two links in a compact form: film → director, then director → mother.
 
-# API cost and benchmark results
+# Historical API cost and benchmark results
 
 The two completed datasets each use one record in this pilot. The run was
 intended to estimate token use and cost, not to select a benchmark or rank
@@ -207,7 +292,7 @@ triple sets, so exact graph precision, recall, and F1 are not computed.
 | 2WikiMultiHopQA | Standard | 0.5 | 0.6 | 0.7 |
 | 2WikiMultiHopQA | Ontology-guided | 0.5 | 0.7 | 0.6 |
 
-## Not yet measured
+## Gaps in that historical pilot
 
 - Retrieval and end-to-end latency.
 - Embedding token usage and vector-storage cost.

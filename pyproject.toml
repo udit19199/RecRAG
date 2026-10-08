@@ -8,41 +8,20 @@ dependencies = [
     "pydantic>=2.9.0",
     "langchain>=1.0",
     "langchain-openai>=0.3.26",
-    "langchain-neo4j>=0.1",
     "neo4j-graphrag>=1.19,<2",
     "python-dotenv>=1.2.1",
     "streamlit>=1.63.0",
-    "typesafe-sdk>=0.6.0",
 ]
 
 [tool.setuptools]
-py-modules = ["dataset"]
+py-modules = ["dataset", "graphrag_construction", "graphrag_retrieval", "hipporag_retrieval", "rag_retrieval", "raptor_retrieval", "benchmark", "cost"]
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["baselines*", "graphrag*", "evals*"]
+include = ["evals*"]
 namespaces = true
 
-[dependency-groups]
-dev = [
-    "ruff>=0.16.7,<0.17.0",
-]
-
-[tool.ruff]
-target-version = "py312"
-line-length = 88
-
-[tool.ruff.lint]
-select = ["E4", "E7", "E9", "F", "I"]
-
 [tool.pyright]
-include = ["baselines", "dataset.py", "graphrag", "evals"]
+include = ["benchmark.py", "hipporag_retrieval.py", "rag_retrieval.py", "raptor_retrieval.py", "cost.py", "dataset.py", "graphrag_construction.py", "graphrag_retrieval.py", "evals"]
 extraPaths = ["."]
 typeCheckingMode = "basic"
-
-[project.optional-dependencies]
-# Optional dependencies for evaluation and the NLP method.
-experiments = [
-    "deepeval>=4.2",
-    "spacy>=3.7.0",
-]
