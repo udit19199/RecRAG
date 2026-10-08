@@ -141,8 +141,9 @@ graph TD
     end
 ```
 
-The active construction code creates a Neo4j database for each run, record, and
-construction method. Each build stores chunk vectors in Neo4j. The
+The active construction path creates a Neo4j database per run and source
+corpus. HotpotQA questions share the loaded corpus; other datasets use each
+record's source pages. Each database stores chunk vectors in Neo4j. The
 `chunk_embeddings` index supports the agent's vector tool.
 
 Neo4j provides both vector search and graph context for agentic retrieval.
