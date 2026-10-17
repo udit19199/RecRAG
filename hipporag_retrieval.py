@@ -128,11 +128,12 @@ class ConfiguredEmbeddings(OpenAIEmbeddingModel):
         )
 
     def encode(self, texts):
+        texts = [text.replace("\n", " ") for text in texts]
+        texts = [text if text != "" else " " for text in texts]
         response = self.client.embeddings.create(
             model=self.request_model_name,
             input=texts,
             dimensions=self.dimensions,
-            encoding_format="float",
         )
         rows = sorted(response.data, key=lambda item: item.index)
         if [row.index for row in rows] != list(range(len(texts))):
@@ -156,6 +157,8 @@ def setup(settings: Settings, index_dir: Path, dataset: str):
         embedding_provider="openai",
         embedding_request_timeout=settings.embedding.timeout,
         max_retry_attempts=0,
+        # Match the safe 512-input batch used by the other embedding paths.
+        embedding_batch_size=512,
         temperature=None,
         max_new_tokens=settings.hipporag.max_output_tokens,
         retrieval_top_k=10,
@@ -182,6 +185,9 @@ def retrieve(
     top_k: int,
 ) -> RetrievedContext:
     started = perf_counter()
+    index_marker = Path(config.save_dir) / "index.complete"
+    should_index = corpus_key not in indexed_corpora and not index_marker.exists()
+    config.force_index_from_scratch = should_index
     with HippoRAG(
         global_config=config,
         extraction_llm=llm,
@@ -189,11 +195,10 @@ def retrieve(
         embedding_model=embeddings,
         index_identity="recrag-paper-chunks256-overlap20-v1",
     ) as rag:
-        index_marker = Path(config.save_dir) / "index.complete"
-        should_index = corpus_key not in indexed_corpora and not index_marker.exists()
         if should_index:
             with indexing():
                 rag.index(docs=list(documents))
+            config.force_index_from_scratch = False
             index_marker.write_text(corpus_key)
         indexed_corpora.add(corpus_key)
         construction_seconds = perf_counter() - started if should_index else 0.0

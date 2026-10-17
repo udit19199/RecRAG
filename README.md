@@ -32,9 +32,25 @@ The app loads official validation/dev splits for these datasets on demand:
 NovelQA is available from its
 [gated Hugging Face dataset](https://huggingface.co/datasets/NovelQA/NovelQA).
 For HotpotQA, the loader uses
-`datasets/hotpotqa/hotpotqa_distractor_validation_first_1000.json` when present
-(the first 1,000 source-order rows of the `distractor` validation split);
-otherwise it loads the full split from Hugging Face.
+`datasets/hotpotqa/hotpotqa_distractor_validation_hard_bridge_1000_seed_42.json`
+when present. It contains 1,000 questions labeled `hard` and `bridge`, sampled
+with seed 42 from the full `distractor` validation split and kept in source
+order. Regenerate it with:
+
+```sh
+uv run --with datasets --with huggingface-hub \
+  python scripts/prepare_hotpotqa_hard_bridge_sample.py
+```
+
+Fetch the pinned MultiHop-RAG questions and all 609 corpus documents into the
+local-only `datasets/multihop_rag/` directory with:
+
+```sh
+uv run --with huggingface-hub python -m scripts.prepare_multihop_rag_data
+```
+
+If this file is absent, the loader uses an older local sample when present,
+then falls back to the full validation split.
 Install the loader dependencies, then select records in the app:
 
 ```sh
@@ -47,7 +63,10 @@ selects questions to answer; it does not limit the graph's source pages.
 
 HotpotQA loads the official `distractor` validation split. MultiHop-RAG loads
 the official raw `MultiHopRAG.json` queries and `corpus.json` news corpus,
-matching the filenames read by the reference implementation. Natural Questions loads
+matching the filenames read by the reference implementation. Keep local copies
+under `datasets/multihop_rag/`; the loader uses them when present and otherwise
+downloads the pinned dataset revision
+`71ac0d0bd1f951d2d6b70311f7d2ae404e1ffa82`. Natural Questions loads
 the official validation split (the original dev set). NovelQA loads
 public-domain books and question files after you accept the dataset's access
 terms and sign in to Hugging Face. The publisher keeps full-set answers and
@@ -161,13 +180,13 @@ scoring helper prevents exact score parity. Retrieved-token counts use
 `cl100k_base`; the paper does not specify its counting tokenizer.
 
 The paper's HotpotQA results use an unpublished random sample of 1,000 hard
-bridge questions. This runner uses the official validation split in record
-order (or its first 1,000 rows when the local sample is present), with the
-requested `--start` and `--records` range, so its sample is
-different and does not specifically select hard bridge questions. Each query
-searches unique context pages from the loaded validation rows. The run's
-`corpus.json` records the question range, page count, chunk count, and corpus
-hash. The paper's exact sample and processed files remain unavailable.
+bridge questions. RecRAG's local
+`hotpotqa_distractor_validation_hard_bridge_1000_seed_42.json` uses a
+reproducible sample from the official validation split. Its exact questions
+still differ from the paper's unpublished sample. Run with `--records 1000` to
+answer the full sample. Each query searches unique context pages across those
+1,000 rows. The run's `corpus.json` records the question range, page count,
+chunk count, and corpus hash.
 
 HotpotQA answer precision, recall, and F1 use the official evaluator's
 normalization, token overlap, and yes/no handling. The paper's evaluation code

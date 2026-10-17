@@ -17,13 +17,17 @@ from pydantic import PrivateAttr
 from benchmark import RetrievedContext, Settings, Usage
 from cost import MeteredClient, indexing
 
+_cached_index_dir: Path | None = None
+_cached_storage_context: StorageContext | None = None
+
 
 class LlamaEmbedding(BaseEmbedding):
     _adapter: OpenAI = PrivateAttr()
     _dimensions: int = PrivateAttr()
 
     def __init__(self, adapter: OpenAI, model_name: str, dimensions: int) -> None:
-        super().__init__(model_name=model_name)
+        # 512 256-token chunks stay below the API's 300,000-token request limit.
+        super().__init__(model_name=model_name, embed_batch_size=512)
         self._adapter = adapter
         self._dimensions = dimensions
 
@@ -35,7 +39,6 @@ class LlamaEmbedding(BaseEmbedding):
             model=self.model_name,
             input=texts,
             dimensions=self._dimensions,
-            encoding_format="float",
         )
         rows = sorted(response.data, key=lambda item: item.index)
         if [row.index for row in rows] != list(range(len(texts))):
@@ -114,12 +117,21 @@ def retrieve(
     embeddings: LlamaEmbedding,
     top_k: int,
 ) -> RetrievedContext:
+    global _cached_index_dir, _cached_storage_context
+
     started = perf_counter()
     embedding = embeddings
-    if (index_dir / "index_store.json").exists():
+    if _cached_index_dir == index_dir and _cached_storage_context is not None:
         vector_index = load_index_from_storage(
-            StorageContext.from_defaults(persist_dir=str(index_dir)),
-            embed_model=embedding,
+            _cached_storage_context, embed_model=embedding
+        )
+        construction_seconds = 0.0
+    elif (index_dir / "index_store.json").exists():
+        storage_context = StorageContext.from_defaults(persist_dir=str(index_dir))
+        _cached_index_dir = index_dir
+        _cached_storage_context = storage_context
+        vector_index = load_index_from_storage(
+            storage_context, embed_model=embedding
         )
         construction_seconds = 0.0
     else:
@@ -129,6 +141,8 @@ def retrieve(
                 embed_model=embedding,
             )
         vector_index.storage_context.persist(persist_dir=str(index_dir))
+        _cached_index_dir = index_dir
+        _cached_storage_context = vector_index.storage_context
         construction_seconds = perf_counter() - started
 
     started = perf_counter()

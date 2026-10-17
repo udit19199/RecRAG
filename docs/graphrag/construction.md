@@ -19,6 +19,11 @@ flowchart LR
 
 ## One example
 
+Repeated extracted properties retain their distinct values. When a property
+list mixes types, the adapter converts its values to text because Neo4j requires
+each stored property array to contain one type. This conversion also applies to
+cached extraction responses and does not change the extraction prompt.
+
 The question is used later for retrieval and evaluation. Construction receives
 only the source pages.
 
@@ -147,6 +152,20 @@ record's source pages. Each database stores chunk vectors in Neo4j. The
 `chunk_embeddings` index supports the agent's vector tool.
 
 Neo4j provides both vector search and graph context for agentic retrieval.
+
+## Construction requests and restarts
+
+The pipeline embeds all chunks before extracting entities. Its embedding stage
+allows five concurrent requests. RecRAG runs the synchronous OpenAI embedding
+adapter in worker threads because the upstream adapter's async default blocks
+the event loop and otherwise sends these requests one at a time.
+
+Successful construction generation calls are cached locally under
+`runs/graphrag/construction-cache/`. Restarting a failed build can reuse those
+responses. Embeddings are regenerated, and the pipeline writes the graph only
+after all chunks finish extraction. A dropped API connection still fails the
+build rather than silently omitting chunks. Question-time generation does not
+use this construction cache.
 
 ## Related docs
 

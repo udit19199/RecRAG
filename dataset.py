@@ -21,6 +21,7 @@ MULTIHOP_RAG_QUERY_TYPES = (
     "temporal_query",
     "null_query",
 )
+MULTIHOP_RAG_REVISION = "71ac0d0bd1f951d2d6b70311f7d2ae404e1ffa82"
 
 
 @dataclass(slots=True)
@@ -86,6 +87,7 @@ def load_hotpotqa_corpus() -> list[SourcePage]:
 def _hotpot_table():
     dataset_dir = Path(__file__).parent / "datasets/hotpotqa"
     for filename in (
+        "hotpotqa_distractor_validation_hard_bridge_1000_seed_42.json",
         "hotpotqa_distractor_validation_sample_10.json",
         "hotpotqa_distractor_validation_first_1000.json",
     ):
@@ -160,23 +162,15 @@ def _multihop_query_type(value: str) -> str:
 
 @cache
 def _multihop_queries():
-    from huggingface_hub import hf_hub_download
-
     # Read the same raw query file as the reference, preserving its row order.
-    path = hf_hub_download(
-        repo_id="yixuantt/MultiHopRAG", repo_type="dataset", filename="MultiHopRAG.json"
-    )
-    return json.loads(Path(path).read_text(encoding="utf-8"))
+    path = _multihop_file("MultiHopRAG.json")
+    return json.loads(path.read_text(encoding="utf-8"))
 
 
 @cache
 def _multihop_corpus() -> list[SourcePage]:
-    from huggingface_hub import hf_hub_download
-
-    path = hf_hub_download(
-        repo_id="yixuantt/MultiHopRAG", repo_type="dataset", filename="corpus.json"
-    )
-    rows = json.loads(Path(path).read_text(encoding="utf-8"))
+    path = _multihop_file("corpus.json")
+    rows = json.loads(path.read_text(encoding="utf-8"))
     return [
         SourcePage(
             title=f"{row['title']} ({row['source']}, {row['published_at']})",
@@ -184,6 +178,23 @@ def _multihop_corpus() -> list[SourcePage]:
         )
         for row in rows
     ]
+
+
+def _multihop_file(filename: str) -> Path:
+    local_path = Path(__file__).parent / "datasets/multihop_rag" / filename
+    if local_path.is_file():
+        return local_path
+
+    from huggingface_hub import hf_hub_download
+
+    return Path(
+        hf_hub_download(
+            repo_id="yixuantt/MultiHopRAG",
+            repo_type="dataset",
+            filename=filename,
+            revision=MULTIHOP_RAG_REVISION,
+        )
+    )
 
 
 @dataclass(slots=True, frozen=True)

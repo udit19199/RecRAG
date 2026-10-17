@@ -5,9 +5,11 @@ from __future__ import annotations
 import asyncio
 import json
 import os
+import sqlite3
 import tomllib
-from collections.abc import Sequence
+from collections.abc import Iterator, Sequence
 from contextlib import contextmanager
+from hashlib import sha256
 from pathlib import Path
 from time import perf_counter
 from types import SimpleNamespace
@@ -17,16 +19,18 @@ import neo4j
 from dotenv import load_dotenv
 from langchain.agents import create_agent
 from langchain.agents.middleware import ModelCallLimitMiddleware
+from langchain_core.caches import BaseCache
 from langchain_core.language_models import BaseChatModel
 from langchain_core.language_models.base import LanguageModelInput
 from langchain_core.messages import BaseMessage, ToolMessage
-from langchain_core.tools import StructuredTool
+from langchain_core.outputs import ChatGeneration, Generation
+from langchain_core.tools import StructuredTool, ToolException
 from langchain_openai import ChatOpenAI
 from neo4j import Driver, GraphDatabase
 from neo4j_graphrag.components.types import Neo4jGraph, PropertyValue
 from neo4j_graphrag.embeddings import OpenAIEmbeddings
 from neo4j_graphrag.embeddings.base import Embedder
-from neo4j_graphrag.exceptions import LLMGenerationError
+from neo4j_graphrag.exceptions import LLMGenerationError, Text2CypherRetrievalError
 from neo4j_graphrag.generation import GraphRAG as Neo4jGraphRAG
 from neo4j_graphrag.llm import LLMBase
 from neo4j_graphrag.llm.types import LLMResponse, ToolCall, ToolCallResponse
@@ -53,6 +57,74 @@ from dataset import SourcePage
 from graphrag_construction import rebuild_graph
 
 RETRIEVAL_TOP_K = 5
+
+
+class GraphRAGEmbeddings(OpenAIEmbeddings):
+    async def async_embed_query(self, text: str) -> list[float]:
+        # The upstream async default calls synchronous HTTP on the event loop,
+        # serializing the pipeline's otherwise concurrent chunk embedding stage.
+        return await asyncio.to_thread(self.embed_query, text)
+
+
+class SQLiteGenerationCache(BaseCache):
+    """Persist successful model calls so failed graph builds can resume."""
+
+    def __init__(self, path: Path) -> None:
+        self._path = path
+        path.parent.mkdir(parents=True, exist_ok=True)
+        with self._connection() as connection:
+            connection.execute("PRAGMA journal_mode=WAL")
+            connection.execute(
+                "CREATE TABLE IF NOT EXISTS chat_generations ("
+                "key TEXT PRIMARY KEY, result TEXT NOT NULL)"
+            )
+
+    @contextmanager
+    def _connection(self) -> Iterator[sqlite3.Connection]:
+        connection = sqlite3.connect(self._path, timeout=30)
+        connection.row_factory = sqlite3.Row
+        try:
+            with connection:
+                yield connection
+        finally:
+            connection.close()
+
+    @staticmethod
+    def _key(prompt: str, llm_string: str) -> str:
+        return sha256(f"{llm_string}\0{prompt}".encode()).hexdigest()
+
+    def lookup(self, prompt: str, llm_string: str) -> Sequence[Generation] | None:
+        with self._connection() as connection:
+            row = connection.execute(
+                "SELECT result FROM chat_generations WHERE key = ?",
+                [self._key(prompt, llm_string)],
+            ).fetchone()
+        return (
+            [
+                ChatGeneration.model_validate_json(value)
+                for value in json.loads(row["result"])
+            ]
+            if row
+            else None
+        )
+
+    def update(
+        self, prompt: str, llm_string: str, return_val: Sequence[Generation]
+    ) -> None:
+        with self._connection() as connection:
+            connection.execute(
+                "INSERT OR REPLACE INTO chat_generations (key, result) VALUES (?, ?)",
+                [
+                    self._key(prompt, llm_string),
+                    # Pydantic serializes structured parsed responses as JSON
+                    # objects, which LangChain's parser accepts on cache hits.
+                    json.dumps([value.model_dump_json() for value in return_val]),
+                ],
+            )
+
+    def clear(self, **kwargs: Any) -> None:
+        with self._connection() as connection:
+            connection.execute("DELETE FROM chat_generations")
 
 
 VECTOR_RETRIEVAL_QUERY = """
@@ -105,7 +177,26 @@ def _format_tool_record(record: neo4j.Record) -> RetrieverResultItem:
 
 def _langchain_tool(tool: Tool) -> StructuredTool:
     def execute(**kwargs: Any) -> tuple[str, list[neo4j.Record]]:
-        result = tool.execute(**kwargs)
+        try:
+            result = tool.execute(**kwargs)
+        except (
+            neo4j.exceptions.CypherTypeError,
+            neo4j.exceptions.CypherSyntaxError,
+        ) as exc:
+            # Query mistakes are feedback for the bounded retrieval agent, not
+            # reasons to discard the completed corpus graph or retry HTTP calls.
+            raise ToolException(f"Cypher query rejected: {exc.message}") from exc
+        except Text2CypherRetrievalError as exc:
+            cause = exc.__cause__
+            if not isinstance(
+                cause,
+                (
+                    neo4j.exceptions.CypherTypeError,
+                    neo4j.exceptions.CypherSyntaxError,
+                ),
+            ):
+                raise
+            raise ToolException(f"Cypher query rejected: {cause}") from exc
         records = [
             neo4j.Record(
                 {
@@ -124,6 +215,7 @@ def _langchain_tool(tool: Tool) -> StructuredTool:
         description=tool.get_description(),
         args_schema=tool.get_parameters(),
         response_format="content_and_artifact",
+        handle_tool_error=True,
     )
 
 
@@ -170,6 +262,15 @@ def build_agentic_retriever(
         driver=driver,
         llm=llm,
         neo4j_schema=neo4j_schema,
+        examples=[
+            (
+                "Name properties can be a scalar or a list of aliases. Match each "
+                "alias separately rather than passing a list to string functions. "
+                "Example: MATCH (n:__Entity__) WHERE any(alias IN CASE WHEN "
+                "valueType(n.name) STARTS WITH 'LIST' THEN n.name ELSE [n.name] END "
+                "WHERE toLower(toString(alias)) CONTAINS 'example name') RETURN n LIMIT 10"
+            )
+        ],
         neo4j_database=database,
         result_formatter=format_retrieval_record,
     )
@@ -181,6 +282,10 @@ def build_agentic_retriever(
         result_formatter=format_retrieval_record,
         neo4j_database=database,
     )
+    # neo4j-graphrag 1.9.x populates `_embedding_node_property` from SHOW
+    # VECTOR INDEXES but its filtered-search path reads `_node_embedding_property`.
+    # Keep both names aligned so an agent-supplied filter uses the index metadata.
+    vector._node_embedding_property = vector._embedding_node_property
     return AgenticToolsRetriever(
         driver=driver,
         llm=llm,
@@ -369,6 +474,14 @@ class GraphRAGChatLLM(LLMBase):
                         setattr(properties, prop.key, values)
                     else:
                         setattr(properties, prop.key, prop.value)
+                for key, value in vars(properties).items():
+                    if (
+                        isinstance(value, list)
+                        and len({type(item) for item in value}) > 1
+                    ):
+                        # Neo4j property arrays require one type. Keep every fact
+                        # when repeated extracted properties mix text and numbers.
+                        setattr(properties, key, [str(item) for item in value])
                 element.properties = properties
             return Neo4jGraph.model_validate_json(json.dumps(graph, default=vars))
         model = (
@@ -487,7 +600,13 @@ class GraphRAG:
         load_dotenv(dotenv_path=project_root / ".env", override=True)
         path = config_path or project_root / "config.toml"
         config = tomllib.loads(path.read_text())
-        username, password = os.environ["NEO4J_AUTH"].split("/", 1)
+        auth = os.environ["NEO4J_AUTH"]
+        if "/" in auth:
+            username = auth.split("/", 1)[0]
+            password = auth.split("/", 1)[1]
+        else:
+            username = "neo4j"
+            password = auth
         driver = GraphDatabase.driver(
             os.environ["NEO4J_URI"],
             auth=(username, password),
@@ -511,7 +630,7 @@ class GraphRAG:
             return cls(
                 driver=driver,
                 llm=GraphRAGChatLLM(chat_model),
-                embedder=OpenAIEmbeddings(
+                embedder=GraphRAGEmbeddings(
                     model=config["embedding"]["model"],
                     timeout=config["embedding"]["timeout"],
                     max_retries=0,
@@ -533,14 +652,26 @@ class GraphRAG:
         *,
         database: str,
     ) -> None:
-        rebuild_graph(
-            pages,
-            driver=self._driver,
-            llm=self._llm,
-            embedder=self._embedder,
-            database=database,
-            embedding_dimensions=self._embedding_dimensions,
+        model = self._answer_llm
+        original_cache = model.cache
+        model.cache = SQLiteGenerationCache(
+            Path(__file__).resolve().parent
+            / "runs"
+            / "graphrag"
+            / "construction-cache"
+            / f"{database}.sqlite"
         )
+        try:
+            rebuild_graph(
+                pages,
+                driver=self._driver,
+                llm=self._llm,
+                embedder=self._embedder,
+                database=database,
+                embedding_dimensions=self._embedding_dimensions,
+            )
+        finally:
+            model.cache = original_cache
 
     def answer(
         self,

@@ -32,6 +32,10 @@ class Tree(BaseModel):
     nodes: list[TreeNode]
 
 
+_cached_tree_path: Path | None = None
+_cached_tree: Tree | None = None
+
+
 def soft_clusters(vectors: np.ndarray) -> list[list[int]]:
     if len(vectors) == 1:
         return [[0]]
@@ -110,10 +114,15 @@ def build_tree(
 ) -> Tree:
     if not documents:
         raise ValueError("RAPTOR needs nonempty source documents.")
+    # Batch the same vectors to avoid one embedding request per source chunk.
     tree = Tree(
         nodes=[
-            TreeNode(text=text, embedding=embeddings.get_text_embedding(text))
-            for text in documents
+            TreeNode(text=text, embedding=embedding)
+            for text, embedding in zip(
+                documents,
+                embeddings.get_text_embedding_batch(documents),
+                strict=True,
+            )
         ]
     )
     current = list(range(len(tree.nodes)))
@@ -121,6 +130,8 @@ def build_tree(
         if len(current) <= 11:
             break
         parents: list[int] = []
+        summaries: list[str] = []
+        children_by_summary: list[list[int]] = []
         for cluster in bounded_clusters([tree.nodes[index] for index in current]):
             children = [current[index] for index in cluster]
             context = "\n\n".join(
@@ -140,11 +151,17 @@ def build_tree(
                     ).model_dump(),
                 ]
             )[0]
+            summaries.append(summary)
+            children_by_summary.append(children)
+        summary_embeddings = embeddings.get_text_embedding_batch(summaries)
+        for summary, children, embedding in zip(
+            summaries, children_by_summary, summary_embeddings, strict=True
+        ):
             parents.append(len(tree.nodes))
             tree.nodes.append(
                 TreeNode(
                     text=summary,
-                    embedding=embeddings.get_text_embedding(summary),
+                    embedding=embedding,
                     children=children,
                     layer=layer,
                 )
@@ -167,15 +184,24 @@ def retrieve(
     llm: ResponsesLLM,
     top_k: int,
 ) -> RetrievedContext:
+    global _cached_tree_path, _cached_tree
+
     started = perf_counter()
     tree_path = index_dir / "raptor_tree.json"
     with indexing():
         if tree_path.exists():
-            tree = Tree.model_validate_json(tree_path.read_text())
+            if _cached_tree_path == tree_path and _cached_tree is not None:
+                tree = _cached_tree
+            else:
+                tree = Tree.model_validate_json(tree_path.read_text())
+                _cached_tree_path = tree_path
+                _cached_tree = tree
             construction_seconds = 0.0
         else:
             tree = build_tree(documents, embeddings, llm)
             tree_path.write_text(tree.model_dump_json())
+            _cached_tree_path = tree_path
+            _cached_tree = tree
             construction_seconds = perf_counter() - started
     started = perf_counter()
     query = np.asarray(embeddings.get_query_embedding(question))
