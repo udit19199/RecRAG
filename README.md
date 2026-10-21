@@ -89,11 +89,10 @@ Responses API.
 | HippoRAG2 | Embeds the same chunks and extracts entities and facts into its own local graph. | Its graph retrieval links question entities and facts to relevant chunks. |
 | GraphRAG | Uses the ontology to build a graph and chunk vector index in Neo4j. | An agent chooses Neo4j vector search or a read-only text-to-Cypher query, then passes the evidence to the answer model. |
 
-Normal RAG and HippoRAG2 use the shared baseline runner below. They use
-256-token chunks with 20-token overlap and retrieve ten chunks. GraphRAG is the
-app's separate research method: it currently uses 1,000-character chunks with
-100-character overlap and returns at most five items. Keep these differences
-with the results when comparing methods.
+All four baseline methods use the same title-prefixed `SentenceSplitter`
+chunks, with 256 tokens per chunk and 20 tokens of overlap. GraphRAG writes
+those exact chunks to Neo4j and returns at most five items. Normal RAG,
+HippoRAG2, and RAPTOR return ten items by default.
 
 ## Comparison runner
 
@@ -240,11 +239,11 @@ Use the existing separate environment for `--method hipporag`. Install
 `sentence-transformers` there if you use `--rerank`. GraphRAG requires Neo4j
 Desktop with APOC. The command runner caches one graph for each corpus and
 configuration. It uses the existing ontology and agentic Neo4j tools, then
-passes their evidence to the shared answer step. Its chunks remain 1,000
-characters with 100-character overlap. Baseline chunks are 256 tokens with
-20-token overlap. Normal retrieval returns ten items by default; reranking
-searches 20 candidates before keeping ten. The app keeps its existing five-item
-limit.
+passes their evidence to the shared answer step. GraphRAG uses the same
+title-prefixed 256-token `SentenceSplitter` chunks with 20-token overlap as the
+other benchmark methods. Normal retrieval returns ten items by default;
+reranking searches 20 candidates before keeping ten. The app keeps its
+existing five-item limit.
 
 `--rerank` retrieves 20 candidates, scores them with the paper's
 `BAAI/bge-reranker-large` cross-encoder, and keeps the top ten. Change those

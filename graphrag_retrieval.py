@@ -43,7 +43,7 @@ from neo4j_graphrag.retrievers import (
 from neo4j_graphrag.schema import get_schema
 from neo4j_graphrag.tool import Tool
 from neo4j_graphrag.types import LLMMessage, RawSearchResult, RetrieverResultItem
-from pydantic import BaseModel
+from pydantic import BaseModel, SecretStr
 
 from cost import (
     MeteredAsyncClient,
@@ -316,8 +316,8 @@ def answer_question(
     driver: Driver,
     database: str,
     llm: LLMBase,
+    agent_llm: BaseChatModel,
     embedder: Embedder,
-    answer_llm: BaseChatModel,
 ):
     neo4j_schema = get_schema(driver, database=database)
     retriever = build_agentic_retriever(
@@ -325,7 +325,7 @@ def answer_question(
         llm=llm,
         embedder=embedder,
         database=database,
-        agent_llm=answer_llm,
+        agent_llm=agent_llm,
         neo4j_schema=neo4j_schema,
     )
     return Neo4jGraphRAG(retriever, llm).search(
@@ -450,9 +450,17 @@ class GraphRAGChatLLM(LLMBase):
                     ),
                 )
             )
-            response = self._model.with_structured_output(
-                _ExtractedGraph, method="json_schema", strict=True
-            ).invoke(cast(LanguageModelInput, messages), **kwargs)
+            local_chat = bool(os.environ.get("RECRAG_CHAT_BASE_URL"))
+            structured = (
+                self._model.with_structured_output(
+                    _ExtractedGraph, method="function_calling"
+                )
+                if local_chat
+                else self._model.with_structured_output(
+                    _ExtractedGraph, method="json_schema", strict=True
+                )
+            )
+            response = structured.invoke(cast(LanguageModelInput, messages), **kwargs)
             graph = json.loads(
                 _ExtractedGraph.model_validate(response).model_dump_json(),
                 object_hook=lambda value: SimpleNamespace(**value),
@@ -581,6 +589,8 @@ class GraphRAG:
         *,
         driver: Driver,
         llm: LLMBase,
+        construction_llm: GraphRAGChatLLM,
+        agent_llm: BaseChatModel,
         embedder: Embedder,
         answer_llm,
         embedding_dimensions: int,
@@ -588,6 +598,8 @@ class GraphRAG:
     ) -> None:
         self._driver = driver
         self._llm = llm
+        self._construction_llm = construction_llm
+        self._agent_llm = agent_llm
         self._embedder = embedder
         self._answer_llm = answer_llm
         self._embedding_dimensions = embedding_dimensions
@@ -598,7 +610,9 @@ class GraphRAG:
     def from_config(cls, config_path: Path | None = None) -> GraphRAG:
         project_root = Path(__file__).resolve().parent
         load_dotenv(dotenv_path=project_root / ".env", override=True)
-        path = config_path or project_root / "config.toml"
+        path = config_path or Path(
+            os.environ.get("RECRAG_CONFIG", project_root / "config.toml")
+        )
         config = tomllib.loads(path.read_text())
         auth = os.environ["NEO4J_AUTH"]
         if "/" in auth:
@@ -611,32 +625,73 @@ class GraphRAG:
             os.environ["NEO4J_URI"],
             auth=(username, password),
         )
-        try:
-            chat_model = ChatOpenAI(
-                model=config["llm"].get("model", DEFAULT_LLM_MODEL),
+
+        def chat_model(model_name: str) -> ChatOpenAI:
+            local_chat = bool(os.environ.get("RECRAG_CHAT_BASE_URL")) and (
+                model_name == config["llm"].get("model", DEFAULT_LLM_MODEL)
+            )
+            return ChatOpenAI(
+                model=model_name,
                 timeout=config["llm"]["timeout"],
-                use_responses_api=True,
+                base_url=os.environ.get("RECRAG_CHAT_BASE_URL") if local_chat else None,
+                api_key=(SecretStr("ollama") if local_chat else None),
+                use_responses_api=not local_chat,
+                model_kwargs=(
+                    {
+                        "extra_body": {
+                            "options": {
+                                "num_ctx": int(
+                                    os.environ.get("RECRAG_CONTEXT", "32768")
+                                )
+                            }
+                        }
+                    }
+                    if local_chat
+                    else {}
+                ),
                 streaming=False,
                 disable_streaming=True,
                 max_retries=0,
                 http_client=MeteredClient(timeout=config["llm"]["timeout"]),
                 http_async_client=MeteredAsyncClient(timeout=config["llm"]["timeout"]),
-                reasoning={
-                    "effort": config["llm"].get(
-                        "reasoning_effort", DEFAULT_REASONING_EFFORT
-                    )
-                },
+                reasoning=(
+                    {
+                        "effort": config["llm"].get(
+                            "reasoning_effort", DEFAULT_REASONING_EFFORT
+                        )
+                    }
+                    if not local_chat
+                    and model_name == config["llm"].get("model", DEFAULT_LLM_MODEL)
+                    else None
+                ),
+            )
+
+        try:
+            answer_model = chat_model(config["llm"].get("model", DEFAULT_LLM_MODEL))
+            construction_model = config.get("graphrag", {}).get(
+                "construction_model", config["llm"].get("model", DEFAULT_LLM_MODEL)
+            )
+            agent_model = config.get("graphrag", {}).get(
+                "agent_model", construction_model
+            )
+            construction_chat = chat_model(construction_model)
+            agent_chat = (
+                construction_chat
+                if agent_model == construction_model
+                else chat_model(agent_model)
             )
             return cls(
                 driver=driver,
-                llm=GraphRAGChatLLM(chat_model),
+                llm=GraphRAGChatLLM(answer_model),
+                construction_llm=GraphRAGChatLLM(construction_chat),
+                agent_llm=agent_chat,
                 embedder=GraphRAGEmbeddings(
                     model=config["embedding"]["model"],
                     timeout=config["embedding"]["timeout"],
                     max_retries=0,
                     http_client=MeteredClient(timeout=config["embedding"]["timeout"]),
                 ),
-                answer_llm=chat_model,
+                answer_llm=answer_model,
                 embedding_dimensions=config["embedding"]["dimensions"],
                 pricing=Pricing.model_validate(config["pricing"])
                 if "pricing" in config
@@ -648,24 +703,30 @@ class GraphRAG:
 
     def construct(
         self,
-        pages: Sequence[SourcePage],
+        chunks: Sequence[str] | Sequence[SourcePage],
         *,
         database: str,
     ) -> None:
-        model = self._answer_llm
+        if chunks and isinstance(chunks[0], SourcePage):
+            from benchmark import split_pages
+
+            source_chunks = split_pages(cast(Sequence[SourcePage], chunks))
+        else:
+            source_chunks = cast(Sequence[str], chunks)
+        model = self._construction_llm._model
         original_cache = model.cache
+        cache_root = Path(__file__).resolve().parent / "runs"
+        namespace = os.environ.get("RECRAG_RUN_NAMESPACE")
+        if namespace:
+            cache_root /= namespace
         model.cache = SQLiteGenerationCache(
-            Path(__file__).resolve().parent
-            / "runs"
-            / "graphrag"
-            / "construction-cache"
-            / f"{database}.sqlite"
+            cache_root / "graphrag" / "construction-cache" / f"{database}.sqlite"
         )
         try:
             rebuild_graph(
-                pages,
+                source_chunks,
                 driver=self._driver,
-                llm=self._llm,
+                llm=self._construction_llm,
                 embedder=self._embedder,
                 database=database,
                 embedding_dimensions=self._embedding_dimensions,
@@ -687,7 +748,7 @@ class GraphRAG:
                     database=database,
                     llm=self._llm,
                     embedder=self._embedder,
-                    answer_llm=self._answer_llm,
+                    agent_llm=self._agent_llm,
                 )
             finally:
                 self.last_question_cost = question_cost
@@ -698,6 +759,18 @@ class GraphRAG:
             self._embedder.client.close()
         if isinstance(self._answer_llm, ChatOpenAI):
             self._answer_llm.root_client.close()
+        construction_model = self._construction_llm._model
+        if (
+            isinstance(construction_model, ChatOpenAI)
+            and construction_model is not self._answer_llm
+        ):
+            construction_model.root_client.close()
+        if (
+            isinstance(self._agent_llm, ChatOpenAI)
+            and self._agent_llm is not self._answer_llm
+            and self._agent_llm is not construction_model
+        ):
+            self._agent_llm.root_client.close()
 
 
 @contextmanager
@@ -715,7 +788,7 @@ def setup(settings, index_dir: Path, dataset: str):
 def retrieve(
     *,
     rag: GraphRAG,
-    pages: Sequence[SourcePage],
+    chunks: Sequence[str],
     question: str,
     index_dir: Path,
     top_k: int,
@@ -737,7 +810,7 @@ def retrieve(
         if marker.exists() and available:
             construction_seconds = 0.0
         else:
-            rag.construct(pages, database=database)
+            rag.construct(chunks, database=database)
             marker.write_text(database)
             construction_seconds = perf_counter() - started
     started = perf_counter()
@@ -746,7 +819,7 @@ def retrieve(
         rag._llm,
         rag._embedder,
         database,
-        rag._answer_llm,
+        rag._agent_llm,
         neo4j_schema=get_schema(rag._driver, database=database),
     )
     result = retriever.search(question, top_k=top_k)
