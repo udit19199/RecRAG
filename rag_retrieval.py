@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import asyncio
+import os
 from contextlib import contextmanager
 from pathlib import Path
 from time import perf_counter
@@ -26,8 +27,8 @@ class LlamaEmbedding(BaseEmbedding):
     _dimensions: int = PrivateAttr()
 
     def __init__(self, adapter: OpenAI, model_name: str, dimensions: int) -> None:
-        # 512 256-token chunks stay below the API's 300,000-token request limit.
-        super().__init__(model_name=model_name, embed_batch_size=512)
+        # Keep source and summary batches comfortably below the API request limit.
+        super().__init__(model_name=model_name, embed_batch_size=16)
         self._adapter = adapter
         self._dimensions = dimensions
 
@@ -35,11 +36,10 @@ class LlamaEmbedding(BaseEmbedding):
         return self._get_text_embeddings([text])[0]
 
     def _get_text_embeddings(self, texts: list[str]) -> list[list[float]]:
-        response = self._adapter.embeddings.create(
-            model=self.model_name,
-            input=texts,
-            dimensions=self._dimensions,
-        )
+        embedding_args = {"input": texts, "model": self.model_name}
+        if self.model_name.startswith("text-embedding-3-"):
+            embedding_args["dimensions"] = self._dimensions
+        response = self._adapter.embeddings.create(**embedding_args)
         rows = sorted(response.data, key=lambda item: item.index)
         if [row.index for row in rows] != list(range(len(texts))):
             raise RuntimeError("Embedding response did not match the input documents.")
@@ -60,11 +60,34 @@ class ResponsesLLM:
         self.settings = settings
         self.usage: list[Usage] = []
 
-    def infer(self, messages):
+    def infer(self, messages, *, max_output_tokens: int = 4096):
+        if os.environ.get("RECRAG_CHAT_BASE_URL"):
+            response = self.client.chat.completions.create(
+                model=self.settings.llm.model,
+                messages=messages,
+                max_tokens=max_output_tokens,
+                extra_body={
+                    "options": {
+                        "num_ctx": int(os.environ.get("RECRAG_CONTEXT", "32768"))
+                    }
+                },
+            )
+            if not response.choices or not response.choices[0].message.content:
+                raise RuntimeError("Local chat generation returned no text.")
+            if response.usage:
+                self.usage.append(
+                    Usage(
+                        prompt_tokens=response.usage.prompt_tokens,
+                        completion_tokens=response.usage.completion_tokens,
+                        total_tokens=response.usage.total_tokens,
+                    )
+                )
+            return [response.choices[0].message.content]
         response = self.client.responses.create(
             model=self.settings.llm.model,
             input=messages,
             reasoning={"effort": self.settings.llm.reasoning_effort},
+            max_output_tokens=max_output_tokens,
             store=False,
         )
         if response.status != "completed" or not response.output_text:
@@ -90,6 +113,8 @@ def setup(settings: Settings, index_dir: Path, dataset: str):
         OpenAI(
             timeout=settings.llm.timeout,
             max_retries=0,
+            base_url=os.environ.get("RECRAG_CHAT_BASE_URL"),
+            api_key="ollama" if os.environ.get("RECRAG_CHAT_BASE_URL") else None,
             http_client=MeteredClient(timeout=settings.llm.timeout),
         ) as llm_client,
         OpenAI(
@@ -130,9 +155,7 @@ def retrieve(
         storage_context = StorageContext.from_defaults(persist_dir=str(index_dir))
         _cached_index_dir = index_dir
         _cached_storage_context = storage_context
-        vector_index = load_index_from_storage(
-            storage_context, embed_model=embedding
-        )
+        vector_index = load_index_from_storage(storage_context, embed_model=embedding)
         construction_seconds = 0.0
     else:
         with indexing():

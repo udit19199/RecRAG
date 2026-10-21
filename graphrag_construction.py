@@ -14,17 +14,18 @@ from neo4j_graphrag.components.schema import (
     PropertyType,
     RelationshipType,
 )
-from neo4j_graphrag.components.text_splitters.fixed_size_splitter import (
-    FixedSizeSplitter,
+from neo4j_graphrag.components.text_splitters.base import TextSplitter
+from neo4j_graphrag.components.types import (
+    LexicalGraphConfig,
+    Neo4jGraph,
+    TextChunk,
+    TextChunks,
 )
-from neo4j_graphrag.components.types import LexicalGraphConfig, Neo4jGraph
 from neo4j_graphrag.embeddings.base import Embedder
 from neo4j_graphrag.experimental.pipeline.kg_builder import SimpleKGPipeline
 from neo4j_graphrag.generation.prompts import ERExtractionTemplate
 from neo4j_graphrag.indexes import create_vector_index
 from neo4j_graphrag.llm import LLMBase
-
-from dataset import SourcePage
 
 ONTOLOGY_SCHEMA = GraphSchema(
     node_types=[
@@ -206,8 +207,21 @@ class _RaisingNeo4jWriter(Neo4jWriter):
         return result
 
 
+class _PreparedChunksSplitter(TextSplitter):
+    def __init__(self, chunks: Sequence[str]) -> None:
+        self._chunks = list(chunks)
+
+    async def run(self, text: str) -> TextChunks:
+        return TextChunks(
+            chunks=[
+                TextChunk(text=chunk, index=index)
+                for index, chunk in enumerate(self._chunks)
+            ]
+        )
+
+
 def rebuild_graph(
-    pages: Sequence[SourcePage],
+    chunks: Sequence[str],
     *,
     driver: Driver,
     llm: LLMBase,
@@ -215,11 +229,8 @@ def rebuild_graph(
     database: str,
     embedding_dimensions: int,
 ) -> None:
-    page_texts = []
-    for page in pages:
-        passages_text = "\n\n".join(page.passages)
-        page_texts.append(f"Page: {page.title}\n{passages_text}")
-    text = "\n\n".join(page_texts)
+    if not chunks:
+        raise ValueError("GraphRAG needs nonempty source chunks.")
 
     driver.execute_query(
         "CREATE DATABASE $name IF NOT EXISTS WAIT", name=database, database_="system"
@@ -233,11 +244,11 @@ def rebuild_graph(
         on_error="RAISE",
         from_file=False,
         kg_writer=_RaisingNeo4jWriter(driver, neo4j_database=database),
-        text_splitter=FixedSizeSplitter(chunk_size=1000, chunk_overlap=100),
+        text_splitter=_PreparedChunksSplitter(chunks),
         lexical_graph_config=LexicalGraphConfig(),
         neo4j_database=database,
     )
-    asyncio.run(pipeline.run_async(text=text))
+    asyncio.run(pipeline.run_async(text=" "))
 
     create_vector_index(
         driver,

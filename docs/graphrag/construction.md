@@ -1,7 +1,8 @@
 # Graph construction
 
-Graph construction turns source pages into extracted entities, relationships,
-text chunks, and embeddings.
+Graph construction turns shared source chunks into extracted entities,
+relationships, and embeddings. The benchmark runner passes its title-prefixed
+256-token `SentenceSplitter` chunks directly to Neo4j, with 20-token overlap.
 
 ## The whole flow
 

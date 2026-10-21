@@ -2,12 +2,13 @@
 
 from __future__ import annotations
 
+import os
 import re
 from contextlib import closing, contextmanager
 from pathlib import Path
 from time import perf_counter
 from types import SimpleNamespace
-from typing import cast
+from typing import Any, cast
 
 import numpy as np
 from hipporag import HippoRAG
@@ -22,18 +23,23 @@ from openai.types.responses.response_text_config_param import ResponseTextConfig
 from openai.types.shared import Reasoning, ResponseFormatJSONObject, ResponseFormatText
 from openai.types.shared_params import Reasoning as ReasoningParams
 
-from benchmark import EmbeddingSettings, Message, RetrievedContext, Settings, Usage
+from benchmark import EmbeddingSettings, RetrievedContext, Settings, Usage
 from cost import MeteredClient, indexing
 
 
 class ResponsesLLM(BaseLLM):
-    def __init__(self, config: BaseConfig, settings: Settings) -> None:
+    def __init__(
+        self, config: BaseConfig, settings: Settings, model_name: str | None = None
+    ) -> None:
         super().__init__(config)
-        self.llm_name = settings.llm.model
+        self.llm_name = model_name or settings.llm.model
         self.settings = settings
         if settings.hipporag is None:
             raise ValueError("HippoRAG requires its max_output_tokens setting.")
         self.max_output_tokens = settings.hipporag.max_output_tokens
+        self.local_chat = bool(os.environ.get("RECRAG_CHAT_BASE_URL")) and (
+            self.llm_name == settings.llm.model
+        )
         self.usage: list[Usage] = []
         cache_dir = Path(config.save_dir) / "responses_cache"
         cache_dir.mkdir(parents=True, exist_ok=True)
@@ -42,6 +48,10 @@ class ResponsesLLM(BaseLLM):
         self.client = OpenAI(
             timeout=settings.llm.timeout,
             max_retries=0,
+            base_url=os.environ.get("RECRAG_CHAT_BASE_URL")
+            if self.local_chat
+            else None,
+            api_key="ollama" if self.local_chat else None,
             http_client=MeteredClient(timeout=settings.llm.timeout),
         )
 
@@ -53,27 +63,53 @@ class ResponsesLLM(BaseLLM):
     def infer(self, messages, **kwargs):
         # HippoRAG's small text budgets omit reasoning tokens. Reserve room for both.
         json_output = kwargs.get("response_format") is not None
-        if json_output:
-            # Upstream's NER prompt asks for a list, but its parser requires an object.
-            messages = [
-                *messages,
-                Message(
-                    role="user",
-                    content=(
-                        "Return a JSON object matching the example's keys and structure. "
-                        "For named entity extraction, use the key named_entities with a list of strings. "
-                        "For triple extraction, use the key triples with a list of three-string lists."
-                    ),
-                ).model_dump(),
-            ]
+        if self.local_chat:
+            request: dict[str, Any] = {
+                "model": self.llm_name,
+                "messages": messages,
+                "max_tokens": max(
+                    kwargs.get("max_new_tokens", 0), self.max_output_tokens
+                ),
+                "extra_body": {
+                    "options": {
+                        "num_ctx": int(os.environ.get("RECRAG_CONTEXT", "32768"))
+                    }
+                },
+            }
+            if json_output:
+                request["response_format"] = {"type": "json_object"}
+            response = self.client.chat.completions.create(**request)
+            if not response.choices or not response.choices[0].message.content:
+                raise RuntimeError("Local HippoRAG generation returned no text.")
+            usage = response.usage
+            response_text = response.choices[0].message.content
+            if "fact_before_filter" in messages[-1]["content"]:
+                response_text = re.sub(
+                    r"\[\[\s*##\s*(fact_after_filter|completed)\s*##\s*\]\]",
+                    r"[[ ## \1 ## ]]",
+                    response_text,
+                )
+            if usage:
+                self.usage.append(
+                    Usage(
+                        prompt_tokens=usage.prompt_tokens,
+                        completion_tokens=usage.completion_tokens,
+                        total_tokens=usage.total_tokens,
+                    )
+                )
+            return [response_text, usage.model_dump() if usage else {}]
         response = self.client.responses.create(
             model=self.llm_name,
             input=messages,
-            reasoning=cast(
-                ReasoningParams,
-                Reasoning(effort=self.settings.llm.reasoning_effort).model_dump(
-                    exclude_none=True
-                ),
+            reasoning=(
+                cast(
+                    ReasoningParams,
+                    Reasoning(effort=self.settings.llm.reasoning_effort).model_dump(
+                        exclude_none=True
+                    ),
+                )
+                if self.llm_name == self.settings.llm.model
+                else None
             ),
             max_output_tokens=max(
                 kwargs.get("max_new_tokens", 0),
@@ -130,11 +166,10 @@ class ConfiguredEmbeddings(OpenAIEmbeddingModel):
     def encode(self, texts):
         texts = [text.replace("\n", " ") for text in texts]
         texts = [text if text != "" else " " for text in texts]
-        response = self.client.embeddings.create(
-            model=self.request_model_name,
-            input=texts,
-            dimensions=self.dimensions,
-        )
+        embedding_args = {"input": texts, "model": self.request_model_name}
+        if self.request_model_name.startswith("text-embedding-3-"):
+            embedding_args["dimensions"] = self.dimensions
+        response = self.client.embeddings.create(**embedding_args)
         rows = sorted(response.data, key=lambda item: item.index)
         if [row.index for row in rows] != list(range(len(texts))):
             raise RuntimeError("Embedding response did not match the input documents.")
@@ -152,7 +187,7 @@ def setup(settings: Settings, index_dir: Path, dataset: str):
     config = BaseConfig(
         save_dir=str(index_dir),
         dataset="hotpotqa" if dataset == "hotpotqa" else "musique",
-        llm_name=settings.llm.model,
+        llm_name=settings.hipporag.construction_model or settings.llm.model,
         embedding_model_name=settings.embedding.model,
         embedding_provider="openai",
         embedding_request_timeout=settings.embedding.timeout,
@@ -165,12 +200,19 @@ def setup(settings: Settings, index_dir: Path, dataset: str):
         qa_top_k=10,
         response_format=ResponseFormatJSONObject(type="json_object").model_dump(),
     )
+    extraction_model = settings.hipporag.construction_model or settings.llm.model
     with (
-        closing(ResponsesLLM(config, settings)) as llm,
+        closing(ResponsesLLM(config, settings, extraction_model)) as extraction_llm,
+        closing(ResponsesLLM(config, settings)) as qa_llm,
         closing(ConfiguredEmbeddings(config, settings.embedding)) as embeddings,
     ):
         index_dir.mkdir(parents=True, exist_ok=True)
-        yield SimpleNamespace(config=config, llm=llm, embeddings=embeddings)
+        yield SimpleNamespace(
+            config=config,
+            extraction_llm=extraction_llm,
+            llm=qa_llm,
+            embeddings=embeddings,
+        )
 
 
 def retrieve(
@@ -180,6 +222,7 @@ def retrieve(
     corpus_key: str,
     indexed_corpora: set[str],
     llm: BaseLLM,
+    extraction_llm: BaseLLM,
     embeddings: OpenAIEmbeddingModel,
     question: str,
     top_k: int,
@@ -190,7 +233,7 @@ def retrieve(
     config.force_index_from_scratch = should_index
     with HippoRAG(
         global_config=config,
-        extraction_llm=llm,
+        extraction_llm=extraction_llm,
         qa_llm=llm,
         embedding_model=embeddings,
         index_identity="recrag-paper-chunks256-overlap20-v1",

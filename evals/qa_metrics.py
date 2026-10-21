@@ -99,8 +99,8 @@ def hotpotqa_f1(answer: str, expected_answers: Sequence[str]) -> list[float]:
 
 def benchmark_prompt(context: str, question: str) -> str:
     return (
-        f"Context:\n{context}\n\nQuestion:\n{question}? "
-        "Please just give a short answer without explanation.\n\nAnswer:"
+        f"\n\nContext:\n{context}\n\nQuestion:\n{question}? "
+        "Please just give a short answer without explanation.\n\nAnswer:\n"
     )
 
 

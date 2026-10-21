@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import logging
+import os
 import tomllib
 from collections.abc import Callable, Sequence
 from datetime import UTC, datetime
@@ -69,10 +70,12 @@ QA_INSTRUCTION = (
 )
 NEWS_QA_INSTRUCTION = (
     "You are an AI assistant that answers questions using the provided context. "
-    "Always base your answers strictly on the given context. Answer inference "
-    "questions with an entity or short phrase. If the context is insufficient, "
-    "respond ONLY with 'Insufficient Information'. For binary questions, "
-    "respond ONLY with 'Yes' or 'No'."
+    "Always base your answers strictly on the given context and provide clear, concise, and accurate responses."
+    " Follow these rules when answering:"
+    " 1. If the question requires inference (e.g., identifying an entity, extracting information, or summarizing context), "
+    "provide the answer as the relevant entity or a short phrase."
+    " 2. If the question cannot be answered with the provided context, respond ONLY with 'Insufficient Information'."
+    " 3. For binary questions (e.g., those starting with 'Does', 'Was', 'Is', etc.), respond ONLY with 'Yes' or 'No'."
 )
 NOVELQA_QA_INSTRUCTION = (
     "Answer only from the provided context. If the question lists options, "
@@ -88,8 +91,8 @@ class RetrievedContext(BaseModel):
 
 
 class LLMSettings(BaseModel):
-    model: Literal["gpt-6-luna"]
-    reasoning_effort: Literal["medium"]
+    model: str
+    reasoning_effort: Literal["medium"] = "medium"
     timeout: PositiveFloat
 
 
@@ -101,6 +104,7 @@ class EmbeddingSettings(BaseModel):
 
 class HippoSettings(BaseModel):
     max_output_tokens: PositiveInt
+    construction_model: str | None = None
 
 
 class CorpusManifest(BaseModel):
@@ -330,6 +334,7 @@ def search_method(
             corpus_key=corpus_key,
             indexed_corpora=indexed_corpora,
             llm=pipeline.llm,
+            extraction_llm=pipeline.extraction_llm,
             embeddings=pipeline.embeddings,
             question=question,
             top_k=top_k,
@@ -350,7 +355,7 @@ def search_method(
 
         return retrieve_graph(
             rag=pipeline.rag,
-            pages=pages,
+            chunks=documents,
             question=question,
             index_dir=index_dir,
             top_k=top_k,
@@ -373,10 +378,10 @@ def run(
     records: int,
     options: RetrievalOptions | None = None,
     paper_data: Path | None = None,
+    record_indices: Sequence[int] | None = None,
 ) -> Path:
-    settings = Settings.model_validate(
-        tomllib.loads((ROOT / "config.toml").read_text())
-    )
+    config_path = Path(os.environ.get("RECRAG_CONFIG", ROOT / "config.toml"))
+    settings = Settings.model_validate(tomllib.loads(config_path.read_text()))
     if options is not None:
         settings.retrieval = options
     options = settings.retrieval
@@ -393,12 +398,15 @@ def run(
         reranker = CrossEncoder("BAAI/bge-reranker-large")
     load_dotenv(ROOT / ".env", override=True)
     source = get_source(dataset, paper_data=paper_data)
-    run_dir = ROOT / "runs" / method / datetime.now(UTC).strftime("%Y%m%dT%H%M%S%fZ")
+    namespace = os.environ.get("RECRAG_RUN_NAMESPACE")
+    run_root = ROOT / "runs" / namespace if namespace else ROOT / "runs"
+    run_dir = run_root / method / datetime.now(UTC).strftime("%Y%m%dT%H%M%S%fZ")
     run_dir.mkdir(parents=True)
     (run_dir / "settings.json").write_text(settings.model_dump_json(indent=2))
     retrieval_path = run_dir / "retrieval.jsonl"
     selected_records = [
-        source.load_record(index) for index in range(start, start + records)
+        source.load_record(index)
+        for index in (record_indices or range(start, start + records))
     ]
     shared_documents: list[str] = []
     if dataset == "hotpotqa":
@@ -431,9 +439,9 @@ def run(
                 + settings.llm.model_dump_json()
                 + method
                 + (
-                    "paper-chunks256-overlap20-v3-json-object"
+                    "paper-chunks256-overlap20-v4-native-extraction-prompt"
                     if method == "hipporag"
-                    else "paper-chunks256-overlap20-v5-reference-clustering"
+                    else "paper-chunks256-overlap20-v7-raptor-checkpoints-capped-summaries"
                     if method == "raptor"
                     else "paper-chunks256-overlap20-v2"
                 )
@@ -444,7 +452,7 @@ def run(
                 )
             ).encode()
         ).hexdigest()
-        corpus_dir = ROOT / "runs" / method / "indexes" / index_key
+        corpus_dir = run_root / method / "indexes" / index_key
         if method == "hipporag":
             from hipporag_retrieval import setup
         elif method == "graphrag":
@@ -542,6 +550,8 @@ def answer_saved(retrieval_path: Path) -> Path:
     with OpenAI(
         timeout=settings.llm.timeout,
         max_retries=0,
+        base_url=os.environ.get("RECRAG_CHAT_BASE_URL"),
+        api_key="ollama" if os.environ.get("RECRAG_CHAT_BASE_URL") else None,
         http_client=MeteredClient(timeout=settings.llm.timeout),
     ) as client:
         llm = ResponsesLLM(client, settings)
