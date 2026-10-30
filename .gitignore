@@ -8,6 +8,7 @@ dist/
 wheels/
 *.egg-info/
 *.egg
+.ruff_cache/
 
 # Virtual environments
 .venv/
@@ -31,61 +32,20 @@ ENV/
 # OS
 .DS_Store
 Thumbs.db
-.fallow/
 
-# Project specific
-# Experiment outputs (local-only; see docs for findings)
+# Experiment outputs (local-only; findings go in docs)
 results/
 runs/
-# Dataset inputs are fetched on demand; tracked exceptions below are archives.
-datasets/*
-!datasets/2wikimultihopqa/
-!datasets/2wikimultihopqa/**
-!datasets/browsecomp_plus/
-!datasets/browsecomp_plus/**
-datasets/browsecomp_plus/test.jsonl
-!datasets/hannon/
-!datasets/hannon/**
-!datasets/finer139/
-datasets/finer139/*
-!datasets/finer139/finer139_frozen_suite_v1.json
-!datasets/refind/
-datasets/refind/*
-!datasets/refind/README.md
 state/
-
-
-# Gemini CLI
-.gemini/
-
-# Agents / skills / local IDE tooling
-.harness/
-.agents/
-.claude/
-skills-lock.json
-.agent-reviews/
-.codex/
-.cursor/
-.impeccable/
-.github/hooks/
-.github/skills/
-.herenow/
-.lavish/
 tmp/
 
-# Security Reports
-security_best_practices_report.md
+# Dataset inputs are fetched on demand by dataset.py and scripts/
+datasets/
 
-# Generated or local-only documentation
-docs/research/generated/
-docs/research/_scratch/
-
-# Command Code
-.commandcode/
-
-# REFinD raw data is CC-BY-NC and must stay local. See the dataset README.
-datasets/refind/*.json
-datasets/refind/*.jsonl
-
-# Riptide artifacts (cloud-synced)
-.humanlayer/tasks/
+# Agent and local tooling
+.agents/
+.claude/
+.codex/
+.cursor/
+.gemini/
+skills-lock.json

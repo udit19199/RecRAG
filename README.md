@@ -3,6 +3,13 @@
 RecRAG is a research project by HPE and JECRC University. It supports HotpotQA,
 MultiHop-RAG, Natural Questions, and NovelQA.
 
+The benchmark protocol follows the paper
+[RAG vs. GraphRAG: A Systematic Evaluation and Key Insights](https://dl.acm.org/doi/pdf/10.1145/3770855.3817575)
+and its reference implementation,
+[haoyuhan1/RAGvsGraphRAG](https://github.com/haoyuhan1/RAGvsGraphRAG).
+Method diagrams, cost estimates, and results are in the
+[Experiments Excalidraw scene](https://app.excalidraw.com/s/9pwrOc81bDT/5KJVp4wI32J).
+
 ## Run the app
 
 1. Install the dependencies:
@@ -15,9 +22,7 @@ MultiHop-RAG, Natural Questions, and NovelQA.
 
 3. Start Neo4j Desktop Enterprise with APOC enabled.
 
-4. Install Git LFS, then fetch the dataset files with `git lfs pull`.
-
-5. Run the app:
+4. Run the app:
 
    ```sh
    uv run streamlit run streamlit_app.py
@@ -211,6 +216,71 @@ GPT-4o-mini for HippoRAG construction, and Llama-3.1-8B-Instruct for answers.
 These runs instead use the shared RecRAG models above, so the paper's scores
 cannot be compared directly with them. The paper also does not pin its
 HippoRAG commit or publish its processed input records.
+
+## Retrieval quality
+
+Retrieval is scored from saved `retrieval.jsonl` files, so no method reruns.
+The headline metric comes from one LLM judge applied identically to all four
+methods:
+
+```sh
+uv run python -m evals.retrieval_judge runs/<method>/<run> ...
+```
+
+Pass one run per method per dataset, including GraphRAG. Exact-string and
+offset matching cannot score RAPTOR's generated summaries, because the saved
+runs no longer have the tree that ties a summary to its source pages. Reading
+content is the only way to treat every architecture the same.
+
+**Primary: answer support.** Gold sentences mark one route to the answer.
+HotpotQA labels come from each question's own ten paragraphs, but our corpus
+pools pages from 1,000 questions, so the same links often appear on other
+pages. GraphRAG's 1,000-character windows can also cut a gold sentence
+midway. Gold-sentence recall therefore penalized methods that reached the
+answer by another stated route. When we measured this, GraphRAG had the answer
+in its text for 28 of the 41 HotpotQA questions where it missed a gold
+sentence; normal RAG had it for 8 of 27. The support judge gets the question,
+the gold answer, the gold sentences as a reference route, and the items. It
+quotes a chain to the gold answer, by that route or any route the items
+state, and marks the answer stated, only mentioned, or missing. Code scores
+each question: 3 a complete verified chain with the answer stated (yes/no
+answers need only the complete chain); 2 the answer stated; 1 the answer
+mentioned, or part of a chain; 0 nothing. Support score = sum / (3 ×
+questions) × 100. Full support rate = share of questions scoring 3.
+
+**Secondary: gold-sentence recall**, scored as follows.
+
+- Each gold sentence is split into claims once per question. The claims are
+  frozen, so every method is judged against the same ones.
+- For each method and question, `gpt-6-luna` marks every claim stated,
+  missing, or contradicted. It must quote the retrieved text. The judge sees
+  no method name and no question, and the items are shuffled.
+- Code, not the judge, sets each gold sentence's integer score, using only
+  quotes that appear verbatim in the cited item: 3 every claim stated; 2 the
+  main claim stated; 1 the sentence's people or things mentioned; 0 otherwise.
+  Any verified contradiction scores 0.
+- A question takes its lowest gold sentence score, because a multi-hop
+  question needs every hop.
+- **Retrieval score** = sum of question scores / (3 × questions) × 100.
+  **Full retrieval rate** = share of questions scoring 3. Budget views cut
+  ranked methods to GraphRAG's per-question token volume. Intervals are paired
+  bootstraps.
+
+Verdicts are cached in `runs/retrieval_judge/cache.jsonl`, keyed by prompt
+version, model, and payload. A rerun resumes and re-scoring is free. Bump
+`PROMPT_VERSION` whenever a prompt or the scoring rule changes.
+`evals/retrieval_quality.py` keeps the older offset metrics. The judge reuses
+them only as a check: `disagreements.jsonl` lists gold sentences where the two
+disagree, and `summary_credit.jsonl` lists credit earned through RAPTOR
+summaries, for hand review.
+
+A correct answer can also come from model knowledge rather than retrieval.
+`evals/closed_book.py` answers the same questions with no context, using the
+same model, reasoning effort, and scorers, and writes to `runs/closed_book/`:
+
+```sh
+uv run python -m evals.closed_book runs/<method>/<hotpotqa-run> runs/<method>/<multihop-run>
+```
 
 ## RAPTOR, reranking, IRCoT, and question cost
 
