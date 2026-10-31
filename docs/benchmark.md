@@ -13,7 +13,7 @@ method and dataset protocol.
 | NovelQA | One index for each novel, reused by its questions | Multiple-choice letters. Report exact letter accuracy when gold labels are supplied. Preserve aspect and complexity. |
 
 These scopes apply to dense RAG, HippoRAG2, RAPTOR, and RecRAG's ontology
-agentic GraphRAG comparison. The official-source loaders remain the default.
+Agentic GraphRAG comparison. The official-source loaders remain the default.
 Indexes are keyed by source chunks, method, model settings, and algorithm
 version, so later question ranges reuse an index without mixing models.
 

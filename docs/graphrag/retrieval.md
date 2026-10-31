@@ -1,6 +1,6 @@
 # Graph retrieval
 
-GraphRAG supports agentic retrieval only. `GraphRAG.answer()` delegates to
+Agentic GraphRAG retrieves only through its agent. `GraphRAG.answer()` delegates to
 `answer_question()`, which reads the database schema and builds the agent.
 
 The agent chooses between two tools:
@@ -43,6 +43,6 @@ When no context is found, the answer fallback is:
 
 ## Code and related docs
 
-- [GraphRAG adapter, agent, tools, and answer flow](../../graphrag_retrieval.py)
+- [Agentic GraphRAG adapter, agent, tools, and answer flow](../../graphrag_retrieval.py)
 - [Graph construction](construction.md)
 - [Evaluation](evaluation.md)

@@ -1,4 +1,4 @@
-# GraphRAG evaluation
+# Agentic GraphRAG evaluation
 
 For each HotpotQA run, the Streamlit app builds one graph per selected
 construction method from unique pages in the loaded validation rows, then

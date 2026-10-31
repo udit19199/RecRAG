@@ -9,7 +9,7 @@ RecRAG is a research project between **Hewlett Packard Enterprise (HPE)** and
 The FiNER-139 extraction-method benchmark implementation was removed after its
 latest result was preserved under `runs/finer139/`. Its dataset files remain
 under `datasets/finer139/` as archived inputs; do not use them in
-GraphRAG work unless explicitly asked.
+Agentic GraphRAG work unless explicitly asked.
 
 RecRAG previously included a candidate-pipeline recommendation/benchmark
 product (`app/orchestrator/`, `src/orchestration/`, `docs/recommendation.md`).
@@ -52,28 +52,33 @@ frameworks. Use direct inspection for verification.
 - Adapter timeouts come from `config.toml`, not hardcoded.
 - Dicts, `TypedDict`s, and tuples are strongly prohibited.
 - Retries use `urllib3.util.Retry` with idempotent-method-only.
-- GraphRAG writes chunk embeddings and the graph to Neo4j.
+- Agentic GraphRAG writes chunk embeddings and the graph to Neo4j.
 - Neo4j vector retrieval uses `neo4j-graphrag`'s `VectorCypherRetriever`.
   Agentic retrieval uses Neo4j vector and text-to-Cypher tools.
-- GraphRAG uses the official `neo4j-graphrag` package for the retrieve-to-answer
+- Agentic GraphRAG uses the official `neo4j-graphrag` package for the retrieve-to-answer
   flow and passes its `GraphRAGChatLLM` adapter around the configured LangChain
   chat model to that package.
 
-## GraphRAG (active)
+## Agentic GraphRAG (active)
 
-The active GraphRAG path uses ontology-guided construction (`ontology_guided`)
+Call this method **Agentic GraphRAG** in docs, slides, tables and messages —
+never "GraphRAG" alone or "Hybrid RAG". The method id `graphrag`, the
+`graphrag_*.py` modules and the `GraphRAG` class keep their code names because
+saved runs and imports depend on them.
+
+The active Agentic GraphRAG path uses ontology-guided construction (`ontology_guided`)
 and agentic retrieval (`agentic`). The ontology suggests top-level node and
 relationship types and allows additional types. Vector and text-to-Cypher
 search remain internal tools for agentic retrieval. Construction writes chunk
 vectors to Neo4j; agentic retrieval searches Neo4j.
-Benchmark scoring is optional and sits outside the normal GraphRAG path.
+Benchmark scoring is optional and sits outside the normal Agentic GraphRAG path.
 
 HippoRAG installs from a pinned upstream Git commit into `.venv-hipporag`; its
 source files are not in this working tree. `hipporag_retrieval.py` runs its
 native retrieval and `rag_retrieval.py` runs dense Normal RAG. Both share the
 benchmark loop in `benchmark.py` and dataset adapters in `dataset.py`.
 Keep using the separate environment because HippoRAG's dependency pins conflict
-with the main GraphRAG environment. See `README.md` for the install command.
+with the main Agentic GraphRAG environment. See `README.md` for the install command.
 
 Use `GraphRAG` from `graphrag_retrieval.py` directly from Python.
 `graphrag_construction.py` holds the ontology and builds the graph.
@@ -85,12 +90,12 @@ evaluation helpers live in `evals/`. Save experiment results under local-only
 ## Older datasets (archived)
 
 Hannon, REFinD, and FiNER-139 files remain for historical runs only. They are
-not part of the active GraphRAG benchmark path.
+not part of the active Agentic GraphRAG benchmark path.
 
 ## Agent Checklist (before finishing)
 
 - types are updated where contracts changed
-- GraphRAG result shapes still match
+- Agentic GraphRAG result shapes still match
 - meaningful changes document **why** (comment or commit message)
 - smallest relevant verification commands have run
 - local-only files were not staged by accident
