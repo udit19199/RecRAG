@@ -1,4 +1,4 @@
-"""Compare RAG, RAPTOR, HippoRAG, and ontology agentic GraphRAG on shared questions."""
+"""Compare RAG, RAPTOR, HippoRAG, and Agentic GraphRAG on shared questions."""
 
 from __future__ import annotations
 

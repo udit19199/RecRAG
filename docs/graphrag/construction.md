@@ -171,7 +171,7 @@ use this construction cache.
 ## Related docs
 
 - [Graph retrieval](retrieval.md)
-- [GraphRAG evaluation](evaluation.md)
+- [Agentic GraphRAG evaluation](evaluation.md)
 - [Dataset records](../benchmark.md)
 - [Neo4j knowledge graph builder guide](https://neo4j.com/docs/neo4j-graphrag-python/current/user_guide_kg_builder.html)
 - [Neo4j vector indexes](https://neo4j.com/docs/cypher-manual/current/indexes/semantic-indexes/vector-indexes/)

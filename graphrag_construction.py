@@ -230,7 +230,7 @@ def rebuild_graph(
     embedding_dimensions: int,
 ) -> None:
     if not chunks:
-        raise ValueError("GraphRAG needs nonempty source chunks.")
+        raise ValueError("Agentic GraphRAG needs nonempty source chunks.")
 
     driver.execute_query(
         "CREATE DATABASE $name IF NOT EXISTS WAIT", name=database, database_="system"

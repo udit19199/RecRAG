@@ -25,7 +25,7 @@ the answer model once.
 - [Graph construction](construction.md) builds one database per record and
   choice.
 - [Graph retrieval](retrieval.md) picks context for one question.
-- [GraphRAG evaluation](evaluation.md) scores the graph, context, and answer
+- [Agentic GraphRAG evaluation](evaluation.md) scores the graph, context, and answer
   separately. The scores are recorded and never combined into one number.
 
 ## Run setup

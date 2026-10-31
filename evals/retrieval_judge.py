@@ -128,7 +128,7 @@ SUPPORT_PROMPT = (
     "otherwise. For a yes or no gold answer always use missing, because those "
     "are judged by the chain alone. Give quotes for stated or mentioned."
 )
-# No rule ties links to a named publication: GraphRAG's character windows
+# No rule ties links to a named publication: Agentic GraphRAG's character windows
 # mostly lack the "Page: title (source, date)" header (219 of 898 on
 # MultiHop-RAG) while chunks repeat it, so such a rule scored a missing
 # header rather than missing evidence.
@@ -431,7 +431,7 @@ def judge_items(
     saved: SavedRetrieval, corpus: Corpus, budget: int, encoder
 ) -> list[JudgeItem]:
     if saved.method == "graphrag":
-        # GraphRAG's own volume defines the budget, so both views match.
+        # Agentic GraphRAG's own volume defines the budget, so both views match.
         rendered = unique([render_graphrag(passage) for passage in saved.retrieval.passages])
         return [
             JudgeItem(rank, "graphrag", text, normalize(text), normalize(text))
@@ -871,7 +871,7 @@ DEFINITIONS = [
     "Question score: the lowest gold sentence score.",
     "Retrieval score: sum of question scores / (3 x questions) x 100.",
     "Full retrieval rate: share of questions scoring 3, x 100.",
-    "Budget view: ranked methods cut to GraphRAG's per-question token volume "
+    "Budget view: ranked methods cut to Agentic GraphRAG's per-question token volume "
     "(as in retrieval_quality); quotes outside the cut do not count.",
     "Judge sees no method name, no question, and items in a seeded shuffle.",
     "Intervals are paired percentile bootstraps over the same questions.",
@@ -1107,7 +1107,7 @@ def main() -> None:
         graph = next(run for run in runs if run.saved[0].method == "graphrag")
         for run in runs:
             if [s.record_id for s in run.saved] != [s.record_id for s in graph.saved]:
-                raise ValueError(f"{run.run} does not share GraphRAG's question order.")
+                raise ValueError(f"{run.run} does not share Agentic GraphRAG's question order.")
             run.scores = [None] * len(run.saved)
         graph_items = [graphrag_items(saved, corpus) for saved in graph.saved]
         budgets = [graphrag_tokens(items, corpus, encoder) for items in graph_items]

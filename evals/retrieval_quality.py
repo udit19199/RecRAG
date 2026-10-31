@@ -52,7 +52,7 @@ _FOLD = str.maketrans(
     "​‌‍﻿­",
 )
 _WHITESPACE = re.compile(r"\s+")
-# GraphRAG concatenated pages as "Page: <title>\n<body>" before re-chunking.
+# Agentic GraphRAG concatenated pages as "Page: <title>\n<body>" before re-chunking.
 _PAGE_HEADER = re.compile(r"(?:^|\n\n)Page: ([^\n]*)\n")
 # A window can end inside the next page header ("...\n\nPage: Some Ti").
 _TRAILING_HEADER = re.compile(r"\n\n(?:P(?:a(?:g(?:e(?::(?: [^\n]*)?)?)?)?)?)?$")
@@ -227,7 +227,7 @@ def _prefix_spans(text: str, pages: Sequence[int], corpus: Corpus) -> list[Span]
 
 
 def window_items(rank: int, window: str, corpus: Corpus) -> list[Item]:
-    """Split one GraphRAG window at page headers and anchor each segment.
+    """Split one Agentic GraphRAG window at page headers and anchor each segment.
 
     The text before the first header is the tail of the page that precedes
     the next titled page; each headed body is the start of its titled page.
@@ -532,11 +532,11 @@ DEFINITIONS = [
     "sentence in any page is a valid target.",
     "covered: some retrieved span overlaps a gold occurrence by >= 1 character.",
     "fully covered: merged retrieved spans contain a whole gold occurrence, so "
-    "a sentence split across two adjacent GraphRAG windows still counts.",
+    "a sentence split across two adjacent Agentic GraphRAG windows still counts.",
     "RAPTOR summaries keep rank and token cost but earn no span (lower bound).",
-    "GraphRAG: only the JSON text field; identical windows deduped; each window "
+    "Agentic GraphRAG: only the JSON text field; identical windows deduped; each window "
     "split at 'Page:' headers into anchored per-page segments.",
-    "budget_recall: ranked lists cut to GraphRAG's per-question token volume "
+    "budget_recall: ranked lists cut to Agentic GraphRAG's per-question token volume "
     "(title lines and page headers excluded, overlapping windows counted once); "
     "the crossing item is truncated.",
     "Intervals are paired percentile bootstraps over the same questions.",
@@ -576,7 +576,7 @@ def score_dataset(
     graphrag = next(run for run in runs if run.saved[0].method == "graphrag")
     for run in runs:
         if [s.record_id for s in run.saved] != [s.record_id for s in graphrag.saved]:
-            raise ValueError(f"{run.run} does not share GraphRAG's question order.")
+            raise ValueError(f"{run.run} does not share Agentic GraphRAG's question order.")
     golds = [locate_gold(saved.supporting_sentences, corpus) for saved in graphrag.saved]
     graph_items = [graphrag_items(saved, corpus) for saved in graphrag.saved]
     budgets = [graphrag_tokens(items, corpus, encoder) for items in graph_items]
