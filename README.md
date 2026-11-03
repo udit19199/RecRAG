@@ -92,7 +92,7 @@ Responses API.
 | Normal RAG | Splits source pages into chunks and embeds each chunk. It does not build a graph. | LlamaIndex ranks chunks by vector similarity to the question. |
 | RAPTOR | Builds a summary tree using global and local UMAP reduction, soft GMM clusters, and recursive summaries. | Ranks chunks and summaries together by cosine similarity, with a 3,500-token context limit. |
 | HippoRAG2 | Embeds the same chunks and extracts entities and facts into its own local graph. | Its graph retrieval links question entities and facts to relevant chunks. |
-| Agentic GraphRAG | Uses the ontology to build a graph and chunk vector index in Neo4j. | An agent chooses Neo4j vector search or a read-only text-to-Cypher query, then passes the evidence to the answer model. |
+| Agentic GraphRAG | Uses the ontology to build a graph and chunk vector index in Neo4j. | An agent runs Neo4j vector search, then one read-only text-to-Cypher lookup, may refine either, then passes the evidence to the answer model. |
 
 All four baseline methods use the same title-prefixed `SentenceSplitter`
 chunks, with 256 tokens per chunk and 20 tokens of overlap. Agentic GraphRAG writes
@@ -340,7 +340,9 @@ model substitutions prevent exact numerical reproduction of the paper.
 Each result includes `question_cost`, an API-call ledger, and
 `estimated_question_cost_usd`. This covers query embeddings, retrieval model
 calls, HippoRAG filtering, IRCoT, and final answering. Index construction is
-excluded even on a cold cache. The summary reports total and mean question API
+metered separately: each run writes `build_cost.json` with the calls made while
+building an index (empty when every index already existed, since cached
+extraction results are not re-billed). The summary reports total and mean question API
 cost and mean retrieval-plus-answer latency. Local reranking time counts toward
 latency; local compute, database hosting, and storage costs are excluded.
 `config.toml` stores the price snapshot, which each run copies to its settings.
@@ -350,6 +352,26 @@ Missing usage, an unpriced model, or old retrieval without a cost ledger produce
 null cost instead of a false zero. Answer replay combines original retrieval
 usage with the new answer call; it does not rerun retrieval. This is an API cost
 estimate, not an invoice, and assumes the direct API without a regional premium.
+
+Measurement rules, so the four methods are timed and priced the same way:
+
+- `list_question_cost_usd` prices every call at the uncached list rate. Billed
+  cost depends on prompt-cache hits, which depend on run order and reruns.
+- Every call records its wall time; `model_seconds` is their sum, so latency
+  splits into model time and everything else (database, local compute).
+- Failed or timed-out calls are listed in `question_cost.failed_calls`. A
+  question is tried twice; if both attempts fail it is saved with
+  `retrieval_error` and scored wrong, and the cost of every attempt is kept.
+  Three failed questions in a row stop the run.
+- Each index is opened once per run and one unscored warm-up question runs
+  before timing starts, so lazy index loading is not charged to a question.
+- HippoRAG's question-time calls bypass its response cache; a cache hit would
+  record no cost and no time.
+- `RECRAG_CONCURRENCY` (recorded per result) states how many workers shared
+  the API. Compare latency only between runs with the same value.
+- `python -m evals.subagent_judge export` writes the judgments exact matching
+  cannot make (non-exact answers, evidence without a source position) for a
+  Claude Haiku subagent, so judging spends no OpenAI credits.
 
 The Agentic GraphRAG app saves the same question cost fields and displays an API cost
 metric. Python callers of `GraphRAG.answer()` can read `rag.last_question_cost`

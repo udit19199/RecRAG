@@ -7,6 +7,7 @@ import logging
 import os
 import tomllib
 from collections.abc import Callable, Sequence
+from contextlib import ExitStack
 from datetime import UTC, datetime
 from functools import partial
 from hashlib import sha256
@@ -19,7 +20,14 @@ import tiktoken
 from dotenv import load_dotenv
 from pydantic import BaseModel, Field, PositiveFloat, PositiveInt
 
-from cost import MeteredClient, Pricing, QuestionCost, measure
+from cost import (
+    MeteredClient,
+    Pricing,
+    QuestionCost,
+    measure,
+    metering_builds,
+    unmetered,
+)
 from dataset import DATASET_SOURCES, SourcePage, get_source, load_hotpotqa_corpus
 from evals.qa_metrics import (
     benchmark_prompt,
@@ -33,6 +41,14 @@ CHUNK_SIZE = 256
 CHUNK_OVERLAP = 20
 TOP_K = 10
 Method = Literal["rag", "hipporag", "raptor", "graphrag"]
+# Warm-up runs one unscored question before timing starts, so lazy index loads
+# are not billed to the first measured question. It is outside every question
+# set; an overlapping question would warm the provider's prompt cache for it.
+WARMUP_QUESTION = "Which technology company was mentioned most often in October 2023?"
+# A failed question is retried, then scored wrong; this many failures in a row
+# means the setup is broken, so the run stops instead of scoring everything 0.
+QUESTION_ATTEMPTS = 2
+MAX_CONSECUTIVE_FAILURES = 3
 
 
 class Message(BaseModel):
@@ -52,6 +68,19 @@ class RetrievalOptions(BaseModel):
 class ReasoningStep(BaseModel):
     retrieval_query: str
     text: str
+
+
+class FailedAttempt(BaseModel):
+    error: str
+    seconds: float
+
+
+class BuildCostReport(BaseModel):
+    """Index-build spend of one run; empty when every index was already built."""
+
+    cost: QuestionCost
+    list_usd: float | None
+    billed_usd: float | None
 
 
 IRCOT_INSTRUCTION = (
@@ -151,6 +180,10 @@ class SavedRetrieval(BaseModel):
     options: RetrievalOptions = Field(default_factory=RetrievalOptions)
     complexity: str | None = None
     corpus_sha256: str | None = None
+    retrieval_error: str | None = None
+    failed_attempts: list[FailedAttempt] = Field(default_factory=list)
+    started_at: datetime | None = None
+    concurrency: int | None = None
 
 
 class BaselineResult(BaseModel):
@@ -185,10 +218,17 @@ class BaselineResult(BaseModel):
     llm_usage: list[Usage]
     question_cost: QuestionCost | None = None
     estimated_question_cost_usd: float | None = None
+    list_question_cost_usd: float | None = None
+    model_seconds: float | None = None
     reasoning_steps: list[ReasoningStep] = Field(default_factory=list)
     options: RetrievalOptions = Field(default_factory=RetrievalOptions)
     complexity: str | None = None
     corpus_sha256: str | None = None
+    retrieval_error: str | None = None
+    failed_attempts: list[FailedAttempt] = Field(default_factory=list)
+    started_at: datetime | None = None
+    answer_started_at: datetime | None = None
+    concurrency: int | None = None
 
 
 class CategorySummary(BaseModel):
@@ -329,13 +369,10 @@ def search_method(
         from hipporag_retrieval import retrieve
 
         return retrieve(
-            config=pipeline.config,
+            pipeline=pipeline,
             documents=documents,
             corpus_key=corpus_key,
             indexed_corpora=indexed_corpora,
-            llm=pipeline.llm,
-            extraction_llm=pipeline.extraction_llm,
-            embeddings=pipeline.embeddings,
             question=question,
             top_k=top_k,
         )
@@ -355,7 +392,7 @@ def search_method(
 
         return retrieve_graph(
             rag=pipeline.rag,
-            chunks=documents,
+            pages=pages,
             question=question,
             index_dir=index_dir,
             top_k=top_k,
@@ -425,43 +462,36 @@ def run(
     cached_pages: Sequence[SourcePage] | None = None
     documents: list[str] = []
     indexed_corpora: set[str] = set()
-    for record in selected_records:
-        if dataset == "hotpotqa":
-            documents = shared_documents
-        elif record.pages is not cached_pages:
-            documents = split_pages(record.pages)
-            cached_pages = record.pages
-        corpus_key = sha256("\n\n".join(documents).encode()).hexdigest()
-        index_key = sha256(
-            (
-                corpus_key
-                + settings.embedding.model_dump_json()
-                + settings.llm.model_dump_json()
-                + method
-                + (
-                    "paper-chunks256-overlap20-v4-native-extraction-prompt"
-                    if method == "hipporag"
-                    else "paper-chunks256-overlap20-v7-raptor-checkpoints-capped-summaries"
-                    if method == "raptor"
-                    else "paper-chunks256-overlap20-v2"
+    concurrency = int(os.environ.get("RECRAG_CONCURRENCY", "1"))
+    warm_up = os.environ.get("RECRAG_WARMUP", "1") != "0"
+    attempts = int(os.environ.get("RECRAG_QUESTION_ATTEMPTS", QUESTION_ATTEMPTS))
+    # One pipeline per index for the whole run: reopening it per question put
+    # index loading inside some methods' timers (HippoRAG reloaded its graph).
+    pipelines = ExitStack()
+    open_dir: Path | None = None
+    pipeline = None
+    consecutive_failures = 0
+    with pipelines, metering_builds(settings.pricing) as build_cost:
+        for record in selected_records:
+            if dataset == "hotpotqa":
+                documents = shared_documents
+            elif record.pages is not cached_pages:
+                documents = split_pages(record.pages)
+                cached_pages = record.pages
+            corpus_key = sha256("\n\n".join(documents).encode()).hexdigest()
+            index_dir = (
+                run_root
+                / method
+                / "indexes"
+                / index_key(method, dataset, corpus_key, settings)
+            )
+            if index_dir != open_dir:
+                pipelines.close()
+                pipeline = pipelines.enter_context(
+                    method_setup(method)(settings, index_dir, dataset)
                 )
-                + (
-                    settings.hipporag.model_dump_json()
-                    if method == "hipporag" and settings.hipporag
-                    else ""
-                )
-            ).encode()
-        ).hexdigest()
-        corpus_dir = run_root / method / "indexes" / index_key
-        if method == "hipporag":
-            from hipporag_retrieval import setup
-        elif method == "graphrag":
-            from graphrag_retrieval import setup
-        else:
-            from rag_retrieval import setup
-        with setup(settings, corpus_dir, dataset) as pipeline:
-            llm = pipeline.llm
-            index_dir = corpus_dir
+                open_dir = index_dir
+                warmed = not warm_up
             search = partial(
                 search_method,
                 method=method,
@@ -473,16 +503,45 @@ def run(
                 index_dir=index_dir,
                 top_k=(options.rerank_candidate_k if options.rerank else options.top_k),
             )
-
+            if pipeline is None:
+                raise RuntimeError("No retrieval pipeline was opened.")
+            if not warmed:
+                # Builds still reach the build meter: indexing() overrides this.
+                with unmetered():
+                    search(WARMUP_QUESTION)
+                warmed = True
+            started_at = datetime.now(UTC)
+            failures: list[FailedAttempt] = []
+            retrieval: RetrievedContext | None = None
+            steps: list[ReasoningStep] = []
+            # Every attempt stays inside one meter: failed attempts are real spend.
             with measure(settings.pricing) as question_cost:
-                started = perf_counter()
-                retrieval = search(record.question)
-                steps = refine_retrieval(
-                    record.question, retrieval, search, llm, options, reranker
-                )
-                retrieval.retrieval_seconds = (
-                    perf_counter() - started - retrieval.construction_seconds
-                )
+                for _ in range(attempts):
+                    started = perf_counter()
+                    try:
+                        retrieval = search(record.question)
+                        steps = refine_retrieval(
+                            record.question,
+                            retrieval,
+                            search,
+                            pipeline.llm,
+                            options,
+                            reranker,
+                        )
+                    except Exception as exc:  # noqa: BLE001 - any failure is scored as wrong
+                        failures.append(
+                            FailedAttempt(
+                                error=repr(exc)[:500], seconds=perf_counter() - started
+                            )
+                        )
+                        retrieval = None
+                        continue
+                    retrieval.retrieval_seconds = (
+                        perf_counter() - started - retrieval.construction_seconds
+                    )
+                    break
+            failed = retrieval is None
+            consecutive_failures = consecutive_failures + 1 if failed else 0
             saved = SavedRetrieval(
                 method=method,
                 dataset=dataset,
@@ -492,7 +551,10 @@ def run(
                 canonical_answer=record.answer,
                 expected_answers=list(record.answer_aliases()),
                 supporting_sentences=list(record.supporting_sentences()),
-                retrieval=retrieval,
+                retrieval=retrieval
+                or RetrievedContext(
+                    passages=[], scores=[], construction_seconds=0, retrieval_seconds=0
+                ),
                 index_dir=index_dir,
                 storage_mb=index_size_mb(index_dir),
                 llm_usage=[
@@ -509,11 +571,66 @@ def run(
                 options=options,
                 complexity=getattr(record, "complexity", None),
                 corpus_sha256=corpus_key,
+                retrieval_error=failures[-1].error if failed else None,
+                failed_attempts=failures,
+                started_at=started_at,
+                concurrency=concurrency,
             )
-        with retrieval_path.open("a", encoding="utf-8") as file:
-            file.write(saved.model_dump_json() + "\n")
-        print(f"{method}: saved retrieval for {record.id}", flush=True)
+            with retrieval_path.open("a", encoding="utf-8") as file:
+                file.write(saved.model_dump_json() + "\n")
+            print(f"{method}: saved retrieval for {record.id}", flush=True)
+            if consecutive_failures >= MAX_CONSECUTIVE_FAILURES:
+                raise RuntimeError(
+                    f"{consecutive_failures} questions failed in a row; "
+                    f"last error: {saved.retrieval_error}"
+                )
+    (run_dir / "build_cost.json").write_text(
+        BuildCostReport(
+            cost=build_cost,
+            list_usd=build_cost.list_usd(settings.pricing),
+            billed_usd=build_cost.estimated_usd,
+        ).model_dump_json(indent=2)
+    )
     return answer_saved(retrieval_path)
+
+
+def index_key(method: Method, dataset: str, corpus_key: str, settings: Settings) -> str:
+    if method == "graphrag":
+        from graphrag_retrieval import graph_index_key
+
+        return graph_index_key(corpus_key, dataset)
+    return sha256(
+        (
+            corpus_key
+            + settings.embedding.model_dump_json()
+            + settings.llm.model_dump_json()
+            + method
+            + (
+                "paper-chunks256-overlap20-v4-native-extraction-prompt"
+                if method == "hipporag"
+                else "paper-chunks256-overlap20-v7-raptor-checkpoints-capped-summaries"
+                if method == "raptor"
+                else "paper-chunks256-overlap20-v2"
+            )
+            + (
+                # exclude_none: fields added later with no value must not
+                # change the key and orphan an existing index.
+                settings.hipporag.model_dump_json(exclude_none=True)
+                if method == "hipporag" and settings.hipporag
+                else ""
+            )
+        ).encode()
+    ).hexdigest()
+
+
+def method_setup(method: Method):
+    if method == "hipporag":
+        from hipporag_retrieval import setup
+    elif method == "graphrag":
+        from graphrag_retrieval import setup
+    else:
+        from rag_retrieval import setup
+    return setup
 
 
 def answer_saved(retrieval_path: Path) -> Path:
@@ -564,27 +681,45 @@ def answer_saved(retrieval_path: Path) -> Path:
             usage_start = len(llm.usage)
             context = "\n\n".join(retrieved_context)
             prompt = benchmark_prompt(context, saved.question)
+            answer_started_at = datetime.now(UTC)
             started = perf_counter()
+            answer = ""
+            answer_failures: list[FailedAttempt] = []
             with measure(settings.pricing) as answer_cost:
-                answer = llm.infer(
-                    [
-                        Message(
-                            role="system",
-                            content=NEWS_QA_INSTRUCTION
-                            if dataset == "multihop_rag"
-                            else NOVELQA_QA_INSTRUCTION
-                            if dataset == "novelqa"
-                            else QA_INSTRUCTION,
-                        ).model_dump(),
-                        Message(role="user", content=prompt).model_dump(),
-                    ]
-                )[0]
+                # A question whose retrieval failed gets no answer call and
+                # scores 0; an answer call that keeps failing scores 0 as well.
+                for _ in range(0 if saved.retrieval_error else QUESTION_ATTEMPTS):
+                    attempt_started = perf_counter()
+                    try:
+                        answer = llm.infer(
+                            [
+                                Message(
+                                    role="system",
+                                    content=NEWS_QA_INSTRUCTION
+                                    if dataset == "multihop_rag"
+                                    else NOVELQA_QA_INSTRUCTION
+                                    if dataset == "novelqa"
+                                    else QA_INSTRUCTION,
+                                ).model_dump(),
+                                Message(role="user", content=prompt).model_dump(),
+                            ]
+                        )[0]
+                        break
+                    except Exception as exc:  # noqa: BLE001 - scored as wrong
+                        answer_failures.append(
+                            FailedAttempt(
+                                error=repr(exc)[:500],
+                                seconds=perf_counter() - attempt_started,
+                            )
+                        )
             answer_seconds = perf_counter() - started
             question_cost = (
                 QuestionCost(
                     calls=saved.question_cost.calls + answer_cost.calls,
                     missing_usage_calls=saved.question_cost.missing_usage_calls
                     + answer_cost.missing_usage_calls,
+                    failed_calls=saved.question_cost.failed_calls
+                    + answer_cost.failed_calls,
                 )
                 if saved.question_cost is not None
                 else None
@@ -618,9 +753,9 @@ def answer_saved(retrieval_path: Path) -> Path:
                 prompt=prompt,
                 answer=answer,
                 embedding_model=settings.embedding.model,
-                chunk_size=1000 if method == "graphrag" else CHUNK_SIZE,
-                chunk_overlap=100 if method == "graphrag" else CHUNK_OVERLAP,
-                chunk_unit="characters" if method == "graphrag" else "tokens",
+                chunk_size=CHUNK_SIZE,
+                chunk_overlap=CHUNK_OVERLAP,
+                chunk_unit="tokens",
                 top_k=saved.options.top_k,
                 expected_answers=expected_answers,
                 supporting_sentences=list(saved.supporting_sentences),
@@ -649,10 +784,26 @@ def answer_saved(retrieval_path: Path) -> Path:
                 estimated_question_cost_usd=question_cost.estimated_usd
                 if question_cost is not None
                 else None,
+                list_question_cost_usd=question_cost.list_usd(settings.pricing)
+                if question_cost is not None
+                else None,
+                model_seconds=question_cost.model_seconds
+                if question_cost is not None
+                else None,
                 reasoning_steps=saved.reasoning_steps,
                 options=saved.options,
                 complexity=saved.complexity,
                 corpus_sha256=saved.corpus_sha256,
+                retrieval_error=saved.retrieval_error
+                or (
+                    answer_failures[-1].error
+                    if not answer and answer_failures
+                    else None
+                ),
+                failed_attempts=saved.failed_attempts + answer_failures,
+                started_at=saved.started_at,
+                answer_started_at=answer_started_at,
+                concurrency=saved.concurrency,
             )
             results.append(result)
             with results_path.open(

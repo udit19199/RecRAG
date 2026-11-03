@@ -29,8 +29,15 @@ from cost import MeteredClient, indexing
 
 class ResponsesLLM(BaseLLM):
     def __init__(
-        self, config: BaseConfig, settings: Settings, model_name: str | None = None
+        self,
+        config: BaseConfig,
+        settings: Settings,
+        model_name: str | None = None,
+        *,
+        use_cache: bool = True,
     ) -> None:
+        # Set before super().__init__, which calls _init_llm_config.
+        self.use_cache = use_cache
         super().__init__(config)
         self.llm_name = model_name or settings.llm.model
         self.settings = settings
@@ -58,6 +65,11 @@ class ResponsesLLM(BaseLLM):
     def _init_llm_config(self) -> None:
         self.llm_config = LLMConfig()
         self.llm_config.generate_params = self.settings.model_dump()
+        if not self.use_cache:
+            # The upstream cache skips any request marked store=True. Question-time
+            # calls must not replay from disk: a hit records no cost and no time.
+            # infer() still sends store=False to the API.
+            self.llm_config.generate_params["store"] = True
 
     @cache_response
     def infer(self, messages, **kwargs):
@@ -203,52 +215,62 @@ def setup(settings: Settings, index_dir: Path, dataset: str):
     extraction_model = settings.hipporag.construction_model or settings.llm.model
     with (
         closing(ResponsesLLM(config, settings, extraction_model)) as extraction_llm,
-        closing(ResponsesLLM(config, settings)) as qa_llm,
+        closing(ResponsesLLM(config, settings, use_cache=False)) as qa_llm,
         closing(ConfiguredEmbeddings(config, settings.embedding)) as embeddings,
     ):
         index_dir.mkdir(parents=True, exist_ok=True)
-        yield SimpleNamespace(
+        pipeline = SimpleNamespace(
             config=config,
             extraction_llm=extraction_llm,
             llm=qa_llm,
             embeddings=embeddings,
+            rag=None,
         )
+        try:
+            yield pipeline
+        finally:
+            if pipeline.rag is not None:
+                pipeline.rag.close()
 
 
 def retrieve(
     *,
-    config: BaseConfig,
+    pipeline: SimpleNamespace,
     documents: list[str],
     corpus_key: str,
     indexed_corpora: set[str],
-    llm: BaseLLM,
-    extraction_llm: BaseLLM,
-    embeddings: OpenAIEmbeddingModel,
     question: str,
     top_k: int,
 ) -> RetrievedContext:
+    config: BaseConfig = pipeline.config
     started = perf_counter()
     index_marker = Path(config.save_dir) / "index.complete"
     should_index = corpus_key not in indexed_corpora and not index_marker.exists()
-    config.force_index_from_scratch = should_index
-    with HippoRAG(
-        global_config=config,
-        extraction_llm=extraction_llm,
-        qa_llm=llm,
-        embedding_model=embeddings,
-        index_identity="recrag-paper-chunks256-overlap20-v1",
-    ) as rag:
-        if should_index:
-            with indexing():
-                rag.index(docs=list(documents))
-            config.force_index_from_scratch = False
-            index_marker.write_text(corpus_key)
-        indexed_corpora.add(corpus_key)
-        construction_seconds = perf_counter() - started if should_index else 0.0
-        started = perf_counter()
-        solution = cast(
-            list[QuerySolution], rag.retrieve(queries=[question], num_to_retrieve=top_k)
-        )[0]
+    if pipeline.rag is None or should_index:
+        if pipeline.rag is not None:
+            pipeline.rag.close()
+        config.force_index_from_scratch = should_index
+        # Kept open for the whole run (closed by setup), so the graph and
+        # embedding stores load once instead of once per question.
+        pipeline.rag = HippoRAG(
+            global_config=config,
+            extraction_llm=pipeline.extraction_llm,
+            qa_llm=pipeline.llm,
+            embedding_model=pipeline.embeddings,
+            index_identity="recrag-paper-chunks256-overlap20-v1",
+        )
+    rag = pipeline.rag
+    if should_index:
+        with indexing():
+            rag.index(docs=list(documents))
+        config.force_index_from_scratch = False
+        index_marker.write_text(corpus_key)
+    indexed_corpora.add(corpus_key)
+    construction_seconds = perf_counter() - started if should_index else 0.0
+    started = perf_counter()
+    solution = cast(
+        list[QuerySolution], rag.retrieve(queries=[question], num_to_retrieve=top_k)
+    )[0]
     return RetrievedContext(
         passages=solution.docs,
         scores=solution.doc_scores.tolist(),

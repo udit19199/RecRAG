@@ -223,6 +223,8 @@ if run_clicked:
                         rag._embedder,
                         database,
                         search_llm,
+                        cypher_timeout=rag._config.graphrag.retrieval.timeout,
+                        schema_timeout=rag._config.graphrag.timeout,
                         neo4j_schema=get_schema(rag._driver, database=database),
                     )
                     retrieval_result = retriever.search(record.question, top_k=5)

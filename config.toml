@@ -13,6 +13,9 @@ timeout = 120
 [graphrag]
 namespace = "graphrag"
 timeout = 30
+index_timeout = 600
+extraction_concurrency = 20
+ontology = "dataset"
 
 [graphrag.graph]
 uri = "neo4j://localhost:7687"

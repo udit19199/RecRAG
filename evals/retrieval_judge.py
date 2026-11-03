@@ -23,6 +23,7 @@ Run with ``uv run python -m evals.retrieval_judge runs/<method>/<run> ...``.
 from __future__ import annotations
 
 import argparse
+import json
 import random
 import sys
 import threading
@@ -40,7 +41,7 @@ import numpy as np
 from dotenv import load_dotenv
 from langchain_core.messages import HumanMessage, SystemMessage
 from langchain_openai import ChatOpenAI
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, ConfigDict, ValidationError
 
 from benchmark import ROOT, Method, SavedRetrieval, Settings
 from cost import MeteredClient, Pricing, QuestionCost, measure
@@ -62,6 +63,7 @@ from evals.retrieval_quality import (
     ranked_items,
     score_question,
 )
+from graphrag_retrieval import parse_vector_evidence
 
 # Bump when a prompt or the scoring rule changes; it is part of every cache key.
 PROMPT_VERSION = "2026-10-30.2"
@@ -308,7 +310,9 @@ class Judge:
 
 
 def claims_payload(sentences: Sequence[str]) -> str:
-    return "\n".join(f"[{index}] {sentence}" for index, sentence in enumerate(sentences))
+    return "\n".join(
+        f"[{index}] {sentence}" for index, sentence in enumerate(sentences)
+    )
 
 
 def split_claims(judge: Judge, saved: SavedRetrieval) -> ClaimSplit:
@@ -318,7 +322,9 @@ def split_claims(judge: Judge, saved: SavedRetrieval) -> ClaimSplit:
             raise ValueError(f"{saved.record_id}: claim split skipped sentences.")
         for entry in split.sentences:
             if sum(claim.main for claim in entry.claims) != 1:
-                raise ValueError(f"{saved.record_id}: sentence {entry.sentence} main claim.")
+                raise ValueError(
+                    f"{saved.record_id}: sentence {entry.sentence} main claim."
+                )
 
     return judge.call(
         "claims",
@@ -332,7 +338,9 @@ def split_claims(judge: Judge, saved: SavedRetrieval) -> ClaimSplit:
     )
 
 
-def judgement_check(saved: SavedRetrieval, split: ClaimSplit) -> Callable[[Judgement], None]:
+def judgement_check(
+    saved: SavedRetrieval, split: ClaimSplit
+) -> Callable[[Judgement], None]:
     def check(judgement: Judgement) -> None:
         numbers = sorted(entry.sentence for entry in judgement.sentences)
         if numbers != list(range(len(saved.supporting_sentences))):
@@ -353,7 +361,10 @@ class _GraphRelationship(BaseModel):
     type: str
 
     def render(self) -> str:
-        ends = [" / ".join([end] if isinstance(end, str) else end) for end in [self.source, self.target]]
+        ends = [
+            " / ".join([end] if isinstance(end, str) else end)
+            for end in [self.source, self.target]
+        ]
         return f"{ends[0]} -[{self.type}]-> {ends[1]}"
 
 
@@ -386,7 +397,24 @@ class JudgeItem:
 
 
 def render_graphrag(passage: str) -> str:
-    evidence = _GraphEvidence.model_validate_json(passage)
+    current = parse_vector_evidence(passage)
+    if current:
+        lines = [current.text]
+        if current.facts:
+            lines.append(
+                "Graph facts:\n" + "\n".join(f"- {fact}" for fact in current.facts)
+            )
+        if current.entities:
+            lines.append("Entities: " + ", ".join(current.entities))
+        return "\n\n".join(lines)
+    try:
+        # Runs saved before VectorEvidence used nested graph_facts.
+        evidence = _GraphEvidence.model_validate_json(passage)
+    except ValidationError:
+        row = json.loads(passage)
+        return "Graph query row:\n" + "\n".join(
+            f"{key}: {value}" for key, value in row.items()
+        )
     lines = [evidence.text]
     facts = [
         relation.render()
@@ -394,7 +422,9 @@ def render_graphrag(passage: str) -> str:
         for relation in fact.relationships
     ]
     if facts:
-        lines.append("Graph facts:\n" + "\n".join(f"- {fact}" for fact in unique(facts)))
+        lines.append(
+            "Graph facts:\n" + "\n".join(f"- {fact}" for fact in unique(facts))
+        )
     if evidence.entities:
         lines.append(
             "Entities: "
@@ -432,7 +462,9 @@ def judge_items(
 ) -> list[JudgeItem]:
     if saved.method == "graphrag":
         # Agentic GraphRAG's own volume defines the budget, so both views match.
-        rendered = unique([render_graphrag(passage) for passage in saved.retrieval.passages])
+        rendered = unique(
+            [render_graphrag(passage) for passage in saved.retrieval.passages]
+        )
         return [
             JudgeItem(rank, "graphrag", text, normalize(text), normalize(text))
             for rank, text in enumerate(rendered)
@@ -480,7 +512,8 @@ def gold_answers(saved: SavedRetrieval) -> list[str]:
 
 def support_payload(saved: SavedRetrieval, order: Sequence[JudgeItem]) -> str:
     route = "\n".join(
-        f"[{index}] {sentence}" for index, sentence in enumerate(saved.supporting_sentences)
+        f"[{index}] {sentence}"
+        for index, sentence in enumerate(saved.supporting_sentences)
     )
     retrieved = "\n\n".join(
         f"<item {number}>\n{item.text}\n</item {number}>"
@@ -559,7 +592,9 @@ def verified(evidence: Evidence, order: Sequence[JudgeItem], view: View) -> bool
     return bool(quote) and quote in text
 
 
-def claim_status(judged: ClaimJudgement, order: Sequence[JudgeItem], view: View) -> ClaimStatus:
+def claim_status(
+    judged: ClaimJudgement, order: Sequence[JudgeItem], view: View
+) -> ClaimStatus:
     if judged.status == "missing":
         return "missing"
     if any(verified(evidence, order, view) for evidence in judged.evidence):
@@ -636,7 +671,9 @@ def score_gold(
     offset_full: bool,
     offset_any: bool,
 ) -> GoldScore:
-    if sorted(entry.claim for entry in judged.claims) != list(range(len(claims.claims))):
+    if sorted(entry.claim for entry in judged.claims) != list(
+        range(len(claims.claims))
+    ):
         raise ValueError(f"Judge skipped claims of: {sentence}")
     by_claim = sorted(judged.claims, key=lambda entry: entry.claim)
     mains = [claim.main for claim in claims.claims]
@@ -751,7 +788,9 @@ def score_one(
         yes_no,
     )
     # ID-style offset coverage is kept only as a check on the judge.
-    offset_items = graph_items if saved.method == "graphrag" else ranked_items(saved, corpus)
+    offset_items = (
+        graph_items if saved.method == "graphrag" else ranked_items(saved, corpus)
+    )
     golds = locate_gold(saved.supporting_sentences, corpus)
     offset = score_question(saved, run, offset_items, golds, budget, corpus, encoder)
     claims = sorted(split.sentences, key=lambda entry: entry.sentence)
@@ -880,7 +919,9 @@ DEFINITIONS = [
 
 def _percent(values: Sequence[float], samples: np.ndarray) -> Estimate:
     estimate = _estimate(np.array(values, dtype=float), samples)
-    return Estimate(mean=estimate.mean * 100, low=estimate.low * 100, high=estimate.high * 100)
+    return Estimate(
+        mean=estimate.mean * 100, low=estimate.low * 100, high=estimate.high * 100
+    )
 
 
 def _metrics(scores: Sequence[QuestionScore]) -> list[list[float]]:
@@ -909,7 +950,9 @@ METRICS = [
 
 
 def agreement(method: Method, scores: Sequence[QuestionScore]) -> Agreement:
-    gold = [g for score in scores if not score.has_untraceable_items for g in score.gold]
+    gold = [
+        g for score in scores if not score.has_untraceable_items for g in score.gold
+    ]
     full = [g for g in gold if g.offset_fully_covered]
     none = [g for g in gold if not g.offset_covered]
     return Agreement(
@@ -991,7 +1034,10 @@ def summarize(
             method=runs[index].saved[0].method,
             baseline="graphrag",
             estimate=_percent(
-                list(np.array(arrays[index][position]) - np.array(arrays[graph][position])),
+                list(
+                    np.array(arrays[index][position])
+                    - np.array(arrays[graph][position])
+                ),
                 samples,
             ),
         )
@@ -1022,7 +1068,11 @@ def print_table(report: Report) -> None:
         print(
             f"\n{dataset.dataset}: {dataset.scored_questions}/{dataset.questions} "
             "questions scored"
-            + (f", {len(dataset.failed_record_ids)} failed" if dataset.failed_record_ids else "")
+            + (
+                f", {len(dataset.failed_record_ids)} failed"
+                if dataset.failed_record_ids
+                else ""
+            )
         )
         print(
             f"{'method':<10} {'support score % [95% CI]':<27} "
@@ -1048,7 +1098,11 @@ def print_table(report: Report) -> None:
             )
         print("  paired differences (method - graphrag), percentage points:")
         for difference in dataset.differences:
-            if difference.metric in {"support_score", "full_support_rate", "retrieval_score"}:
+            if difference.metric in {
+                "support_score",
+                "full_support_rate",
+                "retrieval_score",
+            }:
                 print(
                     f"    {difference.method:<8} {difference.metric:<20} "
                     f"{_cell(difference.estimate)}"
@@ -1107,12 +1161,18 @@ def main() -> None:
         graph = next(run for run in runs if run.saved[0].method == "graphrag")
         for run in runs:
             if [s.record_id for s in run.saved] != [s.record_id for s in graph.saved]:
-                raise ValueError(f"{run.run} does not share Agentic GraphRAG's question order.")
+                raise ValueError(
+                    f"{run.run} does not share Agentic GraphRAG's question order."
+                )
             run.scores = [None] * len(run.saved)
         graph_items = [graphrag_items(saved, corpus) for saved in graph.saved]
         budgets = [graphrag_tokens(items, corpus, encoder) for items in graph_items]
-        gold_indexes = [i for i, saved in enumerate(graph.saved) if saved.supporting_sentences]
-        print(f"{dataset}: splitting claims for {len(gold_indexes)} questions", flush=True)
+        gold_indexes = [
+            i for i, saved in enumerate(graph.saved) if saved.supporting_sentences
+        ]
+        print(
+            f"{dataset}: splitting claims for {len(gold_indexes)} questions", flush=True
+        )
         splits: list[ClaimSplit | None] = [None] * len(graph.saved)
         with ThreadPoolExecutor(args.workers) as pool:
             tasks = [
@@ -1127,7 +1187,10 @@ def main() -> None:
             splits[index] = outcome(task)
             failures += splits[index] is None
         ready = [index for index in gold_indexes if splits[index] is not None]
-        print(f"{dataset}: judging {len(ready) * len(runs)} method-question pairs", flush=True)
+        print(
+            f"{dataset}: judging {len(ready) * len(runs)} method-question pairs",
+            flush=True,
+        )
         for run in runs:
             with ThreadPoolExecutor(args.workers) as pool:
                 tasks = [
@@ -1153,7 +1216,9 @@ def main() -> None:
                 run.scores[index] = outcome(task)
                 failures += run.scores[index] is None
         reports.append(summarize(dataset, runs, args.bootstrap, rng))
-        all_scores.extend(score for run in runs for score in run.scores if score is not None)
+        all_scores.extend(
+            score for run in runs for score in run.scores if score is not None
+        )
     costs = [entry.cost for entry in cache.entries]
     report = Report(
         created_at=stamp,
@@ -1172,7 +1237,8 @@ def main() -> None:
     )
     output.mkdir(parents=True, exist_ok=True)
     (output / "per_question.jsonl").write_text(
-        "".join(score.model_dump_json() + "\n" for score in all_scores), encoding="utf-8"
+        "".join(score.model_dump_json() + "\n" for score in all_scores),
+        encoding="utf-8",
     )
     (output / "summary.json").write_text(report.model_dump_json(indent=2))
     # Hand-check queues: judge/offset disagreements and summary-credited sentences.
@@ -1202,7 +1268,10 @@ def main() -> None:
         print(f"\nJudge cost so far (all cached calls): ${report.judge_cost_usd:.2f}")
     print(f"Wrote {_relative(output)}")
     if failures:
-        print(f"{failures} calls failed; rerun the same command to resume.", file=sys.stderr)
+        print(
+            f"{failures} calls failed; rerun the same command to resume.",
+            file=sys.stderr,
+        )
         sys.exit(1)
 
 

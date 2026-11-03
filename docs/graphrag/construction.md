@@ -1,8 +1,10 @@
 # Graph construction
 
 Graph construction turns shared source chunks into extracted entities,
-relationships, and embeddings. The benchmark runner passes its title-prefixed
-256-token `SentenceSplitter` chunks directly to Neo4j, with 20-token overlap.
+relationships, and embeddings. `GraphRAG.construct()` receives source pages
+and splits each page on its own with the benchmark's title-prefixed 256-token
+`SentenceSplitter` (20-token overlap), so chunks are identical to the other
+methods' chunks and every chunk knows its page.
 
 ## The whole flow
 
@@ -20,10 +22,11 @@ flowchart LR
 
 ## One example
 
-Repeated extracted properties retain their distinct values. When a property
-list mixes types, the adapter converts its values to text because Neo4j requires
-each stored property array to contain one type. This conversion also applies to
-cached extraction responses and does not change the extraction prompt.
+Repeated extracted properties other than `name` retain their distinct values
+as a list. When a list mixes types, the adapter converts its values to text
+because Neo4j requires each stored property array to contain one type. `name`
+is always a single string: when the model returns several names or a list, the
+first is the name and the rest go to an `aliases` list.
 
 The question is used later for retrieval and evaluation. Construction receives
 only the source pages.
@@ -88,18 +91,26 @@ Input text:
 {text}
 ```
 
-The ontology passes these suggested types through `{schema}`:
+`[graphrag] ontology` in `config.toml` picks the ontology. The default,
+`general`, is used for every dataset and passes these suggested types through
+`{schema}`:
 
 ```text
 Node types:
-Person, Organization, Place, CreativeWork, Event, Concept, Thing
+Person, Organization, Place, Event, Work, Concept, Thing
 
 Relationship types:
-BORN_IN, DIED_IN, LOCATED_IN, PART_OF, MEMBER_OF, CREATED_BY,
-SPOUSE_OF, CHILD_OF, AWARDED, HAS_NATIONALITY
+MEMBER_OF, WORKS_FOR, LOCATED_IN, PART_OF, CREATED, PARTICIPATED_IN, RELATED_TO
 
 Additional node and relationship types: allowed
 ```
+
+`dataset` keeps the earlier per-dataset ontologies: the biography ontology
+(Person, Organization, Place, CreativeWork, Event, Concept, Thing; BORN_IN,
+MEMBER_OF, CREATED_BY and others) for HotpotQA and other datasets, and the news
+ontology for MultiHop-RAG. The chosen ontology is part of the graph index key,
+so switching it builds a new graph instead of reusing an old one.
+The news ontology exists because the biography ontology had no article, outlet, or date types: on MultiHop-RAG 21% of entities fell back to Thing and 254 ad hoc relationship types appeared, while each chunk starts with "Title (Outlet, date)".
 
 The Ontology-guided method appends these rules to the shared prompt:
 
@@ -111,6 +122,27 @@ Rules:
 - Link name is UPPER_SNAKE, short, from text.
 - One fact per link. No facts outside text.
 ```
+
+The structured-output adapter then appends this instruction:
+
+```text
+Extract the entities and relationships only from the Input text section of
+the preceding message, never from formatting examples, using the response
+schema. Encode each node's and relationship's properties as a list of
+entries, or an empty list when there are none. In each entry, key is the
+property name in lower_snake_case, such as name, aliases, or occupation,
+and value is the stated fact. Every node has exactly one name entry whose
+value is a single string: the entity's main name. Put other names for the
+same entity in one aliases entry whose value is a list of strings. When any
+other property has several stated values, give them as one list value.
+```
+
+The adapter drops property entries whose key is empty, `key`, `value`, starts
+with `key` followed by a non-letter (such as `key_DO_NOT_USE` or `key1`),
+contains a space, colon, or question mark, starts with `__`, or is
+`embedding`. A pair such as `{key: "key", value: "kind"}`,
+`{key: "value", value: "company"}` is joined back into `kind = "company"`.
+Nodes with no name are dropped with their relationships.
 
 ## Build the graph
 
@@ -133,6 +165,8 @@ graph TD
     subgraph NEO4J["Neo4j"]
         chunk1["Chunk<br/>Scott Derrickson is American<br/>embedding: [0.12, -0.04, 0.88]"]
         chunk2["Chunk<br/>Ed Wood was American<br/>embedding: [-0.21, 0.77, 0.35]"]
+        page1["Document<br/>title: Scott Derrickson"]
+        page2["Document<br/>title: Ed Wood"]
         scott["__Entity__<br/>Scott Derrickson"]
         ed["__Entity__<br/>Ed Wood"]
         american["__Entity__<br/>American"]
@@ -142,7 +176,8 @@ graph TD
         ed -->|HAS_NATIONALITY| american
         scott -->|FROM_CHUNK| chunk1
         ed -->|FROM_CHUNK| chunk2
-        chunk1 -->|NEXT_CHUNK| chunk2
+        chunk1 -->|FROM_DOCUMENT| page1
+        chunk2 -->|FROM_DOCUMENT| page2
         chunk1 -.-> chunk_index
     end
 ```
@@ -154,19 +189,70 @@ record's source pages. Each database stores chunk vectors in Neo4j. The
 
 Neo4j provides both vector search and graph context for agentic retrieval.
 
+Before the pipeline runs, `rebuild_graph()` creates the `__tmp_internal_id` index in the target database because the library creates it only in the default database; without it the MultiHop-RAG relationship write ran at about 1k per minute instead of about 120k.
+
+## After the pipeline writes
+
+`rebuild_graph()` runs these steps in the target database once the pipeline
+has written chunks and entities:
+
+1. Clear `__tmp_internal_id` and drop its index. The library's own cleanup
+   runs without a database argument, so it cleaned the default database and
+   left about 40,000 temporary ids in each benchmark graph.
+2. Replace the pipeline's single inline `document.txt` Document with one
+   `Document` per source page (`title` and `name` are the page title as
+   given), link each chunk to its page with `FROM_DOCUMENT`, and delete
+   `NEXT_CHUNK` links between chunks of different pages. Before this, one
+   Document held every page and `NEXT_CHUNK` joined unrelated pages.
+3. Merge entities with the same primary label and the same
+   `toLower(trim(name))` using `apoc.refactor.mergeNodes` (first node is the
+   most connected one; its properties win, missing ones are filled from the
+   others; aliases are combined; relationships are kept and duplicates
+   merged; self-loops created by the merge are removed). Exact-match
+   resolution left 513 case-variant groups such as `CNBC` / `Cnbc` in the
+   MultiHop-RAG graph. The library's exact-match resolver is turned off
+   because this step covers it.
+4. Print to stderr how many chunks have no extracted entity. The MultiHop-RAG
+   news graph had 230 of 7,728.
+5. Create the `chunk_embeddings` vector index and wait up to
+   `[graphrag] index_timeout` seconds for it.
+
 ## Construction requests and restarts
 
-The pipeline embeds all chunks before extracting entities. Its embedding stage
-allows five concurrent requests. RecRAG runs the synchronous OpenAI embedding
-adapter in worker threads because the upstream adapter's async default blocks
-the event loop and otherwise sends these requests one at a time.
+A rebuild runs `CREATE OR REPLACE DATABASE ... WAIT`, so a retry after a
+failed or partial write starts from an empty database instead of adding a
+second copy of every node.
 
-Successful construction generation calls are cached locally under
-`runs/graphrag/construction-cache/`. Restarting a failed build can reuse those
-responses. Embeddings are regenerated, and the pipeline writes the graph only
-after all chunks finish extraction. A dropped API connection still fails the
-build rather than silently omitting chunks. Question-time generation does not
-use this construction cache.
+Before the pipeline starts, all chunks are embedded in batches of 512 texts
+per OpenAI embeddings request with the configured model and dimensions. The
+vectors are stored in an `embeddings` table in the same SQLite file as the
+generation cache (`runs/graphrag/construction-cache/<database>.sqlite`),
+keyed by sha256 of model, dimensions and text. The pipeline's embedder then
+answers from that table and calls the API only on a miss. The pipeline used
+to send one request per chunk, five at a time, and re-embedded everything on
+every restart.
+
+neo4j-graphrag wraps embedders and LLMs in a tenacity retry handler by
+default. RecRAG passes `NoOpRateLimitHandler` to both, and its OpenAI clients
+use `max_retries=0`, so the only retry policy is the one in `AGENTS.md`.
+
+Successful extraction calls are cached in the `chat_generations` table of the
+same file. The cache key is the prompt plus a construction identity: chat
+model, reasoning effort, chat endpoint override, embedding model and
+dimensions, chunking, ontology, extraction prompt, adapter instruction,
+extraction response schema, and the neo4j-graphrag version. It no longer
+uses LangChain's model string, which included timeouts, so changing
+`[llm] timeout` mid-build used to discard every cached extraction. The
+benchmark's Agentic GraphRAG index key uses the same identity plus the
+corpus hash, for the same reason. These key changes mean graphs and caches
+built before 2026-11-01 are not reused.
+
+When a cached reply fails to parse or validate, its entry is deleted and the
+model is called once more. Before, a bad cached reply failed the build on
+every resume. A fresh reply that fails still fails the build.
+
+Neo4j driver connections use `[graphrag] timeout` (30 s), which also bounds
+the schema queries made for text-to-Cypher.
 
 ## Related docs
 

@@ -1,10 +1,16 @@
-"""Question-time API usage. Index builders suspend this meter explicitly."""
+"""API usage per question and per index build.
+
+Question code runs inside measure(); index builders run inside indexing(), which
+routes their calls to the build meter of an enclosing metering_builds() (or drops
+them when none is active). Every call records its wall time, and failed calls are
+counted, because a timed-out request can still be billed and always costs time."""
 
 from __future__ import annotations
 
 import json
 from contextlib import contextmanager
 from contextvars import ContextVar
+from time import perf_counter
 from types import SimpleNamespace
 
 from openai import DefaultAsyncHttpxClient, DefaultHttpxClient
@@ -23,6 +29,17 @@ class Pricing(BaseModel):
     embedding_model: str = "text-embedding-3-small"
     embedding_per_million: float = Field(default=0.02, ge=0)
 
+    def list_usd(self, call: APICall) -> float | None:
+        """Price at the uncached list rate, so cost does not depend on run order."""
+        if call.kind == "embeddings" and call.model == self.embedding_model:
+            return call.input_tokens * self.embedding_per_million / 1_000_000
+        if call.kind == "responses" and call.model == self.llm_model:
+            return (
+                call.input_tokens * self.input_per_million
+                + call.output_tokens * self.output_per_million
+            ) / 1_000_000
+        return None
+
 
 class APICall(BaseModel):
     model: str
@@ -34,11 +51,32 @@ class APICall(BaseModel):
     reasoning_tokens: int = 0
     service_tier: str = "default"
     estimated_usd: float | None
+    seconds: float = 0.0
+
+
+class FailedCall(BaseModel):
+    kind: str
+    status: int | None
+    error: str
+    seconds: float
 
 
 class QuestionCost(BaseModel):
     calls: list[APICall] = Field(default_factory=list)
     missing_usage_calls: int = 0
+    failed_calls: list[FailedCall] = Field(default_factory=list)
+
+    def list_usd(self, pricing: Pricing) -> float | None:
+        prices = [pricing.list_usd(call) for call in self.calls]
+        if self.missing_usage_calls or any(price is None for price in prices):
+            return None
+        return sum(price or 0 for price in prices)
+
+    @property
+    def model_seconds(self) -> float:
+        return sum(call.seconds for call in self.calls) + sum(
+            call.seconds for call in self.failed_calls
+        )
 
     @property
     def estimated_usd(self) -> float | None:
@@ -55,6 +93,7 @@ class Meter(BaseModel):
 
 
 _meter: ContextVar[Meter | None] = ContextVar("question_cost", default=None)
+_build_meter: ContextVar[Meter | None] = ContextVar("build_cost", default=None)
 
 
 @contextmanager
@@ -68,7 +107,28 @@ def measure(pricing: Pricing):
 
 
 @contextmanager
+def metering_builds(pricing: Pricing):
+    """Collect every index-build call made inside indexing() blocks."""
+    meter = Meter(pricing=pricing)
+    token = _build_meter.set(meter)
+    try:
+        yield meter.cost
+    finally:
+        _build_meter.reset(token)
+
+
+@contextmanager
 def indexing():
+    token = _meter.set(_build_meter.get())
+    try:
+        yield
+    finally:
+        _meter.reset(token)
+
+
+@contextmanager
+def unmetered():
+    """Warm-up work that belongs to neither a question nor a build."""
     token = _meter.set(None)
     try:
         yield
@@ -76,11 +136,29 @@ def indexing():
         _meter.reset(token)
 
 
-def record_response(response) -> None:
+def _kind(request) -> str:
+    return request.url.path.rstrip("/").rsplit("/", 1)[-1]
+
+
+def record_failure(request, status: int | None, error: str, seconds: float) -> None:
     meter = _meter.get()
-    if meter is None or not response.is_success:
+    if meter is None or _kind(request) not in {"responses", "embeddings"}:
         return
-    kind = response.request.url.path.rstrip("/").rsplit("/", 1)[-1]
+    meter.cost.failed_calls.append(
+        FailedCall(
+            kind=_kind(request), status=status, error=error[:300], seconds=seconds
+        )
+    )
+
+
+def record_response(response, seconds: float = 0.0) -> None:
+    meter = _meter.get()
+    if meter is None:
+        return
+    if not response.is_success:
+        record_failure(response.request, response.status_code, response.text, seconds)
+        return
+    kind = _kind(response.request)
     if kind not in {"responses", "embeddings"}:
         return
     try:
@@ -154,6 +232,7 @@ def record_response(response) -> None:
                 reasoning_tokens=reasoning,
                 service_tier=tier,
                 estimated_usd=usd,
+                seconds=seconds,
             )
         )
     except (ValueError, TypeError, AttributeError):
@@ -162,17 +241,27 @@ def record_response(response) -> None:
 
 class MeteredClient(DefaultHttpxClient):
     def send(self, request, **kwargs):
-        response = super().send(request, **kwargs)
-        if _meter.get() is not None:
-            response.read()
-            record_response(response)
+        started = perf_counter()
+        try:
+            response = super().send(request, **kwargs)
+            if _meter.get() is not None:
+                response.read()
+        except Exception as exc:
+            record_failure(request, None, repr(exc), perf_counter() - started)
+            raise
+        record_response(response, perf_counter() - started)
         return response
 
 
 class MeteredAsyncClient(DefaultAsyncHttpxClient):
     async def send(self, request, **kwargs):
-        response = await super().send(request, **kwargs)
-        if _meter.get() is not None:
-            await response.aread()
-            record_response(response)
+        started = perf_counter()
+        try:
+            response = await super().send(request, **kwargs)
+            if _meter.get() is not None:
+                await response.aread()
+        except Exception as exc:
+            record_failure(request, None, repr(exc), perf_counter() - started)
+            raise
+        record_response(response, perf_counter() - started)
         return response

@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import argparse
 import html
+import json
 import os
 import re
 import string
@@ -27,7 +28,7 @@ from statistics import fmean
 from typing import Literal
 
 import numpy as np
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, ConfigDict, ValidationError
 
 from benchmark import ROOT, Method, SavedRetrieval, split_pages
 from dataset import SourcePage, load_hotpotqa_corpus, load_multihop_rag_record
@@ -46,8 +47,7 @@ DIFFERENCE_METRICS = ["gold_recall", "all_gold_hit", "budget_recall"]
 # Curly quotes, primes, dash variants and odd spaces fold to ASCII; invisible
 # characters are dropped. maketrans fails loudly if the two strings drift apart.
 _FOLD = str.maketrans(
-    "‘’‚‛′“”„‟″"
-    "‐‑‒–—―−   ",
+    "‘’‚‛′“”„‟″‐‑‒–—―−   ",
     "'''''\"\"\"\"\"-------   ",
     "​‌‍﻿­",
 )
@@ -272,12 +272,49 @@ def graphrag_items(saved: SavedRetrieval, corpus: Corpus) -> list[Item]:
     seen: set[str] = set()
     items: list[Item] = []
     for rank, passage in enumerate(saved.retrieval.passages):
-        window = _GraphRAGEvidence.model_validate_json(passage).text
-        if window in seen:
-            continue
-        seen.add(window)
-        items.extend(window_items(rank, window, corpus))
+        try:
+            windows = [_GraphRAGEvidence.model_validate_json(passage).text]
+            graph_row = False
+        except ValidationError:
+            # A cypher_search row has whatever columns the generated query
+            # returned. Long text columns are usually a source chunk, so they
+            # are located like a window; the rest of the row has no offsets
+            # and is left to the subagent judge (evals.subagent_judge).
+            windows = _row_texts(passage)
+            graph_row = True
+        for window in windows:
+            if window in seen:
+                continue
+            seen.add(window)
+            items.extend(
+                item
+                for item in window_items(rank, window, corpus)
+                if item.spans or not graph_row
+            )
     return items
+
+
+ROW_TEXT_MIN_CHARS = 200
+
+
+def _row_texts(passage: str) -> list[str]:
+    try:
+        row = json.loads(passage)
+    except ValueError:
+        return []
+    # Generated queries often collect passages into lists or nested maps
+    # ("passages": [...], "firstPassages": [...]), so walk the whole row.
+    texts: list[str] = []
+    pending: list[object] = [row]
+    while pending:
+        value = pending.pop()
+        if isinstance(value, dict):
+            pending.extend(value.values())
+        elif isinstance(value, list):
+            pending.extend(value)
+        elif isinstance(value, str) and len(value) >= ROW_TEXT_MIN_CHARS:
+            texts.append(value)
+    return texts
 
 
 @dataclass(slots=True)
@@ -327,7 +364,9 @@ def union_covers(gold: Gold, merged: Sequence[Span]) -> bool:
     overlapping windows counts as fully covered.
     """
     return any(
-        span.start <= g.start and g.end <= span.end for g in gold.spans for span in merged
+        span.start <= g.start and g.end <= span.end
+        for g in gold.spans
+        for span in merged
     )
 
 
@@ -576,8 +615,12 @@ def score_dataset(
     graphrag = next(run for run in runs if run.saved[0].method == "graphrag")
     for run in runs:
         if [s.record_id for s in run.saved] != [s.record_id for s in graphrag.saved]:
-            raise ValueError(f"{run.run} does not share Agentic GraphRAG's question order.")
-    golds = [locate_gold(saved.supporting_sentences, corpus) for saved in graphrag.saved]
+            raise ValueError(
+                f"{run.run} does not share Agentic GraphRAG's question order."
+            )
+    golds = [
+        locate_gold(saved.supporting_sentences, corpus) for saved in graphrag.saved
+    ]
     graph_items = [graphrag_items(saved, corpus) for saved in graphrag.saved]
     budgets = [graphrag_tokens(items, corpus, encoder) for items in graph_items]
     for run in runs:
@@ -590,8 +633,13 @@ def score_dataset(
             )
             run.scores.append(
                 score_question(
-                    saved, run.run, items, golds[index], budgets[index],
-                    corpus, encoder,
+                    saved,
+                    run.run,
+                    items,
+                    golds[index],
+                    budgets[index],
+                    corpus,
+                    encoder,
                 )
             )
     scored = [index for index, gold in enumerate(golds) if gold]
@@ -684,7 +732,9 @@ def load_run(run_dir: Path) -> list[SavedRetrieval]:
 
 def _relative(path: Path) -> str:
     resolved = path.resolve()
-    return str(resolved.relative_to(ROOT)) if resolved.is_relative_to(ROOT) else str(path)
+    return (
+        str(resolved.relative_to(ROOT)) if resolved.is_relative_to(ROOT) else str(path)
+    )
 
 
 def _cell(estimate: Estimate) -> str:
