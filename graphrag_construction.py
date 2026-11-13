@@ -458,9 +458,12 @@ def ontology_for(
 ) -> GraphSchema:
     if choice == "general":
         return GENERAL_ONTOLOGY_SCHEMA
-    return (
-        NEWS_ONTOLOGY_SCHEMA if dataset == "multihop_rag" else BIOGRAPHY_ONTOLOGY_SCHEMA
-    )
+    if dataset == "multihop_rag":
+        return NEWS_ONTOLOGY_SCHEMA
+    if dataset == "hotpotqa":
+        return BIOGRAPHY_ONTOLOGY_SCHEMA
+    # Natural Questions and NovelQA pages cover any topic (decided 10 Nov 2026).
+    return GENERAL_ONTOLOGY_SCHEMA
 
 
 ONTOLOGY_EXTRACTION_PROMPT = ERExtractionTemplate.DEFAULT_TEMPLATE + (

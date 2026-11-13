@@ -5,11 +5,12 @@ from __future__ import annotations
 import asyncio
 import json
 import os
+import re
 import sqlite3
 import threading
 import tomllib
 from array import array
-from collections.abc import Iterator, Sequence
+from collections.abc import Callable, Iterator, Sequence
 from contextlib import contextmanager
 from dataclasses import dataclass
 from hashlib import sha256
@@ -20,7 +21,13 @@ from typing import TYPE_CHECKING, Any, LiteralString, cast
 import neo4j
 from dotenv import load_dotenv
 from langchain.agents import create_agent
-from langchain.agents.middleware import ModelCallLimitMiddleware
+from langchain.agents.middleware import (
+    AgentMiddleware,
+    ModelCallLimitMiddleware,
+    ModelRequest,
+    ModelResponse,
+    wrap_model_call,
+)
 from langchain_core.caches import BaseCache
 from langchain_core.language_models import BaseChatModel
 from langchain_core.messages import (
@@ -124,6 +131,9 @@ class GraphConfig(BaseModel):
     ontology: OntologyChoice = "general"
     construction_model: str | None = None
     agent_model: str | None = None
+    # Thinking level for the one call that writes a Cypher query from the
+    # agent's lookup. None uses llm.reasoning_effort.
+    cypher_reasoning_effort: str | None = None
     retrieval: GraphRetrievalConfig = Field(default_factory=GraphRetrievalConfig)
 
 
@@ -398,10 +408,40 @@ def format_vector_record(record: neo4j.Record) -> RetrieverResultItem:
     )
 
 
+# Graph rows carry graph facts only (13 Nov 2026). Before this, the generated
+# Cypher often collected every chunk of an article (whole article text) and
+# every linked entity into one row; 13 of the 54 graph rows the answer model
+# got were over 1,000 tokens, up to 14,600. Passage text now comes only from
+# vector_search, and long lists are cut.
+CYPHER_LIST_LIMIT = 20
+PASSAGE_TEXT = re.compile(r"\.\s*text\b|\[\s*['\"]text['\"]\s*\]", re.IGNORECASE)
+
+
+def _graph_facts(value: Any) -> Any:
+    """Drop passage text and keep at most CYPHER_LIST_LIMIT items per list."""
+    if isinstance(value, dict):
+        return {
+            key: _graph_facts(item)
+            for key, item in value.items()
+            if key not in ("text", "embedding")
+        }
+    if isinstance(value, list):
+        kept = [_graph_facts(item) for item in value[:CYPHER_LIST_LIMIT]]
+        if len(value) > CYPHER_LIST_LIMIT:
+            kept.append(f"(+{len(value) - CYPHER_LIST_LIMIT} more)")
+        return kept
+    return value
+
+
 def format_cypher_record(record: neo4j.Record) -> RetrieverResultItem:
     return RetrieverResultItem(
-        content=json.dumps(record.data(), ensure_ascii=False, default=str)
+        content=json.dumps(_graph_facts(record.data()), ensure_ascii=False, default=str)
     )
+
+
+def without_passage_text(schema: str) -> str:
+    """The graph schema with Chunk.text removed, so queries cannot ask for it."""
+    return re.sub(r",?\s*\btext: STRING", "", schema).replace("{, ", "{")
 
 
 def _format_tool_record(record: neo4j.Record) -> RetrieverResultItem:
@@ -416,10 +456,30 @@ def parse_vector_evidence(content: str) -> VectorEvidence | None:
         return None
 
 
+def answer_text(content: str) -> str:
+    """What the answer model reads for one item.
+
+    A vector_search passage becomes its plain text, which starts with the
+    page title line exactly as Normal RAG's chunks do; its entity list and
+    graph facts stay in the saved evidence but are not sent. A cypher_search
+    row has no plain form and is sent as returned.
+    """
+    evidence = parse_vector_evidence(content)
+    return evidence.text if evidence else content
+
+
 def _evidence_key(content: str) -> str:
     evidence = parse_vector_evidence(content)
     text = evidence.text if evidence else content
     return " ".join(text.lower().split())
+
+
+EVIDENCE_ID = re.compile(r"\bE[0-9a-f]{6}\b")
+
+
+def evidence_id(content: str) -> str:
+    """Short ID the agent uses to pick an item; the same text gets the same ID."""
+    return "E" + sha256(_evidence_key(content).encode()).hexdigest()[:6]
 
 
 TOOL_PURPOSE = (
@@ -434,6 +494,17 @@ AGENT_INSTRUCTION = TOOL_PURPOSE + (
     "about the named entities in that evidence. After that, either call the next "
     "best tool with a refined query or make no tool call if the evidence is "
     "sufficient. Do not repeat a search that returned no new evidence."
+    # Picking the evidence (13 Nov 2026). Before this, code kept the 10
+    # vector passages with the highest similarity score and graph rows only
+    # filled empty slots, so no graph row ever reached the answer model (0 of
+    # 300 comparison runs) and the agent's own view of what was relevant was
+    # discarded. In 59 of 111 runs missing a named article, the graph lookup
+    # had returned that article.
+    " Every result line starts with an ID such as [E1a2b3c]. When you stop "
+    "searching, do not answer the question. Reply only with the IDs of the "
+    f"results the answer needs, at most {RETRIEVAL_TOP_K}, most important first, "
+    "one per line. Results from either tool count. Pick evidence for every "
+    "article, person or part the question asks about."
 )
 
 
@@ -450,7 +521,7 @@ Rules:
 - Use only node labels, relationship types, and properties listed in the schema.
 - Every extracted entity also has the label __Entity__ with a name and optional aliases.
 - Match names case-insensitively: compare toLower(n.name), and each alias in coalesce(n.aliases, []), with a lowercase string.
-- To find passages, match entities by name and follow FROM_CHUNK to the Chunk; never filter Chunk.text with CONTAINS.
+- Return graph facts only: names, titles, dates, short properties and relationship types. Never return passage text; vector_search finds passages.
 - Write alternative relationship types as [:A|B].
 - Return names and short properties, never embedding, and end with LIMIT {CYPHER_ROW_LIMIT} or less.
 
@@ -461,6 +532,10 @@ Return only the Cypher statement, with no triple backticks or other text.
 
 Cypher query:
 """
+
+
+CYPHER_INPUT_MARK = "Input:\n"
+assert CYPHER_PROMPT.count(CYPHER_INPUT_MARK) == 1
 
 
 def _name_matches(variable: str, name: str) -> str:
@@ -475,11 +550,11 @@ CYPHER_EXAMPLES = [
     "MATCH (n:__Entity__)-[r]-(m:__Entity__) WHERE "
     + _name_matches("n", "ada lovelace")
     + " RETURN n.name AS entity, type(r) AS relationship, m.name AS related LIMIT 10",
-    "USER INPUT: 'Which passages mention Acme Corp?' QUERY: "
-    "MATCH (n:__Entity__)-[:FROM_CHUNK]->(c:Chunk)-[:FROM_DOCUMENT]->(d:Document) "
+    "USER INPUT: 'Which pages mention Acme Corp?' QUERY: "
+    "MATCH (n:__Entity__)-[:FROM_CHUNK]->(:Chunk)-[:FROM_DOCUMENT]->(d:Document) "
     "WHERE "
     + _name_matches("n", "acme corp")
-    + " RETURN n.name AS entity, d.title AS page, c.text AS passage LIMIT 10",
+    + " RETURN DISTINCT n.name AS entity, d.title AS page LIMIT 10",
     "USER INPUT: 'Which organizations is Jane Doe part of?' QUERY: "
     "MATCH (p:Person)-[:MEMBER_OF|WORKS_FOR]->(o:Organization) WHERE "
     + _name_matches("p", "jane doe")
@@ -544,7 +619,27 @@ class _BoundedText2CypherRetriever(Text2CypherRetriever):
             examples="\n".join(self.examples or []),
             query_text=query_text,
         )
-        cypher = extract_cypher(self.llm.invoke(prompt).content)
+        # The same prompt text in two messages: the part every question shares
+        # (task, schema, examples, rules) as the system message, the lookup as
+        # the user message. OpenAI only served the shared part from its prompt
+        # cache when it was a message of its own (tested 10 Nov 2026: 0 of
+        # 2,336 input tokens cached as one message, 2,304 as two). The shared
+        # key sends these calls to the same cache.
+        shared, lookup = prompt.split(CYPHER_INPUT_MARK, 1)
+        cypher = extract_cypher(
+            self.llm.invoke(
+                [
+                    {"role": "system", "content": shared},
+                    {"role": "user", "content": CYPHER_INPUT_MARK + lookup},
+                ],
+                prompt_cache_key=f"recrag-cypher-{self.neo4j_database}",
+            ).content
+        )
+        if PASSAGE_TEXT.search(cypher):
+            raise ToolException(
+                "Refused a query that returns passage text; cypher_search returns "
+                f"graph facts only, vector_search finds passages.\nCypher: {cypher}"
+            )
         try:
             with self.driver.session(
                 database=self.neo4j_database, default_access_mode=neo4j.READ_ACCESS
@@ -585,7 +680,10 @@ def _langchain_tool(tool: Tool) -> StructuredTool:
             )
             for item in result.items
         ]
-        rows = "\n".join(str(record["content"]) for record in records)
+        rows = "\n".join(
+            f"[{evidence_id(str(record['content']))}] {record['content']}"
+            for record in records
+        )
         cypher = result.metadata.get("cypher") if result.metadata else None
         if cypher is None:
             return rows, records
@@ -603,6 +701,30 @@ def _langchain_tool(tool: Tool) -> StructuredTool:
         response_format="content_and_artifact",
         handle_tool_error=True,
     )
+
+
+@dataclass(frozen=True, slots=True)
+class _AgentContext:
+    cache_key: str
+
+
+@wrap_model_call
+def _question_cache_key(
+    request: ModelRequest[_AgentContext],
+    handler: Callable[[ModelRequest[_AgentContext]], ModelResponse],
+) -> ModelResponse:
+    """Give every agent call for one question the same prompt_cache_key.
+
+    Each agent step resends the previous step's messages plus the newest tool
+    result. The key routes those requests to the same OpenAI cache, so the
+    repeated part is billed at the cached-input rate. What the model reads is
+    unchanged.
+    """
+    settings = {
+        **request.model_settings,
+        "prompt_cache_key": request.runtime.context.cache_key,
+    }
+    return handler(request.override(model_settings=settings))
 
 
 class AgenticToolsRetriever(ToolsRetriever):
@@ -624,11 +746,16 @@ class AgenticToolsRetriever(ToolsRetriever):
             system_instruction=system_instruction,
         )
         self.result_formatter = _format_tool_record
+        middleware: list[AgentMiddleware[Any, Any, Any]] = [
+            ModelCallLimitMiddleware(run_limit=5),
+            _question_cache_key,
+        ]
         self._agent = create_agent(
             model=agent_llm,
             tools=[_langchain_tool(tool) for tool in self._tools],
             system_prompt=self.system_instruction,
-            middleware=[ModelCallLimitMiddleware(run_limit=5)],
+            middleware=middleware,
+            context_schema=_AgentContext,
         )
 
     def get_search_results(
@@ -638,26 +765,89 @@ class AgenticToolsRetriever(ToolsRetriever):
         top_k: int = RETRIEVAL_TOP_K,
         **kwargs: Any,
     ) -> RawSearchResult:
-        """Run the LangChain agent and return its Neo4j tool artifacts."""
+        """Run the LangChain agent and pass on the evidence it picked.
+
+        The agent ends by listing the IDs of the results the answer needs,
+        from either tool; those come first, in its order. Remaining slots up
+        to top_k are filled as before: pooled vector_search passages by best
+        similarity score, then cypher_search rows in arrival order. If the
+        agent names no valid ID, that old rule picks all top_k. The metadata
+        records every tool call and, as a final "select_evidence" step, the
+        agent's reply and how many of its picks were used.
+        """
         messages = [*(message_history or []), {"role": "user", "content": query_text}]
-        result = self._agent.invoke({"messages": messages})
-        seen: set[str] = set()
-        tools: set[str] = set()
-        head: list[neo4j.Record] = []
-        tail: list[neo4j.Record] = []
+        key = sha256(f"{self.neo4j_database}\0{query_text}".encode()).hexdigest()
+        result = self._agent.invoke(
+            {"messages": messages},
+            context=_AgentContext(cache_key=f"recrag-agent-{key[:32]}"),
+        )
+        queries = {
+            call["id"]: call["args"]
+            for message in result["messages"]
+            if isinstance(message, AIMessage)
+            for call in message.tool_calls
+        }
+        # A passage found by several searches keeps its best score.
+        passages: dict[str, tuple[float, int, neo4j.Record]] = {}
+        seen_rows: set[str] = set()
+        rows: list[neo4j.Record] = []
+        trace: list[dict[str, Any]] = []
         for message in result["messages"]:
             if not isinstance(message, ToolMessage):
                 continue
             artifact: list[neo4j.Record] = message.artifact or []
+            step = len(trace)
+            trace.append(
+                {
+                    "step": step,
+                    "tool": message.name,
+                    "args": queries.get(message.tool_call_id, {}),
+                    "status": message.status,
+                    "output": str(message.content),
+                    "results": len(artifact),
+                }
+            )
             for record in artifact:
                 key = _evidence_key(str(record["content"]))
-                if key in seen:
-                    continue
-                seen.add(key)
-                tool_name: str = record["tool_name"]
-                (tail if tool_name in tools else head).append(record)
-                tools.add(tool_name)
-        return RawSearchResult(records=[*head, *tail][:top_k])
+                score = (record["metadata"] or {}).get("score")
+                if record["tool_name"] == "vector_search" and score is not None:
+                    found = passages.get(key)
+                    if found is None:
+                        passages[key] = (float(score), len(passages), record)
+                    elif float(score) > found[0]:
+                        passages[key] = (float(score), found[1], record)
+                elif key not in seen_rows:
+                    seen_rows.add(key)
+                    rows.append(record)
+        # Highest score first; ties keep the order the agent found them in.
+        ranked = sorted(passages.values(), key=lambda entry: (-entry[0], entry[1]))
+        fallback = [record for _, _, record in ranked] + rows
+        by_id = {evidence_id(str(record["content"])): record for record in fallback}
+        final = result["messages"][-1]
+        reply = final.text if isinstance(final, AIMessage) else ""
+        picked: list[neo4j.Record] = []
+        for found_id in EVIDENCE_ID.findall(reply):
+            record = by_id.get(found_id)
+            if record is not None and all(record is not p for p in picked):
+                picked.append(record)
+        kept = picked[:top_k]
+        kept += [r for r in fallback if all(r is not k for k in kept)][
+            : top_k - len(kept)
+        ]
+        trace.append(
+            {
+                "step": len(trace),
+                "tool": "select_evidence",
+                "args": {},
+                "status": "success" if picked else "no_valid_ids",
+                "output": reply,
+                "results": min(len(picked), top_k),
+            }
+        )
+        return RawSearchResult(
+            records=kept,
+            metadata={"trace": trace, "agent_messages": len(result["messages"])},
+        )
 
 
 @dataclass(slots=True)
@@ -783,7 +973,9 @@ def build_agentic_retriever(
         driver=driver,
         llm=llm,
         database=database,
-        neo4j_schema=neo4j_schema or graph_schema(driver, database, schema_timeout),
+        neo4j_schema=without_passage_text(
+            neo4j_schema or graph_schema(driver, database, schema_timeout)
+        ),
         timeout=cypher_timeout,
     )
     vector = _ChunkVectorRetriever(driver=driver, database=database, embedder=embedder)
@@ -808,12 +1000,13 @@ def build_agentic_retriever(
                 description=(
                     "Query the knowledge graph extracted from the source text: "
                     f"{graph_contents(ontology)} and the relationships between them. "
-                    "Generates and runs a read-only Cypher query."
+                    "Generates and runs a read-only Cypher query. Returns graph "
+                    "facts (names, titles, dates, relationships), never passage text."
                 ),
                 parameter_descriptions={
                     "query_text": (
                         "A short lookup about specific named entities, such as "
-                        "'what is connected to <name>' or 'which passages "
+                        "'what is connected to <name>' or 'which articles "
                         "mention <name>'."
                     ),
                 },
@@ -968,6 +1161,7 @@ class GraphRAG:
         *,
         driver: Driver,
         llm: GraphRAGChatLLM,
+        cypher_llm: GraphRAGChatLLM,
         construction_llm: GraphRAGChatLLM,
         agent_llm: BaseChatModel,
         embedder: GraphRAGEmbeddings,
@@ -977,6 +1171,7 @@ class GraphRAG:
     ) -> None:
         self._driver = driver
         self._llm = llm
+        self._cypher_llm = cypher_llm
         self._construction_llm = construction_llm
         self._agent_llm = agent_llm
         self._embedder = embedder
@@ -1004,7 +1199,7 @@ class GraphRAG:
 
         base_url = os.environ.get("RECRAG_CHAT_BASE_URL")
 
-        def chat_model(model_name: str) -> ChatOpenAI:
+        def chat_model(model_name: str, effort: str | None = None) -> ChatOpenAI:
             configured = model_name == config.llm.model
             local_chat = bool(base_url) and configured
             return ChatOpenAI(
@@ -1032,7 +1227,7 @@ class GraphRAG:
                 http_client=MeteredClient(timeout=config.llm.timeout),
                 http_async_client=MeteredAsyncClient(timeout=config.llm.timeout),
                 reasoning=(
-                    {"effort": config.llm.reasoning_effort}
+                    {"effort": effort or config.llm.reasoning_effort}
                     if configured and not local_chat
                     else None
                 ),
@@ -1040,6 +1235,12 @@ class GraphRAG:
 
         try:
             answer_model = chat_model(config.llm.model)
+            cypher_effort = config.graphrag.cypher_reasoning_effort
+            cypher_chat = (
+                chat_model(config.llm.model, cypher_effort)
+                if cypher_effort not in {None, config.llm.reasoning_effort}
+                else answer_model
+            )
             construction_chat = chat_model(config.construction_model)
             agent_chat = (
                 construction_chat
@@ -1049,6 +1250,7 @@ class GraphRAG:
             return cls(
                 driver=driver,
                 llm=GraphRAGChatLLM(answer_model),
+                cypher_llm=GraphRAGChatLLM(cypher_chat),
                 construction_llm=GraphRAGChatLLM(construction_chat),
                 agent_llm=agent_chat,
                 embedder=GraphRAGEmbeddings(
@@ -1072,7 +1274,7 @@ class GraphRAG:
                 return retriever
         retriever = build_agentic_retriever(
             self._driver,
-            self._llm,
+            self._cypher_llm,
             self._embedder,
             database,
             self._agent_llm,
@@ -1143,6 +1345,9 @@ class GraphRAG:
         self._driver.close()
         self._embedder.client.close()
         self._answer_llm.root_client.close()
+        cypher_model = self._cypher_llm._model
+        if cypher_model is not self._answer_llm:
+            cypher_model.root_client.close()
         construction_model = self._construction_llm._model
         if construction_model is not self._answer_llm:
             construction_model.root_client.close()
@@ -1212,8 +1417,11 @@ def retrieve(
         schema = schema_path.read_text()
     started = perf_counter()
     result = rag.retriever(database, neo4j_schema=schema).search(question, top_k=top_k)
+    metadata = result.metadata or {}
     return RetrievedContext(
-        passages=[str(item.content) for item in result.items],
+        passages=[answer_text(str(item.content)) for item in result.items],
+        evidence=[str(item.content) for item in result.items],
+        trace=metadata.get("trace", []),
         scores=[
             float(item.metadata["score"])
             if item.metadata and item.metadata.get("score") is not None
