@@ -30,7 +30,7 @@ import threading
 import tomllib
 from collections.abc import Callable, Sequence
 from concurrent.futures import Future, ThreadPoolExecutor, as_completed
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import UTC, datetime
 from hashlib import sha256
 from pathlib import Path
@@ -242,6 +242,8 @@ class Judge:
     model_name: str
     pricing: Pricing
     cache: Cache
+    # Cache keys this run asked for, so the report's cost covers this run only.
+    used: set[str] = field(default_factory=set)
 
     @classmethod
     def from_config(cls, cache: Cache) -> Judge:
@@ -275,6 +277,7 @@ class Judge:
         key = sha256(
             "\x00".join([PROMPT_VERSION, self.model_name, kind, system, user]).encode()
         ).hexdigest()
+        self.used.add(key)
         cached = self.cache.get(key)
         if cached is not None:
             response = schema.model_validate_json(cached.response)
@@ -397,6 +400,12 @@ class JudgeItem:
 
 
 def render_graphrag(passage: str) -> str:
+    try:
+        json.loads(passage)
+    except ValueError:
+        # Runs from 9 Nov 2026 save a vector_search passage as the plain text
+        # the answer model reads, so the judge sees exactly that.
+        return passage
     current = parse_vector_evidence(passage)
     if current:
         lines = [current.text]
@@ -1219,7 +1228,12 @@ def main() -> None:
         all_scores.extend(
             score for run in runs for score in run.scores if score is not None
         )
-    costs = [entry.cost for entry in cache.entries]
+    # Latest entry per key: a re-asked call replaces the rejected reply's cost.
+    costs = [
+        entry.cost
+        for entry in {e.key: e for e in cache.entries}.values()
+        if entry.key in judge.used
+    ]
     report = Report(
         created_at=stamp,
         prompt_version=PROMPT_VERSION,
@@ -1265,7 +1279,7 @@ def main() -> None:
     )
     print_table(report)
     if report.judge_cost_usd is not None:
-        print(f"\nJudge cost so far (all cached calls): ${report.judge_cost_usd:.2f}")
+        print(f"\nJudge cost of the calls this run used: ${report.judge_cost_usd:.2f}")
     print(f"Wrote {_relative(output)}")
     if failures:
         print(

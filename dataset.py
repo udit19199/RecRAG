@@ -7,6 +7,7 @@ shapes without scattering the active dataset interface across modules.
 from __future__ import annotations
 
 import json
+import os
 from collections.abc import Callable, Sequence
 from dataclasses import dataclass
 from functools import cache
@@ -85,6 +86,11 @@ def load_hotpotqa_corpus() -> list[SourcePage]:
 
 @cache
 def _hotpot_table():
+    # A study can fix its own question file (rows as saved from the Hugging
+    # Face distractor validation split); its paragraphs are the shared corpus.
+    chosen = os.environ.get("RECRAG_HOTPOTQA_ROWS")
+    if chosen:
+        return json.loads(Path(chosen).read_text(encoding="utf-8"))
     dataset_dir = Path(__file__).parent / "datasets/hotpotqa"
     for filename in (
         "hotpotqa_distractor_validation_hard_bridge_1000_seed_42.json",
@@ -330,16 +336,83 @@ def _novelqa_page(book_id: str) -> SourcePage:
 
 
 def load_natural_questions_record(index: int) -> NaturalQuestionsRecord:
+    saved = os.environ.get("RECRAG_NQ_RECORDS")
+    if saved:
+        return _saved_natural_questions(saved)[index]
     return _natural_questions_record(_natural_questions_table()[index])
 
 
 @cache
+def _saved_natural_questions(path: str) -> list[NaturalQuestionsRecord]:
+    """Records saved once by _natural_questions_record, read without pyarrow.
+
+    HippoRAG's separate environment cannot import the datasets package, so a
+    study saves the processed records once and every method reads that file.
+    """
+    rows = json.loads(Path(path).read_text(encoding="utf-8"))
+    return [
+        NaturalQuestionsRecord(
+            id=row["id"],
+            question=row["question"],
+            pages=[SourcePage(**page) for page in row["pages"]],
+            answer=row["answer"],
+            aliases=row["aliases"],
+            evidence=row["evidence"],
+        )
+        for row in rows
+    ]
+
+
+def natural_questions_corpus_rows() -> range | None:
+    """Rows whose pages form one shared corpus, from RECRAG_NQ_CORPUS_ROWS.
+
+    "0-499" means rows 0 to 499. Unset keeps one corpus per question, as in
+    the NQ 100 pilot.
+    """
+    value = os.environ.get("RECRAG_NQ_CORPUS_ROWS")
+    if not value:
+        return None
+    first, last = (int(part) for part in value.split("-", 1))
+    return range(first, last + 1)
+
+
+@cache
+def load_natural_questions_corpus(rows: range) -> list[SourcePage]:
+    """Each distinct Wikipedia page of the given rows, once, in row order."""
+    pages: list[SourcePage] = []
+    seen: set[str] = set()
+    for index in rows:
+        for page in load_natural_questions_record(index).pages:
+            key = sha256(
+                (page.title + "\n" + "\n".join(page.passages)).encode()
+            ).hexdigest()
+            if key not in seen:
+                pages.append(page)
+                seen.add(key)
+    return pages
+
+
+@cache
 def _natural_questions_table():
+    from huggingface_hub import snapshot_download
+
     from datasets import load_dataset
 
-    return load_dataset(
-        "google-research-datasets/natural_questions", "default", split="validation"
+    # Fetch only the validation files (about 2.7 GB). load_dataset on the repo
+    # downloads the whole train split first (about 40 GB).
+    root = Path(
+        snapshot_download(
+            repo_id="google-research-datasets/natural_questions",
+            repo_type="dataset",
+            allow_patterns=["default/validation-*.parquet"],
+        )
     )
+    files = sorted(
+        str(path) for path in (root / "default").glob("validation-*.parquet")
+    )
+    if not files:
+        raise FileNotFoundError("Natural Questions validation files did not download.")
+    return load_dataset("parquet", data_files={"validation": files}, split="validation")
 
 
 def _natural_questions_record(row) -> NaturalQuestionsRecord:

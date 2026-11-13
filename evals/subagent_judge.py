@@ -150,10 +150,13 @@ def unlocated_evidence(
 
         items = graphrag_items(saved, corpus)
         # Graph-query rows: whatever columns the generated query returned.
+        # From 9 Nov 2026 a vector_search passage is saved as plain text, so
+        # a row is JSON that is not vector_search evidence.
         texts = [
             passage
             for passage in saved.retrieval.passages
-            if parse_vector_evidence(passage) is None
+            if passage.lstrip().startswith(("{", "["))
+            and parse_vector_evidence(passage) is None
         ]
     else:
         items = ranked_items(saved, corpus)

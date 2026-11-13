@@ -14,7 +14,7 @@ from hashlib import sha256
 from pathlib import Path
 from statistics import fmean
 from time import perf_counter
-from typing import Literal
+from typing import Any, Literal
 
 import tiktoken
 from dotenv import load_dotenv
@@ -28,7 +28,14 @@ from cost import (
     metering_builds,
     unmetered,
 )
-from dataset import DATASET_SOURCES, SourcePage, get_source, load_hotpotqa_corpus
+from dataset import (
+    DATASET_SOURCES,
+    SourcePage,
+    get_source,
+    load_hotpotqa_corpus,
+    load_natural_questions_corpus,
+    natural_questions_corpus_rows,
+)
 from evals.qa_metrics import (
     benchmark_prompt,
     hotpotqa_f1,
@@ -117,6 +124,10 @@ class RetrievedContext(BaseModel):
     scores: list[float]
     construction_seconds: float
     retrieval_seconds: float
+    # Agentic GraphRAG only: each kept item as its tool returned it (passages
+    # holds what the answer model reads), and every tool call the agent made.
+    evidence: list[str] = Field(default_factory=list)
+    trace: list[dict[str, Any]] = Field(default_factory=list)
 
 
 class LLMSettings(BaseModel):
@@ -148,6 +159,9 @@ class Settings(BaseModel):
     llm: LLMSettings
     embedding: EmbeddingSettings
     hipporag: HippoSettings | None = None
+    # The [graphrag] section of config.toml as written, so each run records
+    # the agent and Cypher settings it used.
+    graphrag: dict[str, Any] | None = None
     pricing: Pricing = Field(default_factory=Pricing)
     retrieval: RetrievalOptions = Field(default_factory=RetrievalOptions)
     input_source: str = "official"
@@ -446,8 +460,17 @@ def run(
         for index in (record_indices or range(start, start + records))
     ]
     shared_documents: list[str] = []
-    if dataset == "hotpotqa":
-        corpus_pages = load_hotpotqa_corpus()
+    corpus_pages: Sequence[SourcePage] = []
+    nq_rows = (
+        natural_questions_corpus_rows() if dataset == "natural_questions" else None
+    )
+    shared = dataset == "hotpotqa" or nq_rows is not None
+    if shared:
+        corpus_pages = (
+            load_natural_questions_corpus(nq_rows)
+            if nq_rows is not None
+            else load_hotpotqa_corpus()
+        )
         shared_documents = split_pages(corpus_pages)
         corpus_key = sha256("\n\n".join(shared_documents).encode()).hexdigest()
         (run_dir / "corpus.json").write_text(
@@ -473,7 +496,7 @@ def run(
     consecutive_failures = 0
     with pipelines, metering_builds(settings.pricing) as build_cost:
         for record in selected_records:
-            if dataset == "hotpotqa":
+            if shared:
                 documents = shared_documents
             elif record.pages is not cached_pages:
                 documents = split_pages(record.pages)
@@ -497,7 +520,7 @@ def run(
                 method=method,
                 pipeline=pipeline,
                 documents=documents,
-                pages=corpus_pages if dataset == "hotpotqa" else record.pages,
+                pages=corpus_pages if shared else record.pages,
                 corpus_key=corpus_key,
                 indexed_corpora=indexed_corpora,
                 index_dir=index_dir,

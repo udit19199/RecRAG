@@ -7,7 +7,10 @@ counted, because a timed-out request can still be billed and always costs time."
 
 from __future__ import annotations
 
+import asyncio
 import json
+import os
+import time
 from contextlib import contextmanager
 from contextvars import ContextVar
 from time import perf_counter
@@ -117,12 +120,27 @@ def metering_builds(pricing: Pricing):
         _build_meter.reset(token)
 
 
+# The build meter of the index build running in this process, for calls made
+# from worker threads, which do not inherit context variables (HippoRAG runs
+# its OpenIE calls in a ThreadPoolExecutor, so its build calls went unmetered).
+_active_build: Meter | None = None
+
+
+def _current() -> Meter | None:
+    return _meter.get() or _active_build
+
+
 @contextmanager
 def indexing():
-    token = _meter.set(_build_meter.get())
+    global _active_build
+    meter = _build_meter.get()
+    token = _meter.set(meter)
+    outer = _active_build
+    _active_build = meter
     try:
         yield
     finally:
+        _active_build = outer
         _meter.reset(token)
 
 
@@ -141,7 +159,7 @@ def _kind(request) -> str:
 
 
 def record_failure(request, status: int | None, error: str, seconds: float) -> None:
-    meter = _meter.get()
+    meter = _current()
     if meter is None or _kind(request) not in {"responses", "embeddings"}:
         return
     meter.cost.failed_calls.append(
@@ -152,7 +170,7 @@ def record_failure(request, status: int | None, error: str, seconds: float) -> N
 
 
 def record_response(response, seconds: float = 0.0) -> None:
-    meter = _meter.get()
+    meter = _current()
     if meter is None:
         return
     if not response.is_success:
@@ -239,29 +257,99 @@ def record_response(response, seconds: float = 0.0) -> None:
         meter.cost.missing_usage_calls += 1
 
 
+# Index builds can ask OpenAI for a cheaper service tier (13 Nov 2026, final
+# 500-question study). RECRAG_BUILD_SERVICE_TIER=flex adds service_tier to each
+# build's Responses request body and nothing else: same prompt, model,
+# reasoning effort and settings, so the build's caches and index keys are
+# unchanged. Flex is billed at the Batch API rate but answers synchronously,
+# so the build code runs as before. Question-time calls are never changed.
+# A flex request the API cannot serve right now (429) was not processed; it is
+# retried with backoff, then sent once at the default tier.
+FLEX_ATTEMPTS = 5
+
+
+def _build_tier(request) -> str | None:
+    tier = os.environ.get("RECRAG_BUILD_SERVICE_TIER")
+    meter = _current()
+    if (
+        not tier
+        or meter is None
+        or meter is not (_build_meter.get() or _active_build)
+        or request.method != "POST"
+        or _kind(request) != "responses"
+    ):
+        return None
+    return tier
+
+
+def _with_tier(request, tier: str | None):
+    if tier is None:
+        return request
+    body = json.loads(request.content)
+    body["service_tier"] = tier
+    content = json.dumps(body).encode()
+    headers = request.headers.copy()
+    headers["content-length"] = str(len(content))
+    # The same request class as the caller's: HippoRAG's environment sends
+    # through a fork of httpx whose client rejects httpx.Request.
+    return type(request)(
+        request.method,
+        request.url,
+        headers=headers,
+        content=content,
+        extensions=request.extensions,
+    )
+
+
+def _tier_plan(request) -> list[str | None]:
+    tier = _build_tier(request)
+    if tier is None:
+        return [None]
+    plan: list[str | None] = [tier] * FLEX_ATTEMPTS
+    return [*plan, "default"]
+
+
 class MeteredClient(DefaultHttpxClient):
     def send(self, request, **kwargs):
-        started = perf_counter()
-        try:
-            response = super().send(request, **kwargs)
-            if _meter.get() is not None:
-                response.read()
-        except Exception as exc:
-            record_failure(request, None, repr(exc), perf_counter() - started)
-            raise
-        record_response(response, perf_counter() - started)
-        return response
+        plan = _tier_plan(request)
+        for attempt, tier in enumerate(plan):
+            started = perf_counter()
+            sent = _with_tier(request, tier)
+            try:
+                response = super().send(sent, **kwargs)
+                if _current() is not None:
+                    response.read()
+            except Exception as exc:
+                record_failure(sent, None, repr(exc), perf_counter() - started)
+                raise
+            if response.status_code == 429 and attempt + 1 < len(plan):
+                record_failure(sent, 429, response.text, perf_counter() - started)
+                response.close()
+                time.sleep(2 ** (attempt + 1))
+                continue
+            record_response(response, perf_counter() - started)
+            return response
+        raise RuntimeError("unreachable")
 
 
 class MeteredAsyncClient(DefaultAsyncHttpxClient):
     async def send(self, request, **kwargs):
-        started = perf_counter()
-        try:
-            response = await super().send(request, **kwargs)
-            if _meter.get() is not None:
-                await response.aread()
-        except Exception as exc:
-            record_failure(request, None, repr(exc), perf_counter() - started)
-            raise
-        record_response(response, perf_counter() - started)
-        return response
+        plan = _tier_plan(request)
+        for attempt, tier in enumerate(plan):
+            started = perf_counter()
+            sent = _with_tier(request, tier)
+            try:
+                response = await super().send(sent, **kwargs)
+                if _current() is not None:
+                    await response.aread()
+            except Exception as exc:
+                record_failure(sent, None, repr(exc), perf_counter() - started)
+                raise
+            if response.status_code == 429 and attempt + 1 < len(plan):
+                record_failure(sent, 429, response.text, perf_counter() - started)
+                await response.aclose()
+                await asyncio.sleep(2 ** (attempt + 1))
+                continue
+            record_response(response, perf_counter() - started)
+            return response
+        raise RuntimeError("unreachable")

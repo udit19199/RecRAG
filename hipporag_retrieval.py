@@ -211,6 +211,9 @@ def setup(settings: Settings, index_dir: Path, dataset: str):
         retrieval_top_k=10,
         qa_top_k=10,
         response_format=ResponseFormatJSONObject(type="json_object").model_dump(),
+        # Concurrent OpenIE requests (upstream default 8). Each chunk's calls
+        # are independent, so this changes build time only, not the requests.
+        openie_max_workers=int(os.environ.get("RECRAG_HIPPORAG_OPENIE_WORKERS", "8")),
     )
     extraction_model = settings.hipporag.construction_model or settings.llm.model
     with (

@@ -273,15 +273,24 @@ def graphrag_items(saved: SavedRetrieval, corpus: Corpus) -> list[Item]:
     items: list[Item] = []
     for rank, passage in enumerate(saved.retrieval.passages):
         try:
-            windows = [_GraphRAGEvidence.model_validate_json(passage).text]
+            json.loads(passage)
+        except ValueError:
+            # Runs from 9 Nov 2026 save a vector_search passage as plain text,
+            # the way the answer model reads it.
+            windows = [passage]
             graph_row = False
-        except ValidationError:
+        else:
+            try:
+                windows = [_GraphRAGEvidence.model_validate_json(passage).text]
+                graph_row = False
+            except ValidationError:
+                windows, graph_row = [], True
+        if graph_row:
             # A cypher_search row has whatever columns the generated query
             # returned. Long text columns are usually a source chunk, so they
             # are located like a window; the rest of the row has no offsets
             # and is left to the subagent judge (evals.subagent_judge).
             windows = _row_texts(passage)
-            graph_row = True
         for window in windows:
             if window in seen:
                 continue
