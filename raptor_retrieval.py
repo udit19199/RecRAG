@@ -7,6 +7,9 @@ We use lists and JSON rather than upstream dictionaries and pickle.
 
 from __future__ import annotations
 
+import os
+import time
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from time import perf_counter
 
@@ -189,69 +192,145 @@ def build_tree(
             progress.plans.append(plan)
             if checkpoint_path is not None:
                 save_progress(checkpoint_path, progress)
-        for cluster_number, cluster in enumerate(plan.clusters):
-            children = [current[index] for index in cluster]
-            if any(
-                node.layer == layer and node.children == children for node in tree.nodes
-            ):
-                parents.append(
-                    next(
-                        i
-                        for i, node in enumerate(tree.nodes)
-                        if node.layer == layer and node.children == children
+        # Build speed only (13 Nov 2026): summaries of one layer do not depend
+        # on each other, so RECRAG_RAPTOR_WORKERS > 1 sends this layer's
+        # missing summary requests in parallel, unchanged and kept in cluster
+        # order; they are used exactly where the one-by-one loop would make
+        # them. RECRAG_RAPTOR_CHECKPOINT_EVERY saves the checkpoint every N
+        # steps instead of every step (it is rewritten whole each time; on
+        # Natural Questions it is 684 MB). Defaults keep the old behaviour.
+        workers = int(os.environ.get("RECRAG_RAPTOR_WORKERS", "1"))
+        every = int(os.environ.get("RECRAG_RAPTOR_CHECKPOINT_EVERY", "1"))
+        # Results are taken in cluster order as they arrive (14 Nov 2026), so
+        # the checkpoint every N summaries is written during the layer, not
+        # only after all of its requests have returned.
+        prefetched: dict[int, list[str] | None] = {}
+        stream = iter(())
+        pool = ThreadPoolExecutor(workers) if workers > 1 else None
+        if pool is not None:
+            missing = [
+                number
+                for number in range(len(plan.summaries), len(plan.clusters))
+                if not any(
+                    node.layer == layer
+                    and node.children == [current[i] for i in plan.clusters[number]]
+                    for node in tree.nodes[len(documents) :]
+                )
+            ]
+            stream = zip(
+                missing,
+                pool.map(
+                    lambda n, current=current, plan=plan: summarize_retrying(
+                        llm, tree, [current[i] for i in plan.clusters[n]]
+                    ),
+                    missing,
+                ),
+                strict=True,
+            )
+            pending = set(missing)
+        try:
+            for cluster_number, cluster in enumerate(plan.clusters):
+                children = [current[index] for index in cluster]
+                if any(
+                    node.layer == layer and node.children == children
+                    for node in tree.nodes
+                ):
+                    parents.append(
+                        next(
+                            i
+                            for i, node in enumerate(tree.nodes)
+                            if node.layer == layer and node.children == children
+                        )
+                    )
+                    continue
+                if cluster_number < len(plan.summaries):
+                    summary = plan.summaries[cluster_number]
+                else:
+                    if pool is not None and cluster_number in pending:
+                        while cluster_number not in prefetched:
+                            number, result = next(stream)
+                            prefetched[number] = result
+                        pending.discard(cluster_number)
+                    generated = prefetched.pop(cluster_number, None) or summarize(
+                        llm, tree, children
+                    )
+                    if not generated or not generated[0].strip():
+                        raise RuntimeError(
+                            "RAPTOR summary generation returned empty text."
+                        )
+                    summary = generated[0]
+                    tokens = tiktoken.get_encoding("cl100k_base").encode(summary)
+                    if len(tokens) > 100:
+                        # Approximation: cap persisted text; generation-time max_tokens differs.
+                        progress.fallbacks.append(
+                            f"summary capped from {len(tokens)} to 100 tokens"
+                        )
+                        summary = tiktoken.get_encoding("cl100k_base").decode(
+                            tokens[:100]
+                        )
+                    plan.summaries.append(summary)
+                    if checkpoint_path is not None and len(plan.summaries) % every == 0:
+                        save_progress(checkpoint_path, progress)
+                embedding = embeddings.get_text_embedding(
+                    summary.replace("\n", " ").strip()
+                )
+                parents.append(len(tree.nodes))
+                tree.nodes.append(
+                    TreeNode(
+                        text=summary,
+                        embedding=embedding,
+                        children=children,
+                        layer=layer,
                     )
                 )
-                continue
-            if cluster_number < len(plan.summaries):
-                summary = plan.summaries[cluster_number]
-            else:
-                context = "".join(
-                    " ".join(tree.nodes[index].text.splitlines()) + "\n\n"
-                    for index in children
-                )
-                generated = llm.infer(
-                    [
-                        SimpleMessage(
-                            role="system", content="You are a helpful assistant."
-                        ).model_dump(),
-                        SimpleMessage(
-                            role="user",
-                            content=(
-                                "Write a summary of the following, including as many key details as possible. "
-                                f"Use at most 100 tokens:\n{context}"
-                            ),
-                        ).model_dump(),
-                    ],
-                    max_output_tokens=8192,
-                )
-                if not generated or not generated[0].strip():
-                    raise RuntimeError("RAPTOR summary generation returned empty text.")
-                summary = generated[0]
-                tokens = tiktoken.get_encoding("cl100k_base").encode(summary)
-                if len(tokens) > 100:
-                    # Approximation: cap persisted text; generation-time max_tokens differs.
-                    progress.fallbacks.append(
-                        f"summary capped from {len(tokens)} to 100 tokens"
-                    )
-                    summary = tiktoken.get_encoding("cl100k_base").decode(tokens[:100])
-                plan.summaries.append(summary)
-                if checkpoint_path is not None:
+                if checkpoint_path is not None and len(tree.nodes) % every == 0:
                     save_progress(checkpoint_path, progress)
-            embedding = embeddings.get_text_embedding(
-                summary.replace("\n", " ").strip()
-            )
-            parents.append(len(tree.nodes))
-            tree.nodes.append(
-                TreeNode(
-                    text=summary, embedding=embedding, children=children, layer=layer
-                )
-            )
-            if checkpoint_path is not None:
-                save_progress(checkpoint_path, progress)
+        finally:
+            if pool is not None:
+                pool.shutdown(cancel_futures=True)
         current = parents
         if checkpoint_path is not None:
             save_progress(checkpoint_path, progress)
+    if checkpoint_path is not None:
+        save_progress(checkpoint_path, progress)
     return tree
+
+
+def summarize(llm: ResponsesLLM, tree: Tree, children: list[int]) -> list[str]:
+    """The RAPTOR summary request for one cluster (unchanged prompt)."""
+    context = "".join(
+        " ".join(tree.nodes[index].text.splitlines()) + "\n\n" for index in children
+    )
+    return llm.infer(
+        [
+            SimpleMessage(
+                role="system", content="You are a helpful assistant."
+            ).model_dump(),
+            SimpleMessage(
+                role="user",
+                content=(
+                    "Write a summary of the following, including as many key details as possible. "
+                    f"Use at most 100 tokens:\n{context}"
+                ),
+            ).model_dump(),
+        ],
+        max_output_tokens=8192,
+    )
+
+
+def summarize_retrying(
+    llm: ResponsesLLM, tree: Tree, children: list[int], attempts: int = 3
+) -> list[str] | None:
+    """summarize() for the parallel prefetch: a dropped connection or an
+    incomplete reply is asked again (up to 3 tries), so one failure does not
+    throw away the whole layer's prefetched summaries. A cluster that still
+    fails returns None and the one-by-one loop asks for it as before."""
+    for attempt in range(attempts):
+        try:
+            return summarize(llm, tree, children)
+        except Exception:  # noqa: BLE001 - retried, then left to the loop
+            time.sleep(5 * (attempt + 1))
+    return None
 
 
 class SimpleMessage(BaseModel):

@@ -266,6 +266,10 @@ def record_response(response, seconds: float = 0.0) -> None:
 # A flex request the API cannot serve right now (429) was not processed; it is
 # retried with backoff, then sent once at the default tier.
 FLEX_ATTEMPTS = 5
+# Flex requests can wait in OpenAI's queue far longer than the 120 s config
+# timeout (13 Nov: builds stopped on timeouts), so a flex build request gets
+# FLEX_TIMEOUT seconds to answer. A request at the default tier keeps its own.
+FLEX_TIMEOUT = 900.0
 
 
 def _build_tier(request) -> str | None:
@@ -290,6 +294,14 @@ def _with_tier(request, tier: str | None):
     content = json.dumps(body).encode()
     headers = request.headers.copy()
     headers["content-length"] = str(len(content))
+    extensions = dict(request.extensions)
+    if tier != "default":
+        extensions["timeout"] = {
+            "connect": 30.0,
+            "read": FLEX_TIMEOUT,
+            "write": 60.0,
+            "pool": FLEX_TIMEOUT,
+        }
     # The same request class as the caller's: HippoRAG's environment sends
     # through a fork of httpx whose client rejects httpx.Request.
     return type(request)(
@@ -297,7 +309,7 @@ def _with_tier(request, tier: str | None):
         request.url,
         headers=headers,
         content=content,
-        extensions=request.extensions,
+        extensions=extensions,
     )
 
 

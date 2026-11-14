@@ -183,6 +183,21 @@ def export_claims(out: Path, run_dirs: list[Path], kind: str | None, size: int) 
     print(f"{len(tasks)} questions to split -> {out / 'claims'}")
 
 
+def merged_single_passage(verdict: ClaimsVerdict, sentences: int) -> ClaimsVerdict:
+    """One gold passage split into several fact lists becomes one list.
+
+    Natural Questions evidence is one long-answer paragraph per question; the
+    judge sometimes returns one fact list per sentence inside it (13 Nov 2026,
+    7 of 358 NQ questions). Every fact still comes from that one passage, so
+    the lists are joined in order. Nothing is added or dropped, and items with
+    several gold sentences are never changed."""
+    if sentences == 1 and len(verdict.sentences) > 1 and all(verdict.sentences):
+        return ClaimsVerdict(
+            id=verdict.id, sentences=[[f for part in verdict.sentences for f in part]]
+        )
+    return verdict
+
+
 def load_claims(out: Path) -> dict[str, list[list[str]]]:
     tasks = {
         item["id"]: item
@@ -192,7 +207,9 @@ def load_claims(out: Path) -> dict[str, list[list[str]]]:
     claims: dict[str, list[list[str]]] = {}
     for path in sorted((out / "claims").glob("verdict-*.json")):
         for row in json.loads(path.read_text()):
-            verdict = ClaimsVerdict.model_validate(row)
+            verdict = merged_single_passage(
+                ClaimsVerdict.model_validate(row), len(tasks[row["id"]]["sentences"])
+            )
             task = tasks[verdict.id]
             if len(verdict.sentences) != len(task["sentences"]) or not all(
                 verdict.sentences
