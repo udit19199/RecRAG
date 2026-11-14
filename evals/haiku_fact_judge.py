@@ -365,15 +365,32 @@ def _verified(quote: Quote, items: list[str]) -> bool:
 
 
 def score(out: Path) -> None:
+    # Questions listed in excluded_records.json (with the reason) get no
+    # gold-fact numbers for any method or repeat: their tasks and links are
+    # left out, so every method is scored on the same questions.
+    excluded_path = out / "excluded_records.json"
+    excluded = (
+        set(json.loads(excluded_path.read_text())["record_ids"])
+        if excluded_path.exists()
+        else set()
+    )
+    links_all = [
+        json.loads(line)
+        for line in (out / "judge" / "links.jsonl").read_text().splitlines()
+    ]
+    skip = {link["task"] for link in links_all if link["record_id"] in excluded}
     tasks = {
         item["id"]: JudgeTask.model_validate(item)
         for path in sorted((out / "judge").glob("items-*.json"))
         for item in json.loads(path.read_text())["items"]
+        if item["id"] not in skip
     }
     verdicts: dict[str, JudgeVerdict] = {}
     for path in sorted((out / "judge").glob("verdict-*.json")):
         for row in json.loads(path.read_text()):
             verdict = JudgeVerdict.model_validate(row)
+            if verdict.id in skip:
+                continue
             labels = {label for g in tasks[verdict.id].gold for label in g["facts"]}
             given = [fact.fact for fact in verdict.facts]
             if sorted(given) != sorted(labels):
@@ -404,8 +421,9 @@ def score(out: Path) -> None:
         per_task[task_id] = facts
 
     rows = []
-    for line in (out / "judge" / "links.jsonl").read_text().splitlines():
-        link = json.loads(line)
+    for link in links_all:
+        if link["record_id"] in excluded:
+            continue
         facts = per_task[link["task"]]
         rows.append(
             {
