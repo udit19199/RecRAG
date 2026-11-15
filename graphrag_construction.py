@@ -779,7 +779,7 @@ def rebuild_graph(
 ) -> None:
     pages = [page for page in pages if page.chunks]
     if not pages:
-        raise ValueError("Agentic GraphRAG needs nonempty source chunks.")
+        raise ValueError("Agentic Hybrid RAG needs nonempty source chunks.")
     chunks = [chunk for page in pages for chunk in page.chunks]
     page_of_chunk = [number for number, page in enumerate(pages) for _ in page.chunks]
 
@@ -825,7 +825,7 @@ def rebuild_graph(
         session.run(_DELETE_SELF_LOOPS).consume()
         counts = session.run(_COUNT_EMPTY_CHUNKS).single(strict=True)
     print(
-        f"Agentic GraphRAG: {counts['empty']} of {counts['chunks']} chunks "
+        f"Agentic Hybrid RAG: {counts['empty']} of {counts['chunks']} chunks "
         f"have no extracted entities ({database}).",
         file=sys.stderr,
         flush=True,

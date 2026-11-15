@@ -243,7 +243,7 @@ dimensions, chunking, ontology, extraction prompt, adapter instruction,
 extraction response schema, and the neo4j-graphrag version. It no longer
 uses LangChain's model string, which included timeouts, so changing
 `[llm] timeout` mid-build used to discard every cached extraction. The
-benchmark's Agentic GraphRAG index key uses the same identity plus the
+benchmark's Agentic Hybrid RAG index key uses the same identity plus the
 corpus hash, for the same reason. These key changes mean graphs and caches
 built before 2026-11-01 are not reused.
 
@@ -257,7 +257,7 @@ the schema queries made for text-to-Cypher.
 ## Related docs
 
 - [Graph retrieval](retrieval.md)
-- [Agentic GraphRAG evaluation](evaluation.md)
+- [Agentic Hybrid RAG evaluation](evaluation.md)
 - [Dataset records](../benchmark.md)
 - [Neo4j knowledge graph builder guide](https://neo4j.com/docs/neo4j-graphrag-python/current/user_guide_kg_builder.html)
 - [Neo4j vector indexes](https://neo4j.com/docs/cypher-manual/current/indexes/semantic-indexes/vector-indexes/)

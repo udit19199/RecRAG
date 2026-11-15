@@ -1,6 +1,6 @@
 # Graph retrieval
 
-Agentic GraphRAG retrieves only through its agent. `GraphRAG.answer()` and the
+Agentic Hybrid RAG retrieves only through its agent. `GraphRAG.answer()` and the
 benchmark both use `GraphRAG.retriever(database)`, which builds the agent and
 its tools once per database and reuses them for later questions in the same
 process. A rebuild of that database drops the cached agent and schema.
@@ -45,7 +45,7 @@ passage found twice took two slots.
 
 Each vector result is a JSON object with `title`, `text`, `entities` and
 `facts`. It used to carry up to 25 one- or two-hop graph paths as nested
-JSON, about 10,000 characters per passage, which made Agentic GraphRAG's
+JSON, about 10,000 characters per passage, which made Agentic Hybrid RAG's
 context ten times larger than the other methods'. A record is now about
 1,600 characters. Facts are taken from at most 10 relationships per mentioned
 entity, preferring links that reach an entity outside the passage, since
@@ -115,7 +115,7 @@ When no context is found, the answer fallback is:
 
 ## Code and related docs
 
-- [Agentic GraphRAG adapter, agent, tools, and answer flow](../../graphrag_retrieval.py)
+- [Agentic Hybrid RAG adapter, agent, tools, and answer flow](../../graphrag_retrieval.py)
 - [Graph construction](construction.md)
 - [Evaluation](evaluation.md)
 
@@ -206,17 +206,17 @@ on 2026-10-21), so every row uses the same answer step. Retrieval is judged by
 | RAG | 8 | 10 | 18 | 59.2% | 43.3% | $0.0003 | 0.7 s | 2,300 |
 | RAPTOR | 7 | 8 | 15 | 52.5% | 42.5% | $0.0003 | 0.6 s | 2,200 |
 | HippoRAG | 8 | 10 | 18 | 52.5% | 43.3% | $0.0008 | 7.1 s | 2,300 |
-| Agentic GraphRAG, news graph, free choice | 11 | 12 | 23 | 65.0% | 51.7% | $0.0079 | 12.5 s | 24,700 |
+| Agentic Hybrid RAG, news graph, free choice | 11 | 12 | 23 | 65.0% | 51.7% | $0.0079 | 12.5 s | 24,700 |
 | ..., vector then Cypher (run 1) | 10 | 13 | 23 | 66.7% | 46.7% | $0.0078 | 28.1 s | 22,700 |
 | ..., vector then Cypher (run 2) | 13 | 14 | 27 | 65.8% | 46.7% | $0.0080 | 27.0 s | 23,900 |
 | ..., Cypher then vector | 13 | 11 | 24 | 69.2% | 50.8% | $0.0080 | 26.2 s | 21,000 |
 | ..., Cypher only | 3 | 6 | 9 | 33.3% | 25.8% | $0.0041 | 39.6 s | 3,000 |
 
 Index builds (one-off, MultiHop-RAG): RAG $0.03, RAPTOR $0.40, HippoRAG $5.49,
-Agentic GraphRAG about $3.80 (old graph; the news build made a similar number
+Agentic Hybrid RAG about $3.80 (old graph; the news build made a similar number
 of extraction calls but its token usage was not cached).
 
-Every Agentic GraphRAG variant with vector search beats the other three methods
+Every Agentic Hybrid RAG variant with vector search beats the other three methods
 by 5 to 12 questions and on the judge, at about 25 times RAG's per-question
 cost and 20 to 40 times its latency, with ten times the context. Cypher alone
 scores 9/40, so the lead comes from the agentic vector path (more and larger
@@ -236,7 +236,7 @@ entity resolution leaves 514 case-variant duplicate groups.
 
 ## Temporal study and new default order (2026-11-01)
 
-Agentic GraphRAG trailed most on MultiHop-RAG temporal questions, so the tool
+Agentic Hybrid RAG trailed most on MultiHop-RAG temporal questions, so the tool
 order was studied on the first 100 temporal questions (exact match):
 
 | Setup | News ontology | General ontology |
@@ -281,12 +281,12 @@ answers and evidence without a source position were judged by Claude Haiku.
 
 | Method | Answer accuracy | Gold sentences retrieved | Cost / 1,000 correct (incl. build) | Median latency |
 |---|---|---|---|---|
-| Agentic GraphRAG | 74.8% | 46.6% | $9.35 | 32.5 s |
+| Agentic Hybrid RAG | 74.8% | 46.6% | $9.35 | 32.5 s |
 | HippoRAG | 74.6% | 40.6% | $2.62 | 4.8 s |
 | RAG | 72.6% | 43.7% | $0.42 | 2.2 s |
 | RAPTOR | 72.7% | 44.2% | $0.58 | 2.1 s |
 
-- No answer-accuracy difference is significant (Agentic GraphRAG vs RAG +2.2
+- No answer-accuracy difference is significant (Agentic Hybrid RAG vs RAG +2.2
   points, 95% CI -0.3 to +4.6; vs HippoRAG +0.2).
 - Retrieval is significantly higher (+2.9 vs RAG, +6.0 vs HippoRAG). The
   gain comes from source passages returned inside graph-query rows; 46.0 of
@@ -305,18 +305,18 @@ answers and evidence without a source position were judged by Claude Haiku.
 
 ### By question type and routing (same held-out run)
 
-| Type (100 each) | Agentic GraphRAG | HippoRAG | RAG | RAPTOR |
+| Type (100 each) | Agentic Hybrid RAG | HippoRAG | RAG | RAPTOR |
 |---|---|---|---|---|
 | Comparison | 50.3% | 48.0% | 51.3% | 48.0% |
 | Temporal | 56.0% | 59.3% | 48.3% | 49.0% |
 | Inference | 96.3% | 97.3% | 96.0% | 98.0% |
 | Null | 96.3% | 93.7% | 94.7% | 95.7% |
 
-Only temporal separates methods (Agentic GraphRAG +7.7 points vs RAG,
+Only temporal separates methods (Agentic Hybrid RAG +7.7 points vs RAG,
 significant; its retrieval is also highest there, 48.8%). Per question,
-Agentic GraphRAG spends 11 s and 58% of its cost in about 3.5 agent calls
+Agentic Hybrid RAG spends 11 s and 58% of its cost in about 3.5 agent calls
 (each re-sends the conversation) and 18 s in the one Cypher-writing call.
 Re-scoring the existing answers with routing by question type: temporal to
 HippoRAG and the rest to RAG gives 75.3% at $0.0003 and 2.7 s per question,
-against 74.8%, $0.0039 and 31 s for Agentic GraphRAG everywhere (this assumes
+against 74.8%, $0.0039 and 31 s for Agentic Hybrid RAG everywhere (this assumes
 the type is known; a real router must infer it).

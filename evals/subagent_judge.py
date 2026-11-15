@@ -7,7 +7,7 @@ Two cases need a judge, and only these are exported:
   should not count as wrong.
 * evidence: retrieved items that have no position in the source text, so the
   offset-based recall in ``evals.retrieval_quality`` scores them as misses:
-  Agentic GraphRAG's graph-query rows and RAPTOR's generated summaries. Only
+  Agentic Hybrid RAG's graph-query rows and RAPTOR's generated summaries. Only
   gold sentences the located evidence did not already cover are asked about.
 
 Items are deduplicated by content, so repeats of a run cost no extra judging.

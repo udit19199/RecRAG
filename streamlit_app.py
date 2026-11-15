@@ -32,9 +32,9 @@ from graphrag_retrieval import (
 )
 
 st.set_page_config(
-    page_title="Agentic GraphRAG Demo", page_icon=":material/account_tree:"
+    page_title="Agentic Hybrid RAG Demo", page_icon=":material/account_tree:"
 )
-st.title("Agentic GraphRAG Demo")
+st.title("Agentic Hybrid RAG Demo")
 
 CONFIG = tomllib.loads((Path(__file__).resolve().parent / "config.toml").read_text())
 
@@ -361,5 +361,5 @@ if run_clicked:
             f"Baseline summary saved to `{summary_path.relative_to(project_root)}`"
         )
     except Exception as exc:
-        logging.getLogger(__name__).exception("Agentic GraphRAG run failed")
+        logging.getLogger(__name__).exception("Agentic Hybrid RAG run failed")
         st.error(f"{type(exc).__name__}: {exc}")

@@ -1,4 +1,4 @@
-"""Agentic GraphRAG configuration, agentic retrieval, and answer generation."""
+"""Agentic Hybrid RAG configuration, agentic retrieval, and answer generation."""
 
 from __future__ import annotations
 

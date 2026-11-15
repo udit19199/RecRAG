@@ -62,7 +62,7 @@ Install the loader dependencies, then select records in the app:
 uv run --with datasets --with huggingface-hub streamlit run streamlit_app.py
 ```
 
-For each HotpotQA run, the Agentic GraphRAG app builds one shared graph per construction
+For each HotpotQA run, the Agentic Hybrid RAG app builds one shared graph per construction
 method from unique pages across the loaded validation rows. The record count
 selects questions to answer; it does not limit the graph's source pages.
 
@@ -92,10 +92,14 @@ Responses API.
 | Normal RAG | Splits source pages into chunks and embeds each chunk. It does not build a graph. | LlamaIndex ranks chunks by vector similarity to the question. |
 | RAPTOR | Builds a summary tree using global and local UMAP reduction, soft GMM clusters, and recursive summaries. | Ranks chunks and summaries together by cosine similarity, with a 3,500-token context limit. |
 | HippoRAG2 | Embeds the same chunks and extracts entities and facts into its own local graph. | Its graph retrieval links question entities and facts to relevant chunks. |
-| Agentic GraphRAG | Uses the ontology to build a graph and chunk vector index in Neo4j. | An agent runs Neo4j vector search, then one read-only text-to-Cypher lookup, may refine either, then passes the evidence to the answer model. |
+| Agentic Hybrid RAG | Uses the ontology to build a graph and chunk vector index in Neo4j. | An agent runs Neo4j vector search, then one read-only text-to-Cypher lookup, may refine either, then passes the evidence to the answer model. |
+
+Agentic Hybrid RAG was called Agentic GraphRAG until 15 Nov 2026. It combines vector
+search and graph lookups, hence the rename. Module, file and result-key names still say
+`graphrag`.
 
 All four baseline methods use the same title-prefixed `SentenceSplitter`
-chunks, with 256 tokens per chunk and 20 tokens of overlap. Agentic GraphRAG writes
+chunks, with 256 tokens per chunk and 20 tokens of overlap. Agentic Hybrid RAG writes
 those exact chunks to Neo4j and returns at most five items. Normal RAG,
 HippoRAG2, and RAPTOR return ten items by default.
 
@@ -104,7 +108,7 @@ HippoRAG2, and RAPTOR return ten items by default.
 HippoRAG installs from its official GitHub repository at a fixed commit. Its
 source files are not in the RecRAG working tree.
 
-Normal RAG, RAPTOR, HippoRAG, and the Agentic GraphRAG method share
+Normal RAG, RAPTOR, HippoRAG, and the Agentic Hybrid RAG method share
 dataset preparation, benchmark prompts, metrics, and question cost measurement. Each owns its model clients and retrieval setup in `rag_retrieval.py`
 and `hipporag_retrieval.py`. Normal RAG uses LlamaIndex and OpenAI directly,
 without importing HippoRAG or GraphRAG. HippoRAG's pinned
@@ -198,7 +202,7 @@ calls `calculate_metrics`, but that helper is not included in its linked repo,
 so we cannot verify exact formula parity. The paper reports per-question
 precision, recall, and F1 averaged across questions. The paper's protocol saves
 retrieved evidence, then applies one generation script with Llama 3.1 8B or
-70B. RecRAG uses `gpt-6-luna`, and its Agentic GraphRAG is not the
+70B. RecRAG uses `gpt-6-luna`, and its Agentic Hybrid RAG is not the
 paper's Microsoft Community-GraphRAG. Our score formula follows HotpotQA's
 official scorer, but exact parity with the paper's helper is unverified.
 
@@ -235,9 +239,9 @@ content is the only way to treat every architecture the same.
 **Primary: answer support.** Gold sentences mark one route to the answer.
 HotpotQA labels come from each question's own ten paragraphs, but our corpus
 pools pages from 1,000 questions, so the same links often appear on other
-pages. Agentic GraphRAG's 1,000-character windows can also cut a gold sentence
+pages. Agentic Hybrid RAG's 1,000-character windows can also cut a gold sentence
 midway. Gold-sentence recall therefore penalized methods that reached the
-answer by another stated route. When we measured this, Agentic GraphRAG had the answer
+answer by another stated route. When we measured this, Agentic Hybrid RAG had the answer
 in its text for 28 of the 41 HotpotQA questions where it missed a gold
 sentence; normal RAG had it for 8 of 27. The support judge gets the question,
 the gold answer, the gold sentences as a reference route, and the items. It
@@ -263,7 +267,7 @@ questions) × 100. Full support rate = share of questions scoring 3.
   question needs every hop.
 - **Retrieval score** = sum of question scores / (3 × questions) × 100.
   **Full retrieval rate** = share of questions scoring 3. Budget views cut
-  ranked methods to Agentic GraphRAG's per-question token volume. Intervals are paired
+  ranked methods to Agentic Hybrid RAG's per-question token volume. Intervals are paired
   bootstraps.
 
 Verdicts are cached in `runs/retrieval_judge/cache.jsonl`, keyed by prompt
@@ -306,10 +310,10 @@ HF_HOME="$PWD/runs/hf-cache" .venv/bin/python -m benchmark \
 ```
 
 Use the existing separate environment for `--method hipporag`. Install
-`sentence-transformers` there if you use `--rerank`. Agentic GraphRAG requires Neo4j
+`sentence-transformers` there if you use `--rerank`. Agentic Hybrid RAG requires Neo4j
 Desktop with APOC. The command runner caches one graph for each corpus and
 configuration. It uses the existing ontology and agentic Neo4j tools, then
-passes their evidence to the shared answer step. Agentic GraphRAG uses the same
+passes their evidence to the shared answer step. Agentic Hybrid RAG uses the same
 title-prefixed 256-token `SentenceSplitter` chunks with 20-token overlap as the
 other benchmark methods. Normal retrieval returns ten items by default;
 reranking searches 20 candidates before keeping ten. The app keeps its
@@ -373,7 +377,7 @@ Measurement rules, so the four methods are timed and priced the same way:
   cannot make (non-exact answers, evidence without a source position) for a
   Claude Haiku subagent, so judging spends no OpenAI credits.
 
-The Agentic GraphRAG app saves the same question cost fields and displays an API cost
+The Agentic Hybrid RAG app saves the same question cost fields and displays an API cost
 metric. Python callers of `GraphRAG.answer()` can read `rag.last_question_cost`
 after each question without changing the answer result shape.
 
@@ -385,7 +389,7 @@ For input formats, score limits, and the exact upstream references, see
 - [Dataset and cost notes](docs/benchmark.md)
 - [Graph construction](docs/graphrag/construction.md)
 - [Graph retrieval](docs/graphrag/retrieval.md)
-- [Agentic GraphRAG evaluation](docs/graphrag/evaluation.md)
+- [Agentic Hybrid RAG evaluation](docs/graphrag/evaluation.md)
 
 ## Verification
 

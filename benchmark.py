@@ -1,4 +1,4 @@
-"""Compare RAG, RAPTOR, HippoRAG, and Agentic GraphRAG on shared questions."""
+"""Compare RAG, RAPTOR, HippoRAG, and Agentic Hybrid RAG on shared questions."""
 
 from __future__ import annotations
 
@@ -124,7 +124,7 @@ class RetrievedContext(BaseModel):
     scores: list[float]
     construction_seconds: float
     retrieval_seconds: float
-    # Agentic GraphRAG only: each kept item as its tool returned it (passages
+    # Agentic Hybrid RAG only: each kept item as its tool returned it (passages
     # holds what the answer model reads), and every tool call the agent made.
     evidence: list[str] = Field(default_factory=list)
     trace: list[dict[str, Any]] = Field(default_factory=list)
