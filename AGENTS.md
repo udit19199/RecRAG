@@ -85,7 +85,14 @@ Content:
   repeat. There is no stability slide.
 - A new run joins the slides beside the older runs, whose results stay.
 - Wording: "changes", not "fixes"; "previous run" and "latest run", never
-  dates or a timeline.
+  dates or a timeline. Plain words a non-specialist can follow; explain any
+  technical term you keep. Exact prompts stay word for word.
+- Only Agentic Hybrid RAG gets method slides: 01 how it works, 02 its prompts,
+  03 how answers are judged, 10 what changed between the runs. No architecture
+  slides for Normal RAG, RAPTOR or HippoRAG.
+- Prompts are shown in Comic Shanns (`fontFamily` 8), as bands: grey same in
+  both runs, blue added in the latest run, orange the previous run's replaced
+  text. Keep the previous run's judge prompts: its numbers still use them.
 
 Charts:
 - Stacked, never split: a solid base to the lower run's average, its value just
@@ -113,6 +120,13 @@ Helpers in `~/Workspace/local/hpe-diagrams/` (outside the repo):
   `two_run_slides.py cost`: other builders. `two_run_slides.py` uses the right
   method order; `newslides.py` still has Agentic last, and its `stab` builds the
   retired stability slide; fix the order before reusing it.
+- `method_slides.py s2|s3|s10`, plus `clear <frame prefix>`: rebuilds the
+  prompt, judging and what-changed slides. Its wording predates the plain-word
+  pass that `plain_wording.py` applied by element id, so after a rebuild,
+  carry that wording over by hand.
+- `xmcp.py` reads the CLI's saved login: an API key or, since CLI v1, an OAuth
+  access token that expires after about an hour; run `excalidraw whoami` first
+  to refresh it.
 
 Excalidraw MCP quirks:
 1. Moving a bound text makes the server re-derive its container's position.
