@@ -41,6 +41,7 @@ and can be deleted, so a result that only lives there can be lost.
 
 - Use these measures and these exact labels. Do not rename them or invent
   new measures or wording.
+  - Claude Haiku is the only judge, for answers and facts.
   - **Answered right**: exact match, then the Claude Haiku judge.
   - Retrieval: **gold facts found** at three thresholds, **≥50%**, **≥75%**
     and **100%** of a question's gold facts. The facts are the claims the
@@ -62,38 +63,78 @@ and can be deleted, so a result that only lives there can be lost.
 - Before deleting local run folders, check that their results are already in
   the scene.
 
-### Deck layout
+### Deck
 
-- **8 slides, never more than 13.** Do not add a slide for a new run; add the
-  run to the existing slides. If something new must go in, merge or drop a
-  slide first. Do not repeat a number or a point on two slides.
-- The current eight: 1 run map, 2 methods and prompts, 3 comparison, 4
-  temporal, 5 inference and null (HotpotQA is in the run map only), 6 found facts and
-  right answers, 7 using the results and likely questions,
-  8 backup. Each type slide is tall: dataset facts, then all 4 methods, then
-  Agentic Hybrid RAG vs Normal RAG.
-- Tables hold one number per cell, one table per measure. Never pack several
-  numbers into a cell with slashes; use more space or another slide instead.
-- Results are organised by MultiHop-RAG's four question types (comparison,
-  temporal, inference, null), at most two types per slide. Each type's block
-  carries its own dataset facts: the questions per run and in the dataset, one
-  example question with its gold answer, and the answer formats. Then comes one
-  table per run that has the type. There is no separate dataset slide. Label
-  other datasets' questions with these four types; say so where a type has few
-  or no questions.
-- Slide 1 is the run map: one row per run with the data (collection size and
-  questions), repeats, how it was scored, status and the slides that show it.
-  Every new run gets a row.
-- Slides carry no dates or timeline. Name runs as the previous run and the
-  latest run, and describe what changed, not when.
-- A superseded run keeps its row in the run map, marked older, and its results
-  leave the other slides.
-- One backup slide at the end holds the scoring rules and every judge prompt
-  word for word. Update it when a judge or prompt changes.
-- Keep the frame name number, the canvas position (left to right) and the
-  presentation order (`slidesOrder`) in step, and fix slide-number references
-  (run map, "see slide N") after any reorder.
-- Before changing the scene, export a backup of it.
+The deck is the Experiments scene (`5KJVp4wI32J`), the only RecRAG scene. Each
+slide is a frame named `NN Title`, laid out left to right in number order;
+keep the number, canvas position and `slidesOrder` in step.
+
+Content:
+- Both runs share every chart and table: the previous run (held-out 400, 100
+  questions per type) and the latest run (final500, 125 per type). Only
+  HotpotQA and Natural Questions, which the latest run alone has, get
+  latest-only charts.
+- MultiHop-RAG appears per question type (comparison, temporal, inference,
+  null), never as totals across types.
+- Method order on every chart and table: Normal RAG, Agentic Hybrid RAG,
+  RAPTOR, HippoRAG. Normal RAG sits beside Agentic Hybrid RAG, so that
+  comparison needs no slide of its own.
+- Each number lives on one slide. Fold new content into a related slide; the
+  deck has no backup slides.
+- Repeat spread sits on the result charts: a thin line from lowest to highest
+  repeat. There is no stability slide.
+- A new run joins the slides beside the older runs, whose results stay.
+- Wording: "changes", not "fixes"; "previous run" and "latest run", never
+  dates or a timeline.
+
+Charts:
+- Stacked, never split: a solid base to the lower run's average, its value just
+  inside the top; a hatched cap to the higher run's value, its value above. On
+  a tie, the previous run is the base and there is no cap.
+- Previous run orange (`#ffd8a8` fill, `#e8590c` stroke); latest run blue
+  (`#a5d8ff`, `#1971c2`). Square corners, no arrows, no "45 → 46" labels.
+- Gridline and tick label every 5%. Make the slide taller than 16:9 to fit
+  rather than switching to a 10% step.
+- Tables: one number per cell, one table per measure.
+- The deck is presented in dark mode: check contrast in the screenshots.
+- Text: every label centred horizontally and vertically (use the label of an
+  invisible box). Break lines on purpose: no orphan words, no accidental third
+  line, no overlap with other elements.
+
+Helpers in `~/Workspace/local/hpe-diagrams/` (outside the repo):
+- `deckops.py`: MCP client (`call`, `send`), `scene()` (live elements),
+  `moves()` (moves elements, skipping bound text), `place(order)` (lays frames
+  out left to right and renames them), `restore_offsets(backup)` (puts
+  elements back at their in-frame offsets from a backup).
+- `results_slides.py types [Comparison ...] | other`: rebuilds the per-type
+  result slides and the HotpotQA and Natural Questions slide from run data.
+  Its `chart()` is the reference chart style; `reset(fid)` empties a frame.
+- `newslides.py` (`stacked_chart`, `new_frame`, `delete`, `by_name`) and
+  `two_run_slides.py idk|cost`: older builders. Both list methods in the old order
+  (Agentic last), and `newslides.py stab` builds the retired stability slide;
+  fix the method order before reusing them.
+
+Excalidraw MCP quirks:
+1. Moving a bound text makes the server re-derive its container's position.
+   Move boxes only; bound text follows.
+2. Left/right- or top-aligned labels become grouped text with no `frameId`.
+   Prefer centred labels or plain text.
+3. Changing text that has `autoResize: false` needs `autoResize: true` plus a
+   width.
+4. `take_screenshot` needs `maxWidth` ≤ 1920.
+
+Steps for any deck change:
+1. Back up: `excalidraw scenes content get 5KJVp4wI32J --out
+   ~/Workspace/local/hpe-backups/Experiments-<what>-<timestamp>.json`.
+2. In that backup, note frames with `isDeleted: true`: the user deleted those
+   slides, and they stay deleted.
+3. Rebuild each changed slide from a script (`reset`, then draw), not by
+   patching elements by hand.
+4. After any layout move, run `restore_offsets` against the backup, and fix
+   slide-number references after a reorder.
+5. Screenshot every changed slide and look at it.
+6. One Opus review subagent checks the numbers and layout. Done when it passes
+   and the screenshots are clean; only then show the user.
 
 ## Setup
 
